@@ -5,6 +5,12 @@ import Helmet from 'react-helmet';
 
 import './index.css';
 
+const ListLink = props => (
+  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <Link to={props.to}>{props.children}</Link>
+  </li>
+);
+
 const Header = () => (
   <div
     style={{
@@ -30,6 +36,11 @@ const Header = () => (
           Orbit.fm
         </Link>
       </h1>
+      <ul style={{ listStyle: `none`, float: `right` }}>
+        <ListLink to="/about/">About</ListLink>
+        <ListLink to="/shows/">Shows</ListLink>
+        <ListLink to="/contact/">Contact</ListLink>
+      </ul>
     </div>
   </div>
 );
