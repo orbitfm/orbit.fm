@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Person from '../components/Person';
 
 const BookBytes = () => (
   <div>

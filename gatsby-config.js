@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Orbit FM`,
+    description: `Orbit FM is a place with podcasts.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

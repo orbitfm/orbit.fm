@@ -11,7 +11,7 @@ const ListLink = props => (
   </li>
 );
 
-const Header = () => (
+const Header = ({ title }) => (
   <div
     style={{
       background: 'rebeccapurple',
@@ -33,7 +33,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Orbit.fm
+          {title}
         </Link>
       </h1>
       <ul style={{ listStyle: `none`, float: `right` }}>
@@ -45,16 +45,16 @@ const Header = () => (
   </div>
 );
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
-      title="Orbit.fm Podcasts"
+      title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Orbit.fm podcasts' },
+        { name: 'description', content: data.site.siteMetadata.title },
         { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
       ]}
     />
-    <Header />
+    <Header title={data.site.siteMetadata.title} />
     <div
       style={{
         margin: '0 auto',
@@ -73,3 +73,13 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;
