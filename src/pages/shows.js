@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const urlify = a => a.replace(/\s/g, '').toLowerCase();
-
 const Shows = ({ data }) => (
   <div>
     <h1>Shows</h1>
@@ -11,7 +9,7 @@ const Shows = ({ data }) => (
         .filter(({ node }) => node.active)
         .map(({ node }) => (
           <li key={node.id}>
-            <Link to={`/${urlify(node.name)}`}>{node.name}</Link>
+            <Link to={`/${node.fields.slug}`}>{node.name}</Link>
           </li>
         ))}
     </ul>
@@ -21,7 +19,7 @@ const Shows = ({ data }) => (
 export default Shows;
 
 export const query = graphql`
-  query IndexQuery {
+  query ShowsQuery {
     allContentfulPodcast {
       edges {
         node {
@@ -29,6 +27,9 @@ export const query = graphql`
           name
           description
           active
+          fields {
+            slug
+          }
         }
       }
     }
