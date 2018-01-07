@@ -10,6 +10,7 @@ const Shows = ({ data }) => (
         .map(({ node }) => (
           <li key={node.id}>
             <Link to={`/${node.fields.slug}`}>{node.name}</Link>
+            <p>{node.description}</p>
           </li>
         ))}
     </ul>
