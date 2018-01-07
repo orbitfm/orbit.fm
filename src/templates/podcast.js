@@ -3,9 +3,11 @@ import React from 'react';
 export default ({ data }) => (
   <div>
     {data.contentfulPodcast.name}
-    <ul>
-      {data.contentfulPodcast.episode.map(e => <li key={e.id}>{e.name}</li>)}
-    </ul>
+    {data.contentfulPodcast.episode ? (
+      <ul>
+        {data.contentfulPodcast.episode.map(e => <li key={e.id}>{e.name}</li>)}
+      </ul>
+    ) : null}
   </div>
 );
 
