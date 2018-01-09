@@ -6,17 +6,19 @@ export default ({ data }) => (
     {data.contentfulPodcast.name}
     {data.contentfulPodcast.episode ? (
       <ul>
-        {data.contentfulPodcast.episode.map(e =>
-          <li key={e.id}><Link to={e.fields.path}>{e.name}</Link></li>
-        )}
+        {data.contentfulPodcast.episode.map(e => (
+          <li key={e.id}>
+            <Link to={e.fields.path}>{e.name}</Link>
+          </li>
+        ))}
       </ul>
     ) : null}
   </div>
 );
 
 export const query = graphql`
-  query PodcastQuery($slug: String!) {
-    contentfulPodcast(fields: { slug: { eq: $slug } }) {
+  query PodcastQuery($id: String!) {
+    contentfulPodcast(id: { eq: $id }) {
       name
       episode {
         id

@@ -19,7 +19,9 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     createNodeField({
       node,
       name: `path`,
-      value: `${urlify(getNode(node.podcast___NODE).name)}/${node.episodeNumber}`,
+      value: `${urlify(getNode(node.podcast___NODE).name)}/${
+        node.episodeNumber
+      }`,
     });
   }
 };
@@ -32,6 +34,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         allContentfulPodcast {
           edges {
             node {
+              id
               fields {
                 slug
               }
@@ -56,7 +59,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/podcast.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            slug: node.fields.slug,
+            id: node.id,
           },
         });
       });
