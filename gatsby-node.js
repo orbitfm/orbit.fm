@@ -6,13 +6,20 @@
 const path = require(`path`);
 const urlify = a => a.replace(/\s/g, '').toLowerCase();
 
-exports.onCreateNode = ({ node, boundActionCreators }) => {
+exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   if (node.internal.type === `ContentfulPodcast`) {
     createNodeField({
       node,
       name: `slug`,
       value: urlify(node.name),
+    });
+  }
+  if (node.internal.type === `ContentfulEpisode`) {
+    createNodeField({
+      node,
+      name: `path`,
+      value: `${urlify(getNode(node.podcast___NODE).name)}/${node.episodeNumber}`,
     });
   }
 };
@@ -35,11 +42,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           edges {
             node {
               id
-              name
-              season
-              episodeNumber
-              podcast {
-                name
+              fields {
+                path
               }
             }
           }
@@ -58,7 +62,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       });
       result.data.allContentfulEpisode.edges.forEach(({ node }) => {
         createPage({
-          path: `${urlify(node.podcast.name)}/${node.episodeNumber}`,
+          path: node.fields.path,
           component: path.resolve(`./src/templates/episode.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
