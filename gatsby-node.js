@@ -31,6 +31,19 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             }
           }
         }
+        allContentfulEpisode {
+          edges {
+            node {
+              id
+              name
+              season
+              episodeNumber
+              podcast {
+                name
+              }
+            }
+          }
+        }
       }
     `).then(result => {
       result.data.allContentfulPodcast.edges.forEach(({ node }) => {
@@ -40,6 +53,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             slug: node.fields.slug,
+          },
+        });
+      });
+      result.data.allContentfulEpisode.edges.forEach(({ node }) => {
+        createPage({
+          path: `${urlify(node.podcast.name)}/${node.episodeNumber}`,
+          component: path.resolve(`./src/templates/episode.js`),
+          context: {
+            // Data passed to context is available in page queries as GraphQL variables.
+            id: node.id,
           },
         });
       });
