@@ -39,7 +39,6 @@ const Header = ({ title }) => (
       <ul style={{ listStyle: `none`, float: `right` }}>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/shows/">Shows</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
       </ul>
     </div>
   </div>
