@@ -5,3 +5,4 @@ node_modules
 # Build directory
 public/
 yarn-error.log
+.env
