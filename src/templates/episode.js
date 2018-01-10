@@ -14,13 +14,21 @@ export default ({ data }) => (
           <div key={host.id}>{host.name}</div>
         ))}
     </div>
-    <div>
+    <ul>
       {data.contentfulEpisode.guests &&
         data.contentfulEpisode.guests.map(guest => (
-          <div key={guest.id}>{guest.name}</div>
+          <li key={guest.id}>{guest.name}</li>
         ))}
+    </ul>
+
+    <div>
+      <h1> Show Notes </h1>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: data.contentfulEpisode.fields.showNotesFormatted
+        }}
+      />
     </div>
-    <div>{data.contentfulEpisode.showNotes.internal.content}</div>
   </div>
 );
 
@@ -51,14 +59,12 @@ export const query = graphql`
           }
         }
       }
-      showNotes {
-        internal {
-          content
-        }
-      }
       podcast {
         id
         name
+      }
+      fields {
+        showNotesFormatted
       }
     }
   }
