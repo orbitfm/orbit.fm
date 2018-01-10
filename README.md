@@ -2,6 +2,15 @@
 
 Website for [orbit.fm](http://www.orbit.fm).
 
+## Running
+
+Create a `.env` file with the following variables (replace with the real values from Contentful).
+
+```
+CONTENTFUL_SPACE_ID=k9ajfiadv9aj
+CONTENTFUL_ACCESS_TOKEN=39kd99313kdkkad8fwe0xvmqv90213mv91238jk91298ijkqw073856kajsdv097
+```
+
 ## Bootstrapped with Gatsby starter
 
 The default Gatsby starter
