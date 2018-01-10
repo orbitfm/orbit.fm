@@ -1,13 +1,15 @@
 import React from 'react';
+import ReactAudioPlayer from 'react-audio-player';
 
 export default ({ data }) => (
   <div>
-    <div>{data.contentfulEpisode.podcast.name}</div>
+    <h1>{data.contentfulEpisode.podcast.name}</h1>
     <div>{data.contentfulEpisode.name}</div>
     <div>{data.contentfulEpisode.season}</div>
     <div>{data.contentfulEpisode.shortDescription}</div>
     <div>{data.contentfulEpisode.publicationDate}</div>
     <div>{data.contentfulEpisode.audioUrl}</div>
+    <ReactAudioPlayer src={data.contentfulEpisode.audioUrl} controls />
     <div>
       {data.contentfulEpisode.hosts &&
         data.contentfulEpisode.hosts.map(host => (
@@ -25,7 +27,7 @@ export default ({ data }) => (
       <h1> Show Notes </h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.contentfulEpisode.fields.showNotesFormatted
+          __html: data.contentfulEpisode.fields.showNotesFormatted,
         }}
       />
     </div>
