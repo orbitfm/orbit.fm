@@ -12,7 +12,7 @@ export default ({ data }) => {
       <div>{episode.name}</div>
       <div>{episode.shortDescription}</div>
       <div>{episode.publicationDate}</div>
-      <ReactAudioPlayer src={episode.audioUrl} controls />
+      <ReactAudioPlayer src={episode.audioUrl} preload="none" controls />
       <div>
         {episode.hosts &&
           episode.hosts.map(host => (
