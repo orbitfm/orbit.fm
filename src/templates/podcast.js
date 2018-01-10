@@ -5,7 +5,13 @@ export default ({ data }) => (
   <div>
     <h1>{data.contentfulPodcast.name}</h1>
     <h2>Hosts</h2>
-    <ul>{data.contentfulPodcast.hosts.map(host => <li>{host.name}</li>)}</ul>
+    <ul>
+      {data.contentfulPodcast.hosts.map(host => (
+        <li key={host.id}>
+          <Link to={`/people/${host.fields.slug}`}>{host.name}</Link>
+        </li>
+      ))}
+    </ul>
     <h2>Latest Episodes</h2>
     {data.contentfulPodcast.episode ? (
       <ul>

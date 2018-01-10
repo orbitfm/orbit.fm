@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
+import Link from 'gatsby-link';
 
 export default ({ data }) => (
   <div>
@@ -13,13 +14,17 @@ export default ({ data }) => (
     <div>
       {data.contentfulEpisode.hosts &&
         data.contentfulEpisode.hosts.map(host => (
-          <div key={host.id}>{host.name}</div>
+          <div key={host.id}>
+            <Link to={`/people/${host.fields.slug}`}>{host.name}</Link>
+          </div>
         ))}
     </div>
     <ul>
       {data.contentfulEpisode.guests &&
         data.contentfulEpisode.guests.map(guest => (
-          <li key={guest.id}>{guest.name}</li>
+          <div key={guest.id}>
+            <Link to={`/people/${guest.fields.slug}`}>{guest.name}</Link>
+          </div>
         ))}
     </ul>
 
@@ -46,19 +51,15 @@ export const query = graphql`
       hosts {
         id
         name
-        links {
-          internal {
-            content
-          }
+        fields {
+          slug
         }
       }
       guests {
         id
         name
-        links {
-          internal {
-            content
-          }
+        fields {
+          slug
         }
       }
       podcast {
