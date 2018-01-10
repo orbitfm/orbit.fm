@@ -3,7 +3,10 @@ import Link from 'gatsby-link';
 
 export default ({ data }) => (
   <div>
-    {data.contentfulPodcast.name}
+    <h1>{data.contentfulPodcast.name}</h1>
+    <h2>Hosts</h2>
+    <ul>{data.contentfulPodcast.hosts.map(host => <li>{host.name}</li>)}</ul>
+    <h2>Latest Episodes</h2>
     {data.contentfulPodcast.episode ? (
       <ul>
         {data.contentfulPodcast.episode
@@ -30,6 +33,13 @@ export const query = graphql`
   query PodcastQuery($id: String!) {
     contentfulPodcast(id: { eq: $id }) {
       name
+      hosts {
+        id
+        name
+        fields {
+          slug
+        }
+      }
       episode {
         id
         name
