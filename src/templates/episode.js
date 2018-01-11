@@ -51,6 +51,8 @@ export const query = graphql`
       shortDescription
       publicationDate
       audioUrl
+      audioLength
+      duration
       hosts {
         id
         name
