@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import Link from 'gatsby-link';
+import { DateTime } from 'luxon';
 
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
@@ -9,24 +10,26 @@ export default ({ data }) => {
       <h1>
         <Link to={episode.podcast.fields.slug}>{episode.podcast.name}</Link>
       </h1>
-      <div>{episode.name}</div>
+      <h2>{episode.name}</h2>
+      <div>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</div>
       <div>{episode.shortDescription}</div>
-      <div>{episode.publicationDate}</div>
       <ReactAudioPlayer src={episode.audioUrl} preload="none" controls />
-      <div>
+      <h3>Hosts</h3>
+      <ul>
         {episode.hosts &&
           episode.hosts.map(host => (
-            <div key={host.id}>
+            <li key={host.id}>
               <Link to={`/people/${host.fields.slug}`}>{host.name}</Link>
-            </div>
+            </li>
           ))}
-      </div>
+      </ul>
+      <h3>Guests</h3>
       <ul>
         {episode.guests &&
           episode.guests.map(guest => (
-            <div key={guest.id}>
+            <li key={guest.id}>
               <Link to={`/people/${guest.fields.slug}`}>{guest.name}</Link>
-            </div>
+            </li>
           ))}
       </ul>
 
