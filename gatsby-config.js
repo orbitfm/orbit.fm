@@ -2,6 +2,57 @@ require('dotenv').config();
 const { DateTime } = require('luxon');
 var humanizeList = require('humanize-list');
 
+const serialize = podcast =>
+  podcast.episode
+    ? podcast.episode.map(episode => ({
+        title: episode.name,
+        description:
+          episode.shortDescription || `Episode ${episode.episodeNumber}`,
+        url: episode.audioUrl,
+        guid: episode.id,
+        author: episode.hosts.map(h => h.name, {
+          oxfordComma: true,
+        }),
+        enclosure: {
+          url: episode.audioUrl,
+          length: episode.audioLength,
+          type: 'audio/mp3',
+        },
+        custom_elements: [
+          {
+            pubDate: DateTime.fromISO(episode.publicationDate).toHTTP(),
+          },
+          {
+            'itunes:author': humanizeList(
+              episode.hosts.map(h => h.name, { oxfordComma: true })
+            ),
+          },
+          {
+            'itunes:subtitle': episode.shortDescription,
+          },
+          {
+            'itunes:summary': episode.shortDescription,
+          },
+          {
+            'content:encoded': `<p>${episode.shortDescription}</p>${
+              episode.fields ? episode.fields.showNotesFormatted : ``
+            }`,
+          },
+          { 'itunes:explicit': 'clean' },
+          {
+            'itunes:image': {
+              _attr: {
+                href: episode.image
+                  ? episode.image.file.url
+                  : podcast.image ? podcast.image.file.url : ``,
+              },
+            },
+          },
+          { 'itunes:duration': episode.duration },
+        ],
+      }))
+    : [];
+
 module.exports = {
   siteMetadata: {
     title: `Orbit FM`,
@@ -13,7 +64,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: `gatsby-plugin-podcast-feed`,
       options: {
         query: `
         {
@@ -22,7 +73,40 @@ module.exports = {
               title
               description
               siteUrl
-              site_url: siteUrl
+              owner
+              ownerEmail
+              categories
+            }
+          }
+          allContentfulPodcast {
+            edges {
+              node {
+                id
+                image {
+                  file {
+                    url
+                  }
+                }
+                fields {
+                  slug
+                }
+                episode {
+                  id
+                  episodeNumber
+                  audioUrl
+                  name
+                  shortDescription
+                  publicationDate
+                  audioLength
+                  duration
+                  hosts {
+                    name
+                  }
+                  fields {
+                    showNotesFormatted
+                  }
+                }
+              }
             }
           }
         }
@@ -34,7 +118,7 @@ module.exports = {
           return {
             title: siteMetadata.title,
             description: siteMetadata.description,
-            feed_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}feed.rss`,
+            feed_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}/feed.rss`,
             site_url: siteMetadata.siteUrl,
             image_url: podcast.image ? podcast.image.file.url : ``,
             managingEditor: `${siteMetadata.ownerEmail} (${
@@ -79,104 +163,31 @@ module.exports = {
             ],
           };
         },
-        // Todo: generate array of feeds for each podcast
-        feeds: [
+        feeds: ({
+          query: { site: { siteMetadata }, allContentfulPodcast },
+        }) => [
+          ...allContentfulPodcast.edges.map(({ node }, i) => ({
+            serialize: ({ query: { site, allContentfulPodcast } }) =>
+              serialize(allContentfulPodcast.edges[i].node),
+            output: `${node.fields.slug}/feed.rss`,
+          })),
           {
-            serialize: ({ query: { site, allContentfulPodcast } }) => {
-              const podcast = allContentfulPodcast.edges[0].node;
-              return podcast.episode.map(episode => ({
-                title: episode.name,
-                description:
-                  episode.shortDescription ||
-                  `Episode ${episode.episodeNumber}`,
-                url: episode.audioUrl,
-                guid: episode.id,
-                author: episode.hosts.map(h => h.name, { oxfordComma: true }),
-                enclosure: {
-                  url: episode.audioUrl,
-                  length: episode.audioLength,
-                  type: 'audio/mp3',
+            serialize: ({ query: { site, allContentfulPodcast } }) =>
+              serialize({
+                image: {
+                  file: {
+                    url: 'testImage',
+                  },
                 },
-                custom_elements: [
-                  {
-                    pubDate: DateTime.fromISO(episode.publicationDate).toHTTP(),
-                  },
-                  {
-                    'itunes:author': humanizeList(
-                      episode.hosts.map(h => h.name, { oxfordComma: true })
-                    ),
-                  },
-                  {
-                    'itunes:subtitle': episode.shortDescription,
-                  },
-                  {
-                    'itunes:summary': episode.shortDescription,
-                  },
-                  {
-                    'content:encoded': `<p>${episode.shortDescription}</p>${
-                      episode.fields ? episode.fields.showNotesFormatted : ``
-                    }`,
-                  },
-                  { 'itunes:explicit': 'clean' },
-                  {
-                    'itunes:image': {
-                      _attr: {
-                        href: episode.image
-                          ? episode.image.file.url
-                          : podcast.image ? podcast.image.file.url : ``,
-                      },
-                    },
-                  },
-                  { 'itunes:duration': episode.duration },
-                ],
-              }));
-            },
-            query: `
-            {
-              site {
-                siteMetadata {
-                  title
-                  description
-                  siteUrl
-                  owner
-                  ownerEmail
-                  categories
-                }
-              }
-              allContentfulPodcast {
-                edges {
-                  node {
-                    id
-                    image {
-                      file {
-                        url
-                      }
-                    }
-                    fields {
-                      slug
-                    }
-                    episode {
-                      id
-                      episodeNumber
-                      audioUrl
-                      name
-                      shortDescription
-                      publicationDate
-                      audioLength
-                      duration
-                      hosts {
-                        name
-                      }
-                      fields {
-                        showNotesFormatted
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          `,
-            output: '/weboftomorrow/feed.rss',
+                fields: {
+                  slug: 'master',
+                },
+                episode: allContentfulPodcast.edges.reduce(
+                  (a, { node }) => [...a, ...(node.episode || [])],
+                  []
+                ),
+              }),
+            output: `master.rss`,
           },
         ],
       },
