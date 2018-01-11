@@ -37,12 +37,14 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       }`,
     });
 
-    const showNotes = getNode(node.showNotes___NODE);
-    createNodeField({
-      node,
-      name: 'showNotesFormatted',
-      value: markdown.render(showNotes.internal.content),
-    });
+    if (node.showNotes___NODE) {
+      const showNotes = getNode(node.showNotes___NODE);
+      createNodeField({
+        node,
+        name: 'showNotesFormatted',
+        value: markdown.render(showNotes.internal.content),
+      });
+    }
   }
 
   if (node.internal.type === types.PERSON) {
