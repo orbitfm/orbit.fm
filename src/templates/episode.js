@@ -10,6 +10,7 @@ export default ({ data }) => {
       <h1>
         <Link to={episode.podcast.fields.slug}>{episode.podcast.name}</Link>
       </h1>
+      {episode.podcast.image && <img src={episode.podcast.image.file.url} />}
       <h2>{episode.name}</h2>
       <div>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</div>
       <div>{episode.shortDescription}</div>
@@ -77,6 +78,12 @@ export const query = graphql`
         name
         fields {
           slug
+        }
+        image {
+          id
+          file {
+            url
+          }
         }
       }
       fields {
