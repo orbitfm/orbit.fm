@@ -6,13 +6,11 @@ const IndexPage = ({ data }) => (
     <h1>Welcome to {data.site.siteMetadata.title}</h1>
     <p>{data.site.siteMetadata.description}</p>
     <ul>
-      {data.allContentfulPodcast.edges
-        .filter(({ node }) => node.active)
-        .map(({ node }) => (
-          <li key={node.id}>
-            <Link to={`/${node.fields.slug}`}>{node.name}</Link>
-          </li>
-        ))}
+      {data.allContentfulPodcast.edges.map(({ node }) => (
+        <li key={node.id}>
+          <Link to={`/${node.fields.slug}`}>{node.name}</Link>
+        </li>
+      ))}
     </ul>
   </div>
 );
@@ -27,12 +25,11 @@ export const query = graphql`
         description
       }
     }
-    allContentfulPodcast {
+    allContentfulPodcast(filter: { active: { eq: true } }) {
       edges {
         node {
           id
           name
-          active
           fields {
             slug
           }

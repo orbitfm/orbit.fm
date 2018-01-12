@@ -41,12 +41,11 @@ export const query = graphql`
         description
       }
     }
-    allContentfulPodcast {
+    allContentfulPodcast(filter: { active: { eq: true } }) {
       edges {
         node {
           id
           name
-          active
           fields {
             slug
           }
