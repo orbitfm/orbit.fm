@@ -1,23 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styled from 'react-emotion';
-import SidePanel from '../components/SidePanel';
-import InfoBar from '../components/InfoBar';
-import LatestEpisode from '../components/LatestEpisode';
+import Page from '../components/Page';
 import EpisodeListing from '../components/EpisodeListing';
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: minmax(300px, 400px) 1fr;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-top: 0;
-  min-height: 100%;
-`;
-
-const MainArea = styled.div`
-  padding: 20px;
-`;
 
 const IndexPage = ({ data }) => {
   const episodes = data.allContentfulPodcast.edges
@@ -31,27 +15,17 @@ const IndexPage = ({ data }) => {
       }
       return 0;
     });
-  console.log(episodes[0].podcast.primaryColor);
   return (
-    <div>
-      <InfoBar
-        title={data.site.siteMetadata.title}
-        tagline={data.site.siteMetadata.description}
-        color={episodes[0].podcast.primaryColor}
-      />
-      <Container>
-        <SidePanel>
-          <LatestEpisode episode={episodes[0]} />
-        </SidePanel>
-        <MainArea>
-          {episodes
-            .slice(0, 10)
-            .map(episode => (
-              <EpisodeListing episode={episode} key={episode.id} />
-            ))}
-        </MainArea>
-      </Container>
-    </div>
+    <Page
+      title={data.site.siteMetadata.title}
+      description={data.site.siteMetadata.description}
+      primaryColor={episodes[0].podcast.primaryColor}
+      episode={episodes[0]}
+    >
+      {episodes
+        .slice(0, 10)
+        .map(episode => <EpisodeListing episode={episode} key={episode.id} />)}
+    </Page>
   );
 };
 
