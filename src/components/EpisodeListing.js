@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
@@ -19,32 +20,44 @@ const Top = styled.div`
   display: flex;
 `;
 
-const EpisodeListing = ({ episode }) => (
+const EpisodeListing = ({
+  episode,
+  shortDescription,
+  publicationDate,
+  name,
+  path,
+  imageUrl,
+  podcastHosts,
+  podcastName,
+  podcastPath,
+}) => (
   <Container>
     <Top>
-      <Image>
-        {episode.podcast.image && (
-          <img src={`http:${episode.podcast.image.file.url}`} />
-        )}
-      </Image>
+      <Image>{imageUrl && <img src={imageUrl} />}</Image>
       <div>
         <p>
-          <Link to={episode.podcast.fields.slug}>{episode.podcast.name}</Link>
+          <Link to={podcastPath}>{podcastName}</Link>
         </p>
         <p>
-          <Link to={episode.fields.path}>{episode.name}</Link>
+          <Link to={path}>{name}</Link>
         </p>
-        <p>{episode.publicationDate}</p>
-        <p>
-          Hosted by{' '}
-          {humanizeList(
-            episode.podcast.hosts.map(h => h.name, { oxfordComma: true })
-          )}
-        </p>
+        <p>{publicationDate}</p>
+        <p>Hosted by {humanizeList(podcastHosts, { oxfordComma: true })}</p>
       </div>
     </Top>
-    <p>{episode.shortDescription}</p>
+    <p>{shortDescription}</p>
   </Container>
 );
+
+EpisodeListing.propTypes = {
+  shortDescription: PropTypes.string.isRequired,
+  publicationDate: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string,
+  podcastHosts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  podcastName: PropTypes.string.isRequired,
+  podcastPath: PropTypes.string.isRequired,
+};
 
 export default EpisodeListing;

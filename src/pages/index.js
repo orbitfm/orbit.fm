@@ -24,7 +24,22 @@ const IndexPage = ({ data }) => {
     >
       {episodes
         .slice(0, 10)
-        .map(episode => <EpisodeListing episode={episode} key={episode.id} />)}
+        .map(episode => (
+          <EpisodeListing
+            episode={episode}
+            shortDescription={episode.shortDescription}
+            publicationDate={episode.publicationDate}
+            name={episode.name}
+            path={episode.fields.path}
+            imageUrl={
+              episode.podcast.image && `http:${episode.podcast.image.file.url}`
+            }
+            podcastHosts={episode.podcast.hosts.map(h => h.name)}
+            podcastName={episode.podcast.name}
+            podcastPath={episode.podcast.path}
+            key={episode.id}
+          />
+        ))}
     </PageWithSidebar>
   );
 };
