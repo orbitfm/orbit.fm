@@ -10,6 +10,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
+  width: 100%;
   max-width: 150px;
   margin-right: 20px;
 `;
@@ -21,11 +22,11 @@ const Top = styled.div`
 const EpisodeListing = ({ episode }) => (
   <Container>
     <Top>
-      {episode.podcast.image && (
-        <Image>
+      <Image>
+        {episode.podcast.image && (
           <img src={`http:${episode.podcast.image.file.url}`} />
-        </Image>
-      )}
+        )}
+      </Image>
       <div>
         <p>
           <Link to={episode.podcast.fields.slug}>{episode.podcast.name}</Link>
