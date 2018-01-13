@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import InfoBar from './InfoBar';
 import LatestEpisode from './LatestEpisode';
@@ -27,10 +28,40 @@ const PageWithSidebar = ({
   <div>
     <InfoBar title={title} tagline={description} color={primaryColor} />
     <Container>
-      <SidePanel>{episode && <LatestEpisode episode={episode} />}</SidePanel>
+      <SidePanel>
+        {episode && (
+          <LatestEpisode
+            imageUrl={
+              episode.podcast.image && `http:${episode.podcast.image.file.url}`
+            }
+            name={episode.name}
+            shortDescription={episode.shortDescription}
+            podcastName={episode.podcast.name}
+            podcastHosts={episode.podcast.hosts.map(h => h.name)}
+          />
+        )}
+      </SidePanel>
       <MainArea>{children}</MainArea>
     </Container>
   </div>
 );
+
+PageWithSidebar.propTypes = {
+  children: PropTypes.node.isRequired,
+  primaryColor: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  episode: PropTypes.shape({
+    imageUrl: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    shortDescription: PropTypes.string.isRequired,
+    podcast: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      hosts: PropTypes.arrayOf(
+        PropTypes.shape({ name: PropTypes.string.isRequired })
+      ).isRequired,
+    }).isRequired,
+  }).isRequired,
+};
 
 export default PageWithSidebar;

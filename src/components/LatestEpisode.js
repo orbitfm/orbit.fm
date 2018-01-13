@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
 
@@ -6,24 +7,33 @@ const Image = styled.div`
   margin-top: -150px;
 `;
 
-const LatestEpisode = ({ episode }) => (
+const LatestEpisode = ({
+  imageUrl,
+  name,
+  shortDescription,
+  podcastName,
+  podcastHosts,
+}) => (
   <div>
-    {episode.podcast.image && (
+    {imageUrl && (
       <Image>
-        <img src={`http:${episode.podcast.image.file.url}`} />
+        <img src={imageUrl} />
       </Image>
     )}
     <p>Latest Episode</p>
-    <p>{episode.podcast.name}</p>
-    <p>{episode.name}</p>
-    <p>
-      Hosted by{' '}
-      {humanizeList(
-        episode.podcast.hosts.map(h => h.name, { oxfordComma: true })
-      )}
-    </p>
-    <p>{episode.shortDescription}</p>
+    <p>{podcastName}</p>
+    <p>{name}</p>
+    <p>Hosted by {humanizeList(podcastHosts, { oxfordComma: true })}</p>
+    <p>{shortDescription}</p>
   </div>
 );
+
+LatestEpisode.propTypes = {
+  imageUrl: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  shortDescription: PropTypes.string.isRequired,
+  podcastName: PropTypes.string.isRequired,
+  podcastHosts: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default LatestEpisode;

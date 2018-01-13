@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
 import InfoBar from '../components/InfoBar';
-import LatestEpisode from '../components/LatestEpisode';
 import SidePanel from '../components/SidePanel';
 
 const Container = styled.div`
