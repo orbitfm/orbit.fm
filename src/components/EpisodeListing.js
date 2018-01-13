@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
+import { DateTime } from 'luxon';
 import * as COLORS from '../constants/colors';
 
 const Container = styled.div`
@@ -41,7 +42,7 @@ const EpisodeListing = ({
         <p>
           <Link to={path}>{name}</Link>
         </p>
-        <p>{publicationDate}</p>
+        <p>{DateTime.fromISO(publicationDate).toLocaleString()}</p>
         <p>Hosted by {humanizeList(podcastHosts, { oxfordComma: true })}</p>
       </div>
     </Top>
