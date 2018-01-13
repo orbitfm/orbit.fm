@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
-import Page from '../components/Page';
+import PageWithSidebar from '../components/PageWithSidebar';
 
 export default ({ data }) => {
   const podcast = data.contentfulPodcast;
@@ -18,7 +18,7 @@ export default ({ data }) => {
       })
     : [];
   return (
-    <Page
+    <PageWithSidebar
       title={podcast.name}
       description={podcast.description.description}
       color={podcast.primaryColor}
@@ -34,7 +34,7 @@ export default ({ data }) => {
           ))}
         </ul>
       ) : null}
-    </Page>
+    </PageWithSidebar>
   );
 };
 

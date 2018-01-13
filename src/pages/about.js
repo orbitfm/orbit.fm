@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Page from '../components/Page';
 
 const AboutPage = ({ data }) =>
   console.log(data) || (
-    <div>
+    <Page>
       <h1>Welcome to {data.site.siteMetadata.title}</h1>
       <p>
         Instead of scattering my podcasts across multiple websites, I just
@@ -28,7 +29,7 @@ const AboutPage = ({ data }) =>
         started bringing on more guests.
       </p>
       <p>- Adam Garrett-Harris</p>
-    </div>
+    </Page>
   );
 
 export default AboutPage;

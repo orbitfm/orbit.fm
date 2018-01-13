@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Page from '../components/Page';
+import PageWithSidebar from '../components/PageWithSidebar';
 import EpisodeListing from '../components/EpisodeListing';
 
 const IndexPage = ({ data }) => {
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
       return 0;
     });
   return (
-    <Page
+    <PageWithSidebar
       title={data.site.siteMetadata.title}
       description={data.site.siteMetadata.description}
       primaryColor={episodes[0].podcast.primaryColor}
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
       {episodes
         .slice(0, 10)
         .map(episode => <EpisodeListing episode={episode} key={episode.id} />)}
-    </Page>
+    </PageWithSidebar>
   );
 };
 
