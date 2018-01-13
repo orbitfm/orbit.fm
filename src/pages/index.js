@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => {
             }
             podcastHosts={episode.podcast.hosts.map(h => h.name)}
             podcastName={episode.podcast.name}
-            podcastPath={episode.podcast.path}
+            podcastPath={episode.podcast.fields.slug}
             key={episode.id}
           />
         ))}
