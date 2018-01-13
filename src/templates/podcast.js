@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import PageWithSidebar from '../components/PageWithSidebar';
+import LatestEpisode from '../components/LatestEpisode';
 
 export default ({ data }) => {
   const podcast = data.contentfulPodcast;
@@ -17,12 +18,25 @@ export default ({ data }) => {
         return 0;
       })
     : [];
+  const episode = episodes[0];
   return (
     <PageWithSidebar
       title={podcast.name}
       description={podcast.description.description}
       color={podcast.primaryColor}
-      episode={episodes[0]}
+      sidePanelChildren={
+        <LatestEpisode
+          imageUrl={
+            episode.podcast.image && `http:${episode.podcast.image.file.url}`
+          }
+          name={episode.name}
+          path={episode.fields.path}
+          shortDescription={episode.shortDescription}
+          podcastName={episode.podcast.name}
+          podcastHosts={episode.podcast.hosts.map(h => h.name)}
+          podcastPath={episode.podcast.fields.slug}
+        />
+      }
     >
       <h2>Latest Episodes</h2>
       {episodes ? (

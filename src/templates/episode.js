@@ -3,6 +3,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import Link from 'gatsby-link';
 import { DateTime } from 'luxon';
 import PageWithSidebar from '../components/PageWithSidebar';
+import LatestEpisode from '../components/LatestEpisode';
 
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
@@ -11,7 +12,19 @@ export default ({ data }) => {
       title={episode.podcast.name}
       description={episode.podcast.description.description}
       primaryColor={episode.podcast.primaryColor}
-      episode={episode}
+      sidePanelChildren={
+        <LatestEpisode
+          imageUrl={
+            episode.podcast.image && `http:${episode.podcast.image.file.url}`
+          }
+          name={episode.name}
+          path={episode.fields.path}
+          shortDescription={episode.shortDescription}
+          podcastName={episode.podcast.name}
+          podcastHosts={episode.podcast.hosts.map(h => h.name)}
+          podcastPath={episode.podcast.fields.slug}
+        />
+      }
     >
       <h2>{episode.name}</h2>
       <div>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</div>

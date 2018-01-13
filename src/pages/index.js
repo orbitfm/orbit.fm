@@ -1,5 +1,6 @@
 import React from 'react';
 import PageWithSidebar from '../components/PageWithSidebar';
+import LatestEpisode from '../components/LatestEpisode';
 import EpisodeListing from '../components/EpisodeListing';
 
 const IndexPage = ({ data }) => {
@@ -21,7 +22,20 @@ const IndexPage = ({ data }) => {
       title={data.site.siteMetadata.title}
       description={data.site.siteMetadata.description}
       primaryColor={latestEpisode.podcast.primaryColor}
-      episode={latestEpisode}
+      sidePanelChildren={
+        <LatestEpisode
+          imageUrl={
+            latestEpisode.podcast.image &&
+            `http:${latestEpisode.podcast.image.file.url}`
+          }
+          name={latestEpisode.name}
+          path={latestEpisode.fields.path}
+          shortDescription={latestEpisode.shortDescription}
+          podcastName={latestEpisode.podcast.name}
+          podcastHosts={latestEpisode.podcast.hosts.map(h => h.name)}
+          podcastPath={latestEpisode.podcast.fields.slug}
+        />
+      }
     >
       {otherEpisodes
         .slice(0, 10)
