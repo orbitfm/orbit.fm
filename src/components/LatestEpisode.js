@@ -8,9 +8,11 @@ const Image = styled.div`
 
 const LatestEpisode = ({ episode }) => (
   <div>
-    <Image>
-      <img src={`http:${episode.podcast.image.file.url}`} />
-    </Image>
+    {episode.podcast.image && (
+      <Image>
+        <img src={`http:${episode.podcast.image.file.url}`} />
+      </Image>
+    )}
     <p>Latest Episode</p>
     <p>{episode.podcast.name}</p>
     <p>{episode.name}</p>

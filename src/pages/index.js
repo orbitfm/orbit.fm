@@ -6,16 +6,12 @@ import InfoBar from '../components/InfoBar';
 import LatestEpisode from '../components/LatestEpisode';
 import EpisodeListing from '../components/EpisodeListing';
 
-const PageContainer = styled.div`
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-top: 0;
-  height: 100%;
-`;
-
 const Container = styled.div`
   display: grid;
   grid-template-columns: minmax(300px, 400px) 1fr;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 0;
   min-height: 100%;
 `;
 
@@ -43,18 +39,18 @@ const IndexPage = ({ data }) => {
         tagline={data.site.siteMetadata.description}
         color={episodes[0].podcast.primaryColor}
       />
-      <PageContainer>
-        <Container>
-          <SidePanel>
-            <LatestEpisode episode={episodes[0]} />
-          </SidePanel>
-          <MainArea>
-            {episodes.map(episode => (
+      <Container>
+        <SidePanel>
+          <LatestEpisode episode={episodes[0]} />
+        </SidePanel>
+        <MainArea>
+          {episodes
+            .slice(0, 10)
+            .map(episode => (
               <EpisodeListing episode={episode} key={episode.id} />
             ))}
-          </MainArea>
-        </Container>
-      </PageContainer>
+        </MainArea>
+      </Container>
     </div>
   );
 };
@@ -69,7 +65,7 @@ export const query = graphql`
         description
       }
     }
-    allContentfulPodcast(filter: { active: { eq: true } }) {
+    allContentfulPodcast(filter: { active: { eq: true } }, limit: 5) {
       edges {
         node {
           id
