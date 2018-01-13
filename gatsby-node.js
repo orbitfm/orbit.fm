@@ -32,7 +32,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       name: `path`,
       value: `${urlify(getNode(node.podcast___NODE).name)}/${
         node.season
-          ? `season-${node.season}/${node.episodeNumber}`
+          ? `season${node.season}/${node.episodeNumber}`
           : node.episodeNumber
       }`,
     });
