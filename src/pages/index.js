@@ -1,19 +1,33 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import PageWithSidebar from '../components/PageWithSidebar';
+import EpisodeListing from '../components/EpisodeListing';
 
-const IndexPage = ({ data }) => (
-  <div>
-    <h1>Welcome to {data.site.siteMetadata.title}</h1>
-    <p>{data.site.siteMetadata.description}</p>
-    <ul>
-      {data.allContentfulPodcast.edges.map(({ node }) => (
-        <li key={node.id}>
-          <Link to={`/${node.fields.slug}`}>{node.name}</Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+const IndexPage = ({ data }) => {
+  const episodes = data.allContentfulPodcast.edges
+    .reduce((a, e) => [...a, ...e.node.episode], [])
+    .sort((a, b) => {
+      if (a.publicationDate > b.publicationDate) {
+        return -1;
+      }
+      if (b.publicationDate > a.publicationDate) {
+        return 1;
+      }
+      return 0;
+    });
+  return (
+    <PageWithSidebar
+      title={data.site.siteMetadata.title}
+      description={data.site.siteMetadata.description}
+      primaryColor={episodes[0].podcast.primaryColor}
+      episode={episodes[0]}
+    >
+      {episodes
+        .slice(0, 10)
+        .map(episode => <EpisodeListing episode={episode} key={episode.id} />)}
+    </PageWithSidebar>
+  );
+};
 
 export default IndexPage;
 
@@ -25,13 +39,41 @@ export const query = graphql`
         description
       }
     }
-    allContentfulPodcast(filter: { active: { eq: true } }) {
+    allContentfulPodcast(filter: { active: { eq: true } }, limit: 5) {
       edges {
         node {
           id
           name
           fields {
             slug
+          }
+          episode {
+            id
+            name
+            publicationDate
+            shortDescription
+            fields {
+              path
+            }
+            podcast {
+              name
+              primaryColor
+              fields {
+                slug
+              }
+              image {
+                file {
+                  url
+                }
+              }
+              hosts {
+                id
+                name
+                fields {
+                  slug
+                }
+              }
+            }
           }
         }
       }

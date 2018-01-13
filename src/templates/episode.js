@@ -2,15 +2,17 @@ import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import Link from 'gatsby-link';
 import { DateTime } from 'luxon';
+import PageWithSidebar from '../components/PageWithSidebar';
 
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
   return (
-    <div>
-      <h1>
-        <Link to={episode.podcast.fields.slug}>{episode.podcast.name}</Link>
-      </h1>
-      {episode.podcast.image && <img src={episode.podcast.image.file.url} />}
+    <PageWithSidebar
+      title={episode.podcast.name}
+      description={episode.podcast.description.description}
+      primaryColor={episode.podcast.primaryColor}
+      episode={episode}
+    >
       <h2>{episode.name}</h2>
       <div>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</div>
       <div>{episode.shortDescription}</div>
@@ -44,7 +46,7 @@ export default ({ data }) => {
           />
         </div>
       )}
-    </div>
+    </PageWithSidebar>
   );
 };
 
@@ -76,8 +78,14 @@ export const query = graphql`
       podcast {
         id
         name
+        description {
+          description
+        }
         fields {
           slug
+        }
+        hosts {
+          name
         }
         image {
           id

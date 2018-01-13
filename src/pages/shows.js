@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Page from '../components/Page';
 
 const Shows = ({ data }) => (
-  <div>
+  <Page>
     <h1>Shows</h1>
     <ul>
       {data.allContentfulPodcast.edges.map(({ node }) => (
@@ -12,7 +13,7 @@ const Shows = ({ data }) => (
         </li>
       ))}
     </ul>
-  </div>
+  </Page>
 );
 
 export default Shows;
