@@ -90,7 +90,7 @@ module.exports = {
               categories
             }
           }
-          allContentfulPodcast {
+          allContentfulPodcast(filter: { active: { eq: true } }) {
             edges {
               node {
                 id
