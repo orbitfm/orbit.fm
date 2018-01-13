@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import InfoBar from '../components/InfoBar';
 
 import './index.css';
 
 const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+  <li style={{ display: `inline-block`, margin: `0 1rem 0 0` }}>
     <Link to={props.to}>{props.children}</Link>
   </li>
 );
@@ -14,15 +15,16 @@ const ListLink = props => (
 const Header = ({ title }) => (
   <div
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      background: '#333',
     }}
   >
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
+        maxWidth: 1200,
         padding: '1.45rem 1.0875rem',
+        display: 'flex',
+        justifyContent: 'space-between',
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -36,7 +38,7 @@ const Header = ({ title }) => (
           {title}
         </Link>
       </h1>
-      <ul style={{ listStyle: `none`, float: `right` }}>
+      <ul style={{ listStyle: `none`, float: `right`, margin: `unset` }}>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/shows/">Shows</ListLink>
       </ul>
@@ -45,7 +47,11 @@ const Header = ({ title }) => (
 );
 
 const TemplateWrapper = ({ children, data }) => (
-  <div>
+  <div
+    style={{
+      height: '100%',
+    }}
+  >
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -54,12 +60,16 @@ const TemplateWrapper = ({ children, data }) => (
       ]}
     />
     <Header title={data.site.siteMetadata.title} />
+    <InfoBar
+      title={data.site.siteMetadata.title}
+      tagline={data.site.siteMetadata.description}
+    />
     <div
       style={{
         margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
+        maxWidth: 1200,
         paddingTop: 0,
+        height: `100%`,
       }}
     >
       {children()}
@@ -78,6 +88,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
   }

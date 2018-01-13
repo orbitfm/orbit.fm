@@ -1,5 +1,14 @@
+html,
+body,
+#___gatsby {
+  height: 100%;
+}
 body {
   margin: 0;
+  color: white;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  background: #333;
 }
 article,
 aside,
@@ -32,9 +41,14 @@ progress {
 template {
   display: none;
 }
+a {
+  color: white;
+}
 a:active,
 a:hover {
   outline-width: 0;
+  color: white;
+  text-decoration: underline;
 }
 b,
 strong {
@@ -165,10 +179,6 @@ html {
 }
 *:after {
   box-sizing: inherit;
-}
-body {
-  color: hsla(0, 0%, 0%, 0.8);
-  word-wrap: break-word;
 }
 img {
   max-width: 100%;
