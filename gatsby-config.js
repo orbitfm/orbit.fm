@@ -2,7 +2,7 @@ require('dotenv').config();
 const { DateTime } = require('luxon');
 var humanizeList = require('humanize-list');
 
-const serialize = podcast =>
+const serialize = ({ podcast, siteMetadata }) =>
   podcast.episode
     ? podcast.episode
         .sort((a, b) => {
@@ -18,7 +18,7 @@ const serialize = podcast =>
           title: `${episode.podcast.name} ${episode.name}`,
           description:
             episode.shortDescription || `Episode ${episode.episodeNumber}`,
-          url: episode.audioUrl,
+          url: `${siteMetadata.siteUrl}/${episode.fields.path}`,
           guid: episode.id,
           author: episode.hosts.map(h => h.name, {
             oxfordComma: true,
@@ -120,6 +120,7 @@ module.exports = {
                   }
                   fields {
                     showNotesFormatted
+                    path
                   }
                   podcast {
                     name
@@ -127,6 +128,9 @@ module.exports = {
                       file {
                         url
                       }
+                    }
+                    fields {
+                      slug
                     }
                   }
                 }
@@ -153,7 +157,7 @@ module.exports = {
             title: podcast.name,
             description: podcast.description.description,
             feed_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}/feed.rss`,
-            site_url: siteMetadata.siteUrl,
+            site_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}`,
             image_url: podcast.image ? podcast.image.file.url : ``,
             managingEditor: `${siteMetadata.ownerEmail} (${
               siteMetadata.owner
@@ -202,7 +206,10 @@ module.exports = {
         }) => [
           ...allContentfulPodcast.edges.map(({ node }, i) => ({
             serialize: ({ query: { site, allContentfulPodcast } }) =>
-              serialize(allContentfulPodcast.edges[i].node),
+              serialize({
+                podcast: allContentfulPodcast.edges[i].node,
+                siteMetadata,
+              }),
             output: `${node.fields.slug}/feed.rss`,
           })),
           {
@@ -210,10 +217,11 @@ module.exports = {
               query: { site: { siteMetadata }, allContentfulPodcast },
             }) =>
               serialize({
-                episode: allContentfulPodcast.edges.reduce(
+                podcast: allContentfulPodcast.edges.reduce(
                   (a, { node }) => [...a, ...(node.episode || [])],
                   []
                 ),
+                siteMetadata,
               }),
             output: `master.rss`,
           },
