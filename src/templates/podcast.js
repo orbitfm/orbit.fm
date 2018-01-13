@@ -25,17 +25,19 @@ export default ({ data }) => {
       description={podcast.description.description}
       color={podcast.primaryColor}
       sidePanelChildren={
-        <LatestEpisode
-          imageUrl={
-            episode.podcast.image && `http:${episode.podcast.image.file.url}`
-          }
-          name={episode.name}
-          path={episode.fields.path}
-          shortDescription={episode.shortDescription}
-          podcastName={episode.podcast.name}
-          podcastHosts={episode.podcast.hosts.map(h => h.name)}
-          podcastPath={episode.podcast.fields.slug}
-        />
+        episode && (
+          <LatestEpisode
+            imageUrl={
+              episode.podcast.image && `http:${episode.podcast.image.file.url}`
+            }
+            name={episode.name}
+            path={episode.fields.path}
+            shortDescription={episode.shortDescription}
+            podcastName={episode.podcast.name}
+            podcastHosts={episode.podcast.hosts.map(h => h.name)}
+            podcastPath={episode.podcast.fields.slug}
+          />
+        )
       }
     >
       <h2>Latest Episodes</h2>
