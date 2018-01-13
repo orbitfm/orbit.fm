@@ -69,6 +69,7 @@ module.exports = {
   siteMetadata: {
     title: `Orbit FM`,
     description: `Orbit FM is a place with podcasts.`,
+    coverArt: ``,
     siteUrl: `http://www.orbit.fm`,
     owner: `Orbit FM`,
     ownerEmail: `hello@orbit.fm`,
@@ -84,6 +85,7 @@ module.exports = {
             siteMetadata {
               title
               description
+              coverArt
               siteUrl
               owner
               ownerEmail
@@ -143,21 +145,26 @@ module.exports = {
           { query: { site: { siteMetadata }, allContentfulPodcast } },
           i
         ) => {
+          // If allContentfulPodcast.edges[i] then this is a normal feed
+          // Else it's the master feed
           const podcast = allContentfulPodcast.edges[i]
             ? allContentfulPodcast.edges[i].node
             : {
-                name: 'Orbit FM master feed',
+                name: `${siteMetadata.title} master feed`,
                 fields: {
                   slug: 'master',
                 },
-                description: { description: 'Orbit FM is a bunch of podcasts' },
-                image: { file: { url: 'testimage.png' } },
+                description: { description: siteMetadata.description },
+                image: { file: { url: siteMetadata.coverArt } },
               };
           return {
             title: podcast.name,
             description: podcast.description.description,
             feed_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}/feed.rss`,
-            site_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}`,
+            site_url:
+              podcast.fields.slug === `master`
+                ? siteMetadata.siteUrl
+                : `${siteMetadata.siteUrl}/${podcast.fields.slug}`,
             image_url: podcast.image ? podcast.image.file.url : ``,
             managingEditor: `${siteMetadata.ownerEmail} (${
               siteMetadata.owner
