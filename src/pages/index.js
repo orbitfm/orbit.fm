@@ -15,14 +15,16 @@ const IndexPage = ({ data }) => {
       }
       return 0;
     });
+  const latestEpisode = episodes[0];
+  const otherEpisodes = episodes.slice(1);
   return (
     <PageWithSidebar
       title={data.site.siteMetadata.title}
       description={data.site.siteMetadata.description}
-      primaryColor={episodes[0].podcast.primaryColor}
-      episode={episodes[0]}
+      primaryColor={latestEpisode.podcast.primaryColor}
+      episode={latestEpisode}
     >
-      {episodes
+      {otherEpisodes
         .slice(0, 10)
         .map(episode => (
           <EpisodeListing
