@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import styled from 'react-emotion';
 import Page from '../components/Page';
 
 export default ({ data }) => {
@@ -23,16 +24,6 @@ export default ({ data }) => {
       color={podcast.primaryColor}
       episode={episodes[0]}
     >
-      <h1>{podcast.name}</h1>
-      {podcast.image && <img src={podcast.image.file.url} />}
-      <h2>Hosts</h2>
-      <ul>
-        {podcast.hosts.map(host => (
-          <li key={host.id}>
-            <Link to={`/people/${host.fields.slug}`}>{host.name}</Link>
-          </li>
-        ))}
-      </ul>
       <h2>Latest Episodes</h2>
       {episodes ? (
         <ul>

@@ -52,6 +52,9 @@ export const query = graphql`
             name
             publicationDate
             shortDescription
+            fields {
+              path
+            }
             podcast {
               name
               primaryColor

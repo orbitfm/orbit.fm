@@ -23,7 +23,7 @@ const InfoBar = ({ title, tagline, color }) => (
     <InnerContainer>
       <div />
       <RightSide>
-        <p>{title}</p>
+        <h1>{title}</h1>
         <p>{tagline}</p>
       </RightSide>
     </InnerContainer>

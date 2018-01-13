@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
 import * as COLORS from '../constants/colors';
@@ -26,8 +27,12 @@ const EpisodeListing = ({ episode }) => (
         </Image>
       )}
       <div>
-        <p>{episode.podcast.name}</p>
-        <p>{episode.name}</p>
+        <p>
+          <Link to={episode.podcast.fields.slug}>{episode.podcast.name}</Link>
+        </p>
+        <p>
+          <Link to={episode.fields.path}>{episode.name}</Link>
+        </p>
         <p>{episode.publicationDate}</p>
         <p>
           Hosted by{' '}
