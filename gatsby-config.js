@@ -15,7 +15,7 @@ const serialize = podcast =>
           return 0;
         })
         .map(episode => ({
-          title: episode.name,
+          title: `${episode.podcast.name} ${episode.name}`,
           description:
             episode.shortDescription || `Episode ${episode.episodeNumber}`,
           url: episode.audioUrl,
@@ -118,6 +118,9 @@ module.exports = {
                   }
                   fields {
                     showNotesFormatted
+                  }
+                  podcast {
+                    name
                   }
                 }
               }
