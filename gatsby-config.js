@@ -217,10 +217,12 @@ module.exports = {
               query: { site: { siteMetadata }, allContentfulPodcast },
             }) =>
               serialize({
-                podcast: allContentfulPodcast.edges.reduce(
-                  (a, { node }) => [...a, ...(node.episode || [])],
-                  []
-                ),
+                podcast: {
+                  episode: allContentfulPodcast.edges.reduce(
+                    (a, { node }) => [...a, ...(node.episode || [])],
+                    []
+                  ),
+                },
                 siteMetadata,
               }),
             output: `master.rss`,
