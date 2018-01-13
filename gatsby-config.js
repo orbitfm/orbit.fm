@@ -53,8 +53,10 @@ const serialize = podcast =>
               'itunes:image': {
                 _attr: {
                   href: episode.image
-                    ? episode.image.file.url
-                    : podcast.image ? podcast.image.file.url : ``,
+                    ? `http:${episode.image.file.url}`
+                    : episode.podcast.image
+                      ? `http:${episode.podcast.image.file.url}`
+                      : ``,
                 },
               },
             },
@@ -121,6 +123,11 @@ module.exports = {
                   }
                   podcast {
                     name
+                    image {
+                      file {
+                        url
+                      }
+                    }
                   }
                 }
               }
