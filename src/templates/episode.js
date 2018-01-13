@@ -29,7 +29,11 @@ export default ({ data }) => {
       <h2>{episode.name}</h2>
       <div>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</div>
       <div>{episode.shortDescription}</div>
-      <ReactAudioPlayer src={episode.audioUrl} preload="none" controls />
+      <ReactAudioPlayer
+        src={`http://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
+        preload="none"
+        controls
+      />
       <h3>Hosts</h3>
       <ul>
         {episode.hosts &&

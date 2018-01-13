@@ -24,7 +24,7 @@ const serialize = ({ podcast, siteMetadata }) =>
             oxfordComma: true,
           }),
           enclosure: {
-            url: episode.audioUrl,
+            url: `http://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`,
             length: episode.audioLength,
             type: 'audio/mp3',
           },
