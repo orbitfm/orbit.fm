@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
 
-const Container = styled.div``;
-
 const Image = styled.div`
   margin-top: -150px;
 `;
 
 const LatestEpisode = ({ episode }) => (
-  <Container>
+  <div>
     <Image>
       <img src={`http:${episode.podcast.image.file.url}`} />
     </Image>
@@ -23,7 +21,7 @@ const LatestEpisode = ({ episode }) => (
       )}
     </p>
     <p>{episode.shortDescription}</p>
-  </Container>
+  </div>
 );
 
 export default LatestEpisode;

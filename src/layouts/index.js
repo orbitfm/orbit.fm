@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import InfoBar from '../components/InfoBar';
 
 import './index.css';
 
@@ -55,25 +54,12 @@ const TemplateWrapper = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: data.site.siteMetadata.title },
+        { name: 'description', content: data.site.siteMetadata.description },
         { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
       ]}
     />
     <Header title={data.site.siteMetadata.title} />
-    <InfoBar
-      title={data.site.siteMetadata.title}
-      tagline={data.site.siteMetadata.description}
-    />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 1200,
-        paddingTop: 0,
-        height: `100%`,
-      }}
-    >
-      {children()}
-    </div>
+    <div>{children()}</div>
   </div>
 );
 

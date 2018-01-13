@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 
 const Container = styled.div`
-  background: #2486a1;
+  background: ${props => props.color};
   padding: 40px;
   color: white;
 `;
@@ -18,8 +18,8 @@ const RightSide = styled.div`
   margin-left: 40px;
 `;
 
-const InfoBar = ({ title, tagline }) => (
-  <Container>
+const InfoBar = ({ title, tagline, color }) => (
+  <Container color={color}>
     <InnerContainer>
       <div />
       <RightSide>
@@ -29,5 +29,9 @@ const InfoBar = ({ title, tagline }) => (
     </InnerContainer>
   </Container>
 );
+
+InfoBar.defaultProps = {
+  color: '#2486a1',
+};
 
 export default InfoBar;

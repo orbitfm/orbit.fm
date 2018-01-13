@@ -2,7 +2,16 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import SidePanel from '../components/SidePanel';
+import InfoBar from '../components/InfoBar';
 import LatestEpisode from '../components/LatestEpisode';
+import EpisodeListing from '../components/EpisodeListing';
+
+const PageContainer = styled.div`
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 0;
+  height: 100%;
+`;
 
 const Container = styled.div`
   display: grid;
@@ -15,7 +24,7 @@ const MainArea = styled.div`
 `;
 
 const IndexPage = ({ data }) => {
-  const podcasts = data.allContentfulPodcast.edges
+  const episodes = data.allContentfulPodcast.edges
     .reduce((a, e) => [...a, ...e.node.episode], [])
     .sort((a, b) => {
       if (a.publicationDate > b.publicationDate) {
@@ -26,23 +35,27 @@ const IndexPage = ({ data }) => {
       }
       return 0;
     });
+  console.log(episodes[0].podcast.primaryColor);
   return (
-    <Container>
-      <SidePanel>
-        <LatestEpisode episode={podcasts[0]} />
-      </SidePanel>
-      <MainArea>
-        <h1>Welcome to {data.site.siteMetadata.title}</h1>
-        <p>{data.site.siteMetadata.description}</p>
-        <ul>
-          {data.allContentfulPodcast.edges.map(({ node }) => (
-            <li key={node.id}>
-              <Link to={`/${node.fields.slug}`}>{node.name}</Link>
-            </li>
-          ))}
-        </ul>
-      </MainArea>
-    </Container>
+    <div>
+      <InfoBar
+        title={data.site.siteMetadata.title}
+        tagline={data.site.siteMetadata.description}
+        color={episodes[0].podcast.primaryColor}
+      />
+      <PageContainer>
+        <Container>
+          <SidePanel>
+            <LatestEpisode episode={episodes[0]} />
+          </SidePanel>
+          <MainArea>
+            {episodes.map(episode => (
+              <EpisodeListing episode={episode} key={episode.id} />
+            ))}
+          </MainArea>
+        </Container>
+      </PageContainer>
+    </div>
   );
 };
 
@@ -71,6 +84,7 @@ export const query = graphql`
             shortDescription
             podcast {
               name
+              primaryColor
               fields {
                 slug
               }
