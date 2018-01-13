@@ -1,9 +1,9 @@
-import path from "path"
-import RSS from "rss"
-import merge from "lodash.merge"
-import { defaultOptions, runQuery, writeFile } from "./internals"
+import path from 'path';
+import RSS from 'rss';
+import merge from 'lodash.merge';
+import { defaultOptions, runQuery, writeFile } from './internals';
 
-const publicPath = `./public`
+const publicPath = `./public`;
 
 // A default function to transform query data into feed entries.
 const serialize = ({ query: { site, allMarkdownRemark } }) =>
@@ -13,12 +13,12 @@ const serialize = ({ query: { site, allMarkdownRemark } }) =>
       description: edge.node.excerpt,
       url: site.siteMetadata.siteUrl + edge.node.fields.slug,
       guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-      custom_elements: [{ "content:encoded": edge.node.html }],
-    }
-  })
+      custom_elements: [{ 'content:encoded': edge.node.html }],
+    };
+  });
 
 exports.onPostBuild = async ({ graphql }, pluginOptions) => {
-  delete pluginOptions.plugins
+  delete pluginOptions.plugins;
 
   /*
    * Run the site settings query to gather context, then
@@ -27,37 +27,42 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
   const options = {
     ...defaultOptions,
     ...pluginOptions,
-  }
+  };
 
   if (`query` in options) {
-    options.query = await runQuery(graphql, options.query)
+    options.query = await runQuery(graphql, options.query);
   }
 
-  const newFeeds = typeof options.feeds === 'function' ? options.feeds({query: options.query}) : options.feeds;
+  const newFeeds =
+    typeof options.feeds === 'function'
+      ? options.feeds({ query: options.query })
+      : options.feeds;
 
-  for (let f of newFeeds) {
-    if (f.query) {
-      f.query = await runQuery(graphql, f.query)
+  for (let i in newFeeds) {
+    if (newFeeds[i].query) {
+      newFeeds[i].query = await runQuery(graphql, newFeeds[i].query);
 
       if (options.query) {
-        f.query = merge(options.query, f.query)
-        delete options.query
+        newFeeds[i].query = merge(options.query, newFeeds[i].query);
+        delete options.query;
       }
     }
 
     const { setup, ...locals } = {
       ...options,
-      ...f,
-    }
+      ...newFeeds[i],
+    };
 
-    const feed = new RSS(setup(locals))
+    const feed = new RSS(setup(locals, i));
     const serializer =
-      f.serialize && typeof f.serialize === `function` ? f.serialize : serialize
-    const items = serializer(locals)
+      newFeeds[i].serialize && typeof newFeeds[i].serialize === `function`
+        ? newFeeds[i].serialize
+        : serialize;
+    const items = serializer(locals);
 
-    items.forEach(i => feed.item(i))
-    await writeFile(path.join(publicPath, f.output), feed.xml())
+    items.forEach(i => feed.item(i));
+    await writeFile(path.join(publicPath, newFeeds[i].output), feed.xml());
   }
 
-  return Promise.resolve()
-}
+  return Promise.resolve();
+};

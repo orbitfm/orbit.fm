@@ -82,6 +82,10 @@ module.exports = {
             edges {
               node {
                 id
+                name
+                description {
+                  description
+                }
                 image {
                   file {
                     url
@@ -111,13 +115,23 @@ module.exports = {
           }
         }
       `,
-        setup: ({
-          query: { site: { siteMetadata }, allContentfulPodcast },
-        }) => {
-          const podcast = allContentfulPodcast.edges[0].node;
+        setup: (
+          { query: { site: { siteMetadata }, allContentfulPodcast } },
+          i
+        ) => {
+          const podcast = allContentfulPodcast.edges[i]
+            ? allContentfulPodcast.edges[i].node
+            : {
+                name: 'Orbit FM master feed',
+                fields: {
+                  slug: 'master',
+                },
+                description: { description: 'Orbit FM is a bunch of podcasts' },
+                image: { file: { url: 'testimage.png' } },
+              };
           return {
-            title: siteMetadata.title,
-            description: siteMetadata.description,
+            title: podcast.name,
+            description: podcast.description.description,
             feed_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}/feed.rss`,
             site_url: siteMetadata.siteUrl,
             image_url: podcast.image ? podcast.image.file.url : ``,
@@ -172,16 +186,10 @@ module.exports = {
             output: `${node.fields.slug}/feed.rss`,
           })),
           {
-            serialize: ({ query: { site, allContentfulPodcast } }) =>
+            serialize: ({
+              query: { site: { siteMetadata }, allContentfulPodcast },
+            }) =>
               serialize({
-                image: {
-                  file: {
-                    url: 'testImage',
-                  },
-                },
-                fields: {
-                  slug: 'master',
-                },
                 episode: allContentfulPodcast.edges.reduce(
                   (a, { node }) => [...a, ...(node.episode || [])],
                   []
