@@ -9,7 +9,7 @@ export default ({ data }) => {
   return (
     <PageWithSidebar
       title={episode.podcast.name}
-      description={episode.podcast.description}
+      description={episode.podcast.description.description}
       primaryColor={episode.podcast.primaryColor}
       episode={episode}
     >
@@ -78,6 +78,9 @@ export const query = graphql`
       podcast {
         id
         name
+        description {
+          description
+        }
         fields {
           slug
         }
