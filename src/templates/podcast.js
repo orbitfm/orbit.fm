@@ -77,6 +77,9 @@ export const query = graphql`
           hosts {
             name
           }
+          fields {
+            slug
+          }
         }
       }
     }

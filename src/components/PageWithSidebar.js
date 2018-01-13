@@ -35,9 +35,11 @@ const PageWithSidebar = ({
               episode.podcast.image && `http:${episode.podcast.image.file.url}`
             }
             name={episode.name}
+            path={episode.fields.path}
             shortDescription={episode.shortDescription}
             podcastName={episode.podcast.name}
             podcastHosts={episode.podcast.hosts.map(h => h.name)}
+            podcastPath={episode.podcast.fields.slug}
           />
         )}
       </SidePanel>
@@ -55,11 +57,18 @@ PageWithSidebar.propTypes = {
     imageUrl: PropTypes.string,
     name: PropTypes.string.isRequired,
     shortDescription: PropTypes.string.isRequired,
+    fields: PropTypes.shape({
+      path: PropTypes.string.isRequired,
+    }).isRequired,
     podcast: PropTypes.shape({
       name: PropTypes.string.isRequired,
       hosts: PropTypes.arrayOf(
         PropTypes.shape({ name: PropTypes.string.isRequired })
       ).isRequired,
+
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }).isRequired,
     }).isRequired,
   }).isRequired,
 };
