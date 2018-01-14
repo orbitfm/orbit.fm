@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
+import Page from '../components/Page';
 
 const CircleImage = styled.img`
   float: left;
@@ -12,8 +13,7 @@ const CircleImage = styled.img`
 export default ({ data }) => {
   const person = data.contentfulPerson;
   return (
-    <div>
-      <h1>{person.name}</h1>
+    <Page title={person.name}>
       {person.image && (
         <CircleImage src={person.image.file.url} width="100px" height="100px" />
       )}
@@ -30,7 +30,7 @@ export default ({ data }) => {
             />
           </a>
         ))}
-    </div>
+    </Page>
   );
 };
 

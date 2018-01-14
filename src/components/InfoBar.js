@@ -9,32 +9,11 @@ const Container = styled.div`
   color: white;
 `;
 
-const InnerContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(300px, 400px) 1fr;
-`;
-
-const RightSide = styled.div`
-  margin-left: 40px;
-`;
-
-const InfoBar = ({ title, tagline, color }) => (
-  <Container color={color}>
-    <InnerContainer>
-      <div />
-      <RightSide>
-        <h1>{title}</h1>
-        <p>{tagline}</p>
-      </RightSide>
-    </InnerContainer>
-  </Container>
+const InfoBar = ({ children, color }) => (
+  <Container color={color}>{children}</Container>
 );
 
 InfoBar.propTypes = {
-  title: PropTypes.string.isRequired,
-  tagline: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
 };
 

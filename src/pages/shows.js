@@ -3,8 +3,7 @@ import Link from 'gatsby-link';
 import Page from '../components/Page';
 
 const Shows = ({ data }) => (
-  <Page>
-    <h1>Shows</h1>
+  <Page title="Shows">
     <ul>
       {data.allContentfulPodcast.edges.map(({ node }) => (
         <li key={node.id}>

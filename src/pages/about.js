@@ -3,8 +3,7 @@ import Link from 'gatsby-link';
 import Page from '../components/Page';
 
 const AboutPage = ({ data }) => (
-  <Page>
-    <h1>Welcome to {data.site.siteMetadata.title}</h1>
+  <Page title={`Welcome to ${data.site.siteMetadata.title}`}>
     <p>
       Instead of scattering my podcasts across multiple websites, I just wanted
       one simple place to put them all. There are currently{' '}

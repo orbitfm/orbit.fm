@@ -7,10 +7,12 @@ import SidePanel from './SidePanel';
 const Container = styled.div`
   display: grid;
   grid-template-columns: minmax(300px, 400px) 1fr;
-  margin: 0 auto;
   max-width: 1200px;
-  padding-top: 0;
-  min-height: 100%;
+  margin: 0 auto;
+`;
+
+const RightSide = styled.div`
+  margin-left: 40px;
 `;
 
 const MainArea = styled.div`
@@ -26,7 +28,15 @@ const PageWithSidebar = ({
   episode,
 }) => (
   <div>
-    <InfoBar title={title} tagline={description} color={color} />
+    <InfoBar color={color}>
+      <Container>
+        <div />
+        <RightSide>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </RightSide>
+      </Container>
+    </InfoBar>
     <Container>
       <SidePanel>{sidePanelChildren}</SidePanel>
       <MainArea>{children}</MainArea>
