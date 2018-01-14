@@ -1,17 +1,37 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import styled from 'react-emotion';
 import Page from '../components/Page';
+
+const Listing = styled.ul`
+  list-style: none;
+`;
+
+const Item = styled.li`
+  display: flex;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  max-width: 150px;
+  margin-right: 20px;
+`;
 
 const Shows = ({ data }) => (
   <Page title="Shows">
-    <ul>
+    <Listing>
       {data.allContentfulPodcast.edges.map(({ node }) => (
-        <li key={node.id}>
-          <Link to={`/${node.fields.slug}`}>{node.name}</Link>
-          <p>{node.description.description}</p>
-        </li>
+        <Item key={node.id}>
+          <Image src={node.image.file.url} />
+          <div>
+            <Link to={`/${node.fields.slug}`}>
+              <h2>{node.name}</h2>
+            </Link>
+            <p>{node.description.description}</p>
+          </div>
+        </Item>
       ))}
-    </ul>
+    </Listing>
   </Page>
 );
 
@@ -24,6 +44,11 @@ export const query = graphql`
         node {
           id
           name
+          image {
+            file {
+              url
+            }
+          }
           description {
             description
           }
