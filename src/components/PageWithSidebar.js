@@ -20,13 +20,13 @@ const MainArea = styled.div`
 const PageWithSidebar = ({
   children,
   sidePanelChildren,
-  primaryColor,
+  color,
   title,
   description,
   episode,
 }) => (
   <div>
-    <InfoBar title={title} tagline={description} color={primaryColor} />
+    <InfoBar title={title} tagline={description} color={color} />
     <Container>
       <SidePanel>{sidePanelChildren}</SidePanel>
       <MainArea>{children}</MainArea>
@@ -37,7 +37,7 @@ const PageWithSidebar = ({
 PageWithSidebar.propTypes = {
   children: PropTypes.node.isRequired,
   sidePanelChildren: PropTypes.node.isRequired,
-  primaryColor: PropTypes.string,
+  color: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
