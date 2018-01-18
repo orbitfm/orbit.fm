@@ -1,22 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import InfoBar from './InfoBar';
 import SidePanel from './SidePanel';
+import * as COLORS from '../constants/colors';
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: minmax(300px, 400px) 1fr;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: 1fr minmax(200px, 400px) minmax(300px, 800px) 1fr;
 `;
 
-const RightSide = styled.div`
-  margin-left: 40px;
+const Color = styled.div`
+  background: ${props => props.color};
+`;
+Color.propTypes = {
+  color: PropTypes.string.isRequired,
+};
+Color.defaultProps = {
+  color: COLORS.BRAND,
+};
+
+const BannerContainer = styled.div`
+  background: ${props => props.color};
+  padding: 40px;
+  color: white;
+`;
+BannerContainer.propTypes = {
+  color: PropTypes.string.isRequired,
+};
+BannerContainer.defaultProps = {
+  color: COLORS.BRAND,
+};
+
+const SideContainer = styled.div`
+  grid-column: 2 / 2;
 `;
 
-const MainArea = styled.div`
-  padding: 20px;
+const MainContainer = styled.div`
+  grid-column: 3 / 3;
+  padding: 40px;
 `;
 
 const PageWithSidebar = ({
@@ -27,21 +48,19 @@ const PageWithSidebar = ({
   description,
   episode,
 }) => (
-  <div>
-    <InfoBar color={color}>
-      <Container>
-        <div />
-        <RightSide>
-          <h1>{title}</h1>
-          <p>{description}</p>
-        </RightSide>
-      </Container>
-    </InfoBar>
-    <Container>
+  <Container>
+    <Color color={color} />
+    <Color color={color} />
+    <BannerContainer color={color}>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </BannerContainer>
+    <Color color={color} />
+    <SideContainer>
       <SidePanel>{sidePanelChildren}</SidePanel>
-      <MainArea>{children}</MainArea>
-    </Container>
-  </div>
+    </SideContainer>
+    <MainContainer>{children}</MainContainer>
+  </Container>
 );
 
 PageWithSidebar.propTypes = {
