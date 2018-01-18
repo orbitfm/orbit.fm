@@ -9,9 +9,13 @@ export default ({ data }) => {
   const episode = data.contentfulEpisode;
   return (
     <PageWithSidebar
-      title={episode.podcast.name}
+      title={
+        <Link to={`/${episode.podcast.fields.slug}`}>
+          {episode.podcast.name}
+        </Link>
+      }
       description={episode.podcast.description.description}
-      primaryColor={episode.podcast.primaryColor}
+      color={episode.podcast.primaryColor}
       sidePanelChildren={
         <LatestEpisode
           imageUrl={
@@ -95,6 +99,7 @@ export const query = graphql`
       podcast {
         id
         name
+        primaryColor
         description {
           description
         }

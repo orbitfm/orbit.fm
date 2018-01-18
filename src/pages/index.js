@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
     <PageWithSidebar
       title={data.site.siteMetadata.title}
       description={data.site.siteMetadata.description}
-      primaryColor={latestEpisode.podcast.primaryColor}
+      color={latestEpisode.podcast.primaryColor}
       sidePanelChildren={
         <LatestEpisode
           imageUrl={

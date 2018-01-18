@@ -76,7 +76,10 @@ PageWithSidebar.propTypes = {
   children: PropTypes.node.isRequired,
   sidePanelChildren: PropTypes.node.isRequired,
   color: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.node.isRequired,
+  ]),
   description: PropTypes.string.isRequired,
 };
 
