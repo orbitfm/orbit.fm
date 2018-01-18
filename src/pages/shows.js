@@ -9,6 +9,7 @@ const Listing = styled.ul`
 
 const Item = styled.li`
   display: flex;
+  align-items: flex-start;
 `;
 
 const Image = styled.img`
