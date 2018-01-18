@@ -7,6 +7,9 @@ import * as COLORS from '../constants/colors';
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr minmax(200px, 400px) minmax(300px, 800px) 1fr;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Color = styled.div`
@@ -33,11 +36,17 @@ BannerContainer.defaultProps = {
 
 const SideContainer = styled.div`
   grid-column: 2 / 2;
+  @media (max-width: 700px) {
+    grid-column: 1 / -1;
+  }
 `;
 
 const MainContainer = styled.div`
   grid-column: 3 / 3;
   padding: 40px;
+  @media (max-width: 700px) {
+    grid-column: 1;
+  }
 `;
 
 const PageWithSidebar = ({
