@@ -6,6 +6,9 @@ import humanizeList from 'humanize-list';
 
 const Image = styled.div`
   margin-top: -150px;
+  @media (max-width: 700px) {
+    margin-top: 0;
+  }
 `;
 
 const LatestEpisode = ({
