@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
+const Image = styled.img`
+  max-width: 40px;
+  margin-right: 20px;
+`;
+
 const Subscribe = ({ links }) => {
   console.log(links);
   if (!links) {
@@ -18,7 +23,7 @@ const Subscribe = ({ links }) => {
       <div>
         {simpleLinks.map(l => (
           <a href={l.link}>
-            <img src={l.imageUrl} />
+            <Image src={l.imageUrl} />
           </a>
         ))}
       </div>
