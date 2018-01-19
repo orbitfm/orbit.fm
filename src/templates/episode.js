@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import { DateTime } from 'luxon';
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
+import Subscribe from '../components/Subscribe';
 
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
@@ -28,6 +29,7 @@ export default ({ data }) => {
         />
       }
     >
+      <Subscribe links={episode.podcast.subscriptionLinks} />
       <h2>{episode.name}</h2>
       <div>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</div>
       <div>{episode.shortDescription}</div>
@@ -100,6 +102,19 @@ export const query = graphql`
         primaryColor
         description {
           description
+        }
+        subscriptionLinks {
+          id
+          linkType {
+            image {
+              file {
+                url
+              }
+            }
+            link {
+              url
+            }
+          }
         }
         fields {
           slug
