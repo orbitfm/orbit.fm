@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import PageWithSidebar from '../components/PageWithSidebar';
 import LatestEpisode from '../components/LatestEpisode';
+import Subscribe from '../components/Subscribe';
 
 export default ({ data }) => {
   const podcast = data.contentfulPodcast;
@@ -40,6 +41,7 @@ export default ({ data }) => {
         )
       }
     >
+      <Subscribe links={podcast.subscriptionLinks} />
       <h2>Latest Episodes</h2>
       {episodes ? (
         <ul>
@@ -60,6 +62,19 @@ export const query = graphql`
       name
       description {
         description
+      }
+      subscriptionLinks {
+        id
+        linkType {
+          image {
+            file {
+              url
+            }
+          }
+          link {
+            url
+          }
+        }
       }
       primaryColor
       hosts {
