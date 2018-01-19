@@ -4,6 +4,9 @@ import styled from 'react-emotion';
 
 const Subscribe = ({ links }) => {
   console.log(links);
+  if (!links) {
+    return null;
+  }
   const simpleLinks = links.map(l => ({
     imageUrl: `http:${l.linkType.image.file.url}`,
     link: l.linkType.link[0].url,
