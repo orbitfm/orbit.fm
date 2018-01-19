@@ -8,21 +8,20 @@ const Image = styled.img`
 `;
 
 const Subscribe = ({ links }) => {
-  console.log(links);
   if (!links) {
     return null;
   }
   const simpleLinks = links.map(l => ({
+    id: l.id,
     imageUrl: `http:${l.linkType.image.file.url}`,
     link: l.linkType.link[0].url,
   }));
-  console.log(simpleLinks);
   return (
     <div>
       <h2>Subscribe</h2>
       <div>
         {simpleLinks.map(l => (
-          <a href={l.link}>
+          <a href={l.link} key={l.id} target="_blank" rel="noopener">
             <Image src={l.imageUrl} />
           </a>
         ))}
@@ -34,6 +33,7 @@ const Subscribe = ({ links }) => {
 Subscribe.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.string,
       linkType: PropTypes.shape({
         image: PropTypes.shape({
           file: PropTypes.shape({ url: PropTypes.string }),

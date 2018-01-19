@@ -7,7 +7,6 @@ const IndexPage = ({ data }) => {
   const episodes = data.allContentfulPodcast.edges
     .reduce((a, e) => [...a, ...e.node.episode], [])
     .sort((a, b) => {
-      console.log(b);
       if (a.publicationDate > b.publicationDate) {
         return -1;
       }
