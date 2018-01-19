@@ -23,7 +23,9 @@ const Shows = ({ data }) => (
     <Listing>
       {data.allContentfulPodcast.edges.map(({ node }) => (
         <Item key={node.id}>
-          <Image src={node.image.file.url} />
+          <Link to={`/${node.fields.slug}`}>
+            <Image src={node.image.file.url} />
+          </Link>
           <div>
             <Link to={`/${node.fields.slug}`}>
               <h2>{node.name}</h2>
