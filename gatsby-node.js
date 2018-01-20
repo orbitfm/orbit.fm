@@ -33,7 +33,9 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       value: `${urlify(getNode(node.podcast___NODE).name)}/${
         node.season && node.episodeNumber
           ? `season${node.season}/${node.episodeNumber}`
-          : node.episodeNumber || slug(node.name, { lower: true })
+          : node.episodeNumber !== undefined
+            ? node.episodeNumber
+            : slug(node.name, { lower: true })
       }`,
     });
 
