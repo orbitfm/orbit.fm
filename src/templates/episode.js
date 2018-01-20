@@ -47,15 +47,18 @@ export default ({ data }) => {
             </li>
           ))}
       </ul>
-      <h3>Guests</h3>
-      <ul>
-        {episode.guests &&
-          episode.guests.map(guest => (
-            <li key={guest.id}>
-              <Link to={`/people/${guest.fields.slug}`}>{guest.name}</Link>
-            </li>
-          ))}
-      </ul>
+      {episode.guests && (
+        <div>
+          <h3>Guests</h3>
+          <ul>
+            {episode.guests.map(guest => (
+              <li key={guest.id}>
+                <Link to={`/people/${guest.fields.slug}`}>{guest.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {episode.fields.showNotesFormatted && (
         <div>
