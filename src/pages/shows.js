@@ -9,13 +9,16 @@ const Listing = styled.ul`
 
 const Item = styled.li`
   display: flex;
-  align-items: flex-start;
+  margin-bottom: 20px;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
-const Image = styled.img`
+const ImageContainer = styled.div`
   width: 100%;
   max-width: 150px;
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
 `;
 
 const Shows = ({ data }) => (
@@ -23,9 +26,11 @@ const Shows = ({ data }) => (
     <Listing>
       {data.allContentfulPodcast.edges.map(({ node }) => (
         <Item key={node.id}>
-          <Link to={`/${node.fields.slug}`}>
-            <Image src={node.image.file.url} />
-          </Link>
+          <ImageContainer>
+            <Link to={`/${node.fields.slug}`}>
+              <img src={node.image.file.url} />
+            </Link>
+          </ImageContainer>
           <div>
             <Link to={`/${node.fields.slug}`}>
               <h2>{node.name}</h2>
