@@ -13,7 +13,7 @@ const Image = styled.div`
 
 const PodcastInfo = ({
   imageUrl,
-  shortDescription,
+  podcastDescription,
   podcastName,
   podcastHosts,
   podcastPath,
@@ -28,7 +28,7 @@ const PodcastInfo = ({
       <Link to={podcastPath}>{podcastName}</Link>
     </p>
     <p>Hosted by {humanizeList(podcastHosts, { oxfordComma: true })}</p>
-    <p>{shortDescription}</p>
+    <p>{podcastDescription}</p>
   </div>
 );
 
