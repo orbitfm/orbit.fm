@@ -5,27 +5,27 @@ import Page from '../components/Page';
 const AboutPage = ({ data }) => (
   <Page title={`Welcome to ${data.site.siteMetadata.title}`}>
     <p>
-      Instead of scattering my podcasts across multiple websites, I just wanted
-      one simple place to put them all. There are currently{' '}
-      <Link to="/shows">{data.allContentfulPodcast.edges.length} shows</Link> on
-      the site. So it's kind of like a podcast network, but it's more like a
-      website with multiple podcasts.
+      If you like technology, web development, books, or anything nerdy, there's
+      probably something here for you.
     </p>
 
     <h2>History</h2>
     <p>
-      I started podcasting back in 2015 with my friend Jonathan. We made a show
-      called <Link to="/talkingdudes">Talking Dudes</Link> and we just talked
-      about whatever we wanted to. No one listened, but it was a ton of fun.
+      Orbit FM is the place where all of Adam Garrett-Harris' podcasts live.
     </p>
     <p>
-      In 2015, my friend Riley Carasquillo, asked me if I wanted to start a
-      podcast about web development. I said yes and we called it{' '}
-      <Link to="/weboftomorrow">Web of Tomorrow</Link>. Riley and I talked about
-      Web Dev on the show for about a year, and then I took over and started
-      bringing on more guests.
+      He started podcasting back in 2015 with his friend Jonathan Caldwell. They
+      made a show called <Link to="/talkingdudes">Talking Dudes</Link> and they
+      talked about technology, movies, and whatever was on their mind.
     </p>
-    <p>- Adam Garrett-Harris</p>
+    <p>
+      Later in 2015, he started another podcast with his friend Riley
+      Carasquillo, about web development, called{' '}
+      <Link to="/weboftomorrow">Web of Tomorrow</Link>. He and Riley talked
+      about web development on the show for about a year, and then Adam took
+      over and started bringing on more guests to talk about cool stuff they
+      build or experiences they've had.
+    </p>
   </Page>
 );
 
