@@ -5,6 +5,7 @@ import styled from 'react-emotion';
 const Image = styled.img`
   max-width: 40px;
   margin-right: 20px;
+  border-radius: 8px;
 `;
 
 const Subscribe = ({ links }) => {
