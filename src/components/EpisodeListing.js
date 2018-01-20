@@ -3,22 +3,42 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
-import { DateTime } from 'luxon';
+import {DateTime} from 'luxon';
 import * as COLORS from '../constants/colors';
 
-const Container = styled.div`
+const Container = styled.article`
   border-bottom: 1px solid ${COLORS.DIVIDER};
   margin-bottom: 40px;
+  display: flex;
 `;
 
 const Image = styled.div`
-  width: 100%;
+  width: 20vw;
   max-width: 150px;
   margin-right: 20px;
 `;
 
-const Top = styled.div`
-  display: flex;
+const EpisodeTitle = styled.h1`
+  font-size: 1.3em;
+`;
+
+const PodcastTitle = styled(Link)`
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
+`;
+
+const EpisodeDate = styled.span`
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
+  :after {
+    display: inline;
+    content: '▪';
+    margin: 0 5px;
+  }
+`;
+
+const Details = styled.div`
+  flex: 1;
 `;
 
 const EpisodeListing = ({
@@ -33,20 +53,20 @@ const EpisodeListing = ({
   podcastPath,
 }) => (
   <Container>
-    <Top>
-      <Image>{imageUrl && <img src={imageUrl} />}</Image>
-      <div>
-        <p>
-          <Link to={podcastPath}>{podcastName}</Link>
-        </p>
-        <p>
-          <Link to={path}>{name}</Link>
-        </p>
-        <p>{DateTime.fromISO(publicationDate).toLocaleString()}</p>
-        <p>Hosted by {humanizeList(podcastHosts, { oxfordComma: true })}</p>
-      </div>
-    </Top>
-    <p>{shortDescription}</p>
+    <Image>
+      <Link to={path}>
+        <img src={imageUrl} alt={podcastName} />
+      </Link>
+    </Image>
+    <Details>
+      <EpisodeDate>{DateTime.fromISO(publicationDate).toLocaleString()}</EpisodeDate>
+      <PodcastTitle to={podcastPath}>{podcastName}</PodcastTitle>
+      <EpisodeTitle>
+        <Link to={path}>{name}</Link>
+      </EpisodeTitle>
+      <p>Hosts: {humanizeList(podcastHosts, {oxfordComma: true})}</p>
+      <p>{shortDescription}</p>
+    </Details>
   </Container>
 );
 

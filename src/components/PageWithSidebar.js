@@ -46,6 +46,7 @@ const MainContainer = styled.div`
   padding: 40px;
   @media (max-width: 700px) {
     grid-column: 1;
+    padding: 20px;
   }
 `;
 
