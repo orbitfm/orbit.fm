@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "orbit.fm",
+  "description": "Website for orbit.fm",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Adam Garrett-Harris <hello@orbit.fm>",
   "dependencies": {
     "emotion": "^8.0.12",
     "emotion-server": "^8.0.12",
@@ -24,7 +24,9 @@
     "typography-theme-alton": "^0.15.10"
   },
   "keywords": [
-    "gatsby"
+    "website",
+    "gatsby",
+    "podcast"
   ],
   "license": "MIT",
   "main": "n/a",
