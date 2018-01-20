@@ -2,9 +2,14 @@ import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 import Link from 'gatsby-link';
 import { DateTime } from 'luxon';
+import styled from 'react-emotion';
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
+
+const AudioContainer = styled.div`
+  margin: 40px 0;
+`;
 
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
@@ -31,13 +36,15 @@ export default ({ data }) => {
     >
       <Subscribe links={episode.podcast.subscriptionLinks} />
       <h2>{episode.name}</h2>
-      <div>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</div>
+      <p>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</p>
       <div>{episode.shortDescription}</div>
-      <ReactAudioPlayer
-        src={`http://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
-        preload="none"
-        controls
-      />
+      <AudioContainer>
+        <ReactAudioPlayer
+          src={`http://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
+          preload="none"
+          controls
+        />
+      </AudioContainer>
       <h3>Hosts</h3>
       <ul>
         {episode.hosts &&
