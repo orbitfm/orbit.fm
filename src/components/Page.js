@@ -9,9 +9,6 @@ const Container = styled.div`
   max-width: 1200px;
   padding-top: 0;
   min-height: 100%;
-`;
-
-const MainArea = styled.div`
   padding: 20px;
 `;
 
@@ -22,9 +19,7 @@ const Page = ({ children, title }) => (
         <h1>{title}</h1>
       </Container>
     </InfoBar>
-    <Container>
-      <MainArea>{children}</MainArea>
-    </Container>
+    <Container>{children}</Container>
   </div>
 );
 

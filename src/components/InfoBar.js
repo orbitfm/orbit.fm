@@ -5,12 +5,18 @@ import * as COLORS from '../constants/colors';
 
 const Container = styled.div`
   background: ${props => props.color};
-  padding: 40px;
+  padding: 40px 0;
   color: white;
 `;
 
+const InnerContainer = styled.div`
+  padding-left: 20px;
+`;
+
 const InfoBar = ({ children, color }) => (
-  <Container color={color}>{children}</Container>
+  <Container color={color}>
+    <InnerContainer>{children}</InnerContainer>
+  </Container>
 );
 
 InfoBar.propTypes = {
