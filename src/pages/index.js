@@ -41,7 +41,6 @@ const IndexPage = ({ data }) => {
         .slice(0, 10)
         .map(episode => (
           <EpisodeListing
-            episode={episode}
             shortDescription={episode.shortDescription}
             publicationDate={episode.publicationDate}
             name={episode.name}

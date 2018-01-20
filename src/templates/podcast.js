@@ -4,6 +4,7 @@ import styled from 'react-emotion';
 import PageWithSidebar from '../components/PageWithSidebar';
 import LatestEpisode from '../components/LatestEpisode';
 import Subscribe from '../components/Subscribe';
+import EpisodeListing from '../components/EpisodeListing';
 
 export default ({ data }) => {
   const podcast = data.contentfulPodcast;
@@ -44,13 +45,21 @@ export default ({ data }) => {
       <Subscribe links={podcast.subscriptionLinks} />
       <h2>Latest Episodes</h2>
       {episodes ? (
-        <ul>
-          {episodes.map(e => (
-            <li key={e.id}>
-              <Link to={e.fields.path}>{e.name}</Link>
-            </li>
-          ))}
-        </ul>
+          episodes.map(e => (
+          <EpisodeListing
+            shortDescription={e.shortDescription}
+            publicationDate={e.publicationDate}
+            name={e.name}
+            path={e.fields.path}
+            imageUrl={
+              e.podcast.image && `http:${e.podcast.image.file.url}`
+            }
+            podcastHosts={e.podcast.hosts.map(h => h.name)}
+            podcastName={e.podcast.name}
+            podcastPath={e.podcast.fields.slug}
+            key={e.id}
+          />
+          ))
       ) : null}
     </PageWithSidebar>
   );
