@@ -30,7 +30,7 @@ export default ({ data }) => {
         episode && (
           <LatestEpisode
             imageUrl={
-              episode.podcast.image && `http:${episode.podcast.image.file.url}`
+              episode.podcast.image && `https:${episode.podcast.image.file.url}`
             }
             name={episode.name}
             path={episode.fields.path}
@@ -44,23 +44,21 @@ export default ({ data }) => {
     >
       <Subscribe links={podcast.subscriptionLinks} />
       <h2>Latest Episodes</h2>
-      {episodes ? (
-          episodes.map(e => (
-          <EpisodeListing
-            shortDescription={e.shortDescription}
-            publicationDate={e.publicationDate}
-            name={e.name}
-            path={e.fields.path}
-            imageUrl={
-              e.podcast.image && `http:${e.podcast.image.file.url}`
-            }
-            podcastHosts={e.podcast.hosts.map(h => h.name)}
-            podcastName={e.podcast.name}
-            podcastPath={e.podcast.fields.slug}
-            key={e.id}
-          />
+      {episodes
+        ? episodes.map(e => (
+            <EpisodeListing
+              shortDescription={e.shortDescription}
+              publicationDate={e.publicationDate}
+              name={e.name}
+              path={e.fields.path}
+              imageUrl={e.podcast.image && `https:${e.podcast.image.file.url}`}
+              podcastHosts={e.podcast.hosts.map(h => h.name)}
+              podcastName={e.podcast.name}
+              podcastPath={e.podcast.fields.slug}
+              key={e.id}
+            />
           ))
-      ) : null}
+        : null}
     </PageWithSidebar>
   );
 };

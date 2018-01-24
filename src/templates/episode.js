@@ -25,7 +25,7 @@ export default ({ data }) => {
       sidePanelChildren={
         <PodcastInfo
           imageUrl={
-            episode.podcast.image && `http:${episode.podcast.image.file.url}`
+            episode.podcast.image && `https:${episode.podcast.image.file.url}`
           }
           podcastDescription={episode.podcast.description.description}
           podcastName={episode.podcast.name}
@@ -40,7 +40,7 @@ export default ({ data }) => {
       <div>{episode.shortDescription}</div>
       <AudioContainer>
         <ReactAudioPlayer
-          src={`http://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
+          src={`https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
           preload="none"
           controls
         />

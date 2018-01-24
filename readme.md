@@ -1,6 +1,6 @@
 # Orbit.fm
 
-Website for [orbit.fm](http://www.orbit.fm).
+Website for [orbit.fm](https://www.orbit.fm).
 
 ## Running
 

@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
         <LatestEpisode
           imageUrl={
             latestEpisode.podcast.image &&
-            `http:${latestEpisode.podcast.image.file.url}`
+            `https:${latestEpisode.podcast.image.file.url}`
           }
           name={latestEpisode.name}
           path={latestEpisode.fields.path}
@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
             name={episode.name}
             path={episode.fields.path}
             imageUrl={
-              episode.podcast.image && `http:${episode.podcast.image.file.url}`
+              episode.podcast.image && `https:${episode.podcast.image.file.url}`
             }
             podcastHosts={episode.podcast.hosts.map(h => h.name)}
             podcastName={episode.podcast.name}
