@@ -24,7 +24,7 @@ const serialize = ({ podcast, siteMetadata }) =>
             oxfordComma: true,
           }),
           enclosure: {
-            url: `http://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`,
+            url: `https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`,
             length: episode.audioLength,
             type: 'audio/mp3',
           },
@@ -53,9 +53,9 @@ const serialize = ({ podcast, siteMetadata }) =>
               'itunes:image': {
                 _attr: {
                   href: episode.image
-                    ? `http:${episode.image.file.url}`
+                    ? `https:${episode.image.file.url}`
                     : episode.podcast.image
-                      ? `http:${episode.podcast.image.file.url}`
+                      ? `https:${episode.podcast.image.file.url}`
                       : ``,
                 },
               },
@@ -70,7 +70,7 @@ module.exports = {
     title: `Orbit FM`,
     description: `Orbit FM is a place with podcasts.`,
     coverArt: ``,
-    siteUrl: `http://www.orbit.fm`,
+    siteUrl: `https://www.orbit.fm`,
     owner: `Orbit FM`,
     ownerEmail: `hello@orbit.fm`,
     categories: ['Technology', 'Education'],

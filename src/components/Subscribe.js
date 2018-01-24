@@ -14,7 +14,7 @@ const Subscribe = ({ links }) => {
   }
   const simpleLinks = links.map(l => ({
     id: l.id,
-    imageUrl: `http:${l.linkType.image.file.url}`,
+    imageUrl: `https:${l.linkType.image.file.url}`,
     link: l.linkType.link[0].url,
   }));
   return (
