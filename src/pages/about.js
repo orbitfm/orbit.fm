@@ -24,7 +24,7 @@ const AboutPage = ({ data }) => (
       <Link to="/weboftomorrow">Web of Tomorrow</Link>. He and Riley talked
       about web development on the show for about a year, and then Adam took
       over and started bringing on more guests to talk about cool stuff they
-      build or experiences they've had.
+      built or experiences they've had.
     </p>
   </Page>
 );
