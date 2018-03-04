@@ -4,10 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require(`path`);
-const Remarkable = require('remarkable');
+const Remarkable = require("remarkable");
 const markdown = new Remarkable();
 const slug = require(`slug`);
-const urlify = a => a.replace(/\s/g, '').toLowerCase();
+const urlify = a => a.replace(/\s/g, "").toLowerCase();
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
@@ -16,14 +16,14 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     PODCAST: `ContentfulPodcast`,
     EPISODE: `ContentfulEpisode`,
     PERSON: `ContentfulPerson`,
-    EPISODE__SHOW_NOTES: 'contentfulEpisodeShowNotesTextNode',
+    EPISODE__SHOW_NOTES: "contentfulEpisodeShowNotesTextNode"
   };
 
   if (node.internal.type === types.PODCAST) {
     createNodeField({
       node,
       name: `slug`,
-      value: urlify(node.name),
+      value: urlify(node.name)
     });
   }
   if (node.internal.type === types.EPISODE) {
@@ -36,15 +36,15 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
           : node.episodeNumber !== undefined
             ? node.episodeNumber
             : slug(node.name, { lower: true })
-      }`,
+      }`
     });
 
     if (node.showNotes___NODE) {
       const showNotes = getNode(node.showNotes___NODE);
       createNodeField({
         node,
-        name: 'showNotesFormatted',
-        value: markdown.render(showNotes.internal.content),
+        name: "showNotesFormatted",
+        value: markdown.render(showNotes.internal.content)
       });
     }
   }
@@ -53,7 +53,17 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug(node.name, { lower: true }),
+      value: slug(node.name, { lower: true })
+    });
+    const description = node.description___NODE
+      ? getNode(node.description___NODE).internal.content
+      : "";
+    console.log("----");
+    console.log(description);
+    createNodeField({
+      node,
+      name: "descriptionFormatted",
+      value: markdown.render(description)
     });
   }
 };
@@ -101,8 +111,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/podcast.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            id: node.id,
-          },
+            id: node.id
+          }
         });
       });
       result.data.allContentfulEpisode.edges.forEach(({ node }) => {
@@ -111,8 +121,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/episode.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            id: node.id,
-          },
+            id: node.id
+          }
         });
       });
       result.data.allContentfulPerson.edges.forEach(({ node }) => {
@@ -121,8 +131,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/person.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            id: node.id,
-          },
+            id: node.id
+          }
         });
       });
       resolve();

@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'react-emotion';
-import Page from '../components/Page';
+import React from "react";
+import Link from "gatsby-link";
+import styled from "react-emotion";
+import Page from "../components/Page";
 
 const CircleImage = styled.img`
   float: left;
@@ -17,7 +17,11 @@ export default ({ data }) => {
       {person.image && (
         <CircleImage src={person.image.file.url} width="100px" height="100px" />
       )}
-      {person.description && <p>{person.description.description}</p>}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: person.descriptionFormatted
+        }}
+      />
       {person.links &&
         person.links.map(link => (
           <a href={link.url} target="
@@ -45,9 +49,7 @@ export const query = graphql`
           contentType
         }
       }
-      description {
-        description
-      }
+      descriptionFormatted
       links {
         id
         url
