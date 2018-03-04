@@ -80,7 +80,7 @@ const GiveawayPage = ({ data }) => (
       name="contact"
       method="POST"
       action="/bookbytes/giveaway/thankyou"
-      netlify
+      data-netlify="true"
     >
       <Label>Name on the Review:</Label>
       <Input type="text" name="name" />
