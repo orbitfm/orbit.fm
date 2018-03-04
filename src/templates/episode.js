@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
-import Link from 'gatsby-link';
-import { DateTime } from 'luxon';
-import styled from 'react-emotion';
-import PageWithSidebar from '../components/PageWithSidebar';
-import PodcastInfo from '../components/PodcastInfo';
-import Subscribe from '../components/Subscribe';
+import React from "react";
+import ReactAudioPlayer from "react-audio-player";
+import Link from "gatsby-link";
+import { DateTime } from "luxon";
+import styled from "react-emotion";
+import PageWithSidebar from "../components/PageWithSidebar";
+import PodcastInfo from "../components/PodcastInfo";
+import Subscribe from "../components/Subscribe";
 
 const AudioContainer = styled.div`
   margin: 40px 0;
@@ -72,7 +72,7 @@ export default ({ data }) => {
           <h1> Show Notes </h1>
           <div
             dangerouslySetInnerHTML={{
-              __html: episode.fields.showNotesFormatted,
+              __html: episode.fields.showNotesFormatted
             }}
           />
         </div>
