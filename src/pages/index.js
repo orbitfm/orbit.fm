@@ -1,7 +1,7 @@
-import React from 'react';
-import PageWithSidebar from '../components/PageWithSidebar';
-import LatestEpisode from '../components/LatestEpisode';
-import EpisodeListing from '../components/EpisodeListing';
+import React from "react";
+import PageWithSidebar from "../components/PageWithSidebar";
+import LatestEpisode from "../components/LatestEpisode";
+import EpisodeListing from "../components/EpisodeListing";
 
 const IndexPage = ({ data }) => {
   const episodes = data.allContentfulPodcast.edges
