@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import Page from '../components/Page';
+import React from "react";
+import Link from "gatsby-link";
+import Page from "../components/Page";
 
 const AboutPage = ({ data }) => (
   <Page title={`Welcome to ${data.site.siteMetadata.title}`}>
@@ -20,11 +20,15 @@ const AboutPage = ({ data }) => (
     </p>
     <p>
       Later in 2015, he started another podcast with his friend Riley
-      Carasquillo, about web development, called{' '}
+      Carasquillo, about web development, called{" "}
       <Link to="/weboftomorrow">Web of Tomorrow</Link>. He and Riley talked
       about web development on the show for about a year, and then Adam took
       over and started bringing on more guests to talk about cool stuff they
       built or experiences they've had.
+    </p>
+    <p>
+      In 2018, he started <Link to="/bookbytes">BookBytes</Link> in order to
+      read and discuss great programming books with interesting people.
     </p>
   </Page>
 );
