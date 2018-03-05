@@ -66,7 +66,7 @@ const GiveawayPage = ({ data }) => (
       We're giving away <em>5 copies</em> of Apprenticeship Patterns signed by
       David Hoover. All you have to do is leave a review for{" "}
       <a
-        href=""
+        href="https://itunes.apple.com/us/podcast/bookbytes/id1355549752"
         style={{ textDecoration: "underline" }}
         target="_blank"
         rel="noopener"
