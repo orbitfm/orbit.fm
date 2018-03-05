@@ -126,14 +126,12 @@ export const query = graphql`
         }
         subscriptionLinks {
           id
+          url
           linkType {
             image {
               file {
                 url
               }
-            }
-            link {
-              url
             }
           }
         }
