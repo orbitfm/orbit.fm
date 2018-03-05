@@ -68,7 +68,7 @@ export const query = graphql`
         description
       }
     }
-    allContentfulPodcast(filter: { active: { eq: true } }, limit: 5) {
+    allContentfulPodcast {
       edges {
         node {
           id

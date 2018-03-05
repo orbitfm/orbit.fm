@@ -69,10 +69,21 @@ export default ({ data }) => {
 
       {episode.fields.showNotesFormatted && (
         <div>
-          <h1> Show Notes </h1>
+          <h1>Show Notes</h1>
           <div
             dangerouslySetInnerHTML={{
               __html: episode.fields.showNotesFormatted
+            }}
+          />
+        </div>
+      )}
+
+      {episode.fields.transcriptionFormatted && (
+        <div>
+          <h1>Transcript</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: episode.fields.transcriptionFormatted
             }}
           />
         </div>
@@ -141,6 +152,7 @@ export const query = graphql`
       }
       fields {
         showNotesFormatted
+        transcriptionFormatted
         path
       }
     }

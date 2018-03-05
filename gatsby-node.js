@@ -5,7 +5,7 @@
  */
 const path = require(`path`);
 const Remarkable = require("remarkable");
-const markdown = new Remarkable();
+const markdown = new Remarkable({ html: true });
 const slug = require(`slug`);
 const urlify = a => a.replace(/\s/g, "").toLowerCase();
 
@@ -45,6 +45,15 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
         node,
         name: "showNotesFormatted",
         value: markdown.render(showNotes.internal.content)
+      });
+    }
+
+    if (node.transcription___NODE) {
+      const transcription = getNode(node.transcription___NODE);
+      createNodeField({
+        node,
+        name: "transcriptionFormatted",
+        value: markdown.render(transcription.internal.content)
       });
     }
   }
