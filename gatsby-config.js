@@ -165,7 +165,7 @@ module.exports = {
               podcast.fields.slug === `master`
                 ? siteMetadata.siteUrl
                 : `${siteMetadata.siteUrl}/${podcast.fields.slug}`,
-            image_url: podcast.image ? `https://${podcast.image.file.url}` : ``,
+            image_url: podcast.image ? `https:${podcast.image.file.url}` : ``,
             managingEditor: `${siteMetadata.ownerEmail} (${
               siteMetadata.owner
             })`,
@@ -194,9 +194,7 @@ module.exports = {
               {
                 "itunes:image": {
                   _attr: {
-                    href: podcast.image
-                      ? `https://${podcast.image.file.url}`
-                      : ``
+                    href: podcast.image ? `https:${podcast.image.file.url}` : ``
                   }
                 }
               },
