@@ -77,7 +77,7 @@ const GiveawayPage = ({ data }) => (
     </p>
 
     <form
-      name="contact"
+      name="giveaway"
       method="POST"
       action="/bookbytes/giveaway/thankyou"
       data-netlify="true"
