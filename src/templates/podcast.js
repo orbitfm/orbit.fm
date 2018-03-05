@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'react-emotion';
-import PageWithSidebar from '../components/PageWithSidebar';
-import LatestEpisode from '../components/LatestEpisode';
-import Subscribe from '../components/Subscribe';
-import EpisodeListing from '../components/EpisodeListing';
+import React from "react";
+import Link from "gatsby-link";
+import styled from "react-emotion";
+import PageWithSidebar from "../components/PageWithSidebar";
+import LatestEpisode from "../components/LatestEpisode";
+import Subscribe from "../components/Subscribe";
+import EpisodeListing from "../components/EpisodeListing";
 
 export default ({ data }) => {
   const podcast = data.contentfulPodcast;
@@ -72,14 +72,12 @@ export const query = graphql`
       }
       subscriptionLinks {
         id
+        url
         linkType {
           image {
             file {
               url
             }
-          }
-          link {
-            url
           }
         }
       }

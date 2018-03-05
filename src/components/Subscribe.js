@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "react-emotion";
 
 const Image = styled.img`
   max-width: 40px;
@@ -15,7 +15,7 @@ const Subscribe = ({ links }) => {
   const simpleLinks = links.map(l => ({
     id: l.id,
     imageUrl: `https:${l.linkType.image.file.url}`,
-    link: l.linkType.link[0].url,
+    link: l.url
   }));
   return (
     <div>
@@ -37,12 +37,12 @@ Subscribe.propTypes = {
       id: PropTypes.string,
       linkType: PropTypes.shape({
         image: PropTypes.shape({
-          file: PropTypes.shape({ url: PropTypes.string }),
+          file: PropTypes.shape({ url: PropTypes.string })
         }),
-        link: PropTypes.arrayOf(PropTypes.shape({ url: PropTypes.string })),
-      }),
+        link: PropTypes.arrayOf(PropTypes.shape({ url: PropTypes.string }))
+      })
     })
-  ).isRequired,
+  ).isRequired
 };
 
 export default Subscribe;
