@@ -80,7 +80,7 @@ export default ({ data }) => {
         </div>
       )}
 
-      {episode.fields.transcriptionFormatted && (
+      {(episode.fields.transcriptionFormatted || transcript) && (
         <div>
           <h1>Transcript</h1>
           <div
