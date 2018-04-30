@@ -13,6 +13,8 @@ const AudioContainer = styled.div`
 
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
+  const transcript = data.markdownRemark && data.markdownRemark.html;
+
   return (
     <PageWithSidebar
       title={
@@ -83,7 +85,7 @@ export default ({ data }) => {
           <h1>Transcript</h1>
           <div
             dangerouslySetInnerHTML={{
-              __html: episode.fields.transcriptionFormatted
+              __html: transcript || episode.fields.transcriptionFormatted
             }}
           />
         </div>
@@ -93,7 +95,7 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query EpisodeQuery($id: String!) {
+  query EpisodeQuery($id: String!, $title: String) {
     contentfulEpisode(id: { eq: $id }) {
       name
       season
@@ -153,6 +155,9 @@ export const query = graphql`
         transcriptionFormatted
         path
       }
+    }
+    markdownRemark(frontmatter: {title: {eq: $title }}) {
+      html
     }
   }
 `;

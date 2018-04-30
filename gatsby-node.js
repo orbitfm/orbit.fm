@@ -128,7 +128,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/episode.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            id: node.id
+            id: node.id,
+            title: node.fields.path
           }
         });
       });

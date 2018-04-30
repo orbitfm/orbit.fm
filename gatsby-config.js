@@ -247,6 +247,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/transcripts`,
+        name: "markdown-pages",
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -259,6 +266,7 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         anonymize: true
       }
-    }
+    },
+    `gatsby-transformer-remark`,
   ]
 };
