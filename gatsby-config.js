@@ -267,6 +267,6 @@ module.exports = {
         anonymize: true
       }
     },
-    `gatsby-transformer-remark`,
+    `gatsby-transformer-json`,
   ]
 };

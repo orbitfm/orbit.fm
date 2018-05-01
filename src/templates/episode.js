@@ -7,13 +7,22 @@ import PageWithSidebar from "../components/PageWithSidebar";
 import PodcastInfo from "../components/PodcastInfo";
 import Subscribe from "../components/Subscribe";
 
+const Remarkable = require("remarkable");
+const markdown = new Remarkable({ html: true });
+
 const AudioContainer = styled.div`
   margin: 40px 0;
 `;
 
+const TranscriptsContainer = styled.div`
+  & a {
+    text-decoration: underline;
+  }
+`;
+
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
-  const transcript = data.markdownRemark && data.markdownRemark.html;
+  const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
 
   return (
     <PageWithSidebar
@@ -80,14 +89,21 @@ export default ({ data }) => {
         </div>
       )}
 
-      {(episode.fields.transcriptionFormatted || transcript) && (
+      {transcript && (
         <div>
           <h1>Transcript</h1>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: transcript || episode.fields.transcriptionFormatted
-            }}
-          />
+          <TranscriptsContainer>
+            {transcript.map(item => (
+              <div id={item.timestamp}>
+                <p>{item.timestamp} <b>{item.speaker}</b></p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: markdown.render(item.text)
+                  }}
+                />
+              </div>
+            ))}
+          </TranscriptsContainer>
         </div>
       )}
     </PageWithSidebar>
@@ -95,7 +111,7 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query EpisodeQuery($id: String!, $title: String) {
+  query EpisodeQuery($id: String!, $podcastName: String, $episodeNumber: String) {
     contentfulEpisode(id: { eq: $id }) {
       name
       season
@@ -152,12 +168,18 @@ export const query = graphql`
       }
       fields {
         showNotesFormatted
-        transcriptionFormatted
         path
       }
     }
-    markdownRemark(frontmatter: {title: {eq: $title }}) {
-      html
+
+    transcriptsJson(podcast: {eq: $podcastName}, episode:{eq: $episodeNumber}) {
+      podcast
+      episode
+      transcript {
+        text
+        timestamp
+        speaker
+      }
     }
   }
 `;
