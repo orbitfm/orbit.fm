@@ -1,0 +1,510 @@
+{
+  "podcast": "BookBytes",
+  "episode": "2",
+  "transcript": [
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hello and welcome to BookBytes. This show is a book club for developers where the four of us come together and talk about a book we've all been reading and discuss it with one another. This week, we're discussing the first two chapters of Apprenticeship Patterns by Dave Hoover and Ade Oshineye. And we're also giving away five signed copies of that book, so head over to [orbit.fm/bookbytes/giveaway](https://www.orbit.fm/bookbytes/giveaway/) to enter to win that."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "I'm Adam Garrett Harris."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I'm Jennifer Luker."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I am Safia Abdalla."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I'm Jason Staton."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "And I'm Jen Luker."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "So we're reading Apprenticeship Patterns and today we're going to go over the introduction of chapter 1 and then chapter 2 as well. So overall what did you think of it so far?"
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I thought it was really fascinating."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I'll agree. I felt that some of the stuff mentioned in it was stuff I've heard before and I'm not sure if that's just because this book has been around for a while and some of the ideas in it are summaries and concepts that have been in the industry for a while but there were definitely a few gems in there that kind of made me stop and think a little bit. So that was pretty cool."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "So far I've liked that it's made me reflect a bit on some of the some of the things that I've done without knowingly had a name for it.  And so kind of like the book says giving a name for the pattern allows us to discuss those things. That's what I've liked about it thus far."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "So can someone go and explain what what a pattern language is?"
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I think the best way to describe a pattern language is that it's kind of like a toolbox that everyone in the industry has agreed on is the best way to do something or an optimal way to do something. I don't know if that's a fair definition for it, but I think just agreeing that it's a way of describing this toolbox that we've all agreed is the best way to go about doing something in the industry, is what a pattern language is."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah I like that. It's a toolbox where you've got all these different tools that have names and you can say \"Hey get me the monkey wrench\" or whatever and people know what you're talking about."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah and they also have a sense of what you want to do with it too because there's only so many things you can do with a monkey wrench and only so many things you can do with a hammer."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, so I think one of the definitions is solutions to common problems. And I just think this book is really interesting because a lot of times design patterns are really technical things. They're a certain way of writing code, but these are how to interact with people and how to design your career to set you up for success as a software developer."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I think it's very much in line with \"Design Patterns\". I was at work just the other day and assessing a problem with a co-worker and we saw that it kind of met the same scenario of a visitor pattern and so we broke the problem down and were able to see how well it fit together. But that was only able to be communicated by us because there was a named pattern and I think \"Apprenticeship Patterns\" can definitely have the same effect when talking about career progress."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "It's one of those vague things that people wonder well what is the definition of the junior developer? What's the definition of a senior developer? These are difficult questions to ask, but this gives you a little better definition of what those things mean by giving you the language to speak about them."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah so this book also talks about apprentice, journeyman, and master, which I think kind of different ways of saying junior, normal developer, and senior."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah and I got the sense that those distinctions also meant that you had different goals. This was much later on in the chapter so I want to talk about it, but it talked about the jump you make from being a craftsman to a journeyman and how your goals change at that point in your career and that the label the change in label is not so much reflective of your experience so much as it is kind of transitioning into a different goal set."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "That's a really good way of putting it."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I definitely like your description as well as, Safia. I think a key part of it that they emphasize is that you don't lose the earlier responsibilities, so progressing into journeyman and master means that you still keep in inner focus."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah for sure."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, and so that's cool too because a lot of these patterns are focused on apprentices at least in chapter two, but no matter where you are in your journey they still can apply to you. And I like how it said that at some points in your career you may look at a pattern and it doesn't mean anything to you, but then later on in your career you'll look at it again and say that's perfect for my situation right now."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "Something else I found to be one of my more favorite items about the first chapter was explaining that as opposed to waiting for the master or the journeyman to come teach you, it's very much about going out and finding what it is you need to learn. So as opposed to the responsibility lying with the teacher, the responsibility actually lies with the student. And oftentimes I feel that there's more pressure being put on the seniors for failing to develop junior devs then there is on the junior devs to try to learn. And I think that that's definitely a balance the juniors need to have a teacher, but the teachers also need to understand what it is they need to be teaching the juniors. So, we as seniors don't necessarily know what it is they need to learn or what it is they even want to learn. So we need as much feedback as they do."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I've been on both sides of the spectrum in different situations in my life as someone who's maybe more senior and it is in a position to teach and as somebody who's a junior and is in a position to learn. I think the best way to describe it is there's often a perspective gap so that by the time you get to a point where you're in a senior position you've forgotten the problems that you were facing as a junior or even what the problems that current junior engineers are facing. And when you're in a junior position you have difficulty phrasing the things you're trying to learn in a way that would be accessible or meaningful to somebody in a more senior role. So I think there's kind of an empathy gap or a communication gap. Those two sides have trouble communicating with each other about the common goal that they're working towards sometimes. Part of it is more effort on the part of juniors to seek out learning, but it's also on both the junior and the senior to work through the communication problems that might emerge as they're trying to figure out what exactly needs to be taught and what needs to be learned. That's just something I've experienced in the different situations I've been in throughout my brief career (if I call it that)."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I think that's a perfectly valid point. The fact that the language doesn't exist. I do not have a computer science degree and because of that, a lot of the language in the development world is not something that I've heard. Even if it's something that I've practiced, it's not something that I know the name of. It's been interesting even in these last few years learning the names of things that I've already been doing. I also think that no matter how senior of a dev you are, there's always something new to learn and being able to put yourself back in that junior dev position of trying to learn something that's brand new to you can limit or reduce that empathy gap. It takes the language that you already know and applies it to something that you have no idea how to use and it gives you a little bit more understanding of the juniors that you're working with."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "So there was a quote in the book that I kind of liked that stated \"While you'll benefit from the attention of your peers and more experienced developers, you must learn to grow yourself and to learn how you learn\". And I was of curious from the three of you, what are the ways that you yourself most effectively learn."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I am definitely the kind of person who learns by doing. I'm an independently taught engineer for the most part. I started coding when I was eleven, so I picked up everything I know by having a problem that I wanted to solve, whether it was like customizing a website, or building an app. I always had an end goal in mind that I was working towards and something tangible that I was building. I think something that was mentioned in the book was that building things is the best way to learn a new language or a new concept and I agree with that."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah that's definitely how I've learned. I've had things that I've wanted to learn, but I never really learn it until I go and build something. That's what has caused me to really learn the language I learned best in college was that I wanted to build this thing and I didn't force myself to learn it but learning just naturally happened because of the desire to build the thing."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I learned pretty early on that I don't learn very well out of books. If you give me a book I can pull out some bits of knowledge, but it oftentimes takes someone actually showing me. So a lecture setting doesn't always work. I just need to be able to see the problem written out for me and it's not that I need to see it completed. It's just that I need to see the thought process that happens to get to the end goal in order for me to comprehend how it is that it functions. A lot of my learning I got from code examples and then tweaking code examples in order to see how they functioned before I took them and then used the way that I had intended on to begin with. So my personal learning style is definitely by doing, but it's also by seeing."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "It makes sense. The more you code, the more you can [grok](https://en.wikipedia.org/wiki/Grok). I thought about this question a little bit before and what really makes things stick for me are when I have an assumption about something, about the way that code is going to work and then my assumptions are invalidated. A particular example: I once studied up a little bit on Haskell and I wrote this blog post about tail call optimization, how it was awesome, and about how Haskell has it. And then I submitted it to the Haskell reddit and somebody came back and said \"No, that's entirely wrong\" and pointed me towards thunks in Haskell. I won't get into him here, but I will no longer forget that those things exist and that made it stick for me because I thought I knew that way that this thing worked and it was not right at all."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah I think that's one of the reasons I try my best to avoid tutorial style build-an-app content. It's great sometimes, but I do find that when you're not given room to mess up, that it doesn't stick as much. So I kind of like creating my own curriculum and seeking out the resources independently instead of getting something that step-by-step tells me the correct way to build something or do something because that failure is a really important part of my learning."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I love two quotes that were actually in this book that are really heavily related and one of them is \"There is a misconception that we're all born with a given amount of talent and that failure is an indication that we don't have enough of it.\" And right before that it said \"Effort is what makes you smart or talented and failure is merely an incentive to try a different approach next time\" and I feel that people especially with so much impostor syndrome, really really feel that they're just not talented enough to be able to grok it. They're not talented enough to be able to be top tier. And I wanted to come back and say that whether you have a talent in piano playing or you have a talent in public speaking or you have a talent in coding. It doesn't matter if you don't practice, if you're not doing it. You're not going to be any good if you never ever practice. So I loved the fact that talent isn't something that is easy to learn for you. Talent is something that you spend your time on. And it reminded me of the quote, \"I failed to make a light bulb ten thousand times, but it's not that I failed, it's that I learned how not to do it and ten thousand times.\" Failure is definitely a very solid way of learning, but if you don't try, you're never going to fail and you're never going to learn. Learning and failing as part of success."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I wanted to bring up the topic that was kind of alluded to at several points in the book, but the concept of accepting failure in tech. One problem is hero-worship and viewing people with a lot of experience in the industry who have failed before as perfect, infallible programmers who can never make a mistake. And I think a lot of times in tech, we're pushed to talk a lot about our successes and not so much about our failures. Nobody wants to dive in and blog about the time their site went down or anything like that. There's such a big focus on the things that go right that I don't know if we have a culture in the industry of talking about making mistakes, recovering from mistakes, and learning from them or if that's a healthy and active part of the conversations we have. What do you folks think about that?"
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I think that it's that's fantastic. I love the fact that people are starting to talk about their failures. They're starting to talk about the fact they slip up. About the fact that they messed up their slides or they brought the site down. It's those lessons that make us all human, and it's those lessons that allow us to grow. I think that having more of those conversations not only teaches others that even our heroes are human, but that mistakes are essential. It's not just that we learn from them, it's that not every idea is good but every idea allows you to learn something new. Without that ability to practice and learn and try and grow and stretch and break things and take two steps backwards and move two steps forwards and three steps forward, you're not going to get very far."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "I've seen some things on Twitter recently that are really encouraging, where some of my heroes in the JavaScript world share some of their current failures, or things they don't know. \"I had to Google this today\", or \"I always have to look this up\", or \"Check out my first question I asked on StackOverflow\". It's really encouraging to see that."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "That was a great one. Did you see the speaker confessions hashtag that started. That was pretty fantastic to see how many people that just go up there and stand up on stage and rock it, are you know two seconds away from throwing up right before they walk in on stage. They're just as scared, they're just as nervous, they're just as worried about whether they know what it is they're about to speak about well enough as any one of us."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "One of the things that I have really appreciated recently is the uptick in people doing Twitch streaming because there are some of the \"heroes\" of mine or are people that I'm really impressed with that maybe they make screencasts and they've recorded them and several times over and edited them down to be exactly what they planned on, but watching them in a Twitch stream and seeing them slip up or get stuck on something is really enlightening. It makes me feel like \"oh, well they they are fallible and do you make mistakes too\". I just don't always see it in the polished product."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "You know what's fascinating about that? I really love to watch people debug. It is one of my favorite things. So I'm a super fan of watching these Twitch streams. I'm actually getting ready to start my own. I love watching people debug. You get to see new tools that you've never seen before. You get to hear them talk about why they're debugging things the way that they are, which oftentimes teaches you new ideas as far as how you can debug your own things. We spend you know they say we spend you know 10% of the time doing 90% of the work and then 90% of the time doing 10% of the work and it's because of all of the time that we spend debugging. So the more that we can learn and see other people debugging, the more ideas that we get on how we can debug more efficiently. And not only that, but you learn how the code works. When you break it, you have to figure out how it works in order to get it functioning again. So yeah, Twitch streams are definitely right up my alley."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "One of the other ways that I really like to see failure in some of the different internships and part-time jobs I've had is actually when I sit in one-on-ones with senior engineers and I'll present a problem that I've been trying to solve and they will admit to me that they don't have the solution and will kind of sit together on a whiteboard or with the code up on the screen and work through it. And those moments where I was banging my head against the table with this problem and I thought I was really stupid for not being able to find a solution for it, but when I came to somebody who had more experience, somebody I looked up, to I realized that they actually struggled just as much to find a solution for that particular problem. Sitting down with somebody and solving or working through a problem is very similar to watching them debug with respect to how it makes you feel about accepting your own failure and this a part of everybody's journey."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "So chapter 2 is called Emptying the Cup and I really love how this book tries to organize the patterns in a way that where they they group them together like this. I've seen some books where they'll just do the patterns alphabetical or something and they're trying to minimize the number of forwards referencing, which means mentioning a pattern before they've explained it. So what did you think of the analogy of emptying the cup and the philosopher."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I absolutely loved it. I actually went out and shared it with some of my non-technical friends just in a general context because I thought it was so wonderful and I think it's something that I definitely have to work on sometimes. I come to a problem with a lot of kind of pre-existing notions or ideas. Letting those go is a big part of the learning process. So I was totally in love with that story."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, so the story is a philosopher comes to a master and he's trying to learn from him, but every time the master says something he's like \"Oh I know this\" and he starts explaining stuff. I love how he just starts pouring him tea and then just keeps pouring the tea and keeps pouring the tea and he's like \"That's what you're like.\" If you're already so full how can I pour anything into you."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "It's definitely made me reflect during the day at work to see if I am actually making room for new ideas or just taking past experience. That is what I've liked about this chapter and especially that little story because it's just solid. They nailed it."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I think it really relates to the first pattern in this chapter which is your first language. I think a lot of times you learn one language really well. Maybe it's not your first language, but it's a language you learned really well and then everything you learn after that, you try to make it fit back with what you knew before. Every time someone explains something you're like \"Oh so it's like this\" and they're kind of like \"Sort of, but it's different. You need to kind of forget about that.\""
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "One of the things that was really illuminating for me in your first language pattern was actually the little discussion they had about writing tests and the book talks a little bit about not just writing tests to test your code, but also improving the way that you write your tests and writing better tests as you further your career. And that's actually something that I've not seen any kind of learn your first language or learn to code in X, Y, or Z books or talks cover is that in addition to becoming a better coder throughout your career, you should also become a better tester and when it mentioned that I was like \"Oh my goodness\". I have not been focusing enough on learning to write better tests as much as I am learning to write better code. So, I made a point to get better about writing tests and writing good tests."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah I love that part too about using unit tests to test your understanding of the language. I would love to see a course where it takes you through the features of a language by writing unit tests. You would say \"Oh well, I would expect this to happen in this language\" and see if it passes or not."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "Have you heard of programming koans?"
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "No."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I think originally they did them for Ruby, but then they've done it with various other languages. When it starts out, it gives you a test suite and you work through making them pass in order to get an understanding of the language."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay, it sounds kind of like a kata?"
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "Kind of, except it's definitely more more granular where you don't know the language. It's like starting from scratch. So with a kata you would at least have some idea of syntax, whereas a koan gives you enough boilerplate that you can just work through it really granularly, and then gradually work out to larger tests that you're making pass through the knowledge that have learned in making previous tests pass."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "That's a really cool idea."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "It was fresh on the mind because I recommended it to a co-worker today for another language. In relation to first languages, there's also a curious on what was everybody's \"first language\", why did you choose that as a language, and also how do you think that influences the way that you code."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "My first language was C++ and that's just because that's what my high school computer science class used. I mean I guess technically my first language was whatever the TI-83 uses. I guess one thing is I expected every computer language to have brackets and everything to be block scoped. It's weird, but if I see a language that doesn't have brackets then it just looks like a foreign language to me."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I'd say the first non-markup language that I picked up was Python and one of the ways that that's affected me even now 7 years later is I'm so terrible at writing object-oriented code. It just doesn't come to me as easily as a functional programming style would. I think that's just because I started off with Python and jumped into JavaScript and never worked in a language like Java that was very object oriented. So that's kind of the legacy I carry with me."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "My very very first language was BASIC. So when I was 9 my parents would not buy me Donkey Kong for my Commodore 64 and so I coded it myself. And it was really ugly because I was 9, but it functioned. After that (way after that) was HTML and I was coding this really cool testing software, but I had to rewrite the header on every single page, so I decided there had to be a better way and learned that if you just changed the file extension to PHP then you could include other files. And now I am extremely fluent in PHP. My entire career is basically based in PHP, and up until the last few years that's all I knew. I've been learning a lot of other languages, but JavaScript has been all the rage the last half a decade, so I've gotten extremely fluent in that as well. The legacy that I carry is that it took me an extremely long time to consider myself a programmer. I've worked for multiple companies and I've made many websites, but up until recently, it very much seemed like the industry as a whole saw web developers as not really programmers, and we most certainly weren't engineers. I was really ashamed actually of the fact that all I was was a web developer for a really long time, so I think that the thing that I've learned is to not allow others to dictate to me what it is that I do and to not take the skills that I have for granted. I just think that it's interesting that you say BASIC and everyone's like \"Oh yeah, okay. That's pretty cool\" and you say C++ and \"Oh yeah, that's pretty cool\" and then you say PHP, and everyone starts laughing, \"Oh yeah, that cheesy awful language\", but I've built a whole career off of PHP, so it's not that cheesy. It's accessible, but it's not cheesy."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "What about you, Jason?"
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I that story Jen, I mean for all the bashing that PHP has gotten, plain and simple, like any good coder, it gets stuff done. I mean that's why such a massive chunk of the Internet runs on it. and so I'm glad that you've come to realize that you are a coder and you are an engineer and not selling yourself short. So, that's good to hear. For me, I dabbled with markup languages as a kid, but C# would be my first true language or the one that I spent a lot of time on. Biggest part influence on that was that I had an independent study class in high school and was going to study programming and they bought me a C# book and so that's what I read and worked through on my own. And I studied it in college and rolled with it. A year or so into it, I got out in the industry was interested in Ruby and felt like the .NET community had this stigma about it, like we all adhere to Microsoft and so I was pretty adamant about being alt Microsoft when everything I build stuff with used Microsoft. But I've kind of realized now like I actually appreciate the language in that, in terms of code, I write things in more of an interface first style where I will think about the way that something is going to get used and build my mindset of that out. Whether it's in a test or just even a scratch file and then build out my implementation to fill that. It's similar to having a C# interface and then finally implementing methods as you go along. So that's something that I still carry with me and do even today and actually doing a little bit of TypeScript work now, having done C# feels really at home."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, I was thinking we could go for about another 20 minutes, but we've got a lot more patterns. We don't have to cover all of them, but I'm curious if there's any patterns in particular that stuck out to you or quotes or the action items in the end, like if there's any action items that you thought were cool that you wanted to do."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "One of the things that I really liked, sorry I'm trying to find it. I have it marked as page 18 but I'm trying to find the pattern that corresponds with it."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Is it The White Belt?"
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "A little before that, where it was having a conversation about how a lot of the creators of the open source tools in existing frameworks that you use started off from the same place that you did if you're a beginner and that they don't have prior knowledge to work off of. That they had to build and explore and make mistakes. And that everyone is a beginner in their respective pursuit. I thought that was pretty cool and in line with my experience as an open source because prior to my having started contributing to open source pretty regularly, about three years ago now, I definitely had that mindset that it was this thing for very accomplished, experienced programmers who could write something once and have it up on npm with 50 million downloads and not fail ever. Getting introduced to the open source world and realizing that every developer in open source is somebody just like me, and that mistakes are made, and things are fixed, and it's a collaborative endeavor, was a really big part of my change in perspective and growth as an engineer. So I thought it was cool to see that lesson and that perspective written out, because it was something that I actually experienced in my own journey as an engineer."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "Another thing that I really like about open source is that each project that you work on, going from one to another to another, really relates to the journeyman for me, in that each repo that you work on ends up improving both you and the repo. I've learned a lot of really cool techniques that I wouldn't have otherwise known and have applied those back at work, or to other repos that I've seen. It's been really cool getting involved in open source because of the fact that I feel that it has improved me as a developer and I have improved it as a project."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I think having had at least one of my projects get a little bit of attention on on GitHub, and having issues get filed where questions are really vague and sometimes a little bit angry, has also made me think twice when I go to file an issue or talk to some maintainer to make sure to respect them and their time and try and be as helpful as possible there. Because having seen that, these people put up with a lot in order to help our whole community grow."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "So I really like the Unleash Your Enthusiasm pattern, because as a beginner, I was at least, really excited about code and getting a new job, I go in there really excited, but it's really easy to realize that not everyone here is as excited as me, so I should try to tone it down, but saying \"No, that's actually really good for the team to have an enthusiastic new person.\" It's good for the team and it's good for you. It helps accelerate your own learning."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, that discussion about enthusiasm and especially harnessing your enthusiasm as a beginner, reminded me of a [Twitter thread](https://twitter.com/saronyitbarek/status/946562500065083392) that was going around a couple of days ago from Saron Yitbarek. She posed the question that she felt that more senior engineers were a little bit more grouchy than younger engineers or newer engineers and it was really great seeing some of the responses to that and having people who were a bit more advanced in their career who had been through battles and struggled with failure, admit that they still enjoyed it at the end of the day and that they still had that enthusiasm for it, regardless of whether they were beginners or not."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I did catch that and that was great."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "It really was. I loved the overriding theme of \"We love to code\". It's the process and the politics that we don't love."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I think a key part of the enthusiasm too is that, especially when you're an early developer, not having the thoughts in your mind of \"Well, I could do that thing, but that sounds really hard.\" Whereas, when you are new and enthusiastic about writing something, you just approach it with \"I want to solve this thing, regardless of what it takes, because I don't know if it is hard or not. I just want to get it done or I want to see this result.\" I find myself sometimes tending to overanalyze things and getting stuck in that flow, versus just getting started, which enthusiasm can really drive you to just start making something."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "So are there other patterns that stood out."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I was curious about the Retreat Into Competence, and I actually wanted to know your perspectives on it because with this pattern, I had to think on a bit on how I could relate to it. So I want to know, how did you see that?"
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "I felt kind of conflicted about that because I understood the point that I was trying to make that sometimes when you do feel overwhelmed, that you're going into the deep end, it helps sometimes to step back into your comfort zone, recognize you're able of accomplishing things, then move forward. I think it's just one of those things that's probably really hard to execute in real life, because the pull back into comfort is way too comfortable. I can imagine it's like when you slip back into bed after shutting your alarm clock off and you just don't want to get up again because it's such a safe place for you. That might just be my personality. I'm definitely the person who likes to throw themselves into uncomfortable situations and it's just deal. So I feel like that's something that might be just depends on the person's personality and how they handle stressful new situations."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I have a story. I worked on this project that required that I built this cell form. It was a really complicated cell form. Nothing was the same. None of the styles were the same. And every time I fixed new bugs, more bugs showed up. I spent three months working on this cell form. And I finally reached the very last piece, and it was trying to get the photo uploads working, and there were a lot of really detailed and specific requirements for this photo upload and I wasn't quite fully trained or educated in all of the details and nuances that go with photo uploading to multiple servers. It was it was kind of interesting. I worked on it and I worked on it, and I spun my wheels, and I worked on it some more, and I asked more questions, and got more bug reports, and spun my wheel some more, and I finally reached the point where I needed to not just admit my limitation, but I needed to work on something that made me feel like maybe I shouldn't quit my job and be a janitor. So someone else traded tasks with me and they took the photo uploader and I took theirs, and it was not just a weight that was lifted off my shoulders, but it was just so cathartic having three solid days of having a job which I had already done before, knew how to do, and was able to go in and just get it done. They weren't done with the photo uploader, but I was able to come back and clean up what they'd left off. So I can see the benefits in sometimes when you just hit that point, you just need to take a few days or a few weeks and move into something that is more comfortable. And after that I was able to continue challenging myself and move forward and learn from mistakes and throw myself into the deep end, but those three days were really really appreciated."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I've had a similar situation like that, Jen. It's really tough when you're working on something for a long time and you just think \"I should do customer support, or I should go to a bootcamp\" and yeah, recently I went on vacation with this thing I've been working on, a text box. I'd been working on a text box for three weeks. It was a really complicated text box, but I felt so bad about it and then I left for vacation and they took it over while I was gone. I came back and it was done and I could work on something else. It was great."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I think that some of that ties into of definitely being willing to reach out to others. I mean, it's not simply throwing your hands up and completely quitting, but maybe getting the perspective of others is really key. And I've found the one behavior that I'll take during a refresh, or maybe after a really heavy task and I just need a brain break, is going after really low-hanging fruit tickets. So I can go to the task board and move a whole bunch of tickets across that really didn't take much time, but it's just like \"Yes! I am actually doing progress.\", whereas I seeing a ticket that's sat in the same position for two weeks because it's a complete overhaul of something can get discouraging, so having something that's small feedback loops and little rewards to give myself the bump I need is sometimes necessary."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, one thing you mentioned there, Jason, that I really relate to, was reaching out to other people. That's one of the ways that I regain composure when I struggle with something is I actually will go to somebody else and talk to them, even about the problem or just something completely not related to it, but I find that when I engage socially my brain can come back to something with a renewed perspective and I can handle it much better. And sometimes that engagement is just going over to somebody's desk and looking at what they're working on and helping them with it or hopping into the issues board and commenting on some issues, but I think for me personally reaching out to other people has been my way of coping with recognizing my incompetence when I've pushed myself too far."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "So scientifically, our brains are actually set up to release the information we no longer need when we walk through a door. It was the cave wall of old days where you had hunting outside and warm fires inside. You didn't need to know how to build a fire once you left the cave, but you didn't need to know how to hunt once you walked in. So, we do the same thing. Have you ever walked through your house and you knew what you needed and when you walk through the door next door you've forgotten? It's part of our brain dumping what we don't need in that room and moving on to the new situation in the next room that allows us to quickly adapt to whatever it is that we need to handle at that time. And I feel that any of our coping mechanisms, whether it's standing up and going for a walk, or moving away from your desk and talking to other people for a while. Any one of those things, allows our brains to brain dump the code that we were currently staring up for five thousand hours and we no longer see the mistakes because we are so embedded in it. It allows us to reboot our brains. It gives us time to go back to it and have to re-pick it up and relearn it and rediscover how it functions in order for us to see the mistakes or to see the pitfalls that we've created for ourselves. If we don't take those breaks, we just sit there and we spin our wheels over and over and over again. But I think that that brain dump, walk through a door of some sort is really really beneficial to our abilities to continue."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Nice. I also really like the Expose Your Ignorance and Confront Your Ignorance patterns. When I first started my career, I was terrified to let anyone know that I didn't know something and so I would sit there at my desk and just spin my wheels, when I could have just asked somebody. I don't really do that anymore, but one of the actions it has at the end that's I think useful throughout your career is write down a list of five things you don't really understand, and then put that where others can see it."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, that's one of the things that I've started to do the recent blog post series that I have been doing on my blog where I will go into the node code base and just read through the code and annotate it [on my blog](https://blog.safia.rocks/). And one of the things that I've had to do there is actually admit that I have no idea what's going on in a piece of code or that I've never seen this particular pattern before and then I post that publicly for the entire world to read. It was very nerve-wracking at first, but once you hit the post button there's this catharsis that comes in with recognizing that it's up there and there's a comfort in being open with your ignorance. So I like that pattern too."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I think that pattern not only exposes our own weaknesses to others. It allows us to open ourselves up, but it also allows others to see that their own weaknesses aren't actually weaknesses. They're just things they haven't learned yet. We have this fault of comparing one person's living room to our dirty broom closet. We see other people at their best and we're comparing it to our worst. I think that not only putting yourself out there, but seeing that other people are putting themselves out there, puts us on a little bit better footing. It brings out a little of our broom closet into our living rooms to allow other people to feel better, but it also allows us to be real and we don't have to put on these facades of perfection when we are just people trying our best to make it through the next coding problem."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I had an experience the other day. I teach SQL at a boot camp, and a one of the students approached me during one of the breaks in the middle of the class and he asked me specifically what window functions are and how they work. I had to turn to him and say I don't know. I teach SQL, but I have not had to use one, so what are they? And the student was able to turn around back to me, and teach me something that I hadn't heard of before. And we pulled up docs together, and looked at potential use cases for that. I think it was really inspiring for him as a boot camp student to see me not have a piece of knowledge, and that it it's not a problem to have that, and just to say that it's actually okay and you can learn it. That was something that I specifically thought of with that pattern."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "One thing I specifically thought of, that I've been doing for a while is when I'm having a conversation with someone at work and they say a word or a phrase that I don't understand, I'll just like stop them right in the middle and say I'm not sure what you mean by that word. I'm not sure what you mean by that phrase. And it may just be, whenever you join a new team or something, they have certain words and phrases that are common to that team and eventually you'll acclimate to those terms. Instead of just pretending like you know what they're talking about. I always want to clarify any any time I don't understand anything in a conversation at work.\nAnything else?"
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I think we've mostly covered the Concrete Skills, but that's just continuing to practice is the biggest part of that that stood out to me. Enthusiasm is important, but also actually going and honing your craft is essential."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, and sometimes you need to learn something just to get past an interview."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "Yes, there is a link that I have recommended to numerous new devs. It's called [Front-end Job Interview Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions) and it's this massive pile of questions you don't need to know all of these, but if you get an idea of some of these things and can go and play with the topics, then you should be able to handle an interview without too much concern that you you don't know anything."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "And another good resource is the book, [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/?tag=adaharris09-20)."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I haven't heard of it. I'll have to put it in my list of things. Maybe we'll have to go through it."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah it's a huge book to go through, but we could maybe do it on the podcast where we pick a few things here and there out of it. I think it's basically just a hundred and ninety interview questions. Maybe we make a point of answering one at the end of a podcast."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah there's a few in there that are brain teasers that are fun, but it can take like 20 minutes to try to figure out one of those."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "Alright, so maybe a shortened version."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Alright, any ideas on how to end this?"
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "Favorite thing that you've learned from these first two chapters."
+    },
+
+    {
+      "speaker": "Safia Abdalla",
+      "text": "One thing that I really liked was early on in chapter one, the author discussed the difference between rules and values and how oftentimes as engineers or in engineering teams, we instilled rules in our team members and we teach each other rules and those are not adaptable and flexible when we should really be teaching each other values. Those are much more accommodating."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I really like that one. It's the \"teach a man to fish\" versus \"give a man a fish\" concept. The thing that I really really appreciated was learning to learn. It seems that one of the biggest differences between the junior developer and anyone who's just a standard mid-developer, or a senior developer is the ability to pick something new up. If you say you don't know something as a senior dev, that's perfectly fine. We're not supposed to know everything. Our big strength is that we know how to learn something new. We know how to teach ourselves. And I think that as long as we keep that in mind from the very beginning that the goal is to learn how to look something up. The goal is to learn how to find out what the language is actually supposed to be. And the goal is to know who you can ask when you don't know in order to keep learning. Because no matter how much you know, there's always more to learn."
+    },
+
+    {
+      "speaker": "Jason Staten",
+      "text": "I think with that, I have one takeaway about it saying to learn languages from people who are around you and that doesn't necessarily have to mean locally or your job, but when when you are learning a new language and I would even say to stretch this to any sort of topic, is that when you're learning, get other people involved so that you can learn the spirit of the language and I like that that. When you are picking up something that is foreign to you, to be sure to reach out to somebody who's a little bit more experienced simply so you can either understand why something is the way it is and also so you're not trying to write something like it's not. You're not trying to write Python like it's Java or the inverse, but rather working with somebody who does understand the way that things flow together. So I will definitely keep that in mind as I'm approaching new things."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "You have to learn the patterns."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. Yeah going along with that, Jason. I like the part about putting on the white belt even if you're a master at something else. When you learn something new, you're picking up an unfamiliar technology, you need to go back and put on the white belt and be a student again."
+    },
+
+    {
+      "speaker": "Jen Luker",
+      "text": "I think that that's the junior dev for life mentality. It's not that everyone is actually a junior dev for life. It's that we become juniors again we learn something new."
+    },
+
+    {
+      "speaker": "Adam Garrett-Harris",
+      "text": "Thank you so much for listening. I hope there was something helpful there and you learned something. I hope you really like the show. We'll be discussing chapters 3-4 next time, then we'll do 5-7, and then we'll be chatting with the author. Don't forget to enter to win one of the signed books over at [orbit.fm/bookbytes/giveaway](https://www.orbit.fm/bookbytes/giveaway/). The instructions there will ask you to leave a review on iTunes. We really appreciate everyone who's left a review so far and hopefully this episode will give you a better idea of what the show's going to be like, so you can go ahead a leave a review. And if you want, you can follow the show on Twitter at [BookBytesFM](https://twitter.com/bookbytesfm). See you next time."
+    }
+  ]
+}

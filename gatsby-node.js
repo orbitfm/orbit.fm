@@ -47,15 +47,6 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
         value: markdown.render(showNotes.internal.content)
       });
     }
-
-    if (node.transcription___NODE) {
-      const transcription = getNode(node.transcription___NODE);
-      createNodeField({
-        node,
-        name: "transcriptionFormatted",
-        value: markdown.render(transcription.internal.content)
-      });
-    }
   }
 
   if (node.internal.type === types.PERSON) {
@@ -94,6 +85,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           edges {
             node {
               id
+              podcast {
+                name
+              }
+              episodeNumber
               fields {
                 path
               }
@@ -129,7 +124,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
             id: node.id,
-            title: node.fields.path
+            podcastName: node.podcast.name,
+            episodeNumber: node.episodeNumber,
           }
         });
       });
