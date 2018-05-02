@@ -41,11 +41,13 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 
     if (node.showNotes___NODE) {
       const showNotes = getNode(node.showNotes___NODE);
-      createNodeField({
-        node,
-        name: "showNotesFormatted",
-        value: markdown.render(showNotes.internal.content)
-      });
+      if (showNotes && showNotes.internal) {
+        createNodeField({
+          node,
+          name: "showNotesFormatted",
+          value: markdown.render(showNotes.internal.content)
+        });
+      }
     }
   }
 
