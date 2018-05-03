@@ -3,9 +3,13 @@ import ReactAudioPlayer from 'react-audio-player';
 import Link from 'gatsby-link';
 import {DateTime} from 'luxon';
 import styled from 'react-emotion';
+import {connect} from 'react-redux';
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
+import PlayButton from '../components/AudioPlayer/PlayButton';
+import * as ACTIONS from '../state/actions';
+import {selectUrl, selectIsPlaying} from '../state/selectors';
 
 const Remarkable = require('remarkable');
 const markdown = new Remarkable({html: true});
@@ -19,6 +23,37 @@ const TranscriptsContainer = styled.div`
     text-decoration: underline;
   }
 `;
+
+const playSong = (url, podcast, title) => ({
+  type: ACTIONS.PLAY_SONG,
+  url,
+  podcast,
+  title,
+});
+
+const SmartPlayButton = ({
+  url,
+  podcast,
+  title,
+  playingUrl,
+  isPlaying,
+  onClick,
+}) => (
+  <PlayButton
+    isPlaying={isPlaying && url === playingUrl}
+    onClick={() => onClick(url, podcast, title)}
+  />
+);
+
+const ConnectedPlayButton = connect(
+  state => ({
+    isPlaying: selectIsPlaying(state),
+    playingUrl: selectUrl(state),
+  }),
+  {
+    onClick: playSong,
+  }
+)(SmartPlayButton);
 
 export default ({data}) => {
   const episode = data.contentfulEpisode;
@@ -51,10 +86,10 @@ export default ({data}) => {
       <p>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</p>
       <div>{episode.shortDescription}</div>
       <AudioContainer>
-        <ReactAudioPlayer
-          src={`https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
-          preload="none"
-          controls
+        <ConnectedPlayButton
+          url={/* TODO: add podtrac */ `${episode.audioUrl}`}
+          podcast={episode.podcast.name}
+          title={episode.name}
         />
       </AudioContainer>
       <h3>Hosts</h3>
