@@ -94,7 +94,7 @@ export default ({ data }) => {
           <h1>Transcript</h1>
           <TranscriptsContainer>
             {transcript.map(item => (
-              <div id={item.timestamp}>
+              <div name={item.timestamp}>
                 <p>{item.timestamp} <b>{item.speaker}</b></p>
                 <p
                   dangerouslySetInnerHTML={{
