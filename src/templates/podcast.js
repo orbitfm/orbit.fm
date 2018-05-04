@@ -24,6 +24,7 @@ export default ({ data }) => {
   return (
     <PageWithSidebar
       title={podcast.name}
+      headTitle={podcast.name}
       description={podcast.description.description}
       color={podcast.primaryColor}
       sidePanelChildren={

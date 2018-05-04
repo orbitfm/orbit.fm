@@ -59,6 +59,7 @@ const Button = styled.button`
 const GiveawayPage = ({ data }) => (
   <PageWithSidebar
     title={`Book Giveaway!`}
+    headTitle="Book Givaway"
     description={`Because books are awesome`}
     sidePanelChildren={<Image src={bookCover} />}
   >

@@ -22,7 +22,9 @@ const ImageContainer = styled.div`
 `;
 
 const Shows = ({ data }) => (
-  <Page title="Shows">
+  <Page 
+    title="Shows"
+    headTitle="Shows" >
     <Listing>
       {data.allContentfulPodcast.edges.map(({ node }) => (
         <Item key={node.id}>

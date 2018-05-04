@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import {Helmet} from 'react-helmet';
 import SidePanel from './SidePanel';
 import * as COLORS from '../constants/colors';
 
@@ -57,8 +58,13 @@ const PageWithSidebar = ({
   title,
   description,
   episode,
+  headTitle
 }) => (
   <Container>
+    {headTitle ?
+      <Helmet title={`${headTitle} - Orbit FM`} />
+      : null
+    }
     <Color color={color} />
     <Color color={color} />
     <BannerContainer color={color}>
@@ -82,6 +88,7 @@ PageWithSidebar.propTypes = {
     PropTypes.node.isRequired,
   ]),
   description: PropTypes.string.isRequired,
+  headTitle: PropTypes.string
 };
 
 PageWithSidebar.propTypes = {
