@@ -107,6 +107,10 @@ class AudioPlayer extends React.Component {
 
   componentDidMount = () => {
     this.audio.src = this.props.url;
+
+    if (this.props.time) {
+      this.handleTimeChange(this.audio.currentTime);
+    }
     window.addEventListener('resize', this.updateDimensions);
     this.updateDimensions();
 
@@ -116,6 +120,9 @@ class AudioPlayer extends React.Component {
         this.setState({
           currentTime: Math.floor(this.audio.currentTime),
         });
+        if (this.props.reportedTime) {
+          this.props.reportedTime(Math.floor(this.audio.currentTime));
+        }
       },
       false
     );
@@ -136,6 +143,18 @@ class AudioPlayer extends React.Component {
       this.audio.src = this.props.url;
       if (this.props.isPlaying) {
         this.audio.play();
+      }
+    }
+    if (this.props.time !== prevProps.time) {
+      this.setState({
+        lastReportedTime: this.props,
+      });
+      if (
+        this.props.time !== prevProps.time &&
+        this.props.time + 1 !== prevProps.time &&
+        this.props.time - 1 !== prevProps.time
+      ) {
+        this.handleTimeChange(this.props.time);
       }
     }
     if (this.props.isPlaying !== prevProps.isPlaying) {
@@ -208,6 +227,8 @@ class AudioPlayer extends React.Component {
       rate,
     } = this.state;
 
+    const {isPlaying, onPlayClick, podcast, title} = this.props;
+
     const styles = {
       AudioPlayer: {
         display: 'flex',
@@ -264,13 +285,10 @@ class AudioPlayer extends React.Component {
     return (
       <div style={styles.AudioPlayer} ref={e => (this.component = e)}>
         <audio ref={a => (this.audio = a)} />
-        <PlayButton
-          isPlaying={this.props.isPlaying}
-          onClick={this.props.onPlayClick}
-        />
+        <PlayButton isPlaying={isPlaying} onClick={onPlayClick} />
         <div style={styles.AudioPlayer__Time_Title}>
           <div style={styles.AudioPlayer__Title}>
-            {this.props.podcast} {this.props.title}
+            {podcast} {title}
           </div>
           <div style={styles.AudioPlayer__Time}>
             <div style={styles.AudioPlayer__TimeLeft}>

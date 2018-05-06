@@ -8,7 +8,7 @@ import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
 import PlayButton from '../components/AudioPlayer/PlayButton';
-import {playSong} from '../state/actions';
+import {playSong, playSongAtTime} from '../state/actions';
 import {selectUrl, selectIsPlaying} from '../state/selectors';
 
 const Remarkable = require('remarkable');
@@ -34,7 +34,7 @@ const SmartPlayButton = ({
 }) => (
   <PlayButton
     isPlaying={isPlaying && url === playingUrl}
-    onClick={() => onClick(url, podcast, title)}
+    onClick={() => onClick({url, podcast, title})}
   />
 );
 
@@ -47,6 +47,30 @@ const ConnectedPlayButton = connect(
     onClick: playSong,
   }
 )(SmartPlayButton);
+
+const convertTimestampToTime = timestamp => {
+  const timeSections = timestamp.split(':');
+  const seconds = Number(timeSections[timeSections.length - 1]);
+  const minutes = Number(timeSections[timeSections.length - 2]);
+  const hours = Number(timeSections[timeSections.length - 3]);
+
+  return hours * 3600 + minutes * 60 + seconds;
+};
+
+const Timestamp = ({url, podcast, title, timestamp, onClick}) => (
+  <a
+    onClick={e => {
+      e.preventDefault();
+      onClick({url, podcast, title, time: convertTimestampToTime(timestamp)});
+    }}
+  >
+    {timestamp}
+  </a>
+);
+
+const ConnectedTimestamp = connect(null, {
+  onClick: playSongAtTime,
+})(Timestamp);
 
 export default ({data}) => {
   const episode = data.contentfulEpisode;
@@ -122,10 +146,16 @@ export default ({data}) => {
         <div>
           <h1>Transcript</h1>
           <TranscriptsContainer>
-            {transcript.map(item => (
-              <div name={item.timestamp}>
+            {transcript.map((item, i) => (
+              <div name={item.timestamp} key={i}>
                 <p>
-                  {item.timestamp} <b>{item.speaker}</b>
+                  <ConnectedTimestamp
+                    url={/* TODO: add podtrac */ `${episode.audioUrl}`}
+                    podcast={episode.podcast.name}
+                    title={episode.name}
+                    timestamp={item.timestamp}
+                  />{' '}
+                  <b>{item.speaker}</b>
                 </p>
                 <p
                   dangerouslySetInnerHTML={{
