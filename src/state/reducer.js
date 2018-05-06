@@ -23,7 +23,6 @@ const reducer = (state, action) => {
         podcast: action.podcast,
       };
     case TYPES.PLAY_SONG_TIME:
-      console.log(action.time);
       return {
         ...state,
         url: action.url,

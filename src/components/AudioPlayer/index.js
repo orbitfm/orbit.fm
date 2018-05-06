@@ -17,11 +17,10 @@ const getNextRate = currentRate => {
 };
 
 const getMinutesAndSeconds = time => {
-  return `${leftPad(Math.floor(time / 60), 2, '0')}:${leftPad(
-    time % 60,
-    2,
-    '0'
-  )}`;
+  const hours = leftPad(Math.floor(time / 3600), 2, '0');
+  const minutes = leftPad(Math.floor((time / 60) % 60), 2, '0');
+  const seconds = leftPad(Math.floor(time % 60), 2, '0');
+  return `${hours}:${minutes}:${seconds}`;
 };
 
 const MuteIcon = () => (
