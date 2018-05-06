@@ -13,7 +13,9 @@ const CircleImage = styled.img`
 export default ({ data }) => {
   const person = data.contentfulPerson;
   return (
-    <Page title={person.name}>
+    <Page 
+      title={person.name}
+      headTitle={person.name}>
       {person.image && (
         <CircleImage src={person.image.file.url} width="100px" height="100px" />
       )}

@@ -14,6 +14,7 @@ const Image = styled.img`
 const ThankyouPage = ({ data }) => (
   <PageWithSidebar
     title={`Book Giveaway!`}
+    headTitle="Book Givaway"
     description={`Because books are awesome`}
     sidePanelChildren={<Image src={bookCover} />}
   >
