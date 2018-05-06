@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'react-emotion';
-import InfoBar from '../components/InfoBar';
-import SidePanel from '../components/SidePanel';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "react-emotion";
+import InfoBar from "../components/InfoBar";
+import SidePanel from "../components/SidePanel";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
@@ -15,10 +15,7 @@ const Container = styled.div`
 
 const Page = ({ children, title, headTitle }) => (
   <div>
-    {headTitle ? 
-      <Helmet title={`${headTitle} - Orbit FM`} />
-      : null
-    }
+    {headTitle ? <Helmet title={`${headTitle} - Orbit FM`} /> : null}
     <InfoBar>
       <Container>
         <h1>{title}</h1>

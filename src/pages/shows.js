@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'react-emotion';
-import Page from '../components/Page';
+import React from "react";
+import Link from "gatsby-link";
+import styled from "react-emotion";
+import Page from "../components/Page";
 
 const Listing = styled.ul`
   list-style: none;
@@ -22,9 +22,7 @@ const ImageContainer = styled.div`
 `;
 
 const Shows = ({ data }) => (
-  <Page 
-    title="Shows"
-    headTitle="Shows" >
+  <Page title="Shows" headTitle="Shows">
     <Listing>
       {data.allContentfulPodcast.edges.map(({ node }) => (
         <Item key={node.id}>

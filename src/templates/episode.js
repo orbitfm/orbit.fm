@@ -95,7 +95,9 @@ export default ({ data }) => {
           <TranscriptsContainer>
             {transcript.map(item => (
               <div name={item.timestamp}>
-                <p>{item.timestamp} <b>{item.speaker}</b></p>
+                <p>
+                  {item.timestamp} <b>{item.speaker}</b>
+                </p>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: markdown.render(item.text)
@@ -111,7 +113,11 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query EpisodeQuery($id: String!, $podcastName: String, $episodeNumber: String) {
+  query EpisodeQuery(
+    $id: String!
+    $podcastName: String
+    $episodeNumber: String
+  ) {
     contentfulEpisode(id: { eq: $id }) {
       name
       season
@@ -172,7 +178,10 @@ export const query = graphql`
       }
     }
 
-    transcriptsJson(podcast: {eq: $podcastName}, episode:{eq: $episodeNumber}) {
+    transcriptsJson(
+      podcast: { eq: $podcastName }
+      episode: { eq: $episodeNumber }
+    ) {
       podcast
       episode
       transcript {
