@@ -17,4 +17,6 @@ export const playSongAtTime = ({url, podcast, title, time}) => ({
 
 export const togglePlay = () => ({type: TYPES.TOGGLE_PLAY});
 
+export const pausePlay = () => ({type: TYPES.PAUSE_PLAY});
+
 export const updateTime = time => ({type: TYPES.UPDATE_TIME, time});

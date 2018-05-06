@@ -5,7 +5,7 @@ import styled from 'react-emotion';
 import Helmet from 'react-helmet';
 import {connect} from 'react-redux';
 import AudioPlayer from '../components/AudioPlayer';
-import {togglePlay, updateTime} from '../state/actions';
+import {togglePlay, pausePlay, updateTime} from '../state/actions';
 import {
   selectUrl,
   selectPodcast,
@@ -27,6 +27,7 @@ const ConnectedAudioPlayer = connect(
   {
     onPlayClick: togglePlay,
     reportedTime: updateTime,
+    onPause: pausePlay,
   }
 )(props => props.url && <AudioPlayer {...props} />);
 

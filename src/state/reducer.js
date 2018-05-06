@@ -36,6 +36,11 @@ const reducer = (state, action) => {
         ...state,
         isPlaying: !state.isPlaying,
       };
+    case TYPES.PAUSE_PLAY:
+      return {
+        ...state,
+        isPlaying: false,
+      };
     default:
       return state;
   }

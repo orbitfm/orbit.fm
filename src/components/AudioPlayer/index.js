@@ -127,6 +127,9 @@ class AudioPlayer extends React.Component {
         this.handleTimeChange(this.props.time);
       }
     }
+    if (this.props.time === this.state.duration) {
+      this.props.onPause();
+    }
     if (this.props.isPlaying !== prevProps.isPlaying) {
       if (this.props.isPlaying) {
         this.audio.play();
