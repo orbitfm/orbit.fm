@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'react-emotion';
-import * as COLORS from '../constants/colors';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "react-emotion";
+import * as COLORS from "../constants/colors";
 
 const Container = styled.div`
   background: ${props => props.color};
@@ -20,11 +20,11 @@ const InfoBar = ({ children, color }) => (
 );
 
 InfoBar.propTypes = {
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired
 };
 
 InfoBar.defaultProps = {
-  color: COLORS.BRAND,
+  color: COLORS.BRAND
 };
 
 export default InfoBar;

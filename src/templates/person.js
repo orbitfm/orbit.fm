@@ -13,9 +13,7 @@ const CircleImage = styled.img`
 export default ({ data }) => {
   const person = data.contentfulPerson;
   return (
-    <Page 
-      title={person.name}
-      headTitle={person.name}>
+    <Page title={person.name} headTitle={person.name}>
       {person.image && (
         <CircleImage src={person.image.file.url} width="100px" height="100px" />
       )}
@@ -26,8 +24,13 @@ export default ({ data }) => {
       />
       {person.links &&
         person.links.map(link => (
-          <a href={link.url} target="
-      _blank" rel="noopener" key={link.id}>
+          <a
+            href={link.url}
+            target="
+      _blank"
+            rel="noopener"
+            key={link.id}
+          >
             <img
               title={link.linkType.name}
               src={link.linkType.image.file.url}

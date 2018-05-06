@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
-import styled from 'react-emotion';
-import humanizeList from 'humanize-list';
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "gatsby-link";
+import styled from "react-emotion";
+import humanizeList from "humanize-list";
 
 const Image = styled.div`
   margin-top: -150px;
@@ -16,7 +16,7 @@ const PodcastInfo = ({
   podcastDescription,
   podcastName,
   podcastHosts,
-  podcastPath,
+  podcastPath
 }) => (
   <div>
     {imageUrl && (
@@ -37,7 +37,7 @@ PodcastInfo.propTypes = {
   podcastDescription: PropTypes.string.isRequired,
   podcastName: PropTypes.string.isRequired,
   podcastHosts: PropTypes.arrayOf(PropTypes.string).isRequired,
-  podcastPath: PropTypes.string.isRequired,
+  podcastPath: PropTypes.string.isRequired
 };
 
 export default PodcastInfo;

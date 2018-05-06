@@ -3,9 +3,7 @@ import Link from "gatsby-link";
 import Page from "../components/Page";
 
 const AboutPage = ({ data }) => (
-  <Page 
-    title={`Welcome to ${data.site.siteMetadata.title}`}
-    headTitle="About">
+  <Page title={`Welcome to ${data.site.siteMetadata.title}`} headTitle="About">
     <p>
       If you like technology, web development, books, or anything nerdy, there's
       probably something here for you.
