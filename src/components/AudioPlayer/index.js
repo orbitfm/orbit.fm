@@ -109,7 +109,7 @@ class AudioPlayer extends React.Component {
     this.audio.src = this.props.url;
 
     if (this.props.time) {
-      this.handleTimeChange(this.audio.currentTime);
+      this.handleTimeChange(this.props.time);
     }
     window.addEventListener('resize', this.updateDimensions);
     this.updateDimensions();
@@ -171,11 +171,15 @@ class AudioPlayer extends React.Component {
   };
 
   handleVolumeChange = volume => {
-    this.setState({
-      volume,
-      isMuted: volume === 0,
-    });
-    this.audio.volume = volume;
+    this.setState(
+      {
+        volume,
+        isMuted: volume === 0,
+      },
+      () => {
+        this.audio.volume = volume;
+      }
+    );
   };
 
   handleTimeChange = currentTime => {
@@ -202,11 +206,15 @@ class AudioPlayer extends React.Component {
   };
 
   handleMuteClick = () => {
-    this.setState({
-      isMuted: !this.state.isMuted,
-      volume: this.state.volume === 0 ? 0.5 : this.state.volume,
-    });
-    this.audio.volume = this.state.isMuted ? 0 : this.state.volume;
+    this.setState(
+      {
+        isMuted: !this.state.isMuted,
+        volume: this.state.volume === 0 ? 0.5 : this.state.volume,
+      },
+      () => {
+        this.audio.volume = this.state.isMuted ? 0 : this.state.volume;
+      }
+    );
   };
 
   handlePlaybackRate = () => {

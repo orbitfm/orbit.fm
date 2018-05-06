@@ -63,6 +63,7 @@ const Timestamp = ({url, podcast, title, timestamp, onClick}) => (
       e.preventDefault();
       onClick({url, podcast, title, time: convertTimestampToTime(timestamp)});
     }}
+    href="#"
   >
     {timestamp}
   </a>
