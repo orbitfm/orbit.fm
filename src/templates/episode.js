@@ -1,14 +1,14 @@
-import React from "react";
-import ReactAudioPlayer from "react-audio-player";
-import Link from "gatsby-link";
-import { DateTime } from "luxon";
-import styled from "react-emotion";
-import PageWithSidebar from "../components/PageWithSidebar";
-import PodcastInfo from "../components/PodcastInfo";
-import Subscribe from "../components/Subscribe";
+import React from 'react';
+import ReactAudioPlayer from 'react-audio-player';
+import Link from 'gatsby-link';
+import {DateTime} from 'luxon';
+import styled from 'react-emotion';
+import PageWithSidebar from '../components/PageWithSidebar';
+import PodcastInfo from '../components/PodcastInfo';
+import Subscribe from '../components/Subscribe';
 
-const Remarkable = require("remarkable");
-const markdown = new Remarkable({ html: true });
+const Remarkable = require('remarkable');
+const markdown = new Remarkable({html: true});
 
 const AudioContainer = styled.div`
   margin: 40px 0;
@@ -20,7 +20,7 @@ const TranscriptsContainer = styled.div`
   }
 `;
 
-export default ({ data }) => {
+export default ({data}) => {
   const episode = data.contentfulEpisode;
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
 
@@ -31,6 +31,7 @@ export default ({ data }) => {
           {episode.podcast.name}
         </Link>
       }
+      headTitle={episode.podcast.name}
       description={episode.podcast.description.description}
       color={episode.podcast.primaryColor}
       sidePanelChildren={
@@ -83,7 +84,7 @@ export default ({ data }) => {
           <h1>Show Notes</h1>
           <div
             dangerouslySetInnerHTML={{
-              __html: episode.fields.showNotesFormatted
+              __html: episode.fields.showNotesFormatted,
             }}
           />
         </div>
@@ -100,7 +101,7 @@ export default ({ data }) => {
                 </p>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: markdown.render(item.text)
+                    __html: markdown.render(item.text),
                   }}
                 />
               </div>
@@ -118,7 +119,7 @@ export const query = graphql`
     $podcastName: String
     $episodeNumber: String
   ) {
-    contentfulEpisode(id: { eq: $id }) {
+    contentfulEpisode(id: {eq: $id}) {
       name
       season
       episodeNumber
@@ -179,8 +180,8 @@ export const query = graphql`
     }
 
     transcriptsJson(
-      podcast: { eq: $podcastName }
-      episode: { eq: $episodeNumber }
+      podcast: {eq: $podcastName}
+      episode: {eq: $episodeNumber}
     ) {
       podcast
       episode
