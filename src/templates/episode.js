@@ -8,7 +8,7 @@ import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
 import PlayButton from '../components/AudioPlayer/PlayButton';
-import * as ACTIONS from '../state/actions';
+import {playSong} from '../state/actions';
 import {selectUrl, selectIsPlaying} from '../state/selectors';
 
 const Remarkable = require('remarkable');
@@ -23,13 +23,6 @@ const TranscriptsContainer = styled.div`
     text-decoration: underline;
   }
 `;
-
-const playSong = (url, podcast, title) => ({
-  type: ACTIONS.PLAY_SONG,
-  url,
-  podcast,
-  title,
-});
 
 const SmartPlayButton = ({
   url,

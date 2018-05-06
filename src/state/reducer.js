@@ -1,8 +1,8 @@
-import * as ACTIONS from './actions';
+import * as TYPES from './actionTypes';
 
 const reducer = (state, action) => {
   // TODO: change to switch
-  if (action.type === ACTIONS.CHANGE_SONG) {
+  if (action.type === TYPES.CHANGE_SONG) {
     return {
       ...state,
       url: action.url,
@@ -10,7 +10,7 @@ const reducer = (state, action) => {
       podcast: action.podcast,
     };
   }
-  if (action.type === ACTIONS.PLAY_SONG) {
+  if (action.type === TYPES.PLAY_SONG) {
     return {
       ...state,
       url: action.url,
@@ -19,13 +19,13 @@ const reducer = (state, action) => {
       podcast: action.podcast,
     };
   }
-  if (action.type === ACTIONS.TOGGLE_PLAY) {
+  if (action.type === TYPES.TOGGLE_PLAY) {
     return {
       ...state,
       isPlaying: !state.isPlaying,
     };
   }
-  return state
+  return state;
 };
 
 export default reducer;

@@ -5,7 +5,7 @@ import styled from 'react-emotion';
 import Helmet from 'react-helmet';
 import {connect} from 'react-redux';
 import AudioPlayer from '../components/AudioPlayer';
-import * as ACTIONS from '../state/actions';
+import {togglePlay} from '../state/actions';
 import {
   selectUrl,
   selectPodcast,
@@ -14,8 +14,6 @@ import {
 } from '../state/selectors';
 
 import './index.css';
-
-const togglePlay = () => ({type: ACTIONS.TOGGLE_PLAY});
 
 const ConnectedAudioPlayer = connect(
   state => ({
