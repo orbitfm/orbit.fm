@@ -59,8 +59,6 @@ const PauseIcon = () => (
 
 const MARGIN_WIDTH = 20;
 const PLAY_BUTTON_WIDTH = 100;
-const PLAY_BUTTON_BORDER_WIDTH = 5;
-const TIME_WIDTH = 60;
 const RATE_WIDTH = 30;
 const MUTE_WIDTH = 20;
 
@@ -80,39 +78,12 @@ class AudioPlayer extends React.Component {
 
   neverPlayed = true;
 
-  updateDimensions = () => {
-    const componentWidth = this.component.offsetWidth;
-    const fixedWidthItems =
-      MARGIN_WIDTH * 8 +
-      PLAY_BUTTON_WIDTH +
-      PLAY_BUTTON_BORDER_WIDTH * 2 +
-      TIME_WIDTH * 2 +
-      RATE_WIDTH +
-      MUTE_WIDTH;
-    const remainingSpace = componentWidth - fixedWidthItems;
-    const extraSpace =
-      remainingSpace < 100
-        ? remainingSpace < 35
-          ? TIME_WIDTH + MUTE_WIDTH + MARGIN_WIDTH * 2
-          : TIME_WIDTH + MARGIN_WIDTH
-        : 0;
-
-    this.setState({
-      timeSliderWidth: (remainingSpace + extraSpace) * 0.7,
-      volumeSliderWidth: (remainingSpace + extraSpace) * 0.3,
-      showRightTime: remainingSpace > 99,
-      showMute: remainingSpace > 34,
-    });
-  };
-
   componentDidMount = () => {
     this.audio.src = this.props.url;
 
     if (this.props.time) {
       this.handleTimeChange(this.props.time);
     }
-    window.addEventListener('resize', this.updateDimensions);
-    this.updateDimensions();
 
     this.audio.addEventListener(
       'timeupdate',
@@ -218,10 +189,14 @@ class AudioPlayer extends React.Component {
   };
 
   handlePlaybackRate = () => {
-    this.setState({
-      rate: getNextRate(this.state.rate),
-    });
-    this.audio.playbackRate = this.state.rate;
+    this.setState(
+      {
+        rate: getNextRate(this.state.rate),
+      },
+      () => {
+        this.audio.playbackRate = this.state.rate;
+      }
+    );
   };
 
   render() {
@@ -248,27 +223,23 @@ class AudioPlayer extends React.Component {
         backgroundColor: BLUE_DARK,
         fontFamily: 'sans-serif',
       },
+      AudioPlayer__Play: {
+        marginLeft: MARGIN_WIDTH,
+      },
       AudioPlayer__Time_Title: {
         display: 'flex',
         flexDirection: 'column',
-        flex: '1 0 auto',
+        flex: '1 1 auto',
+        marginLeft: MARGIN_WIDTH,
       },
       AudioPlayer__Title: {},
       AudioPlayer__Time: {
         display: 'flex',
         color: WHITE,
       },
-      AudioPlayer__TimeLeft: {
-        marginLeft: MARGIN_WIDTH,
-        width: TIME_WIDTH,
-      },
+      AudioPlayer__TimeLeft: {},
       AudioPlayer__TimeSlider: {
-        marginLeft: MARGIN_WIDTH,
         width: '100%',
-      },
-      AudioPlayer__TimeRight: {
-        width: TIME_WIDTH,
-        marginLeft: MARGIN_WIDTH,
       },
       AudioPlayer__Rate: {
         width: RATE_WIDTH,
@@ -293,20 +264,14 @@ class AudioPlayer extends React.Component {
     return (
       <div style={styles.AudioPlayer} ref={e => (this.component = e)}>
         <audio ref={a => (this.audio = a)} />
-        <PlayButton isPlaying={isPlaying} onClick={onPlayClick} />
+        <div style={styles.AudioPlayer__Play}>
+          <PlayButton isPlaying={isPlaying} onClick={onPlayClick} />
+        </div>
         <div style={styles.AudioPlayer__Time_Title}>
           <div style={styles.AudioPlayer__Title}>
             {podcast} {title}
           </div>
           <div style={styles.AudioPlayer__Time}>
-            <div style={styles.AudioPlayer__TimeLeft}>
-              {getMinutesAndSeconds(isDragging ? dragTime : currentTime)}
-              {this.state.showRightTime ? (
-                <div style={styles.AudioPlayer__TimeRight}>
-                  {getMinutesAndSeconds(duration)}
-                </div>
-              ) : null}
-            </div>
             <div style={styles.AudioPlayer__TimeSlider}>
               <Slider
                 value={currentTime || 0}
@@ -317,22 +282,24 @@ class AudioPlayer extends React.Component {
               />
             </div>
           </div>
+          <div style={styles.AudioPlayer__TimeLeft}>
+            {getMinutesAndSeconds(isDragging ? dragTime : currentTime)} /{' '}
+            {getMinutesAndSeconds(duration)}
+          </div>
         </div>
         <div style={styles.AudioPlayer__Rate} onClick={this.handlePlaybackRate}>
           {rate}x
         </div>
         <div style={styles.AudioPlayer__Volume}>
-          {this.state.showMute ? (
-            <button
-              type="button"
-              title="Mute Toggle"
-              aria-label="Mute Toggle"
-              style={styles.AudioPlayer__Mute}
-              onClick={this.handleMuteClick}
-            >
-              {isMuted ? <UnmuteIcon /> : <MuteIcon />}
-            </button>
-          ) : null}
+          <button
+            type="button"
+            title="Mute Toggle"
+            aria-label="Mute Toggle"
+            style={styles.AudioPlayer__Mute}
+            onClick={this.handleMuteClick}
+          >
+            {isMuted ? <UnmuteIcon /> : <MuteIcon />}
+          </button>
         </div>
       </div>
     );
