@@ -59,7 +59,7 @@ const PauseIcon = () => (
 
 const MARGIN_WIDTH = 20;
 const PLAY_BUTTON_WIDTH = 100;
-const RATE_WIDTH = 30;
+const RATE_WIDTH = 45;
 const MUTE_WIDTH = 20;
 
 class AudioPlayer extends React.Component {
@@ -242,6 +242,8 @@ class AudioPlayer extends React.Component {
         width: '100%',
       },
       AudioPlayer__Rate: {
+        display: 'flex',
+        justifyContent: 'center',
         width: RATE_WIDTH,
         marginLeft: MARGIN_WIDTH,
         color: WHITE,
