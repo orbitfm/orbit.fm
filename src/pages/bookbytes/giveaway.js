@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "react-emotion";
-import PageWithSidebar from "../../components/PageWithSidebar";
-import bookCover from "../../images/apprenticeship-patterns.jpg";
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'react-emotion';
+import PageWithSidebar from '../../components/PageWithSidebar';
+import bookCover from '../../images/technically-wrong.jpg';
 
 const Image = styled.img`
   margin-top: -150px;
@@ -56,25 +56,27 @@ const Button = styled.button`
   }
 `;
 
-const GiveawayPage = ({ data }) => (
+const GiveawayPage = ({data}) => (
   <PageWithSidebar
     title={`Book Giveaway!`}
     headTitle="Book Givaway"
     description={`Because books are awesome`}
+    color="#33444c"
     sidePanelChildren={<Image src={bookCover} />}
   >
     <p>
-      We're giving away <em>5 copies</em> of Apprenticeship Patterns signed by
-      David Hoover. All you have to do is leave a review for{" "}
+      We're giving away <em>5 copies</em> of Technically Wrong signed by Sara
+      Wachter-Boettcher. All you have to do is leave a review for{' '}
       <a
         href="https://itunes.apple.com/us/podcast/bookbytes/id1355549752"
-        style={{ textDecoration: "underline" }}
+        style={{textDecoration: 'underline'}}
         target="_blank"
         rel="noopener"
       >
         BookBytes on iTunes
-      </a>{" "}
-      and fill out this form.
+      </a>{' '}
+      and fill out this form. If you've already left a review, then we would
+      appreciate you tweeting about the show, and telling your friends about it.
     </p>
 
     <form

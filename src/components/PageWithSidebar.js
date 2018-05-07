@@ -88,8 +88,4 @@ PageWithSidebar.propTypes = {
   headTitle: PropTypes.string,
 };
 
-PageWithSidebar.propTypes = {
-  color: PropTypes.string.isRequired,
-};
-
 export default PageWithSidebar;

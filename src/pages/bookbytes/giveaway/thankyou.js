@@ -1,8 +1,8 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "react-emotion";
-import PageWithSidebar from "../../../components/PageWithSidebar";
-import bookCover from "../../../images/apprenticeship-patterns.jpg";
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'react-emotion';
+import PageWithSidebar from '../../../components/PageWithSidebar';
+import bookCover from '../../../images/technically-wrong.jpg';
 
 const Image = styled.img`
   margin-top: -150px;
@@ -11,19 +11,20 @@ const Image = styled.img`
   }
 `;
 
-const ThankyouPage = ({ data }) => (
+const ThankyouPage = ({data}) => (
   <PageWithSidebar
     title={`Book Giveaway!`}
     headTitle="Book Givaway"
     description={`Because books are awesome`}
+    color="#33444c"
     sidePanelChildren={<Image src={bookCover} />}
   >
     <h2>Thank you!</h2>
     <p>
-      Thank you so much for listening! And if you aren't already, feel free to{" "}
+      Thank you so much for listening! And if you aren't already, feel free to{' '}
       <a
         href="https://twitter.com/bookbytesfm"
-        style={{ textDecoration: "underline" }}
+        style={{textDecoration: 'underline'}}
       >
         follow us on Twitter
       </a>.
