@@ -105,6 +105,8 @@ class AudioPlayer extends React.Component {
         duration: Math.floor(this.audio.duration),
       });
     });
+
+    this.playerHeight = this.component.getBoundingClientRect().height;
   };
 
   componentDidUpdate(prevProps) {
@@ -215,6 +217,9 @@ class AudioPlayer extends React.Component {
 
     const styles = {
       AudioPlayer: {
+        position: 'fixed',
+        bottom: 0,
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         padding: '20px 0',
@@ -259,56 +264,63 @@ class AudioPlayer extends React.Component {
         background: 'none',
         cursor: 'pointer',
       },
+      AudioPlayer__Spacer: {
+        height: this.playerHeight,
+        width: '100%',
+      },
     };
 
     return (
-      <div style={styles.AudioPlayer} ref={e => (this.component = e)}>
-        <audio ref={a => (this.audio = a)} />
-        <div style={styles.AudioPlayer__Title}>
-          {podcast} {title}
-        </div>
-        <div style={styles.AudioPlayer__Body}>
-          <div style={styles.AudioPlayer__Play}>
-            <PlayButton
-              isPlaying={isPlaying}
-              onClick={onPlayClick}
-              height={70}
-            />
+      <div>
+        <div style={styles.AudioPlayer} ref={e => (this.component = e)}>
+          <audio ref={a => (this.audio = a)} />
+          <div style={styles.AudioPlayer__Title}>
+            {podcast} {title}
           </div>
-          <div style={styles.AudioPlayer__Slider}>
-            <Slider
-              value={currentTime || 0}
-              duration={duration}
-              onChange={this.handleTimeChange}
-              onDrag={this.handleTimeDrag}
-              onDragStop={this.handleTimeDragStop}
-            />
-          </div>
-          <button
-            type="button"
-            title="Change playback rate"
-            aria-label="Change playback rate"
-            style={styles.AudioPlayer__Rate}
-            onClick={this.handlePlaybackRate}
-          >
-            {rate}x
-          </button>
-          <div style={styles.AudioPlayer__Volume}>
+          <div style={styles.AudioPlayer__Body}>
+            <div style={styles.AudioPlayer__Play}>
+              <PlayButton
+                isPlaying={isPlaying}
+                onClick={onPlayClick}
+                height={70}
+              />
+            </div>
+            <div style={styles.AudioPlayer__Slider}>
+              <Slider
+                value={currentTime || 0}
+                duration={duration}
+                onChange={this.handleTimeChange}
+                onDrag={this.handleTimeDrag}
+                onDragStop={this.handleTimeDragStop}
+              />
+            </div>
             <button
               type="button"
-              title="Mute toggle"
-              aria-label="Mute toggle"
-              style={styles.AudioPlayer__Mute}
-              onClick={this.handleMuteClick}
+              title="Change playback rate"
+              aria-label="Change playback rate"
+              style={styles.AudioPlayer__Rate}
+              onClick={this.handlePlaybackRate}
             >
-              {isMuted ? <UnmuteIcon /> : <MuteIcon />}
+              {rate}x
             </button>
+            <div style={styles.AudioPlayer__Volume}>
+              <button
+                type="button"
+                title="Mute toggle"
+                aria-label="Mute toggle"
+                style={styles.AudioPlayer__Mute}
+                onClick={this.handleMuteClick}
+              >
+                {isMuted ? <UnmuteIcon /> : <MuteIcon />}
+              </button>
+            </div>
+          </div>
+          <div style={styles.AudioPlayer__Time}>
+            {getMinutesAndSeconds(isDragging ? dragTime : currentTime)} /{' '}
+            {getMinutesAndSeconds(duration)}
           </div>
         </div>
-        <div style={styles.AudioPlayer__Time}>
-          {getMinutesAndSeconds(isDragging ? dragTime : currentTime)} /{' '}
-          {getMinutesAndSeconds(duration)}
-        </div>
+        <div style={styles.AudioPlayer__Spacer} />
       </div>
     );
   }
