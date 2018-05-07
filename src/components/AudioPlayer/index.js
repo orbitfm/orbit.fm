@@ -245,6 +245,8 @@ class AudioPlayer extends React.Component {
         marginLeft: MARGIN_WIDTH,
         color: WHITE,
         cursor: 'pointer',
+        background: 'none',
+        border: 'none',
       },
       AudioPlayer__Volume: {
         display: 'flex',
@@ -282,17 +284,20 @@ class AudioPlayer extends React.Component {
               onDragStop={this.handleTimeDragStop}
             />
           </div>
-          <div
+          <button
+            type="button"
+            title="Change playback rate"
+            aria-label="Change playback rate"
             style={styles.AudioPlayer__Rate}
             onClick={this.handlePlaybackRate}
           >
             {rate}x
-          </div>
+          </button>
           <div style={styles.AudioPlayer__Volume}>
             <button
               type="button"
-              title="Mute Toggle"
-              aria-label="Mute Toggle"
+              title="Mute toggle"
+              aria-label="Mute toggle"
               style={styles.AudioPlayer__Mute}
               onClick={this.handleMuteClick}
             >
