@@ -105,7 +105,7 @@ export default ({data}) => {
       <div>{episode.shortDescription}</div>
       <AudioContainer>
         <ConnectedPlayButton
-          url={/* TODO: add podtrac */ `${episode.audioUrl}`}
+          url={`https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
           podcast={episode.podcast.name}
           title={episode.name}
         />
@@ -151,7 +151,9 @@ export default ({data}) => {
               <div name={item.timestamp} key={i}>
                 <p>
                   <ConnectedTimestamp
-                    url={/* TODO: add podtrac */ `${episode.audioUrl}`}
+                    url={`https://www.podtrac.com/pts/redirect.mp3/${
+                      episode.audioUrl
+                    }`}
                     podcast={episode.podcast.name}
                     title={episode.name}
                     timestamp={item.timestamp}
