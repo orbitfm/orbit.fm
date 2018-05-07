@@ -57,7 +57,6 @@ const PauseIcon = () => (
 );
 
 const MARGIN_WIDTH = 20;
-const PLAY_BUTTON_WIDTH = 100;
 const RATE_WIDTH = 45;
 const MUTE_WIDTH = 20;
 
@@ -217,31 +216,27 @@ class AudioPlayer extends React.Component {
     const styles = {
       AudioPlayer: {
         display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        boxSizing: 'border-box',
-        height: PLAY_BUTTON_WIDTH,
-        margin: 0,
+        flexDirection: 'column',
+        padding: '20px 0',
         backgroundColor: BLUE_DARK,
-        fontFamily: 'sans-serif',
+      },
+      AudioPlayer__Body: {
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%',
       },
       AudioPlayer__Play: {
         marginLeft: MARGIN_WIDTH,
       },
-      AudioPlayer__Time_Title: {
-        display: 'flex',
-        flexDirection: 'column',
-        flex: '1 1 auto',
-        marginLeft: MARGIN_WIDTH,
+      AudioPlayer__Title: {
+        marginLeft: 110,
       },
-      AudioPlayer__Title: {},
       AudioPlayer__Time: {
-        display: 'flex',
-        color: WHITE,
+        marginLeft: 110,
       },
-      AudioPlayer__TimeLeft: {},
-      AudioPlayer__TimeSlider: {
-        width: '100%',
+      AudioPlayer__Slider: {
+        flex: '1 1 auto',
+        marginLeft: 20,
       },
       AudioPlayer__Rate: {
         display: 'flex',
@@ -257,7 +252,6 @@ class AudioPlayer extends React.Component {
       },
       AudioPlayer__Mute: {
         width: MUTE_WIDTH,
-        marginLeft: MARGIN_WIDTH,
         border: 'none',
         color: WHITE,
         background: 'none',
@@ -268,42 +262,47 @@ class AudioPlayer extends React.Component {
     return (
       <div style={styles.AudioPlayer} ref={e => (this.component = e)}>
         <audio ref={a => (this.audio = a)} />
-        <div style={styles.AudioPlayer__Play}>
-          <PlayButton isPlaying={isPlaying} onClick={onPlayClick} />
+        <div style={styles.AudioPlayer__Title}>
+          {podcast} {title}
         </div>
-        <div style={styles.AudioPlayer__Time_Title}>
-          <div style={styles.AudioPlayer__Title}>
-            {podcast} {title}
+        <div style={styles.AudioPlayer__Body}>
+          <div style={styles.AudioPlayer__Play}>
+            <PlayButton
+              isPlaying={isPlaying}
+              onClick={onPlayClick}
+              height={70}
+            />
           </div>
-          <div style={styles.AudioPlayer__Time}>
-            <div style={styles.AudioPlayer__TimeSlider}>
-              <Slider
-                value={currentTime || 0}
-                duration={duration}
-                onChange={this.handleTimeChange}
-                onDrag={this.handleTimeDrag}
-                onDragStop={this.handleTimeDragStop}
-              />
-            </div>
+          <div style={styles.AudioPlayer__Slider}>
+            <Slider
+              value={currentTime || 0}
+              duration={duration}
+              onChange={this.handleTimeChange}
+              onDrag={this.handleTimeDrag}
+              onDragStop={this.handleTimeDragStop}
+            />
           </div>
-          <div style={styles.AudioPlayer__TimeLeft}>
-            {getMinutesAndSeconds(isDragging ? dragTime : currentTime)} /{' '}
-            {getMinutesAndSeconds(duration)}
-          </div>
-        </div>
-        <div style={styles.AudioPlayer__Rate} onClick={this.handlePlaybackRate}>
-          {rate}x
-        </div>
-        <div style={styles.AudioPlayer__Volume}>
-          <button
-            type="button"
-            title="Mute Toggle"
-            aria-label="Mute Toggle"
-            style={styles.AudioPlayer__Mute}
-            onClick={this.handleMuteClick}
+          <div
+            style={styles.AudioPlayer__Rate}
+            onClick={this.handlePlaybackRate}
           >
-            {isMuted ? <UnmuteIcon /> : <MuteIcon />}
-          </button>
+            {rate}x
+          </div>
+          <div style={styles.AudioPlayer__Volume}>
+            <button
+              type="button"
+              title="Mute Toggle"
+              aria-label="Mute Toggle"
+              style={styles.AudioPlayer__Mute}
+              onClick={this.handleMuteClick}
+            >
+              {isMuted ? <UnmuteIcon /> : <MuteIcon />}
+            </button>
+          </div>
+        </div>
+        <div style={styles.AudioPlayer__Time}>
+          {getMinutesAndSeconds(isDragging ? dragTime : currentTime)} /{' '}
+          {getMinutesAndSeconds(duration)}
         </div>
       </div>
     );
