@@ -31,12 +31,6 @@ const ConnectedAudioPlayer = connect(
   }
 )(props => props.url && <AudioPlayer {...props} />);
 
-const AudioContainer = styled.div`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-`;
-
 const ListLink = props => (
   <li style={{display: `inline-block`, margin: `0 1rem 0 0`}}>
     <Link to={props.to}>{props.children}</Link>
@@ -91,10 +85,8 @@ const TemplateWrapper = ({children, data}) => (
       ]}
     />
     <Header title={data.site.siteMetadata.title} />
-    <AudioContainer>
-      <ConnectedAudioPlayer />
-    </AudioContainer>
     <div>{children()}</div>
+    <ConnectedAudioPlayer />
   </div>
 );
 
