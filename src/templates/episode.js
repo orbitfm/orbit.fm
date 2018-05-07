@@ -3,9 +3,13 @@ import ReactAudioPlayer from 'react-audio-player';
 import Link from 'gatsby-link';
 import {DateTime} from 'luxon';
 import styled from 'react-emotion';
+import {connect} from 'react-redux';
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
+import PlayButton from '../components/AudioPlayer/PlayButton';
+import {playSong, playSongAtTime} from '../state/actions';
+import {selectUrl, selectIsPlaying} from '../state/selectors';
 
 const Remarkable = require('remarkable');
 const markdown = new Remarkable({html: true});
@@ -19,6 +23,55 @@ const TranscriptsContainer = styled.div`
     text-decoration: underline;
   }
 `;
+
+const SmartPlayButton = ({
+  url,
+  podcast,
+  title,
+  playingUrl,
+  isPlaying,
+  onClick,
+}) => (
+  <PlayButton
+    isPlaying={isPlaying && url === playingUrl}
+    onClick={() => onClick({url, podcast, title})}
+  />
+);
+
+const ConnectedPlayButton = connect(
+  state => ({
+    isPlaying: selectIsPlaying(state),
+    playingUrl: selectUrl(state),
+  }),
+  {
+    onClick: playSong,
+  }
+)(SmartPlayButton);
+
+const convertTimestampToTime = timestamp => {
+  const timeSections = timestamp.split(':');
+  const seconds = Number(timeSections[timeSections.length - 1]);
+  const minutes = Number(timeSections[timeSections.length - 2]);
+  const hours = Number(timeSections[timeSections.length - 3]);
+
+  return hours * 3600 + minutes * 60 + seconds;
+};
+
+const Timestamp = ({url, podcast, title, timestamp, onClick}) => (
+  <a
+    onClick={e => {
+      e.preventDefault();
+      onClick({url, podcast, title, time: convertTimestampToTime(timestamp)});
+    }}
+    href="#"
+  >
+    {timestamp}
+  </a>
+);
+
+const ConnectedTimestamp = connect(null, {
+  onClick: playSongAtTime,
+})(Timestamp);
 
 export default ({data}) => {
   const episode = data.contentfulEpisode;
@@ -51,10 +104,10 @@ export default ({data}) => {
       <p>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</p>
       <div>{episode.shortDescription}</div>
       <AudioContainer>
-        <ReactAudioPlayer
-          src={`https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
-          preload="none"
-          controls
+        <ConnectedPlayButton
+          url={`https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
+          podcast={episode.podcast.name}
+          title={episode.name}
         />
       </AudioContainer>
       <h3>Hosts</h3>
@@ -94,10 +147,18 @@ export default ({data}) => {
         <div>
           <h1>Transcript</h1>
           <TranscriptsContainer>
-            {transcript.map(item => (
-              <div name={item.timestamp}>
+            {transcript.map((item, i) => (
+              <div name={item.timestamp} key={i}>
                 <p>
-                  {item.timestamp} <b>{item.speaker}</b>
+                  <ConnectedTimestamp
+                    url={`https://www.podtrac.com/pts/redirect.mp3/${
+                      episode.audioUrl
+                    }`}
+                    podcast={episode.podcast.name}
+                    title={episode.name}
+                    timestamp={item.timestamp}
+                  />{' '}
+                  <b>{item.speaker}</b>
                 </p>
                 <p
                   dangerouslySetInnerHTML={{
