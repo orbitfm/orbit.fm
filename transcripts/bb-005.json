@@ -1,0 +1,480 @@
+{
+  "podcast": "BookBytes",
+  "episode": "5",
+  "transcript": [
+    {
+      "text": "(intro music: electro swing)"
+    },
+
+    {
+      "timestamp": "0:00:14.1",
+      "speaker": "Adam",
+      "text": "Welcome to BookBytes, episode 5. I’m Adam Garrett-Harris, and as usual my co-hosts are Safia Abdalla, you can go ahead and say hi."
+    },
+
+    {
+      "timestamp": "0:00:21.4",
+      "speaker": "Safia",
+      "text": "Hey!"
+    },
+
+    {
+      "timestamp": "0:00:21.3",
+      "speaker": "Adam",
+      "text": "Jen Luker."
+    },
+
+    {
+      "timestamp": "0:00:23.4",
+      "speaker": "Jen",
+      "text": "Hello."
+    },
+
+    {
+      "timestamp": "0:00:24.1",
+      "speaker": "Adam",
+      "text": "And Jason Staten."
+    },
+
+    {
+      "timestamp": "0:00:25.0",
+      "speaker": "Jason",
+      "text": "Hi."
+    },
+
+    {
+      "timestamp": "0:00:26.1",
+      "speaker": "Adam",
+      "text": "So, we’ve been reading and talking about a book called \"Apprenticeship Patterns\" for the past few episodes and today we have a special guest, Dave Hoover who is the co-author of that book. So, welcome to the show."
+    },
+
+    {
+      "timestamp": "0:00:39.0",
+      "speaker": "Dave Hoover",
+      "text": "Thanks."
+    },
+
+    {
+      "timestamp": "0:00:39.9",
+      "speaker": "Adam",
+      "text": "So, tell us a little bit about your background."
+    },
+
+    {
+      "timestamp": "0:00:43.0",
+      "speaker": "Dave Hoover",
+      "text": "Whoo. My background as an adult is when I graduated from college, I was a psychology major, wanted to work with kids, like troubled kind of kids going through hard times. So, I did that and I went and got my masters’ degree in family therapy and did that, worked in that field until I was 26, and enjoyed that work. This was in the late ‘90s and by 2000 I was having a hard time keeping my hands out of the web, and in the meantime, because I had a baby at a very early age I needed to earn some extra money and… yeah. I got into some HTML, earned some extra money and that’s how I got my start in technology."
+    },
+
+    {
+      "timestamp": "0:01:37.5",
+      "speaker": "Jen",
+      "text": "So, what inspired \"Apprenticeship Patterns\"?"
+    },
+
+    {
+      "timestamp": "0:01:41.2",
+      "speaker": "Dave Hoover",
+      "text": "It was… Getting into \"Apprenticeship Patterns\" was definitely a winding road. I’ve always enjoyed writing and I really enjoyed blogging in the early 2000’s back when blogging was a kind of a different thing, it was much more decentralized and… I don’t know, it was a very different sort of thing. And so I was having a lot of fun, starting to blog and get connected to different people that I obviously hadn’t been connected to in the past, and it really kind of took off when I was working at ThoughtWorks. I worked there from 2004 to 2006, and because I got to work there it opened some doors for me, kind of was just a little bit of a credential that I hadn’t had as a self-taught developer, and so I was able to edit and kind of proofread some books and manuscripts. I got to write a little column called “StickyMinds” and that column, the idea was that the column was supposed to be about software craftsmanship, and there was a couple other columnists and the pragmatic programmers were two of the other columnists and I was like, super fanboy. Like, “What? How can I be a columnist with these people?” They had written The Pragmatic Programmer: From Journeyman to Master, right?\n\nSo, just through the opportunity to write that column I realized like, “Oh, what am I even qualified to write about? I've only been doing this for 4 years.” But I’d read this book called The Software Craftsmanship that had really resonated with me, and I realized, “Oh, I know what I could write about. I’m actually only qualified to write about one thing, and that’s apprenticeship.” Not, that I’ve ever been an actual apprentice, but I know about how to go from nothing to something, and I think I'm on the way from apprentice to journeyman so maybe there’s a book there. Like there’s this empty space before The Pragmatic Programmer, that’s journeyman to master, oh, what? Where’s apprentice to journeyman? So, that’s kinda... there’s a bunch of different things, there’s a blog post I read, you know, just really short. These days it’d be like a 4-tweet TweetStorm, or maybe now 2 with these huge character limits that we have these days."
+    },
+
+    {
+      "speaker": ":09.7 **All** (laug",
+      "text": ":11.1 **Dave Hoover** But yeah, that was a little blog post by this guy name Chris Morris in Texas and it was where he was quote Pat Metheny, the guitarist, with the advice that I loved so much which was, “Always try to be the worst guy in the band” which really resonated with me as working at ThoughtWorks, because that was one of the reasons I joined ThoughtWorks back then, was so I could be the worst. So, that kind of sort of kicked off the whole thing and I started writing little blog posts and I made a little Wiki to just start publishing the patterns and then somebody from O’Reilly kind of stumbled across it and asked me if I wanted it to be a book eventually, and this was in 2005 so that’s actually when we got started writing it, was in "
+    },
+
+    {
+      "timestamp": "0:05:08.0",
+      "speaker": "Safia",
+      "text": "So, that actually lends really well into the next question. You talked a little bit about, you know, writing on your own blog, being inspired by different books and other blogs that you were reading as part of the research you put into creating the initial Wiki and then you got reached out to by O’Reilly to write a book, what was the process like with respect to evolving the content you’d produced in the Wiki into a formal, professionally edited, professionally published book?"
+    },
+
+    {
+      "timestamp": "0:05:39.8",
+      "speaker": "Dave Hoover",
+      "text": "The process? Oh, it was very… I don’t know, like evolutionary? The thing that… So, first I was writing by myself, and so being at ThoughtWorks at the time meant that I was surrounded, kind of virtually, around the world by a really strong community of software developers who had really strong opinions and were really passionate about their work. So, I could share the stuff that I was writing with people and they would give me lots of feedback and I even got, I mean the coolest thing about that time, was that I got to get feedback from Martin Fowler, and I was just like, again, fanboying as I did often when I worked there with certain people. But anyway, early on there was one guy who would just give me oodles and oodles of feedback and I could tell that like, he had a lot of things to say, and that’s Ade, ended up being my co-author.\n\nSo, yeah, anyway, the process was pretty organic, but… I guess where I was heading with that was, I had just read a book, a really large book called A Pattern Language which is not technical, it’s architectural, like real world architecture, and I’d really just fallen in love with that style of like, organizing ideas into a language of patterns, of interconnecting patterns. So that was a really interesting process to try to, as well as we could, to fit it into an actual pattern language so you could link these things together, and use them in different varieties. And so, Ade and I went to a pattern conference to get formal feedback from people who knew how to do that, and that was really fun. He and I have only met like 3 or 4 times in real life because he lives in London, and I live in Chicago, and that was a really fun time for him to come to Illinois and go through that process.\n\nYeah, you know interestingly it took 4 years for it to get published because we did a lot of work in 2005, but then Ruby happened, I should say specifically because Rails happened and I had to just stop working on the book because there was too big of an opportunity to like, jump into that space for a while because it was just really hot and really fun, and I couldn’t really come back to it until about 2007 or 2008. And yeah, I mean like, I don’t know. It was… We had a Wiki, we would just keep putting things out there, get feedback from people.\n\nThe thing about a pattern language is that it really, for experienced people, they should read it and be like, “Yeah, that’s totally obvious. Like, this is what I did.” Or “Oh yeah, I totally remember doing things like this.” Or sometimes there might be something that’s novel to somebody, but for most, for a lot of people it should be like, somehow feel like conventional wisdom, otherwise it’s not really a pattern. They should be common solutions to common problems, so we needed to get it in front of a lot of people over some time, and ThoughtWorks, and then our kind of community, like our social networks from there that we had, and like the authors that we really respected and had reached out to, were all willing to talk to us about this stuff. So, we just tried to incorporate that feedback, get as much criticism as we could, as we could bear I guess you could say, and then just like, push it out. I don’t know. I don’t know how else to describe it. You know, I think it works best actually as Wiki because these patterns need to connect to each other, you kinda need hypertext."
+    },
+
+    {
+      "timestamp": "0:09:27.0",
+      "speaker": "Safia",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:09:28.9",
+      "speaker": "Dave Hoover",
+      "text": "But, yeah, anyway… That’s-"
+    },
+
+    {
+      "timestamp": "0:09:32.7",
+      "speaker": "Safia",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:09:33.2",
+      "speaker": "Dave Hoover",
+      "text": "That’s kinda how it worked."
+    },
+
+    {
+      "timestamp": "0:09:34.1",
+      "speaker": "Safia",
+      "text": "So, it seems like the book really evolved organically and collaboratively between your own efforts and the network of peers you had at ThoughtWorks and other places at the time."
+    },
+
+    {
+      "timestamp": "0:09:47.3",
+      "speaker": "Dave Hoover",
+      "text": "Yep. For sure. Definitely, and we weren’t in any big rush. I was always very mindful of like, I do not want to write a book that’s going to go out of date in 2 years. This is such a pain in the butt to write. Like, I just… It was a lot of work even though it’s like barely even a book’s worth of content. I just, I don’t know how people put out all that content, you know for highly technical books that get out of date fast, which are really helpful, but like, l was just like, “Oh, this would so great if this could still be relevant in like 20 years.” Because I’m just lazy, and I don’t want to have to do it again. (laughs) And yeah, it’s held up pretty well, but yeah, we can maybe get to some of the things I’m feeling more and more self conscious about."
+    },
+
+    {
+      "timestamp": "0:10:37.5",
+      "speaker": "Adam",
+      "text": "So, you said you read that architectural book, A Pattern Language?"
+    },
+
+    {
+      "timestamp": "0:10:41.7",
+      "speaker": "Dave Hoover",
+      "text": "Yes."
+    },
+
+    {
+      "timestamp": "0:10:42.7",
+      "speaker": "Adam",
+      "text": "So, I’ve heard that mentioned a lot when pattern languages are brought up, but I’m curious why you actually read that book?"
+    },
+
+    {
+      "timestamp": "0:10:48.0",
+      "speaker": "Dave Hoover",
+      "text": "Well, it goes to one of the… Or actually it’s not really a pattern, an apprenticeship pattern, but I mean, “Study the Classics” is obviously a pattern, but one of the like, my personal techniques is to do like a depth-first search when it comes to book reading. It’s kind of fun. It’s not necessarily practical, but like when I say depth-first, I mean read a book, find the quotes that resonate, figure out where the quotes came from, go read that book, and then repeat until you’re in some bizarre new territory that now you want to just go back. And you don’t have to go very- I mean A Pattern Language by Christopher Alexander if you read the actual like Gang of Four book or any other of the early patterns books, you know that was the primary reference, so it’s not hard to find. And why I read it was just because, I don’t know, I’m a reader. I take the train, I live in the suburbs so I have a lot of extra time to read and I was just, especially in my first 5 years of my career, I was never not reading. I was somewhat insecure about not being formally educated and I just wanted to be educated basically. And that was just a really fascinating book. Like, yeah. It’s hard to describe but Christopher Alexander and his coauthors did a lot of interesting work."
+    },
+
+    {
+      "timestamp": "0:12:19.2",
+      "speaker": "Adam",
+      "text": "Nice. Jason, do you have a question?"
+    },
+
+    {
+      "timestamp": "0:12:22.0",
+      "speaker": "Jason",
+      "text": "I did have one about the break that you took when Rails came on the scene. How do you think that that the affected the book for you? I mean, on the outcome of it."
+    },
+
+    {
+      "timestamp": "0:12:33.6",
+      "speaker": "Dave Hoover",
+      "text": "Yeah, so what… That did affect some things. What happened was I left ThoughtWorks in… Well, let’s see. I think I was at ThoughtWorks, root Rails kind of hit in 2004. I didn’t really see it until 2005 when I started playing with it. I already knew Ruby at the time. Thankfully I just had picked it up like 3 years before, but like, nobody could really get paid to do Ruby. They just, we all thought it was a cool language. But anyhow, I had this feeling of, “Oh wow. This is going to be a big deal.” Like, Rails is this kind of revolutionary framework and ThoughtWorks was a little bit slow to pick up on it, and so a bunch of us left, and a lot of us either started businesses or joined very small companies, and that’s what I did. I joined a very small company near Chicago and pretty quickly kind of brought Rails into it which, over the next couple years, kind of revolutionized or grew the business quite a bit because of all the demand for that technology. And so by the time I was able to bring my head back up, or you know, get my head back above water and like think about the book it was, I was now in a little bit of a leadership position at the company and so I still wasn’t able to give it as much as I had before and so, eventually I kind of ran out of steam, and at first Ade and I were like, Ade was kind of like the second author I guess you could say, but by the end we were very much like a 50/50, like he was doing… I would say by the end of the book being published, he had contributed at least as much to it as I had, because by the end, like he finished it. He definitely finished it whereas I kinda ran out of steam because of my responsibilities at this company called Obtiva. So, I don’t know how that affected the book, probably made it better because Ade, as much as I read during my early career, Ade is like the most well read person I’ve ever met and is just an incredibly diligent sort of person. So, I’m sure it made it a bit more rigorous by having him kind of polish everything off."
+    },
+
+    {
+      "timestamp": "0:14:51.2",
+      "speaker": "Jason",
+      "text": "You mentioned that you found yourself in more of a leadership type position as the later parts of the book were worked on, or I guess later leg of the book, and I know that in “The Long Road”, or specifically “Stay in the Trenches” is a pattern that’s in there, and I guess, what’s- having been in some of that leadership position- like what are some of the trade offs that people should consider before they go into that leadership position versus staying, I guess further in the trenches?"
+    },
+
+    {
+      "timestamp": "0:15:30.2",
+      "speaker": "Dave Hoover",
+      "text": "Yeah, it’s one of my favorite topics actually because, you know I co-founded that bootcamp back in 2012 and a lot of those students that went through the program are now like 4 or 5 years into their careers, 6 years in some cases. And you know, it’s getting to that point where it’s very easy for some of them to step out of the trenches and you have to, if you want to stay and not that everybody needs to, I mean like, we need leaders, we need executives and you can stay in the trenches and be a leader, of course. But I think you have to be mindful of the timing and opportunity. I got to go to Nigeria recently and visit Andela, this really remarkable company that is in several different African countries, and one of their cofounders is a pretty young guy, a guy from Nigeria and you know, cofounded Andela just 2 years into his career as a software developer, and you know I would never say, “Don’t take advantage of that opportunity.” Because Andela is going to be a kind of a, I think it’s gonna be a very large company and it’s a very unique opportunity for him, so I would never be like, “Oh that’s such a shame that now you’re not going to be a great software developer” or something, because that’s a life altering opportunity. But there’s a lot of people who are like, you know, you have an opportunity to like, “You could be an engineering manager 2 or 3 years into your career.” And that’s not necessarily a bad thing, but you have to understand that it’s not risk free, because by doing that so early in your career you’re losing, you’re going to lose some of what you gained, and if you stay away- I would say if you’re 2 years into your career and then spend 2 or 3 years in management and aren’t really coding you might lose almost all of it to some extent. You’re still going to be able to come back and kind of relearn it to some extent, but like, I really consciously tried to stay in trenches despite a couple different opportunities to kind of move out of it in the first 5 years of my career, simply because I was a little bit older when I started, you know? And like I had some soft skills from my psychology background that made it a little, I don’t know, just gave me that opportunity. But for me, I was like, “No, no, no. I switched careers so I could do this. I don’t want to do something different.” Eventually I did. Like, at Obtiva I was like, “Alright, this is a natural thing. It’s 2007, I’ve been doing this for 7 years, I feel like this is the right time for me to start doing some stuff.” And partially it was just because I wanted to like, one of the opportunites was to build a Rails practice and like, to do that I needed to go and like, actually land gigs and figure out how to work with clients to convince them to use us, and get involved at that type of level. But anyway, this is… The question wasn't about me, it was what people need to think about, and that’s just that, again, it’s not risk free. I think the risk is that you end up 5 years into your career and you’re neither a great programmer, nor a great manager. And you can work you way out of the that, but you have to be deliberate. There’s no other way to say it other than, be deliberate. And people can go down the management track and become amazing executives and amazing leaders or they can… What I’ve done is I go back and forth. I’ll be in leadership and then I’ll like totally abandon that and go heads down again, which is what I’m doing right now. It’s- I really enjoy that kind of diversity of experience of like leading departments or leading a team and then like, having no direct reports and just diving deeply into a new technology and trying to deliver software to people."
+    },
+
+    {
+      "timestamp": "0:19:28.4",
+      "speaker": "Jason",
+      "text": "I can understand the kind of pendulum swing of in the trenches, leading a bit, and then getting back into it. I’m kind of… I’ve done a little bit of it, myself. One last follow up on that is do you, for those who are looking to go into leadership or management, do you have any resources or books you could recommend that help to have… Instill a good culture of apprenticeship within the teams that they lead?"
+    },
+
+    {
+      "timestamp": "0:19:57.9",
+      "speaker": "Dave Hoover",
+      "text": "Yeah, I mean it’s, I mean all the books that I’m going to recommend are pretty old and even when I read them, they were old, when I read them like 15 years ago. I would say that Jerry Weinberg is one of the best authors about the people’s side of technology that’s ever lived. Maybe the best. Certainly the best one that influenced me the most, partially because he has this really fascinating background or like relationship with one of the pillars of actually family therapy, Virginia Satir and she really profoundly influenced him so for me to find him, like as an author was just like, really exciting. Because I had left that career and then I find this guy that he wrote the books called \"[The] Psychology of Computer Programming\" and that book just like, was a book that made me realize, “Oh my goodness. I can actually take what I learned from my previous career and bring it here. It’s not irrelevant.” So, anyway, everything by Jerry Weinberg is, I don’t know, is good, and some of it, you know he’s probably written over 40 books so some of them are going to fit well for people, wherever they happen to be. The 2 that hit me the hardest were \"[The] Psychology of Computer Programming\" and \"Becoming A Technical Leader\". Those are both great books and they’re both like, jeez, I mean \"[The] Psychology of Computer Programming\" is almost 50 years old at this point, and yet I… I mean, it was about people using punch cards and stuff, but I still found it very relevant. One other good on that I really liked was Peopleware by Tom Demarco. That was a really good book, but again, probably kind of dated. Some of the book was about the downsides of cubicles. Today’s version of that would be the downside of open workspaces probably."
+    },
+
+    {
+      "timestamp": "0:22:05.5",
+      "speaker": "Safia",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:22:05.5",
+      "speaker": "All",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:22:07.3",
+      "speaker": "Safia",
+      "text": "So, you mentioned that the Jerry Weinberg’s \"[The] Psychology of Computer Programming\" book’s around 50 years old now. You mentioned that there were some things that resonated with you from that text, is there is a particular lesson or quote that you still carry with you to this day that you’d like to share with listeners?"
+    },
+
+    {
+      "timestamp": "0:22:26.0",
+      "speaker": "Dave Hoover",
+      "text": "I do, I got a little heads up on this question and I went and grabbed my favorite quote."
+    },
+
+    {
+      "timestamp": "0:22:31.1",
+      "speaker": "Safia",
+      "text": "Oh, perfect."
+    },
+
+    {
+      "timestamp": "0:22:32.0",
+      "speaker": "Dave Hoover",
+      "text": "Because being me means I’m always writing down quotes because I love quotes so much. Yeah, my favorite quote from that book is “Anyone who has seen a programmer at work knows that programming itself, if the programmer can choose their own way, is the biggest motivation of programming.” Yeah, and I just, that was like, that was huge for me, because like I read that 2 or 3 years into my career and yeah, the reason why I switched careers was because, that’s what I felt. Programming was so much fun to me that it was it’s own motivation, I just wanted to keep doing it, you know? So, I was like, “Oh, I guess maybe I’m a computer programmer because this is a book about psychology of computer programming and it seems like they’re talking about my psychology.” (laughs) So yeah, I liked that a lot because I really think, even though there’s all sorts of things that we do to get in our own way or, you know like, yeah, just screw up our own motivations, the core of it, of building something that’s so free and has so few limitations on it is just so much fun. And the key phrase in there was “if the programmer can choose their own way,” right? If it’s not dictated to them exactly how they need to do their work and exactly what they have to do, you know? Which is really just the ability to be creative. You don’t really need any extra motivation."
+    },
+
+    {
+      "timestamp": "0:24:07.0",
+      "speaker": "Jen",
+      "text": "So you mentioned before that you’ve kind of jumped back and forth between management and diving into the code."
+    },
+
+    {
+      "timestamp": "0:24:15.8",
+      "speaker": "Dave Hoover",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:24:17.0",
+      "speaker": "Jen",
+      "text": "What patterns do you find yourself going back to again and again?"
+    },
+
+    {
+      "timestamp": "0:24:21.6",
+      "speaker": "Dave Hoover",
+      "text": "“Be the worst” I’ve been able to use, I would say twice pretty effectively. Actually, yeah it’s worked out really well honestly. Going to ThoughtWorks in 2004 was a life changing and career changing opportunity. I had no credentials, I was a self-taught person and I worked really hard during the .com bust years to educate myself and get myself to a place where I could go get a job at a place like ThoughtWorks. So, that pattern really has worked well, and then I did it again in 2016. I left Dev BootCamp that year. We had been acquired a couple of years before and, long story short, I just wanted to go a different way than our acquiring company was taking us, and I dove into cryptocurrencies and specifically into Ethereum technology and it was very daunting to kind of really start completely over. It wasn’t like learning a new programming language where it’s like the same basic stack but you’re just inserting a new programming language into it. It’s like this is a completely new stack and whole different kind of paradigm and all of the design patterns that I knew about, like software design didn’t really translate so it was like, “Oh my goodness, I’m starting all over.” And so I was able to, partially not because of my competence in that field but because of my credentials like, having some success I guess you could say as a programmer, as an entrepreneur, I was able to get into a company called Consensus which was kind of like ThoughtWorks but for Ethereum specifically, and again, I found myself like, you know, raging imposter syndrome, like and that it’s not even a syndrome. I was in, some ways an imposter. Like, I was definitely in over my head once again, this time with more confidence and with more tools  and people, like a better network of people to lean on, so it wasn’t as scary or overwhelming but certainly was the worst when I was at Consensus. So yeah, that “Be the Worst” has been awesome, “Expose your Ignorance” has always been, kind of come somewhat naturally to me. Actually, I shouldn’t say naturally but I was just trained as a therapist to do that and so I’ve just been trained to be somewhat comfortable exposing my ignorance, so that’s always been helpful because I do think it’s one of the fastest ways to learn. There’s one that I haven’t talked about a lot, but it’s called “Expand your Bandwidth” which is really just another way of saying like, there’s certain times when you just have to open the firehose and take in a lot of information, and there’s other times which you know the inverse is that there’s other times you need to kind of close it down and just be really productive and maybe not consume so much information and just output a lot, and that kind of being smart or at least opportunistic about times when to like, consume mass quantities of knowledge versus output lots of software has been helpful. I’m trying to think. I mean, I’m definitely back into learning mode right now and I feel like i’m expanding my bandwidth quite a bit. It’s… I’m a little exhausted today to be honest, from it. But, in a good way."
+    },
+
+    {
+      "timestamp": "0:28:05.2",
+      "speaker": "Adam",
+      "text": "So, going along with “Expose your Ignorance”, what are some things right now that you don’t really understand but maybe want to learn?"
+    },
+
+    {
+      "timestamp": "0:28:13.1",
+      "speaker": "Dave Hoover",
+      "text": "Whoo, this was a tough one a couple weeks ago. Cryptography."
+    },
+
+    {
+      "timestamp": "0:28:19.7",
+      "speaker": "Adam, Jen & Dave",
+      "text": "(laughing)"
+    },
+
+    {
+      "timestamp": "0:28:21.6",
+      "speaker": "Dave Hoover",
+      "text": "Yeah, I was sitting down with one of the people I’m working with and we were talking about different solutions this problem we’re trying to solve, kind of designing the system, and I just had to be open about the fact that like, I really don’t know much about cryptography and like what it’s capable of. He was putting some stuff up on the whiteboard and I was like, I don’t know if it works that way, but honestly I don’t even know how it works. Like, I don’t know what it’s capable of. Well, you know what? I’m going to take a couple of hours and I’m going to like, code things up, and like, not like code novel things but literally just use existing node modules in the crypto- like functions in the crypto node module and like, learn how it works so I could see it for myself. And that was scary because I just left my previous job and this was new thing and I’m the only blockchain engineer in the company, and so here I am exposing the fact that I don’t even know how cryptography works, or like, not even how it works but like, how to even apply it effectively (laughs). So yeah, I took a few hours, figured it out and I was like, “That’s amazing, I didn’t know you could do that.” And you know, I talked to him about it and it turned out he really like the fact that I wanted to see it for myself, I wasn’t going to just take his word for it and just nod my head and be like, “Oh okay. Sounds good.” You know? Or pretend like I knew what I was doing. Boy, that was… I don’t know. It does get easier but it’s never not uncomfortable to do it, in my experience."
+    },
+
+    {
+      "timestamp": "0:30:13.0",
+      "speaker": "Adam",
+      "text": "Okay, who else has a question?"
+    },
+
+    {
+      "timestamp": "0:30:15.0",
+      "speaker": "Safia",
+      "text": "Yeah, I was curious to know, it's been more than a decade since the book has been out, or around a decade since the book has been out, in that time through all the conversations you’ve had with folks, at events, online, elsewhere, was there a question or piece of feedback that you got that was really unexpected about the book in particular?"
+    },
+
+    {
+      "timestamp": "0:30:37.3",
+      "speaker": "Dave Hoover",
+      "text": "It wasn’t a question, I haven’t gotten… I can’t think of any like, really unexpected questions I’ve gotten."
+    },
+
+    {
+      "timestamp": "0:30:44.6",
+      "speaker": "Safia",
+      "text": "It can be a piece of feedback, too. Or a comment."
+    },
+
+    {
+      "timestamp": "0:30:47.2",
+      "speaker": "Dave Hoover",
+      "text": "Yeah, I mean there’s… The biggest thing that I’m more and more conscious of as time goes by, and that is, maybe it’s me changing but I think it’s even more the community that I’m, at least the part of the community that I’m in touch with, and I think it’s just a general overall software development community change is that we’re just, as a community, much more aware of privilege now than we were, or at least that I was, back when I was writing this book. I think it would be interesting to go back through it and examine each pattern and have a little section on its impact as it relates to privilege, or not, for people who are marginalized. I mean, jeez, to be like a 28 year old white guy saying, “Hey, expose your ignorance.” That’s a hell of a lot easier to do it in as that person than it is if you’re not in that demographic, because there’s… I’m just stereotyped as knowing what I’m talking about to some extent, I even look- I mean, just my age was even working to my advantage because I was 28 but I’d only been doing it for 4 years, or 2 years actually, 2 years. So, people even assumed even more that I knew what I was talking about. So, it just wasn’t as risky for me to expose my ignorance or be the worst, or do a lot of these things that are somewhat risky to people who, if they spoke up, all they’re doing is fulfilling a stereotype of not knowing, that people are going to assume that they know less just because of bias. So that’s, especially as I had students, female students, coming out of dev bootcamp, I was very conscious, or just increasingly conscious of that sort of situation; and one student in particular was just an awesome, awesome, strong software development leader, a woman named Lauren Scott, and she’s given some talks on, not explicitly about \"Apprenticeship Patterns\", but about advice that people give, and I think to some extent, kind of given a little bit of her critique to some of these patterns, which I really appreciate. So I think that’s the biggest thing I didn’t see coming. I’m grateful that it has come, to some extent, that we’re talking more openly about sexism, and racism, and privilege than we were, you know 15 years ago. We still have a long way to go, but that’s probably the biggest thing I’d be interested in revisiting or having somebody revisit."
+    },
+
+    {
+      "timestamp": "0:33:41.9",
+      "speaker": "Adam",
+      "text": "Cool, so do you have any book recommendations along those lines of books about privilege or sexism or racism as it relates to technology and programmers and things like that?"
+    },
+
+    {
+      "timestamp": "0:33:53.4",
+      "speaker": "Dave Hoover",
+      "text": "I don’t, I’m trying to think. A lot of my thinking on that developed during my time at Dev Bootcamp when we would give, we would do a lot of training on what we called engineering empathy. So, I got a lot of my education through the curriculum that Dev Bootcamp created and at different times, like trying to actually deliver that curriculum even though [I was] learning those lessons at the same time. That was really difficult, but also enlightening. So, I don’t have any book recommendations, I’m sure there’s some good ones out there, but yeah, everything, most of what I’ve learned on that front has come through experience, my experience at Dev Bootcamp and through my friendships that I’ve developed."
+    },
+
+    {
+      "timestamp": "0:34:41.8",
+      "speaker": "Adam",
+      "text": "Cool. Yeah, the next book we’re reading actually relates to this a little bit, and it’s called \"Technically Wrong\" and it’s about apps and websites that are sexist or racist or-"
+    },
+
+    {
+      "timestamp": "0:34:55.6",
+      "speaker": "Jen",
+      "text": "Technology in general."
+    },
+
+    {
+      "timestamp": "0:34:57.6",
+      "speaker": "Adam",
+      "text": "Just, marginal- Technology in general that just marginalized people that are “edge cases.” So, yeah, I like it so far. Yeah."
+    },
+
+    {
+      "timestamp": "0:35:07.0",
+      "speaker": "Dave Hoover",
+      "text": "Very interesting."
+    },
+
+    {
+      "timestamp": "0:35:08.1",
+      "speaker": "Jen",
+      "text": "So having had this 10 years of experience beyond this and going in and out of leadership and then helping teach the next generation of developers, what would you change about the book?"
+    },
+
+    {
+      "timestamp": "0:35:21.5",
+      "speaker": "Dave Hoover",
+      "text": "Well, other than what I was just talking about, I don’t know if there’s much else I would change. One thing I was really happy with that I got through the negotiation with O’Reilly was they agreed to keep it publicly available for free for people. Like I said, I like that the patterns kind of linked to each other, and so I personally wanted to be able to link directly to the patterns when I was blogging or tweeting or whatever, and so they were really nice to like, keep it out there just so that people could read it. It’s not easy to read a book just like, right on the web, but I was glad that it was out there. As I was- I was going to browse it really quickly before this episode I realized that they’ve taken it down. (laughs) So, I might need to go and talk to them about that."
+    },
+
+    {
+      "timestamp": "0:36:20.5",
+      "speaker": "Jason",
+      "text": "Archive.org saved the day for me."
+    },
+
+    {
+      "timestamp": "0:36:23.1",
+      "speaker": "Dave Hoover",
+      "text": "There it is. There it is. I’m trying to think if there’s anything else I would change. It’d be fun to go back and revisit them and just see if they all still resonate. I just looked back through them briefly and I’m pretty happy with them, honestly. I think “The Long Road” concept is still very true and it’s been interesting for me. I don't think that I’m on that long road. I mean, I have my own road that I’m walking which is this going back and forth, like there’s other people who are more like principal engineers or like fellows, you know? People who are like 100% technical and they have been for decades, that I think is closer to like, the ideal that we were talking about. I think the sweet spot that I’ve found for myself is a bit more of like, somebody who joins early stage companies and can be a strong and technical contributor but then like, grows up with the company and potentially steps away from the code as time goes on, and is in more of a leadership role. We’ll see if that plays out again, but I don’t know, that’s not really answering your question. I guess I’m just talking about myself again."
+    },
+
+    {
+      "timestamp": "0:37:38.8",
+      "speaker": "All",
+      "text": "(laughing)"
+    },
+
+    {
+      "timestamp": "0:37:40.7",
+      "speaker": "Dave Hoover",
+      "text": "But, I don’t know. I don’t think I have a good answer to like, what else would change other than like, going back and examining how the patterns relate to privilege and those people who have been marginalized."
+    },
+
+    {
+      "timestamp": "0:37:56.2",
+      "speaker": "Safia",
+      "text": "So, I’m curious to know, you touched on recognizing privilege which requires a fair bit of empathy and it got me thinking about your background that you mentioned earlier as a psychologist and then a family therapist. How was the transition like for you from family therapy to software engineering and do you feel like you utilize a lot of the concepts you learned in your family therapy days to software engineering?"
+    },
+
+    {
+      "timestamp": "0:38:28.7",
+      "speaker": "Dave Hoover",
+      "text": "So, yeah, I mean, to answer your first question, like how was that transition? It was really unique and interesting. I went from a field of almost all women to a field of almost all men, and like, I wasn’t even conscious of that at the time. I mean, I was definitely conscious that I would go to work when I was a therapist and most of my coworkers were women. Anyway, but the cultures are obviously very different and the work itself is very different, and at first I was like, “Okay, well that’s done. I just spent a lot of time and money educating myself on that, but I don’t know. I’m just going to trust my instincts. I think I’m good at this stuff, it seems like and I’m gonna give it a shot. I really enjoy it.” And so I just tried to leave that behind and just be a programmer and just like, step into that whatever I thought that was supposed to be based on like the movies I’d seen or the people I’d kinda worked with or the 1 or 2 friends that were Computer Science majors. Then I noticed, well the first thing I noticed was in my first job there was a crisis, like a server had gone down or something and people were freaking out, and I had just come from a job where like, I was working with kids. Like, the last- one of my last clients, we worked with really intense cases, he was like on the roof of his house. Like, threatening to like, hurt himself. And like, that’s a crisis. And so, I don’t know, and I mean I was a pretty good crisis counselor in the sense that I could stay calm in pretty intense situations, and so my perspective on actual problems versus technical problems helped me stay calm I would say and just think more clearly when it came time to like, solve problems quickly or triage technical issues. So that'd probably be true for anybody doing any sort of front line work in difficult situations, whether you’re a firefighter or peace corps worker or whatever. Just having that, getting outside that technical bubble that we live in where like, the worst thing that could ever happen is like, a server goes down. (laughs) So that helped. And then, you know, the thing that did kind of wake me up to the fact that like, my skills were going to be able to translate was reading Jerry Weinberg and then realizing… Like, going through my grad school program and reading about Virginia Satir and reading her work and then only like a couple years later reading this like person who I’d thought was like, such a great pioneer in computer programming literally reference Virginia Satir was really exciting for me, because I was like, “Oh my goodness. I could actually bring these theories with me.” That I'd learned. And that was really fun and kinda academic, but eventually it just came down to, you know what? Families are a group of people that are trying to do something together and like, they’re dysfunctional, and so are teams. And there’s just a lot of overlap in team dynamics and family dynamics. They’re definitely very different in certain ways but I just found as I got more into teamwork and eventually into like, leadership and management that the kind of skills that I’d developed as a therapist, especially about listening and putting yourself in someone else’s shoes was really really helpful and has made it, I think for the people that I’ve worked with and the people who’ve worked for me, as something that they appreciate is just, I don’t know, some of my background I guess you could say, and how it plays out in one-on-ones and how I tend to organize teams. What was the other… There was a second part of your question and I don’t know if I answered that yet."
+    },
+
+    {
+      "timestamp": "0:42:31.2",
+      "speaker": "Safia",
+      "text": "Yeah, I think you did. It was just kind of, what are the concepts from your family therapy days that have translated to your software engineering days."
+    },
+
+    {
+      "timestamp": "0:42:39.5",
+      "speaker": "Dave Hoover",
+      "text": "Yeah I mean, yeah. I think I did answer that, probably."
+    },
+
+    {
+      "speaker": ":42.6 **Safia** Yeah, you",
+      "text": ":43.5 **Dave Hoover** "
+    },
+
+    {
+      "timestamp": "0:42:44.2",
+      "speaker": "Adam",
+      "text": "So, one of the questions I found really fascinating in “Study the Classics” is, “What is the oldest computer science related book that you’ve read?” So, I was curious, what’s the oldest book that you’ve read."
+    },
+
+    {
+      "timestamp": "0:42:57.5",
+      "speaker": "Dave Hoover",
+      "text": "Yeah, the oldest, and I talked about it repeatedly already because, yeah, because you guys gave me a heads up on that question, and so I went and looked it up and then I realized it was interestingly the oldest I’ve read is also the book that I think had the biggest impact on me. Which is \"The Psychology of Computer Programming\". That book was written in the ‘60s, it was published in 1971, and yeah. Jerry Weinberg was this hotshot computer consultant, flying out all over the country in 1960s like fixing computers and completing difficult projects. So, yeah that’s pretty old. Actually, now that I think about it, I wonder when The Mythical Man-Month was published."
+    },
+
+    {
+      "timestamp": "0:43:41.2",
+      "speaker": "Adam",
+      "text": "Yeah, I actually wrote down all of the oldest books that I want to read here in this book, and The Mythical Man-Month is 1975."
+    },
+
+    {
+      "timestamp": "0:43:50.3",
+      "speaker": "Dave Hoover",
+      "text": "Okay, yeah. I feel like it’s a little bit, a little bit newer. It was actually published after I was born, just barely. But yeah, that was- I really liked Frederick Brooks. He has that same kind of mentality of like, “When things are working right, it’s bliss.” Like, software development or programming can be kind of blissful. You know, it’s not every day all the time of course, because sometimes it’s hell, but you know, it’s the same thing. I think he also sees it as a very creative thing when it’s at its best."
+    },
+
+    {
+      "timestamp": "0:44:28.6",
+      "speaker": "Adam",
+      "text": "Cool. So, I think that’s about it. Unless anyone else has a question? I think I’ll let Jason ask our final question."
+    },
+
+    {
+      "timestamp": "0:44:37.4",
+      "speaker": "Jason",
+      "text": "So, for either listeners of the show or readers of your book, my question for you Dave, is what action would you like them to take to either help you or help the community in response to getting these or reading these things."
+    },
+
+    {
+      "timestamp": "0:44:53.9",
+      "speaker": "Dave Hoover",
+      "text": "Yeah, they don’t need to help me in any way. I mean, what would make me happy is for people to take their own self-education seriously. I think the thing that gets me fired up, maybe more than anything, is people kind of getting, is them getting fired up about becoming really good at it, and also just learning deeply from the people that have already like, written so many great things down. There’s lots of different ways to learn and some people are going to learn differently than others, obviously, and I am quite a reader, but it’s not for everybody. But there is so much knowledge that is out there and it’s so valuable and we don't’ have to learn from our mistakes all the time, we can learn from other people’s mistakes. So, I hope that… In some ways I’m really glad my book is short, (laughs) because I want them to like, get through it and maybe even only read part of it and find the patterns that work for them and then go like, use them. Whether that’s making sure that like, they’re gonna keep being their passion for the craft, even if their job kind of sucks right now, or they’re like, digging into some new topics that’s going to open up new doors for them in the future. I don’t know, I just want people to be passionate about what they’re doing, and I know that’s a privilege, but that’s my hope."
+    },
+
+    {
+      "timestamp": "0:46:26.5",
+      "speaker": "Adam",
+      "text": "Awesome, well thank you so much for writing the book and thanks so much for coming on the show."
+    },
+
+    {
+      "timestamp": "0:46:32.0",
+      "speaker": "Dave Hoover",
+      "text": "Thanks for having me."
+    },
+
+    {
+      "timestamp": "0:46:34.7",
+      "speaker": "Adam",
+      "text": "Thank you so much for listening. And by the way, you can follow Dave on Twitter @DaveHoover and you can follow Ade at @Ade_Oshineye and also there’s a twitter account for the book, that’s @ApprenticeshipP and that’s the last week we’ll be talking about this book, so that means it’s about time to actually give away the 5 signed copies of the book that we have. If you haven’t signed up for the giveaway, go do that now. We have 5 copies so you actually have a pretty good chance of winning one. Just head over to orbit.fm/bookbytes/giveaway\n\nAnd one of the people that entered the giveaway and left a review on iTunes in George. He said:\n\n“I’ve listened to the first 3 episodes so far and I’m really enjoying it. Great idea for a podcast, and a great opportunity to hear the voices and opinions of developers working today.”\n\nWe really appreciate all the great feedback and reviews we’ve been getting. You’ll have until April 30th to enter to win this book, and next week we’ll have our enter episode for the next book. We’re going to be talking about \"Technically Wrong\" by Sarah Wachter-Boettcher, and I’m super pumped about this one. We’ll talk about it for 2 episodes and then we’ll chat with the author. We’ll also be doing a giveaway for that book as well, so if you enter to win now, you’ll be entered to win for the next giveaway, as well.\n\nYou can follow the show on twitter @BookBytesFm and you can find the show notes and transcription for the episode, as always, at orbit.fm/BookBytes/5.\n\nSee you next time."
+    },
+
+  "transcript": [
+    {
+      "text": "(Exit music: Electro Swing)"
+    }
+  ]
+}
