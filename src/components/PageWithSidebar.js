@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "react-emotion";
-import { Helmet } from "react-helmet";
-import SidePanel from "./SidePanel";
-import * as COLORS from "../constants/colors";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import {Helmet} from 'react-helmet';
+import SidePanel from './SidePanel';
+import * as COLORS from '../constants/colors';
 
 const Container = styled.div`
   display: grid;
@@ -17,10 +17,10 @@ const Color = styled.div`
   background: ${props => props.color};
 `;
 Color.propTypes = {
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
 };
 Color.defaultProps = {
-  color: COLORS.BRAND
+  color: COLORS.BRAND,
 };
 
 const BannerContainer = styled.div`
@@ -29,10 +29,10 @@ const BannerContainer = styled.div`
   color: white;
 `;
 BannerContainer.propTypes = {
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
 };
 BannerContainer.defaultProps = {
-  color: COLORS.BRAND
+  color: COLORS.BRAND,
 };
 
 const SideContainer = styled.div`
@@ -58,7 +58,7 @@ const PageWithSidebar = ({
   title,
   description,
   episode,
-  headTitle
+  headTitle,
 }) => (
   <Container>
     {headTitle ? <Helmet title={`${headTitle} - Orbit FM`} /> : null}
@@ -82,14 +82,14 @@ PageWithSidebar.propTypes = {
   color: PropTypes.string.isRequired,
   title: PropTypes.oneOfType([
     PropTypes.string.isRequired,
-    PropTypes.node.isRequired
+    PropTypes.node.isRequired,
   ]),
   description: PropTypes.string.isRequired,
-  headTitle: PropTypes.string
+  headTitle: PropTypes.string,
 };
 
 PageWithSidebar.propTypes = {
-  color: COLORS.BRAND
+  color: PropTypes.string.isRequired,
 };
 
 export default PageWithSidebar;
