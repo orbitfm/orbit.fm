@@ -13,7 +13,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So what is Gatsby?"
     },
 
@@ -23,7 +23,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool. So, how did you get the idea for Gatsby?"
     },
 
@@ -33,7 +33,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool, so what is the tech behind Gatsby? You mentioned React. What else?"
     },
 
@@ -43,7 +43,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "And then, it also has Redux and graphQL, right? "
     },
 
@@ -53,7 +53,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool. Alright. So, who is Gatsby for? Who you want to be using this. What kind of stuff can you build with Gatsby?"
     },
 
@@ -78,7 +78,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, because you're just building it in React"
     },
 
@@ -98,7 +98,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Okay, so why is Gatsby so fast."
     },
 
@@ -113,7 +113,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah so I thought Jekyll was super fast because it's static, but then Gatsby takes us to another level."
     },
 
@@ -128,7 +128,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Don't you have another project that helps make websites faster with web fonts?"
     },
 
@@ -138,7 +138,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I had no idea. I thought it's just getting it from somewhere so why is it why is it slower from Google?"
     },
 
@@ -148,7 +148,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So you mentioned you can get data from external APIs and then you are going to generate static sites locally instead of on the server and push up those static files. What happens when that data changes from the time you build it to the time a user visits the site. Do they get the old data and then it flickers for a second and gets the new data"
     },
 
@@ -158,7 +158,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, if you build a Gatsby site and then someone makes a change on the CMS, maybe they're using WordPress as a CMS, the site will not be updated until you build Gatsby again."
     },
 
@@ -168,7 +168,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Have people come up with a way to automate that?"
     },
 
@@ -178,7 +178,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Okay and a cron job we just run a certain interval, like every night or something?"
     },
 
@@ -188,7 +188,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and then you probably get an email if something didn't build right."
     },
 
@@ -198,7 +198,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Awesome, so one question I'm really interested in is that a year ago you announced you're working on Gatsby full-time. And so how do you make money? If you don't mind."
     },
 
@@ -208,7 +208,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Because, I think it seems like you're kind of living the dream. You were like , \"I'm just going to quit my job and do this open source project"
     },
 
@@ -218,7 +218,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So how much learning is involved with Gatsby? To get going with Gatsby? Say so you don't know React. Is React all you need to know or what else?"
     },
 
@@ -228,7 +228,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Okay, how much of the Gatsby API do you need to know?"
     },
 
@@ -238,7 +238,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, so was looking through the posts on the Gatsby blog about how to get started making a Gatsby blog and a lot of it is just installing Gatsby plugins, but it still seems fairly intensive as far as install all of these and then here's all this boilerplate code to wire it all up."
     },
 
@@ -248,7 +248,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I think it's also kind of cool because even though it is boilerplate it describes exactly what your site is doing and you can change it."
     },
 
@@ -258,7 +258,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "It's not it's not super opinionated. It doesn't say how you have to name your files or where you put files or how things go or what a post is or what a pages is, you know? You can do whatever."
     },
 
@@ -268,7 +268,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool, so you said you can pull data from APIs, but you can also just have local data and then you've got your pages and posts. So describe queries. How do you get... How do you use that data?"
     },
 
@@ -278,7 +278,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Is it all done with JavaScript?"
     },
 
@@ -288,7 +288,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "ImageMagick or something?"
     },
 
@@ -298,7 +298,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, because that would just pull it into parts you need."
     },
 
@@ -308,7 +308,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So if you're like \"Oh, I need a list of all the authors, you can do it. Tags for for the pages, tags that are within those pages or pages there are within those tags. Some stuff that can be really hard with a static site generator."
     },
 
@@ -318,7 +318,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "You just come up with an idea of what you want to query for and then you got it."
     },
 
@@ -328,7 +328,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "And they're assuming the kind of data that you want. They let you put some custom markdown [front matter] and stuff, but querying it's not that easy."
     },
 
@@ -338,7 +338,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Are there other types of plugins besides source transform?"
     },
 
@@ -348,7 +348,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool, so when you decided to make Gatsby, how hard was it? And how did you figure it out? And did you think you would be able to do it?"
     },
 
@@ -358,7 +358,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I think for me, I wouldn't think, is it doable, but can <i>I</i> do it."
     },
 
@@ -368,7 +368,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So when you started this, did you have a full-time job and you were just doing it on side?"
     },
 
@@ -378,7 +378,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "I noticed something else really cool about Gatsby, is if you turn off JavaScript, it still works. At least the initial page loads and all the links work. It just does a full network request. That's pretty cool."
     },
 
@@ -388,7 +388,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Are you familiar with next.js?"
     },
 
@@ -398,7 +398,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Do you have a comparison between next and Gatsby?"
     },
 
@@ -408,7 +408,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "No, that's nothing."
     },
 
@@ -418,7 +418,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Is it prefetching data?"
     },
 
@@ -428,7 +428,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "It knows what links are in the page and gets the data for those?"
     },
 
@@ -438,7 +438,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool. So one thing I love about Gatsby is how you've got your pages directory, and then inside of there, you can just make a folder for each post or page and then that way for normal markdown posts, your images are right there next to the post. But then also, instead of doing markdown you can do a JavaScript file. I mean you could just have a live demo inside the post. Pull in a component or whatever."
     },
 
@@ -448,7 +448,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Why is it called Gatsby?"
     },
 
@@ -458,7 +458,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Just not that one, apparently?"
     },
 
@@ -468,7 +468,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "It's a good movie though."
     },
 
@@ -478,7 +478,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Awesome is there anything else you wanted to say?"
     },
 
@@ -488,7 +488,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, didn't you have 13 contributors on this v1?"
     },
 
@@ -498,7 +498,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Oh, maybe I'm thinking of 1.3."
     },
 
@@ -508,7 +508,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Do you have helpful links or how to get started contributing or easy pull requests to get started on or anything that?"
     },
 
@@ -518,7 +518,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So the plugins and example sites. Would those be a part of the Gatsby org, or just your own repo that you make."
     },
 
@@ -528,7 +528,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool. I'll put a link to that in the show notes."
     },
 
@@ -538,7 +538,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Alright, well thank you so much for coming on the show."
     },
 
@@ -548,7 +548,7 @@
     },
 
     {
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, it was fun."
     }
   ]

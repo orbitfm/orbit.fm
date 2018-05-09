@@ -7,152 +7,152 @@
     },
     {
       "timestamp": "0:00:14.2",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Welcome to BookBytes. This is the first episode where we’ll be talking about “Technically Wrong.” I’m Adam Garrett-Harris."
     },
     {
       "timestamp": "0:00:21.4",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "I’m Jennifer Luker."
     },
     {
       "timestamp": "0:00:22.5",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "I’m Safia."
     },
     {
       "timestamp": "0:00:23.8",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "I’m Jason Staten."
     },
     {
       "timestamp": "0:00:25.3",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Alright, so Safia, you have some news, recent news since last time, right?"
     },
     {
       "timestamp": "0:00:30.5",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yes, I do. I am excited to announce that a very special company has decided to take one for the entire tech industry and hire me. For those who have been following me on Twitter or maybe who have sensed anxiety and nervousness in my voice over the past couple of episodes, I’ve been interviewing and searching for my first post-college full-time job for the past… Since the fall pretty much, so almost about 6 months now, and I finally accepted a job offer at a company here in Chicago. I’ll be joining them as a software engineer doing probably a little bit of everything but mostly in the realm of the front, working with React. I’m super excited not only to be joining the company but just to be done with the job search process. It is so difficult and exhausting and emotionally wrecking. It’s great to kind of finally be done with all of that and looking forward to start working at a company where I can hopefully learn a ton and contribute a lot."
     },
     {
       "timestamp": "0:01:42.5",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "Congrats, Safia."
     },
     {
       "timestamp": "0:01:43.6",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Thanks, Jason."
     },
     {
       "timestamp": "0:01:44.4",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "I... You’ll definitely get a chance there to do some of the apprenticeship patterns that we studied last time."
     },
     {
       "timestamp": "0:01:51.2",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yeah, for sure."
     },
     {
       "timestamp": "0:01:52.8",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I’m excited to hear more about how that goes for you."
     },
     {
       "timestamp": "0:01:55.4",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yes, I start in 2 months from now, a little less than 2 months, so it’s the final countdown."
     },
     {
       "timestamp": "0:02:02.4",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "So, who is it we get to thank for taking one for the entire tech industry?"
     },
     {
       "timestamp": "0:02:06.3",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "(laughs) The company is called Tock, T-O-C-K, they’re a company based here in Chicago, if you want to learn more about them the website’s just tock.com and there’ll be plenty to read here. It is a company working in the food and restaurant industry so I’ll get a lot of good food out of it hopefully, in addition to learning a ton and working with cool people, so yeah."
     },
     {
       "timestamp": "0:02:35.4",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool, and what is this book that I heard about?"
     },
     {
       "timestamp": "0:02:37.9",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Oh! I wrote a book, randomly. Oh my gosh, this is turning into “Catch up with Safia hour.”"
     },
     {
       "timestamp": "0:02:48.3",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
     {
       "timestamp": "0:02:49.2",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "I’d say since probably like late October I’ve been working on a book called “Exits” which is a collection of short fiction stories, and I’ve just been working on it and editing it over the past couple of months and I finally published it earlier this week. By the time you folks listen to this podcast it’ll probably be out in like Kindle and paperback and Google Play and a couple of other places. I actually self-published it because I’ve never written a book before and I don’t think anyone would take me seriously if I went around pitching to publishing houses. But it definitely gave me a lot of perspective into the process of like, getting a book out there and marketing it and also writing it, and the amount of effort that it takes which gives me the ability to empathize a lot with some of the authors we’re gonna be reading and interviewing because mjy book wasn’t even that long. It’s like an hour and 15 minutes to read, but it took me almost like 5 months to write, so…"
     },
     {
       "timestamp": "0:03:49.8",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, now I know why you were asking Dave about the writing process."
     },
     {
       "timestamp": "0:03:53.3",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yes, I’ve been very interested in how different people write since I’ve been working on the book, so that’s why I honed in on it."
     },
     {
       "timestamp": "0:04:01.5",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "Well congratulations."
     },
     {
       "timestamp": "0:04:03.1",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Thanks."
     },
     {
       "timestamp": "0:04:04.7",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Alright, so we read “Technically Wrong” by Sara Wachter-Boettcher and the subtitle is “Sexist apps, biased algorithms and other threats of toxic tech.” So, really quick, what did y’all think of this?"
     },
     {
       "timestamp": "0:04:17.3",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "I knew, as a woman who’s been in this industry for a really long time, that there is sexist bias and racial bias, but this pointed it out in more ways than I had even considered."
     },
     {
       "timestamp": "0:04:32.5",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yeah, there were a couple of things that surprised me while reading this book It’s very anecdotal so there’s like a lot of examples and stories which is kind of great. The one thing that really stuck out with this book for is the fact that it’s pretty new. It was published, I think, about 2 years ago, so a lot of the stories that were mentioned and the, you know, anecdotes are things that actually occured during my experience, or during my time in tech so it made them super relevant; and it was also interesting to see like people I knew referenced in the book. It was a kind of a cool, but a weird feeling to realize that, you know, all of the things that we’re building, the tech industry and the mistakes that are made, and the harm that is done in addition to the benefits and the good thing are part of a history that’s going to be like, written down and codified and looked back on."
     },
     {
       "timestamp": "0:05:28.8",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, there were a lot of things that surprised me about it because I, as a white- straight, white male, I don’t see a lot of these things. I saw a lot of reviews where some people said they didn’t learn anything new because they’ve experienced all of these things, so it’s interesting to hear that y’all, as women, did learn new things from this."
     },
     {
       "timestamp": "0:05:49.7",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yeah. I think the most important like, dimension of learning for me, as a very young person, was a lot of the call outs that she made around the tech industry kind of favoring people of a younger age and some of the things that are done that isolate individuals who are older. There were a couple of things that she mentioned tech culture that I highlighted and I was like, “Oh gosh, I’ve like, done that before and I didn’t realize that it was an action that was alienating older individuals.”"
     },
     {
       "timestamp": "0:06:24.9",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "What about you, Jason?"
     },
     {
       "timestamp": "0:06:26.4",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "Definitely an enlightening read. I, along with you adam, am a straight, white male and so, not all of these things are things that I actively think about, but I think that the book’s specific call outs, especially about some events that I’ve seen more recently in the news, just have made me a bit more aware of it and the way that I first approach both culture at the company that I work at, but also considering the product that I’m building as well, in how it can be used but then also more stress scenarios that it could be used in as well, that I may not be actively thinking about when building things."
     },
     {
       "timestamp": "0:07:12.8",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, stay tuned for next time when we talk about this more in depth over the next couple of weeks, next couple of episodes, and we’ll be talking with the author, Sara, as well. Also, we’re doing a giveaway of this book where we have 5 signed copies, so once again that will be at orbit.fm/bookbytes/giveaway."
     },
     {

@@ -8,43 +8,43 @@
 
     {
       "timestamp": "0:00:14.1",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Welcome to BookBytes, episode 5. I’m Adam Garrett-Harris, and as usual my co-hosts are Safia Abdalla, you can go ahead and say hi."
     },
 
     {
       "timestamp": "0:00:21.4",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Hey!"
     },
 
     {
       "timestamp": "0:00:21.3",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Jen Luker."
     },
 
     {
       "timestamp": "0:00:23.4",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "Hello."
     },
 
     {
       "timestamp": "0:00:24.1",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "And Jason Staten."
     },
 
     {
       "timestamp": "0:00:25.0",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "Hi."
     },
 
     {
       "timestamp": "0:00:26.1",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, we’ve been reading and talking about a book called \"Apprenticeship Patterns\" for the past few episodes and today we have a special guest, Dave Hoover who is the co-author of that book. So, welcome to the show."
     },
 
@@ -56,7 +56,7 @@
 
     {
       "timestamp": "0:00:39.9",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, tell us a little bit about your background."
     },
 
@@ -68,7 +68,7 @@
 
     {
       "timestamp": "0:01:37.5",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "So, what inspired \"Apprenticeship Patterns\"?"
     },
 
@@ -85,7 +85,7 @@
 
     {
       "timestamp": "0:05:08.0",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "So, that actually lends really well into the next question. You talked a little bit about, you know, writing on your own blog, being inspired by different books and other blogs that you were reading as part of the research you put into creating the initial Wiki and then you got reached out to by O’Reilly to write a book, what was the process like with respect to evolving the content you’d produced in the Wiki into a formal, professionally edited, professionally published book?"
     },
 
@@ -97,7 +97,7 @@
 
     {
       "timestamp": "0:09:27.0",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Mm-hmm (affirmative)."
     },
 
@@ -109,7 +109,7 @@
 
     {
       "timestamp": "0:09:32.7",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yeah."
     },
 
@@ -121,7 +121,7 @@
 
     {
       "timestamp": "0:09:34.1",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "So, it seems like the book really evolved organically and collaboratively between your own efforts and the network of peers you had at ThoughtWorks and other places at the time."
     },
 
@@ -133,7 +133,7 @@
 
     {
       "timestamp": "0:10:37.5",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, you said you read that architectural book, A Pattern Language?"
     },
 
@@ -145,7 +145,7 @@
 
     {
       "timestamp": "0:10:42.7",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, I’ve heard that mentioned a lot when pattern languages are brought up, but I’m curious why you actually read that book?"
     },
 
@@ -157,13 +157,13 @@
 
     {
       "timestamp": "0:12:19.2",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Nice. Jason, do you have a question?"
     },
 
     {
       "timestamp": "0:12:22.0",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "I did have one about the break that you took when Rails came on the scene. How do you think that that the affected the book for you? I mean, on the outcome of it."
     },
 
@@ -175,7 +175,7 @@
 
     {
       "timestamp": "0:14:51.2",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "You mentioned that you found yourself in more of a leadership type position as the later parts of the book were worked on, or I guess later leg of the book, and I know that in “The Long Road”, or specifically “Stay in the Trenches” is a pattern that’s in there, and I guess, what’s- having been in some of that leadership position- like what are some of the trade offs that people should consider before they go into that leadership position versus staying, I guess further in the trenches?"
     },
 
@@ -187,7 +187,7 @@
 
     {
       "timestamp": "0:19:28.4",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "I can understand the kind of pendulum swing of in the trenches, leading a bit, and then getting back into it. I’m kind of… I’ve done a little bit of it, myself. One last follow up on that is do you, for those who are looking to go into leadership or management, do you have any resources or books you could recommend that help to have… Instill a good culture of apprenticeship within the teams that they lead?"
     },
 
@@ -199,7 +199,7 @@
 
     {
       "timestamp": "0:22:05.5",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yeah."
     },
 
@@ -211,7 +211,7 @@
 
     {
       "timestamp": "0:22:07.3",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "So, you mentioned that the Jerry Weinberg’s \"[The] Psychology of Computer Programming\" book’s around 50 years old now. You mentioned that there were some things that resonated with you from that text, is there is a particular lesson or quote that you still carry with you to this day that you’d like to share with listeners?"
     },
 
@@ -223,7 +223,7 @@
 
     {
       "timestamp": "0:22:31.1",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Oh, perfect."
     },
 
@@ -235,7 +235,7 @@
 
     {
       "timestamp": "0:24:07.0",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "So you mentioned before that you’ve kind of jumped back and forth between management and diving into the code."
     },
 
@@ -247,7 +247,7 @@
 
     {
       "timestamp": "0:24:17.0",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "What patterns do you find yourself going back to again and again?"
     },
 
@@ -259,7 +259,7 @@
 
     {
       "timestamp": "0:28:05.2",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, going along with “Expose your Ignorance”, what are some things right now that you don’t really understand but maybe want to learn?"
     },
 
@@ -283,13 +283,13 @@
 
     {
       "timestamp": "0:30:13.0",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Okay, who else has a question?"
     },
 
     {
       "timestamp": "0:30:15.0",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yeah, I was curious to know, it's been more than a decade since the book has been out, or around a decade since the book has been out, in that time through all the conversations you’ve had with folks, at events, online, elsewhere, was there a question or piece of feedback that you got that was really unexpected about the book in particular?"
     },
 
@@ -301,7 +301,7 @@
 
     {
       "timestamp": "0:30:44.6",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "It can be a piece of feedback, too. Or a comment."
     },
 
@@ -313,7 +313,7 @@
 
     {
       "timestamp": "0:33:41.9",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool, so do you have any book recommendations along those lines of books about privilege or sexism or racism as it relates to technology and programmers and things like that?"
     },
 
@@ -325,19 +325,19 @@
 
     {
       "timestamp": "0:34:41.8",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool. Yeah, the next book we’re reading actually relates to this a little bit, and it’s called \"Technically Wrong\" and it’s about apps and websites that are sexist or racist or-"
     },
 
     {
       "timestamp": "0:34:55.6",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "Technology in general."
     },
 
     {
       "timestamp": "0:34:57.6",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Just, marginal- Technology in general that just marginalized people that are “edge cases.” So, yeah, I like it so far. Yeah."
     },
 
@@ -349,7 +349,7 @@
 
     {
       "timestamp": "0:35:08.1",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "So having had this 10 years of experience beyond this and going in and out of leadership and then helping teach the next generation of developers, what would you change about the book?"
     },
 
@@ -361,7 +361,7 @@
 
     {
       "timestamp": "0:36:20.5",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "Archive.org saved the day for me."
     },
 
@@ -385,7 +385,7 @@
 
     {
       "timestamp": "0:37:56.2",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "So, I’m curious to know, you touched on recognizing privilege which requires a fair bit of empathy and it got me thinking about your background that you mentioned earlier as a psychologist and then a family therapist. How was the transition like for you from family therapy to software engineering and do you feel like you utilize a lot of the concepts you learned in your family therapy days to software engineering?"
     },
 
@@ -397,7 +397,7 @@
 
     {
       "timestamp": "0:42:31.2",
-      "speaker": "Safia",
+      "speaker": "Safia Abdalla",
       "text": "Yeah, I think you did. It was just kind of, what are the concepts from your family therapy days that have translated to your software engineering days."
     },
 
@@ -414,7 +414,7 @@
 
     {
       "timestamp": "0:42:44.2",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "So, one of the questions I found really fascinating in “Study the Classics” is, “What is the oldest computer science related book that you’ve read?” So, I was curious, what’s the oldest book that you’ve read."
     },
 
@@ -426,7 +426,7 @@
 
     {
       "timestamp": "0:43:41.2",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I actually wrote down all of the oldest books that I want to read here in this book, and The Mythical Man-Month is 1975."
     },
 
@@ -438,13 +438,13 @@
 
     {
       "timestamp": "0:44:28.6",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Cool. So, I think that’s about it. Unless anyone else has a question? I think I’ll let Jason ask our final question."
     },
 
     {
       "timestamp": "0:44:37.4",
-      "speaker": "Jason",
+      "speaker": "Jason Staten",
       "text": "So, for either listeners of the show or readers of your book, my question for you Dave, is what action would you like them to take to either help you or help the community in response to getting these or reading these things."
     },
 
@@ -456,7 +456,7 @@
 
     {
       "timestamp": "0:46:26.5",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Awesome, well thank you so much for writing the book and thanks so much for coming on the show."
     },
 
@@ -468,7 +468,7 @@
 
     {
       "timestamp": "0:46:34.7",
-      "speaker": "Adam",
+      "speaker": "Adam Garrett-Harris",
       "text": "Thank you so much for listening. And by the way, you can follow Dave on Twitter @DaveHoover and you can follow Ade at @Ade_Oshineye and also there’s a twitter account for the book, that’s @ApprenticeshipP and that’s the last week we’ll be talking about this book, so that means it’s about time to actually give away the 5 signed copies of the book that we have. If you haven’t signed up for the giveaway, go do that now. We have 5 copies so you actually have a pretty good chance of winning one. Just head over to orbit.fm/bookbytes/giveaway\n\nAnd one of the people that entered the giveaway and left a review on iTunes in George. He said:\n\n“I’ve listened to the first 3 episodes so far and I’m really enjoying it. Great idea for a podcast, and a great opportunity to hear the voices and opinions of developers working today.”\n\nWe really appreciate all the great feedback and reviews we’ve been getting. You’ll have until April 30th to enter to win this book, and next week we’ll have our enter episode for the next book. We’re going to be talking about \"Technically Wrong\" by Sarah Wachter-Boettcher, and I’m super pumped about this one. We’ll talk about it for 2 episodes and then we’ll chat with the author. We’ll also be doing a giveaway for that book as well, so if you enter to win now, you’ll be entered to win for the next giveaway, as well.\n\nYou can follow the show on twitter @BookBytesFm and you can find the show notes and transcription for the episode, as always, at orbit.fm/BookBytes/5.\n\nSee you next time."
     },
 
