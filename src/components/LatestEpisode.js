@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "gatsby-link";
-import styled from "react-emotion";
-import humanizeList from "humanize-list";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
+import styled from 'react-emotion';
+import humanizeList from 'humanize-list';
 
 const Image = styled.div`
   margin-top: -150px;
@@ -18,7 +18,7 @@ const LatestEpisode = ({
   shortDescription,
   podcastName,
   podcastHosts,
-  podcastPath
+  podcastPath,
 }) => (
   <div>
     {imageUrl && (
@@ -26,14 +26,14 @@ const LatestEpisode = ({
         <img src={imageUrl} />
       </Image>
     )}
-    <p>Latest Episode</p>
+    <h2>Latest Episode</h2>
     <p>
       <Link to={podcastPath}>{podcastName}</Link>
     </p>
     <p>
       <Link to={path}>{name}</Link>
     </p>
-    <p>Hosted by {humanizeList(podcastHosts, { oxfordComma: true })}</p>
+    <p>Hosted by {humanizeList(podcastHosts, {oxfordComma: true})}</p>
     <p>{shortDescription}</p>
   </div>
 );
@@ -45,7 +45,7 @@ LatestEpisode.propTypes = {
   shortDescription: PropTypes.string.isRequired,
   podcastName: PropTypes.string.isRequired,
   podcastHosts: PropTypes.arrayOf(PropTypes.string).isRequired,
-  podcastPath: PropTypes.string.isRequired
+  podcastPath: PropTypes.string.isRequired,
 };
 
 export default LatestEpisode;

@@ -1,9 +1,9 @@
-import React from "react";
-import PageWithSidebar from "../components/PageWithSidebar";
-import LatestEpisode from "../components/LatestEpisode";
-import EpisodeListing from "../components/EpisodeListing";
+import React from 'react';
+import PageWithSidebar from '../components/PageWithSidebar';
+import LatestEpisode from '../components/LatestEpisode';
+import EpisodeListing from '../components/EpisodeListing';
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({data}) => {
   const episodes = data.allContentfulPodcast.edges
     .reduce((a, e) => [...a, ...e.node.episode], [])
     .sort((a, b) => {
@@ -37,6 +37,7 @@ const IndexPage = ({ data }) => {
         />
       }
     >
+      <h2>Other Episodes</h2>
       {otherEpisodes
         .slice(0, 10)
         .map(episode => (
