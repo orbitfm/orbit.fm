@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'gatsby-link';
 import PageWithSidebar from '../components/PageWithSidebar';
 import LatestEpisode from '../components/LatestEpisode';
 import EpisodeListing from '../components/EpisodeListing';
@@ -55,6 +56,7 @@ const IndexPage = ({data}) => {
             key={episode.id}
           />
         ))}
+      <Link to="shows">View all shows</Link>
     </PageWithSidebar>
   );
 };
