@@ -8,7 +8,7 @@
     },
 
     {
-      "speaker": "Kyle Mathews",
+      "speaker": "Kyle Matthews",
       "text": "Hey everyone!"
     },
 
@@ -18,7 +18,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Gatsby is a blazing fast React static site generator and it aims to give you a really nice out-of-the-box experience where everything is set up for you: React, Webpack, different CSS options, modern JavaScript etc. And you can build really fast sites without a lot of effort on your part."
     },
 
@@ -28,7 +28,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Basically, so I started using React pretty early so it was open source like mid 2013 and it got on my radar then and I was working at a job in San Francisco, a startup, building JavaScript web applications with Backbone and I really liked in a lot of ways, but it had a lot of weird sharp edges / missing things and React just came along I was like \"This is so beautiful, the component model.\" Because I mean components is an old idea. React didn't invent the idea of components. I mean backbone components existed, but they were kind of just missing a lot of stuff. Anyway, so React component was just like so beautiful.\n\nAnd so anyway, I start following that and I quit that job like early 2014 and just started doing a bunch of stuff with React was like this is the future that's what I want to learn and do everything with and then mid-ish 2014 a friend and I we started working on startup. So I worked on that for a while and it was building our web application with react of course and then early 2015 it was getting to a point we were like \"Ok, we kind of know what we're doing. We have the application sort of working like start to go public pretty soon and of course need website and I was like \"Okay, I haven't build like a website website in a while. How do people do that these days?\" And I was looking around I was like \"Oh man. I hate all these things because I'd use like Drupal and WordPress and built my own little static site generator in the past. I was like \"These are all terrible. I want to use React components and Webpack and all these other really nice modern tools. There was other people thinking about the same thing at the time and I just thought about it a bunch and I figured out a clever way to pull all those together. And so that was the first version of Gatsby that I built just for my startup's website.\n\nAnd then I open source that and then a lot of other people got interested and it just kind of snowballed from there"
     },
 
@@ -38,7 +38,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "So, the goal of Gatsby is to use industry standard stuff with the idea being that if you're a React web application developer you can install and use Gatsby and it feels completely natural. That's what I wanted. I mean, I'd already learned Webpack, and React, how to use those two together, and loaders and so forth for the applications I had been building. So that's what I wanted from Gatsby. So, it uses React and then Webpack for module bundling, and then normal standard loaders and so forth. So if you build a React, Webpack, Babel web app then using Gatsby should feel pretty..."
     },
 
@@ -48,7 +48,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah so the latest version of Gatsby, it adds Redux, but that's just for managing internal state. While using Gatsby you shouldn't see Redux at all. And yeah, graphQL is also new addition to the new major version of Gatsby that was released recently and graphQL is used very much like Relay or Apollo, those kind of clients for building stuff on the web. It works pretty similar that on React page components in Gatsby you can have a query which says, for this page, for this blog index page, or for this product overview page, here's the query it describes the data that is needed for that page. And then Gatsby makes sure while you're developing and in production that when that page gets rendered that data that you query for is there."
     },
 
@@ -58,23 +58,18 @@
     },
 
     {
-      "speaker": "Kyle",
-      "text": "Yeah so, the first version of Gatsby is kind of intended for... Basically my mindset was: hey React developers who also want to build websites. So you want to have a static render of everything. You have your different React pages and you can throw in some markdown as well. And you just want to have a static render of that so that it loads faster. That was kind of the main use case that I had in mind for the first version of Gatsby, but Gatsby v1 is much more ambitious, the latest version, in that it adds the ability to pull data from remote api's and this is really important because most websites in the world are powered by content management systems and the reason for that is it's not just one or two developers who are cranking out the site. There's lots of course, but the vast majority websites in the world are big complex operations with dozens or even hundreds of people who all have their hands on all sorts of different pieces of it and they need specialized tools for managing the content, which we know is content management systems. And so for any website building tool to actually make it outside of the little niche of programmers you need the ability to integrate with content management systems and so that's one of the major focuses of Gatsby v1, to be able to do that. Which has already paid of because I've seen there's number of agencies that are working on Gatsby WordPress sites where they're using WordPress as a CMS and then building the actual site in Gatsby. So they get the advantage of modern JavaScript and CSS and the React component model, but they still have the familiar WordPress ecosystem to set up the actual content editing experience for their clients. And they've been really happy with that.  There's also a lot of new startups offering CMS's that are headless basically, where all they are is the content editing part and an API. WordPress is that piece plus everything around actually building and running the website and those work really well with Gatsby because they just they concentrate on having a really nice interface for creating editing content and then Gatsby has a really nice tool set for building really fast websites"
+      "speaker": "Kyle Matthews",
+      "text": "Yeah so, the first version of Gatsby is kind of intended for... Basically my mindset was: hey React developers who also want to build websites. So you want to have a static render of everything. You have your different React pages and you can throw in some markdown as well. And you just want to have a static render of that so that it loads faster. That was kind of the main use case that I had in mind for the first version of Gatsby, but Gatsby v1 is much more ambitious, the latest version, in that it adds the ability to pull data from remote api's and this is really important because most websites in the world are powered by content management systems and the reason for that is it's not just one or two developers who are cranking out the site. There's lots of course, but the vast majority websites in the world are big complex operations with dozens or even hundreds of people who all have their hands on all sorts of different pieces of it and they need specialized tools for managing the content, which we know is content management systems. And so for any website building tool to actually make it outside of the little niche of programmers you need the ability to integrate with content management systems and so that's one of the major focuses of Gatsby v1, to be able to do that. Which has already paid of because I've seen there's number of agencies that are working on Gatsby WordPress sites where they're using WordPress as a CMS and then building the actual site in Gatsby. So they get the advantage of modern JavaScript and CSS and the React component model, but they still have the familiar WordPress ecosystem to set up the actual content editing experience for their clients. And they've been really happy with that.  There's also a lot of new startups offering CMS's that are headless basically, where all they are is the content editing part and an API. WordPress is that piece plus everything around actually building and running the website and those work really well with Gatsby because they just they concentrate on having a really nice interface for creating editing content and then Gatsby has a really nice tool set for building really fast websites.\n\nYeah so anyway, to your question, the audience is pretty much anyone building any sort of website"
     },
 
     {
-      "speaker": "Yeah so anyway, to your question, the audience is pretty much anyone building any sort of website",
-      "text": "Adam"
+      "speaker": "Adam Garrett-Harris",
+      "text": "Especially if you want to be fast"
     },
 
     {
-      "speaker": "Especially if you want to be fast",
-      "text": "Kyle"
-    },
-
-    {
-      "speaker": "Yeah, especially if you want it to be fast, which is pretty much everyone.",
-      "text": "Yeah, it's also an interesting fit for kind of like hybrid website web apps. There's several startups that are building everything basically on Gatsby. So they have their marketing site, which is static but then Gatsby v1 also has the ability to have client only sections of the site, which then just a traditional web app that loads up and hits an API and then does it's thing from there."
+      "speaker": "Kyle Matthews",
+      "text": "Yeah, especially if you want it to be fast, which is pretty much everyone.\n\nYeah, it's also an interesting fit for kind of like hybrid website web apps. There's several startups that are building everything basically on Gatsby. So they have their marketing site, which is static but then Gatsby v1 also has the ability to have client only sections of the site, which then just a traditional web app that loads up and hits an API and then does it's thing from there."
     },
 
     {
@@ -83,18 +78,18 @@
     },
 
     {
-      "speaker": "Yeah, and then it's just all React and so it just works.",
-      "text": "Adam"
+      "speaker": "Kyle Matthews",
+      "text": "Yeah, and then it's just all React and so it just works."
     },
 
     {
-      "speaker": "That's cool because I've seen companies in the past build their marketing site with Jekyll but they clearly couldn't make their app with Jekyll.",
-      "text": "Kyle"
+      "speaker": "Adam Garrett-Harris",
+      "text": "That's cool because I've seen companies in the past build their marketing site with Jekyll but they clearly couldn't make their app with Jekyll."
     },
 
     {
-      "speaker": "Exactly, and there's a ton of inefficiencies through that model because you have different programming languages, you have different models of thinking about things, you have different build steps, you have the problem of merging styles back and forth, and this that and the other thing.",
-      "text": "If everything's in Gatsby you can reuse the same layout components and other components across the whole site. It's the same styles, it's the same way of thinking about the world, so there's no friction because in a lot of companies the marketing site is like the redheaded stepchild. Where marketing people are always begging for engineer time like \"Hey somebody come work on our site\" and they don't want you because it's this big abrupt shift to \"How's the stupid thing work again?\" But if everything is the same everything kind of moves along together. It's a much cleaner more efficient model"
+      "speaker": "Kyle Matthews",
+      "text": "Exactly, and there's a ton of inefficiencies through that model because you have different programming languages, you have different models of thinking about things, you have different build steps, you have the problem of merging styles back and forth, and this that and the other thing.\n\nIf everything's in Gatsby you can reuse the same layout components and other components across the whole site. It's the same styles, it's the same way of thinking about the world, so there's no friction because in a lot of companies the marketing site is like the redheaded stepchild. Where marketing people are always begging for engineer time like \"Hey somebody come work on our site\" and they don't want you because it's this big abrupt shift to \"How's the stupid thing work again?\" But if everything is the same everything kind of moves along together. It's a much cleaner more efficient model"
     },
 
     {
@@ -103,7 +98,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Great question. There's a few ways to answer that. First is, Gatsby as a static site generator inherits all the speed advantages of static sites, which is basically... If you think about how a website gets loaded. It's like person A is somewhere in the world and they type in the browser a site. There's DNS resolution and then there's a little HTTP request that sends on the packet over the Internet and it gets routed to a server somewhere which then does some work and then sends back data. And then that comes to the browser and gets all assembled in the browser pulls it all together and renders pixels on the screen, which then we see as the website."
     },
 
@@ -118,7 +113,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, so Gatsby gets a lot from that, but Gatsby also it tries to bake in... So it does several things. First it tries to enforce everyone using all the best performance techniques. So one example is by default Gatsby inlines CSS in the head so you're not making... Most sites you have an HTTP request and that loads in and then it does another request for CSS and JavaScript and so forth, but it's actually much faster if you inline CSS into the head of the HTML, and Gatsby does some nice tricks to make that really easy to do. And so that saves oftentimes like 3-750 milliseconds on the initial paint time. So that's something that most people don't even know about definitely aren't doing that Gatsby just does for you."
     },
 
@@ -133,7 +128,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, that's the typefaces. Yeah, the basic idea is that self hosting your fonts is faster almost always than Google Fonts."
     },
 
@@ -143,7 +138,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "So the reason is that, what Google Fonts gives you is a CSS file so when you add Google Fonts to a site it adds basically a CSS file that Google hosts. So you first have to make a request to get that CSS file and then in that CSS file there's then links to the actual font files for whatever font that you want to add to your site and so Google Fonts is always like two request before you have the fonts.\n\nAnd then when you self-host and with inlining it, there's no additional request, I guess. You load the page and then the links are already there to the font files. So it just avoids extra requests."
     },
 
@@ -153,7 +148,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "So no, Gatsby. I mean is a static site generator so you're kind of outputting static bundles. The whole site is just like HTML and JavaScript and json and that sort of thing. So basically you need to rebuild the site every time there's a change and so whatever so basically you can think of as versions of the site. So if user A loads version 273 then they'll be navigating within version 273 and if there's a change to content or to code or whatever, like version 274 is out, then they won't see that until they reload the site."
     },
 
@@ -163,7 +158,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, exactly."
     },
 
@@ -173,7 +168,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, so a lot of people are doing that. Basically you just need to have a build server of some sort and there's a few sources that do that like Netlify and then you have web hook from your CMS that then just triggers a rebuild on your build server.  And so yeah, it's fairly straightforward to do. I know some people also do a cron job. That's another option if your data doesn't change that often."
     },
 
@@ -183,7 +178,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, something like that, but generally speaking a web hook works really well and it's fairly straight forward to setup. Most CMS's, especially the API CMS's are already set up to do this out of the box."
     },
 
@@ -193,7 +188,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah exactly."
     },
 
@@ -203,7 +198,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "No, that's a great question."
     },
 
@@ -213,7 +208,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, so basically it's been a few different sources. There's been a number of companies who are really interested in the plans for 1.0 and have either directly sponsored it or pay me to work on projects using the work in progress 1.0 code and that's been the majority of funding. And yeah so that's been what I've been doing so far, but this the tricky thing about open source is that you really need, for an open source project to really take off, you really need at a minimum of like hundreds of thousands of dollars investment. You know? And you get some of that of course if you have lots of people using it and lots of people submitting PRS they're individually it's like if you think about the time value of a lot these different PRS that people are contributing, Each PR is minimum hundreds of dollars investment and some mid to major PRS could easily be thousands of dollars of time that these really talented engineers are contributing to the open source project. So there's definitely lots of investment."
     },
 
@@ -223,7 +218,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "You definitely have to have a probably even a fairly beginner level of understanding React should be sufficient because most of the time you're just using like React components and you really can use just the function React components for most stuff. So, basic understanding of JavaScript, basic understanding React some understanding of Webpack is helpful, especially if you want to do more complicated things and then past that it's really how far you want to go in different directions."
     },
 
@@ -233,7 +228,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Again, it depends. If it's a pretty simple site perhaps none at all. You just start using Gatsby and then you add your plugins and then you just write React components and then build it and off you go. But if you want to start writing custom plugins, then of course you have to dive into the API's. So the goal is that the plugin system is robust enough that as time goes on more and more use cases will be solved by just installing a plugin."
     },
 
@@ -243,7 +238,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, and I actually have a plugin in mind that will remove most of that boilerplate. So yeah, that's the goal. With all the work just to get 1.0 out, I left it kind of boilerplatey, but the idea is that any boilerplate can be subsumed within a plugin."
     },
 
@@ -253,7 +248,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah exactly."
     },
 
@@ -263,7 +258,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, there's always this trade-off between use cases, and it's like \"Oh, we'll build around those use cases\" and then those use cases are very easy to accomplish, but then \"Oh if I want to step outside of those blessed paths, then all of a sudden life is hard. And a lot of systems end up in that trap I guess. And I didn't want that to happen with Gatsby. So what I think the best patterns is, is that you have pretty low-level primitives that you say these these basic things are what constitute. It is what the system supports and then you add scaffolding tooling that then you can build up abstractions on top of. You can build up arbitrary abstractions on top of those lower level constructs. And so if you think about a programming language. Programming languages are awesome. There'll all completely designed around this. They give you different data types, you have strings, you have ints, you have your floats, and you have functions, and whatever, and then using this pretty low level stuff you can then build up any sort of abstraction on top of that and it works super well. You can think of Gatsby like that same sort of thing where Gatsby's like \"Hey, you have pages, you have layouts, you have data of various sorts, you have queries that you can query your data and pull data into your components and then using these site-specific primitives then you can build up abstractions on top of that."
     },
 
@@ -273,7 +268,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "So the interesting thing about the local stuff is that in the Gatsby world data coming from your local file system is treated exactly the same as data coming from remote API's. As far as Gatsby is concerned it's just data that just arrives from somewhere. So Gatsby's system is basically there's source plugins and then there's transformer plugins. And so source plugins, their responsibility is somewhere out there in the world there's data and it pulls it in somehow and it's up to the source plugin how it does that it could use carrier pigeons or, probably doesn't, but it probably uses JavaScript NPM libraries or something or API calls to get stuff. So in the case of a file system the source file system plugin, you just tell it what directory to look at and then it goes through that directory and recursively finds all the files and then adds those as nodes, which is the basic Gatsby data type into Gatsby and then those are usable. But for a remote source plugin, it was just hit an API and then pull into that from there and then somehow turn that into nodes, which then go into Gatsby.\n\nAnd then transform plugins, how they work is that, so source plugins say \"Hey, I know how to completely handle my data, so I'm just going to add them as.. the data was already decomposed into fields so there's no more decomposition that can happen. Like there's a title field, and there's a date field, and this, that, and the other thing. It's already in its final state, but there's often times where you have data that the source plugin is like \"Well, I don't really know exactly what the end user wants to do with this and so I'm going to leave in unconverted form, a raw source form that then can be converted per the needs of an individual site. So, markdown is a really obvious example of this because it's pretty common and so a source plugin say, \"Hey I have this node and it's markdown and I'm not going to do anything with it. It's just markdown. This node is has is raw content that's markdown. Then transformer plugins can come along and say \"Hey, I know how to transform markdown into something else.\", which of course typically is HTML so there's then transformer plugins that take this raw content, markdown, and then turn it into HTML and so it basically says \"Here's a node that's a type markdown and I'm going to transform it into a new node that's a type HTML. And so this sort of transformations can happen from any one data type to another data type.\n\nSo there's a CSV transformer, which takes a CSV file and turns it into, each row is now a new node. Same thing with JSON, YAMl, there's image transformer plugins, which take an image and then can resize the image and turn down the grayscale, can do basically anything that you want."
     },
 
@@ -283,7 +278,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Not necessarily, it can be done with JavaScript and for the image case there's this NPM package called sharp, which uses another older"
     },
 
@@ -293,7 +288,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "It's not using ImageMagick. It's libvips or something like that. Anyways, it's super fast and it's pretty easy to install and across platforms. So yeah, it handles a lot of the image transformations, but could totally write one to use ImageMagick if you want.\n\nSo you have source nodes and the transform nodes, which take data and turn into other sorts of data. And this chain and transformations just automatically happens using all the plugins that you install and then out of that comes then a graphQL schema, which is all the different types of data you have and all the fields that you have gets turned into this is schema.\n\nAnd so, one way of thinking about is you're basically constructing on the fly a database with all your data and all the transformations of the data and then you then how a database schema, which in this case is powered by GraphQL and then like old-school PHP or something, when you're creating pages you can just write queries directly against your database to pull in the data that you want.\n\nSo graphQL is a really nice query language for that."
     },
 
@@ -303,7 +298,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah."
     },
 
@@ -313,7 +308,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah exactly, yeah."
     },
 
@@ -323,7 +318,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah because that was one of the big motivations for this new data layer and the whole graphQL system is that static site generators are really nice for simple sites because it's very simple. It's just like \"Oh, you you have data and you put it through templates and out comes pages."
     },
 
@@ -333,7 +328,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "It's kind of like the idea of jumping across lots of different files or lots of different data sources and querying authors, or all posts created by an author, or all posts where a tag shows up, or that sort of stuff. That gets weird to do in traditional static site generators. The graphQL stuff makes it really trivial to do and it also makes it trivial to do all sorts of complex data transformations that are just powered by plugins and are performant and cached and so forth."
     },
 
@@ -343,7 +338,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, there's plugins that are for the data layer, so those are the source and transformer plugins. Those are responsible for fetching data and then transforming data in different ways. So those are most plugins, but then there's also plugins for two other categories. Webpack related plugins, so if you want to use LESS, for example, in the Webpack world, there's a LESS loader that you use to add support for loading LESS files and doing different stuff to it. There's actually not a Gatsby LESS plugin yet, but SASS is a better example. There's a Gatsby SASS plugin that does all set up for using SASS in your site.\n\nAnd then there's also another category of plugins for solving the miscellaneous website problems, so for example, adding Google Analytics. There's just a Gatsby plugin which will add it at the end of your body and all the normal stuff. All you have to do is say \"Okay, here's the tracking id\" and then it happens. And then there's an offline plugin, which generates a service worker automatically that's set up for your site. So you add that and all of a sudden your site works offline. So, there's a whole bunch. There's a very long list of random stuff like that, that plugins can handle."
     },
 
@@ -353,7 +348,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "There was definitely many moments where I doubted. I was just like \"Man this is...\". I don't know whenever you do something novel you really don't know what you're getting yourself into. It's hard, the unknowns. You don't know how long the pathway is or what you're going to encounter along the way and so there's a lot of fears associated with that unknown. That unknown is not the path. It's like, am I'm going to have to have enough resources to get through? Is it actually solvable?\n\nWhen I started the next major version of Gatsby I had a pretty good idea of what I wanted to do, but is it actually doable? All these things that I want to make happen?"
     },
 
@@ -363,7 +358,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "I think most people are capable of doing a lot more than they think they can. It's just letting yourself believe that and then putting in the time to get there. I had to learn a ton of stuff to do Gatsby. There's a lot of kind of code techniques I hadn't used before, didn't even necessarily know existed, but I guess the thing, if you can overcome your fear of the unknown and just plunge in, you dive in and then, I mean, you can't see the path that you're going to take necessarily, but once you get there, either you can cut your way through or you can around another way. There's a lot of metaphors you can use, but basically, as long as you allow yourself the time to learn things, you can do a lot more than you think you can. People who have done stuff that you haven't done, it isn't because they're smarter than necessarily, it's because for whatever reason they've had the opportunity to learn the skills and knowledge necessary to do those things. If you allow yourself the time to learn those skills and knowledge, then there's lots you can do."
     },
 
@@ -373,7 +368,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "No, so we talked earlier about the startup. So I built the first version Gatsby just to build that website basically, and I started working on the next major version of Gatsby that was released a few weeks ago when I quit that startup. I quit that startup I was looking around. Ok what's the next big thing I'm going to do? And Gatsby seemed... There's just tons of changes right now around how we build stuff for the web and a lot of the mainstays of tools for building websites, like WordPress, Drupal, Joomla, a whole host of proprietary tools. They just don't work as well anymore with how we've all shifted to using smartphones all the time. And the billions of people coming online in other countries that are on smartphones on crappy networks and so forth.\n\nMost of the old tools assume you're on desktop and have a reliable network connection. And when you shift away from that world, all of a sudden these sites get super slow. I profiled downy.com a while ago and on a 3G network on smartphone it was 18 seconds or something to load, which is just insane. You have this pretty high profile site that's just yeah horrendously unoptimized.\n\nThe point is, I was looking around, and a ton of companies know that they need to have their websites work fast on mobile and they just don't have the tools to do it and really technically advanced companies are just building stuff custom in-house, but that's only a few small percentages of companies that are able to do that. That have the engineering talent and vision and a critical need to spend the 500k or something to build their own framework in-house to power things."
     },
 
@@ -383,7 +378,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah that's something you get from the static generation yeah."
     },
 
@@ -393,7 +388,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, loosely I haven't used it for anything, but it's in this kind of..."
     },
 
@@ -403,7 +398,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Not that I've ever written down, but there's a number of people who've asked about this, so it's something I've thought about had discussions with people about. I think, on the whole, they have very similar goals and that you want to be able to easily create websites that are fast using React and I guess the big difference is that Gatsby is very focused on the static site goal. The coming version of next adds a static export, which is similar. I'm not entirely sure on the details of that, but it seems fairly similar to what Gatsby does. But I think the biggest differentiator is that next doesn't have an opinion on downloading. It just gives you a function that it calls when it wants data and you give it data and so that's always a very do it yourself operation. Where Gatsby has the whole data layer and graphQL system and multiple source and transformer plugins to make it very easy to get data from wherever it is, into your site. Because a website without data isn't much of anything."
     },
 
@@ -413,7 +408,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "That's been the major focus of all the work I've been doing on Gatsby. Because Gatsby v1 also adds code splitting and a few of the things, but honestly all that stuff was done in a few weeks last August.\n\nThen the remaining nine ten months was around this whole data layer and plugin system.\n\nBecause that's the real road blocker for most sites is getting data to the right place at the right time and why Gatsby v1 was so fast that just saw it just handles behind the scene getting data loaded at the right time in the right place so that when you click around everything's just."
     },
 
@@ -423,7 +418,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, just because it knows..."
     },
 
@@ -433,7 +428,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, that's exactly how it works. So you land on a page and Gatsby's like \"Hey, you're linking to these other pages, so I'm going to start pre-fetching the data each one of those pages. Data and sometimes code for all those pages, so that when you click on it, everything is already there to go."
     },
 
@@ -443,7 +438,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, that was number one when I first started working on Gatsby. I thought that would be so cool. You just drop a React component and it turns into a page. It's a very straightforward way to think about things."
     },
 
@@ -453,7 +448,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "People often ask, \"Is there some sort of story behind it?\" and really there's not. Actually, I never even read the book, The Great Gatsby, before I started working on Gatsby, the open source project. It was really just, I 'm starting a project, and I was like \"Okay, what am I going to name this?\" And I really books, literature of all sorts."
     },
 
@@ -463,7 +458,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, actually I've read the book since then, and I was like \"Why do people read this? Why is it so famous?\" It's just kind of weird people weird problems. Those guys are immature. Gatsby's just..."
     },
 
@@ -473,7 +468,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, it makes for an entertaining book I guess, and movie, but anyway, I just Googled famous literary names and I just went through the list, and was like,  which ones sound good, memorable and sound good and then also which ones don't already have an NPM package and website and Twitter handle. And Gatsby fit all of those things. So I thought, Gatsby, that's a fun name. It's easy to remember."
     },
 
@@ -483,7 +478,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Use Gatsby. Make pull requests."
     },
 
@@ -493,7 +488,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "No, a lot more that that actually."
     },
 
@@ -503,7 +498,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, just in the latest minor release. No, it's been, before the 1.0 release, there was something like forty-fifty people contributing to the initial stuff and since then there have been 30-ish contributors since and just in the last three weeks."
     },
 
@@ -513,7 +508,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Probably the easiest way to get going is just there's a long list of plugins that can be written and example sites and so there's an issue for just people brainstorming different stuff that can be built, so that would be a fun place to start."
     },
 
@@ -523,7 +518,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Example sites are to demonstrate the use of plugins or particular techniques. So I actually need to write this up, but how I'm starting to think about the Gatsby mono repo is it's for Gatsby related infrastructure, so data plugins, Webpack plugins, that sort of stuff. Anything that's lower levels of building the website, but more opinionated stuff like \"Hey, here's a sweet theme for building a Gatsby blog\" or something like that. That's kind of outside of Gatsby.\n\nBut, those are totally useful too. I mean lots of people build it first Gatsby site based on what we call starters  that someone has contributed so those are really awesome.\n\nSo if you enjoy more the design side of things and you just want to build a kick ass blog and then build up Gatsby and then share with the world, then building and contributing back a Gatsby starter would be awesome. And if you want to write an infrastructure type of plugin, then there's lots of Gatsby plugins that need to be written."
     },
 
@@ -533,7 +528,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Awesome."
     },
 
@@ -543,7 +538,7 @@
     },
 
     {
-      "speaker": "Kyle",
+      "speaker": "Kyle Matthews",
       "text": "Yeah, it's been my pleasure."
     },
 
