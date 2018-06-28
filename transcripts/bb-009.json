@@ -1,0 +1,451 @@
+{
+  "podcast": "BookBytes",
+  "episode": "9",
+  "transcript": [
+    {
+      "text": "(intro music: Electro Swing)"
+    },
+
+    {
+      "timestamp": "0:00:14.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "We’ve been talking about “Technically Wrong” for the last few episodes and today we’re actually chatting with the author, Sara Wachter-Boettcher. So, welcome to the show!"
+    },
+
+    {
+      "timestamp": "0:00:21.7",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Hey! Thank you for having me."
+    },
+
+    {
+      "timestamp": "0:00:22.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I just want to ask, first what you’ve been working on lately and what led you to write this book?"
+    },
+
+    {
+      "timestamp": "0:00:29.1",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "I think what led me to write the book was, you know, kind of coming back over the last several years, kind of started with a narrower interest in how content in UX choices were not necessarily very compassionate or very inclusive, and I started getting really interested in the ways that things like forms were designed and the ways that copy was often like this sort of... Everything all of the sudden seemed to have the same tone of like, hyper congratulatory, super fluffy, super positive all the time even when it was asking about really sensitive information. So, that sort of got me started back, probably in 2015 or something, sort of thinking more critically about what we were doing in tech, and what we were doing in design and from there it just kind of expanded and expanded. I started noticing all of the ways that I felt like tech products were leaving people out or letting them down; and so, back in the summer of 2016 I wrote about this thing that had happened with Siri where if you talk to Siri about topics related to rape or sexual assault Siri didn’t know how to answer, had never been programmed to answer any of those questions, would not know what you meant, and in fact oftentimes when Siri doesn’t know what you mean, it will actually crack a joke back at you because it’ll try to like, you know, do something funny to indicate that it doesn’t understand."
+    },
+
+    {
+      "timestamp": "0:01:50.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:01:51.5",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "And I wrote this piece about it on Medium, and it was one of these things where, you know, I got home late one night and was like, “Ugh, I’m so frustrated by this, and I’m so frustrated by what a lack of forethought has gone into this.” Like, you’ve built this thing that can do so much, and yet this something that’s really, not only a pretty basic part of language, is also extremely common. And you’d never thought about what would happen if somebody asked these kinds of questions, and you never thought about what would happen if somebody was trying to use this service during crisis, and you invested all this time in creating a smart assistant that could be helpful in so many circumstances and that could tell jokes, like, you created something that would tell jokes before you thought about what happens if somebody uses this in a crisis scenario. Anyway, so I got all fired up and I wrote this article on Medium, and it went wild. Suddenly I actually got a publisher who contacted me, so W. W. Norton contacted me and was like, “Have you thought about writing a book that’s more for a mainstream audience that’s not necessarily written just for people who are within the industry?” And I thought, “I have no idea what I’m doing.”"
+    },
+
+    {
+      "timestamp": "0:02:49.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:02:49.7",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "But then what I said was, “Absolutely! I would be really interested in doing that.” And I was, I mean I was interested in doing it, for sure. I just, I had not been necessarily planning that, and so that led me down this path to just sort of like, connect the dots even further and further and it went from thinking through some of those design gaps to some of the ways that that connects out to broader problems when we don’t understand the people that we are designing for. We don’t understand the breadth of human experience that might be coming into play when people are using our products, and then also got me really interested in what happens when you take all of that, when you take all of those parts of the tech industry, all of those oversights, all of those narrow ways of thinking, and you apply them to places where it gets even harder to see sort of how things are made. So, when you start looking at algorithms, artificial intelligence, you take the same kind of issues that could get embedded in an interface, and you end up embedding them much deeper, right? And so then I got really interested in what’s happening with biased data being used as the foundation for an algorithm, and then that algorithm making decisions about what people see or what people get or, in certain cases, big decisions about whether they can get credit or what kind of sentences they might have in jail and like, all these other huge life things, and what I started to realize is just that there was this direct line between the peppy throw away copy points that would, you know, send you an exclamation point ridden message after you posted about somebody in your family dying. You could draw a direct line from that to these like, super egregious misuses of historical data, and it all came down to designers and technologists who just hadn’t thought enough about the ramifications of their work; and I think we’re seeing that play out, not only in all of the things I talked about in the book, but in so many other places right now, too."
+    },
+
+    {
+      "timestamp": "0:04:29.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. Yeah, I actually had an experience lately where I thought, “This could be really bad” where we registered for a baby shower on Amazon and then 7 months later after the due date it said something about “Something about your 7-month old!” And I was like, “Oh man…” We’re actually fostering, we’re not having a baby, but we could have had a miscarriage and then that would just be devastating."
+    },
+
+    {
+      "timestamp": "0:04:48.3",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Yeah, and you know, I think that those are hard things to design for, but I think that if we’re not thinking about that and not thinking about like, okay well what happens if that is the case? How bad is it, right? Are there ways that we have designed safeguards into the system? Ways to sort of minimize those kinds of risks? Have we even just thought about it at all? And you know, I’ve definitely seen… I just saw this tweet the other day from somebody who was like, “Oh my god, trying to get ads targeting pregnant women, or ads targeting people with newborns off of your profile after you have been tagged as being pregnant, is impossible.” Basically like, the internet doesn’t do a very good job of recognizing that people change or needs change. And once they’ve tagged you as one thing or another it can be damn near impossible to change that."
+    },
+
+    {
+      "timestamp": "0:05:28.1",
+      "speaker": "Jen Luker",
+      "text": "I have a great anecdote there in that my daughter is now 4 and I’m still getting, “You might need formula for your future newborn!” or “You might need possible diapers for this baby that you’re about to have!” I’m like, she’s 4."
+    },
+
+    {
+      "timestamp": "0:05:42.7",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "4 years later. Wow. That’s amazing."
+    },
+
+    {
+      "timestamp": "0:05:45.3",
+      "speaker": "Jen Luker",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:05:45.8",
+      "speaker": "Jen",
+      "text": "4 years later."
+    },
+
+    {
+      "timestamp": "0:05:45.5",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "You know, I mean you would think they would get better at understanding timeframes, but even that! That’s such a basic piece of it, you know? I talked to a fellow named Dan Hahn who is involved in UX and design who told me about his smart scale. So, you know, he got a smart scale like a lot of people have started getting these days, and his smart scale had only been programmed him to congratulate you for losing weight. And so it kept sending these congratulatory messages after his wife had a baby, because they were like, “Oh, you’ve reached a new low weight!” and she’s like, “Yeah… I just gave birth, so… you’re not very smart.” And that was only the beginning of it though, like much, much, worse than that and much more frustrating for… Potentially frustrating is, they also will send out messages if you’re on a weight gain streak, and so he received a message targeted to his toddler son because every single week when they would weight the toddler, the toddler would gain weight, and so they send him this message that’s just like, “Don’t give up. You’re gonna shed those extra pounds.” And it’s like, your kid is 2 ½ and weighs like 29 pounds or something. But it hadn’t been programmed to understand that there’s lots of different reasons somebody might weigh themselves and that weight loss is only one fraction of those reasons."
+    },
+
+    {
+      "timestamp": "0:06:54.5",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I want to ask something that might relate to consequences of design and technology decisions that are a bit more impactful than smart scale, so in my question I’m thinking more about algorithms that determine sentencing or parole for individuals who are either in prison or convicted or are going through the criminal justice system. What do you think should be the involvement of the government or regulatory bodies in that conversation? You know, should the regulation come from outside the tech industry where there are legal repercussions for the technology decisions that are made that negatively impact individuals? Or should this change kind of come within the tech industry and should be create our own standards in response to these things?"
+    },
+
+    {
+      "timestamp": "0:07:41.9",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Well, sure. So, I think… I think that it really is going to depend a bit on what the stakes are. If you’re talking about something that is fundamentally intertwined with the government already, so something like incarceration, then I think absolutely you should have government involved in what is fair and equitable for decision making around incarceration; it seems wild to me that you would leave that up to a tech company. And it’s not so straight forward, obviously. What’s happening is there’s software people are using to determine risk of criminal recidivism and then state and local governments are using that information to make decisions, but  my take is basically that, if you’re going to be interacting with, essentially state run systems, then the state should be paying close attention to what’s happening and how that’s happening. And, you know, you can look at something like, some things that happened at Facebook, not even the most recent Facebook drama, but there’s been like, a long history of Facebook having drama around some of the ways that it’s designed things without thinking about ramifications, where they’re in there ad targeting. They have so many different ways you can target people, that’s one of the reasons that Facebook advertising has been so lucrative is that advertisers can hyper target with, 7,000 different criteria, and one of the things that Facebook was allowing people was to do was to create ads for housing, and then target them by race. Now, that is a violation of federal law. There’s federal fair housing acts, statutes that state you cannot do that. So, that’s a circumstance that I think, in some ways, is similar to looking an algorithmic piece of software that is deciding criminal sentencing, in that absolutely. Like, the government needs to be involved in taking a look at that because that is in violation of a federal law, and in fact that’s happening. I mean there’s an investigation that’s actually happening now, largely due to folks from ProPublica doing investigative journalism and digging into this and realizing this was actually something that was possible. I think it’s becoming increasingly clear that regulation is important in some parts of the tech industry and I think tech has really avoided that for a long time because it’s wanted to be seen as something special and you can avoid having anybody else involved, but the reality is we’re talking about an industry that is basically every industry now. We’re not just talking about tech as like, something separate from and distinct from other industries. If you’re going to talk about everything from the criminal sentencing software to autonomous vehicles to Theranos, the discredited testing company, all of those things are in so many different areas. If you call them all tech and say well tech should regulate itself, well I don’t even know what that means. You can’t continue to pretend that tech is something else, that it’s not mixed up in pretty much every other industry and needs to have the same kind of oversight and scrutiny as other industries have. That said, you asked if it should happen, you know, if there should be oversight within tech, and I obviously… I think that the tech industry and people who work in tech, people who call themselves technologists, need to do a much better job. I think that there is not nearly enough emphasis placed on understanding ethics and understanding historical context and understanding bias and thinking about the ramifications of actions and thinking about the worst things that could happen. I think that that has been deprioritized in most companies and I think there’s some tech companies that are starting to realize that’s a problem. And I would also say that I think tech has spent a long time kind of on this unrelenting positive upswing where it’s like everything is blue skies and rainbows and everybody is making money and “Why should we have to think about all the hard stuff?” And I think that that’s kind of coming to an end and we are starting to see the fractures in that way of thinking."
+    },
+
+    {
+      "timestamp": "0:11:00.2",
+      "speaker": "Jason Staten",
+      "text": "Mm-hmm. (affirmative)"
+    },
+
+    {
+      "timestamp": "0:11:00.7",
+      "speaker": "Safia Abdalla",
+      "text": "So, I’m curious to know, let’s assume that we have a hypothetical listener who’s an executive or a decision maker at their organization. What is one thing you think they should implement in their business or organization that would get them towards thinking about ethics, accessibility more in their products and services?"
+    },
+
+    {
+      "timestamp": "0:11:20.1",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Yeah, I think the first place that I would start is to figure out how are we going to understand the assumptions that we are baking in to the things that we are creating, and what are we going to do to prevent those assumptions from getting the best of us? And at a personal level there are ways that you can do that where you can sit down and run through an exercise, or maybe at a team level where you can say, “Okay, how are we going to identify all of the assumptions that we have made here?” And we can sit down and we can make a list of potential assumptions and we can do some user research perhaps or like… There are things we can do. But what I would say to an executive, to somebody who has power to make decisions, I think what you need to do is think deeply about how does doing that and prioritizing that and mandating that change your process? What needs to change in your workflow? What needs to change in who’s consulted? What needs to change in who you’re hiring? For example, I think that you have no business designing anything with technology that’s going to impact something like housing, like what housing people have access to, whether somebody can get a home loan, et cetera. If you do not have historical context and understanding of the way that housing discrimination has happened in the United States over the past century. So, do you have that involved in your design process? And if not, if you just have, you know, folks from product design and engineering or something involved, then I think there’s like, some reprioritization that needs to happen around who’s part of the team in the first place. So, I think that it’s like saying, “Okay, if we’re going to start understanding the limitations of our own knowledge, understanding the biases that we have, the assumptions that we are making, if we’re going to actually do that at scale, how does that change our organization?” Those are the kinds of questions that I’m absolutely hoping to get answers for when I talk to people in senior-level roles at tech companies."
+    },
+
+    {
+      "timestamp": "0:13:04.0",
+      "speaker": "Jason Staten",
+      "text": "As a follow-up to that, would you consider it being important at a company to implement a group or team that has the responsibility for keeping some of these assumptions in mind? Or just putting the responsibility out on everyone?"
+    },
+
+    {
+      "timestamp": "0:13:22.5",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Um, can I say yes and yes? (laughs) I think… I mean, it depends. I think it depends on what the structure is of your organization and like, how is power distributed at your organization? How do projects happen currently? How are features being built? How centralized or decentralized are you? What process does something go through from when you design it up through launch? Are there already, in the context of things going through legal, and going through QA, like,what kinds of checks and balances do you already have? Those things all play a role in the best way that you would implement something at an organization. You certainly can’t dictate that it should be one way or another, but I tend to think that there’s probably some room for both. You need the people who are on teams who have their hands in projects day-to-day to be much better informed and to have more emphasis in their role placed on thinking about the impact of their work at every level. That is people that have titles like engineer, or designer, or whatever, right? I also think that there’s probably room for new kinds of roles that didn’t exist in the past. We’re starting to see some companies being more interested in hiring people out of the humanities or out of the social sciences which I think can be really valuable if you get somebody who is actually deeply trained in the social sciences, they’re not just thinking about like, “Oh yeah, let’s have empathy!” but they actually have frameworks for thinking through some of these questions that are really difficult. I think that might be really valuable. And then you may also need the governing bodies that sort of sit across the entire organization that are able to look out at whether or not what’s happening within any given team is the right thing to do. Just like you would say.... Like, let’s say you were talking about something related to security. You would want to have folks at every level within a team thinking about security, but you would also have probably a body that is at a higher level, thinking about security across the organization; and I don’t think that’s going to work for most companies to choose purely one or the other, but the exact way that that looks is probably going to vary."
+    },
+
+    {
+      "timestamp": "0:15:13.8",
+      "speaker": "Jason Staten",
+      "text": "I like the analogy back to security. I think that’ll resonate really well kind of bringing it back to my own workplace and mentioning it to others. So, thank you."
+    },
+
+    {
+      "timestamp": "0:15:21.0",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:15:21.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, from an outside perspective, as a user of these products, someone who’s not on the inside, how can we try to bring about change in these companies?"
+    },
+
+    {
+      "timestamp": "0:15:29.3",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "This is always a difficult question because if you’re a user of technology, like almost everybody is now, it’s not always easy to just say like, “Oh, you’re gonna vote with your dollars”, right? Which is like, an easier thing to say for some other industries like, if car company A does something awful you can say, “Well I’m not buying car company A.” And you shop car company B instead. With a lot of tech products you’re often not using your dollars in the first place, right?"
+    },
+
+    {
+      "timestamp": "0:15:53.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Right."
+    },
+
+    {
+      "timestamp": "0:15:52.1",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "The business models are not such that you’re paying to use the thing. And so, that’s one piece of it and then the other piece of it, for certain companies, let’s say like Google or Facebook, right? They’re so big and powerful and in fact not using them can really cut you off from a lot of things that might be really crucial to your life, that just opting out may not seem viable. For example there’s a big campaign right now, to delete Facebook after the whole Cambridge Analytica stuff and I saw a really great thread that was like, if you’re a parent saying delete Facebook, means you’re probably a dad and you probably have a wife who’s going to stay on Facebook, because and you know this may or may not be true for everybody, but the line of thinking in this was like because guess what’s on Facebook? Anything related to the PTA that’s done via a Facebook group. Any of the like, free or trade.. Like, trade kids clothes kind of groups and like, buy nothing groups, all of those kinds of groups. Anything related to, oftentimes like, social services, oftentimes your kids’ school, like all of those things are managed via Facebook groups because that is the common denominator that everybody has had in the last few years. So, if you start saying “Just delete Facebook” it’s like, okay, just delete all of my access to all of these things that allow me to actually be engaged in my kids’ life. And that’s only one example. I think you can use Facebook and you can talk about a lot of different other facets of life that make it really hard for people to actually delete it without it having an impact on a lot of other areas. So, given that context, right? Given that you’re not necessarily using dollars for these products and that it might be really difficult to remove some of the big tech giants from your life, what do you do? I think a big piece of it is that there needs to be ongoing pushback, criticism, uproar, like, we need to be talking about it, we need to be pushing back, we need to tell them that we’re unhappy, we need to be reporting it in the news. It needs to be bubbling up to government. There has to be some incentive to change, and the incentive to change can come from people ditching the platform en masse, but it can also come from constant bad press, it can come from government scrutiny, it can come from a lot of places. And so, I think you have to figure out for every given example of tech overreach or unethical behaviour where are you comfortable making choices to remove things from your life? Where do you want to push back in other ways? And you have to start thinking about it obviously at that macro level and say that this is not an overnight thing, this is a long term change thing. And so, how does any long term change happen? Well, you have to get out there and make noise about it, educate people about it, write your congressperson, right? It’s all of this stuff that feels very long slog but is really the only way that actual change happens."
+    },
+
+    {
+      "timestamp": "0:18:08.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, that’s a really good point about not being able to delete Facebook or whatever kind of thing that you’re using. I’ve deleted my Facebook recently before the recent stuff, but I’m still able to keep up, like hear about people because my wife’s not going to delete hers."
+    },
+
+    {
+      "timestamp": "0:18:20.1",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "See?"
+    },
+
+    {
+      "timestamp": "0:18:20.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It’s, yeah, it’s the same situation."
+    },
+
+    {
+      "timestamp": "0:18:22.2",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Yeah, and I mean like, and this isn’t to say… Like, look, I think deleting Facebook is probably great. I haven’t done it, I’m a pretty limited Facebook user and I don’t have it on my phone because I’ve found that what they were tracking was too creepy a long time ago, and I also just found that I don’t really need or want to be so Facebook dependent, but yeah, like deleting it would mean cutting off contact with a bunch of people who I don’t really have another way to stay in touch with. You know, they may not be the people I talk to the most often, but they are people I don’t want to never talk to again, right? Like a friend from middle school who I was very close to for a lot of years, I want to be able to keep up with her and know what’s going and that’s really the only way that that’s going to happen right now. And so, I mean, that’s why you have people who talk about Facebook as being the kind of organization that is much more of a utility at this point than just a tech company or just a social network, and if you start thinking about it as a utility then you start thinking about all other kinds of regulation. And I think that that gets a little messy and I wouldn’t say that I’m the expert on whether Facebook should be regulated as a utility, but I think it’s a really valid question and I think it’s absolutely worth talking about."
+    },
+
+    {
+      "timestamp": "0:19:20.6",
+      "speaker": "Jen Luker",
+      "text": "So, as we’ve gone deeper down this rabbit hole, I want to go back to the very beginning of it and ask, do you think that this started out based on not just prejudices but the ability to garner this? Or do you think it really did start with tech not really just thinking about the adverse reactions that collecting data or providing these inefficient interfaces would actually have in the long run?"
+    },
+
+    {
+      "timestamp": "0:19:44.5",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "I’m sorry, I’m not sure I understand the other thing. So, you’re asking is it that tech didn’t think about it, or…"
+    },
+
+    {
+      "timestamp": "0:19:51.2",
+      "speaker": "Jen Luker",
+      "text": "Right."
+    },
+
+    {
+      "timestamp": "0:19:51.9",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "What’s the or?"
+    },
+
+    {
+      "timestamp": "0:19:52.9",
+      "speaker": "Jen Luker",
+      "text": "The or is or did they do it on purpose?"
+    },
+
+    {
+      "timestamp": "0:19:55.6",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Ah, well, (laughs) you know, I think that most people are decent people and people aim to be decent people but are rather thoughtless, but most people don’t want to wreak havoc on other people’s lives, right? They don’t want want to. They want to believe that they’re good people and they want to believe they’re not hurting people. I think for the most part it was not intentional, but I’m going to throw a big caveat in there and say I think that there was a lot of sort of willful ignorance for a long time. What I mean by that is that you have a bunch of people who had been told that they were the best and the brightest, that they were brilliant, that they were going to change the world, they were going to create all this stuff that like nobody else could understand, they’re geniuses, et cetera, et cetera, et cetera. And when people tell you that enough, and a lot of money starts flowing your way, and you’re working with people who are very similar to yourself with similar backgrounds and similar interests and a similar sort of worldview, it’s very easy to miss a lot, and I think that the tech industry, you know, speaking broadly, was comfortable not thinking that hard about the negatives because things were going pretty good for them. I think that those kinds of pursuits of like, higher valuations, pursuits of more ad dollars, the drive towards constant maximization of shareholder value, doing that at the expense of everything else is inherently unethical. I think that there’s no way that you can be ethical if you’re willing to pursue those things at all costs and I think that tech has definitely been much more of that camp and that that kind of behavior has been encouraged. I think that it was, originally, there was a lot of oversight that came from folks who were from similar backgrounds, were not thinking that much of other ramifications of their work, were excited to build new stuff and not necessarily think about the problems that it could create. I think though, that that doesn’t mean that they’re not culpable. It doesn’t mean that there’s not blame to go around, I think that we, in tech, have to take a lot of responsibility for the things that we failed to do that we could have done a long time ago, and I think that we need to own up to the fact that we’ve been largely, I think, blinded by a lot of, you know, shiny objects and stacks of cash, and that’s made us not see things very straight, and not necessarily live out the values that we would probably tell people that we have."
+    },
+
+    {
+      "timestamp": "0:22:00.5",
+      "speaker": "Jen Luker",
+      "text": "So, maybe it started out from ignorance but then much advantage has been taken since."
+    },
+
+    {
+      "timestamp": "0:22:04.6",
+      "speaker": "ara",
+      "text": "Yeah, all of us go into the world ignorant. Everybody has to learn about the world by being in the world and experiencing the world. I think though, that if you go into the world assuming you already know everything because you’re the best and the brightest, then you’re not going to learn very quickly about the stuff that you’ve never thought about before, and I think tech has definitely been guilty of that."
+    },
+
+    {
+      "timestamp": "0:22:23.5",
+      "speaker": "Jen Luker",
+      "text": "So I actually, just to finish that off, wanted to ask a question from John Norman on GoodReads, he had a question that is, “If the California tech culture is so bad, are there other places that are better? And is this particularly bad moment?”"
+    },
+
+    {
+      "timestamp": "0:22:36.9",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Hmm. Well, I don’t know that we’ve ever had a moment like this before so it’s hard, I mean it's like, what do we compare it to? If you look out over the broad expanse of history there’s certainly lots of examples of industries being wildly abusive, you know? You can look at the ways that factory workers were abused for a long time or whatever. It’s not as if tech has sort of come up with the only model for industries that are problematic, but I think that there’s something unique happening here just in the way that tech is so quickly transforming the world. When it comes to whether, you know, whether Silicon Valley for example is particularly bad, I mean on one hand I think what you can say, is that because there’s so much money in Silicon Valley and because it is also sort of the most male dominated kind of aggressive part of the tech industry, I think it might be the most intense version of that culture, but what I see when I talk to people who are working in tech in other places is that you see a lot of the same kinds of patterns and behaviors because a lot of them are modeling themselves after tech companies in Silicon Valley. So, I don’t know that anywhere is free of that culture, I think that there’s maybe lighter flavors of it and different strains of it that run through, and that doesn’t mean that all tech companies are awful or evil. I mean, obviously I work in tech and there’s a lot of things I love about working in tech. No matter where we’re working we can’t just be like, “Oh that problem is over there. That problem is over in Silicon Valley.” Or “That problem is with engineering, it doesn’t affect me in user experience or whatever.” Right? Like, we have to be like, “That problem is big, that problem is cultural. That problem is not just tech, but here we are in tech and it is a huge problem here, what are we going to do about it?”"
+    },
+
+    {
+      "timestamp": "0:24:06.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, in the book you call out specific companies in specific examples and I’m curious if that was hard for you to be that specific and to be that bold to call out specific companies in the book?"
+    },
+
+    {
+      "timestamp": "0:24:16.8",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Gosh, that’s a good question. You know, it kind of would depend on which day you would ask me that. Like, some days I was just like, “You know what? I don't care. This needs to be said, we need to talk about this.” And then other days I was like, “What am I doing? Am I ruining my career?” Right? Like am I going to have ramifications for doing this? And where I feel like I’ve ended up is kind of in this interesting place where I’m totally comfortable calling companies out by name because I think that they deserve it. And I mean like, we need to be able to talk about it. Also nobody wants to read a book that doesn’t have any examples. Right? Like, you have to show examples."
+    },
+
+    {
+      "timestamp": "0:24:49.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Right."
+    },
+
+    {
+      "timestamp": "0:24:49.9",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "You have to give people context or they’re not going to get it. So, I think that it’s just sort of like one of these things where it’s like, this has to be done and who else is going to do it? So, I decided I was just going to go for it. What I will say though is that something that I’ve definitely noticed is that by doing this it kind of changes my career where people aren’t necessarily looking for me to help consult on the kinds of UX strategy products that I used to do all the time. I mean, I’m still doing that, for sure, but I’m oftentimes more getting asking to come in and talk to somebody’s company to kind of like start them down this path of thinking about this stuff, and it’s interesting to try to figure out what does that look like for sort of my role, my career and like, who have I alienated? I definitely am sure there are some companies that like would not hire me now because of that, and I had to think through, like, am I okay with that? And I think what I’d realized was I didn’t want to be the kind of person who would keep silent about things that I think are really a problem and that are hurting marginalized people just to protect myself and my self interests. I didn’t feel comfortable with that. If I don’t want to be that person in my personal life, and so I didn’t want to be that person in my professional life, as well."
+    },
+
+    {
+      "timestamp": "0:25:55.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, that makes sense."
+    },
+
+    {
+      "timestamp": "0:25:57.1",
+      "speaker": "Jason Staten",
+      "text": "One-"
+    },
+
+    {
+      "timestamp": "0:25:57.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Go ahead."
+    },
+
+    {
+      "timestamp": "0:25:57.9",
+      "speaker": "Jason Staten",
+      "text": "One particular thing, I was talking to my wife about you attending Google to give a talk there-"
+    },
+
+    {
+      "timestamp": "0:26:05.8",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "(Laughs) Yes."
+    },
+
+    {
+      "timestamp": "0:26:06.6",
+      "speaker": "Jason Staten",
+      "text": "And specifically call them out right at the beginning of the talk about pink cupcakes and she stopped me for a second and she said, “Wait, she called out Google Maps while she was talking at Google?” And I said, “Yeah.” So, could you recap that?"
+    },
+
+    {
+      "timestamp": "0:26:17.9",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Well, what better time? Yeah, sure. I mean, honestly, what better time to talk about a problem at Google than when you’re at Google?"
+    },
+
+    {
+      "timestamp": "0:26:24.3",
+      "speaker": "Jason Staten",
+      "text": "Of course."
+    },
+
+    {
+      "timestamp": "0:26:24.9",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Like, look. Google is, I think, worth like half a trillion dollars. Like, they can take it. I’m sorry, I’m not threatening their business in any way, and they knew what the book was about. So, I kind of feel like, yeah, I’m sorry, you know, this is what you signed up for. I mean, in fact, this is what you signed up for and this is the kind of… This is exactly why you’re having me here in the first place, right? The reason that you invite me to come talk to your teams is that you recognize that you have a responsibility and that you don’t have it all figured out. If you thought you had it all figured out why would you invite me in the first place? I felt fine talking about that in front of Google. And I think it’s also, you know, it’s important to realize I’m not necessarily talking about individual people in the room having royally screwed up, I’m talking about, let’s look at how these things happened culturally. So, what happened specifically in that example was last fall Google released this update to Google Maps to some users, it didn’t go out to everybody. It went out to a lot of iPhone users, though. And the update to Google Maps, what it did is when you were calculating directions in addition to it showing you like how far the distance was and how long it might take you to get there via you know walking, driving, public transit, it also showed you how many calories you might burn, or how many calories it thought you would burn if you walked instead of took another form of transportation, and then in addition to the number of calories the other thing it showed you was the number of mini cupcakes that Google Maps thought you would burn by walking. Now, pretty immediately, like within hours of this going live, people were like, “Wait a second, what the hell?” So, here are the things that were wrong with this. The first thing is that this was not opt in. So nobody said, “Hey, do you want to get calorie count information with your map updates?” It was something that was forced upon people and there was no way to turn it off. The argument is like, “Oh yeah, but it’s healthy to keep track of your activity, etc.” But this wasn't an activity tracker. It wasn’t like you were using a health app. You were just using Google Maps. You had not opted in to do this kind of thing, right? It’s an assumption about what people want. Then there’s all these problems about whether or not it has any accuracy about how many calories you might burn. How many calories you burn and I burn on a one mile walk might be wildly different for a lot of reasons. It felt really shame-y to people who had disabilities or chronic illnesses where walking was difficult. It made them feel either erased or potentially even more ashamed. For people who had eating disorders there were complaints that the cupcakes and the calorie information could be very triggering for them, and like the whole thing became kind of a fiasco, and all of that happened immediately after they launched it. So, what I talk about with that example is like, there’s a million ways that that feature could go wrong for people, and also there’s no reason for Google Maps needs to do that. That was just a feature they chose to build and tack onto the product because they thought that it would what? Increase engagement, right? People might like it, it would be fun and cute. So, I think about that and I think about all the meetings I’ve been in in my life, and I’m sure you all have been in some meetings, too. And I think how many hours in meetings did they discuss the color of the frosting? Or like, whether there should be sprinkles or no sprinkles. Or like, you know, how many illustrators drew out potential cupcake illustrations for this? How many hours did it take to build this thing without anybody realizing, or if they realized, without anybody else listening to them, it had all of these problems, that there were all of these flaws that could make it really unpleasant for people. And I think about that example all the time because I think it’s the perfect encapsulation of how kind of paternalistic tech can be, right? It’s like, “Oh, you didn’t say you wanted to track your calories, but we know best. And here’s how we’re going to do that, and we’re going to foist it down your throat.” And then they’re sort of like, surprised people are unhappy with it."
+    },
+
+    {
+      "timestamp": "0:29:52.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. So, I love how someone tweeted about that for an hour and then within 3 hours it was taken down."
+    },
+
+    {
+      "timestamp": "0:29:58.4",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Right, and it’s like you think about that and it’s like, Okay. Do you think they spent more than 3 hours building it? Right? Like, I think they spent more than 3 hours on the cupcake. 100% I think they spent more than 3 hours on the cupcake. I think that is such an example of narrow thinking, right? It’s like, “We’ve decided to build this feature because it’s going to be fun and it’s going to boost engagement or whatever.” And all along the way people kind of push it along, push it along. It gets out into the wild and it’s like, you could have anticipated these problems. These problems are not actually even that difficult. They’re pretty surface level. If you’d sat down in a conference room with the team that was working on this and a whiteboard and you said, “What are all the ways this could go wrong?” You would have identified a lot of these problems very quickly. And so it’s very telling to me that you would get all the way through this design process and a build and then launch it to the world and not have thought through all of these things."
+    },
+
+    {
+      "timestamp": "0:30:46.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, let’s talk about something positive real quick. Can you tell us about your podcast?"
+    },
+
+    {
+      "timestamp": "0:30:50.6",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Uh, yeah! Absolutely. So, I have a podcast that started a couple months ago called, “No, You Go.” And it is with a couple of friends of mine, Jenn Lukas who is an engineering manager, actually at Urban Outfitters here in Philly, and Katel LeDû who’s the CEO of “A Book Apart” which is a little indie publishing company that published my second book, “Designed for Real Life” and we are also very good friends. So, we met each other through kind of professional stuff, but we also realized that we get along great, and as we were chatting one night at Jenn’s house over wine, like we often do, about our careers and sort of like, what we’re really doing with our lives, but also all of this other stuff around. Challenges that often face women at work and it’s like the frustrations about toxic cultures. We started realizing that we might have something that other people wanted to listen to, too. So, we launched it a little while ago, and we spent a lot of time interviewing people who are doing all kinds of awesome stuff and different kinds of industries and different kinds of organizations, and we look at how can we kind of… I called it the other day, I said “Live our best feminist lives at work.” Like, how do we figure out how to navigate all of the complexities and all the difficulties and the different cultures that we have interact with to pursue our goals to reach whatever ambitions we have in a way that also, you know, isn’t on anybody else’s terms but that’s on our own terms."
+    },
+
+    {
+      "timestamp": "0:32:07.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, so has anyone else listened to it besides me?"
+    },
+
+    {
+      "timestamp": "0:32:10.5",
+      "speaker": "Jason Staten",
+      "text": "I have not, but I will definitely add it to my podcast roll. I always have room, especially after reading your “Technically Wrong” book Sara, I’m definitely interested in your content so I’ll add that on my list."
+    },
+
+    {
+      "timestamp": "0:32:21.0",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Awesome! Thank you. Yeah, so yeah. “No, You Go.” And we are about to start a second season, so we’re running kind of short seasons and giving us a couple of weeks to breath in between them. So season 2 will be another batch of 10 episodes starting on the 17th of April."
+    },
+
+    {
+      "timestamp": "0:32:35.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I love it. It’s got an interview in the middle of it but then there’s also just a lot of fun conversation around the beginning and end and then you’ve got a part at the end where you always highlight something really cool."
+    },
+
+    {
+      "timestamp": "0:32:44.8",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Yeah, so it’s the “Fuck yeah! Of the week”, obviously we swear on our podcast every time, so… Because we have one every single time. And we wanted to kind of like, go out on a celebratory note so we’re always identifying like a person or a thing or an event, something that’s going on that we’re super excited about. Sometimes it’s like a concept. Like, we had one earlier on that was like, “My fuck yeah this week is for daylight, because we’re coming out of winter.” And we talked about how pleasant it is when you all of the sudden wake up in the morning and you’re making coffee or whatever it is you do first thing and you look out the window and you’re like, “Oh right. Light. Light is coming back.” But then sometimes it’s something super specific. Like, you know, we talked about the unveiling of the portraits of Barack and Michelle Obama a little bit a while ago. Or we talked about, you know, the Parkland teens, so it kind of varies from week to week, but no matter what there’s always a “Fuck yeah!” Because, we feel like… You know we talk a lot about things that are challenging or things that are tough subjects in sort of the work world and in our lives, but also we want to make sure we’re celebrating all of the things that are super fucking exciting. So yeah, that’s where we always end."
+    },
+
+    {
+      "timestamp": "0:33:48.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I think one of them was about cupcakes? Or no, eating a donut when you celebrate something."
+    },
+
+    {
+      "timestamp": "0:33:54.2",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Oh yeah! Yeah, we talked about you know, there’s a woman named Lara Hogan who was at Etsy for a long time and then she was a VP of Engineering at Kickstarter and she’s now doing her own thing, but she’s had this policy for a few years, where she calls it her “Donut Manifesto” where basically, she realized that when she hit a professional achievement like she got a promotion or she gave an awesome talk or whatever, she would go, “Cool.” And then she would move on. She wouldn’t pause and like, do anything else with that, and so, she decided that every time she hit something that was a professional goal of hers, she was going to pause and specifically say, “I’m getting myself a donut.” And the donut was specifically like, a celebratory moment. So, she takes photos of them, like she’ll Instagram all of her celebration donuts and tag them with like what the celebration is about, and like, you don’t have to eat a donut, you could eat something else, or you could do something that’s not, you know, food related at all, but I love the idea of taking a moment and having a specific action you take when you have something to celebrate because I think it is really easy to minimize achievements. I was just talking with an interviewee the other day for an episode coming out soon who was an author who… I mean she was nominated for the National Book Award last year, which is like a big freaking deal, and she was talking about how she spent a long time being like, if somebody would compliment her work she would just kind of be like, “Oh, you know… It’s no big deal.” or “Oh, you know… I don’t know.” And she started being like, “Thank you.” And that’s it. Just thank you. And she didn’t have to minimize what they had said about her, or just sort of owning it where she would be like, “Yeah, I am a great writer.” I mean, she doesn’t necessarily say that out loud when somebody compliments her, but like, to be able to just be like, confident about something that she’s good at. And I think that what she really hit on that I think is true is that particularly for women, there’s a lot of ways that we get trained pretty early on to like, not do that. To not own the things that we’re good at, or to feel guilty if we have any sense of ego or feel guilty if we take ourselves seriously, and so that’s definitely one of the values of the show is kind of like saying, “Fuck that.” And saying like, “No.” When we do something awesome we’re allowed to be like, “That was awesome!” And encourage that for other people, too."
+    },
+
+    {
+      "timestamp": "0:35:58.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, it’s something I really want to start doing."
+    },
+
+    {
+      "timestamp": "0:36:01.2",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "I like it."
+    },
+
+    {
+      "timestamp": "0:36:02.1",
+      "speaker": "Jen Luker",
+      "text": "So I know it’s about time to wrap up however I wanted to say that one of the biggest things that I took out of this book to the company that I’m working at now and what I hope to take on to my next company is the idea of edge cases versus stress cases and that really, really changed my own personal perspective regarding all of the projects that we’re currently working on, is it’s so much less about the edge cases that we don't worry about, and much more about the stress cases that we do need to worry about, and introducing that to my team, it was really interesting seeing all of their eyes pop open and to see that shift in others as well. So, I want to say thank you for that, and I feel like that changed at least one team as far as our perspectives of how we should be approaching tech."
+    },
+
+    {
+      "timestamp": "0:36:42.4",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "That is awesome and I want to say just quickly, definitely, I appreciate that, and also want to note that that’s not just me. So, when I worked on a “Design for Real Life” with Eric Meyer, he had had a conversation with somebody I think he met on Twitter where that concept first came out, and then Eric and I sort of honed that and figured out what that really meant and how that could be applied, and so that’s something that we’ve been kind of bouncing back and forth for a couple years, and I think it's really powerful. If you say it’s an edge case, you’re basically saying it’s not important; If you say it’s a stress case you’re saying, “Oh that’s where the weaknesses are. Let’s figure out how to fix our weaknesses.” And it just totally changes perspective about what’s important and who’s important, and I think, honestly, when you think that way, everybody wins, right? All the people who have the “Normal Cases” they all win, too, because that still works for them."
+    },
+
+    {
+      "timestamp": "0:37:24.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. Well thank you so much for coming on and talking to us."
+    },
+
+    {
+      "timestamp": "0:37:27.6",
+      "speaker": "Sara Wachter-Boettcher",
+      "text": "Yeah, thank you all so much for having me!"
+    },
+
+    {
+      "text": "(Begin Exit Music: Electro Swing)"
+    },
+
+    {
+      "timestamp": "0:37:29.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And thanks so much for listening. I hope you enjoyed hearing from Sara as much as I did. We’re still doing a giveaway for signed copies of “Technically Wrong” and remember we’re giving away 5 signed copies of that. All you have to do is go over to orbit.fm/BookBytes/giveaway and there’s a form there that asks you to go leave an iTunes review on your iPhone or in Apple Podcasts, or on your computer on iTunes and it’s really quick and really easy; and I know a lot of you are listening to this at a point where you can’t leave a review right now and so then later you forget about it, but the deadline for that is the day after July 4th, so you’ve got a little bit of time, and if you’re sitting there watching fireworks on July 4th and you realize you haven’t left a review yet and you wanted to, just let those fireworks remind you, “Oh yeah, BookBytes. Firework. I need to go leave a review on BookBytes.” I don’t know, maybe that will help if you have trouble remembering. I know I have problems with that sometimes. So anyway, thank you so much, even if you don’t leave a review, thank you so much just for listening. Next time we are starting a book called “The Imposter’s Handbook” It’s all about filling in the gaps in your computer science knowledge whether you went and got a computer science degree or you didn’t and you’re in the field and trying to keep up with everyone who is throwing around these computer science terms, how can you learn these things on your own? And I'm really, really excited about this one, I hope you are, too."
+    }
+  ]
+}
