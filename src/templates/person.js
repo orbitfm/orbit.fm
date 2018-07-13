@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import Page from '../components/Page';
 import PodcastListing from '../components/PodcastListing';
@@ -10,7 +9,7 @@ const CircleImage = styled.img`
   margin-right: 20px;
 `;
 
-const PersonDetails = styled.div`
+const Container = styled.div`
   display: flex;
 `;
 
@@ -18,11 +17,16 @@ const Description = styled.div`
   flex: 1;
 `;
 
+const PersonDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export default ({ data }) => {
   const person = data.contentfulPerson;
   return (
     <Page title={person.name} headTitle={person.name}>
-      <PersonDetails>
+      <Container>
         {person.image && (
           <CircleImage
             src={person.image.file.url}
@@ -30,29 +34,31 @@ export default ({ data }) => {
             height="100px"
           />
         )}
-        <Description
-          dangerouslySetInnerHTML={{
-            __html: person.fields.descriptionFormatted,
-          }}
-        />
-        {person.links &&
-          person.links.map(link => (
-            <a
-              href={link.url}
-              target="
+        <PersonDetails>
+          <Description
+            dangerouslySetInnerHTML={{
+              __html: person.fields.descriptionFormatted,
+            }}
+          />
+          {person.links &&
+            person.links.map(link => (
+              <a
+                href={link.url}
+                target="
       _blank"
-              rel="noopener"
-              key={link.id}
-            >
-              <img
-                title={link.linkType.name}
-                src={link.linkType.image.file.url}
-                width="20px"
-                height="20px"
-              />
-            </a>
-          ))}
-      </PersonDetails>
+                rel="noopener"
+                key={link.id}
+              >
+                <img
+                  title={link.linkType.name}
+                  src={link.linkType.image.file.url}
+                  width="20px"
+                  height="20px"
+                />
+              </a>
+            ))}
+        </PersonDetails>
+      </Container>
       {person.podcast && <PodcastListing podcasts={person.podcast} />}
       {person.episode && <EpisodeListingShort episodes={person.episode} />}
     </Page>
