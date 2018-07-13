@@ -1,10 +1,10 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "react-emotion";
-import PageWithSidebar from "../components/PageWithSidebar";
-import LatestEpisode from "../components/LatestEpisode";
-import Subscribe from "../components/Subscribe";
-import EpisodeListing from "../components/EpisodeListing";
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'react-emotion';
+import PageWithSidebar from '../components/PageWithSidebar';
+import LatestEpisode from '../components/LatestEpisode';
+import Subscribe from '../components/Subscribe';
+import EpisodeListing from '../components/EpisodeListing';
 
 export default ({ data }) => {
   const podcast = data.contentfulPodcast;
@@ -48,7 +48,7 @@ export default ({ data }) => {
       {episodes
         ? episodes.map(e => (
             <EpisodeListing
-              shortDescription={e.shortDescription}
+              shortDescription={e.shortDescription || ''}
               publicationDate={e.publicationDate}
               name={e.name}
               path={e.fields.path}

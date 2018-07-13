@@ -52,7 +52,7 @@ const PodcastListing = ({ podcasts }) => {
   return (
     <section>
       <Header>Podcasts</Header>
-      {podcasts.map(podcast => <Podcast podcast={podcast} />)}
+      {podcasts.map(podcast => <Podcast key={podcast.id} podcast={podcast} />)}
     </section>
   );
 };
