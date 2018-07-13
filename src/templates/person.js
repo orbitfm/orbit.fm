@@ -14,12 +14,21 @@ const Container = styled.div`
 `;
 
 const Description = styled.div`
-  flex: 1;
+  flex: 0;
 `;
 
 const PersonDetails = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+`;
+
+const Links = styled.div`
+  display: flex;
+
+  a {
+    margin-right: 12px;
+  }
 `;
 
 export default ({ data }) => {
@@ -40,23 +49,25 @@ export default ({ data }) => {
               __html: person.fields.descriptionFormatted,
             }}
           />
-          {person.links &&
-            person.links.map(link => (
-              <a
-                href={link.url}
-                target="
+          <Links>
+            {person.links &&
+              person.links.map(link => (
+                <a
+                  href={link.url}
+                  target="
       _blank"
-                rel="noopener"
-                key={link.id}
-              >
-                <img
-                  title={link.linkType.name}
-                  src={link.linkType.image.file.url}
-                  width="20px"
-                  height="20px"
-                />
-              </a>
-            ))}
+                  rel="noopener"
+                  key={link.id}
+                >
+                  <img
+                    title={link.linkType.name}
+                    src={link.linkType.image.file.url}
+                    width="20px"
+                    height="20px"
+                  />
+                </a>
+              ))}
+          </Links>
         </PersonDetails>
       </Container>
       {person.podcast && <PodcastListing podcasts={person.podcast} />}
