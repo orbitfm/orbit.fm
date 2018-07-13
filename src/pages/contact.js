@@ -49,12 +49,13 @@ const Button = styled.button`
 `;
 
 const ContactPage = ({ data, location }) => {
-  let show;
-  let url;
-  try {
-    url = new URL(`http://www.fake.com${location.pathname}${location.search}`);
-    show = url && url.searchParams.get('show');
-  }
+  let show = null;
+  /*let show;*/
+  //let url;
+  //try {
+    //url = new URL(`http://www.fake.com${location.pathname}${location.search}`);
+    //show = url && url.searchParams.get('show');
+  /*}*/
 
   return (
     <PageWithSidebar
