@@ -58,7 +58,9 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       value: slug(node.name, { lower: true }),
     });
     const description =
-      node.description___NODE && getNode(node.description___NODE).internal
+      node.description___NODE &&
+      getNode(node.description___NODE) &&
+      getNode(node.description___NODE).internal
         ? getNode(node.description___NODE).internal.content
         : '';
     createNodeField({
