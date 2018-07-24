@@ -1,0 +1,1817 @@
+{
+  "podcast": "BookBytes",
+  "episode": "10",
+  "transcript": [
+    {
+      "text": "(Intro music: Electro Swing)"
+    },
+
+    {
+      "timestamp": "0:00:12.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hello, and welcome to BookBytes, a book club for developers. This week we’re talking about… Hey, where did my book go? Oh, we’re talking about “The Imposter’s Handbook” which is a CS primer for self-taught programmers."
+    },
+
+    {
+      "timestamp": "0:00:26.3",
+      "speaker": "Jason Staten",
+      "text": "I"
+    },
+
+    {
+      "timestamp": "0:00:26.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I had- Go ahead. We’ll go ahead and say our names."
+    },
+
+    {
+      "timestamp": "0:00:28.6",
+      "speaker": "Jason Staten",
+      "text": "Well, I was gonna"
+    },
+
+    {
+      "timestamp": "0:00:29.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:00:30.2",
+      "speaker": "Jason Staten",
+      "text": "This one is actually, I think primer ( ‘/primər/ ) is the term."
+    },
+
+    {
+      "timestamp": "0:00:34.7",
+      "speaker": "Jen Luker",
+      "text": "No, it’s primer ( ˈprīmər/ )."
+    },
+
+    {
+      "timestamp": "0:00:35.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Primer? ( ‘/primər/ )"
+    },
+
+    {
+      "timestamp": "0:00:36.0",
+      "speaker": "Jason Staten",
+      "text": "Go look this up."
+    },
+
+    {
+      "timestamp": "0:00:37.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "No, I’ve heard both pronunciations."
+    },
+
+    {
+      "timestamp": "0:00:38.3",
+      "speaker": "Jason Staten",
+      "text": "‘Cause"
+    },
+
+    {
+      "timestamp": "0:00:38.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I think it may be one of those things where both are correct."
+    },
+
+    {
+      "timestamp": ":00:40.6",
+      "speaker": "Jason Staten",
+      "text": "‘Cause primer ( ‘/primər/ ) is like a… It’s an elementary textbook that serves as an introduction."
+    },
+
+    {
+      "timestamp": "0:00:45.5",
+      "speaker": "Jen Luker",
+      "text": "Mm-hmm. In England."
+    },
+
+    {
+      "timestamp": "0:00:46.6",
+      "speaker": "Jason Staten",
+      "text": "And the other one is like a substance."
+    },
+
+    {
+      "timestamp": "0:00:48.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:00:49.4",
+      "speaker": "Jason Staten",
+      "text": "I don’t know."
+    },
+
+    {
+      "timestamp": "0:00:49.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Interesting."
+    },
+
+    {
+      "timestamp": "0:00:50.6",
+      "speaker": "Jason Staten",
+      "text": "Google says primer ( ‘/primər/ ). I checked that today ‘cause I was"
+    },
+
+    {
+      "timestamp": "0:00:52.6",
+      "speaker": "Safia Abdalla",
+      "text": "Oh wow, you’re right. That is so interesting."
+    },
+
+    {
+      "timestamp": "0:00:53.2",
+      "speaker": "Jason Staten",
+      "text": "Not wanting to botch it."
+    },
+
+    {
+      "timestamp": "0:00:55.7",
+      "speaker": "Jen Luker",
+      "text": "Well…"
+    },
+
+    {
+      "timestamp": "0:00:55.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Ah, it says “audio unavailable” so I can’t even listen to the pronunciation."
+    },
+
+    {
+      "timestamp": "0:00:59.0",
+      "speaker": "Safia Abdalla",
+      "text": "The accents are different on the i, in the pronunciation scheme. It’s an interesting tidbit, so"
+    },
+
+    {
+      "timestamp": "0:01:02.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:01:05.0",
+      "speaker": "Safia Abdalla",
+      "text": "Depending on the context, whether it’s fluid or a textbook, it’s pronounced differently. Fun fact!"
+    },
+
+    {
+      "timestamp": "0:01:11.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, so"
+    },
+
+    {
+      "timestamp": "0:01:12.0",
+      "speaker": "Jen Luker",
+      "text": "Interesting."
+    },
+
+    {
+      "timestamp": "0:01:12.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Podcasts are one of those places where you realize you’re pronouncing things wrong"
+    },
+
+    {
+      "timestamp": "0:01:16.6",
+      "speaker": "Jen Luker",
+      "text": "For your entire life."
+    },
+
+    {
+      "timestamp": "0:01:16.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "‘Cause you’ve never said it out loud, you’ve only read it. Yeah."
+    },
+
+    {
+      "timestamp": "0:01:19.3",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:01:19.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "There may be words that you’ve never pronounced out loud."
+    },
+
+    {
+      "timestamp": "0:01:22.3",
+      "speaker": "Safia Abdalla",
+      "text": "That’s true."
+    },
+
+    {
+      "timestamp": "0:01:23.0",
+      "speaker": "Jason Staten",
+      "text": "Yes."
+    },
+
+    {
+      "timestamp": "0:01:23.0",
+      "speaker": "Safia Abdalla",
+      "text": "Also just goes to show how complicated language is that same spelling, similar kind of idea, but different pronunciations."
+    },
+
+    {
+      "timestamp": "0:01:31.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I don’t think I’d ever pronounced Hermione until the movies came out and I was like, “What?” I’d always said it her-me-own."
+    },
+
+    {
+      "timestamp": "0:01:37.7",
+      "speaker": "Safia Abdalla",
+      "text": "That’s so interesting."
+    },
+
+    {
+      "timestamp": "0:01:37.7",
+      "speaker": "Jason Staten",
+      "text": "At least I say. (Inaudible: 0:01:39.5  Ethereum?) right now, so."
+    },
+
+    {
+      "timestamp": "0:01:41.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay, so it’s a CS primer ( ‘/primər/ ) for self-taught programmers."
+    },
+
+    {
+      "timestamp": "0:01:44.3",
+      "speaker": " Jen",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:01:44.5",
+      "speaker": "Jason Staten",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:01:45.5",
+      "speaker": "Jen Luker",
+      "text": "Kinda want to start this over now."
+    },
+
+    {
+      "timestamp": "0:01:47.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I’m Adam Garrett-Harris."
+    },
+
+    {
+      "timestamp": "0:01:48.4",
+      "speaker": "Jen Luker",
+      "text": "I’m Jen Luker."
+    },
+
+    {
+      "timestamp": "0:01:49.4",
+      "speaker": "Safia Abdalla",
+      "text": "I’m Safia Abdalla."
+    },
+
+    {
+      "timestamp": "0:01:50.4",
+      "speaker": "Jason Staten",
+      "text": "And I’m Jason Staten."
+    },
+
+    {
+      "timestamp": "0:01:51.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Awesome. So, since this is a book that’s about computer science for self-taught programmers, we want to talk about our CS backgrounds. So, who wants to go up first?"
+    },
+
+    {
+      "timestamp": "0:01:59.4",
+      "speaker": "Jen Luker",
+      "text": "I’ve probably been doing it the longest. So, I’ll go first."
+    },
+
+    {
+      "timestamp": "0:02:02.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:02:03.3",
+      "speaker": "Jen Luker",
+      "text": "I started programming when I was a kid on my Commodore 64, I learned out of magazines. BASIC was all the rage at the time, and I think the biggest thing I did was make a crappy Donkey Kong when my parents wouldn’t buy it for me, but I think I’ve mentioned that before."
+    },
+
+    {
+      "timestamp": "0:02:16.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh, yeah."
+    },
+
+    {
+      "timestamp": "0:02:17.3",
+      "speaker": "Jen Luker",
+      "text": "However, I did actually drop it in my Jr. High and High School years, for the most part. I had to take an A+ certification class in high school but it wasn’t really until college that I got pretty deeply into computer science. I was programming, you know, the very first classes, Matlab, C++, Java, and a lot of websites. GeoCities and AngelFire and all of those were my friends, I’d basically posted a website on every single one of them at some point. I still don’t have my official Computer Science Degree. The goal when I started college was to double major, one in computer science was an emphasis in software engineering, and the other was a major in applied mathematics with a minor if physics, but because of the fact that it’s a combo bachelor/master program, I won’t actually graduate with any degrees until I get to the end, which will then give me 2 bachelors, 2 masters, and only a year left to my doctorate of artificial intelligence programming."
+    },
+
+    {
+      "timestamp": "0:03:15.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Wow."
+    },
+
+    {
+      "timestamp": "0:03:15.1",
+      "speaker": "Jen Luker",
+      "text": "But Lord knows when that’s actually gonna happen so… This book is fantastic for me because of the fact that I don’t have all of that yet, I’m still learning."
+    },
+
+    {
+      "timestamp": "0:03:24.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, so I have a background in computer science, I did web pages when I was a kid and I did some TI-83 calculator programming in high school, and then I took 2 years of computer science in high school, and then I got a computer science bachelor's degree, but I still feel like I have a lot of gaps in my CS knowledge, so I still feel like this is a good book for me."
+    },
+
+    {
+      "timestamp": "0:03:41.9",
+      "speaker": "Safia Abdalla",
+      "text": "I have a similar story to Adam. It’s debatable whether it would be called programming, but I call it programming. Building HTML, web pages when I was 11 years old, and just kept tinkering with that until I got into Python and Machine Learning when I was 13 and I was teaching myself that independently throughout high school and I also took some systems and data structures and database courses when I was in high school. Then I went and got a CS degree at an engineering school. So, formally educated as well."
+    },
+
+    {
+      "timestamp": "0:04:14.6",
+      "speaker": "Jason Staten",
+      "text": "Likewise, I’m with both Adam and Safia. My origins fall back to HTML programming on GeoCities. I recall being something like 10 years old and showing my dad how to write a webpage and he was just blown away. And past that I got into the Y-hacker scene, which is a hacker group for yahoo messenger when I was about 13 years old, and there were all these people who would go into yahoo messenger and make gradients in the messages that they sent, they could send boot codes and wipeout an entire chat channel and I wanted to get into that."
+    },
+
+    {
+      "timestamp": "0:04:46.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:04:48.1",
+      "speaker": "Jason Staten",
+      "text": "And so, I earned how. I went and pirated myself a copy of Visual Studio… Actually it wasn’t even Visual Studio then, it was Visual Basic 4 that I hopped on and started building my own apps for it, and getting involved with that community a bit, although some of the people that I was involved with did much more malicious things, I was just having a good time. Post that,making flash games when it was macromedia flash, and then in high school took one self-study programming class because my computer teacher didn’t know what to do with me."
+    },
+
+    {
+      "timestamp": "0:05:18.3",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:05:18.6",
+      "speaker": "Jason Staten",
+      "text": "Then in 2007, I did go and get some formal education, I went to Neumont University and it was a 2 year bachelor degree where I studied year round for 8 quarters, and they were primarily C+ and Java focused so they didn’t touch on some lower level things such as pointers and compilers. I never had to write a lexer or a parser for school, but I did cover a couple of things like algorithms and Big O which had a pretty high retake rate in school, that was one thing I know that people struggle with a lot at Neumont and it was something like 40% had to retake the class and I made it through that so I felt pretty accomplished. Then I went into industry and here I am now."
+    },
+
+    {
+      "timestamp": "0:06:02.4",
+      "speaker": "Safia Abdalla",
+      "text": "Hurrah!"
+    },
+
+    {
+      "timestamp": "0:06:03.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, do you feel like you have gaps in your…"
+    },
+
+    {
+      "timestamp": "0:06:06.5",
+      "speaker": "Jason Staten",
+      "text": "Oh, I definitely do. Like I said, they tried to strike a balance between the CS theory and what was applicable for the field, so I am feeling some gaps when I look through the table of contents here, I see things that the terms are familiar but I have never actually had a chance to dive into them, so I’m really excited to go through “The Imposter’s Handbook” and have a reason to go and learn about those things."
+    },
+
+    {
+      "timestamp": "0:06:31.4",
+      "speaker": "Safia Abdalla",
+      "text": "I agree with, yeah, I agree with Jason. I have a familiarity with some concepts at a surface level, but I’ve only ever had to deeply engage with topics in certain courses. So, a lot of these items in the table of contents are piquing my curiosity."
+    },
+
+    {
+      "timestamp": "0:06:49.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, and I think it’s going to be fun for me to go back to some of these topics that I wasn’t that interested in when I was in school and I didn’t have a lot of experience to build on back then, I was just learning a bunch theory without any real world experience, and so now that I have that, it might be interesting to see this stuff and see how it can actually apply on the job and make me a better programmer in my career."
+    },
+
+    {
+      "timestamp": "(Typewriter",
+        "speaker": "ngs)
+
+_____________",
+"text": "_"
+    },
+
+    {
+      "timestamp": "
+
+
+0:07:12.7",
+"speaker": "Adam Garrett-Harris",
+"text": "Yeah, so let’s get into the forewords and the preface. What did you see in there?"
+    },
+
+    {
+      "timestamp": "0:07:18.4",
+      "speaker": "Safia Abdalla",
+      "text": "Jen, I think you had something?"
+    },
+
+    {
+      "timestamp": "0:07:20.2",
+      "speaker": "Jen Luker",
+      "text": "I did. I had a couple things. So, in the foreword by Chad Fowler, he gives this kind of list of, “I think most of my success in the field of computer software development comes from my belief that: ...” And it gives this long list of 8 items, but number 5 and really number 8 on this list, really resonated with me. Number 5 said, “All of the hard sounding stuff that college programmers say, is just chunks of knowledge with names I don’t know yet.” And number 8 is, “Finally, and most important, somehow I get good work done and it doesn’t fall apart. All the stuff I don’t know must be just a bonus on top of what I’ve already learned.”"
+    },
+
+    {
+      "timestamp": "0:07:54.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:07:55.0",
+      "speaker": "Jen Luker",
+      "text": "And I feel like the reason I resonate so deeply with 5 is I’ve gotten really into the habit of whenever someone uses a term I don’t know, to just ask what it is, and most of the time, once they explain what it is I’m like, “Oh yeah, oh yeah. I’ve totally been doing that for years, I actually know a lot about it. I just didn’t know that’s what it was called.” So, I feel like a lot of the time, it’s just that I don't have the jargon to back up what it is I already know, and number 8 really resonates because in the end, if your stuff works, if your code works, if it does what it’s supposed to do and you can move on to the next story then you’re doing good. You are a programmer whether you know these things or not. It’s not that you couldn’t, you know, be improved by understanding and knowing these things, but you are a programmer and you are getting things done."
+    },
+
+    {
+      "timestamp": "0:08:45.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, number 5 stuck out to me as well because it says “chunks of knowledge that you don’t know yet. Names that you don’t know yet” {“...chunks of knowledge with names I don’t know yet.”}, it reminds me a lot of this book about how to learn, the book is called “A Mind For Numbers”, and it’s just about how to learn hard things. So, math is an example of a hard thing, and you can only hold so many things in your brain at once, it’s like juggling, and so you have to chunk those these down and take this entire concept and put it in one chunk with a name, and now you can just use that name that represents a whole bunch of stuff that you used to have to juggle before, and now you can think about other things as well. Does that make sense?"
+    },
+
+    {
+      "timestamp": "0:09:22.8",
+      "speaker": "Jen Luker",
+      "text": "I also feel like it ties back to the first book we read “Apprenticeship Patterns” where the purpose of the book was to give us a common language to explain concepts and throughout science and, you know, philosophy we’ve given names to complex concepts in order-"
+    },
+
+    {
+      "timestamp": "0:09:43.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:09:43.4",
+      "speaker": "Jen Luker",
+      "text": "To simplify communication.  I feel that, you know, that’s very much where we land here is that it is a chunk of information. It’s very much stuffing a whole bunch into a couple of words, and it’s just that we haven’t developed that term yet as part of our language."
+    },
+
+    {
+      "timestamp": "0:10:04.5",
+      "speaker": "Jason Staten",
+      "text": "Those both definitely align with my notes. I have a note about us talking about the “Be the Worst” pattern, and if I were to go tell somebody who hadn’t read “Apprenticeship Patterns” before to go be the worst on their team, they may take it the wrong way. Also, programming terms can help things be Googleable. For example, if you’re wanting to go and Google “Monad” instead of “Code Burrito” you’re going to get much more relevant results with the term that it’s actually defined by. And I loved a recent blog post that has been cycling around called “conversations with a six-year-old on functional programming” where a developer explains to his six-year-old what free theorems are and has a description of functions as machines and he explains it as a machine that takes in an input and gives a specific output every time you give it something and that’s what clicked for the six-year-old, that he was able to explain it so well."
+    },
+
+    {
+      "timestamp": "0:10:55.3",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I really liked what you touched on there about simple explanations. It relates to point number 4 highlighted in this list which is, “Everything starts with this simple foundation and grows as simple blocks on top” and from my experiences as a computer science major, I think one of the more important things about my Computer Science Degree is not the fancy sounding words or the lingo, I think it’s actually the overarching concepts and understanding that you can develop about computing through the like, 4 years or however many it is of your program. I kind of have (laughs) strong opinions about computer-y words because I think, oftentimes, people who throw around hard-sounding stuff or lingo, tend to use it as a way to either A) Intentionally make other people inferior or less intelligent, or B) Make themselves seem more intelligent by using words or terminology that is specific to a particular industry. See, I think like, if I had to summarize the point of a 4-year college CS degree, I’d say it’s not to learn all of the lingo and the fancy words, it’s like you learn all of that stuff when you’re in your 4 years and then once you’re done you look back at it and you’re like, “Okay, what are the overarching principles above all of the lingo and the fancy words?” And those are also things you can pick up if you’re self-taught and just really introspective and diligent about how you learn software, or if you just like, go straight to industry. So that’s why I really like number 4, because I feel like number 4 is the real point of a college CS degree in my opinion and number 5 is, I think, sometimes like the stereotype that comes from like,very realistic occurrences of people, maybe weaponizing is a strong word, but people weaponizing their computer science degrees and using them as a way to claim they’re better programmers or software or engineers because of the degree. Just my ramble."
+    },
+
+    {
+      "timestamp": "0:13:00.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah! You know, like Jen, when you said you always ask what a word means when you don’t know. When I’m explaining something to a fellow programmer I like to ask them if they’re familiar with it before I just start using it."
+    },
+
+    {
+      "timestamp": "0:13:12.3",
+      "speaker": "Jen Luker",
+      "text": "Mm-hmm (Affirmative)."
+    },
+
+    {
+      "timestamp": "0:13:13.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Because a lot of times people are afraid to ask, and I don’t want to explain it if they already know it."
+    },
+
+    {
+      "timestamp": "0:13:16.5",
+      "speaker": "Jen Luker",
+      "text": "So, how many of you are Star Trek: The Next Generation fans?"
+    },
+
+    {
+      "timestamp": "0:13:19.5",
+      "speaker": "Safia Abdalla",
+      "text": "Me!"
+    },
+
+    {
+      "timestamp": "0:13:20.5",
+      "speaker": "Jen Luker",
+      "text": "Yay! Okay, so do you remember the episode “Darmok”?"
+    },
+
+    {
+      "timestamp": "0:13:24.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yes."
+    },
+
+    {
+      "timestamp": "0:13:24.0",
+      "speaker": "Jen Luker",
+      "text": "Where Picard is-"
+    },
+
+    {
+      "timestamp": "0:13:25.8",
+      "speaker": "Safia Abdalla",
+      "text": "Spoiler Alert!"
+    },
+
+    {
+      "timestamp": "0:13:27.3",
+      "speaker": "Jen Luker",
+      "text": "Trying to make contact- Yes, I know! So, Piccard is trying to make contact with a um…"
+    },
+
+    {
+      "timestamp": "0:13:33.5",
+      "speaker": "Safia Abdalla",
+      "text": "Alien race… person."
+    },
+
+    {
+      "timestamp": "0:13:34.4",
+      "speaker": "Jen Luker",
+      "text": "Yes, an alien race that doesn’t… They can’t find a way of communicating. The translators aren’t helping them, they’re just spouting nonsense like, “Darmok over the water” and it takes the entire episode to finally figure out, after many many things happen, that the race actually speaks in metaphor."
+    },
+
+    {
+      "timestamp": "0:13:55.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:13:56.1",
+      "speaker": "Jen Luker",
+      "text": "So, when they are talking about Darmok over the water, they’re actually talking about the story of Darmok and when he went over the water and all of the like, fableized lessons that they learned because of that story. So, the entire story is part of common knowledge, and I feel like when you mentioned the word “Slang” though you didn’t mean to, Safia, it means something very similar, that it becomes to ingrained in how you speak and you think of it that those that aren’t ingrained and don’t speak in that fashion have a difficult time understanding what’s going on, thus the common language becomes more important when you’re in that realm, and trying to get into that realm can be complicated because of that language barrier. And like you said, sometimes that can be used on purpose in order to keep people out and sometimes it’s just strictly, that’s the current world that they’re living in, and that’s what they use, and it’s easier for us to see ourselves and assume that other people know what we know than it is to realize everyone is unique, we’ve gotten our paths…. And no path is exactly the same, and we’ve all learned something different along the way, and we’ve all picked up something different along the way. So, but it was just one of those things that harkens back to that episode for me, a lot. It was like, the most popular episode ever of that series."
+    },
+
+    {
+      "timestamp": "0:15:19.7",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:15:21.1",
+      "speaker": "Jen Luker",
+      "text": "Was trying to learn to communicate with a completely different form of language, and not just syntax but metaphorical versus spelled out."
+    },
+
+    {
+      "timestamp": "0:15:31.3",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. Another thing that makes communication, or just language, difficult in the field of computing in general is that he same overarching concept is translated in different ways depending on which aspect of computing you’re talking about. So, for example, like, a pretty general, I think… I guess aconcept or just a pattern, in computing is the notion of doing any work until you absolutely have to. It’s used a lot as a way to improve the performance of the machine. Work takes effort, so just don’t do it until you have to. And you know, depending on whether you’re in operating systems, whether you’re in graphics, whether you’re in web applications, that same overarching concept of don’t do any work until you absolutely have to in your program, is translated into different terms and concepts within each of those sub fields. So, like, just within, I guess general field of computer science, even the sub fields themselves sometimes have trouble communication with each other because the language is targeted towards a specific set of challenges and perspectives."
+    },
+
+    {
+      "timestamp": "0:16:40.8",
+      "speaker": "Jen Luker",
+      "text": "Like the word “component”, in every different form of science it means something slightly different."
+    },
+
+    {
+      "timestamp": "0:16:45.1",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:16:46.3",
+      "speaker": "Jen Luker",
+      "text": "You know, whether-"
+    },
+
+    {
+      "timestamp": "0:16:46.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. Component is just like, “thing.” It’s a thing."
+    },
+
+    {
+      "timestamp": "0:16:48.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:16:48.6",
+      "speaker": "Jen Luker",
+      "text": "It’s “the thing”, right? But every “thing” is a little bit different and every wrapper around it is just a little bit different, but everybody uses the word component, and we use the word component even in specifically JavaScript for different things, too. So, it can even be a word that’s overused to the point of losing its original meaning."
+    },
+
+    {
+      "timestamp": "0:17:07.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, in the first foreword by Scott Hanselman, I like how he says “Software engineering is…” He gives the definition of software engineering and computer science and how those are two completely different things. “Software engineering is [about] project management and testing and profiling and iterating and shipping.” I think it’s really focused on shipping. “Computer science is about the theory of data structures, (and also some) mathy things.”"
+    },
+
+    {
+      "timestamp": "0:17:30.5",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:17:31.3",
+      "speaker": "Jen Luker",
+      "text": "I like mathy things."
+    },
+
+    {
+      "timestamp": "0:17:32.4",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I would almost say that… So, I just recently finished my degree so a lot of this talk about computer science is really fresh on my mind, especially as I’m trying to like be a little bit more introspective about what just happened over the past 4-ish years; and, you know I mentioned that I was taking computer science classes in highschool and that I was self-taught and like reading books, and hacking on my own on the side, and I think the biggest thing that I left college CS with was like, a computational problem solving mindset. I feel like I’ve gotten to a point where I… Like, my brain’s been rewired in a really weird way to where I just problem solve and approach programming differently than when I did before college and even now when I work on projects with the intent of applying what I learned versus when I’m just like, being a little careless about it, I notice a difference in my approach. I hate it when people say that computer science is about like data structures and Big O notation and all that, because it definitely is, but I know that when I was like, looking into going into a computer science degree and that was the stuff I was hearing, it kind of made me disinterested in it."
+    },
+
+    {
+      "timestamp": "0:18:46.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:18:47.4",
+      "speaker": "Safia Abdalla",
+      "text": "And I put this out to say that I think there’s like, a lot of tongue-in-cheek commentary about computer science being like, data structures and BIg o and stuff and that’s like the first 2 years, or first year of your degree, or maybe just like the first 3 months of your degree depending on what college or university you go to, but there’s like, definitely a whole realm of really applicable and interesting stuff that goes beyond that. So, like I said-"
+    },
+
+    {
+      "timestamp": "0:19:09.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, like I even had a class called “Software Engineering.”"
+    },
+
+    {
+      "timestamp": "0:19:12.8",
+      "speaker": "Safia Abdalla",
+      "text": "I did, too. Yeah. I had 2 classes I took that were SE type stuff. I know this is kind of about learning to… The book is kind of… It seems to be aimed at filling in the gaps for people who haven’t received a CS degree, but I do think there’s like value in the CS degree, but it’s like a different kind of value. Like, I don’t necessarily think that you can compare the two."
+    },
+
+    {
+      "timestamp": "0:19:38.2",
+      "speaker": "Jason Staten",
+      "text": "I would say that even Scott Hanselman has a key word that he uses in the book and we’ve said it’s a few times, and that’s being “gap.” So, it’s knowing that even though he doesn’t know everything, you can’t do engineering without any computer science knowledge. And likewise, simply computer science on its own without any application also isn’t all that valuable. It’s just a bunch of theory. So, it’s the intersection of both of them that allows us to actually make problems solvable and be beneficial to everybody. So, I wouldn’t discount either one or the other."
+    },
+
+    {
+      "timestamp": "0:20:19.3",
+      "speaker": "Safia Abdalla",
+      "text": "I think, looking back, one of the ways that I was able to make my CS degree more useful to me is by actively applying what I was learning by contributing by open source, starting to do internships and part time jobs and stuff early, and like, maintaining a healthy balance and making sure that like, the stuff I was learning wasn’t just in the classroom. So, I feel like I kind of got that balance between application and theory pretty well while I was learning."
+    },
+
+    {
+      "timestamp": "0:20:50.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, that’s cool. Alright, anything else from the forewords or the preface?"
+    },
+
+    {
+      "timestamp": "0:20:53.5",
+      "speaker": "Jen Luker",
+      "text": "Did anyone see the purpose of the image that he chose for the cover?"
+    },
+
+    {
+      "timestamp": "0:20:58.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:20:59.5",
+      "speaker": "Jen Luker",
+      "text": "So, I’m a space nerd to the core, so I’m going to read that really fast, just because I thought it was crazy cool. So, “The image used for the cover of this book (and the inspiration for the splash image on the website) comes from NASA/JPL: The image is entitled HD 40307g, which is a ‘super earth’: Twice as big in volume as the Earth, HD 40307g straddle the line between ‘Super Earth’ and ‘mini-Neptune’ and scientists aren’t sure if it has a rocky surface or one that’s buried beneath thick layers of gas and ice. One thing is certain, though: at eight times the Earth’s mass, its gravitational pull is much, much stronger.” One of the reasons for the purpose of this poster was to try to give an idea of what it would be like to travel to different planets and what those different adventures would be like, and he felt that the cover of this photo was what he felt like when he was learning to program. “It was just a wild rush of freakishly fun new stuff that was intellectually challenging while at the same time feeling relevant and meaningful.” So he felt like it was also the same way when he wrote the book, it was just the skydiving to an unknown planet, and I really love that idea, because every time I’m learning something new I have that same feeling. You know? You just… You can’t… I can’t just, you know, knit my toes in for 2 seconds and step out, I actually need to just jump off that plane and dive in wholeheartedly and get the rush from it, as well. So, I’m hoping to do the same with the book."
+    },
+
+    {
+      "timestamp": "0:22:27.2",
+      "speaker": "Safia Abdalla",
+      "text": "Yay."
+    },
+
+    {
+      "timestamp": "0:22:27.2",
+      "speaker": "Jason Staten",
+      "text": "As with anything that’s extreme, there’s always a risk involved and one of them that Rob calls out early in the preface is “spreading ignorance is my true nightmare.” And I read that, and I liked that line and I wanted to know, what were all of your opinions of that statement?"
+    },
+
+    {
+      "timestamp": "0:22:46.9",
+      "speaker": "Jen Luker",
+      "text": "I highlighted it in the book I wrote in my book for that line. (laughs)"
+    },
+
+    {
+      "timestamp": "0:22:50.8",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I’ve been writing a lot of blog posts recently, and the blog posts have mostly been intended as personal learning logs/content that people can consume publicly, and because I kind of write them as personal learning logs and just my own notes and stuff, sometimes I will write something out and publish it that isn’t necessarily correct, and I’ve been called out on it. In some ways very harshly and inappropriately, and in some ways very well. It’s been an interesting experience. I don’t know, it’s not intentionally spreading ignorance, it’s just I’m unaware and I try my best to express that I’m not totally sure about the conclusion that I’m drawing, but when I read that statement, and it was kind of in a similar context, too. He was discussing somebody who had written a blog post and in the blog post made a statement that was a little inaccurate, and got called out for it. I think that tends to happen a lot, especially because in the tech community we write and share so much knowledge with each other, you’re bound to like, make a mistake or 2. So it resonated with me from very personal direct experience because I was in a similar situation."
+    },
+
+    {
+      "timestamp": "0:24:05.0",
+      "speaker": "Jen Luker",
+      "text": "So, when I was 15 I had my first job working in tech support and I used to go back and hang out with the programmers that were writing the software in which I was supporting, and it was very frustrating to me, because I desperately want to learn, how many of them just kind of looked at me with sad eyes and said, or even angry eyes and said, “I spent 4 years learning this stuff, you can do the same thing, too.” And would just shut down the conversation and walk away. The fact that we have the internet at this point, in order to share this information, that blog posts are shared the way that it is, it was never like that before. It was very hard earned and it was very proprietary and secret knowledge that no one was ever going to share. So, there was a whole lot of gatekeeping before the internet, a lot harder than it is with the internet, I can tell you. So, it’s a lot better than it was."
+    },
+
+    {
+      "timestamp": "0:24:58.3",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, can I ask a totally intrusive question?"
+    },
+
+    {
+      "timestamp": "0:25:01.2",
+      "speaker": "Jen Luker",
+      "text": "Please, do."
+    },
+
+    {
+      "timestamp": "0:25:01.7",
+      "speaker": "Jason Staten",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:25:01.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:25:02.5",
+      "speaker": "Safia Abdalla",
+      "text": "What year was it when you were 15? (laughs)"
+    },
+
+    {
+      "timestamp": "0:25:05.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:25:06.0",
+      "speaker": "Safia Abdalla",
+      "text": "I’m sorry!"
+    },
+
+    {
+      "timestamp": "0:25:08.3",
+      "speaker": "Jen Luker",
+      "text": "Safia!"
+    },
+
+    {
+      "timestamp": "0:25:08.3",
+      "speaker": "Safia Abdalla",
+      "text": "You don’t have to say, we can cut this out."
+    },
+
+    {
+      "timestamp": "0:25:10.9",
+      "speaker": "Jen Luker",
+      "text": "I’m 36, so when I was 15, it was like, 1996? Yeah, 1997."
+    },
+
+    {
+      "timestamp": "0:25:19.1",
+      "speaker": "Safia Abdalla",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:25:19.7",
+      "speaker": "Jen Luker",
+      "text": "So, the internet was very, very new."
+    },
+
+    {
+      "timestamp": "0:25:21.5",
+      "speaker": "Safia Abdalla",
+      "text": "Okay, I just wanted context into what timeline I was thinking about, or should be thinking about."
+    },
+
+    {
+      "timestamp": "0:25:27.0",
+      "speaker": "Jen Luker",
+      "text": "Yeah…"
+    },
+
+    {
+      "timestamp": "0:25:28.1",
+      "speaker": "Safia Abdalla",
+      "text": "Thank you."
+    },
+
+    {
+      "timestamp": "0:25:29.0",
+      "speaker": "Jen Luker",
+      "text": "No problem. And you don’t have to cut this, it’s fine. So, yeah. It’s just that it was not nearly as accessible, the knowledge was not nearly as accessible as it is now. And harkening back to a conversation that i had with Kyle Shevlin recently about perfectionism and how it’s difficult sometimes for people, like me, to contribute to things or to make comments or to review PRs because, what if I make a mistake? What if I tell them something wrong? What if I submit something that’s really awful? You know? Things like that, and his big thing at that point was, just submit the PR and let people help by educating you, making suggestions, and improving the code together, and I feel like we’re at a point in this world where we can do that by putting out there what we don’t know, or what we think we might know, even if we’re wrong, we do get that feedback which shouldn’t be in an inappropriate fashion but it does help teach us the things that we are interested in right now that we may not know, which makes it a better lesson even."
+    },
+
+    {
+      "timestamp": "0:26:36.9",
+      "speaker": "Safia Abdalla",
+      "text": "I am super excited to dive into the first chapter."
+    },
+
+    {
+      "timestamp": "0:26:40.3",
+      "speaker": "Jen Luker",
+      "text": "(laughs) Me, too!"
+    },
+
+    {
+      "timestamp": "0:26:41.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah! Let’s go for it!"
+    },
+
+    {
+      "timestamp": "0:26:42.8",
+      "speaker": "Safia Abdalla",
+      "text": "‘Cause I nerded out hard on it."
+    },
+
+    {
+      "timestamp": "0:26:45.0",
+      "speaker": "All* (laughi",
+        "text": "g"
+    },
+
+    {
+      "timestamp": "0:26:45.7",
+      "speaker": "Jen Luker",
+      "text": "Oh, good."
+    },
+
+    {
+      "timestamp": "
+
+(Typewriter",
+  "speaker": "ngs)
+
+_____________",
+"text": "_"
+    },
+
+    {
+      "timestamp": "
+0:26:48.1",
+"speaker": "Adam Garrett-Harris",
+"text": "Okay, so the first chapter is computation, and what were you nerding out about?"
+    },
+
+    {
+      "timestamp": "0:26:53.1",
+      "speaker": "Safia Abdalla",
+      "text": "So, I wouldn’t say... When I was in highschool I really liked my computer science classes, but I also really liked my biology classes and one of the things that I was particularly interested in was the way that cells and biological systems in general enforced order and had algorithmic kind of behavior to them, and I loved the first chapter of the book and the way it approached thinking about the universe as a computational system because that’s really what it is. It’s a set of predefined algorithms working in isolation to accomplish a larger goal. So, I totally dorked out on that introduction and the first analogy that it kind of drew was around cicadas."
+    },
+
+    {
+      "timestamp": "0:27:45.4",
+      "speaker": "Jen Luker",
+      "text": "I loved that."
+    },
+
+    {
+      "timestamp": "0:27:45.5",
+      "speaker": "Safia Abdalla",
+      "text": "Did I pronounce that right?"
+    },
+
+    {
+      "timestamp": "0:27:46.4",
+      "speaker": "Jen Luker",
+      "text": "Yes."
+    },
+
+    {
+      "timestamp": "0:27:47.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I think so."
+    },
+
+    {
+      "timestamp": "0:27:47.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yes."
+    },
+
+    {
+      "timestamp": "0:27:47.6",
+      "speaker": "Jason Staten",
+      "text": "Yep."
+    },
+
+    {
+      "timestamp": "0:27:48.4",
+      "speaker": "Safia Abdalla",
+      "text": "They’re like, those super annoying bugs that come out every couple of years during the summer to mate and, I don’t want to spoil the book, I feel like I need everyone to read it, but the book was talking about predatory waves and how there’s this evolutionary adaptation that they have with respect to the cycles at which the cicadas will come out and how it’s designed to minimize the chance that they will either be in contact with predators or be in contact with other species of cicada, and at the center of that cycle is the notion of prime numbers which can only be divided by 1 and themselves, so it makes it really difficult for those numbers to overlap when they’re in cycles. Cicadas come out, I think like every 7 years and every 13 years, both of which are prime numbers. And-"
+    },
+
+    {
+      "timestamp": "0:28:46.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, it’s 13 and 17 for these two species."
+    },
+
+    {
+      "timestamp": "0:28:50.1",
+      "speaker": "Safia Abdalla**Oh,",
+      "text": "and 17."
+    },
+
+    {
+      "timestamp": "0:28:50.1",
+      "speaker": "Jen Luker",
+      "text": "He does mention the 7 year. It’s 7 years, 13 years and 17 years are the ones that are most common."
+    },
+
+    {
+      "timestamp": "0:28:55.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Ooh, okay."
+    },
+
+    {
+      "timestamp": "0:28:55.2",
+      "speaker": "Safia Abdalla",
+      "text": "Okay. And it was just so cool ‘cause it kind of shows how there’s like, again, these like overarching concepts, like the uniqueness of prime numbers that can be applied in different contexts, whether it’s like encryption or cicadas trying to figure out when the best time to breed would be, and I loved that so much because math works out so perfectly in all these different places, it’s so much fun! (laughs)"
+    },
+
+    {
+      "timestamp": "0:29:19.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:29:21.0",
+      "speaker": "Jen Luker",
+      "text": "I know! I had the exact same feeling. I am actually going to spoil the book, though."
+    },
+
+    {
+      "timestamp": "0:29:25.2",
+      "speaker": "Safia Abdalla",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:29:25.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I’m going to assume that they’ve read it or they don’t want to at this point."
+    },
+
+    {
+      "timestamp": "0:29:29.8",
+      "speaker": "Jen Luker",
+      "text": "Right?"
+    },
+
+    {
+      "timestamp": "0:29:30.2",
+      "speaker": "Safia Abdalla",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:29:30.3",
+      "speaker": "Jen Luker",
+      "text": "So, “Since most predators have a two-to-ten-year population cycle, the twelve-year cicadas would be a feast for any predator with a two-, three-, four-, or six-year cycle. By this reasoning, any cicada with a development span that is easily divisible by the smaller numbers of a predator’s population cycle is vulnerable.” And then they later go on to say that “a cicada that emerges every seventeen years and has a predator with a ﬁve-year life cycle will only face a peak predator population once every eighty-ﬁve (5 x 17) years” as opposed to that. So, when talking about the overlapping emergences of cicadas, they said that the chances of, or the cicadas that come out every 13 years and the cicadas that come out every 17 years will only overlap once every 220 years. So, the fact that once every 85 years they’ll land on a cycle of, you know, 5 year predators, or every 220 years they’ll land on another cicada overlap means that the chances are extremely improved by prime numbers in general. So, and that’s just evolution doing what it does. Like, if you look at the moths in England during the coal and industrial revolution the white moths across… That used to be in the Alpine, the white Alpine trees, used to survive whereas the ones that had black wings ended up dying because the predators could see them against the white trees. However, once the industrial revolution started the trees would be coated in soot which meant that the only ones that really survived were the ones with the black winged mutation and the white winged moths eventually died out and became extinct because of that transition between white tree and coal-coated tree. So, just interesting how evolution does that."
+    },
+
+    {
+      "timestamp": "0:31:27.9",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, the point you mentioned about, you know, the moths and how they adapted to changes in their environment, as well as the cicadas, reminded me of one of my favorite classes of algorithms that I’m going to geek on. This whole series is just going to me geeking out about algorithms, so I’m sorry in advance to-"
+    },
+
+    {
+      "timestamp": "0:31:46.1",
+      "speaker": "Jen Luker",
+      "text": "Yay!"
+    },
+
+    {
+      "timestamp": "0:31:46.1",
+      "speaker": "Safia Abdalla",
+      "text": "All the listeners that have to deal with…"
+    },
+
+    {
+      "timestamp": "0:31:47.3",
+      "speaker": "Jason Staten",
+      "text": "I’m excited."
+    },
+
+    {
+      "timestamp": "0:31:48.9",
+      "speaker": "Safia Abdalla",
+      "text": "But one of my favorite classes of algorithms are genetic algorithms. Shameless plug! If you want to learn more about them beyond what I’m going to share here, I  did a tutorial video with O’Reilly that you can check out, if you just google it, it’ll come up, but genetic algorithms are these like, super fascinating concepts, and I remember I learned about them when I was like, 16 in a book. And the reason they blew my mind was because they completely changed the way that I thought about this topic that I was always taught in school. So like, for the most part, you’re taught in your biology class or your science class in grade school or high school that there’s this thing called natural selection and that’s how species evolved. That is, essentially, based on the challenges of their environments or in organisms that are more adapted to the environment are fitter and are more likely to reproduce and that’s how, over time, you get a species that’s highly adapted to their environment. So, you know, I learned about that in like, science class and whatever. Yeah, it’s super boring, and then I read about genetic algorithms in this book, and the notion of genetic algorithms is that you apply this same concept of… You have a problem set or something that you’re trying to find a solution or an optimization for, with kind of poorly defined parameters and you have an nearly infinite set of potential solutions for it, and you can start to think of natural selection not as a way that species evolved, but as a way that nature problem solved for species trying to survive in an environment. I don’t think I’m doing a good job of explaining this now, but the way the book described it was like genetic algorithms are essentially an optimization problem, or natural selection is essentially an optimization problem and that there’s this like very computational way of thinking about it and that same concept can be applied to computing to like, optimize stock trades or do all sorts of interesting things, and when I learned about that it just shattered my skull to like, 20 million pieces ‘cause it was this way of looking at one concept in this new light, as like an algorithm and as a problem solving technique, not just as like, natural selection. You know? You're never taught to think about it in this like, abstract way. So that’s what those parts of the book talked about and I think the author mentions it explicitly as “natural computation” is the phrase that he uses and that I think in a lot of texts, genetic algorithms are treated as a subdivision of natural computation. So, yeah, I just had to geek out about that. Genetic algorithms are cool. The world intersects in all sorts of interesting ways."
+    },
+
+    {
+      "timestamp": "0:34:41.9",
+      "speaker": "Jason Staten",
+      "text": "In the natural computation section on page 5, it’s kind of nice because it takes that example of the cicadas and ties it back to Bernoulli's weak law of large numbers that states the more that you observe the more that you’ll see a relationship between things rather than it seemingly being random and he states that it’s not magic that’s happening in nature, but instead, like you said Safia, it is really a fitness function that everything is constantly going through."
+    },
+
+    {
+      "timestamp": "0:35:14.0",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:35:14.6",
+      "speaker": "Jen Luker",
+      "text": "So speaking of coolness, I really loved the subtitle: Computation in the Steampunk Age."
+    },
+
+    {
+      "timestamp": "0:35:19.8",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:35:20.4",
+      "speaker": "Jen Luker",
+      "text": "And, something that you mentioned really tied back to something that was mentioned in the book that Babbage and Ada Lovelace relationship, when it came to computing, was that Babbage came up with the analytical engine whereas Ada Lovelace, though indicated as the first female programmer, they said that her real genius was that she looked at Charles Babbage’s machine, and he was looking at it and thinking, “Look, we can do these computations, we don’t have to have people who are error-prone add up 2+2+2+2+2+2 all the time and come up with an accidental 1 off number because they were tired one day and it’s written in this book and it’s stuck there forever and it’s really hard to fix those errors. You know? So let’s just have a computer that can do it for us and it’s always accurate.” And Ada Lovelace looked at this machine and she realized its true potential which wasn’t just a number crunching machine but it was something much more closely related to see how we see technology in general now. You know, how it could find patterns in music, it could find patterns in life, it could find patterns in the way that, you know, we write code. It could… It really has the ability to change our lives for the better over time, and that’s really where her genius lie, in that she saw all of the ways that computing could be applied to humanity and the world, and how it was just the beginning. The number crunching was just scraping the surface of it. I just want to point out that Babbage actually was inspired by the Jacquard loom, which was a programmable machine that could create complex patterns in textiles, FYI."
+    },
+
+    {
+      "timestamp": "0:37:06.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:37:06.6",
+      "speaker": "Jen Luker",
+      "text": "So, going back to my spinning and knitting …"
+    },
+
+    {
+      "timestamp": "0:37:09.5",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:37:10.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:37:10.2",
+      "speaker": "Jen Luker",
+      "text": "You know, Babbage still wasn’t the first one. We have weavers of long ago that have been doing this for ages."
+    },
+
+    {
+      "timestamp": "0:37:14.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, that’s awesome."
+    },
+
+    {
+      "timestamp": "0:37:15.5",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I think one of the interesting things about how computing evolved is learning to separate the notion of computational problem solving or algorithmic thinking from the implementation. So, you know, variables and loops and decision constructs are algorithmic concepts, but they’re not necessarily tied to a particular like, hardware implementation, and I think that was one of the big contributions of Ada Lovelace, and then later on Alan Turing, was separating the machine and the like, physical implementation from the algorithmic problem solving that could exist separately from it. I’d say that… Oh my gosh, now I’m nerding out about computing history. Y’all, this is going to be so terrible for everyone ‘cause I just keep thinking of fun facts. In the same notion of separating the implementation from the algorithmic thinking comes up later when we talk about Grace Hopper and how she invented the compiler and she was essentially trying to figure out a way to separate the algorithmic thinking and the problem solving that humans do at a higher level from the physical moving of like, low level machine code that computers do the implementation. So I’d say like, that’s one of my maybe favorite reoccuring themes in computing is separating out the thinking and the process from the implementation."
+    },
+
+    {
+      "timestamp": "0:38:40.1",
+      "speaker": "Jen Luker",
+      "text": "Let the computers do what they do best, let us make it easier for us to tell them how they do what they do best."
+    },
+
+    {
+      "timestamp": "0:38:44.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, there’s this great quote by Dijkstra, I don’t remember his first name."
+    },
+
+    {
+      "timestamp": "0:38:49.4",
+      "speaker": "Safia Abdalla",
+      "text": "Oh my gosh, I don’t either. (laughs) Because it’s…. I mean, wow."
+    },
+
+    {
+      "timestamp": "0:38:51.3",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:38:52.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:38:53.2",
+      "speaker": "Safia Abdalla",
+      "text": "That’s what happens when you get an algorithm named after you."
+    },
+
+    {
+      "timestamp": "0:38:55.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "But the quote is, “CS is no more about computers than astronomy is about telescopes.”"
+    },
+
+    {
+      "timestamp": "0:39:00.6",
+      "speaker": "Jen Luker",
+      "text": "Yes!"
+    },
+
+    {
+      "timestamp": "0:39:01.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So that’s the idea of separating that. There’s these natural things that happen and computers are one way to implement these computations but they’re not the only way."
+    },
+
+    {
+      "timestamp": "0:39:09.8",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, and I think it’s really exciting to think about like, if we’re being super futuristic and there’s a section later on in this chapter about the future of computing, like implementation aside, like not even thinking about the keyboards and the screens and all of the stuff that we’re interacting with as we compute now, like, what does computation look like, heck, 70 years from now? It’s like, a very interesting question to think about."
+    },
+
+    {
+      "timestamp": "0:39:34.5",
+      "speaker": "Jen Luker",
+      "text": "I love the thought, going back, or going forward into the future of computation, he does mention that, you know, he started out with a computer, the very first computer he owned was the TRS-80 and you know, he bought the first iPhone and it had more computing power than any of the computers he had at home when he was a kid. And you know, I loved that concept that, you know the calculators that we have in high school, the TI-86s, the TI-89s, actually have more computing power than we had in the entire Apollo missions. They were all run by humans with pencils and slide rules and lines and lines and lines and lines and lines and lines of code, you know? Written out on punch cards, you know? But it was so basic but still done by humans! We have computers than can do this now, and it frees us up to think of other things, but we can do it. We can do it without computers, we have done it before, but in 50 years, we’ve gone from that to calculators to the laptops that we’re using to host this podcast. The entire internet that we’re using to distribute it, you know? The computing power in 50 years is just exponentially grown and to go back to Safia’s point, what happens in another 70?"
+    },
+
+    {
+      "timestamp": "0:40:50.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, so one of the papers it mentions… At the end of the chapter it mentioned some papers about “What is computation?” And one of them mentions that the definition of computation has changed and is changing over time, because originally it was just algorithms to compute a value, so you’d have an algorithm and it halts and you have output and that’s it. But even with operating systems and web servers, those things don't’ really halt, they’re meant to run continuously and be interactive, so even that has changed the definition."
+    },
+
+    {
+      "timestamp": "0:41:22.5",
+      "speaker": "Jen Luker",
+      "text": "They’ve even moved beyond that to say it’s more than computers that do that. Going back to genetic algorithms, our own cells do that and they do it continuously and they do it over and over and over again and if you’re looking at the overarching thing, since the creation of life on this planet it’s been the same cycle of birth, grow, get old, and die, you know? It’s still an algorithm. It’s a simple one."
+    },
+
+    {
+      "timestamp": "0:41:46.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:41:46.4",
+      "speaker": "Jen Luker",
+      "text": "But it’s one that’s continued for millions of years."
+    },
+
+    {
+      "timestamp": "0:41:48.7",
+      "speaker": "Jason Staten",
+      "text": "Speaking of the 50 year timespan and how much we’ve accomplished in that timeframe, I thought it was interesting that between Babbage’s analytical engine and the 1930s when we needed a machine for calculating artillery tables for war, that ENIAC, I went and looked up what it stands for because I didn’t actually see the name, and it’s “Electronic Numerical Integrator and Computer” and I actually did-"
+    },
+
+    {
+      "timestamp": "0:42:16.7",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:42:17.0",
+      "speaker": "Jason Staten",
+      "text": "A little bit of geeking out, so you’re not alone in this Safia. So, one thing that I’ve never really spent time on was looking at punch cards and how they worked. I knew they were a form of input, but I hadn’t spent a lot of time thinking about… Okay, well I mean, it’s like a scantron sheet that you took testing on in school, it just happens, but I learned that first punch cards became, around that time, standardized to have 80 columns in them, so if you think about your text editor and if you use a formatter that cuts things off at 80 columns, that could be a strong influence as to why. And punch cards, they had… In each of those 80 columns you could actually go and you could punch one of 3 sections to indicate that it was a certain letter, it split the alphabet into thirds and if you punched that it would say which part of the alphabet? Then there was a 0-9 punch that you could put in there to indicate which letter you wanted or if there were no punches for an alphabet range then it would just be indicating 0 or 9. And then also the other thing I was curious about was, okay, now you have these holes, now how do you read it? And I went and looked up and there were 2 major forms of working with it. First there were brushes that would make electrical contact, and so they would sweep across the card and based on the timing that it happened you would know which column was which character or the alternative was to pass light through the card and have a photo sensor on the other side, likewise going with timing. And, it’s something that I’ve never looked into before and I think that it’s definitely an interesting approach. I think the analytical engine actually dropped little dowels or something like that through the cards as well, pre having sensors like electrical sensors and photo sensors, but yeah. That was something that I really dug into because I was genuinely curious after reading."
+    },
+
+    {
+      "timestamp": "0:44:10.4",
+      "speaker": "Safia Abdalla",
+      "text": "That is so interesting, Jason. I am freaking out right now."
+    },
+
+    {
+      "timestamp": "0:44:13.9",
+      "speaker": "Jen Luker",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:44:14.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:44:15.0",
+      "speaker": "Jen Luker",
+      "text": "The reason that he used dowels is because the loom machine used pins that would use timing, when the pins dropped then certain threads couldn’t go in certain places and therefore that’s how the patterns were drawn, was which threads dropped, which threads were raised for the, on the warp, for the weft to be able to actually go across and lay the color. So, because of those pins, he used dowels to mimic that function."
+    },
+
+    {
+      "timestamp": "0:44:43.5",
+      "speaker": "Safia Abdalla",
+      "text": "Oh, and those were then translated to the ENIAC?"
+    },
+
+    {
+      "timestamp": "0:44:47.0",
+      "speaker": "Jason Staten",
+      "text": "That’s awesome."
+    },
+
+    {
+      "timestamp": "0:44:47.2",
+      "speaker": "Safia Abdalla",
+      "text": "Is that the history or is that just…"
+    },
+
+    {
+      "timestamp": "0:44:48.8",
+      "speaker": "Jen Luker",
+      "text": "Well that was how Babbage's machines were supposed to work."
+    },
+
+    {
+      "timestamp": "0:44:52.8",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I’m wondering if the design of the ENIAC was in any way influenced by Babbage’s analytical engine?"
+    },
+
+    {
+      "timestamp": "0:45:00.8",
+      "speaker": "Jen Luker",
+      "text": "Well I think that they said that the first like, Mark 1 was not. They’d done it without actually looking at Babbage’s machines. So it wasn’t until later."
+    },
+
+    {
+      "timestamp": "0:45:13.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, and so all those computers that end with -AC, a lot of them, EDVAC, ENIAC, so forth, and they all stand for like “And computer” or “automated computer” or “automated calculator”."
+    },
+
+    {
+      "timestamp": "0:45:25.9",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:45:26.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "EDSAC was one of them."
+    },
+
+    {
+      "timestamp": "0:45:28.2",
+      "speaker": "Safia Abdalla",
+      "text": "So the text states that “The Mark I showed no inﬂuence from the Analytical Engine and lacked the Analytical Engine’s most prescient-” Prescient? English is my second language. “...architectural feature” Eckert and Mauchly, who invented the ENIAC, were also unaware of the details of Babbage’s analytical engine. So, that’s interesting. This next wave of computing that came after Babbage, like wasn’t aware of his existence or involved in it at all. They kind of almost started from scratch. It’s curious."
+    },
+
+    {
+      "timestamp": "0:46:04.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:46:06.0",
+      "speaker": "Jen Luker",
+      "text": "And they came up with different ways of doing things, but they still missed out on that initial discovery."
+    },
+
+    {
+      "timestamp": "0:46:11.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:46:12.4",
+      "speaker": "Jen Luker",
+      "text": "It wasn’t until later that it was brought back in and incorporated into the machines that we know now."
+    },
+
+    {
+      "timestamp": "0:46:19.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So the punch card thing kind of reminds of me… That’s basically how music boxes work."
+    },
+
+    {
+      "timestamp": "0:46:24.7",
+      "speaker": "Jen Luker",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:46:25.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And if you haven’t seen online, there’s this guy that made this programmable music machine using marbles and it’s like an infinite punch card that goes around and around."
+    },
+
+    {
+      "timestamp": "0:46:37.3",
+      "speaker": "Jen Luker",
+      "text": "Wintergatan!"
+    },
+
+    {
+      "timestamp": "0:46:38.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And it’s called “Winter… gotten.” or something."
+    },
+
+    {
+      "timestamp": "0:46:41.0",
+      "speaker": "Jen Luker",
+      "text": "Wintergatan is the band, actually it’s the guy."
+    },
+
+    {
+      "timestamp": "0:46:42.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay, yeah. It’s amazing."
+    },
+
+    {
+      "timestamp": "0:46:45.7",
+      "speaker": "Jen Luker",
+      "text": "Yep, the marble machine, if you want to look that up. He’s actually recreating the marble machine because the way he put it together originally was really kind of hacky and shoddy so now he’s actually using engineering students and things to recreate it for tour."
+    },
+
+    {
+      "timestamp": "0:47:03.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh, cool."
+    },
+
+    {
+      "timestamp": "0:47:04.2",
+      "speaker": "Jen Luker",
+      "text": "So, there’s a whole YouTube series on watching him rebuild this."
+    },
+
+    {
+      "timestamp": "0:47:08.0",
+      "speaker": "Safia Abdalla",
+      "text": "Uh, with all this talk about old computers, I’m curious to know what was your first computer and what were like the specs on it? (laughs)"
+    },
+
+    {
+      "timestamp": "0:47:19.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm. I have no idea what the specs were and it was a custom computer my uncle put together from different parts, but I was… I was in 5th grade?"
+    },
+
+    {
+      "timestamp": "0:47:30.7",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:47:31.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, I don’t know, ‘90s."
+    },
+
+    {
+      "timestamp": "0:47:33.9",
+      "speaker": "Safia Abdalla",
+      "text": "Cool."
+    },
+
+    {
+      "timestamp": "0:47:34.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It had dial-up internet and we had a dot matrix printer, and it was running… You had to go into DOS to run some games, but mostly it was running Windows."
+    },
+
+    {
+      "timestamp": "0:47:43.8",
+      "speaker": "Safia Abdalla",
+      "text": "Jason, do you recall what your first computer was?"
+    },
+
+    {
+      "timestamp": "0:47:46.8",
+      "speaker": "Jason Staten",
+      "text": "Uh, I'm trying to think back on it, and I don’t remember specific specs on it, I want to say that it was a 386, I believe, and I know that it had a dual boot setup that you always wound up in. You didn’t start off in Windows, you always got prompted with this very colorful text screen that would let you get into games and like, I would play King’s Quest, that was always  fun one. The King’s Quest and then we did eventually upgrade the machine so it had to have been close to ‘95 because we upgraded the machine to Windows 95 by going through a bunch of floppies on it, and we got the internet on it as well and it was mind blowing-"
+    },
+
+    {
+      "timestamp": "0:48:37.7",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:48:38.1",
+      "speaker": "Jason Staten",
+      "text": "Because I could get in a chat room and talk to somebody. LIke I remember being just blown away by it and going to, I think it was Nick.com to go and look at like, Nickelodeon because that was one website I knew-"
+    },
+
+    {
+      "timestamp": "0:48:50.8",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs) That’s awesome!"
+    },
+
+    {
+      "timestamp": "0:48:51.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:48:51.5",
+      "speaker": "Jason Staten",
+      "text": "Because I had seen it on TV as a kid and I was like, “Yes! I’ve reached it!” So…"
+    },
+
+    {
+      "timestamp": "0:48:56.4",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. Mine was… I remember it because it holds such a special place in my heart as the first computer I ever programmed on or installed LINUX on or anything. It was a Dell Dimension 2400 with 256MB of memory and I don’t know what the CPU was, but that machine and I went on some adventures. I always think it’s so interesting, no matter who I talk to, whether they are a younger programmer or an older programmer, there’s always like a sense of awe at how much computing has changed over however long they’ve been in the industry, so yeah. Jen, what was your first computer?"
+    },
+
+    {
+      "timestamp": "0:49:37.4",
+      "speaker": "Jen Luker",
+      "text": "You know, I can’t actually remember what my first computer was, I was a bit too young, but the Commodore 64 is the one that I really remember."
+    },
+
+    {
+      "timestamp": "0:49:44.8",
+      "speaker": "Safia Abdalla",
+      "text": "Oh, okay."
+    },
+
+    {
+      "timestamp": "0:49:45.2",
+      "speaker": "Jen Luker",
+      "text": "That was my baby, and you know, it’s fun listening to your machines because when I was that young my dad used to put together computers and sell them back to companies that would then sell the prebuilt machines. So like, after school one day he’d give me a box of parts and say, “Okay Jen, I need you to build these 5 computers.” And then the next day he’d give me a box of floppies and says, “Okay, I need you to install DOS.” And then I’d get like $20 for the week or something."
+    },
+
+    {
+      "timestamp": "0:50:13.3",
+      "speaker": "Safia Abdalla",
+      "text": "Oh, cool."
+    },
+
+    {
+      "timestamp": "0:50:13.8",
+      "speaker": "Jen Luker",
+      "text": "And so, when I was like, you know, 7, 8, 9, 10, I’d spend all every day after school building computers and installing DOS, and then later it was Windows 3 and Windows 3.1 and finally Windows 95, but it’s just, I used to do that all the time. I knew all the setups. I knew how to configure them, I knew how to put them together, I knew how to tweak them, I knew how to overclock them, I knew how to... you know? I could customize it to your little heart’s desire. It’s because I did it every day. So…"
+    },
+
+    {
+      "timestamp": "0:50:43.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Wow. I have never built a computer."
+    },
+
+    {
+      "timestamp": "0:50:46.5",
+      "speaker": "Jen Luker",
+      "text": "Oh."
+    },
+
+    {
+      "timestamp": "0:50:47.3",
+      "speaker": "Safia Abdalla",
+      "text": "Exercise!"
+    },
+
+    {
+      "timestamp": "0:50:49.3",
+      "speaker": "Jen Luker",
+      "text": "Yes! We should."
+    },
+
+    {
+      "timestamp": "0:50:50.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:50:50.1",
+      "speaker": "Safia, J",
+      "text": "& Jason** [overlapping conversation]"
+    },
+
+    {
+      "timestamp": "0:50:50.1",
+      "speaker": "Jason Staten",
+      "text": "We should do that as an exercise."
+    },
+
+    {
+      "timestamp": "0:50:52.6",
+      "speaker": "Safia Abdalla",
+      "text": "One of the things that I think is so interesting and kind of relates back to the topic of like, overarching themes or just like, continuity in computation, is that no matter how fast the operating systems change or the devices become more performant or memory increases, under the hood so many of the fundamental concepts have stayed the same-"
+    },
+
+    {
+      "timestamp": "0:51:15.8",
+      "speaker": "Jen Luker",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:51:16.1",
+      "speaker": "Safia Abdalla",
+      "text": "And hopefully we’ll get a chance to learn about them in some of the upcoming chapters, but I know when I was in computer science classes or just reading stuff on my own from books and stuff, it would blow my mind when they’d be all like, “The implementation of so and and so in this very modern version of LINUX was invented in 1964 and has just  persisted and continued throughout decades.” And it’s kind of interesting, like, you know things change, but in a lot of ways, they stay the same. And we will learn more about it in the machinery chapter I think."
+    },
+
+    {
+      "timestamp": "0:51:51.7",
+      "speaker": "Jen Luker",
+      "text": "Mm-hmm (affirmative)."
+    },
+
+    {
+      "timestamp": "0:51:52.3",
+      "speaker": "Safia Abdalla",
+      "text": "Compilation machinery chapters."
+    },
+
+    {
+      "timestamp": "0:51:53.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm. Or in the UNIX chapter."
+    },
+
+    {
+      "timestamp": "0:51:56.9",
+      "speaker": "Safia Abdalla",
+      "text": "Oh, that one, too. Yes. That was at the end, so I was… yeah."
+    },
+
+    {
+      "timestamp": "0:52:01.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. Cool."
+    },
+
+    {
+      "timestamp": "0:52:01.7",
+      "speaker": "Jen Luker",
+      "text": "You’ve really never built a computer?"
+    },
+
+    {
+      "timestamp": "0:52:03.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "No."
+    },
+
+    {
+      "timestamp": "0:52:04.1",
+      "speaker": "Safia Abdalla",
+      "text": "I was in a tech support, like, I had a tech support job when I was in high school fixing computers and stuff."
+    },
+
+    {
+      "timestamp": "0:52:10.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Ah, I had one in college."
+    },
+
+    {
+      "timestamp": "0:52:12.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, so I like, would take them apart and replace parts and stuff, but I’ve never like, built my own rig."
+    },
+
+    {
+      "timestamp": "0:52:18.1",
+      "speaker": "Jen Luker",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:52:19.2",
+      "speaker": "Jason Staten",
+      "text": "I built a gaming machine for a friend, like, that was my first computer from scratch. So, a friend of mine, his parents gave him a budget to go and build a computer, or buy a computer I guess. And I told him, “No, no, no. I can build this thing for you.” And so this was… I was probably in high school so probably 16 at the time and I was like, “We can get a much cooler machine if we go and build this thing on our own.” And so I went and-"
+    },
+
+    {
+      "timestamp": "0:52:47.0",
+      "speaker": "Jen Luker",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:52:47.8",
+      "speaker": "Jason Staten",
+      "text": "Dug through TigerDirect, NewEgg and various other sites and ordered all the parts and got kind of lucky and-"
+    },
+
+    {
+      "timestamp": "0:52:56.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:52:57.4",
+      "speaker": "Jason Staten",
+      "text": "Like, assembled the thing, not knowing, like, not having ever done this before and just spending like $1,000 or something like that, and put it all together and the thing worked-"
+    },
+
+    {
+      "timestamp": "0:53:06.4",
+      "speaker": "Jen Luker",
+      "text": "Oh!"
+    },
+
+    {
+      "timestamp": "0:53:07.4",
+      "speaker": "Jason Staten",
+      "text": "Except there was a wire that was caught in the CPU fan, so that didn’t start spinning. So, the temperature sensor that I had installed went off and said, “Hey that thing’s getting hot.”  And then we recognized, we moved the wire, we cabled it away, and the thing worked wonderfully. I felt so accomplished and also very grateful that modern computers, even then, modern computers were pretty hard to screw up and plug the wrong thing into the wrong place."
+    },
+
+    {
+      "timestamp": "0:53:32.7",
+      "speaker": "Jen Luker",
+      "text": "That’s why my dad trusted a 7-year-old to build computers for him. (laughs)"
+    },
+
+    {
+      "timestamp": "0:53:36.8",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:53:36.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:53:37.7",
+      "speaker": "Jen Luker",
+      "text": "It’s like, this slot goes here, this slot goes there. That’s about it."
+    },
+
+    {
+      "timestamp": "0:53:42.2",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:53:42.6",
+      "speaker": "Jason Staten",
+      "text": "It’s like legos with copper contacts."
+    },
+
+    {
+      "timestamp": "0:53:43.4",
+      "speaker": "Safia Abdalla",
+      "text": "That’s a fun way to..."
+    },
+
+    {
+      "timestamp": "0:53:46.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, in conclusion, what are you all looking forward to in the upcoming chapters?"
+    },
+
+    {
+      "timestamp": "0:53:52.8",
+      "speaker": "Jen Luker",
+      "text": "Ooh! Ooh! Something that I wanted to mention before, I guess, I answer that."
+    },
+
+    {
+      "timestamp": "0:53:57.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:53:58.3",
+      "speaker": "Jen Luker",
+      "text": "Is.."
+    },
+
+    {
+      "timestamp": "0:53:59.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:53:59.5",
+      "speaker": "Jen Luker",
+      "text": "One of the biggest, most fascinating things that I’ve found about this is I really expected it to be like, this really dry book of “Okay, we’re going to go through this concept, and then we’re going to go through this concept” and it’s actually in this pretty standard, real world, chatty kind of conversational book that makes it-"
+    },
+
+    {
+      "timestamp": "0:54:15.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah!"
+    },
+
+    {
+      "timestamp": "0:54:15.6",
+      "speaker": "Jen Luker",
+      "text": "Really easy and really approachable and not dry and fascinating. It makes it really easy to geek out and get excited about the details because he’s just telling a story, you know? And it’s really refreshing to have a book that’s trying to teach you something that’s not really, really dry."
+    },
+
+    {
+      "timestamp": "0:54:33.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah! And I think it’s inspiring you to go out and learn some stuff on your own."
+    },
+
+    {
+      "timestamp": "0:54:36.9",
+      "speaker": "Jen Luker",
+      "text": "Absolutely. So the thing that I’m looking forward to, now, is learning these concepts and not being bored to tears while trying to appreciate the beauty behind these concepts. So, it’s changed my perception from, “Oh great, we’re going to be bored for while, while we read this book and I’m just going to have to try to survive each chapter.” to being really excited to get to the next one."
+    },
+
+    {
+      "timestamp": "0:55:00.7",
+      "speaker": "Safia Abdalla",
+      "text": "I’m actually really excited about this next chapter that we’re going to read which is the complexity chapter and it’s mostly because the topics it covers, I took in two different classes in my computer science degree and they both annoyed the heck out of me. They were probably the things that I least liked in my degree program because they were… Yeah, I don’t know why, I just didn’t catch on with them at the time, so I’m really excited to read the book and just get a new perspective on the topics under the complexity chapter."
+    },
+
+    {
+      "timestamp": "0:55:34.1",
+      "speaker": "Jason Staten",
+      "text": "I’m excited for having a refresher on the topics I studied at University and haven't used in almost 10 years. Or I guess haven’t used directly or thought about. And I’m also excited to have a primer on things that I didn’t cover, and finally my way that I’m going to work through a lot of these things is actually by implementing stuff in Rust because I've needed an excuse to the put the language to use, and given Rust is kind of low level, and a lot of these concepts can be kind of low level, they seem like a match well made."
+    },
+
+    {
+      "timestamp": "0:56:08.2",
+      "speaker": "Safia Abdalla",
+      "text": "I love how you’re very intentful about your learning, Jason. It’s one of the things I’ve really admired about you throughout this recording is you’re always like, just very purposeful about your approach to expanding your knowledge."
+    },
+
+    {
+      "timestamp": "0:56:18.5",
+      "speaker": "Jason Staten",
+      "text": "Thanks. It helps keep me accountable."
+    },
+
+    {
+      "timestamp": "0:56:20.3",
+      "speaker": "Jen Luker",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:56:21.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Well, I’m excited about 2 chapters from now, lambda calculus. We’ll be talking about complexity and lambda calculus next time, and lambda calculus is something I hear about all the time, but I don’t know what it is, and it’s probably one of those chunks of knowledge I just don’t have a name for. So, I probably already know it and just don’t know it."
+    },
+
+    {
+      "timestamp": "0:56:38.3",
+      "speaker": "Jen Luker",
+      "text": "I get told all the time, “It’s the basis for functional programming. You can’t skip it!”"
+    },
+
+    {
+      "text": "(Exit music: Electro Swing)"
+    }
+  ]
+}
