@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import {DateTime} from 'luxon';
 import styled from 'react-emotion';
 import {connect} from 'react-redux';
+
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
@@ -89,9 +90,7 @@ export default ({data}) => {
       color={episode.podcast.primaryColor}
       sidePanelChildren={
         <PodcastInfo
-          imageUrl={
-            episode.podcast.image && `https:${episode.podcast.image.file.url}`
-          }
+          imageSizes={episode.podcast.image.sizes}
           podcastDescription={episode.podcast.description.description}
           podcastName={episode.podcast.name}
           podcastHosts={episode.podcast.hosts.map(h => h.name)}
@@ -215,8 +214,8 @@ export const query = graphql`
           url
           linkType {
             image {
-              file {
-                url
+              resolutions(width: 40) {
+                ...GatsbyContentfulResolutions
               }
             }
           }
@@ -228,9 +227,8 @@ export const query = graphql`
           name
         }
         image {
-          id
-          file {
-            url
+          sizes(maxWidth: 320) {
+            ...GatsbyContentfulSizes
           }
         }
       }

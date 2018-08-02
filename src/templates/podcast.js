@@ -1,12 +1,13 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "react-emotion";
-import PageWithSidebar from "../components/PageWithSidebar";
-import LatestEpisode from "../components/LatestEpisode";
-import Subscribe from "../components/Subscribe";
-import EpisodeListing from "../components/EpisodeListing";
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'react-emotion';
 
-export default ({ data }) => {
+import PageWithSidebar from '../components/PageWithSidebar';
+import LatestEpisode from '../components/LatestEpisode';
+import Subscribe from '../components/Subscribe';
+import EpisodeListing from '../components/EpisodeListing';
+
+export default ({data}) => {
   const podcast = data.contentfulPodcast;
 
   const episodes = podcast.episode
@@ -30,9 +31,7 @@ export default ({ data }) => {
       sidePanelChildren={
         episode && (
           <LatestEpisode
-            imageUrl={
-              episode.podcast.image && `https:${episode.podcast.image.file.url}`
-            }
+            imageSizes={episode.podcast.image.sizes}
             name={episode.name}
             path={episode.fields.path}
             shortDescription={episode.shortDescription}
@@ -52,7 +51,7 @@ export default ({ data }) => {
               publicationDate={e.publicationDate}
               name={e.name}
               path={e.fields.path}
-              imageUrl={e.podcast.image && `https:${e.podcast.image.file.url}`}
+              imageSizes={e.podcast.image.sizes}
               podcastHosts={e.podcast.hosts.map(h => h.name)}
               podcastName={e.podcast.name}
               podcastPath={e.podcast.fields.slug}
@@ -66,7 +65,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query PodcastQuery($id: String!) {
-    contentfulPodcast(id: { eq: $id }) {
+    contentfulPodcast(id: {eq: $id}) {
       name
       description {
         description
@@ -76,8 +75,8 @@ export const query = graphql`
         url
         linkType {
           image {
-            file {
-              url
+            resolutions(width: 40) {
+              ...GatsbyContentfulResolutions
             }
           }
         }
@@ -88,12 +87,6 @@ export const query = graphql`
         name
         fields {
           slug
-        }
-      }
-      image {
-        id
-        file {
-          url
         }
       }
       episode {
@@ -107,8 +100,8 @@ export const query = graphql`
         podcast {
           name
           image {
-            file {
-              url
+            sizes(maxWidth: 320) {
+              ...GatsbyContentfulSizes
             }
           }
           hosts {

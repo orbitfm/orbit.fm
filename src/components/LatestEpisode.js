@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
 
 const Image = styled.div`
-  margin-top: -150px;
+  max-width: 100%;
+  margin: -150px 0 1.45rem;
   @media (max-width: 700px) {
     margin-top: 0;
   }
 `;
 
 const LatestEpisode = ({
-  imageUrl,
+  imageSizes,
   name,
   path,
   shortDescription,
@@ -21,9 +23,9 @@ const LatestEpisode = ({
   podcastPath,
 }) => (
   <div>
-    {imageUrl && (
+    {imageSizes && (
       <Image>
-        <img src={imageUrl} />
+        <Img sizes={imageSizes} />
       </Image>
     )}
     <h2>Latest Episode</h2>

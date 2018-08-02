@@ -25,10 +25,7 @@ const IndexPage = ({data}) => {
       color={latestEpisode.podcast.primaryColor}
       sidePanelChildren={
         <LatestEpisode
-          imageUrl={
-            latestEpisode.podcast.image &&
-            `https:${latestEpisode.podcast.image.file.url}`
-          }
+          imageSizes={latestEpisode.podcast.image.sizes}
           name={latestEpisode.name}
           path={latestEpisode.fields.path}
           shortDescription={latestEpisode.shortDescription}
@@ -47,9 +44,7 @@ const IndexPage = ({data}) => {
             publicationDate={episode.publicationDate}
             name={episode.name}
             path={episode.fields.path}
-            imageUrl={
-              episode.podcast.image && `https:${episode.podcast.image.file.url}`
-            }
+            imageSizes={episode.podcast.image.sizes}
             podcastHosts={episode.podcast.hosts.map(h => h.name)}
             podcastName={episode.podcast.name}
             podcastPath={episode.podcast.fields.slug}
@@ -94,8 +89,8 @@ export const query = graphql`
                 slug
               }
               image {
-                file {
-                  url
+                sizes(maxWidth: 700) {
+                  ...GatsbyContentfulSizes
                 }
               }
               hosts {

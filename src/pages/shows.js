@@ -1,7 +1,9 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled from "react-emotion";
-import Page from "../components/Page";
+import React from 'react';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
+import styled from 'react-emotion';
+
+import Page from '../components/Page';
 
 const Listing = styled.ul`
   list-style: none;
@@ -21,14 +23,14 @@ const ImageContainer = styled.div`
   margin: 0 20px 20px 0;
 `;
 
-const Shows = ({ data }) => (
+const Shows = ({data}) => (
   <Page title="Shows" headTitle="Shows">
     <Listing>
-      {data.allContentfulPodcast.edges.map(({ node }) => (
+      {data.allContentfulPodcast.edges.map(({node}) => (
         <Item key={node.id}>
           <ImageContainer>
             <Link to={`/${node.fields.slug}`}>
-              <img src={node.image.file.url} />
+              <Img sizes={node.image.sizes} />
             </Link>
           </ImageContainer>
           <div>
@@ -47,14 +49,14 @@ export default Shows;
 
 export const query = graphql`
   query ShowsQuery {
-    allContentfulPodcast(filter: { active: { eq: true } }) {
+    allContentfulPodcast(filter: {active: {eq: true}}) {
       edges {
         node {
           id
           name
           image {
-            file {
-              url
+            sizes(maxWidth: 150) {
+              ...GatsbyContentfulSizes
             }
           }
           description {

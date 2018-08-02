@@ -1,10 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "gatsby-link";
-import styled from "react-emotion";
-import humanizeList from "humanize-list";
-import { DateTime } from "luxon";
-import * as COLORS from "../constants/colors";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
+import styled from 'react-emotion';
+import humanizeList from 'humanize-list';
+import {DateTime} from 'luxon';
+import * as COLORS from '../constants/colors';
 
 const Container = styled.article`
   border-bottom: 1px solid ${COLORS.DIVIDER};
@@ -32,7 +33,7 @@ const EpisodeDate = styled.span`
   color: rgba(255, 255, 255, 0.6);
   :after {
     display: inline;
-    content: "▪";
+    content: '▪';
     margin: 0 5px;
   }
 `;
@@ -47,15 +48,15 @@ const EpisodeListing = ({
   publicationDate,
   name,
   path,
-  imageUrl,
+  imageSizes,
   podcastHosts,
   podcastName,
-  podcastPath
+  podcastPath,
 }) => (
   <Container>
     <Image>
       <Link to={path}>
-        <img src={imageUrl} alt={podcastName} />
+        <Img sizes={imageSizes} alt={podcastName} />
       </Link>
     </Image>
     <Details>
@@ -66,7 +67,7 @@ const EpisodeListing = ({
       <EpisodeTitle>
         <Link to={path}>{name}</Link>
       </EpisodeTitle>
-      <p>Hosts: {humanizeList(podcastHosts, { oxfordComma: true })}</p>
+      <p>Hosts: {humanizeList(podcastHosts, {oxfordComma: true})}</p>
       <p>{shortDescription}</p>
     </Details>
   </Container>
@@ -80,7 +81,7 @@ EpisodeListing.propTypes = {
   imageUrl: PropTypes.string,
   podcastHosts: PropTypes.arrayOf(PropTypes.string).isRequired,
   podcastName: PropTypes.string.isRequired,
-  podcastPath: PropTypes.string.isRequired
+  podcastPath: PropTypes.string.isRequired,
 };
 
 export default EpisodeListing;
