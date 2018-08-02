@@ -23,7 +23,6 @@ const Subscribe = ({links}) => {
   if (!links) {
     return null;
   }
-  console.log(links);
   const simpleLinks = links.map(l => ({
     id: l.id,
     resolutions: l.linkType.image.resolutions,
