@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
-import PageWithSidebar from '../components/PageWithSidebar';
+
+import PageWithSidebar from '../../components/PageWithSidebar';
 
 const TextArea = styled.textarea`
   width: 500px;
@@ -53,8 +54,8 @@ const ContactPage = ({ data, location }) => {
   /*let show;*/
   //let url;
   //try {
-    //url = new URL(`http://www.fake.com${location.pathname}${location.search}`);
-    //show = url && url.searchParams.get('show');
+  //url = new URL(`http://www.fake.com${location.pathname}${location.search}`);
+  //show = url && url.searchParams.get('show');
   /*}*/
 
   return (
