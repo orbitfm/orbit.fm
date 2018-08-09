@@ -1,0 +1,1520 @@
+{
+  "podcast": "BookBytes",
+  "episode": "11",
+  "transcript": [
+    {
+      "text": "(Intro music: Electro Swing)"
+    },
+
+    {
+      "timestamp": "0:00:11.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Welcome to BookBytes: A book club for developers. I’m Adam Garrett-Harris."
+    },
+
+    {
+      "timestamp": "0:00:15.7",
+      "speaker": "Jason Staten",
+      "text": "I’m Jason Staten."
+    },
+
+    {
+      "timestamp": "0:00:16.9",
+      "speaker": "Jen Luker",
+      "text": "I’m Jen Luker."
+    },
+
+    {
+      "timestamp": "0:00:17.9",
+      "speaker": "Safia Abdalla",
+      "text": "I’m Safia Abdalla."
+    },
+
+    {
+      "timestamp": "0:00:19.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Before we get started, I forgot to ask about this last time but Jen, you got a new job, right?"
+    },
+
+    {
+      "timestamp": "0:00:24.5",
+      "speaker": "Jen Luker",
+      "text": "I do have a new job. It’s uh, actually been a month at this point. So, I took a position with Formidable, actually. So, it’s been a pretty big adventure and a little bit of a change going from 3 hours of commuting every day to walking upstairs in my pajamas, so … (laughs). It’s been cool, though."
+    },
+
+    {
+      "timestamp": "0:00:48.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Wow, that must be nice not having to commute."
+    },
+
+    {
+      "timestamp": "0:00:50.9",
+      "speaker": "Jen Luker",
+      "text": "Yeah! Gained back 15 hours of my life. Every week! So, it’s been really good. As far as working there, the people are great. It’s the first time that I’ve ever worked with other women developers, actually. So that’s been really fascinating."
+    },
+
+    {
+      "timestamp": "0:01:10.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "That’s awesome. You’ve never worked with any female developers before?"
+    },
+
+    {
+      "timestamp": "0:01:15.8",
+      "speaker": "Jen Luker",
+      "text": "I hadn’t, and now I work with quite a few of them. So… One of my favorite things is there’s a locked, private slack channel called “The Powder Room”-"
+    },
+
+    {
+      "timestamp": "0:01:27.4",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:01:27.3",
+      "speaker": "Jen Luker",
+      "text": "And it’s where only the women are allowed to join. So, all the women in the company are part of that slack channel. And we have standard conversations about, you know, clothes, and jewelry, and periods and you know, how much we want to kill people, and code, and fantastic sunglasses. So, it’s interesting getting a little bit more of the human interaction just from a group of women where nothing is really taboo. It’s quite nice. It’s different and I like it. Thank you."
+    },
+
+    {
+      "timestamp": "0:02:05.1",
+      "speaker": "Jason Staten",
+      "text": "Yeah. Congrats. That’s great they make a designated room for you to have those types of discussions."
+    },
+
+    {
+      "timestamp": "0:02:09.8",
+      "speaker": "Safia Abdalla",
+      "text": "And I must add that I absolutely love the name of the room."
+    },
+
+    {
+      "timestamp": "0:02:13.9",
+      "speaker": "Jen Luker",
+      "text": "Me, too!"
+    },
+
+    {
+      "timestamp": "0:02:14.2",
+      "speaker": "All** (laughi",
+        "text": "g"
+    },
+
+    {
+      "timestamp": "0:02:16.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I have an announcement, also. I just accepted a job at Pluralsight."
+    },
+
+    {
+      "timestamp": "0:02:21.7",
+      "speaker": "Jen Luker",
+      "text": "You did?! Congratulations!"
+    },
+
+    {
+      "timestamp": "0:02:23.2",
+      "speaker": "Jason Staten",
+      "text": "Congrats, Adam!"
+    },
+
+    {
+      "timestamp": "0:02:24.4",
+      "speaker": "Safia Abdalla",
+      "text": "Congrats."
+    },
+
+    {
+      "timestamp": "0:02:25.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Thanks! Yeah. I’m really excited. I’ll be starting pretty soon."
+    },
+
+    {
+      "timestamp": "0:02:28.8",
+      "speaker": "Safia Abdalla",
+      "text": "What is your role?"
+    },
+
+    {
+      "timestamp": "0:02:30.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I’m a  Full Stack Engineer and technically everyone’s job title there is Software Craftsman, and that’s kind of interesting because when we were going through “Apprenticeship Patterns” we kind of had this conversation about what’s a gender neutral way to say craftsman? Is it craftsperson? And anyway, so I think they’re trying to think of a… Using a more gender neutral term for that."
+    },
+
+    {
+      "timestamp": "0:02:56.6",
+      "speaker": "Safia Abdalla",
+      "text": "Ah, that’s interesting."
+    },
+
+    {
+      "timestamp": "0:02:58.6",
+      "speaker": "Jen Luker",
+      "text": "Scientist."
+    },
+
+    {
+      "timestamp": "0:02:59.3",
+      "speaker": "Safia Abdalla",
+      "text": "There was, I think,  some controversy on Twitter around that earlier."
+    },
+
+    {
+      "timestamp": "0:03:02.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+
+    {
+      "timestamp": "0:03:03.3",
+      "speaker": "Safia Abdalla",
+      "text": "With some book title or something. There might be some good feedback-"
+    },
+
+    {
+      "timestamp": "0:03:07.9",
+      "speaker": "Jason Staten",
+      "text": "Oh yeah."
+    },
+
+    {
+      "timestamp": "0:03:08.9",
+      "speaker": "Safia Abdalla",
+      "text": "On good alternatives there. I’ll try and get you a link."
+    },
+
+    {
+      "timestamp": "0:03:11.6",
+      "speaker": "Jen Luker",
+      "text": "I know there was some controversy about a talk title that said craftsman, or craftsmanship."
+    },
+
+    {
+      "timestamp": "0:03:18.9",
+      "speaker": "Jason Staten",
+      "text": "I can recall the book that you’re referring to, Safia, and yeah, definitely a Twitter thread worth reading."
+    },
+
+    {
+      "timestamp": "0:03:25.5",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (Affirmative)."
+    },
+
+    {
+      "timestamp": "0:03:26.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Today we’re going over chapters 2 and 3 of “The Imposter’s Handbook” which is Complexity and Lambda Calculus."
+    },
+
+    {
+        "text": "(Typewriter Dings)"
+    },
+
+    {
+      "timestamp": "0:03:34.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Alright, what did y’all think about the Complexity chapter?"
+    },
+
+    {
+      "timestamp": "0:03:37.3",
+      "speaker": "Jason Staten",
+      "text": "You might say it was complex."
+    },
+
+    {
+      "timestamp": "0:03:39.7",
+      "speaker": "All**  (laughi",
+        "text": "g"
+    },
+
+    {
+      "timestamp": "0:03:41.3",
+      "speaker": "Jason Staten",
+      "text": "I actually, I really liked it as I am one who has often stumbled across hacker news and seen lots of discussions about P=NP, and it, at least, helped give a little bit of foundation for me as to what they’re even talking about there, rather than just seeing the abstract of some paper that I know I won’t understand immediately."
+    },
+
+    {
+      "timestamp": "0:04:03.3",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I thought it was quite fun as well, and it explained some stuff that I had previously seen explained in a really confusing fashion in a very clear and crisp way. So, that was refreshing. I did wish they spoke a little bit about space complexity which was kind of a, not mind-blowing, but it was just an interesting thing when I first learned about it and discovered it, especially in the context of complexity overall. So, yeah. That might be in another chapter, probably."
+    },
+
+    {
+      "timestamp": "0:04:34.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Can you explain time complexity versus space complexity?"
+    },
+
+    {
+      "timestamp": "0:04:37.8",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, great point. So, complexity in the way that it’s defined in the chapter of this book and as you’ll most frequently see in interviews, articles, etc., refers to time complexity which is determining how long a program takes to run. Space complexity refers to determining how much space, specifically memory, a program will take. And I think it’s an interesting tidbit, at least for me, because oftentimes you tend to have to like, balance out the two. So, for example, a popular technique for speeding up a program, reducing it’s time complexity, is memoizing, so saving intermediary values in memory, instead of computing them on the fly. As a result, you’re not doing as many computations so your program is faster, but you are saving more things to memory so you take up more space. So, you favor time complexity over space complexity, and there’s other things. For example, maybe you decide you want to have more columns in your database instead of computing things on the fly, when you need to display them. So, I think sometimes, often, you have to balance the two."
+    },
+
+    {
+      "timestamp": "0:05:57.2",
+      "speaker": "Jason Staten",
+      "text": "Safia, I appreciate you bringing up the name of space complexity because what immediately came to mind was a data structure being the Bloom filter, and that being one that you can determine if something is part of a set by checking against a piece of memory that’s smaller than the actual set itself, but instead you go and you hash an item and see if that matches within the Bloom filter’s set without actually having to go and traverse the entire set to see if it’s in there. I will add a wikipedia link or something like that, but it’s a good way to not have everything pulled into memory if you just want to check if something is actually in there."
+    },
+
+    {
+      "timestamp": "0:06:42.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Is that one of those where you’re okay with false positives?"
+    },
+
+    {
+      "timestamp": "0:06:46.5",
+      "speaker": "Jason Staten",
+      "text": "Yes."
+    },
+
+    {
+      "timestamp": "0:06:47.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "For example, I think Medium uses a Bloom filter to determine if they’ve recommended an article to you before and so they don’t really want to recommend something if they’ve already recommended to you, but they’re okay with false positives because that just means they don’t end up recommending some article to you, and that’s okay."
+    },
+
+    {
+      "timestamp": "0:07:04.7",
+      "speaker": "Jason Staten",
+      "text": "And with a false positive you wind up having the requirement that ultimately, if something is said that is in there, you still do have to scan the entire list to see if that thing is contained."
+    },
+
+    {
+      "timestamp": "0:07:15.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Ah."
+    },
+
+    {
+      "timestamp": "0:07:16.1",
+      "speaker": "Jason Staten",
+      "text": "But, the vast majority of the time, you don’t. So, generally, you are saving on computation time because of that."
+    },
+
+    {
+      "timestamp": "0:07:23.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, there are all these different classes of problems, P, NP, NP complete. P means polynomial, and NP means nondeterministic polynomial, and I actually thought that NP stood for not polynomial."
+    },
+
+    {
+      "timestamp": "0:07:41.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I did, too, until last year. (laughs) Or maybe two years ago."
+    },
+
+    {
+      "timestamp": "0:07:46.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And I’m not exactly sure what nondeterministic polynomial means."
+    },
+
+    {
+      "timestamp": "0:07:51.7",
+      "speaker": "Jason Staten",
+      "text": "You’ve got P which are polynomial time, EXP with are exponential time, so something that scales at, I don’t know, 2 to the N or something, where as you add more elements, it really shoots up the amount of time that it takes to solve, and then R being the problems that can be solved in a finite amount of time, but NP, nondeterministic polynomial, is a way of solving an exponential time problem and doing it in polynomial time through non deterministic means. That’s what I grokked from it."
+    },
+
+    {
+      "timestamp": "0:08:27.9",
+      "speaker": "Safia Abdalla",
+      "text": "I was going to ask, what does it mean to be nondeterministic?"
+    },
+
+    {
+      "timestamp": "0:08:31.2",
+      "speaker": "Jason Staten",
+      "text": "That’s something that I need to review real quick and just to-"
+    },
+
+    {
+      "timestamp": "0:08:34.7",
+      "speaker": "Safia Abdalla",
+      "text": "Oh, sorry. I was asking you as an… I was pretending to be the audience."
+    },
+
+    {
+      "timestamp": "0:08:41.4",
+      "speaker": "Jason Staten",
+      "text": "Oh. Well then, Safia, please enlighten me just to make sure my understanding is clear."
+    },
+
+    {
+      "timestamp": "0:08:47.2",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, so nondeterministic in the purely mathematical sense is something that, given the same inputs, will return different outputs to it. So, it’s like not necessarily going to give you the same optimal response every time, you’re going to get a close approximation that will have some error to it, and the error is what causes it to be nondeterministic because it causes a skew from what you would actually expect to get, and I think the example provided in the book was talking about the traveling salesman problem, and the book was talking about how there’s no optimal solution for it in polynomial time, but there’s non deterministic approximations which will give you a route, but I think he was saying, it’s like… There’s a 25% error, or there’s some element of error to it."
+    },
+
+    {
+      "timestamp": "0:09:41.0",
+      "speaker": "Jen Luker",
+      "text": "Yeah. So, in the book it says, “You can think of non determinism as using a series of lucky guesses or random chance, each of which is always correct, to figure out the answer to a given problem.” So, there’s lots of different ways of doing it, but you have 2 options. You can ask each person in the group, “Are you happy here?”, “Are you happy here?”, “Are you happy here?”, “Are you happy here?”,  for every single place you go to try to find out where they’re going to be the happiest, for everyone, the most optimal place. They were using a group of friends going to a pub with different requirements. Or, you can just say, “Does this work for everyone?” And it’s either a yes or a no, and it’s a way of getting through that systematic “have to go through every person for every place to find out if this is the optimal one” or you can just say, “Does it work, everyone?” And it either gets a yes or a no. So, yeah. It’s like a shorthand way of getting to an answer much faster without having to go through step by step by step by step."
+    },
+
+    {
+      "timestamp": "0:10:44.3",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I think a good way, I’m recalling an old lecture I saw, is “A solution to a problem can be correct and/or optimal.” So, you can write an algorithm that gives you a correct answer to a problem, but then you can also write one that gives you an answer that is not only correct, but also the best possible solution to it."
+    },
+
+    {
+      "timestamp": "0:11:08.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I think that’s the difference between an algorithm and a heuristic. An algorithm always returns the correct answer and a heuristic just returns an answer that’s good enough."
+    },
+
+    {
+      "timestamp": "0:11:20.2",
+      "speaker": "Safia Abdalla",
+      "text": "That’s a good way to put it, yeah. I hadn’t thought of it that way."
+    },
+
+    {
+      "timestamp": "0:11:23.3",
+      "speaker": "Jen Luker",
+      "text": "Like there’s 100 different ways to get to the correct answer, but the correct and optimal answer is the best way to get to that answer."
+    },
+
+    {
+      "timestamp": "0:11:32.1",
+      "speaker": "Jason Staten",
+      "text": "So, in terms of the traveling salesman problem, it’s the case where the salesman does, in fact, reach all of the end points, right?"
+    },
+
+    {
+      "timestamp": "0:11:39.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I think-"
+    },
+
+    {
+      "timestamp": "0:11:40.2",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:11:40.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "One approach to the traveling salesman problem is to simply visit the closest city to the current one and then visit the one that’s closest to that and so on, and then when you’ve reached the last city, then just head back home."
+    },
+
+    {
+      "timestamp": "0:11:53.6",
+      "speaker": "Jen Luker",
+      "text": "And it’s something that you couldn’t have planned necessarily beforehand, per se."
+    },
+
+    {
+      "timestamp": "0:11:57.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "What do you mean?"
+    },
+
+    {
+      "timestamp": "0:11:57.9",
+      "speaker": "Jen Luker",
+      "text": "If you’re trying to algorithmically do it, it won’t necessarily be the most optimal route."
+    },
+
+    {
+      "timestamp": "0:12:03.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Ah. So, does P=NP?"
+    },
+
+    {
+      "timestamp": "0:12:06.6",
+      "speaker": "Jason Staten",
+      "text": "Yeah. That is a commonly discussed problem and there are... I guess that is something that’s still in the process of getting proven. So, there are lots of papers about it, trying to prove it, because I believe that if nondeterministic polynomial time ways of solving something are in fact found, then we can say that, I’m totally going to misspeak on this, but that you can solve any exponential solvable problem in polynomial time, through non deterministic means."
+    },
+
+    {
+      "timestamp": "0:12:42.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, there are so many hard problems that we could solve."
+    },
+
+    {
+      "timestamp": "0:12:46.0",
+      "speaker": "Jen Luker",
+      "text": "Much faster?"
+    },
+
+    {
+      "timestamp": "0:12:46.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah"
+    },
+
+    {
+      "timestamp": "0:12:47.4",
+      "speaker": "Jason Staten",
+      "text": "I guess that would mean good-bye to our privacy because encryption will be broken or something."
+    },
+
+    {
+      "timestamp": "0:12:53.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh, yeah."
+    },
+
+    {
+      "timestamp": "0:12:54.9",
+      "speaker": "Jason Staten",
+      "text": "I do know that a lot of those can hinge on some finite amount of time being absurdly long to solve, and so, not practical, but if we make that hop back to polynomial time then, yeah, encryption could become weak in some instances."
+    },
+
+    {
+      "timestamp": "0:13:11.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, that could be really bad."
+    },
+
+    {
+      "timestamp": "0:13:12.8",
+      "speaker": "Safia Abdalla",
+      "text": "In the last section of the chapter, the author shares a story where he was working with a client on a Ruby on Rails application and they were presenting him with the spec for it and they wrote out what they wanted, and he went back and thought about it and realized that the problem they had defined could actually be reduced to an NP hard problem, meaning a problem that is deemed not to have an optimal solution in polynomial time. So, essentially what he found out was that the request that the client was making was technically infeasible, or computationally infeasible. And I thought that was a cool story, because although I haven’t experienced it myself, I remember when I was in college I was taking a class where we were talking about these topics, and I was sitting with a group of people, and one of them was actually a graduate of the University I attended who was working in the industry, and we were just kind of complaining a little bit about the class and how the material felt super irrelevant and it was so hard and annoying, and he told a story that was really similar to the author’s, where he was like, “I was at work and we were talking with the client and they were giving us a spec for the problem.”  and he realized, he was just kind of sitting in the corner of the meeting, just writing on his notebook as people were talking, and he realized that the problem was that the client was stating could be reduced to another NP hard problem called the bin packing problem, which you can look up, and he was actually able to speak up during the meeting and be like, “All this is cool and everything, but it is technically impossible to do it, and you gotta kinda make some concessions and stuff.” So, I thought it was cool. I’ve now heard 2 stories about people reducing business problems to computational problems and then figuring out that the computational problem was NP hard and kinda being all like, “Okay we can’t actually do this.” And you know, saving the company time and money, which was pretty cool. Have you had similar experiences or heard of similar experiences?"
+    },
+
+    {
+      "timestamp": "0:15:31.0",
+      "speaker": "Jason Staten",
+      "text": "I’ve got one that I also encountered during college. So, I did an internship for IBM and I was tasked with helping out their interviewing process by having a set of at least 3 interviewers and each of those interviewers had time that they were available on any given day, and they wanted to interview the maximum number of candidates in a time of day and also optimize for clumping the interviews that these interviewers were doing all together, so that way, say, the three of you were all doing interviews. Ideally, Safia, you would have your interviews done in the morning, and then Adam in the afternoon, and Jen, maybe like later in the day or something. So, that way there wasn’t just constant interviewing going on, and the way that we actually, I would say solved it, was through doing a couple of different algorithmic approaches. One person did a Monte Carlo where he straight up just scrambled the order of interviews throughout the day for a given set of time, and then took the most optimal one that was scored by blocking chunks of time together, and I did kind of a tree traversal-like, traveling salesman route, and there were a couple of other approaches as well, and reflecting back on it now, or after having read this, it certainly seems in line with something that’s NP hard because given you have different schedules for every person on a different day, like picking an ideal set of times, is quite the difficult problem."
+    },
+
+    {
+      "timestamp": "0:17:15.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I’ve also seen a similar thing at a place that I interviewed at, and they had a piece of custom software they wrote and one of the problems they had with the algorithm is that it would often move the candidate around between different meeting rooms instead of prioritizing keeping them in the same room for the longest amount of time. And I don’t know how they’re doing it but they were gonna try to solve that. I can’t think of any examples personally."
+    },
+
+    {
+      "timestamp": "0:17:40.7",
+      "speaker": "Jen Luker",
+      "text": "Um, we’ve kind of… I’ve gotten lucky that those problems have been identified pretty quickly, and concessions have been required also quite quickly. So, I’ve not had to run into any where I’ve gone all the way through to the end and realized that it was an impossible problem, so much as realized that the more complexity we added, the longer it was going to take to the point that it was never really gonna get done, so it required a lot of pushback, I think. More than anything else is that, you know, every time a large project came up, we kept cutting back and cutting back and cutting back until we literally got down to, “Well, what is the absolute minimum you can get away with for this product?” And then “Is that still something that we can do within a feasible amount of time?” So, I think that it’s something that you run into often. I mean we, as humans, don’t consider those problems to be particularly difficult because of the fact that I think our brains work much more on an NP level, whereas computers are very much, you know, that P or exponential layout. You have to have a set of steps. You have to get from point A to point B, and just picking one and saying, “Does this work?” is not something that a computer does very well. So, I think that we want to make things that end up being NP complete, but at the same time, you can recognize when those things are coming up that are way more complex than you think they’re going to be."
+    },
+
+    {
+      "timestamp": "0:19:12.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I would like to get better at being aware of the complexity of problems at work, in the future. I think it could come in pretty handy."
+    },
+
+    {
+      "timestamp": "0:19:20.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, definitely, and save your company some money and time and compute hours on AWS. That, too."
+    },
+
+    {
+      "timestamp": "0:19:28.4",
+      "speaker": "Jason Staten",
+      "text": "(laughs) One thing your example made me think of, or reflect back on in the book, Jen, was the discussion about the bin packing, and it mentioning going and making an attempt at packing it and then asking the question of, “Is this optimal?” And it turns that problem into an NP complete type problem, like one that we can solve to say, “We have solved this.” And  so, when you’re talking about reducing the scope of something to the point that it’s feasible, that is ultimately a human decision. I mean, a computer isn’t necessarily going to make that call, at least most likely. I mean, sometimes you have to have an exact number produced on the outside of it, but when it comes to “What is an MVP?”, I mean that is something that just has to be decided by a decision problem rather than just being a combinatorial  problem."
+    },
+
+    {
+      "timestamp": "0:20:26.6",
+      "speaker": "Jen Luker",
+      "text": "I feel like the hints when getting a list of specifications are certain keywords like “ideal” or “best match” or something to that effect. It’s just, as soon as you get to those then you’re having to look at every single scenario to see if every single option qualifies all of the time, and that gets extremely heavy, computational and space-wise for that matter. So, it’s good to listen for those and try to figure out, you know, whether that’s ever something that you’re going to be able to do. Going back to the bin packing and the fact that we reduced the items down, it’s like trying to pack these items into this bin. Sure, there may be an optimal way, but if you get everything down to where it all fits in one bin, then it doesn’t necessarily matter, ‘cause it’s all gonna go in, right?"
+    },
+
+    {
+      "timestamp": "0:21:16.5",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I think-"
+    },
+
+    {
+      "timestamp": "0:21:17.5",
+      "speaker": "Jen Luker",
+      "text": "And that kinda, for me, turned it into, you know, you can turn it from an NP into a polynomial by just saying, “But does it all fit? Good enough.”"
+    },
+
+    {
+      "timestamp": "0:21:26.9",
+      "speaker": "Safia Abdalla",
+      "text": "I think that touches on an interesting problem and kinda like the distinction between academia and industry is when I first learned about the bin packing problem, it was in a problem set for a class that I did about a year ago now, and the problem statement itself, was not explicitly like, “You have a bin and you want to pack it with boxes.” It was a completely different problem that you had to like, sit and think about really hard and then you’d realize that you could reduce it to a bin packing problem, and use that to prove that the other problem in the statement was NP hard. That’s probably not making any sense to listeners. Okay."
+    },
+
+    {
+      "timestamp": "0:22:13.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Do you remember what the problem was?"
+    },
+
+    {
+      "timestamp": "0:22:14.9",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, so the problem was like, you have a wall and you have posters of different sizes and lengths and widths and you wanted to tile so the wall so that there were no gaps. I think that was the problem. It was a wall, or you were trying to tile something so that there was no gaps, and there were a couple of other constraints on it that made it difficult, and the problem statement itself was, “Prove that this problem is NP hard or provide an optimal solution for it.” And of course, the correct answer was that there’s no optimal solution because it’s NP hard and you can figure out that it is NP hard by reducing the problem statement to the bin packing problem, or reducing it to a variant of the bin packing problem, and since it’s like the bin packing problem, it’s also NP hard. So, I guess what I’m trying to say is that in academia you do the thing where you reduce it and you figure out it’s hard you just give up and move onto the next thing, or the next problem set. Or, I assume there’s people actually trying to figure out bin packing in an optimal way, but in “the real world” word world, as Jen was mentioning, you don’t just give up and quit, you change your constraints and adapt the problem to make it solvable. So..."
+    },
+
+    {
+      "timestamp": "0:23:40.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "That actually reminds me of a real world problem we had at work. We were making a visualization that had logos and they all pointed to a point on a curve and you had to fit all of them on there and the lines and logos couldn’t overlap and it had to look good, and that was really the important part, was doing all this and making it look good."
+    },
+
+    {
+      "timestamp": "0:24:01.5",
+      "speaker": "Safia Abdalla",
+      "text": "Sounds like everybody’s favorite design challenge, it needs to look good."
+    },
+
+    {
+      "timestamp": "0:24:06.2",
+      "speaker": "Jen Luker",
+      "text": "We solved that one by saying you had have a limited number of items and then if you reduced the screen size you increased, or decreased, that limit as you went. So, “Sorry, but you’re not gonna be able to get all of the labels that you want. Too bad.” (laughs) So, you know. But again, it’s one of those, you know, you’re taking it from a bin packing problem to a “Can you fit all the posters on the wall?” And if not, then reduce the number of posters."
+    },
+
+    {
+      "timestamp": "0:24:35.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, we actually had to do the same thing. Do y’all have anything else about complexity?"
+    },
+
+    {
+      "timestamp": "0:24:40.2",
+      "speaker": "Jen Luker",
+      "text": "I think the only thing that I think I would like to say about this, while everyone was expressing their love for this was chapter, is that I really, really hated it. And we somehow managed to have a couple extra weeks to go through these 2 chapters and I spent all of them on this chapter and like an hour on the Lambda calculus chapter. And I really think that if he’d given the example of getting fired at the very beginning, it would have dramatically increased my desire to read this chapter. (laughs) So, it was one of those situations where I spent 3 or 4 weeks reading this chapter, read the very last story and then went, “Oh!” and then went back and it made so much more sense, the whole thing made more sense. So, I secretly wish he’d led with that story."
+    },
+
+    {
+      "timestamp": "0:25:24.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Alright, let’s talk about Lambda Calculus."
+    },
+
+    {
+        "text": "(Typewriter Dings)"
+    },
+
+    {
+      "timestamp": "0:25:28.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Jen, I’m assuming you read this an hour ago?"
+    },
+
+    {
+      "timestamp": "0:25:31.0",
+      "speaker": "Jen Luker",
+      "text": "Yeah, I did. (laughs)"
+    },
+
+    {
+      "timestamp": "0:25:32.1",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:25:32.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Impressive."
+    },
+
+    {
+      "timestamp": "0:25:33.4",
+      "speaker": "Jen Luker",
+      "text": "Yeah, but it’s math. I get math. That’s something that comes easy to me, I’m really, really lucky in that sense."
+    },
+
+    {
+      "timestamp": "0:25:38.0",
+      "speaker": "Jason Staten",
+      "text": "I like that you can build up and calculate anything simply by using just functions. So that means functional programming is the best, right?"
+    },
+
+    {
+      "timestamp": "0:25:47.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Does it?"
+    },
+
+    {
+      "timestamp": "0:25:47.4",
+      "speaker": "All** (laughi",
+        "text": "g"
+    },
+
+    {
+      "timestamp": "0:25:49.1",
+      "speaker": "Jason Staten",
+      "text": "But I… Like, in a little more serious… The fact that Alonzo Church was able to go and discover these concepts and come up with the notion of being able to calculate a true or false thing using just a single construct and talk about branching and loops, when that didn’t exist, is pretty revolutionary. I can only imagine sitting in a class and learning about this thing without having the background of actually knowing what loops and conditionals are in normal, or modern, computing, because that concrete factor for me made this click a little bit more."
+    },
+
+    {
+      "timestamp": "0:26:27.8",
+      "speaker": "Jen Luker",
+      "text": "Absolutely. As soon as they started putting parentheses around things I totally understood exactly what they were doing. So, it was very much having that, you know, programming experience that made this much easier to understand. I really liked the fact that they kept stressing that there’s no types, there’s no numbers, there’s nothing but functions. Everything is a function, and as long as you keep thinking of it in a function then you can solve it a little bit more abstractly, and that can be really difficult for people to grasp. We inherently don’t appreciate abstracts as much as, you know, we want to know how many apples we have. We want to know if we have any pie left, you know? So, thinking of everything in a really abstract way can be really hard, however the way that it reduces complexity makes it much easier to come to some of those solutions much faster, which I appreciated."
+    },
+
+    {
+      "timestamp": "0:27:29.4",
+      "speaker": "Safia Abdalla",
+      "text": "I have an opposite experience from Jason and Jen, because I actually find the fact that I wrote software before I learned about Lambda calculus to be an inhibition for me, because as I was learning about some of the stuff he defined in the chapter, there was like a block in my brain that was like, “But why would you do it this way? Why would you do it this way?” And of course, I didn’t have the historical context that when all of this was devised, programming did not exist. Like, this is how you would define programming in the absence of programming languages and all of the tools and stuff that we have now. And I think it still continues to be a challenge for me that I have this mental block that is so used to thinking about these things in a certain way that it’s hard for me to adapt and think about them in a bit of a more abstract sense."
+    },
+
+    {
+      "timestamp": "0:28:23.2",
+      "speaker": "Jen Luker",
+      "text": "I think I got really lucky in calculus teachers in college. He explained things in a very simplistic fashion and it just made derivatives and integrals seem like very simple problems. They were just, they were very proof orientated and it was just very procedure and process oriented, and as long as you could look at it and recognize some of the patterns then you knew which procedure and process you needed to follow in order to get the answer in which they were looking for. So, when I got to this chapter that’s exactly how I saw it, is recognizing the patterns, like the way in which he reduces stuff does, very much, remind me of derivatives. The way in which you take complex problems and simplify them down. It’s just, it’s those procedures. It’s the things like, if you have a positive and negative and you’re multiplying them together, you’re always going to end up with a negative, you know? If you have, you know, same thing with a true and a false, you know? If you end up with 2 truths and a false, it’s still gonna be a false, you know? So, when trying to apply that to Lambda calculus, it kind of provided that pattern that you can follow. When you see these things, you can recognize that this is the procedure you’re going to need, or this going to be the most likely result. And that just  made it simpler for me. So, I think I am lucky in that I had a really good calculus teacher to begin with."
+    },
+
+    {
+      "timestamp": "0:29:52.3",
+      "speaker": "Jason Staten",
+      "text": "So, one thing in this chapter that did kinda throw me off at first was when it talked about substitution in that it would go and put… Say you would have Lambda x dot x applying 3 to it:\n\nLambda x.x 3\n\nThat when it did the substitution it used like [square brackets] around it to indicate that all instances of X are bound to this, or instances, or… Variables of X from that outermost lambda were applied to it, and that was initially missing that it was left applicative, and so, the substitution was written on the right side even though it was supposed to apply to the left side:\n\nLambda x[x:=3]\n\nAnd that made me a little bit thrown off at first when reading it. And then, circling back around it kind of finally clicked for me. I don’t know if this, maybe it’s standard notation? I’m not sure, did any of you actually study this in school?"
+    },
+
+    {
+      "timestamp": "0:30:48.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I did not."
+    },
+
+    {
+      "timestamp": "0:30:49.1",
+      "speaker": "Safia Abdalla",
+      "text": "I studied it a little bit, but when I saw substitutions it was in a different format, like it would be the square brackets but it would be like X square bracket, or like, square bracket and then inside it, it would be like x colon equals n\n\n[x:=n]\n\nfor like any number, I guess. So it, I guess it’s pretty much the same thing, what am I talking about? But I think it is standard notation to the brackets with the substitution with the colon and the equals sign to the right of where you’re applying it. ‘Cause I think it might also just disambiguate that you’re not applying a function to… Or you’re not applying a lambda to another lambda, but that you’re making a change to a present lambda. Does that make sense? Like, it might-"
+    },
+
+    {
+      "timestamp": "0:31:40.1",
+      "speaker": "Jason Staten",
+      "text": "Yea-"
+    },
+
+    {
+      "timestamp": "0:31:40.8",
+      "speaker": "Jen Luker",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:31:40.9",
+      "speaker": "Safia Abdalla",
+      "text": "I don’t know if… Like, there might be cases where… Yeah."
+    },
+
+    {
+      "timestamp": "0:31:43.7",
+      "speaker": "Jen Luker",
+      "text": "It’s like here’s your function and then here’s your modifications."
+    },
+
+    {
+      "timestamp": "0:31:46.6",
+      "speaker": "Jason Staten",
+      "text": "I could see how it does apply, knowing that it is a function that potentially returns another function and potentially returns another function, and that it gets applied to the outermost one to go and eliminate that. When you look at, whether it’s in the JavaScript form or any other language that has functions that can return other functions, that’s the way that it works. I mean it’s currying. And so-"
+    },
+
+    {
+      "timestamp": "0:32:10.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:32:10.8",
+      "speaker": "Jason Staten",
+      "text": "Like, I see it, but it just, that threw me for a loop at first, just visually."
+    },
+
+    {
+      "timestamp": "0:32:15.0",
+      "speaker": "Safia Abdalla",
+      "text": "No. Yeah. It is. It is weird."
+    },
+
+    {
+      "timestamp": "0:32:16.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And I'll be honest, this chapter really confused me. I didn’t really understand the syntax and it’s not something I’ve ever seen before. So, for example, the most basic example is Lambda X dot X."
+    },
+
+    {
+      "timestamp": "0:32:30.5",
+      "speaker": "Jen Luker",
+      "text": "It’s defining the function. So, you know back in the day when you did, I guess basic geometry where you had like f(x) is equal to 5 [ f(x)=5 ], but f(x) was actually a y."
+    },
+
+    {
+      "timestamp": "0:32:43.5",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:32:44.2",
+      "speaker": "Jen Luker",
+      "text": "So, it’s kinda like that natural transition of saying, “Okay, well f(x) is y. You know, we're gonna change all the definitions of f(x) to y.”  Or if you were to say, “F(x) is equal to 3x and then you plop 7 into that, then you’re changing all definitions of x to 7.”\n\nf(x) = 3x\n\nx=7\n\nOr the same way where we say “Okay, if f(x) is equal to 3x plus 2, then we’re gonna set f(x) to 0.”\n\nf(x) = 3x + 2\n\nf(x) = 0\n\n0 = 3x + 2\n\nIn order to have like a 0 is equal to this and then you can solve for x that way. So, it’s defining the function. Now, sometimes it’s a single number, sometimes it’s an entire algorithm, but the purpose is to say this is the procedure and then these are the functions that are being used for that procedure."
+    },
+
+    {
+      "timestamp": "0:33:35.0",
+      "speaker": "Safia Abdalla",
+      "text": "I think page 46 of the book, for those following along, it does a good thing. It does a good job of describing the application process which is like, I think if you’re thinking about it in a programming context, it’s specifically talking about when you invoke the function. So, you can define a function and in the book the function it’s defining is an identity function. So, it’s takes the argument and it returns that same argument. In JavaScript you would do something like function identity parameter X return X. That’s the definition. When you apply it, you might use, what’s the thing called? Immediately executing fub-bub-bu-bu-"
+    },
+
+    {
+      "timestamp": "0:34:20.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "An IIFE?"
+    },
+
+    {
+      "timestamp": "0:34:20.5",
+      "speaker": "Safia Abdalla",
+      "text": "An IIFE, which-"
+    },
+
+    {
+      "timestamp": "0:34:22.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "An Immediately-Invoked Function Expression."
+    },
+
+    {
+      "timestamp": "0:34:24.9",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I think you would use that which is just, you define the function and then right next to it you put a pair of parentheses and you pass in the argument to pass in to that function. Here, since a function is a value, the argument that you pass through the function is a value. So, it can in turn be another function, and that other function could be a function that takes a value and that value can be another function and you get like a whole chain of functions, each applying one another in a nested way. Or each being applied to one another in a nested fashion."
+    },
+
+    {
+      "timestamp": "0:35:07.9",
+      "speaker": "Jen Luker",
+      "text": "Kinda liked it-"
+    },
+
+    {
+      "timestamp": "0:35:08.4",
+      "speaker": "Safia Abdalla",
+      "text": "I think is the best way to-"
+    },
+
+    {
+      "timestamp": "0:35:08.9",
+      "speaker": "Jen Luker",
+      "text": "I think of it as the dot notation in JavaScript where you’re chaining your function. So, you want to map and then you want to reduce. Or you want to map and then you filter, and then you reduce to try to get exactly what you need from that array, but it’s like that dot notation. You are taking a function and you’re calculating what you need to and then you’re adding another function to it because you’re passing it into the next function and then passing it into the next function. So, the definition here is just trying to outline that as a possibility that you can get a function within a function within a function."
+    },
+
+    {
+      "timestamp": "0:35:46.2",
+      "speaker": "Safia Abdalla",
+      "text": "Because functions are values which is kind of… I guess that’s one of those things where sometimes my programmer brain gets in the way of my person trying to understand Lambda calculus brain, because-"
+    },
+
+    {
+      "timestamp": "0:36:00.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "& **Jason Staten** (laughing)"
+    },
+
+    {
+      "timestamp": "0:36:01.0",
+      "speaker": "Safia Abdalla",
+      "text": "You know I’m so used to thinking of functions not as values themselves but as things that return values."
+    },
+
+    {
+      "timestamp": "0:36:08.6",
+      "speaker": "Jen Luker",
+      "text": "Well, I mean if-"
+    },
+
+    {
+      "timestamp": "0:36:09.9",
+      "speaker": "Safia Abdalla",
+      "text": "So, it takes a little bit of rewiring."
+    },
+
+    {
+      "timestamp": "0:36:11.2",
+      "speaker": "Jen Luker",
+      "text": "That’s part of the cool thing about it, and I mean if you go look at the philosophy of numbers, you know numbers are functions. So, they are abstract values for real world items. So, 3 doesn’t actually mean anything. 3 apples means something. That means something tangible. So, even if you’re talking about passing in a number, unless it has a deterministic object in the real world associated with it, it’s still an abstract parameter, it’s just a function. It’s a function of 3. So, it could be 3 apples, it could be 3 trees, it could be 3 universes for all we know. It doesn’t matter what 3 is, just that you’re using 3 as the function of 3."
+    },
+
+    {
+      "timestamp": "0:37:03.7",
+      "speaker": "Jason Staten",
+      "text": "I saw a screen cast, or it was a Twitch stream by Gary Bernhardt where he went and implemented the Lambda calculus using Python, and when he produced, ultimately, the result of 42 or something out of it, after doing the calculations within it, he said that, to reinforce the idea that numbers didn’t exist in the sense of like, we see numbers in decimal form, but there’s no reason why this couldn’t show up as Roman numerals, or binary, or some other representation. It just happens to be the concrete representation of what these functions are calculating that is understood to us, as humans."
+    },
+
+    {
+      "timestamp": "0:37:46.6",
+      "speaker": "Jen Luker",
+      "text": "So, bringing in my knitting..."
+    },
+
+    {
+      "timestamp": "0:37:48.8",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "0:37:49.6",
+      "speaker": "Jen Luker",
+      "text": "(laughs) And the fact that I am the knitting code monkey, I take sentences and convert them into binary and convert binary into knitting stitches and then knit those into sweaters, or blankets or something. So, what you end up having is that you have those same words implemented in a  completely different fashion, but it technically means the exact same thing. So, it takes that concept again and says words are just a function of meaning that I’ve converted into a different format but that meaning still exists because it’s binary and we’ve defined that as a way of defining words, and then knitting stitches, being a knit and purl, is defined in the same way as a 1 and a 0 or a true and a false, because we’ve provided that function for that to exist. So, in the end I have phrases, sentences, stories, knit into things, and in my own head they mean the same thing."
+    },
+
+    {
+      "timestamp": "0:38:53.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It’s like you’re in the Matrix"
+    },
+
+    {
+      "timestamp": "0:38:55.2",
+      "speaker": "Jason Staten",
+      "text": "& **Safia Abdalla** & **Adam Garrett-Harris** (laughing)"
+    },
+
+    {
+      "timestamp": "0:38:56.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "You don’t even see the stitches anymore, you just see the words and pictures and stories."
+    },
+
+    {
+      "timestamp": "0:39:02.3",
+      "speaker": "Jen Luker",
+      "text": "But it’s true, you know? Like, a lot of times when I’m knitting something, especially when I’m knitting a sweater. It’s triggers memories of what what happening while I was knitting that sweater. It takes a couple of months to knit a sweater. I think the shortest time I’ve ever knit something was in 14 days. So, 2 weeks and I had a really, really, really simple sweater, but a lot happened in those 2 weeks. So, you know, whether there’s an actual sentence converted and knitted into that thing or not, a sweater, for me, has that meaning, it has that story. So, you know it’s kinda the same thing, it’s the same concept in that what you decide to insert into these functions are… they’re still functions. They’re still that abstract definition. So…"
+    },
+
+    {
+      "timestamp": "0:39:50.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I guess-"
+    },
+
+    {
+      "timestamp": "0:39:51.7",
+      "speaker": "Jen Luker",
+      "text": "You could put words. You could put numbers. You could put phrases. You could put cars. You can put binary. You can put knitting stitches."
+    },
+
+    {
+      "timestamp": "0:39:57.7",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I guess the tricky thing is expanding my thinking about data not as numbers, strings, booleans, but as values and just having a total galaxy brain moment and removing the level of specificity on which I think about things, instead of like, it’s not a number, it’s a value. And those, in my mind, even right now, those feel like the same thing, but I guess unlocking the distinction’s probably going to be a big part of completely getting all of this material for me."
+    },
+
+    {
+      "timestamp": "0:40:36.0",
+      "speaker": "Jason Staten",
+      "text": "One thing that helped me the first time that I encountered church encoding of things, was seeing that implementation of true and false; whereas, I, myself, tend to think of true and false as a value, oftentimes represented by a single bit, right? And seeing that true or false in the Lambda calculus can be treated as a function that function of x, or sorry, a lambda of x, I don’t know even know what it’s called, a dot notation.\n\nSo, Lambda of x dot Lambda of y always returning x for true:\n\nLet True = (x => y => x):\n\nand then for false, being lambda of x dot lambda of y always returning y for the false case,\n\nLet False = (x => y => y):\n\nand it turns the notion of true and false from instead of being a hard scaler value of positive one, like a bit of one or a bit of zero, and instead turns it into a flow of data. And-"
+    },
+
+    {
+      "timestamp": "0:41:35.9",
+      "speaker": "Safia Abdalla",
+      "text": "So-"
+    },
+
+    {
+      "timestamp": "0:41:37.1",
+      "speaker": "Jason Staten",
+      "text": "So, that’s kinda the way I see it. It’s just like a composition of functions on top of other functions."
+    },
+
+    {
+      "timestamp": "0:41:41.1",
+      "speaker": "Jen Luker",
+      "text": "Yeah, and it was lambda of x. lambda of y.lambda of x was a true, and then lambda of x.lambda of y.lambda of y was a false."
+    },
+
+    {
+      "timestamp": "0:41:49.5",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, so it feels like-"
+    },
+
+    {
+      "timestamp": "0:41:49.9",
+      "speaker": "Jen Luker",
+      "text": "Based on passing them through."
+    },
+
+    {
+      "timestamp": "0:41:52.0",
+      "speaker": "Safia Abdalla",
+      "text": "It feels like, and let me know if I’m grasping this correctly, it feels like what is going on is that this is like stepping back and representing true and false not as like, the binary values that we think of now, but as inverses of each other."
+    },
+
+    {
+      "timestamp": "0:42:12.4",
+      "speaker": "Jason Staten",
+      "text": "Yes."
+    },
+
+    {
+      "timestamp": "0:42:12.4",
+      "speaker": "Safia Abdalla",
+      "text": "That what is true cannot be false, and what is false cannot be true, and enforcing that logic into a function by playing around with which arguments are returned."
+    },
+
+    {
+      "timestamp": "0:42:27.1",
+      "speaker": "Jen Luker",
+      "text": "That’s it. It was absolutely true. The purpose of this to show that if you had, you know, lambda of x lambda of y lambda of x, you’re always gonna get lambda of x versus… Because you’re passing lambda of x through and you’re passing that x through to the lambda of y which defines that y as x and you’re gonna get x out. Whereas, if you did the lambda of x lambda of y lambda of y, you’re passing y into x, which is passing x as y into y, and therefore you were gonna get y out instead. So, the purpose was to, again, show the reduction. Show that if you have this xyx pattern, you’re going to result in reducing all the way down to just the x; whereas, if you had the value of the second parameter being passed, or the value of the function being passed in as the first function, you’re always gonna end up with the answer from the 2nd function."
+    },
+
+    {
+      "timestamp": "0:43:23.7",
+      "speaker": "Safia Abdalla",
+      "text": "So-"
+    },
+
+    {
+      "timestamp": "0:43:24.5",
+      "speaker": "Jen Luker",
+      "text": "So, it becomes what? Lambda y of lambda y versus just x."
+    },
+
+    {
+      "timestamp": "0:43:28.4",
+      "speaker": "Safia Abdalla",
+      "text": "So, if I can repeat this back just kinda for myself, and also for anyone listening. Is church encoding and, feel free to like, confirm this with me, it’s basically a way… Church encoding for booleans basically gives us a way to show the fact that true and false are inverses of each other by defining 2 Lambda calculus statements that apply the same 2 functions, the lambda x- er the lambda y applied to lambda x, but choose different parameters, depending on whether they represent true or false…. AAh, Sorry. I feel like I’m getting this, but I feel like to explain it well to people and to you guys, or you folks, and to everyone listening, I need to point out to the chunk of JavaScript code at line 53, er page 53 in the book, that shows that when you use church encoding for booleans… Like, I guess, I think the key for me is realizing that you’re not applying a single… You’re not invoking the function with a single boolean value, you’re sending it to… Aaaah. This is so hard to describe when I can’t point to things and visualize it. (laughs)"
+    },
+
+    {
+      "timestamp": "0:44:54.7",
+      "speaker": "Jason Staten",
+      "text": "& **Jen Luker**  (laughs)"
+    },
+
+    {
+      "timestamp": "0:44:55.6",
+      "speaker": "Safia Abdalla",
+      "text": "But… And I don’t want to take up too much of the time with this, but looking at the JavaScript, the 4 lines of JavaScript, recognizing that it was essentially calling a function that returned a function and passing a value to that function, helped me figure out how this was working. So, if anyone is also similarly perplexed and is listening, maybe that might help. Like, looking at the JavaScript code further.\n\nLet True =  (x => y => x);\n\nLet False = (x => y => y);\n\nTrue (true) (false) //true\n\nFalse (true) (false) //false\n\n"
+    },
+
+    {
+      "timestamp": "0:45:21.2",
+      "speaker": "Jen Luker",
+      "text": "So, if you want to look at it, and you want to think about it a little bit differently, you have function 1 returns function 2. So you pass in a 1 or you pass in a true to function 1, and because it’s immediately returning it’s value, you’re gonna pass true into function y, and therefore function y is also going to just immediately return true. But, if you pass a false in… Oh god, you’re right."
+    },
+
+    {
+      "timestamp": "0:45:54.4",
+      "speaker": "Jason Staten",
+      "text": "(laughing)"
+    },
+
+    {
+      "timestamp": "0:45:56.3",
+      "speaker": "Safia Abdalla",
+      "text": "I know! When you like, sit down and you’re like, what is going on step by step, I think…"
+    },
+
+    {
+      "timestamp": "0:45:59.8",
+      "speaker": "Jen Luker",
+      "text": "Okay. X=true, Y=false. So, if you have x return y, what are you going to get? You know? Function of x returns y, you’re going to return false."
+    },
+
+    {
+      "timestamp": "0:46:13.9",
+      "speaker": "Safia Abdalla",
+      "text": "Y."
+    },
+
+    {
+      "timestamp": "0:46:14.3",
+      "speaker": "Jen Luker",
+      "text": "If you have function of x return function y return function of x you’re going to end up with a true, because it’s the true value being passed into a function that say, “Okay, well here’s your answer” instead. It’s like, which one do you want? Even though it’s like the sub child, it’s like, you know, if the function of x always returns true and you’re passing x into the function of x you’re gonna get true passed into the second function, but if your answer is, “Well give me Y” and y is set to false, you’re no longer getting x, you’re getting y and y is false, x is true. It does help if you’re looking at paper, it really does."
+    },
+
+    {
+      "timestamp": "0:46:50.0",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, it really does. ‘Cause I think the catch for me here, and like the thing that gets me closer to understanding it, and Jason feel free to like, confirm if my thinking’s in the right direction, is the fact that it’s being… These are true and false as they’re defined, functions, but they’re curried, so the currying, and the way that you manipulate the parameters within the new function that you return is what causes the inversing. Oh, I get it!"
+    },
+
+    {
+      "timestamp": "0:47:18.4",
+      "speaker": "Jen Luker",
+      "text": "There ya go! See, we’ve all run into this in code before where we passed a function into a function and then we got the value from the first function instead of the value in the second function, or vice versa, and we’ve been confused as to why, and this kind of lays out that method for why you got the answer that you did, you know? It’s like, are you trying to return the value of the first one or are you trying to return the value of the second one?"
+    },
+
+    {
+      "timestamp": "0:47:41.9",
+      "speaker": "Jason Staten",
+      "text": "So, this is great. I think it’s getting some live learning of Safia and that is why I hopped onto this show. Not specifically just you, Safia, but like everybody as well, like, having people pick up on it. And so-"
+    },
+
+    {
+      "timestamp": "0:47:53.2",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:47:53.9",
+      "speaker": "Jason Staten",
+      "text": "I think it’s clicking for you. So, you can go ahead one more time, or like you were saying."
+    },
+
+    {
+      "timestamp": "0:47:57.3",
+      "speaker": "Jen Luker",
+      "text": "Yes, yes."
+    },
+
+    {
+      "timestamp": "0:47:57.8",
+      "speaker": "Safia Abdalla",
+      "text": "No, I was going to say for anyone listening who is feeling a sense of imposter’s syndrome, I am a very smart person, I like to think, and I have a computer science degree, and I’ve covered these topics in class. Granted, I might not have been paying 100% attention, and I’ve done… So, yeah. Like, these things are tricky and you’ll lose grasp of them and pick it up, so if, as we’re speaking and you’re listening to this, you’re just feeling like everything’s over your head, don’t worry. I also felt that, but I gave it a little bit of time and I figured out something. So, yeah."
+    },
+
+    {
+      "timestamp": "0:48:32.1",
+      "speaker": "Jen Luker",
+      "text": "Also, not all the subjects are going to be conducive to your personality."
+    },
+
+    {
+      "timestamp": "0:48:37.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:48:37.8",
+      "speaker": "Jen Luker",
+      "text": "I still really hate that complexity chapter."
+    },
+
+    {
+      "timestamp": "0:48:40.8",
+      "speaker": "Jason Staten",
+      "text": "I guess I want to step onto numbers really quick, and I’m going to try and succinctly explain things so it may make sense."
+    },
+
+    {
+      "timestamp": "0:48:49.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, all I really know is… So, a basic explanation is you can represent numbers with functions."
+    },
+
+    {
+      "timestamp": "0:48:56.7",
+      "speaker": "Jason Staten",
+      "text": "(laughing) That uh… yes. That is a very high level, and I’m going to take one step down if I can and see if I can nail this."
+    },
+
+    {
+      "timestamp": "0:49:03.9",
+      "speaker": "Safia Abdalla",
+      "text": "Please, do."
+    },
+
+    {
+      "timestamp": "0:49:04.8",
+      "speaker": "Jason Staten",
+      "text": "Okay. So, looking at church encoding of numbers. At the base level, you need a representation of 0, and that base representation is the identity function. So, if you’re familiar with that, identity function is a function that receives an argument and returns something, like returns that same argument back. So, it’s just a straight pass through. Like, if you’ve got a JavaScript one, it takes argument x and returns argument x back out. It does no transformation or anything, and when a number is encoded in church numerals, when you are trying to encode, say, the number 1, you are applying a transformative function upon the identity function a single time, and for 2, it’s applying it twice, and three times, and so forth. So, looking at it in a more concrete, say you were to go and pass the value of 0 to the identity function and that gives you, when I say 0 I mean 0 in the decimal sense that we know, and if you were to go and want to bring it back to decimal numbers, if we were to go and say F, the function that’s transformative would the one that increments that value by 1. So, church encoding of that, would be taking an F, being add 1, and then X, which is our value of 0, and applying it 1 single time. So, does that help at all?"
+    },
+
+    {
+      "timestamp": "0:50:35.5",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, so I actually feel like this is much easier to grasp than the boolean one, and I’m going to repeat back what I think you said-"
+    },
+
+    {
+      "timestamp": "0:50:42.2",
+      "speaker": "Jason Staten",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:50:43.0",
+      "speaker": "Safia Abdalla",
+      "text": "And the way I understood it which is essentially the way you represent numbers in lambda calculus is by defining their relationship with a prior number through a transformative function. So, you have the base statement, which represents 0, you applying a transformative function to that, and is the transformative function just like add 1? Or..."
+    },
+
+    {
+      "timestamp": "0:51:07.1",
+      "speaker": "Jason Staten",
+      "text": "It could be add 1. I guess it’s not entirely implementation specific, or like-"
+    },
+
+    {
+      "timestamp": "0:51:12.6",
+      "speaker": "Safia Abdalla",
+      "text": "Okay."
+    },
+
+    {
+      "timestamp": "0:51:13.6",
+      "speaker": "Jason Staten",
+      "text": "Add 1 is the easiest way for me to understand it because I think in decimal numbers, but…"
+    },
+
+    {
+      "timestamp": "0:51:19.4",
+      "speaker": "Safia Abdalla",
+      "text": "Mmm."
+    },
+
+    {
+      "timestamp": "0:51:20.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, that’s really just if you want it to return real decimal numbers."
+    },
+
+    {
+      "timestamp": "0:51:23.9",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. Yeah. This my very, like, literal brain."
+    },
+
+    {
+      "timestamp": "0:51:27.6",
+      "speaker": "Jen Luker",
+      "text": "Right."
+    },
+
+    {
+      "timestamp": "0:51:27.6",
+      "speaker": "Safia Abdalla",
+      "text": "Working against me again. So, a function you can apply a transformative function to a lambda statement that you have, to get a number, and then you can apply that transformative function again, and again, and again. And it’s essentially like a recursive invocation of the transformative function."
+    },
+
+    {
+      "timestamp": "0:51:48.5",
+      "speaker": "Jen Luker",
+      "text": "Yeah, so if you’re looking at it, remember our pre-algebra where you had f(x) is equal to x +1, and therefore if you pass 0 in as x then you have 0 + 1, but if you pass f(x) as f(x) with a value of 0 then you’re saying that the x+1 is actually (x+1)+1 and that the x can be recursively set so that it becomes (x+1)+1+1 or (x+1)+1+1+1 and that’s how it gets recursively iterated by passing f(x) into f(x) into f(x) + 1."
+    },
+
+    {
+      "timestamp": "0:52:35.3",
+      "speaker": "Safia Abdalla",
+      "text": "It’s a giant nesting doll of numbers."
+    },
+
+    {
+      "timestamp": "0:52:39.0",
+      "speaker": "Jen Luker",
+      "text": "It is. It’s just… It’s recursion. It’s the definition of that recursion."
+    },
+
+    {
+      "timestamp": "0:52:44.6",
+      "speaker": "Safia Abdalla",
+      "text": "See, I see this and my like, programmer, not somebody trying to figure this stuff out in 1930, is like,“But why don’t you just do the number?” Like I understand the mathematical merit of it, but there’s still a part of me that’s like, very much so thinking literally about it, so… This is like an interesting brain rewiring for me."
+    },
+
+    {
+      "timestamp": "0:53:04.6",
+      "speaker": "Jen Luker",
+      "text": "They remind me of proofs. Like, you had to explain how a particular value or value set or, in our case, function ended up being equal to another type of function. Like, all squares are rectangles, but not all rectangles are squares, and understanding how they got to that. And with those defined rules of what squares are versus what rectangles are, like rectangles are 4 perpendicular lines with each of those sets parallel to each other, whereas a square is actually 4 equal perpendicular lines with, you know, 2 each set being parallel to each other. So, it’s that f(x) function, the function to get a square is this, the function to get a rectangle is that, and you can get those definitions within each other by proving that process, and I feel like providing these abstract algorithms allows you to find similar answers to similar problems. It’s like the Pythagorean theorem, how do you find the area of every single right triangle out there? You know? Or any non- Just any triangle in general? And you can get that by solving it with this abstract algorithm of a squared + b squared = c squared.So, you know, this is all just trying to find those algorithmic definitions to define our world, and for us in programming, we use a lot more if/else statements and, you know, writing of functions to repeat processes on things that are similar. So, yes we could’ve used numbers, but the numbers aren’t important, it’s that the same algorithm solves the same type of problem. So, it keeps us from having to say, “Alright. If you have 2 apples, and you subtract 1 apple, you’re gonna get 1 apple. Okay, but now get this. If you have 2 oranges and you subtract an orange you’re going to get 1 orange. Oh! And if you have 2 chairs…” (laughs) So, you know, as opposed to having to solve each of those things every single time you interact with it, we just know. Well, I have 2 of something and I took 1 of them away, I’m going to be left with 1, and that’s what this is supposed to be trying to explain, is this is how programming works. This is how recursive functions work. So, whatever we decide to put in there, it’s still going to be a recursive process. So, it’s an algorithmic way of defining what these things are."
+    },
+
+    {
+      "timestamp": "0:55:52.3",
+      "speaker": "Safia Abdalla",
+      "text": "Right. So, we’re getting close to time and I wanted to pick your brain, Jason. As somebody who, unlike me, did not study this unwillingly in an academic context (laughs). What are some tips and resources and ideas that you, and Jen, and Adam, too perhaps, have for folks listening who are looking to understand Lambda calculus a little bit further? What do you think are some good resources to look up?"
+    },
+
+    {
+      "timestamp": "0:56:21.5",
+      "speaker": "Jason Staten",
+      "text": "So, as a heads up, I did not study this in an academic context. I-"
+    },
+
+    {
+      "timestamp": "0:56:25.3",
+      "speaker": "Safia Abdalla",
+      "text": "Honestly, you’re better for it. (laughs)"
+    },
+
+    {
+      "timestamp": "0:56:27.7",
+      "speaker": "Jason Staten",
+      "text": "(laughs) The best thing that has helped me with it is going and implementing it kind of in the small scale. I haven’t done anything too large, but going and… I think my first time encountering it was somebody wrote the Lambda calculus inside of Ruby, which was a pretty flexible language to do it because it didn’t have type information that you had to deal with. So, it made it pretty easy to go and just have, in Ruby they were procs, but functions that returned functions that you could go and invoke, and yeah, just really tinkering with it on your own is something. In fact, I stated before that I tried to do this with Rust and my plan for like, working through this book is using Rust as my target for it, and I attempted to do so, but I’ve found that in Rust… Like having a closure that returns another closure and adding type information for that and also making the borrow checker happy is a really difficult problem that I don’t think I’m quite familiar enough with Rust in order to do yet, but I did find somebody who went and instead of implementing it during runtime in Rust, somebody went and used Rust’s type system in order to model the Lambda calculus, and so, it’s actually the compiler that is handling that factor, and so they’re able to go and reduce using the compiler up to like, 7 levels deep or something like that before the compiler just says, “Okay, you’re trying to do something that’s off the wall and I’m going to give up.” But I will post a link to that in the GitHub, and I will also see if I can find the Ruby one."
+    },
+
+    {
+      "timestamp": "0:58:06.2",
+      "speaker": "Safia Abdalla",
+      "text": "In general, would you recommend that folks who are interested in getting hands on, try and take a stab at implementing the Lambda calculus in dynamically typed language?"
+    },
+
+    {
+      "timestamp": "0:58:17.8",
+      "speaker": "Jason Staten",
+      "text": "I… I would say so, because then you’re not burdened with the type information."
+    },
+
+    {
+      "timestamp": "0:58:23.2",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (Affirmative)."
+    },
+
+    {
+      "timestamp": "0:58:23.7",
+      "speaker": "Jason Staten",
+      "text": "I mean, especially if you’re more familiar with it. Like doing it in either JavaScript or- I mean, Ruby was good for me because I was doing Ruby at the time, but also, I mean JavaScript seems like it would be a pretty friendly place as well because you can have functions that return functions pretty easily within that. Doing it in another language, I may get called out, but when Java didn’t have anonymous functions to it, that may have been a little more difficult."
+    },
+
+    {
+      "timestamp": "0:58:51.5",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:58:52.1",
+      "speaker": "Jason Staten",
+      "text": "‘Cause you would have had to return like, some interface that was runnable or something and that would be a little more challenging."
+    },
+
+    {
+      "timestamp": "0:58:59.7",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "0:58:59.5",
+      "speaker": "Jason Staten",
+      "text": "So, don’t burden yourself with that. But then try passing different concrete values and that’s kind of the best recommendation that I can get."
+    },
+
+    {
+      "timestamp": "0:59:09.4",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I think that makes sense when you recall the fact that in Lambda calculus there are no types there are just abstract values which I think has been the thing I’ve been bumping against. So, because Lambda calculus relies on an abstraction on top of specific types, like, everything is a value, trying to implement a Lambda calculus which is very untyped in a type language would kind of make it difficult for you. Is that a fair way to phrase it?"
+    },
+
+    {
+      "timestamp": "0:59:37.6",
+      "speaker": "Jason Staten",
+      "text": "Yeah, I think that’s a good assessment."
+    },
+
+    {
+      "timestamp": "0:59:39.6",
+      "speaker": "Safia Abdalla",
+      "text": "Jen, do you have any resources that you’d like to share with listeners on just like, good learning resources?"
+    },
+
+    {
+      "timestamp": "0:59:46.0",
+      "speaker": "Jen Luker",
+      "text": "About 6 months ago I was having a lovely conversation with someone who had never spoken at a conference before and they were a little nervous that they were invited to give a lightning talk, and he was really excited to share it with me when he was done and I’m trying to remember the conference… But the talk itself was called, “Lambda Calculus in 5 Minutes” and it gave you this really quick overview that was actually really clear. So, I will find that talk and we’ll also include that in the show notes. That was actually my introduction to Lambda calculus, and it was really cool."
+    },
+
+    {
+      "timestamp": "1:00:30.9",
+      "speaker": "Safia Abdalla",
+      "text": "Awesome. Thanks for sharing. I will check out that talk and definitely if I find time in my day, try and take a stab at implementing the Lambda calculus in Python or JavaScript, Jason. So…"
+    },
+
+    {
+      "timestamp": "1:00:44.1",
+      "speaker": "Jason Staten",
+      "text": "Awesome."
+    },
+
+    {
+      "timestamp": "1:00:44.8",
+      "speaker": "Safia Abdalla",
+      "text": "Cool stuff."
+    },
+
+    {
+      "timestamp": "1:00:45.6",
+      "speaker": "Jason Staten",
+      "text": "I’ll keep chugging along with Rust. I actually jumped a little bit ahead and I am excited ‘cause I built kinda beginnings of a Turing Machine in Rust and I’m anxious to share it with you and see how far I can get before the next episode, as well."
+    },
+
+    {
+      "timestamp": "1:01:01.1",
+      "speaker": "Jen Luker",
+      "text": "That, I’m excited about."
+    },
+
+    {
+      "timestamp": "1:01:01.6",
+      "speaker": "Safia Abdalla",
+      "text": "Awesome."
+    },
+
+    {
+      "timestamp": "1:01:03.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Another thing I learned from this chapter is that Y combinator is actually a Lambda calculus function and not just the startup incubator. I don’t know what it does exactly, but there is the Y combinator and the Omega combinator."
+    },
+
+    {
+      "timestamp": "1:01:17.6",
+      "speaker": "Safia Abdalla",
+      "text": "I… A funny story. My introduction to Lambda Calculus did not come from learning about identity functions or church encodings or any of that. I dived right in about 4 years ago in a class where we were learning about the Y combinator in the context of type systems. That’s all I’m gonna say about it because that was a very dark time in my life and I don’t want to go back there. (laughs)"
+    },
+
+    {
+      "timestamp": "1:01:43.1",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "1:01:43.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "1:01:44.9",
+      "speaker": "Safia Abdalla",
+      "text": "So yeah, I came at Lambda Calculus from like the very, what is sort of like the capstone section in this chapter, not from the fundamentals. So, that’s my uncomfortable experience with it."
+    },
+
+    {
+      "timestamp": "1:01:56.5",
+      "speaker": "Jen Luker",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "1:01:57.7",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "1:01:58.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And I would like to just say that Lambda Calculus actually has nothing to do with calculus in school. It’s “calculus” really just means math or calculating."
+    },
+
+    {
+      "timestamp": "1:02:07.4",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "1:02:07.4",
+      "speaker": "Jen Luker",
+      "text": "Calculation."
+    },
+
+    {
+      "timestamp": "1:02:08.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+
+    {
+      "timestamp": "1:02:10.2",
+      "speaker": "Jen Luker",
+      "text": "Yeah, but I still say I saw mathematical calculus thought processes in the way that they used derivatives and integrals, you know? Where they derived their simpler versions of complex problems."
+    },
+
+    {
+      "timestamp": "1:02:28.0",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I think the definition is just a method of reasoning about something whether it’s reasoning about derivatives or reasoning about how you might represent booleans through church encoding. Yeah. Whew. I’ma need to go process all of this."
+    },
+
+    {
+      "timestamp": "1:02:44.1",
+      "speaker": "Jen Luker",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "1:02:44.7",
+      "speaker": "Safia Abdalla",
+      "text": "And you probably will too, if you’re listening."
+    },
+
+    {
+      "timestamp": "1:02:47.1",
+      "speaker": "Jen Luker",
+      "text": "Testing it out."
+    },
+
+    {
+      "timestamp": "1:02:47.7",
+      "speaker": "Safia Abdalla",
+      "text": "Thanks for following me along on my- Oh we just totally overlapped each other. (laughs) I was gonna say thanks for following me along on my journey of trying to learn all of this in a very different way."
+    },
+
+    {
+      "timestamp": "1:02:57.7",
+      "speaker": "Jason Staten",
+      "text": "Glad to be here for it."
+    },
+
+    {
+      "timestamp": "1:02:59.2",
+      "speaker": "Safia Abdalla",
+      "text": "Thanks, Jason. And Jen. And Adam."
+    },
+
+    {
+      "timestamp": "1:03:01.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh, I’m learning, too."
+    },
+
+    {
+      "timestamp": "1:03:02.8",
+      "speaker": "Jen Luker",
+      "text": "(laughs)"
+    },
+
+    {
+      "timestamp": "1:03:03.4",
+      "speaker": "Safia Abdalla",
+      "text": "Great."
+    },
+
+    {
+      "timestamp": "1:03:03.8",
+      "speaker": "Jen Luker",
+      "text": "Aren’t we all?"
+    },
+
+    {
+      "timestamp": "1:03:05.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Thanks so much for listening. If you want to support the show please go and rate us on iTunes. That’s the best way to support us. It will really help people find the show and let people know that you like it. And also, just by word of mouth, just tell your friends about it. That would be awesome. The best way to keep up with the show is to follow us on Twitter, @BookBytesFM and to subscribe in your favorite podcast player, and you can find the show notes and transcript for the episode, as always, at orbit.fm/bookbytes/11 and also you can follow us on Twitter. I’m @AGarrHarr"
+    },
+
+    {
+      "timestamp": "1:03:43.8",
+      "speaker": "Jen Luker",
+      "text": "I’m @KnitCodeMonkey on Twitter."
+    },
+
+    {
+      "timestamp": "1:03:47.2",
+      "speaker": "Safia Abdalla",
+      "text": "I’m @CaptainSafia"
+    },
+
+    {
+      "timestamp": "1:03:48.6",
+      "speaker": "Jason Staten",
+      "text": "And I’m @StatenJason"
+    },
+    {
+      "text": "(Exit music: Electro Swing)"
+    }
+  ]
+}
