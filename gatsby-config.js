@@ -1,8 +1,8 @@
 require('dotenv').config();
-const {DateTime} = require('luxon');
+const { DateTime } = require('luxon');
 var humanizeList = require('humanize-list');
 
-const serialize = ({podcast, siteMetadata}) =>
+const serialize = ({ podcast, siteMetadata }) =>
   podcast.episode
     ? podcast.episode
         .sort((a, b) => {
@@ -34,7 +34,7 @@ const serialize = ({podcast, siteMetadata}) =>
             },
             {
               'itunes:author': humanizeList(
-                episode.hosts.map(h => h.name, {oxfordComma: true})
+                episode.hosts.map(h => h.name, { oxfordComma: true })
               ),
             },
             {
@@ -48,7 +48,7 @@ const serialize = ({podcast, siteMetadata}) =>
                 episode.fields ? episode.fields.showNotesFormatted : ``
               }`,
             },
-            {'itunes:explicit': 'clean'},
+            { 'itunes:explicit': 'clean' },
             {
               'itunes:image': {
                 _attr: {
@@ -60,7 +60,7 @@ const serialize = ({podcast, siteMetadata}) =>
                 },
               },
             },
-            {'itunes:duration': episode.duration},
+            { 'itunes:duration': episode.duration },
           ],
         }))
     : [];
@@ -142,12 +142,7 @@ module.exports = {
         }
       `,
         setup: (
-          {
-            query: {
-              site: {siteMetadata},
-              allContentfulPodcast,
-            },
-          },
+          { query: { site: { siteMetadata }, allContentfulPodcast } },
           i
         ) => {
           // If allContentfulPodcast.edges[i] then this is a normal feed
@@ -159,8 +154,8 @@ module.exports = {
                 fields: {
                   slug: 'master',
                 },
-                description: {description: siteMetadata.description},
-                image: {file: {url: siteMetadata.coverArt}},
+                description: { description: siteMetadata.description },
+                image: { file: { url: siteMetadata.coverArt } },
               };
           return {
             title: podcast.name,
@@ -184,16 +179,16 @@ module.exports = {
               itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
             },
             custom_elements: [
-              {'itunes:subtitle': siteMetadata.description},
-              {'itunes:author': siteMetadata.owner},
-              {'itunes:explicit': 'clean'},
+              { 'itunes:subtitle': siteMetadata.description },
+              { 'itunes:author': siteMetadata.owner },
+              { 'itunes:explicit': 'clean' },
               {
                 'itunes:summary': siteMetadata.description,
               },
               {
                 'itunes:owner': [
-                  {'itunes:name': siteMetadata.owner},
-                  {'itunes:email': siteMetadata.ownerEmail},
+                  { 'itunes:name': siteMetadata.owner },
+                  { 'itunes:email': siteMetadata.ownerEmail },
                 ],
               },
               {
@@ -216,13 +211,10 @@ module.exports = {
           };
         },
         feeds: ({
-          query: {
-            site: {siteMetadata},
-            allContentfulPodcast,
-          },
+          query: { site: { siteMetadata }, allContentfulPodcast },
         }) => [
-          ...allContentfulPodcast.edges.map(({node}, i) => ({
-            serialize: ({query: {site, allContentfulPodcast}}) =>
+          ...allContentfulPodcast.edges.map(({ node }, i) => ({
+            serialize: ({ query: { site, allContentfulPodcast } }) =>
               serialize({
                 podcast: allContentfulPodcast.edges[i].node,
                 siteMetadata,
@@ -231,15 +223,12 @@ module.exports = {
           })),
           {
             serialize: ({
-              query: {
-                site: {siteMetadata},
-                allContentfulPodcast,
-              },
+              query: { site: { siteMetadata }, allContentfulPodcast },
             }) =>
               serialize({
                 podcast: {
                   episode: allContentfulPodcast.edges.reduce(
-                    (a, {node}) => [...a, ...(node.episode || [])],
+                    (a, { node }) => [...a, ...(node.episode || [])],
                     []
                   ),
                 },
@@ -280,6 +269,15 @@ module.exports = {
         anonymize: true,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-netlify`,
   ],
