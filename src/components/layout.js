@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
@@ -13,8 +14,6 @@ import {
   selectIsPlaying,
   selectTime,
 } from '../state/selectors';
-
-import './index.css';
 
 const Footer = styled.div`
   text-align: right;
@@ -47,7 +46,7 @@ const ListLink = props => (
   </li>
 );
 
-const Header = ({ title }) => (
+const Title = ({ title }) => (
   <div
     style={{
       background: '#333',
@@ -82,21 +81,43 @@ const Header = ({ title }) => (
   </div>
 );
 
+const Header = () => (
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            {
+              name: 'description',
+              content: data.site.siteMetadata.description,
+            },
+            { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
+          ]}
+        />
+        <Title title={data.site.siteMetadata.title} />
+      </div>
+    )}
+  />
+);
+
 const TemplateWrapper = ({ children, data }) => (
   <div
     style={{
       height: '100%',
     }}
   >
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: data.site.siteMetadata.description },
-        { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
-      ]}
-    />
-    <Header title={data.site.siteMetadata.title} />
-    <div>{children()}</div>
+    <div>{children}</div>
     <ConnectedAudioPlayer />
     <Footer>
       <a href="https://www.contentful.com/" rel="nofollow" target="_blank">
@@ -115,14 +136,3 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
-
-export const query = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;
