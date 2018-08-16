@@ -1,10 +1,11 @@
 import React from 'react';
 import Img from 'gatsby-image';
 
+import Layout from '../../components/Layout';
 import Page from '../../components/Page';
 
-const SponsorPage = ({ data, location }) => {
-  return (
+const SponsorPage = ({ data, location }) => (
+  <Layout>
     <Page title={`Sponsors`} headTitle="Sponsors">
       <p>Orbit FM is sponsored by:</p>
       <a
@@ -18,8 +19,8 @@ const SponsorPage = ({ data, location }) => {
         />
       </a>
     </Page>
-  );
-};
+  </Layout>
+);
 
 export default SponsorPage;
 

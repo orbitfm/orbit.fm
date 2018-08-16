@@ -138,7 +138,7 @@ const TemplateWrapper = ({ children, data }) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.node,
 };
 
 export default TemplateWrapper;

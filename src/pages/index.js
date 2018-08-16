@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
+
+import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
 import LatestEpisode from '../components/LatestEpisode';
 import EpisodeListing from '../components/EpisodeListing';
 
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   const episodes = data.allContentfulPodcast.edges
     .reduce((a, e) => [...a, ...e.node.episode], [])
     .sort((a, b) => {
@@ -18,27 +20,27 @@ const IndexPage = ({data}) => {
     });
   const latestEpisode = episodes[0];
   const otherEpisodes = episodes.slice(1);
+
   return (
-    <PageWithSidebar
-      title={data.site.siteMetadata.title}
-      description={data.site.siteMetadata.description}
-      color={latestEpisode.podcast.primaryColor}
-      sidePanelChildren={
-        <LatestEpisode
-          imageSizes={latestEpisode.podcast.image.sizes}
-          name={latestEpisode.name}
-          path={latestEpisode.fields.path}
-          shortDescription={latestEpisode.shortDescription}
-          podcastName={latestEpisode.podcast.name}
-          podcastHosts={latestEpisode.podcast.hosts.map(h => h.name)}
-          podcastPath={latestEpisode.podcast.fields.slug}
-        />
-      }
-    >
-      <h2>Other Episodes</h2>
-      {otherEpisodes
-        .slice(0, 10)
-        .map(episode => (
+    <Layout>
+      <PageWithSidebar
+        title={data.site.siteMetadata.title}
+        description={data.site.siteMetadata.description}
+        color={latestEpisode.podcast.primaryColor}
+        sidePanelChildren={
+          <LatestEpisode
+            imageSizes={latestEpisode.podcast.image.sizes}
+            name={latestEpisode.name}
+            path={latestEpisode.fields.path}
+            shortDescription={latestEpisode.shortDescription}
+            podcastName={latestEpisode.podcast.name}
+            podcastHosts={latestEpisode.podcast.hosts.map(h => h.name)}
+            podcastPath={latestEpisode.podcast.fields.slug}
+          />
+        }
+      >
+        <h2>Other Episodes</h2>
+        {otherEpisodes.slice(0, 10).map(episode => (
           <EpisodeListing
             shortDescription={episode.shortDescription}
             publicationDate={episode.publicationDate}
@@ -51,8 +53,9 @@ const IndexPage = ({data}) => {
             key={episode.id}
           />
         ))}
-      <Link to="shows">View all shows</Link>
-    </PageWithSidebar>
+        <Link to="shows">View all shows</Link>
+      </PageWithSidebar>
+    </Layout>
   );
 };
 
