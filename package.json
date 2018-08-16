@@ -30,8 +30,10 @@
     "react-emotion": "^9.2.6",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
+    "react-typography": "^0.16.13",
     "remarkable": "^1.7.1",
     "slug": "^0.9.1",
+    "typography": "^0.16.17",
     "typography-theme-alton": "^0.15.10"
   },
   "keywords": [
