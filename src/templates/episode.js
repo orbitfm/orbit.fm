@@ -1,19 +1,18 @@
 import React from 'react';
-import ReactAudioPlayer from 'react-audio-player';
 import Link from 'gatsby-link';
-import {DateTime} from 'luxon';
+import { DateTime } from 'luxon';
 import styled from 'react-emotion';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
 import PlayButton from '../components/AudioPlayer/PlayButton';
-import {playSong, playSongAtTime} from '../state/actions';
-import {selectUrl, selectIsPlaying} from '../state/selectors';
+import { playSong, playSongAtTime } from '../state/actions';
+import { selectUrl, selectIsPlaying } from '../state/selectors';
 
 const Remarkable = require('remarkable');
-const markdown = new Remarkable({html: true});
+const markdown = new Remarkable({ html: true });
 
 const AudioContainer = styled.div`
   margin: 40px 0;
@@ -35,7 +34,7 @@ const SmartPlayButton = ({
 }) => (
   <PlayButton
     isPlaying={isPlaying && url === playingUrl}
-    onClick={() => onClick({url, podcast, title})}
+    onClick={() => onClick({ url, podcast, title })}
   />
 );
 
@@ -58,23 +57,25 @@ const convertTimestampToTime = timestamp => {
   return hours * 3600 + minutes * 60 + seconds;
 };
 
-const Timestamp = ({url, podcast, title, timestamp, onClick}) => (
-  <a
+const Timestamp = ({ url, podcast, title, timestamp, onClick }) => (
+  <p
     onClick={e => {
       e.preventDefault();
-      onClick({url, podcast, title, time: convertTimestampToTime(timestamp)});
+      onClick({ url, podcast, title, time: convertTimestampToTime(timestamp) });
     }}
-    href="#"
   >
     {timestamp}
-  </a>
+  </p>
 );
 
-const ConnectedTimestamp = connect(null, {
-  onClick: playSongAtTime,
-})(Timestamp);
+const ConnectedTimestamp = connect(
+  null,
+  {
+    onClick: playSongAtTime,
+  }
+)(Timestamp);
 
-export default ({data}) => {
+export default ({ data }) => {
   const episode = data.contentfulEpisode;
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
 
@@ -179,7 +180,7 @@ export const query = graphql`
     $podcastName: String
     $episodeNumber: String
   ) {
-    contentfulEpisode(id: {eq: $id}) {
+    contentfulEpisode(id: { eq: $id }) {
       name
       season
       episodeNumber
@@ -239,8 +240,8 @@ export const query = graphql`
     }
 
     transcriptsJson(
-      podcast: {eq: $podcastName}
-      episode: {eq: $episodeNumber}
+      podcast: { eq: $podcastName }
+      episode: { eq: $episodeNumber }
     ) {
       podcast
       episode

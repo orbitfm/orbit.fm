@@ -5,6 +5,7 @@ import Link from 'gatsby-link';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
+
 import AudioPlayer from '../components/AudioPlayer';
 import { togglePlay, pausePlay, updateTime } from '../state/actions';
 import {
@@ -117,10 +118,15 @@ const TemplateWrapper = ({ children, data }) => (
       height: '100%',
     }}
   >
+    <Header />
     <div>{children}</div>
     <ConnectedAudioPlayer />
     <Footer>
-      <a href="https://www.contentful.com/" rel="nofollow" target="_blank">
+      <a
+        href="https://www.contentful.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <img
           src="https://images.ctfassets.net/fo9twyrwpveg/7Htleo27dKYua8gio8UEUy/0797152a2d2f8e41db49ecbf1ccffdaa/PoweredByContentful_DarkBackground_MonochromeLogo.svg"
           style={{ maxWidth: 100, width: '100%' }}
