@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import styled from 'react-emotion';
 
 import Page from '../../components/Page';
 
@@ -12,7 +10,7 @@ const SponsorPage = ({ data, location }) => {
       <a
         href="https://www.stickermule.com/supports/orbit"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <Img
           sizes={data.stickerMule.childImageSharp.sizes}

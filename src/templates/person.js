@@ -39,6 +39,7 @@ export default ({ data }) => {
         {person.image && (
           <CircleImage
             src={person.image.file.url}
+            alt={person.name}
             width="100px"
             height="100px"
           />
@@ -61,6 +62,7 @@ export default ({ data }) => {
                 >
                   <img
                     title={link.linkType.name}
+                    alt={link.linkType.name}
                     src={link.linkType.image.file.url}
                     width="20px"
                     height="20px"

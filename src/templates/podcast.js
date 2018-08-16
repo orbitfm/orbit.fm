@@ -1,13 +1,11 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'react-emotion';
 
 import PageWithSidebar from '../components/PageWithSidebar';
 import LatestEpisode from '../components/LatestEpisode';
 import Subscribe from '../components/Subscribe';
 import EpisodeListing from '../components/EpisodeListing';
 
-export default ({data}) => {
+export default ({ data }) => {
   const podcast = data.contentfulPodcast;
 
   const episodes = podcast.episode
@@ -65,7 +63,7 @@ export default ({data}) => {
 
 export const query = graphql`
   query PodcastQuery($id: String!) {
-    contentfulPodcast(id: {eq: $id}) {
+    contentfulPodcast(id: { eq: $id }) {
       name
       description {
         description

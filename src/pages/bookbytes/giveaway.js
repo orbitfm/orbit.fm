@@ -15,7 +15,7 @@ const GiveawayPage = ({ data }) => (
         href="https://itunes.apple.com/us/podcast/bookbytes/id1355549752"
         style={{ textDecoration: 'underline' }}
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         on iTunes
       </a>{' '}

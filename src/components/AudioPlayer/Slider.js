@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-const BLUE = '#3FB3D2';
-const BLUE_2 = '#00A0AD';
 const WHITE = '#FFFFFF';
 
 const Input = styled.input`
@@ -104,7 +102,7 @@ const Input = styled.input`
 
 class Slider extends React.Component {
   render() {
-    const {value, duration, onChange} = this.props;
+    const { value, duration, onChange } = this.props;
 
     const styles = {
       Slider__Slider: {
@@ -117,10 +115,10 @@ class Slider extends React.Component {
       <div style={styles.Slider__Slider}>
         <Input
           type="range"
-          value={this.props.value || 0}
+          value={value || 0}
           min="0"
           max={duration}
-          onChange={e => this.props.onChange(e.target.value)}
+          onChange={e => onChange(e.target.value)}
         />
       </div>
     );

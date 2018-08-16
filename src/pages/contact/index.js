@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'react-emotion';
 
 import PageWithSidebar from '../../components/PageWithSidebar';
