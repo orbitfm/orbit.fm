@@ -29,7 +29,6 @@
     "react-emotion": "^9.2.6",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
     "react-typography": "^0.16.13",
     "remarkable": "^1.7.1",
     "slug": "^0.9.1",
