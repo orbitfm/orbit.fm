@@ -38,12 +38,8 @@ html {
 
 const store = createStore();
 
-export const wrapRootComponent = ({ Root }) => {
-  const ConnectedRootComponent = () => (
-    <Provider store={store}>
-      <Root />
-    </Provider>
-  );
+export const wrapRootElement = ({ element }) => {
+  const ConnectedRootElement = <Provider store={store}>{element}</Provider>;
 
-  return ConnectedRootComponent;
+  return ConnectedRootElement;
 };
