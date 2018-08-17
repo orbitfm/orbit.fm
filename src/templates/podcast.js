@@ -78,8 +78,8 @@ export const query = graphql`
         url
         linkType {
           image {
-            resolutions(width: 40) {
-              ...GatsbyContentfulResolutions
+            fixed(width: 40) {
+              ...GatsbyContentfulFixed
             }
           }
         }
@@ -104,7 +104,7 @@ export const query = graphql`
           name
           image {
             fluid(maxWidth: 320) {
-              ...GatsbyContentfulSizes
+              ...GatsbyContentfulFluid
             }
           }
           hosts {

@@ -93,7 +93,7 @@ export const query = graphql`
               }
               image {
                 fluid(maxWidth: 700) {
-                  ...GatsbyContentfulSizes
+                  ...GatsbyContentfulFluid
                 }
               }
               hosts {

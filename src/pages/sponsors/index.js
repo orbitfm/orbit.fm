@@ -30,7 +30,7 @@ export const query = graphql`
     stickerMule: file(relativePath: { eq: "pages/sponsors/sticker-mule.png" }) {
       childImageSharp {
         fluid(maxWidth: 940, maxHeight: 300) {
-          ...GatsbyImageSharpSizes
+          ...GatsbyImageSharpFluid
         }
       }
     }
