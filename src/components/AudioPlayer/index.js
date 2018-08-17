@@ -122,7 +122,9 @@ class AudioPlayer extends React.Component {
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('resize', this.updateDimensions);
+    if (window.removeEventListener) {
+      window.removeEventListener('resize', this.updateDimensions);
+    }
   };
 
   handleVolumeChange = volume => {
