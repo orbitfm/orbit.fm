@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import Layout from '../../components/Layout';
 import Page from '../../components/Page';
 
-const SponsorPage = ({ data, location }) => (
+const SponsorPage = ({ data }) => (
   <Layout>
     <Page title={`Sponsors`} headTitle="Sponsors">
       <p>Orbit FM is sponsored by:</p>
@@ -15,7 +15,7 @@ const SponsorPage = ({ data, location }) => (
         rel="noopener noreferrer"
       >
         <Img
-          sizes={data.stickerMule.childImageSharp.sizes}
+          fluid={data.stickerMule.childImageSharp.fluid}
           style={{ maxWidth: 500 }}
         />
       </a>
@@ -29,7 +29,7 @@ export const query = graphql`
   query SponsorsQuery {
     stickerMule: file(relativePath: { eq: "pages/sponsors/sticker-mule.png" }) {
       childImageSharp {
-        sizes(maxWidth: 940, maxHeight: 300) {
+        fluid(maxWidth: 940, maxHeight: 300) {
           ...GatsbyImageSharpSizes
         }
       }

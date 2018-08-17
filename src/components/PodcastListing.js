@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled from 'react-emotion';
 
 const PodcastContainer = styled.div`
@@ -52,7 +52,9 @@ const PodcastListing = ({ podcasts }) => {
   return (
     <section>
       <Header>Podcasts</Header>
-      {podcasts.map(podcast => <Podcast podcast={podcast} />)}
+      {podcasts.map(podcast => (
+        <Podcast podcast={podcast} />
+      ))}
     </section>
   );
 };

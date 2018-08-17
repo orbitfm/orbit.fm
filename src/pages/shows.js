@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import Link from 'gatsby-link';
 
 import Layout from '../components/Layout';
 import Page from '../components/Page';
@@ -33,7 +32,7 @@ const Shows = ({ data }) => (
           <Item key={node.id}>
             <ImageContainer>
               <Link to={`/${node.fields.slug}`}>
-                <Img sizes={node.image.sizes} />
+                <Img fluid={node.image.fluid} />
               </Link>
             </ImageContainer>
             <div>
@@ -59,7 +58,7 @@ export const query = graphql`
           id
           name
           image {
-            sizes(maxWidth: 150) {
+            fluid(maxWidth: 150) {
               ...GatsbyContentfulSizes
             }
           }
