@@ -218,8 +218,8 @@ export const query = graphql`
           url
           linkType {
             image {
-              resolutions(width: 40) {
-                ...GatsbyContentfulResolutions
+              fixed(width: 40) {
+                ...GatsbyContentfulFixed
               }
             }
           }
@@ -232,7 +232,7 @@ export const query = graphql`
         }
         image {
           fluid(maxWidth: 320) {
-            ...GatsbyContentfulSizes
+            ...GatsbyContentfulFluid
           }
         }
       }

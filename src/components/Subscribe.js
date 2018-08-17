@@ -25,7 +25,7 @@ const Subscribe = ({ links }) => {
   }
   const simpleLinks = links.map(l => ({
     id: l.id,
-    resolutions: l.linkType.image.resolutions,
+    fixed: l.linkType.image.fixed,
     link: l.url,
   }));
   return (
@@ -35,7 +35,7 @@ const Subscribe = ({ links }) => {
         {simpleLinks.map(l => (
           <a href={l.link} key={l.id} target="_blank" rel="noopener noreferrer">
             <Image>
-              <Img resolutions={l.resolutions} />
+              <Img fixed={l.fixed} />
             </Image>
           </a>
         ))}
