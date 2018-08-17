@@ -33,7 +33,7 @@ export default ({ data }) => {
         sidePanelChildren={
           episode && (
             <LatestEpisode
-              imageSizes={episode.podcast.image.sizes}
+              fluidImage={episode.podcast.image.fluid}
               name={episode.name}
               path={episode.fields.path}
               shortDescription={episode.shortDescription}
@@ -53,7 +53,7 @@ export default ({ data }) => {
                 publicationDate={e.publicationDate}
                 name={e.name}
                 path={e.fields.path}
-                imageSizes={e.podcast.image.sizes}
+                fluidImage={e.podcast.image.fluid}
                 podcastHosts={e.podcast.hosts.map(h => h.name)}
                 podcastName={e.podcast.name}
                 podcastPath={e.podcast.fields.slug}
@@ -103,7 +103,7 @@ export const query = graphql`
         podcast {
           name
           image {
-            sizes(maxWidth: 320) {
+            fluid(maxWidth: 320) {
               ...GatsbyContentfulSizes
             }
           }

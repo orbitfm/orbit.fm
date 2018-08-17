@@ -1,6 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
@@ -30,7 +29,7 @@ const IndexPage = ({ data }) => {
         color={latestEpisode.podcast.primaryColor}
         sidePanelChildren={
           <LatestEpisode
-            imageSizes={latestEpisode.podcast.image.sizes}
+            fluidImage={latestEpisode.podcast.image.fluid}
             name={latestEpisode.name}
             path={latestEpisode.fields.path}
             shortDescription={latestEpisode.shortDescription}
@@ -47,7 +46,7 @@ const IndexPage = ({ data }) => {
             publicationDate={episode.publicationDate}
             name={episode.name}
             path={episode.fields.path}
-            imageSizes={episode.podcast.image.sizes}
+            fluidImage={episode.podcast.image.fluid}
             podcastHosts={episode.podcast.hosts.map(h => h.name)}
             podcastName={episode.podcast.name}
             podcastPath={episode.podcast.fields.slug}
@@ -93,7 +92,7 @@ export const query = graphql`
                 slug
               }
               image {
-                sizes(maxWidth: 700) {
+                fluid(maxWidth: 700) {
                   ...GatsbyContentfulSizes
                 }
               }

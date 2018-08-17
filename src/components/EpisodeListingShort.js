@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled from 'react-emotion';
 import { DateTime } from 'luxon';
 
@@ -61,7 +61,9 @@ const EpisodeListingShort = ({ episodes }) => {
         .sort(
           (a, b) => new Date(b.publicationDate) - new Date(a.publicationDate)
         )
-        .map(episode => <Episode episode={episode} />)}
+        .map(episode => (
+          <Episode episode={episode} />
+        ))}
     </section>
   );
 };

@@ -1,6 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 import { DateTime } from 'luxon';
 import styled from 'react-emotion';
 import { connect } from 'react-redux';
@@ -94,7 +93,7 @@ export default ({ data }) => {
         color={episode.podcast.primaryColor}
         sidePanelChildren={
           <PodcastInfo
-            imageSizes={episode.podcast.image.sizes}
+            fluidImage={episode.podcast.image.fluid}
             podcastDescription={episode.podcast.description.description}
             podcastName={episode.podcast.name}
             podcastHosts={episode.podcast.hosts.map(h => h.name)}
@@ -232,7 +231,7 @@ export const query = graphql`
           name
         }
         image {
-          sizes(maxWidth: 320) {
+          fluid(maxWidth: 320) {
             ...GatsbyContentfulSizes
           }
         }

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import Link from 'gatsby-link';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
