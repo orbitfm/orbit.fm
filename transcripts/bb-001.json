@@ -3,6 +3,9 @@
   "episode": "1",
   "transcript": [
     {
+      "text": "(Intro music: Electro Swing)"
+    },
+    {
       "speaker": "Adam Garrett-Harris",
       "text": "Hello and welcome to the first episode of BookBytes. This is a show for programmers who like to read books."
     },
@@ -150,6 +153,9 @@
     {
       "speaker": "Jason Staten",
       "text": "We appreciate any and all feedback that you have to share with us."
+    },
+    {
+      "text": "(Exit music: Electro Swing)"
     }
   ]
 }

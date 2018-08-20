@@ -3,7 +3,7 @@
   "episode": "5",
   "transcript": [
     {
-      "text": "(intro music: electro swing)"
+      "text": "(Intro music: Electro Swing)"
     },
 
     {
@@ -79,8 +79,14 @@
     },
 
     {
-      "speaker": ":09.7 **All** (laug",
-      "text": ":11.1 **Dave Hoover** But yeah, that was a little blog post by this guy name Chris Morris in Texas and it was where he was quote Pat Metheny, the guitarist, with the advice that I loved so much which was, “Always try to be the worst guy in the band” which really resonated with me as working at ThoughtWorks, because that was one of the reasons I joined ThoughtWorks back then, was so I could be the worst. So, that kind of sort of kicked off the whole thing and I started writing little blog posts and I made a little Wiki to just start publishing the patterns and then somebody from O’Reilly kind of stumbled across it and asked me if I wanted it to be a book eventually, and this was in 2005 so that’s actually when we got started writing it, was in "
+      "timestamp": "0:04:09.7",
+      "speaker": "All",
+      "text": "(laughing)"
+    },
+    {
+      "timestamp": "0:04:11.1",
+      "speaker": "Dave Hoover",
+      "text": "But yeah, that was a little blog post by this guy name Chris Morris in Texas and it was where he was quote Pat Metheny, the guitarist, with the advice that I loved so much which was, “Always try to be the worst guy in the band” which really resonated with me as working at ThoughtWorks, because that was one of the reasons I joined ThoughtWorks back then, was so I could be the worst. So, that kind of sort of kicked off the whole thing and I started writing little blog posts and I made a little Wiki to just start publishing the patterns and then somebody from O’Reilly kind of stumbled across it and asked me if I wanted it to be a book eventually, and this was in 2005 so that’s actually when we got started writing it, was in "
     },
 
     {
@@ -271,7 +277,7 @@
 
     {
       "timestamp": "0:28:19.7",
-      "speaker": "Adam, Jen & Dave",
+      "speaker": "Adam Garrett-Harris &  Jen Luker & Dave Hoover",
       "text": "(laughing)"
     },
 
@@ -406,12 +412,16 @@
       "speaker": "Dave Hoover",
       "text": "Yeah I mean, yeah. I think I did answer that, probably."
     },
-
     {
-      "speaker": ":42.6 **Safia** Yeah, you",
-      "text": ":43.5 **Dave Hoover** "
+      "timestamp": "0:42:42.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, you did."
     },
-
+    {
+      "timestamp": "0:42:43.5",
+      "speaker": "Dave Hoover",
+      "text": "Cool. "
+    },
     {
       "timestamp": "0:42:44.2",
       "speaker": "Adam Garrett-Harris",
