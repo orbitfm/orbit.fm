@@ -19,12 +19,6 @@ const AudioContainer = styled.div`
   margin: 40px 0;
 `;
 
-const TranscriptsContainer = styled.div`
-  & a {
-    text-decoration: underline;
-  }
-`;
-
 const SmartPlayButton = ({
   url,
   podcast,
@@ -58,15 +52,20 @@ const convertTimestampToTime = timestamp => {
   return hours * 3600 + minutes * 60 + seconds;
 };
 
+const TimestampSpan = styled.span`
+  text-decoration: underline;
+  cursor: pointer;
+`;
+
 const Timestamp = ({ url, podcast, title, timestamp, onClick }) => (
-  <p
+  <TimestampSpan
     onClick={e => {
       e.preventDefault();
       onClick({ url, podcast, title, time: convertTimestampToTime(timestamp) });
     }}
   >
     {timestamp}
-  </p>
+  </TimestampSpan>
 );
 
 const ConnectedTimestamp = connect(
@@ -148,7 +147,7 @@ export default ({ data }) => {
         {transcript && (
           <div>
             <h1>Transcript</h1>
-            <TranscriptsContainer>
+            <div>
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
                   <p>
@@ -169,7 +168,7 @@ export default ({ data }) => {
                   />
                 </div>
               ))}
-            </TranscriptsContainer>
+            </div>
           </div>
         )}
       </PageWithSidebar>
