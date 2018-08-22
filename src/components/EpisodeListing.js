@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
-import {DateTime} from 'luxon';
+import { DateTime } from 'luxon';
+
 import * as COLORS from '../constants/colors';
 
 const Container = styled.article`
@@ -48,7 +49,7 @@ const EpisodeListing = ({
   publicationDate,
   name,
   path,
-  imageSizes,
+  fluidImage,
   podcastHosts,
   podcastName,
   podcastPath,
@@ -56,7 +57,7 @@ const EpisodeListing = ({
   <Container>
     <Image>
       <Link to={path}>
-        <Img sizes={imageSizes} alt={podcastName} />
+        <Img fluid={fluidImage} alt={podcastName} />
       </Link>
     </Image>
     <Details>
@@ -67,7 +68,7 @@ const EpisodeListing = ({
       <EpisodeTitle>
         <Link to={path}>{name}</Link>
       </EpisodeTitle>
-      <p>Hosts: {humanizeList(podcastHosts, {oxfordComma: true})}</p>
+      <p>Hosts: {humanizeList(podcastHosts, { oxfordComma: true })}</p>
       <p>{shortDescription}</p>
     </Details>
   </Container>

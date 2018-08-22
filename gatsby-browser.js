@@ -1,17 +1,45 @@
-import React from 'react'
-import { Router } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import React from 'react';
+import { Provider } from 'react-redux';
+import { injectGlobal } from 'emotion';
 
-import createStore from './src/state/createStore'
+import createStore from './src/state/createStore';
 
-exports.replaceRouterComponent = ({ history }) => {
-    const store = createStore()
-
-    const ConnectedRouterWrapper = ({ children }) => (
-        <Provider store={store}>
-            <Router history={history}>{children}</Router>
-        </Provider>
-    )
-
-    return ConnectedRouterWrapper
+injectGlobal`
+body {
+  margin: 0;
+  color: white;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  background: #333;
 }
+a {
+  color: white;
+}
+a:active,
+a:hover {
+  outline-width: 0;
+  color: white;
+  text-decoration: underline;
+}
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+`;
+
+const store = createStore();
+
+export const wrapRootElement = ({ element }) => {
+  const ConnectedRootElement = <Provider store={store}>{element}</Provider>;
+
+  return ConnectedRootElement;
+};

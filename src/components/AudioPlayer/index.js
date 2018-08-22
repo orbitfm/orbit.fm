@@ -3,11 +3,7 @@ import leftPad from 'left-pad';
 import Slider from './Slider';
 import PlayButton from './PlayButton';
 
-const VOLUME_WIDTH = 100;
-const SLIDER_WIDTH = 300;
-const BLUE = '#3FB3D2';
 const BLUE_DARK = '#1A83A1';
-const BLUE_2 = '#00A0AD';
 const WHITE = '#FFFFFF';
 
 const getNextRate = currentRate => {
@@ -37,21 +33,6 @@ const UnmuteIcon = () => (
     <path
       d="M10.148,33.29v33.42h23.314l21.111,16.446V16.844L33.463,33.29H10.148z"
       fill={WHITE}
-    />
-  </svg>
-);
-
-const PlayIcon = () => (
-  <svg width="40" height="40" viewBox="-5 0 25 20">
-    <polygon points="0,0 0,20 20,10" fill="white" />
-  </svg>
-);
-
-const PauseIcon = () => (
-  <svg width="40" height="40" viewBox="-5 0 25 20">
-    <path
-      d="M0,0 L0,20 L5,20 L5,0 L0,0 M10,0 L10,20 L15,20 L15,0, L10,0"
-      fill="white"
     />
   </svg>
 );
@@ -141,7 +122,9 @@ class AudioPlayer extends React.Component {
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('resize', this.updateDimensions);
+    if (window.removeEventListener) {
+      window.removeEventListener('resize', this.updateDimensions);
+    }
   };
 
   handleVolumeChange = volume => {
@@ -205,7 +188,6 @@ class AudioPlayer extends React.Component {
   render() {
     const {
       isMuted,
-      volume,
       currentTime,
       dragTime,
       isDragging,
@@ -213,7 +195,7 @@ class AudioPlayer extends React.Component {
       rate,
     } = this.state;
 
-    const {isPlaying, onPlayClick, podcast, title} = this.props;
+    const { isPlaying, onPlayClick, podcast, title } = this.props;
 
     const styles = {
       AudioPlayer: {

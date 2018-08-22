@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'react-emotion';
 import humanizeList from 'humanize-list';
@@ -13,22 +13,22 @@ const Image = styled.div`
 `;
 
 const PodcastInfo = ({
-  imageSizes,
+  fluidImage,
   podcastDescription,
   podcastName,
   podcastHosts,
   podcastPath,
 }) => (
   <div>
-    {imageSizes && (
+    {fluidImage && (
       <Image>
-        <Img sizes={imageSizes} />
+        <Img fluid={fluidImage} />
       </Image>
     )}
     <p>
       <Link to={podcastPath}>{podcastName}</Link>
     </p>
-    <p>Hosted by {humanizeList(podcastHosts, {oxfordComma: true})}</p>
+    <p>Hosted by {humanizeList(podcastHosts, { oxfordComma: true })}</p>
     <p>{podcastDescription}</p>
   </div>
 );

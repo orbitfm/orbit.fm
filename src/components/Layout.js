@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
+
 import AudioPlayer from '../components/AudioPlayer';
 import { togglePlay, pausePlay, updateTime } from '../state/actions';
 import {
@@ -13,8 +14,6 @@ import {
   selectIsPlaying,
   selectTime,
 } from '../state/selectors';
-
-import './index.css';
 
 const Footer = styled.div`
   text-align: right;
@@ -47,7 +46,7 @@ const ListLink = props => (
   </li>
 );
 
-const Header = ({ title }) => (
+const Title = ({ title }) => (
   <div
     style={{
       background: '#333',
@@ -82,24 +81,51 @@ const Header = ({ title }) => (
   </div>
 );
 
+const Header = () => (
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            {
+              name: 'description',
+              content: data.site.siteMetadata.description,
+            },
+            { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
+          ]}
+        />
+        <Title title={data.site.siteMetadata.title} />
+      </div>
+    )}
+  />
+);
+
 const TemplateWrapper = ({ children, data }) => (
   <div
     style={{
       height: '100%',
     }}
   >
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: data.site.siteMetadata.description },
-        { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
-      ]}
-    />
-    <Header title={data.site.siteMetadata.title} />
-    <div>{children()}</div>
+    <Header />
+    <div>{children}</div>
     <ConnectedAudioPlayer />
     <Footer>
-      <a href="https://www.contentful.com/" rel="nofollow" target="_blank">
+      <a
+        href="https://www.contentful.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         <img
           src="https://images.ctfassets.net/fo9twyrwpveg/7Htleo27dKYua8gio8UEUy/0797152a2d2f8e41db49ecbf1ccffdaa/PoweredByContentful_DarkBackground_MonochromeLogo.svg"
           style={{ maxWidth: 100, width: '100%' }}
@@ -111,18 +137,7 @@ const TemplateWrapper = ({ children, data }) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.node,
 };
 
 export default TemplateWrapper;
-
-export const query = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;

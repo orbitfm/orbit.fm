@@ -9,8 +9,8 @@ const markdown = new Remarkable({ html: true });
 const slug = require(`slug`);
 const urlify = a => a.replace(/\s/g, '').toLowerCase();
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
 
   const types = {
     PODCAST: `ContentfulPodcast`,
@@ -71,8 +71,8 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
   return new Promise((resolve, reject) => {
     graphql(`
       {

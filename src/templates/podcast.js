@@ -1,13 +1,13 @@
 import React from 'react';
-import Link from 'gatsby-link';
-import styled from 'react-emotion';
+import { graphql } from 'gatsby';
 
+import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
 import LatestEpisode from '../components/LatestEpisode';
 import Subscribe from '../components/Subscribe';
 import EpisodeListing from '../components/EpisodeListing';
 
-export default ({data}) => {
+export default ({ data }) => {
   const podcast = data.contentfulPodcast;
 
   const episodes = podcast.episode
@@ -22,50 +22,53 @@ export default ({data}) => {
       })
     : [];
   const episode = episodes[0];
+
   return (
-    <PageWithSidebar
-      title={podcast.name}
-      headTitle={podcast.name}
-      description={podcast.description.description}
-      color={podcast.primaryColor}
-      sidePanelChildren={
-        episode && (
-          <LatestEpisode
-            imageSizes={episode.podcast.image.sizes}
-            name={episode.name}
-            path={episode.fields.path}
-            shortDescription={episode.shortDescription}
-            podcastName={episode.podcast.name}
-            podcastHosts={episode.podcast.hosts.map(h => h.name)}
-            podcastPath={episode.podcast.fields.slug}
-          />
-        )
-      }
-    >
-      <Subscribe links={podcast.subscriptionLinks} />
-      <h2>Latest Episodes</h2>
-      {episodes
-        ? episodes.map(e => (
-            <EpisodeListing
-              shortDescription={e.shortDescription}
-              publicationDate={e.publicationDate}
-              name={e.name}
-              path={e.fields.path}
-              imageSizes={e.podcast.image.sizes}
-              podcastHosts={e.podcast.hosts.map(h => h.name)}
-              podcastName={e.podcast.name}
-              podcastPath={e.podcast.fields.slug}
-              key={e.id}
+    <Layout>
+      <PageWithSidebar
+        title={podcast.name}
+        headTitle={podcast.name}
+        description={podcast.description.description}
+        color={podcast.primaryColor}
+        sidePanelChildren={
+          episode && (
+            <LatestEpisode
+              fluidImage={episode.podcast.image.fluid}
+              name={episode.name}
+              path={episode.fields.path}
+              shortDescription={episode.shortDescription}
+              podcastName={episode.podcast.name}
+              podcastHosts={episode.podcast.hosts.map(h => h.name)}
+              podcastPath={episode.podcast.fields.slug}
             />
-          ))
-        : null}
-    </PageWithSidebar>
+          )
+        }
+      >
+        <Subscribe links={podcast.subscriptionLinks} />
+        <h2>Latest Episodes</h2>
+        {episodes
+          ? episodes.map(e => (
+              <EpisodeListing
+                shortDescription={e.shortDescription}
+                publicationDate={e.publicationDate}
+                name={e.name}
+                path={e.fields.path}
+                fluidImage={e.podcast.image.fluid}
+                podcastHosts={e.podcast.hosts.map(h => h.name)}
+                podcastName={e.podcast.name}
+                podcastPath={e.podcast.fields.slug}
+                key={e.id}
+              />
+            ))
+          : null}
+      </PageWithSidebar>
+    </Layout>
   );
 };
 
 export const query = graphql`
   query PodcastQuery($id: String!) {
-    contentfulPodcast(id: {eq: $id}) {
+    contentfulPodcast(id: { eq: $id }) {
       name
       description {
         description
@@ -75,8 +78,8 @@ export const query = graphql`
         url
         linkType {
           image {
-            resolutions(width: 40) {
-              ...GatsbyContentfulResolutions
+            fixed(width: 40) {
+              ...GatsbyContentfulFixed
             }
           }
         }
@@ -100,8 +103,8 @@ export const query = graphql`
         podcast {
           name
           image {
-            sizes(maxWidth: 320) {
-              ...GatsbyContentfulSizes
+            fluid(maxWidth: 320) {
+              ...GatsbyContentfulFluid
             }
           }
           hosts {

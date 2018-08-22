@@ -19,13 +19,13 @@ const Image = styled.span`
   }
 `;
 
-const Subscribe = ({links}) => {
+const Subscribe = ({ links }) => {
   if (!links) {
     return null;
   }
   const simpleLinks = links.map(l => ({
     id: l.id,
-    resolutions: l.linkType.image.resolutions,
+    fixed: l.linkType.image.fixed,
     link: l.url,
   }));
   return (
@@ -33,9 +33,9 @@ const Subscribe = ({links}) => {
       <h2>Subscribe</h2>
       <Container>
         {simpleLinks.map(l => (
-          <a href={l.link} key={l.id} target="_blank" rel="noopener">
+          <a href={l.link} key={l.id} target="_blank" rel="noopener noreferrer">
             <Image>
-              <Img resolutions={l.resolutions} />
+              <Img fixed={l.fixed} />
             </Image>
           </a>
         ))}
@@ -50,9 +50,9 @@ Subscribe.propTypes = {
       id: PropTypes.string,
       linkType: PropTypes.shape({
         image: PropTypes.shape({
-          file: PropTypes.shape({url: PropTypes.string}),
+          file: PropTypes.shape({ url: PropTypes.string }),
         }),
-        link: PropTypes.arrayOf(PropTypes.shape({url: PropTypes.string})),
+        link: PropTypes.arrayOf(PropTypes.shape({ url: PropTypes.string })),
       }),
     })
   ).isRequired,
