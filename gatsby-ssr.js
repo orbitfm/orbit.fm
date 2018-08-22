@@ -5,6 +5,8 @@ import { extractCritical } from 'emotion-server';
 
 import createStore from './src/state/createStore';
 
+import './src/utils/global-styles';
+
 export const replaceRenderer = ({
   setHeadComponents,
   bodyComponent,
