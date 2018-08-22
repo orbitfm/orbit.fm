@@ -420,7 +420,7 @@
     {
       "timestamp": "0:11:49.7",
       "speaker": "Adam Garrett-Harris",
-      "text": "But, in this case it’s like a nested 4 loop."
+      "text": "But, in this case it’s like a nested for loop."
     },
 
     {
@@ -810,7 +810,7 @@
     {
       "timestamp": "0:24:08.4",
       "speaker": "Jason Staten",
-      "text": "I also liked the section on thinking in Big-O, where Rob actually goes through and summarizes each of the Big-Os, or at least, not all of them, but at least the ones that you’ll likely care about as a developer. So, in particular with arrays, it says, “If you’re randomly accessing an array, it’s always Big-O(1).” So, you’re just grabbing an index off an array it’s constant time, like Big-O(1), one operation required. If you’re iterating over the list, then you have a Big-O(N). If you’re doing a nested loop then you have a Big-O(N Squared). If you are dividing that list up and working through those pieces then you have a Big-O(Log N). And if you’re iterating and then dividing, then you have a Big-O(N Log N). So, those are a nice, I don’t know, handy guide to keep in mind. So, when you look at a piece of code, it can be at least somewhat obvious to you of what the time complexity of it is. If you see a number of 4 loops just within it, like if you’re seeing nesting or something going on you can say, “Oh yeah, that is Big-O N Squared. Maybe we can improve this.” Or something."
+      "text": "I also liked the section on thinking in Big-O, where Rob actually goes through and summarizes each of the Big-Os, or at least, not all of them, but at least the ones that you’ll likely care about as a developer. So, in particular with arrays, it says, “If you’re randomly accessing an array, it’s always Big-O(1).” So, you’re just grabbing an index off an array it’s constant time, like Big-O(1), one operation required. If you’re iterating over the list, then you have a Big-O(N). If you’re doing a nested loop then you have a Big-O(N Squared). If you are dividing that list up and working through those pieces then you have a Big-O(Log N). And if you’re iterating and then dividing, then you have a Big-O(N Log N). So, those are a nice, I don’t know, handy guide to keep in mind. So, when you look at a piece of code, it can be at least somewhat obvious to you of what the time complexity of it is. If you see a number of for loops just within it, like if you’re seeing nesting or something going on you can say, “Oh yeah, that is Big-O N Squared. Maybe we can improve this.” Or something."
     },
 
     {
