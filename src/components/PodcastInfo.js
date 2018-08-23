@@ -61,7 +61,7 @@ PodcastInfo.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       image: PropTypes.object.isRequired,
-      fiels: PropTypes.shape({
+      fields: PropTypes.shape({
         slug: PropTypes.string.isRequired,
       }),
     })

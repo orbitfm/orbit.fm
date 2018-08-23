@@ -236,7 +236,7 @@ export const query = graphql`
           id
           name
           image {
-            fluid(maxWidth: 75) {
+            fluid(maxWidth: 100) {
               ...GatsbyContentfulFluid
             }
           }

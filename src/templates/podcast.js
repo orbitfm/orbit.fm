@@ -95,7 +95,7 @@ export const query = graphql`
           slug
         }
         image {
-          fluid(maxWidth: 75) {
+          fluid(maxWidth: 100) {
             ...GatsbyContentfulFluid
           }
         }
@@ -115,11 +115,6 @@ export const query = graphql`
           }
           hosts {
             name
-            image {
-              fluid(maxWidth: 75) {
-                ...GatsbyContentfulFluid
-              }
-            }
             fields {
               slug
             }
