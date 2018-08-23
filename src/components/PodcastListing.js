@@ -53,7 +53,7 @@ const PodcastListing = ({ podcasts }) => {
     <section>
       <Header>Podcasts</Header>
       {podcasts.map(podcast => (
-        <Podcast podcast={podcast} />
+        <Podcast podcast={podcast} key={podcast.id} />
       ))}
     </section>
   );

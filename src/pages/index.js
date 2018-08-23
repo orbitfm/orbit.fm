@@ -1,10 +1,28 @@
 import React from 'react';
+import styled from 'react-emotion';
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
-import PageWithSidebar from '../components/PageWithSidebar';
-import LatestEpisode from '../components/LatestEpisode';
+import Page from '../components/Page';
 import EpisodeListing from '../components/EpisodeListing';
+
+const Listing = styled.ul`
+  list-style: none;
+  margin-top: -20px;
+`;
+
+const Show = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+const ShowImage = styled.span`
+  display: inline-block;
+  width: 75px;
+  margin-right: 20px;
+`;
 
 const IndexPage = ({ data }) => {
   const episodes = data.allContentfulPodcast.edges
@@ -19,28 +37,30 @@ const IndexPage = ({ data }) => {
       return 0;
     });
   const latestEpisode = episodes[0];
-  const otherEpisodes = episodes.slice(1);
 
   return (
     <Layout>
-      <PageWithSidebar
-        title={data.site.siteMetadata.title}
+      <Page
+        title="Latest Episodes"
         description={data.site.siteMetadata.description}
         color={latestEpisode.podcast.primaryColor}
         sidePanelChildren={
-          <LatestEpisode
-            fluidImage={latestEpisode.podcast.image.fluid}
-            name={latestEpisode.name}
-            path={latestEpisode.fields.path}
-            shortDescription={latestEpisode.shortDescription}
-            podcastName={latestEpisode.podcast.name}
-            podcastHosts={latestEpisode.podcast.hosts.map(h => h.name)}
-            podcastPath={latestEpisode.podcast.fields.slug}
-          />
+          <Listing>
+            <h2>Shows</h2>
+            {data.allContentfulPodcast.edges.map(({ node }) => (
+              <Show key={node.id}>
+                <ShowImage>
+                  <Link to={`/${node.fields.slug}`}>
+                    <Img fluid={node.image.fluid} />
+                  </Link>
+                </ShowImage>
+                <p>{node.name}</p>
+              </Show>
+            ))}
+          </Listing>
         }
       >
-        <h2>Other Episodes</h2>
-        {otherEpisodes.slice(0, 10).map(episode => (
+        {episodes.slice(0, 10).map(episode => (
           <EpisodeListing
             shortDescription={episode.shortDescription}
             publicationDate={episode.publicationDate}
@@ -54,7 +74,7 @@ const IndexPage = ({ data }) => {
           />
         ))}
         <Link to="shows">View all shows</Link>
-      </PageWithSidebar>
+      </Page>
     </Layout>
   );
 };
@@ -69,11 +89,17 @@ export const query = graphql`
         description
       }
     }
-    allContentfulPodcast {
+    allContentfulPodcast(filter: { active: { eq: true } }) {
       edges {
         node {
           id
           name
+          shortDescription
+          image {
+            fluid(maxWidth: 75) {
+              ...GatsbyContentfulFluid
+            }
+          }
           fields {
             slug
           }

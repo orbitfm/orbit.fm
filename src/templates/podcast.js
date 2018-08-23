@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
-import LatestEpisode from '../components/LatestEpisode';
+import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
 import EpisodeListing from '../components/EpisodeListing';
 
@@ -21,27 +21,22 @@ export default ({ data }) => {
         return 0;
       })
     : [];
-  const episode = episodes[0];
 
   return (
     <Layout>
       <PageWithSidebar
         title={podcast.name}
         headTitle={podcast.name}
-        description={podcast.description.description}
+        description={podcast.shortDescription}
         color={podcast.primaryColor}
         sidePanelChildren={
-          episode && (
-            <LatestEpisode
-              fluidImage={episode.podcast.image.fluid}
-              name={episode.name}
-              path={episode.fields.path}
-              shortDescription={episode.shortDescription}
-              podcastName={episode.podcast.name}
-              podcastHosts={episode.podcast.hosts.map(h => h.name)}
-              podcastPath={episode.podcast.fields.slug}
-            />
-          )
+          <PodcastInfo
+            fluidImage={podcast.image.fluid}
+            podcastDescription={podcast.description.description}
+            podcastName={podcast.name}
+            podcastHosts={podcast.hosts}
+            podcastPath={podcast.fields.slug}
+          />
         }
       >
         <Subscribe links={podcast.subscriptionLinks} />
@@ -49,15 +44,14 @@ export default ({ data }) => {
         {episodes
           ? episodes.map(e => (
               <EpisodeListing
+                key={e.id}
                 shortDescription={e.shortDescription}
                 publicationDate={e.publicationDate}
                 name={e.name}
                 path={e.fields.path}
-                fluidImage={e.podcast.image.fluid}
                 podcastHosts={e.podcast.hosts.map(h => h.name)}
                 podcastName={e.podcast.name}
                 podcastPath={e.podcast.fields.slug}
-                key={e.id}
               />
             ))
           : null}
@@ -70,8 +64,17 @@ export const query = graphql`
   query PodcastQuery($id: String!) {
     contentfulPodcast(id: { eq: $id }) {
       name
+      shortDescription
       description {
         description
+      }
+      image {
+        fluid(maxWidth: 320) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      fields {
+        slug
       }
       subscriptionLinks {
         id
@@ -91,6 +94,11 @@ export const query = graphql`
         fields {
           slug
         }
+        image {
+          fluid(maxWidth: 75) {
+            ...GatsbyContentfulFluid
+          }
+        }
       }
       episode {
         id
@@ -102,13 +110,19 @@ export const query = graphql`
         }
         podcast {
           name
-          image {
-            fluid(maxWidth: 320) {
-              ...GatsbyContentfulFluid
-            }
+          description {
+            description
           }
           hosts {
             name
+            image {
+              fluid(maxWidth: 75) {
+                ...GatsbyContentfulFluid
+              }
+            }
+            fields {
+              slug
+            }
           }
           fields {
             slug

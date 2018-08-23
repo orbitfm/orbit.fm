@@ -88,14 +88,14 @@ export default ({ data }) => {
           </Link>
         }
         headTitle={episode.podcast.name}
-        description={episode.podcast.description.description}
+        description={episode.podcast.shortDescription}
         color={episode.podcast.primaryColor}
         sidePanelChildren={
           <PodcastInfo
             fluidImage={episode.podcast.image.fluid}
             podcastDescription={episode.podcast.description.description}
             podcastName={episode.podcast.name}
-            podcastHosts={episode.podcast.hosts.map(h => h.name)}
+            podcastHosts={episode.podcast.hosts}
             podcastPath={episode.podcast.fields.slug}
           />
         }
@@ -209,8 +209,14 @@ export const query = graphql`
         id
         name
         primaryColor
+        shortDescription
         description {
           description
+        }
+        image {
+          fluid(maxWidth: 320) {
+            ...GatsbyContentfulFluid
+          }
         }
         subscriptionLinks {
           id
@@ -227,11 +233,15 @@ export const query = graphql`
           slug
         }
         hosts {
+          id
           name
-        }
-        image {
-          fluid(maxWidth: 320) {
-            ...GatsbyContentfulFluid
+          image {
+            fluid(maxWidth: 75) {
+              ...GatsbyContentfulFluid
+            }
+          }
+          fields {
+            slug
           }
         }
       }

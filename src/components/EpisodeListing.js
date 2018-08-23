@@ -55,11 +55,15 @@ const EpisodeListing = ({
   podcastPath,
 }) => (
   <Container>
-    <Image>
-      <Link to={path}>
-        <Img fluid={fluidImage} alt={podcastName} />
-      </Link>
-    </Image>
+    {fluidImage ? (
+      <Image>
+        <Link to={podcastPath}>
+          <Img fluid={fluidImage} alt={podcastName} />
+        </Link>
+      </Image>
+    ) : (
+      <div />
+    )}
     <Details>
       <EpisodeDate>
         {DateTime.fromISO(publicationDate).toLocaleString()}

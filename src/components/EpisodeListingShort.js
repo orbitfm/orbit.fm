@@ -62,7 +62,7 @@ const EpisodeListingShort = ({ episodes }) => {
           (a, b) => new Date(b.publicationDate) - new Date(a.publicationDate)
         )
         .map(episode => (
-          <Episode episode={episode} />
+          <Episode episode={episode} key={episode.id} />
         ))}
     </section>
   );

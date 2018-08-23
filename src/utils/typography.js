@@ -4,11 +4,10 @@ import altonTheme from 'typography-theme-alton';
 altonTheme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
   a: {
     color: 'white',
-    textDecoration: 'inherit',
+    textDecoration: 'underline',
   },
   'a:hover,a:active': {
     color: 'white',
-    textDecoration: 'underline',
   },
 });
 
