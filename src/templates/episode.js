@@ -159,9 +159,8 @@ export default ({ data }) => {
                       title={episode.name}
                       timestamp={item.timestamp}
                     />{' '}
-                    <b>{item.speaker}</b>
                   </p>
-                  <p
+                  <div
                     dangerouslySetInnerHTML={{
                       __html: markdown.render(item.text),
                     }}
