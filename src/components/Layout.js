@@ -104,7 +104,9 @@ const Header = () => (
             },
             { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
         <Title title={data.site.siteMetadata.title} />
       </div>
     )}
