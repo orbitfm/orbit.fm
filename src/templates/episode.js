@@ -159,6 +159,7 @@ export default ({ data }) => {
                       title={episode.name}
                       timestamp={item.timestamp}
                     />{' '}
+                    <span>{item.speaker}</span>
                   </p>
                   <div
                     dangerouslySetInnerHTML={{
