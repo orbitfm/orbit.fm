@@ -22,6 +22,13 @@ const Image = styled.div`
 
 const EpisodeTitle = styled.h1`
   font-size: 1.3em;
+
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 const PodcastTitle = styled(Link)`
@@ -57,7 +64,7 @@ const EpisodeListing = ({
   <Container>
     {fluidImage ? (
       <Image>
-        <Link to={podcastPath}>
+        <Link to={path}>
           <Img fluid={fluidImage} alt={podcastName} />
         </Link>
       </Image>
