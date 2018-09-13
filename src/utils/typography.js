@@ -2,6 +2,9 @@ import Typography from 'typography';
 import altonTheme from 'typography-theme-alton';
 
 altonTheme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
+  body: {
+    color: 'white',
+  },
   a: {
     color: 'white',
     textDecoration: 'underline',
