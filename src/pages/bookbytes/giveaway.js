@@ -13,7 +13,7 @@ const GiveawayPage = ({ data }) => (
     >
       <p>
         We're done with the giveaway, but we'd still appreciate it if you would
-        leave us a review us
+        leave us a review{' '}
         <a
           href="https://itunes.apple.com/us/podcast/bookbytes/id1355549752"
           style={{ textDecoration: 'underline' }}
