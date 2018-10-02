@@ -4,6 +4,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
+import logo from "../images/logo.svg";
 
 import AudioPlayer from '../components/AudioPlayer';
 import { togglePlay, pausePlay, updateTime } from '../state/actions';
@@ -61,17 +62,17 @@ const Title = ({ title }) => (
         justifyContent: 'space-between',
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {title}
-        </Link>
-      </h1>
+      <Link
+        to="/">
+        <img style={{
+          height: '100px',
+          width: 'auto',
+          margin: '0'
+        }}
+          src={logo}
+          alt="Logo"/>
+      </Link>
+
       <ul style={{ listStyle: `none`, float: `right`, margin: `unset` }}>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/shows/">Shows</ListLink>
