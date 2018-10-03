@@ -102,6 +102,11 @@ const ConnectedTimestamp = connect(
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
+  const hostsImages = episode.hosts.reduce((res, h) => {
+    res[h.name] = h.image.fixed;
+    return res;
+  }, {});
+  console.log(hostsImages);
 
   return (
     <Layout>
@@ -191,6 +196,16 @@ export default ({ data }) => {
                       timestamp={item.timestamp}
                     />{' '}
                     <span>{item.speaker}</span>
+                    {/* <span>{hostsImages[item.speaker]}</span> */}
+                    {item.speaker &&
+                      hostsImages[item.speaker] && (
+                        <Host>
+                          <span>{item.speaker}</span>
+                          <HostImage>
+                            <Img fixed={hostsImages[item.speaker]} />
+                          </HostImage>
+                        </Host>
+                      )}
                   </p>
                   <div
                     dangerouslySetInnerHTML={{
