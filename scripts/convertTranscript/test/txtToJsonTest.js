@@ -1,8 +1,8 @@
 const assert = require('chai').assert;
 const txtToJson = require('../');
 
-describe('Test for Time,Speaker,Text', function() {
-  it('Should return js object with keys (timestamp, speaker, text)', function() {
+describe('when input has time, speaker, and text', () => {
+  it('returns object with timestamp, speaker, and text', () => {
     let expected = {
       timestamp: '0:24:19.9',
       speaker: 'Adam Garrett-Harris & Jason Staten',
@@ -10,44 +10,35 @@ describe('Test for Time,Speaker,Text', function() {
     };
 
     let line = '0:24:19.9 **Adam Garrett-Harris & Jason Staten** (laughing)';
+    let actual = txtToJson.processLine(line);
 
-    let result = txtToJson.time_speaker_text(line);
-
-    for (let key in result) {
-      assert.equal(result[key], expected[key]);
-    }
+    assert.deepEqual(actual, expected);
   });
 });
 
-describe('Test for Text Only', function() {
-  it('Should return js object with key (text)', function() {
+describe('when input has text only', function() {
+  it('returns object with text', function() {
     let expected = {
-      text: '(Intro music: Electro swing)',
+      text: 'Intro music: Electro swing',
     };
 
-    let line = '(Intro music: Electro swing)';
+    let line = 'Intro music: Electro swing ';
+    let actual = txtToJson.processLine(line);
 
-    let result = txtToJson.text_only(line);
-
-    for (let key in result) {
-      assert.equal(result[key], expected[key]);
-    }
+    assert.deepEqual(actual, expected);
   });
 });
 
-describe('Test for Timestamp and Text', function() {
-  it('Should return js object with keys (timestamp and text)', function() {
+describe('when input has timestamp and text', function() {
+  it('returns object with timestamp and text', function() {
     let expected = {
       timestamp: '0:00:41.0',
       text: '(Typewriter dings)',
     };
 
     let line = '0:00:41.0 (Typewriter dings)';
+    let actual = txtToJson.processLine(line);
 
-    let result = txtToJson.time_text(line);
-
-    for (let key in result) {
-      assert.equal(result[key], expected[key]);
-    }
+    assert.deepEqual(actual, expected);
   });
 });
