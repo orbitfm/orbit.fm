@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { DateTime } from 'luxon';
 import styled from 'react-emotion';
 import { connect } from 'react-redux';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
@@ -17,6 +18,29 @@ const markdown = new Remarkable({ html: true });
 
 const AudioContainer = styled.div`
   margin: 40px 0;
+`;
+
+const Host = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const HostImage = styled.span`
+  margin-right: 20px;
+  > div {
+    height: 40px;
+    width: 40px;
+  }
+  img {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 4px;
+  }
+`;
+
+const HostsList = styled.ul`
+  margin-left: 0;
+  list-style-type: none;
 `;
 
 const SmartPlayButton = ({
@@ -112,14 +136,21 @@ export default ({ data }) => {
           />
         </AudioContainer>
         <h3>Hosts</h3>
-        <ul>
+        <HostsList>
           {episode.hosts &&
             episode.hosts.map(host => (
               <li key={host.id}>
-                <Link to={`/people/${host.fields.slug}`}>{host.name}</Link>
+                <Link to={`/people/${host.fields.slug}`}>
+                  <Host>
+                    <HostImage>
+                      <Img fixed={host.image.fixed} />
+                    </HostImage>
+                    <p>{host.name}</p>
+                  </Host>
+                </Link>
               </li>
             ))}
-        </ul>
+        </HostsList>
         {episode.guests && (
           <div>
             <h3>Guests</h3>
@@ -194,6 +225,11 @@ export const query = graphql`
       hosts {
         id
         name
+        image {
+          fixed(width: 40) {
+            ...GatsbyContentfulFixed
+          }
+        }
         fields {
           slug
         }
