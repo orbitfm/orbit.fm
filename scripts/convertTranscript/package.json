@@ -4,6 +4,7 @@
   "description": "Testing",
   "main": "txtToJson.js",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha || exit 0"
   },
   "author": "",
