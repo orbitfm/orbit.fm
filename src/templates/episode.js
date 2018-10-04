@@ -20,13 +20,21 @@ const AudioContainer = styled.div`
   margin: 40px 0;
 `;
 
-const Host = styled.div`
+const Row = styled.div`
   display: flex;
   align-items: center;
 `;
 
+const InlineList = styled.div`
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-right: 10px;
+  }
+`;
+
 const HostImage = styled.span`
-  margin-right: 20px;
   > div {
     height: 40px;
     width: 40px;
@@ -38,10 +46,36 @@ const HostImage = styled.span`
   }
 `;
 
-const HostsList = styled.ul`
-  margin-left: 0;
-  list-style-type: none;
-`;
+const getSpeakersImagesSrc = (speakersStr, hostsImages) => {
+  if (
+    !speakersStr ||
+    !hostsImages ||
+    speakersStr.toLowerCase() === 'all' ||
+    speakersStr.includes('*')
+  ) {
+    return null;
+  }
+  const names = speakersStr.split('&');
+  return names.reduce((res, name) => [...res, hostsImages[name.trim()]], []);
+};
+
+const SpeakersImages = props => {
+  if (!props.src) {
+    return null;
+  }
+  return (
+    <Row>
+      {props.src.map((s, i) => (
+        <HostImage
+          key={i}
+          style={{ marginLeft: `${-20 * i}px`, zIndex: `-${i}` }}
+        >
+          <Img fixed={s} />
+        </HostImage>
+      ))}
+    </Row>
+  );
+};
 
 const SmartPlayButton = ({
   url,
@@ -102,11 +136,13 @@ const ConnectedTimestamp = connect(
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
-  const hostsImages = episode.hosts.reduce((res, h) => {
-    res[h.name] = h.image.fixed;
-    return res;
-  }, {});
-  console.log(hostsImages);
+  const hostsImages =
+    episode && episode.hosts
+      ? episode.hosts.reduce((res, h) => {
+          res[h.name] = h.image.fixed;
+          return res;
+        }, {})
+      : null;
 
   return (
     <Layout>
@@ -141,21 +177,16 @@ export default ({ data }) => {
           />
         </AudioContainer>
         <h3>Hosts</h3>
-        <HostsList>
+        <ul>
           {episode.hosts &&
             episode.hosts.map(host => (
               <li key={host.id}>
                 <Link to={`/people/${host.fields.slug}`}>
-                  <Host>
-                    <HostImage>
-                      <Img fixed={host.image.fixed} />
-                    </HostImage>
-                    <p>{host.name}</p>
-                  </Host>
+                  <p>{host.name}</p>
                 </Link>
               </li>
             ))}
-        </HostsList>
+        </ul>
         {episode.guests && (
           <div>
             <h3>Guests</h3>
@@ -186,7 +217,7 @@ export default ({ data }) => {
             <div>
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
-                  <p>
+                  <InlineList>
                     <ConnectedTimestamp
                       url={`https://www.podtrac.com/pts/redirect.mp3/${
                         episode.audioUrl
@@ -195,18 +226,11 @@ export default ({ data }) => {
                       title={episode.name}
                       timestamp={item.timestamp}
                     />{' '}
+                    <SpeakersImages
+                      src={getSpeakersImagesSrc(item.speaker, hostsImages)}
+                    />
                     <span>{item.speaker}</span>
-                    {/* <span>{hostsImages[item.speaker]}</span> */}
-                    {item.speaker &&
-                      hostsImages[item.speaker] && (
-                        <Host>
-                          <span>{item.speaker}</span>
-                          <HostImage>
-                            <Img fixed={hostsImages[item.speaker]} />
-                          </HostImage>
-                        </Host>
-                      )}
-                  </p>
+                  </InlineList>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: markdown.render(item.text),
