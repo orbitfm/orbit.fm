@@ -56,7 +56,12 @@ const getSpeakersImagesSrc = (speakersStr, hostsImages) => {
     return null;
   }
   const names = speakersStr.split('&');
-  return names.reduce((res, name) => [...res, hostsImages[name.trim()]], []);
+  return names.reduce((res, name) => {
+    if (hostsImages[name.trim()]) {
+      return [...res, hostsImages[name.trim()]];
+    }
+    return res;
+  }, []);
 };
 
 const SpeakersImages = props => {
@@ -139,7 +144,9 @@ export default ({ data }) => {
   const hostsImages =
     episode && episode.hosts
       ? episode.hosts.reduce((res, h) => {
-          res[h.name] = h.image.fixed;
+          if (h.image && h.image.fixed && h.name) {
+            res[h.name] = h.image.fixed;
+          }
           return res;
         }, {})
       : null;
