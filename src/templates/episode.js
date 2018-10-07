@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { DateTime } from 'luxon';
 import styled from 'react-emotion';
 import { connect } from 'react-redux';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
@@ -18,6 +19,70 @@ const markdown = new Remarkable({ html: true });
 const AudioContainer = styled.div`
   margin: 40px 0;
 `;
+
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const InlineList = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  > * {
+    margin-right: 10px;
+  }
+`;
+
+const HostImage = styled.span`
+  > div {
+    height: 40px;
+    width: 40px;
+  }
+  img {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 4px;
+  }
+`;
+
+const getSpeakersImagesSrc = (speakersStr, hostsImages) => {
+  if (
+    !speakersStr ||
+    !hostsImages ||
+    speakersStr.toLowerCase() === 'all' ||
+    speakersStr.includes('*')
+  ) {
+    return null;
+  }
+  const names = speakersStr.split('&');
+  return names.reduce((res, name) => {
+    if (hostsImages[name.trim()]) {
+      return [...res, hostsImages[name.trim()]];
+    }
+    return res;
+  }, []);
+};
+
+const SpeakersImages = props => {
+  if (!props.src) {
+    return null;
+  }
+  return (
+    <Row>
+      {props.src.map((s, i) => (
+        <HostImage
+          key={i}
+          style={{ marginLeft: `${i === 0 ? 0 : -20}px`, zIndex: `-${i}` }}
+        >
+          <Img fixed={s} />
+        </HostImage>
+      ))}
+    </Row>
+  );
+};
 
 const SmartPlayButton = ({
   url,
@@ -78,6 +143,15 @@ const ConnectedTimestamp = connect(
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
+  const hostsImages =
+    episode && episode.hosts
+      ? episode.hosts.reduce((res, h) => {
+          if (h.image && h.image.fixed && h.name) {
+            res[h.name] = h.image.fixed;
+          }
+          return res;
+        }, {})
+      : null;
 
   return (
     <Layout>
@@ -116,7 +190,9 @@ export default ({ data }) => {
           {episode.hosts &&
             episode.hosts.map(host => (
               <li key={host.id}>
-                <Link to={`/people/${host.fields.slug}`}>{host.name}</Link>
+                <Link to={`/people/${host.fields.slug}`}>
+                  <p>{host.name}</p>
+                </Link>
               </li>
             ))}
         </ul>
@@ -150,17 +226,20 @@ export default ({ data }) => {
             <div>
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
-                  <p>
-                    <ConnectedTimestamp
-                      url={`https://www.podtrac.com/pts/redirect.mp3/${
-                        episode.audioUrl
-                      }`}
-                      podcast={episode.podcast.name}
-                      title={episode.name}
-                      timestamp={item.timestamp}
-                    />{' '}
+                  <ConnectedTimestamp
+                    url={`https://www.podtrac.com/pts/redirect.mp3/${
+                      episode.audioUrl
+                    }`}
+                    podcast={episode.podcast.name}
+                    title={episode.name}
+                    timestamp={item.timestamp}
+                  />
+                  <InlineList>
+                    <SpeakersImages
+                      src={getSpeakersImagesSrc(item.speaker, hostsImages)}
+                    />
                     <span>{item.speaker}</span>
-                  </p>
+                  </InlineList>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: markdown.render(item.text),
@@ -194,6 +273,11 @@ export const query = graphql`
       hosts {
         id
         name
+        image {
+          fixed(width: 40) {
+            ...GatsbyContentfulFixed
+          }
+        }
         fields {
           slug
         }
