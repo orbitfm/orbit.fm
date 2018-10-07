@@ -28,6 +28,8 @@ const Row = styled.div`
 const InlineList = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   > * {
     margin-right: 10px;
@@ -73,7 +75,7 @@ const SpeakersImages = props => {
       {props.src.map((s, i) => (
         <HostImage
           key={i}
-          style={{ marginLeft: `${-20 * i}px`, zIndex: `-${i}` }}
+          style={{ marginLeft: `${i === 0 ? 0 : -20}px`, zIndex: `-${i}` }}
         >
           <Img fixed={s} />
         </HostImage>
@@ -224,15 +226,15 @@ export default ({ data }) => {
             <div>
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
+                  <ConnectedTimestamp
+                    url={`https://www.podtrac.com/pts/redirect.mp3/${
+                      episode.audioUrl
+                    }`}
+                    podcast={episode.podcast.name}
+                    title={episode.name}
+                    timestamp={item.timestamp}
+                  />
                   <InlineList>
-                    <ConnectedTimestamp
-                      url={`https://www.podtrac.com/pts/redirect.mp3/${
-                        episode.audioUrl
-                      }`}
-                      podcast={episode.podcast.name}
-                      title={episode.name}
-                      timestamp={item.timestamp}
-                    />{' '}
                     <SpeakersImages
                       src={getSpeakersImagesSrc(item.speaker, hostsImages)}
                     />
