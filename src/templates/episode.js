@@ -4,6 +4,7 @@ import { DateTime } from 'luxon';
 import styled from 'react-emotion';
 import { connect } from 'react-redux';
 import Img from 'gatsby-image';
+import leftPad from 'left-pad';
 
 import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
@@ -143,6 +144,7 @@ const ConnectedTimestamp = connect(
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
+  const transcriptLink = `https://github.com/orbitfm/orbit.fm/tree/master/transcripts/${episode.podcast.fields.slug}-${leftPad(episode.episodeNumber,3,'0')}.json`;
   const hostsImages =
     episode && episode.hosts
       ? episode.hosts.reduce((res, h) => {
@@ -222,7 +224,7 @@ export default ({ data }) => {
 
         {transcript && (
           <div>
-            <h1>Transcript</h1>
+            <h1><a href={transcriptLink}>Transcript</a></h1>
             <div>
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
