@@ -223,10 +223,14 @@ export default ({ data }) => {
           </div>
         )}
 
-        {transcript ? (
-          <div>
-            <h1>Transcript</h1>
+        <div>
+    	  <h1>Transcript</h1>
+          {transcript ? (
             <h4>Help improve this transcript on <a href={transcriptLink}>GitHub</a></h4>
+	  ) : (
+            <h4>Help by adding a transcript on <a href={transcriptsLink}>GitHub</a></h4>
+	  )}
+ 	  {transcript && (
             <div>
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
@@ -252,13 +256,8 @@ export default ({ data }) => {
                 </div>
               ))}
             </div>
-          </div>
-        ) : (
-          <div>
-            <h1>Transcript</h1>
-            <h4>Help by adding a transcript on <a href={transcriptsLink}>GitHub</a></h4>
-          </div>
-		  )}
+	  )}
+        </div>
       </PageWithSidebar>
     </Layout>
   );
