@@ -144,7 +144,8 @@ const ConnectedTimestamp = connect(
 export default ({ data }) => {
   const episode = data.contentfulEpisode;
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
-  const transcriptLink = `https://github.com/orbitfm/orbit.fm/tree/master/transcripts/${episode.podcast.fields.slug}-${leftPad(episode.episodeNumber,3,'0')}.json`;
+  const transcriptsLink = 'https://github.com/orbitfm/orbit.fm/tree/master/transcripts';
+  const transcriptLink = `${transcriptsLink}/${episode.podcast.fields.slug}-${leftPad(episode.episodeNumber,3,'0')}.json`;
   const hostsImages =
     episode && episode.hosts
       ? episode.hosts.reduce((res, h) => {
@@ -222,9 +223,10 @@ export default ({ data }) => {
           </div>
         )}
 
-        {transcript && (
+        {transcript ? (
           <div>
-            <h1><a href={transcriptLink}>Transcript</a></h1>
+            <h1>Transcript</h1>
+            <h4>Help improve this transcript on <a href={transcriptLink}>GitHub</a></h4>
             <div>
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
@@ -251,7 +253,12 @@ export default ({ data }) => {
               ))}
             </div>
           </div>
-        )}
+        ) : (
+          <div>
+            <h1>Transcript</h1>
+            <h4>Help by adding a transcript on <a href={transcriptsLink}>GitHub</a></h4>
+          </div>
+		  )}
       </PageWithSidebar>
     </Layout>
   );
