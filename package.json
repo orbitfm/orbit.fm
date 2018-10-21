@@ -49,6 +49,16 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "gatsby build"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },
+
   "devDependencies": {
     "dotenv": "^6.0.0",
     "prettier": "^1.9.2"
@@ -57,4 +67,5 @@
     "trailingComma": "es5",
     "singleQuote": true
   }
+
 }
