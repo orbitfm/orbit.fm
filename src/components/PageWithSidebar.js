@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import SidePanel from './SidePanel';
 import * as COLORS from '../constants/colors';
 
