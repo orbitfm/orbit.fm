@@ -1,5 +1,5 @@
-import Typography from 'typography'
-import altonTheme from 'typography-theme-alton'
+import Typography from 'typography';
+import altonTheme from 'typography-theme-alton';
 
 altonTheme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
   body: {
@@ -12,8 +12,8 @@ altonTheme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
   'a:hover,a:active': {
     color: 'white',
   },
-})
+});
 
-const typography = new Typography(altonTheme)
-const { rhythm, scale } = typography
-export { rhythm, scale, typography as default }
+const typography = new Typography(altonTheme);
+const { rhythm, scale } = typography;
+export { rhythm, scale, typography as default };

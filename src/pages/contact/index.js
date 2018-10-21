@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'react-emotion'
-import { graphql } from 'gatsby'
+import React from 'react';
+import styled from 'react-emotion';
+import { graphql } from 'gatsby';
 
-import Layout from '../../components/Layout'
-import PageWithSidebar from '../../components/PageWithSidebar'
+import Layout from '../../components/Layout';
+import PageWithSidebar from '../../components/PageWithSidebar';
 
 const TextArea = styled.textarea`
   width: 500px;
@@ -13,7 +13,7 @@ const TextArea = styled.textarea`
   border: 0;
   padding: 10px;
   border-radius: 5px;
-`
+`;
 
 const Input = styled.input`
   display: inline-block;
@@ -22,12 +22,12 @@ const Input = styled.input`
   border: 0;
   padding: 10px;
   border-radius: 5px;
-`
+`;
 
 const Label = styled.label`
   display: block;
   font-weight: 600;
-`
+`;
 
 const Button = styled.button`
   display: block;
@@ -48,10 +48,10 @@ const Button = styled.button`
   &:active {
     background-color: #2486a1;
   }
-`
+`;
 
 const ContactPage = ({ data, location }) => {
-  let show = null
+  let show = null;
   /*let show;*/
   //let url;
   //try {
@@ -101,10 +101,10 @@ const ContactPage = ({ data, location }) => {
         </form>
       </PageWithSidebar>
     </Layout>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;
 
 export const query = graphql`
   query ContactQuery {
@@ -117,4 +117,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

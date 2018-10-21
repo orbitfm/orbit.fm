@@ -1,30 +1,30 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { DateTime } from 'luxon'
-import styled from 'react-emotion'
-import { connect } from 'react-redux'
-import Img from 'gatsby-image'
-import leftPad from 'left-pad'
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import { DateTime } from 'luxon';
+import styled from 'react-emotion';
+import { connect } from 'react-redux';
+import Img from 'gatsby-image';
+import leftPad from 'left-pad';
 
-import Layout from '../components/Layout'
-import PageWithSidebar from '../components/PageWithSidebar'
-import PodcastInfo from '../components/PodcastInfo'
-import Subscribe from '../components/Subscribe'
-import PlayButton from '../components/AudioPlayer/PlayButton'
-import { playSong, playSongAtTime } from '../state/actions'
-import { selectUrl, selectIsPlaying } from '../state/selectors'
+import Layout from '../components/Layout';
+import PageWithSidebar from '../components/PageWithSidebar';
+import PodcastInfo from '../components/PodcastInfo';
+import Subscribe from '../components/Subscribe';
+import PlayButton from '../components/AudioPlayer/PlayButton';
+import { playSong, playSongAtTime } from '../state/actions';
+import { selectUrl, selectIsPlaying } from '../state/selectors';
 
-const Remarkable = require('remarkable')
-const markdown = new Remarkable({ html: true })
+const Remarkable = require('remarkable');
+const markdown = new Remarkable({ html: true });
 
 const AudioContainer = styled.div`
   margin: 40px 0;
-`
+`;
 
 const Row = styled.div`
   display: flex;
   align-items: center;
-`
+`;
 
 const InlineList = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ const InlineList = styled.div`
   > * {
     margin-right: 10px;
   }
-`
+`;
 
 const HostImage = styled.span`
   > div {
@@ -47,7 +47,7 @@ const HostImage = styled.span`
     max-height: 40px;
     border-radius: 4px;
   }
-`
+`;
 
 const getSpeakersImagesSrc = (speakersStr, hostsImages) => {
   if (
@@ -56,20 +56,20 @@ const getSpeakersImagesSrc = (speakersStr, hostsImages) => {
     speakersStr.toLowerCase() === 'all' ||
     speakersStr.includes('*')
   ) {
-    return null
+    return null;
   }
-  const names = speakersStr.split('&')
+  const names = speakersStr.split('&');
   return names.reduce((res, name) => {
     if (hostsImages[name.trim()]) {
-      return [...res, hostsImages[name.trim()]]
+      return [...res, hostsImages[name.trim()]];
     }
-    return res
-  }, [])
-}
+    return res;
+  }, []);
+};
 
 const SpeakersImages = props => {
   if (!props.src) {
-    return null
+    return null;
   }
   return (
     <Row>
@@ -82,8 +82,8 @@ const SpeakersImages = props => {
         </HostImage>
       ))}
     </Row>
-  )
-}
+  );
+};
 
 const SmartPlayButton = ({
   url,
@@ -97,7 +97,7 @@ const SmartPlayButton = ({
     isPlaying={isPlaying && url === playingUrl}
     onClick={() => onClick({ url, podcast, title })}
   />
-)
+);
 
 const ConnectedPlayButton = connect(
   state => ({
@@ -107,57 +107,57 @@ const ConnectedPlayButton = connect(
   {
     onClick: playSong,
   }
-)(SmartPlayButton)
+)(SmartPlayButton);
 
 const convertTimestampToTime = timestamp => {
-  const timeSections = timestamp.split(':')
-  const seconds = Number(timeSections[timeSections.length - 1])
-  const minutes = Number(timeSections[timeSections.length - 2])
-  const hours = Number(timeSections[timeSections.length - 3])
+  const timeSections = timestamp.split(':');
+  const seconds = Number(timeSections[timeSections.length - 1]);
+  const minutes = Number(timeSections[timeSections.length - 2]);
+  const hours = Number(timeSections[timeSections.length - 3]);
 
-  return hours * 3600 + minutes * 60 + seconds
-}
+  return hours * 3600 + minutes * 60 + seconds;
+};
 
 const TimestampSpan = styled.span`
   text-decoration: underline;
   cursor: pointer;
-`
+`;
 
 const Timestamp = ({ url, podcast, title, timestamp, onClick }) => (
   <TimestampSpan
     onClick={e => {
-      e.preventDefault()
-      onClick({ url, podcast, title, time: convertTimestampToTime(timestamp) })
+      e.preventDefault();
+      onClick({ url, podcast, title, time: convertTimestampToTime(timestamp) });
     }}
   >
     {timestamp}
   </TimestampSpan>
-)
+);
 
 const ConnectedTimestamp = connect(
   null,
   {
     onClick: playSongAtTime,
   }
-)(Timestamp)
+)(Timestamp);
 
 export default ({ data }) => {
-  const episode = data.contentfulEpisode
-  const transcript = data.transcriptsJson && data.transcriptsJson.transcript
+  const episode = data.contentfulEpisode;
+  const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
   const transcriptsLink =
-    'https://github.com/orbitfm/orbit.fm/tree/master/transcripts'
+    'https://github.com/orbitfm/orbit.fm/tree/master/transcripts';
   const transcriptLink = `${transcriptsLink}/${episode.podcast.fields.slug}-${
     episode.season ? leftPad(episode.season, 3, '0') : ''
-  }-${leftPad(episode.episodeNumber, 3, '0')}.json`
+  }-${leftPad(episode.episodeNumber, 3, '0')}.json`;
   const hostsImages =
     episode && episode.hosts
       ? episode.hosts.reduce((res, h) => {
           if (h.image && h.image.fixed && h.name) {
-            res[h.name] = h.image.fixed
+            res[h.name] = h.image.fixed;
           }
-          return res
+          return res;
         }, {})
-      : null
+      : null;
 
   return (
     <Layout>
@@ -269,8 +269,8 @@ export default ({ data }) => {
         </div>
       </PageWithSidebar>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query EpisodeQuery(
@@ -365,4 +365,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

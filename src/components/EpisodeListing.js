@@ -1,24 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'react-emotion'
-import humanizeList from 'humanize-list'
-import { DateTime } from 'luxon'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import styled from 'react-emotion';
+import humanizeList from 'humanize-list';
+import { DateTime } from 'luxon';
 
-import * as COLORS from '../constants/colors'
+import * as COLORS from '../constants/colors';
 
 const Container = styled.article`
   border-bottom: 1px solid ${COLORS.DIVIDER};
   margin-bottom: 40px;
   display: flex;
-`
+`;
 
 const Image = styled.div`
   width: 20vw;
   max-width: 150px;
   margin-right: 20px;
-`
+`;
 
 const EpisodeTitle = styled.h1`
   font-size: 1.3em;
@@ -29,12 +29,12 @@ const EpisodeTitle = styled.h1`
   a:hover {
     text-decoration: underline;
   }
-`
+`;
 
 const PodcastTitle = styled(Link)`
   font-size: 0.8em;
   color: rgba(255, 255, 255, 0.6);
-`
+`;
 
 const EpisodeDate = styled.span`
   font-size: 0.8em;
@@ -44,11 +44,11 @@ const EpisodeDate = styled.span`
     content: '▪';
     margin: 0 5px;
   }
-`
+`;
 
 const Details = styled.div`
   flex: 1;
-`
+`;
 
 const EpisodeListing = ({
   episode,
@@ -83,7 +83,7 @@ const EpisodeListing = ({
       <p>{shortDescription}</p>
     </Details>
   </Container>
-)
+);
 
 EpisodeListing.propTypes = {
   shortDescription: PropTypes.string.isRequired,
@@ -94,6 +94,6 @@ EpisodeListing.propTypes = {
   podcastHosts: PropTypes.arrayOf(PropTypes.string).isRequired,
   podcastName: PropTypes.string.isRequired,
   podcastPath: PropTypes.string.isRequired,
-}
+};
 
-export default EpisodeListing
+export default EpisodeListing;

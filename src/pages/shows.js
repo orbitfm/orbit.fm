@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from 'react-emotion'
-import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import styled from 'react-emotion';
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 
-import Layout from '../components/Layout'
-import Page from '../components/Page'
+import Layout from '../components/Layout';
+import Page from '../components/Page';
 
 const Listing = styled.ul`
   list-style: none;
-`
+`;
 
 const Item = styled.li`
   display: flex;
@@ -16,13 +16,13 @@ const Item = styled.li`
   @media (max-width: 700px) {
     flex-direction: column;
   }
-`
+`;
 
 const ImageContainer = styled.div`
   width: 100%;
   max-width: 150px;
   margin: 0 20px 20px 0;
-`
+`;
 
 const Shows = ({ data }) => (
   <Layout>
@@ -46,9 +46,9 @@ const Shows = ({ data }) => (
       </Listing>
     </Page>
   </Layout>
-)
+);
 
-export default Shows
+export default Shows;
 
 export const query = graphql`
   query ShowsQuery {
@@ -72,4 +72,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,4 +1,4 @@
-import * as TYPES from './actionTypes'
+import * as TYPES from './actionTypes';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -6,14 +6,14 @@ const reducer = (state, action) => {
       return {
         ...state,
         time: action.time,
-      }
+      };
     case TYPES.CHANGE_SONG:
       return {
         ...state,
         url: action.url,
         title: action.title,
         podcast: action.podcast,
-      }
+      };
     case TYPES.PLAY_SONG:
       return {
         ...state,
@@ -21,7 +21,7 @@ const reducer = (state, action) => {
         isPlaying: action.url === state.url ? !state.isPlaying : true,
         title: action.title,
         podcast: action.podcast,
-      }
+      };
     case TYPES.PLAY_SONG_TIME:
       return {
         ...state,
@@ -30,20 +30,20 @@ const reducer = (state, action) => {
         title: action.title,
         podcast: action.podcast,
         time: action.time,
-      }
+      };
     case TYPES.TOGGLE_PLAY:
       return {
         ...state,
         isPlaying: !state.isPlaying,
-      }
+      };
     case TYPES.PAUSE_PLAY:
       return {
         ...state,
         isPlaying: false,
-      }
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default reducer
+export default reducer;

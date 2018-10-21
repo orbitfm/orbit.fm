@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'react-emotion'
-import Img from 'gatsby-image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import Img from 'gatsby-image';
 
 const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-`
+`;
 
 const Image = styled.span`
   > div {
@@ -18,17 +18,17 @@ const Image = styled.span`
     max-width: 40px;
     border-radius: 8px;
   }
-`
+`;
 
 const Subscribe = ({ links }) => {
   if (!links) {
-    return null
+    return null;
   }
   const simpleLinks = links.map(l => ({
     id: l.id,
     fixed: l.linkType.image.fixed,
     link: l.url,
-  }))
+  }));
   return (
     <div>
       <h2>Subscribe</h2>
@@ -42,8 +42,8 @@ const Subscribe = ({ links }) => {
         ))}
       </Container>
     </div>
-  )
-}
+  );
+};
 
 Subscribe.propTypes = {
   links: PropTypes.arrayOf(
@@ -57,6 +57,6 @@ Subscribe.propTypes = {
       }),
     })
   ).isRequired,
-}
+};
 
-export default Subscribe
+export default Subscribe;

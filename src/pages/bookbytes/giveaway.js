@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../../components/Layout'
-import PageWithSidebar from '../../components/PageWithSidebar'
+import Layout from '../../components/Layout';
+import PageWithSidebar from '../../components/PageWithSidebar';
 
 const GiveawayPage = ({ data }) => (
   <Layout>
@@ -27,6 +27,6 @@ const GiveawayPage = ({ data }) => (
       </p>
     </PageWithSidebar>
   </Layout>
-)
+);
 
-export default GiveawayPage
+export default GiveawayPage;

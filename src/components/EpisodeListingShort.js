@@ -1,36 +1,36 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'react-emotion'
-import { DateTime } from 'luxon'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'react-emotion';
+import { DateTime } from 'luxon';
 
 const Header = styled.header`
   font-size: 1.5em;
   padding-bottom: 16px;
-`
+`;
 
 const EpisodeContainer = styled.ul`
   margin-left: 0;
-`
+`;
 
 const EpisodeItem = styled.li`
   display: flex;
   align-items: center;
   list-style: none;
-`
+`;
 
 const Title = styled.span`
   margin-right: 20px;
-`
+`;
 
 const EpisodeDate = styled.span`
   font-size: 0.7em;
-`
+`;
 
 const EpisodePodcastImage = styled.img`
   height: 20px;
   width: auto;
   margin: 0 20px 0 0;
-`
+`;
 
 const Episode = ({ episode }) => (
   <EpisodeContainer>
@@ -51,7 +51,7 @@ const Episode = ({ episode }) => (
       </EpisodeDate>
     </EpisodeItem>
   </EpisodeContainer>
-)
+);
 
 const EpisodeListingShort = ({ episodes }) => {
   return (
@@ -65,7 +65,7 @@ const EpisodeListingShort = ({ episodes }) => {
           <Episode episode={episode} key={episode.id} />
         ))}
     </section>
-  )
-}
+  );
+};
 
-export default EpisodeListingShort
+export default EpisodeListingShort;
