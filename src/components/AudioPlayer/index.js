@@ -1,23 +1,23 @@
-import React from 'react';
-import leftPad from 'left-pad';
-import Slider from './Slider';
-import PlayButton from './PlayButton';
+import React from 'react'
+import leftPad from 'left-pad'
+import Slider from './Slider'
+import PlayButton from './PlayButton'
 
-const BLUE_DARK = '#1A83A1';
-const WHITE = '#FFFFFF';
+const BLUE_DARK = '#1A83A1'
+const WHITE = '#FFFFFF'
 
 const getNextRate = currentRate => {
-  const rates = [1, 1.25, 1.5, 2];
-  const i = rates.indexOf(currentRate);
-  return rates[i === rates.length - 1 ? 0 : i + 1];
-};
+  const rates = [1, 1.25, 1.5, 2]
+  const i = rates.indexOf(currentRate)
+  return rates[i === rates.length - 1 ? 0 : i + 1]
+}
 
 const getMinutesAndSeconds = time => {
-  const hours = leftPad(Math.floor(time / 3600), 2, '0');
-  const minutes = leftPad(Math.floor((time / 60) % 60), 2, '0');
-  const seconds = leftPad(Math.floor(time % 60), 2, '0');
-  return `${hours}:${minutes}:${seconds}`;
-};
+  const hours = leftPad(Math.floor(time / 3600), 2, '0')
+  const minutes = leftPad(Math.floor((time / 60) % 60), 2, '0')
+  const seconds = leftPad(Math.floor(time % 60), 2, '0')
+  return `${hours}:${minutes}:${seconds}`
+}
 
 const MuteIcon = () => (
   <svg width="20" height="20" viewBox="0 0 100 100">
@@ -26,7 +26,7 @@ const MuteIcon = () => (
       fill={WHITE}
     />
   </svg>
-);
+)
 
 const UnmuteIcon = () => (
   <svg width="20" height="20" viewBox="0 0 100 100">
@@ -35,11 +35,11 @@ const UnmuteIcon = () => (
       fill={WHITE}
     />
   </svg>
-);
+)
 
-const MARGIN_WIDTH = 20;
-const RATE_WIDTH = 45;
-const MUTE_WIDTH = 20;
+const MARGIN_WIDTH = 20
+const RATE_WIDTH = 45
+const MUTE_WIDTH = 20
 
 class AudioPlayer extends React.Component {
   state = {
@@ -49,19 +49,19 @@ class AudioPlayer extends React.Component {
     duration: null,
     rate: 1,
     window: 0,
-  };
+  }
 
   static defaultProps = {
     url: null,
-  };
+  }
 
-  neverPlayed = true;
+  neverPlayed = true
 
   componentDidMount = () => {
-    this.audio.src = this.props.url;
+    this.audio.src = this.props.url
 
     if (this.props.time) {
-      this.handleTimeChange(this.props.time);
+      this.handleTimeChange(this.props.time)
     }
 
     this.audio.addEventListener(
@@ -69,63 +69,63 @@ class AudioPlayer extends React.Component {
       event => {
         this.setState({
           currentTime: Math.floor(this.audio.currentTime),
-        });
+        })
         if (this.props.reportedTime) {
-          this.props.reportedTime(Math.floor(this.audio.currentTime));
+          this.props.reportedTime(Math.floor(this.audio.currentTime))
         }
       },
       false
-    );
+    )
 
     this.audio.addEventListener('canplay', () => {
       if (this.props.isPlaying && this.neverPlayed) {
-        this.audio.play();
-        this.neverPlayed = false;
+        this.audio.play()
+        this.neverPlayed = false
       }
       this.setState({
         duration: Math.floor(this.audio.duration),
-      });
-    });
+      })
+    })
 
-    this.playerHeight = this.component.getBoundingClientRect().height;
-  };
+    this.playerHeight = this.component.getBoundingClientRect().height
+  }
 
   componentDidUpdate(prevProps) {
     if (this.props.url !== prevProps.url) {
-      this.audio.src = this.props.url;
+      this.audio.src = this.props.url
       if (this.props.isPlaying) {
-        this.audio.play();
+        this.audio.play()
       }
     }
     if (this.props.time !== prevProps.time) {
       this.setState({
         lastReportedTime: this.props,
-      });
+      })
       if (
         this.props.time !== prevProps.time &&
         this.props.time + 1 !== prevProps.time &&
         this.props.time - 1 !== prevProps.time
       ) {
-        this.handleTimeChange(this.props.time);
+        this.handleTimeChange(this.props.time)
       }
     }
     if (this.props.time === this.state.duration) {
-      this.props.onPause();
+      this.props.onPause()
     }
     if (this.props.isPlaying !== prevProps.isPlaying) {
       if (this.props.isPlaying) {
-        this.audio.play();
+        this.audio.play()
       } else {
-        this.audio.pause();
+        this.audio.pause()
       }
     }
   }
 
   componentWillUnmount = () => {
     if (window.removeEventListener) {
-      window.removeEventListener('resize', this.updateDimensions);
+      window.removeEventListener('resize', this.updateDimensions)
     }
-  };
+  }
 
   handleVolumeChange = volume => {
     this.setState(
@@ -134,33 +134,33 @@ class AudioPlayer extends React.Component {
         isMuted: volume === 0,
       },
       () => {
-        this.audio.volume = volume;
+        this.audio.volume = volume
       }
-    );
-  };
+    )
+  }
 
   handleTimeChange = currentTime => {
     this.setState({
       currentTime,
-    });
+    })
 
-    this.audio.currentTime = currentTime;
-  };
+    this.audio.currentTime = currentTime
+  }
 
   handleTimeDrag = percentTime => {
-    const dragTime = Math.floor(this.state.duration * percentTime);
+    const dragTime = Math.floor(this.state.duration * percentTime)
 
     this.setState({
       isDragging: true,
       dragTime,
-    });
-  };
+    })
+  }
 
   handleTimeDragStop = () => {
     this.setState({
       isDragging: false,
-    });
-  };
+    })
+  }
 
   handleMuteClick = () => {
     this.setState(
@@ -169,10 +169,10 @@ class AudioPlayer extends React.Component {
         volume: this.state.volume === 0 ? 0.5 : this.state.volume,
       },
       () => {
-        this.audio.volume = this.state.isMuted ? 0 : this.state.volume;
+        this.audio.volume = this.state.isMuted ? 0 : this.state.volume
       }
-    );
-  };
+    )
+  }
 
   handlePlaybackRate = () => {
     this.setState(
@@ -180,10 +180,10 @@ class AudioPlayer extends React.Component {
         rate: getNextRate(this.state.rate),
       },
       () => {
-        this.audio.playbackRate = this.state.rate;
+        this.audio.playbackRate = this.state.rate
       }
-    );
-  };
+    )
+  }
 
   render() {
     const {
@@ -193,9 +193,9 @@ class AudioPlayer extends React.Component {
       isDragging,
       duration,
       rate,
-    } = this.state;
+    } = this.state
 
-    const { isPlaying, onPlayClick, podcast, title } = this.props;
+    const { isPlaying, onPlayClick, podcast, title } = this.props
 
     const styles = {
       AudioPlayer: {
@@ -250,7 +250,7 @@ class AudioPlayer extends React.Component {
         height: this.playerHeight,
         width: '100%',
       },
-    };
+    }
 
     return (
       <div>
@@ -304,8 +304,8 @@ class AudioPlayer extends React.Component {
         </div>
         <div style={styles.AudioPlayer__Spacer} />
       </div>
-    );
+    )
   }
 }
 
-export default AudioPlayer;
+export default AudioPlayer

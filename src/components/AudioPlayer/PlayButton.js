@@ -1,16 +1,16 @@
-import React from 'react';
-import styled from 'react-emotion';
+import React from 'react'
+import styled from 'react-emotion'
 
-const BLUE = '#3FB3D2';
-const BLUE_DARK = '#1A83A1';
-const PLAY_BUTTON_HEIGHT = 100;
-const PLAY_BUTTON_BORDER_WIDTH = 5;
+const BLUE = '#3FB3D2'
+const BLUE_DARK = '#1A83A1'
+const PLAY_BUTTON_HEIGHT = 100
+const PLAY_BUTTON_BORDER_WIDTH = 5
 
 const PlayIcon = ({ height }) => (
   <svg width={height} height={height} viewBox="-5 0 25 20">
     <polygon points="0,0 0,20 20,10" fill="white" />
   </svg>
-);
+)
 
 const PauseIcon = ({ height }) => (
   <svg width={height} height={height} viewBox="-5 0 25 20">
@@ -19,7 +19,7 @@ const PauseIcon = ({ height }) => (
       fill="white"
     />
   </svg>
-);
+)
 
 const Button = styled.button`
   display: flex;
@@ -33,7 +33,7 @@ const Button = styled.button`
   border-radius: 50%;
   border: ${PLAY_BUTTON_BORDER_WIDTH}px solid ${BLUE_DARK};
   cursor: pointer;
-`;
+`
 
 const PlayButton = ({ isPlaying, onClick, height = PLAY_BUTTON_HEIGHT }) => (
   <Button
@@ -49,6 +49,6 @@ const PlayButton = ({ isPlaying, onClick, height = PLAY_BUTTON_HEIGHT }) => (
       <PlayIcon height={height * 0.4} />
     )}
   </Button>
-);
+)
 
-export default PlayButton;
+export default PlayButton

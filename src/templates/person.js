@@ -1,30 +1,30 @@
-import React from 'react';
-import styled from 'react-emotion';
-import { graphql } from 'gatsby';
+import React from 'react'
+import styled from 'react-emotion'
+import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout';
-import Page from '../components/Page';
-import PodcastListing from '../components/PodcastListing';
-import EpisodeListingShort from '../components/EpisodeListingShort';
+import Layout from '../components/Layout'
+import Page from '../components/Page'
+import PodcastListing from '../components/PodcastListing'
+import EpisodeListingShort from '../components/EpisodeListingShort'
 
 const CircleImage = styled.img`
   border-radius: 50%;
   margin-right: 20px;
-`;
+`
 
 const Container = styled.div`
   display: flex;
-`;
+`
 
 const Description = styled.div`
   flex: 0;
-`;
+`
 
 const PersonDetails = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-`;
+`
 
 const Links = styled.div`
   display: flex;
@@ -32,10 +32,10 @@ const Links = styled.div`
   a {
     margin-right: 12px;
   }
-`;
+`
 
 export default ({ data }) => {
-  const person = data.contentfulPerson;
+  const person = data.contentfulPerson
   return (
     <Layout>
       <Page title={person.name} headTitle={person.name}>
@@ -80,8 +80,8 @@ export default ({ data }) => {
         {person.episode && <EpisodeListingShort episodes={person.episode} />}
       </Page>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query PersonQuery($id: String!) {
@@ -147,4 +147,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

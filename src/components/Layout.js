@@ -1,19 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql, Link } from 'gatsby';
-import styled from 'react-emotion';
-import Helmet from 'react-helmet';
-import { connect } from 'react-redux';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql, Link } from 'gatsby'
+import styled from 'react-emotion'
+import Helmet from 'react-helmet'
+import { connect } from 'react-redux'
 
-import AudioPlayer from '../components/AudioPlayer';
-import { togglePlay, pausePlay, updateTime } from '../state/actions';
+import AudioPlayer from '../components/AudioPlayer'
+import { togglePlay, pausePlay, updateTime } from '../state/actions'
 import {
   selectUrl,
   selectPodcast,
   selectTitle,
   selectIsPlaying,
   selectTime,
-} from '../state/selectors';
+} from '../state/selectors'
 
 const Footer = styled.div`
   text-align: right;
@@ -23,7 +23,7 @@ const Footer = styled.div`
   img {
     margin-bottom: 0;
   }
-`;
+`
 
 const ConnectedAudioPlayer = connect(
   state => ({
@@ -38,13 +38,13 @@ const ConnectedAudioPlayer = connect(
     reportedTime: updateTime,
     onPause: pausePlay,
   }
-)(props => props.url && <AudioPlayer {...props} />);
+)(props => props.url && <AudioPlayer {...props} />)
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, margin: `0 1rem 0 0` }}>
     <Link to={props.to}>{props.children}</Link>
   </li>
-);
+)
 
 const Title = ({ title }) => (
   <div
@@ -79,7 +79,7 @@ const Title = ({ title }) => (
       </ul>
     </div>
   </div>
-);
+)
 
 const Header = () => (
   <StaticQuery
@@ -111,7 +111,7 @@ const Header = () => (
       </div>
     )}
   />
-);
+)
 
 const TemplateWrapper = ({ children, data }) => (
   <div
@@ -136,10 +136,10 @@ const TemplateWrapper = ({ children, data }) => (
       </a>
     </Footer>
   </div>
-);
+)
 
 TemplateWrapper.propTypes = {
   children: PropTypes.node,
-};
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper

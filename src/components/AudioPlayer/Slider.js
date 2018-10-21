@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'react-emotion';
+import React from 'react'
+import styled from 'react-emotion'
 
-const WHITE = '#FFFFFF';
+const WHITE = '#FFFFFF'
 
 const Input = styled.input`
   -webkit-appearance: none;
@@ -98,18 +98,18 @@ const Input = styled.input`
   &:focus::-ms-fill-upper {
     background: #62ccff;
   }
-`;
+`
 
 class Slider extends React.Component {
   render() {
-    const { value, duration, onChange } = this.props;
+    const { value, duration, onChange } = this.props
 
     const styles = {
       Slider__Slider: {
         width: '100%',
         position: 'relative',
       },
-    };
+    }
 
     return (
       <div style={styles.Slider__Slider}>
@@ -121,8 +121,8 @@ class Slider extends React.Component {
           onChange={e => onChange(e.target.value)}
         />
       </div>
-    );
+    )
   }
 }
 
-export default Slider;
+export default Slider

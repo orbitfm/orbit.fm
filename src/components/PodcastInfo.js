@@ -1,20 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-import Img from 'gatsby-image';
-import styled from 'react-emotion';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'react-emotion'
 
 const Host = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-`;
+`
 
 const HostImage = styled.span`
   display: inline-block;
   width: 75px;
   margin-right: 20px;
-`;
+`
 
 const Image = styled.div`
   margin-top: -150px;
@@ -22,7 +22,7 @@ const Image = styled.div`
   @media (max-width: 700px) {
     margin-top: 0;
   }
-`;
+`
 
 const PodcastInfo = ({
   fluidImage,
@@ -50,7 +50,7 @@ const PodcastInfo = ({
       </Link>
     ))}
   </div>
-);
+)
 
 PodcastInfo.propTypes = {
   imageUrl: PropTypes.string,
@@ -67,6 +67,6 @@ PodcastInfo.propTypes = {
     })
   ).isRequired,
   podcastPath: PropTypes.string.isRequired,
-};
+}
 
-export default PodcastInfo;
+export default PodcastInfo

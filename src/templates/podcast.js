@@ -1,26 +1,26 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout';
-import PageWithSidebar from '../components/PageWithSidebar';
-import PodcastInfo from '../components/PodcastInfo';
-import Subscribe from '../components/Subscribe';
-import EpisodeListing from '../components/EpisodeListing';
+import Layout from '../components/Layout'
+import PageWithSidebar from '../components/PageWithSidebar'
+import PodcastInfo from '../components/PodcastInfo'
+import Subscribe from '../components/Subscribe'
+import EpisodeListing from '../components/EpisodeListing'
 
 export default ({ data }) => {
-  const podcast = data.contentfulPodcast;
+  const podcast = data.contentfulPodcast
 
   const episodes = podcast.episode
     ? podcast.episode.sort((a, b) => {
         if (a.publicationDate > b.publicationDate) {
-          return -1;
+          return -1
         }
         if (b.publicationDate > a.publicationDate) {
-          return 1;
+          return 1
         }
-        return 0;
+        return 0
       })
-    : [];
+    : []
 
   return (
     <Layout>
@@ -57,8 +57,8 @@ export default ({ data }) => {
           : null}
       </PageWithSidebar>
     </Layout>
-  );
-};
+  )
+}
 
 export const query = graphql`
   query PodcastQuery($id: String!) {
@@ -126,4 +126,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
