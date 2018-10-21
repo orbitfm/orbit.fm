@@ -1,5 +1,5 @@
-import { createStore as reduxCreateStore } from "redux"
-import reducer from './reducer';
+import { createStore as reduxCreateStore } from 'redux'
+import reducer from './reducer'
 
 const initialState = {
   url: null,

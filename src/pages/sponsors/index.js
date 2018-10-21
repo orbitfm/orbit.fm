@@ -1,9 +1,9 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-import Layout from '../../components/Layout';
-import Page from '../../components/Page';
+import Layout from '../../components/Layout'
+import Page from '../../components/Page'
 
 const SponsorPage = ({ data }) => (
   <Layout>
@@ -21,9 +21,9 @@ const SponsorPage = ({ data }) => (
       </a>
     </Page>
   </Layout>
-);
+)
 
-export default SponsorPage;
+export default SponsorPage
 
 export const query = graphql`
   query SponsorsQuery {
@@ -35,4 +35,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

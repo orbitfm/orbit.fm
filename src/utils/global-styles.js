@@ -1,4 +1,4 @@
-import { injectGlobal } from 'emotion';
+import { injectGlobal } from 'emotion'
 
 injectGlobal`
   body {
@@ -19,4 +19,4 @@ injectGlobal`
   *:after {
     box-sizing: inherit;
   }
-`;
+`

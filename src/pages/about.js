@@ -1,8 +1,8 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
+import React from 'react'
+import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/Layout';
-import Page from '../components/Page';
+import Layout from '../components/Layout'
+import Page from '../components/Page'
 
 const AboutPage = ({ data }) => (
   <Layout>
@@ -39,9 +39,9 @@ const AboutPage = ({ data }) => (
       </p>
     </Page>
   </Layout>
-);
+)
 
-export default AboutPage;
+export default AboutPage
 
 export const query = graphql`
   query AboutQuery {
@@ -63,4 +63,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

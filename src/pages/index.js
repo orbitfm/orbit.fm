@@ -1,42 +1,42 @@
-import React from 'react';
-import styled from 'react-emotion';
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import React from 'react'
+import styled from 'react-emotion'
+import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 
-import Layout from '../components/Layout';
-import Page from '../components/Page';
-import EpisodeListing from '../components/EpisodeListing';
+import Layout from '../components/Layout'
+import Page from '../components/Page'
+import EpisodeListing from '../components/EpisodeListing'
 
 const Listing = styled.ul`
   list-style: none;
   margin-top: -20px;
-`;
+`
 
 const Show = styled.li`
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-`;
+`
 
 const ShowImage = styled.span`
   display: inline-block;
   width: 75px;
   margin-right: 20px;
-`;
+`
 
 const IndexPage = ({ data }) => {
   const episodes = data.allContentfulPodcast.edges
     .reduce((a, e) => [...a, ...e.node.episode], [])
     .sort((a, b) => {
       if (a.publicationDate > b.publicationDate) {
-        return -1;
+        return -1
       }
       if (b.publicationDate > a.publicationDate) {
-        return 1;
+        return 1
       }
-      return 0;
-    });
-  const latestEpisode = episodes[0];
+      return 0
+    })
+  const latestEpisode = episodes[0]
 
   return (
     <Layout>
@@ -76,10 +76,10 @@ const IndexPage = ({ data }) => {
         <Link to="shows">View all shows</Link>
       </Page>
     </Layout>
-  );
-};
+  )
+}
 
-export default IndexPage;
+export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
@@ -135,4 +135,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

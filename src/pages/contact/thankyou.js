@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import Layout from '../../components/Layout';
-import PageWithSidebar from '../../components/PageWithSidebar';
+import Layout from '../../components/Layout'
+import PageWithSidebar from '../../components/PageWithSidebar'
 
 const ThankyouPage = ({ data }) => (
   <Layout>
@@ -16,6 +16,6 @@ const ThankyouPage = ({ data }) => (
       <p>Thanks for contacting us!</p>
     </PageWithSidebar>
   </Layout>
-);
+)
 
-export default ThankyouPage;
+export default ThankyouPage

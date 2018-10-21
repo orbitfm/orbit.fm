@@ -1,29 +1,29 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'react-emotion';
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'react-emotion'
 
 const PodcastContainer = styled.div`
   display: flex;
-`;
+`
 
 const Header = styled.header`
   font-size: 1.5em;
   padding-bottom: 16px;
-`;
+`
 
 const PodcastImage = styled.img`
   height: 64px;
   width: auto;
   margin: 0 20px 20px 0;
-`;
+`
 
 const PodcastDetails = styled.div`
   flex: 1;
-`;
+`
 
 const PodcastTitle = styled.header`
   font-size: 1.1em;
-`;
+`
 
 const EpisodeCount = styled.span`
   font-size: 0.7em;
@@ -31,7 +31,7 @@ const EpisodeCount = styled.span`
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-left: 8px;
-`;
+`
 
 const Podcast = ({ podcast }) => (
   <PodcastContainer>
@@ -46,7 +46,7 @@ const Podcast = ({ podcast }) => (
       <p>{podcast.description.description}</p>
     </PodcastDetails>
   </PodcastContainer>
-);
+)
 
 const PodcastListing = ({ podcasts }) => {
   return (
@@ -56,7 +56,7 @@ const PodcastListing = ({ podcasts }) => {
         <Podcast podcast={podcast} key={podcast.id} />
       ))}
     </section>
-  );
-};
+  )
+}
 
-export default PodcastListing;
+export default PodcastListing
