@@ -1,5 +1,6 @@
 import Typography from 'typography';
 import altonTheme from 'typography-theme-alton';
+import * as Colors from '../constants/colors';
 
 altonTheme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
   body: {
@@ -11,6 +12,10 @@ altonTheme.overrideThemeStyles = ({ rhythm }, options, styles) => ({
   },
   'a:hover,a:active': {
     color: 'white',
+  },
+  blockquote: {
+    color: 'white',
+    borderColor: Colors.BRAND,
   },
 });
 
