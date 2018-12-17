@@ -1,0 +1,1787 @@
+{
+  "podcast": "BookBytes",
+  "episode": "17",
+  "transcript": [
+    {
+      "text": "(Intro music: Electric swing)"
+    },
+    {
+      "timestamp": "0:00:13.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hello and welcome to BookBytes, a book club podcast for developers. We’re continuing “The Imposter’s Handbook: A CS Primer for Self-taught Programmers” by Rob Conery, and this week we’re going over chapters 12 and 13 which is Functional Programming and Databases. I’m Adam Garrett-Harris."
+    },
+    {
+      "timestamp": "0:00:31.4",
+      "speaker": "Safia Abdalla",
+      "text": "I’m Safia Abdalla."
+    },
+    {
+      "timestamp": "0:00:33.1",
+      "speaker": "Jason Staten",
+      "text": "I’m Jason Staten."
+    },
+    {
+      "timestamp": "0:00:35.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And Jen, this week, is very sick. So, as she says, “Too sick to knit.” So she can’t be on the show today but we’ll carry on without her."
+    },
+    {
+      "timestamp": "0:00:45.3",
+      "text": "(Typewriter Dings)"
+    },
+    {
+      "timestamp": "0:00:47.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "All right, so I was pretty excited about the Functional Programming chapter, what about y’all?"
+    },
+    {
+      "timestamp": "0:00:50.7",
+      "speaker": "Jason Staten",
+      "text": "That’s definitely where I spent the majority of my time between these two chapters."
+    },
+    {
+      "timestamp": "0:00:55.9",
+      "speaker": "Safia Abdalla",
+      "text": "I found the Databases chapter a little bit  more intriguing, but I definitely did like the way that the Functional Programming chapter was set up, like the four themes that Rob separated it out into."
+    },
+    {
+      "timestamp": "0:01:07.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "The four themes? What was that?"
+    },
+    {
+      "timestamp": "0:01:11.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, so if you’re reading along with us the four themes are described on page 291. They are the theme of immutability, purity, ideas around side effects, and then ideas around currying. And the book kind of went into each of these topics a little bit further in that chapter."
+    },
+    {
+      "timestamp": "0:01:29.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Nice, and yeah, this is based on Lambda calculus which we talked about before, but honestly, the only idea I think that, for me, carried over from Lambda calculus is kind of everything can be a function and you can pass around functions and you use functions a lot."
+    },
+    {
+      "timestamp": "0:01:45.2",
+      "speaker": "Safia Abdalla",
+      "text": "Yes. The…"
+    },
+    {
+      "timestamp": "0:01:46.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)."
+    },
+    {
+      "timestamp": "0:01:47.0",
+      "speaker": "Safia Abdalla",
+      "text": "Functions as values rule of thumb."
+    },
+    {
+      "timestamp": "0:01:49.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:01:49.9",
+      "speaker": "Jason Staten",
+      "text": "So in asking about the background that both of you have, have you done much in the line of functional programming? Or tell me about that experience you’ve both had."
+    },
+    {
+      "timestamp": "0:02:01.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, So I can talk a little bit about it. In University, we were working with a language called Racket/Scheme which was designed to be a function programming language with a Lisp-like syntax."
+    },
+    {
+      "timestamp": "0:02:17.6",
+      "speaker": "Jason Staten",
+      "text": "Mm-hmm (affirmative)."
+    },
+    {
+      "timestamp": "0:02:18.6",
+      "speaker": "Safia Abdalla",
+      "text": "So I did that in a couple of classes in college. And then in my day-to-day work, right now I am using a programming language called Elm in parts of our codebase. It’s a functional programming language that compiles down to JavaScript and that’s pretty much the extent of my experience with functional programming languages."
+    },
+    {
+      "timestamp": "0:02:41.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh, that’s super cool that you’re using Elm."
+    },
+    {
+      "timestamp": "0:02:43.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I was gonna say, “Yeah, it’s been interesting.” It was my first time using that language and especially in like an application or like a software that people use on a day-to-day basis. Like, you know, like, not just like, a pet project or something like that. So, yeah. It’s been interesting learning it and figure it all out and stuff. It’s definitely like a mind shift."
+    },
+    {
+      "timestamp": "0:03:03.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah! Yeah. It’s so weird. It doesn’t let you do any side effects at all, but side effects still have to happen, but they’re all taken care of by the Elm runtime."
+    },
+    {
+      "timestamp": "0:03:12.8",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, and for me personally, the syntax was one of the hardest things to grasp, and also just its strictness around typing. Elm has a lot of type inference built in that’s designed to kind of avoid errors that might come up in runtime. So, you know, you have strict types to find for something that are going to capture all of like, the annoying corner cases and like flukes that you get when you might be running a program and give you a chance to deal with those. So navigating its strict [inaudible 0:03:49.1 ] and, like, building a good type model for the application was something I had to figure out, too. ‘Cause it was like you have to be like, very strict and precise about types and make sure that it all worked well in the Elm model. I don’t know if I’m explaining this well."
+    },
+    {
+      "timestamp": "0:04:06.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:04:07.2",
+      "speaker": "Jason Staten",
+      "text": "Yeah. That’s actually one thing that I don’t feel like was brought up a lot within the book, at least as far as I’ve seen, and I don’t know if there’s a chapter on it, maybe season two, it is talking about static typing versus dynamic typing, right?"
+    },
+    {
+      "timestamp": "0:04:21.7",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:04:22.4",
+      "speaker": "Jason Staten",
+      "text": "And then there’s also like, strong versus weak typing, which is a different thing as well. But yeah, coming from being in a JavaScript space where like, everything’s dynamic and a little bit more free-for-all, versus like, in Elm where you have to type things up front."
+    },
+    {
+      "timestamp": "0:04:38.5",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (affirmative)."
+    },
+    {
+      "timestamp": "0:04:39.2",
+      "speaker": "Jason Staten",
+      "text": "Your mental concepts and approach to handling problems is definitely different, but that’s awesome that you’re using Elm. It’s something that I’ve only tinkered with on the side. So like, to hear the experience of somebody using it in a production, like I'm curious how you’re perceiving that within Elm as we kind of, hit through some of the topics."
+    },
+    {
+      "timestamp": "0:04:59.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. I would say it’s generally… Has been pretty easy for me to grasp and start to work with. The one way that Elm is lacking, with a respect to JavaScript, is just around developer tools. So it’s kind of hard to get a good debugger set up in Elm, and when you’re like, trying to work through things and like, step through everything, there have been a few contacts in my day-to-day job where I was trying to debug an issue and I was like, “Oh, if I could just put a breakpoint here in this Elm code, that would be so great.” But you know it’s not set up for that, at all. So that makes it difficult. I think the general recommendation for debugging is you use their like, debug.log statement, which is just like console.log."
+    },
+    {
+      "timestamp": "0:05:46.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:05:47.4",
+      "speaker": "Jason Staten",
+      "text": "I’d thought the promise was that if it compiles in Elm, it just works."
+    },
+    {
+      "timestamp": "0:05:51.2",
+      "speaker": "Safia Abdalla",
+      "text": "Oh! I have fun stories about that! (laughing)"
+    },
+    {
+      "timestamp": "0:05:54.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:05:57.4",
+      "speaker": "Safia Abdalla",
+      "text": "There have been a few occasions where… So the part of the codebase that’s written in Elm is not the entire codebase, it’s sort of like a small chunk of it and it sits at the intersection between two other codebases that are not written in Elm, and that are not as strictly typed. So there are situations where Elm is communicating with an external system and that external system unexpectedly gives it data that causes Elm to bork."
+    },
+    {
+      "timestamp": "0:06:26.8",
+      "speaker": "Jason Staten",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:06:26.4",
+      "speaker": "Safia Abdalla",
+      "text": "So it’s not in within Elm itself, it’s within its interfaces to the outer... To other parts of the codebase. I don’t know if that made sense."
+    },
+    {
+      "timestamp": "0:06:34.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. My understanding was that when you’re getting data from the outside you have to take care of every possibility and handle every case."
+    },
+    {
+      "timestamp": "0:06:44.3",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah you have to write decoders-"
+    },
+    {
+      "timestamp": "0:06:46.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:06:46.7",
+      "speaker": "Safia Abdalla",
+      "text": "To decode the data that comes in, and then encoders to send it back out. And those are where a ton of the bugs happen."
+    },
+    {
+      "timestamp": "0:06:53.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Gotcha. Okay so, as far as my experience goes with functional programming, about 6 years ago I tried to take a course on Scala on Coursera-"
+    },
+    {
+      "timestamp": "0:07:04.1",
+      "speaker": "Jason Staten",
+      "text": "I think they’re starting that up again."
+    },
+    {
+      "timestamp": "0:07:05.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh yeah. And it was taught by the creator of Scala and it was just way over my head at the time but I thought that it was really cool. And then a few years ago I read some of this book called “Professor Frisby's Mostly Adequate Guide to Functional Programming” and it uses JavaScript. I don’t know if you’ve seen it or not but it’s free on GitHub, and it’s really cool. And then at my last client I did use a little bit of Elm."
+    },
+    {
+      "timestamp": "0:07:34.2",
+      "speaker": "Safia Abdalla",
+      "text": "Oh, wow."
+    },
+    {
+      "timestamp": "0:07:34.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah! So I’ve written some functional programming in production. It was just, the same kind of thing as you, Safia. It was just a tiny little part of… I mean this was a really tiny part of a website. But-"
+    },
+    {
+      "timestamp": "0:07:46.9",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:07:47.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It was fun."
+    },
+    {
+      "timestamp": "0:07:48.9",
+      "speaker": "Safia Abdalla",
+      "text": "I know Elm recently released their 0.19 version, which is like a long awaited update, and I was exploring some of the things they’d laid out, and they do have an example codebase up that is a full-on web app written entirely in Elm, and I will try and find the link for it and put it in the show notes for people who are curious as to what a web application that is written entirely in Elm would look like, and not just…"
+    },
+    {
+      "timestamp": "0:08:14.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:08:15.0",
+      "speaker": "Safia Abdalla",
+      "text": "As like, a tiny, auxiliary thing."
+    },
+    {
+      "timestamp": "0:08:16.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I think it looks really beautiful and they’ve got the built-in formatter, and the way everything lines up is really cool."
+    },
+    {
+      "timestamp": "0:08:23.9",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, when it works with you and when it’s not super stressful, it is really great. And I guess that’s just software in general, and programming. When it, like, you get it and your mind is flowing and you’re like, in tune with everything, it works well. But yeah, when you’re trying to figure out how to write a decoder to cover all the cases, or something …"
+    },
+    {
+      "timestamp": "0:08:41.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:08:41.6",
+      "speaker": "Safia Abdalla",
+      "text": "That’s not super fun (laughs)."
+    },
+    {
+      "timestamp": "0:08:43.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs) Yeah. What about you, Jason? What’s your background?"
+    },
+    {
+      "timestamp": "0:08:47.0",
+      "speaker": "Jason Staten",
+      "text": "So, I have less production functional experience than both of you, and so I have, I have a little bit of Elm envy, I guess. But I have spent a good chunk of time doing some Clojure work in the past. I studied the “Programming Clojure” book and then followed it up later with “The Joy of Clojure”, which was probably one of my favorite programming books that I’ve read, just because it really showcased how thought-out the language was, and how much it built on pre-existing concepts. Everything that they were going through in the book where they talked, say, about software transactional memory, they went and said, “Well, here’s the whitepaper for the thing.” And it was written back in the 70s, or something like that, and so like, it’s not necessarily all these new ideas, but they show how like, Clojure took these old concepts and applied them to a modern Lisp. And so I’ve spent time with that."
+    },
+    {
+      "timestamp": "0:09:48.8",
+      "text": "I’ve also run a book club within a company doing Haskell work, and so worked through the “Haskell Book” by Chris Allen, and that was really enlightening. Haskell, being on the other end where is like, Clojure is dynamically typed, Haskell has an uber powerful type system that is a change to wrap your mind around, and so I definitely haven’t used it within production, but a lot of the concepts do get applied within my daily work, because as you said, I mean, even JavaScript can have functional concepts brought to it with the way that, I mean, functions are pretty first class within it."
+    },
+    {
+      "timestamp": "0:10:34.6",
+      "text": "I mean we don’t necessarily get all of these things and they’re not as baked into the language in the same way. Like, you’re talking, I guess “bringing it back” to immutability, is something JavaScript doesn’t have built in it by default, is persistent data structures where, if you were to go and, say, create a map, or I guess an object in JavaScript, you can go and you can mutate that. Like you could go and add a new property or reassign a property within JavaScript, and it lets you do that. But if you-"
+    },
+    {
+      "timestamp": "0:11:05.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:11:05.8",
+      "speaker": "Jason Staten",
+      "text": "Were to use an immutable data structure, the way that you would have actually approached it is to create a new object with that updated key, whether it be new or replacing an existing one, and in JavaScript you can do that. It’s definitely common now with the object spread operator where you can do dot, dot, dot, and take the original source and copy it, but in functional languages, one thing that they have within them, is persistent structures that when you, say, go and update a map or something, it doesn’t actually copy everything, but instead it creates a new map with your single, say, updated key, and then everything points back at the original piece of memory as well because you know that because that original piece of memory is also immutable, that it’s never going to change, and so you don’t have to copy everything, you just go and have a change set that points back to the original version of it, so it’s still efficient on that front."
+    },
+    {
+      "timestamp": "0:12:04.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, yeah. So in JavaScript it just take a lot more self-discipline to keep things immutabile."
+    },
+    {
+      "timestamp": "0:12:10.2",
+      "speaker": "Jason Staten",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:12:11.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "And yeah, it’s definitely a common pattern to see now. Today, I actually found out that Internet Explorer does not support object.assign which is-"
+    },
+    {
+      "timestamp": "0:12:18.7",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:12:19.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Kind of the old-school way of doing an object spread."
+    },
+    {
+      "timestamp": "0:12:22.6",
+      "speaker": "Safia Abdalla",
+      "text": "What version of IE? Is it just prior to Edge?"
+    },
+    {
+      "timestamp": "0:12:25.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Looks like all of them. Yeah, prior ot Edge. So all the way up to IE 11."
+    },
+    {
+      "timestamp": "0:12:29.9",
+      "speaker": "Jason Staten",
+      "text": "Good thing for polyfills I guess."
+    },
+    {
+      "timestamp": "0:12:31.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. (laughs)"
+    },
+    {
+      "timestamp": "0:12:33.2",
+      "speaker": "Jason Staten",
+      "text": "You talking about the discipline and immutability requiring developer discipline within a language that’s not necessarily functional, and that’s definitely one of the things that I like about when you have a codebase that’s written in a functional style, or working within a functional language, is that the language, it provides you guarantees and lets you work safely without having to always concern yourself, “Is this thing going to get mutated from underneath of me?” And instead just write it and like, if you’re writing it within the bounds of what the language gives you, then you’re going to be safe versus like, within JavaScript, I guess kind of going back to the Redux example, or React for that matter, if your state is mutated, there’s no safeguards in place that actually stop you from doing that. You can do that and then your application can kind of continue to work, or silently start acting weird, and it’s all based on developer discipline versus like, having those things baked in, can make your life a little bit easier."
+    },
+    {
+      "timestamp": "0:13:36.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. Yeah, for sure. And it can seem annoying, too, that you have to try to make the compiler happy and a lot of times we tend to think like, “Oh, the compiler’s complaining or yelling at me.” But it’s… It’s forcing you to do something you should be doing anyway."
+    },
+    {
+      "timestamp": "0:13:53.0",
+      "speaker": "Jason Staten",
+      "text": "Yeah, I’ve had a lot of that experience with the Rust programming language. I just got back from RustConf a couple weeks ago, going to Portland for it, and that was one of the major points that was brought up is, “The compiler yells a lot, but it’s often because you’re used to doing something in a language that wasn’t truly safe to do, and just think about like, passing an object to another function within JavaScript. That object can go and get modified by that function before it’s returned back to you. And you hope that it doesn’t sometimes, but maybe it will, maybe it won’t. There’s no certainty on that front. And whether you have immutabile structures, like you know that that can’t happen to you anyways, or in Rust case, calling function actually says, “I am going to mutate this thing” or “I’m not going to mutate this thing.” So like, it’s within the type system that it tells you that information. But things that you can be really loose on in some other languages, a powerful compiler can actually call those out and make it so you are not having to keep that in the back of your mind as a developer, but instead the computer is doing that work for you."
+    },
+    {
+      "timestamp": "0:15:02.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, that’s a good way to think about it, it’s doing that work for you. Yeah. All right. So that pretty much covers immutability, I guess. What about purity?"
+    },
+    {
+      "timestamp": "0:15:10.4",
+      "speaker": "Safia Abdalla",
+      "text": "So I think it’s coupled this way in the book, and I think it also makes sense for me, personally at least, to think about them together. Purity and side effects is things that go hand in hand. So purity is the notion that your function only relies on data that it’s given. So it’s not accessing any like, global data or things like that. The parameters that you pass to your function are all the parameters it needs to do its work. And then side effects are functions. The fact that the function will only operate on the parameters that you give it, so it’s not going to mutate some global object or some other data element that you didn’t give it."
+    },
+    {
+      "timestamp": "0:15:53.2",
+      "text": "I try and do this in general, because I think it makes code a little bit easier to test, and this kind of relates to the discussion that we’ve had in the last episode, is that when you write code with the intention… When you write tests first or when you write code with the intention of testing it very well you end up writing functions that are purer and don’t have side effects because those are the functions that are easier to test. So that’s one of the reasons that I employ that technique. Not really relationed to functional programming at all, just related to how easy it is and how safe I feel using that function and testing it."
+    },
+    {
+      "timestamp": "0:16:35.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, definitely. I think if you followed test driven development you’re more likely to do this ‘cause it’s easier to test pure functions."
+    },
+    {
+      "timestamp": "0:16:42.0",
+      "speaker": "Jason Staten",
+      "text": "Purity is one of the concepts that I wish that he would have put, actually even before immutability."
+    },
+    {
+      "timestamp": "0:16:48.1",
+      "speaker": "Safia Abdalla",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:16:49.0",
+      "speaker": "Jason Staten",
+      "text": "Because, I mean, like, immutability is important, but I think having a function that works more like the mathematical concept of a function where given an input, you always get the same output out of it, like that being a pure function, that’s what you get in math. Like, you don’t ever have to worry about some other thing changing your f(f) that you’ve written in math. And that was probably the most eye-opening concept for me when learning about functional languages long ago; that all of your state is just things that are passed in to your function. It’s very explicit and obvious where that’s coming from, versus even in an object-oriented language…"
+    },
+    {
+      "timestamp": "0:17:31.2",
+      "text": "Like, I had the example once of a person object and maybe you had a method on that person of “Is old enough to drink” or something, and that function itself, or method on that person, would be entirely dependent on the person’s age which is probably not something you would pass into the method itself but instead you would read off of that object. And so the scope of code that you have to concern yourself with becomes a greater amount versus if everything is just within that single block, it can make it easier to test as well as read. And I know like, saying “code is easier to reason about”, that is a dangerous term to say, but in short, like, sometimes it can be because your context you have to be aware of is smaller."
+    },
+    {
+      "timestamp": "0:18:19.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So why do you say it’s a dangerous thing to say? I agree that it’s become kind of cliche."
+    },
+    {
+      "timestamp": "0:18:24.2",
+      "speaker": "Jason Staten",
+      "text": "I guess maybe not “dangerous”, but cliche is also very opinionated, too. In terms of what’s easier to read…"
+    },
+    {
+      "timestamp": "0:18:31.5",
+      "speaker": "Safia Abdalla",
+      "text": "It’s subjective."
+    },
+    {
+      "timestamp": "0:18:32.4",
+      "speaker": "Jason Staten",
+      "text": "Yeah, like functional programming can be written in super terse ways as well. Like, if you go and look up point-free programming, that is a realm of like, making super terse code that is all just data transforms. And in one person’s mind that can be super readable and they know that data’s just flowing through all the transforms, but somebody else would see it as totally unapproachable because they don’t even have a way to inspect in between what’s going on in the functions. So that’s more of what I mean about being dangerous. So maybe it’s just a subjective type of view."
+    },
+    {
+      "timestamp": "0:19:09.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I guess it could really make people feel excluded if they look at it and it doesn’t seem easier to reason about to them, because they don’t have the same context and experience."
+    },
+    {
+      "timestamp": "0:19:20.6",
+      "speaker": "Jason Staten",
+      "text": "Yeah, and that is something that I do try and keep in mind when working on a codebase, is some functional concepts are fun to bring in, but if it’s not really the norm for your language you may be excluding others in terms of like, making them want to work on that codebase. In JavaScript in particular there is a utility that’s similar to Lodash called Ramda, if you’ve heard of it."
+    },
+    {
+      "timestamp": "0:19:46.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:19:47.1",
+      "speaker": "Jason Staten",
+      "text": "And Ramda is awesome because you can do all of these really cool functional things with it, like it’s got currying built in, which we’ll cover in a just a moment, and other niceties, but it also is a way to make a codebase that somebody who’s unfamiliar with it can take a while to actually go and grok. So you also have to consider, like, if you’re working in a nonfunctional language and you’re writing things in an attempt to be super functional then you may make your codebase unreadable by anyone but you."
+    },
+    {
+      "timestamp": "0:20:19.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, good point. Okay. Yeah, so what is currying?"
+    },
+    {
+      "timestamp": "0:20:23.5",
+      "speaker": "Jason Staten",
+      "text": "I went and did some googling, too because he talks about currying and then a little bit later into the chapter Rob actually mentions Partial application and I was not totally clear on the differences between the two of them and now I think I have an understanding."
+    },
+    {
+      "timestamp": "0:20:39.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh yeah, I see on the Wikipedia page that “currying is related to, but not the same as partial application.*"
+    },
+    {
+      "timestamp": "0:20:45.4",
+      "speaker": "Jason Staten",
+      "text": "Yes. They may bring up the same concept and it’s similar. So the shortest description I could think of is like, currying is a way of taking a function that may take three arguments and converting it to a function that takes one argument, and then returns a function that takes one argument, and returns a function that takes one argument until ultimately there are no more left; Whereas partial application is a way to take a function of n arity and make it a function with less than n arity. So like,it’s applying one function but it’s not necessarily returning back a function that only takes a single argument after that."
+    },
+    {
+      "timestamp": "0:21:26.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So arity is the number of…"
+    },
+    {
+      "timestamp": "0:21:30.2",
+      "speaker": "Jason Staten",
+      "text": "Arguments."
+    },
+    {
+      "timestamp": "0:21:30.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Arguments to a function."
+    },
+    {
+      "timestamp": "0:21:31.9",
+      "speaker": "Jason Staten",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "0:21:32.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay. So currying, it only does one at a time?"
+    },
+    {
+      "timestamp": "0:21:36.6",
+      "speaker": "Jason Staten",
+      "text": "So currying, it will take an n arity function and turn it into a function that takes 1 arity. It will take n levels deeps. So an n arity function into an a 1 arity function n levels deep."
+    },
+    {
+      "timestamp": "0:21:52.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh good. Good way to make it…"
+    },
+    {
+      "timestamp": "0:21:54.5",
+      "speaker": "Jason Staten",
+      "text": "And a partial application takes an n arity function and turns it into a less than n arity function. So it doesn’t necessarily return back a function that has just one."
+    },
+    {
+      "timestamp": "0:22:06.5",
+      "speaker": "Safia Abdalla",
+      "text": "Oh wow."
+    },
+    {
+      "timestamp": "0:22:07.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I wish when I was applying for jobs I could turn in a partial application."
+    },
+    {
+      "timestamp": "0:22:11.2",
+      "speaker": "ALL",
+      "text": "(laughing)"
+    },
+    {
+      "timestamp": "0:22:12.9",
+      "speaker": "Safia Abdalla",
+      "text": "That is such… I’m really glad you shared that, Jason, because I actually used the second technique, partial application, a lot in my code and I’ve always called it currying, ‘cause I thought that’s what it was. Now I realize, it’s not what it is. It’s… ah, thank you."
+    },
+    {
+      "timestamp": "0:22:30.4",
+      "speaker": "Jason Staten",
+      "text": "So what happens in Elm or other ML-type languages is they curry the function for you, that’s what the compiler does for you, where you can go and say, “Add (A-B) equals” and then “A+B.” That, by the compiler, get curried into a bunch of single arity functions whereas partial application is you actually invoking those until you ultimately get the result. So…"
+    },
+    {
+      "timestamp": "0:22:56.2",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah. Words are hard."
+    },
+    {
+      "timestamp": "0:22:59.1",
+      "speaker": "Jason Staten",
+      "text": "Yeah! Especially when they’re so close."
+    },
+    {
+      "timestamp": "0:23:02.7",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs) Yeah."
+    },
+    {
+      "timestamp": "0:23:03.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, in JavaScript, the examples he has in the book, they look kind of weird because you have to put ((( to invoke it that many times in a row, but I’m pretty sure in other languages where you don’t have to put parentheses around your arguments and they’re not comma separated they’re just separated by spaces it looks a little bit nicer and you can’t really tell the difference between passing in three arguments in the first invocation versus invoking it three times with one argument. Does that make sense?"
+    },
+    {
+      "timestamp": "0:23:38.1",
+      "speaker": "Jason Staten",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:23:38.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I- Is ELM that way? Where you don’t have parentheses?"
+    },
+    {
+      "timestamp": "0:23:40.8",
+      "speaker": "Safia Abdalla",
+      "text": "You don’t have to, there are cases when I have done it, but I think that’s because the type of data that I was passing made it so that you needed to separate it, but usually there’s no parentheses or anything, it’s just like a space or you can use the pipe command, like the ones we saw earlier in the Elixir examples he had."
+    },
+    {
+      "timestamp": "0:24:03.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+    {
+      "timestamp": "0:24:04.4",
+      "speaker": "Jason Staten",
+      "text": "I think that’s another case where if the language has it built in, like currying built in, then it makes it intuitive, but in JavaScript knowing that you’re supposed to call this select query function four times is not the most intuitive."
+    },
+    {
+      "timestamp": "0:24:20.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:24:21.0",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:24:21.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It almost seems like a code smell in JavaScript."
+    },
+    {
+      "timestamp": "0:24:24.0",
+      "speaker": "Jason Staten",
+      "text": "Mm-hmm (affirmative)."
+    },
+    {
+      "timestamp": "0:24:24.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "To have to invoke a function that many times."
+    },
+    {
+      "timestamp": "0:24:27.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:24:27.7",
+      "speaker": "Jason Staten",
+      "text": "I know that he was, like, trying to prove the point though in a familiar language though."
+    },
+    {
+      "timestamp": "0:24:32.4",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (affirmative)."
+    },
+    {
+      "timestamp": "0:24:33.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:24:33.4",
+      "speaker": "Jason Staten",
+      "text": "It shows what it’s doing, but writing code like this is a way to scare people away from your codebase."
+    },
+    {
+      "timestamp": "0:24:39.3",
+      "speaker": "ALL",
+      "text": "(laughing)"
+    },
+    {
+      "timestamp": "0:24:41.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So if you want to scare people away, use functional programming in a language that’s not purely a functional programming language."
+    },
+    {
+      "timestamp": "0:24:47.4",
+      "speaker": "Jason Staten",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:24:47.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Or I guess, maybe even in a functional programming language, too."
+    },
+    {
+      "timestamp": "0:24:50.5",
+      "speaker": "Safia Abdalla",
+      "text": "I was gonna make a joke and say if you want to scare people away use function programming."
+    },
+    {
+      "timestamp": "0:24:55.5",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:24:56.2",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:24:56.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, yeah."
+    },
+    {
+      "timestamp": "0:24:58.0",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:24:59.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So the book mentions this line from Douglas Crockford about monads where if once you understand them you lose the ability to explain it anybody, which I guess you don’t really lose the ability if you just now understood it for the first time… But anyway, I hear that all the time, do either of y’all have the ability to explain monads?"
+    },
+    {
+      "timestamp": "0:25:20.2",
+      "speaker": "Safia Abdalla",
+      "text": "Absolutely not."
+    },
+    {
+      "timestamp": "0:25:21.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:25:21.4",
+      "speaker": "Jason Staten",
+      "text": "(laughs) So, I mean, I uh… A monad is a monoid in the category of endofunctors, right?"
+    },
+    {
+      "timestamp": "0:25:29.0",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:25:29.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs) Yeah."
+    },
+    {
+      "timestamp": "0:25:31.8",
+      "speaker": "Jason Staten",
+      "text": "Which there is a-"
+    },
+    {
+      "timestamp": "0:25:32.2",
+      "speaker": "Safia Abdalla",
+      "text": "Oh! I totally get it now!"
+    },
+    {
+      "timestamp": "0:25:34.0",
+      "speaker": "Jason Staten",
+      "text": "Yep."
+    },
+    {
+      "timestamp": "0:25:34.3",
+      "speaker": "Safia Abdalla",
+      "text": "Thanks!"
+    },
+    {
+      "timestamp": "0:25:35.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:25:36.0",
+      "speaker": "Jason Staten",
+      "text": "You’re not up to date on your category theory?"
+    },
+    {
+      "timestamp": "0:25:39.1",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:25:40.2",
+      "speaker": "Jason Staten",
+      "text": "So there is a guy that does a course on Haskell and category theory called “Bartese … “ Something or other. I need to go and look up the link on it, but he actually does an explanation on Quora, like, of what that actually means, because somebody on Quora was like, “Is this actually true?” And he gives the drawn out definition as to like, why that actually is. Like, what the category of an endofunctor is, and I will not try and explain what a monad is within the podcast because it’s definitely going to be wrong, and so I won’t go there. But I do have some feedback on some of the stuff Rob wrote, actually. With regards to: first, the select query he refers to it as… So select query, I think it’s initially written, in the hard copy of the book on 305, and he calls the function curried, but if you notice the second function deep within it-"
+    },
+    {
+      "timestamp": "0:26:41.0",
+      "speaker": "Safia Abdalla",
+      "text": "Hmm!"
+    },
+    {
+      "timestamp": "0:26:41.8",
+      "speaker": "Jason Staten",
+      "text": "It actually takes in two arguments."
+    },
+    {
+      "timestamp": "0:26:43.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "True! Yeah."
+    },
+    {
+      "timestamp": "0:26:43.8",
+      "speaker": "Jason Staten",
+      "text": "And so that is not curried, and so… I was like, “Wait a second…” And I only figured that out after reading like the currying versus partial application thing and I was like, “No, it’s gotta be one! Otherwise it’s not currying.” So…"
+    },
+    {
+      "timestamp": "0:26:57.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Mm-hmm (affirmative)."
+    },
+    {
+      "timestamp": "0:26:58.0",
+      "speaker": "Jason Staten",
+      "text": "I’ll have to submit that in an errata and see."
+    },
+    {
+      "timestamp": "0:27:01.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I also feel like there’s an errata on page 304 with the dancing with wife function, or the one where he’s currying the date night function and I think at one point the arguments get passed in in the wrong order."
+    },
+    {
+      "timestamp": "0:27:17.5",
+      "speaker": "Safia Abdalla",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:27:18.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It’s supposed to be Who, What, Where but then he passes in Dancing, Wife, Club."
+    },
+    {
+      "timestamp": "0:27:26.1",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:27:27.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So the output, actually would have said, “Out with dancing, having fun wife at club 9.”"
+    },
+    {
+      "timestamp": "0:27:32.6",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:27:34.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:27:34.6",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:27:36.1",
+      "speaker": "Jason Staten",
+      "text": "Nice."
+    },
+    {
+      "timestamp": "0:27:37.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It’s like a MadLib!"
+    },
+    {
+      "timestamp": "0:27:38.6",
+      "speaker": "Jason Staten",
+      "text": "Yeah! Yeah, just put noun here."
+    },
+    {
+      "timestamp": "0:27:42.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So anyway, what else about the select query example?"
+    },
+    {
+      "timestamp": "0:27:45.5",
+      "speaker": "Jason Staten",
+      "text": "So this is not specific to the select query, I did actually go and rewrite his Monad version of it because I didn’t like it and he asked for a new version. So I write a gist of it. And mostly I didn’t like that he went and wrapped his concatenation of strings within the maybe when it really wasn’t necessary. Even he brings that up, that it’s not necessary here. He’s like, “I could just use a template string, but I’m gonna go and this inside a whole bunch of maybes.” And I think that that is not right."
+    },
+    {
+      "timestamp": "0:28:18.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:28:19.4",
+      "speaker": "Jason Staten",
+      "text": "That is a case of like, usening a construct that you don’t really need. And so like, that’s the way that you can go and make codebases unapproachable."
+    },
+    {
+      "timestamp": "0:28:29.6",
+      "speaker": "Safia Abdalla",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:28:30.4",
+      "speaker": "Jason Staten",
+      "text": "So, don’t just go and use it because it looks fun to use. I also don’t like his maybe implementation because value winds up just being  like a ternary that produces an empty string out of it."
+    },
+    {
+      "timestamp": "0:28:41.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I was wondering about that."
+    },
+    {
+      "timestamp": "0:28:43.4",
+      "speaker": "Jason Staten",
+      "text": "Yeah, and so I will have to like, send you my gist so you can take a look at that. Not that it’s necessarily a whole lot better, but it doesn’t do that. It actually gets mad at you if you try and extract a value out of a nothing type maybe. So…"
+    },
+    {
+      "timestamp": "0:28:59.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+    {
+      "timestamp": "0:29:00.8",
+      "speaker": "Jason Staten",
+      "text": "Yeah, I guess I went and split it up into two classes. One class is called a Just and the other one’s called a Nothing, resembling that of Haskell that has those two that represent a maybe. You can either be a Just with some value in it, or you can be a Nothing that has no value. And if you were to try to extract a value out of nothing, actually Haskell’s type system wouldn’t even let you do that, but my JavaScript form of it is like, if you’re trying to pull a value out of that then you get an exception thrown at you because you shouldn’t be trying to do that."
+    },
+    {
+      "timestamp": "0:29:33.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So for the listener, the Maybe is one of his examples of a Monad and it has basically three methods on it, is Nothing, the Map, and Thal. Oh! And also, Of?"
+    },
+    {
+      "timestamp": "0:29:49.1",
+      "speaker": "Jason Staten",
+      "text": "Yeah. Of is a static method."
+    },
+    {
+      "timestamp": "0:29:51.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+    {
+      "timestamp": "0:29:52.7",
+      "speaker": "Jason Staten",
+      "text": "So It is a way to take a raw value and convert it into a Maybe."
+    },
+    {
+      "timestamp": "0:29:58.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:30:01.0",
+      "speaker": "Jason Staten",
+      "text": "And his functor example of a monkey. First, monkey is kind of a weird name for a class. Like I know it was, maybe, trying to be nonsensical but monkey doesn’t help get the point across for me because it kinda makes me think of like, when we learned object-oriented programming and, you know, monkey derives from animal. Or like, monkey extends animal, also not a good example of OO."
+    },
+    {
+      "timestamp": "0:30:27.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:30:27.4",
+      "speaker": "Jason Staten",
+      "text": "So weird choice of name. And secondly, his Map implementation on it is wrong."
+    },
+    {
+      "timestamp": "0:30:33.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:30:34.2",
+      "speaker": "Jason Staten",
+      "text": "So his Map should be returning a new monkey with the results of the function past a Map applied to the value."
+    },
+    {
+      "timestamp": "0:30:42.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh! Nice!"
+    },
+    {
+      "timestamp": "0:30:44.8",
+      "speaker": "Jason Staten",
+      "text": "Because a functor is something that implements Map or fMap in Haskell that takes in as is it, one argument, the… A function that can transform from a type of A to B, and then it takes a functor that holds an A and returns a functor that holds a B is the type signature for the thing. So the important thing with a functor is that whenever you call Map on it you always get a functor back out. You get the same functor back out. It might have a different type that it holds within it, but-"
+    },
+    {
+      "timestamp": "0:31:20.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Right. So it’s like when you run Map on an array you still get an array back with possibly different type inside of it."
+    },
+    {
+      "timestamp": "0:31:26.6",
+      "speaker": "Jason Staten",
+      "text": "Exactly. An array is a functor. So, it’s a way better example that opened my eyes when I first heard it. It was like, an array is like this container that you can go and you can call Map on it, and the function may be called one time, it may be called zero times if there’s nothing in the list. It could be called 100 times, it doesn’t really matter. All you have to care about is that you’re going to get an array back from that thing that, if you want, you can go and call Map again on it if you want to. Over and over and over because it always returns back a Map."
+    },
+    {
+      "timestamp": "0:31:55.6",
+      "text": "Another case that is not truly a functor but it kind of like one, is like promises in JavaScript where-"
+    },
+    {
+      "timestamp": "0:32:04.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:32:04.7",
+      "speaker": "Jason Staten",
+      "text": "When you call .then on a promise … Then the result of that gives you back a promise. And why it’s not truly a functor is because it goes and unwraps if you return a promise within that then block, like, it goes and flattens it out. So that’s what makes it not actually a functor."
+    },
+    {
+      "timestamp": "0:32:23.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh."
+    },
+    {
+      "timestamp": "0:32:23.8",
+      "speaker": "Jason Staten",
+      "text": "But it’s kind of like that. Like, if you’re not doing the type where you actually go and return a promise within that then block, and it’s not flattening, then that is functor-esque."
+    },
+    {
+      "timestamp": "0:32:33.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Cool."
+    },
+    {
+      "timestamp": "0:32:33.8",
+      "speaker": "Jason Staten",
+      "text": "Yeah."
+    },
+    {
+      "text": "(Typewriter Dings)"
+    },
+    {
+      "timestamp": "0:32:35.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Today’s episode is brought to you by V School. V School is Utah’s highest ranked coding boot camp and they take care of everything for you so you can just focus on learning. And one of the things they take care of is free housing, if you need it, and it’s just a few blocks from school, located in beautiful downtown Salt Lake City. Or you can learn from the comfort of your own home with V School’s 100% Virtual Classroom, and even before classes start you’ll get a career counselor to help you find a job when you graduate, and you’ll also get a super transcript. It’s like a portfolio, transcript, and letter of recommendation, all in one. It’ll help an employer quickly understand your strengths and abilities, and the work that you’ve accomplished during your time at V School."
+    },
+    {
+      "timestamp": "0:33:18.3",
+      "text": "They encourage you to take a campus tour. You can meet the students, faculty, and even shadow a class to see if it’s a good fit for you. If you go visit tell them that you heard about it on BookBytes Podcast and it’ll help support the show."
+    },
+    {
+      "timestamp": "0:33:31.1",
+      "text": "V School. Life await. Launch a career in code, design, or data."
+    },
+    {
+      "timestamp": "0:33:37.2",
+      "text": "And thanks to V School for sponsoring the show."
+    },
+    {
+      "text": "(Typewriter Dings)"
+    },
+    {
+      "timestamp": "0:33:40.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "All right. We should probably move onto the Databases chapter."
+    },
+    {
+      "timestamp": "0:33:44.0",
+      "speaker": "Safia Abdalla",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "0:33:44.6",
+      "speaker": "Jason Staten",
+      "text": "Sure."
+    },
+    {
+      "timestamp": "0:33:46.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So, this chapter was not at all what I was expecting it to be. I thought it was going to talk about how to run queries and stuff but it doesn’t. First of all it talks about the forms of a database which is one thing I remember from college, how to normalize and denormalize data, and then it gets into big… Big data, and then it gets into different types of graphs and sharding and all these things that I… Yeah, wasn’t expecting. What’d y’all think?"
+    },
+    {
+      "timestamp": "0:34:14.1",
+      "speaker": "Jason Staten",
+      "text": "So, starting with the stuff that you do know, what is normalization, Adam?"
+    },
+    {
+      "timestamp": "0:34:18.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Let’s see, so there’s several different forms but I think the general idea is it’s trying to reduce any sort of duplication."
+    },
+    {
+      "timestamp": "0:34:28.2",
+      "speaker": "Jason Staten",
+      "text": "Yeah, reducing duplication and partly for the sake of disk space, when you didn’t have a lot of that and performance and consistency."
+    },
+    {
+      "timestamp": "0:34:39.8",
+      "speaker": "Safia Abdalla",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:34:40.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. But it's kinda funny though, because the first normal form example is like a food truck example, and there’s only two rows of data so it’s not that much data. Oh wait, actually, when he added in a spreadsheet it was two rows of data, but when he put it into a database in the first normal form it ended up being four different rows and then pieces of data repeated because Joe Tonks ordered two different items and so Joe’s name and email is repeated twice. So breaking that out into separate tables that are relational and point to each other reduces that duplication."
+    },
+    {
+      "timestamp": "0:35:20.7",
+      "speaker": "Jason Staten",
+      "text": "That is interesting that it grows the first time that it moves from the spreadsheet to the database, but that being that you split the embedded list of items out into single rows. So rather than having like, items be, I don’t know, cheeseburger and hot dog or whatever it was they ordered. Instead there’s a row for a cheeseburger order and a hot dog order."
+    },
+    {
+      "timestamp": "0:35:44.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. Yeah, and of course in that first form there, the items and the prices are going to get repeated over and over and over every time someone orders that item."
+    },
+    {
+      "text": "But beyond like, the forms of normalization that I learned in school, what I thought was super interesting is sometimes in the real world it’s more important to have it be fast and denormalization is actually okay and storing calculated fields is okay. So it shows the example of stack overflow’s database and there’s things in there like “count” which can be calculated, but it’s faster to just save it there and you can kind of just update those things like, on a regular basis and store them in the database."
+    },
+    {
+      "timestamp": "0:36:32.0",
+      "speaker": "Jason Staten",
+      "text": "Makes sense, in specific cases. Like you’d trade potential consistency problems for performance. Like, that can sometimes be a fair tradeoff. And I could certainly see that with stack overflow’s counts on things because if every time they needed to load up the page to show how many people have viewed an answer or given a thumbs up to an answer, I’ve seen it in the past before working on systems where there’s a rating system in there where people can go and like, leave reviews. Rather than going and calculating like, how many out of 5 stars it is every time somebody loads the page based on a list of reviews, just holding that count can make it significantly faster to load because that could be a lot of stars to load. Especially if you’re loading, like, a page listing, you know, 20 items on it and showing their rankings. That could be really heavyweight."
+    },
+    {
+      "timestamp": "0:37:27.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:37:28.1",
+      "speaker": "Jason Staten",
+      "text": "Compared to just memoizing it, or caching it somewhere."
+    },
+    {
+      "timestamp": "0:37:31.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, and the more normalized it is the more tables you have to merge together and that can take a lot of processing. So I should mention the third normal form, which is the most normalized form. It says non-keys describe the key and nothing else. So each table to have a key, it’s usually an ID or something, and then everything else in there only describes that one item and there’s nothing extra. If there’s something extra it should be in a different table."
+    },
+    {
+      "timestamp": "0:38:06.8",
+      "speaker": "Jason Staten",
+      "text": "I did do some digging and found that third normal form is not the most normal form."
+    },
+    {
+      "timestamp": "0:38:12.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh!"
+    },
+    {
+      "timestamp": "0:38:13.8",
+      "speaker": "Jason Staten",
+      "text": "Yeah. I found up to fifth normal form. So…"
+    },
+    {
+      "timestamp": "0:38:17.4",
+      "speaker": "Safia Abdalla",
+      "text": "Oof!"
+    },
+    {
+      "timestamp": "0:38:18.4",
+      "speaker": "ALL",
+      "text": "(laughing)"
+    },
+    {
+      "timestamp": "0:38:18.8",
+      "speaker": "Jason Staten",
+      "text": "Yeah. And I mean, fifth normal form kind of makes fourth obsolete. It replaces the concepts in fourth. But for a good example, if you look at Wikipedia’s fourth normal form they go and describe it. But in short, if you have a situation where, say you have a table with three columns in it, xy and z. If x and y are always the same for any z then that is a redundant case that you can go and break out to its own table. Wikipedia gives like, an example of a pizza place that the same facility serves different counties but always serves the same type of pizza in any of those counties so it’s redundant for that to be the case. So, like, it’s a less common thing for you to even run into with third normal form, but it’s possible. And then fifth normal form takes that from being an n of two where x and y were always the same, and fifth normal form says that it applies to n number of columns, so any number of columns that that winds up happening for. And that one took a little bit more of staring out of like, “Why is this here?” But-"
+    },
+    {
+      "timestamp": "0:39:35.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:39:36.4",
+      "speaker": "Jason Staten",
+      "text": "Apparently they’re… Like, they’re way out there cases. Like, if you’re in fourth normal form, you’re probably in fifth normal form unless you have a really particular database structure. But ideally like, third normal form will get you a long ways and fourth is more about cutting out redundancy more than anything."
+    },
+    {
+      "timestamp": "0:39:55.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "So I love that the Wikipedia article of fifth normal form uses an example of traveling salesman."
+    },
+    {
+      "timestamp": "0:40:02.7",
+      "speaker": "Jason Staten",
+      "text": "Mm-hmm (affirmative)."
+    },
+    {
+      "timestamp": "0:40:03.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Because that’s just a… Traveling salesman is a super hard problem; and then figuring out what this means also seems like a super hard problem."
+    },
+    {
+      "timestamp": "0:40:11.7",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:40:12.6",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:40:13.2",
+      "speaker": "Safia Abdalla",
+      "text": "Hard problem inception."
+    },
+    {
+      "timestamp": "0:40:15.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yep."
+    },
+    {
+      "timestamp": "0:40:16.1",
+      "speaker": "Jason Staten",
+      "text": "The thing that l grokked from like, the salesman idea was like, if you have a salesman that sells GM and GM produces trucks and GM produces cars, then that salesman also needs to sell cars, or something. That’s the kind of case that it’s there to handle. If someone’s representing some other company and that company sells this thing, therefore that person should sell this thing. I don’t know, like, a real world case."
+    },
+    {
+      "timestamp": "0:40:43.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. It’s just really weird ‘cause you end up with a table called “Product Types by Brand” and that just doesn’t seem like a very useful table name."
+    },
+    {
+      "timestamp": "0:40:51.9",
+      "speaker": "Jason Staten",
+      "text": "And yet another join to throw into your-"
+    },
+    {
+      "timestamp": "0:40:54.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:40:54.8",
+      "speaker": "Jason Staten",
+      "text": "Your piles of joins that- (laughs) So-"
+    },
+    {
+      "timestamp": "0:40:56.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:40:56.5",
+      "speaker": "Jason Staten",
+      "text": "That’s why, like, third normal form feels like a pretty happy medium for me. Like, it’s the way that I would generally structure my databases where everything’s got a primary key and references across that. There’s possibility, or, surely, like, I have redundancies in there. But storing that a few extra times? Probably not that big a deal."
+    },
+    {
+      "timestamp": "0:41:16.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, ‘cause he mentions in the book that a lot of developers will overestimate how big their database is going to be, and really it’s probably not going to be that very big unless you’re Ancestry.com or something."
+    },
+    {
+      "timestamp": "0:41:27.4",
+      "speaker": "Jason Staten",
+      "text": "So, Safia, you said that you spent a lot of time in this chapter and enjoyed it? Tell me what you found."
+    },
+    {
+      "timestamp": "0:41:33.1",
+      "speaker": "Safia Abdalla",
+      "text": "I really liked, not necessarily the first half the chapter on normalizations, but I really liked the part on distributed database systems and onward. And basically what this section was talking about was the fact that, you know, maybe databases were invented in like, the 70s, 80s, but in more recent times you have the emergence of faster computers with more CPU and just like, more accessible hardware. So one thing you can do now is instead of just having your database on one computer and always pinging that, you can now have your database distributed across multiple computers because that hardware is so cheap. And that comes in with its own set of challenges around how you ensure that things are atomic and consistent and that your database is always available to respond to a request from your product and stuff like that."
+    },
+    {
+      "timestamp": "0:42:29.4",
+      "text": "And it discussed a couple of like, you know, “What does this adjective mean?”-type things. One of them is ACID, which is is standing for Atomic Consistent Isolated and Durable. And it’s sort of a way of discussing some of the guarantees that a database might give you. So for example, saying that it’s atomic means that a single transaction is going to happen or it’s not. There’s no such thing as making a partial change to the data in your database."
+    },
+    {
+      "timestamp": "0:43:06.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It’s the Yoda principle, right? “Do, or do not. There is no try.”"
+    },
+    {
+      "timestamp": "0:43:11.1",
+      "speaker": "Safia Abdalla",
+      "text": "Oh!"
+    },
+    {
+      "timestamp": "0:43:11.7",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:43:12.6",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs) You are coming in strong with the puns today."
+    },
+    {
+      "timestamp": "0:43:17.6",
+      "speaker": "Jason Staten",
+      "text": "Yeah, nailing it, Adam."
+    },
+    {
+      "timestamp": "0:43:18.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs) I threw you off, didn’t I?"
+    },
+    {
+      "timestamp": "0:43:22.3",
+      "speaker": "Safia Abdalla",
+      "text": "You did. ‘Cause I was like, “Wait, what does he mean the Yoda?” And then I was like, “Oh. I see.” So, and then there’s other principles like, consistency, which is ensuring that your database will change completely, not partially. And when I like, first learned about these principles I was really confused about what the difference was between something being atomic and something being consistent, ‘cause it sounded like people were saying the same thing but using different words. But what I learned is that atomic is referring to the literal data that gets manipulated in your database. So like, a transaction that adds a new row of data."
+    },
+    {
+      "timestamp": "0:44:04.5",
+      "text": "A consistency is more talking about, I guess you could say some of like, the integrity or data rules you might have in your database. So for example, like a transaction that would be atomic, but not consistent, is one where you add a new row of data to your database, but that new row contains a unique field that collides with an existing row of data. So it validates like, the logical requirements of your database. So, I was like, confused about that for a while and that was one thing that I sometimes need to re remind myself what the distinction is."
+    },
+    {
+      "timestamp": "0:44:42.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. I think the example I was thinking of, I don’t know if this is correct or not, but maybe you have some duplicated data in your database because it’s not completely normalized, right? And so if you change or write some data, but you don’t do it in both places, that might be an inconsistency?"
+    },
+    {
+      "timestamp": "0:45:01.1",
+      "speaker": "Safia Abdalla",
+      "text": "I don’t know about that. Jason, do you have thoughts on it?"
+    },
+    {
+      "timestamp": "0:45:04.7",
+      "speaker": "Jason Staten",
+      "text": "So, the way that I kind of understand it is that with consistency you’re not ever in a partial state. So as you talked about inserting a row, for sure like, that row is either entirely in, or entirely not in regardless of a transaction state. And that that database is, when it terms consistency that means across the board. So like, if that databases happens to scale even multiple machines, they know the state between them is the same. So you’re not a case where one database has a certain value in it and then another database has a different value in it. Like,if, say if you have a replicated database-"
+    },
+    {
+      "timestamp": "0:45:46.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Ah, yeah."
+    },
+    {
+      "timestamp": "0:45:47.1",
+      "speaker": "Jason Staten",
+      "text": "Consistency would say, like, the master matches one of its slave machines. That’s for sure in a consistent set up. The CAP theorem was one that was brought up for me in school. I remember them talking about it where you can choose two out of the CAP theorem out of consistency, availability, and partitioned tolerance; and it kind of dismisses that a little bit later in the book, like immediately after that. So what did you take for availability out of that, Safia?"
+    },
+    {
+      "timestamp": "0:46:19.3",
+      "speaker": "Safia Abdalla",
+      "text": "What do you mean by that?"
+    },
+    {
+      "timestamp": "0:46:20.8",
+      "speaker": "Jason Staten",
+      "text": "I guess you had talked about your interpretation, or like, how you read into consistency and how that varies versus atomic. And I know you were going through the CAP theorem, so… Availability. What do you understand that as?"
+    },
+    {
+      "timestamp": "0:46:33.3",
+      "speaker": "Safia Abdalla",
+      "text": "So the way I thought about it, given the context of what he explained in the book, is that… This might be [inaudible 0:46:45.2] to think about it, but any node that you send a request to, a node being some sort of machine that holds your data, is going to return a response to a request for a query."
+    },
+    {
+      "timestamp": "0:46:56.9",
+      "speaker": "Jason Staten",
+      "text": "Gotcha."
+    },
+    {
+      "timestamp": "0:46:57.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:46:58.5",
+      "speaker": "Jason Staten",
+      "text": "Yeah. Available for response."
+    },
+    {
+      "timestamp": "0:47:00.6",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:47:01.3",
+      "speaker": "Jason Staten",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:47:02.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I didn’t totally understand the third one, though, which is partition tolerance."
+    },
+    {
+      "timestamp": "0:47:05.9",
+      "speaker": "Safia Abdalla",
+      "text": "So I guess it’s related to availability, in my mind, in the sense that if you have nodes that are failing, your system is still going to be able to respond and also respond with data that is, like, reasonably consistent."
+    },
+    {
+      "timestamp": "0:47:25.3",
+      "speaker": "Jason Staten",
+      "text": "Yeah. That’s one of those cases where there are some databases that lean towards the AP part of the CAP theorem, being both available and partition tolerant. So what that might mean is like, if you have five computers, there’s five servers in your cluster and like, two of them get separated. Whether they go down, or worst case, you get the split brain effect where they’re not actually down they just can’t see each other over the network."
+    },
+    {
+      "timestamp": "0:47:52.5",
+      "speaker": "Safia Abdalla",
+      "text": "Mm-hmm (affirmative)."
+    },
+    {
+      "timestamp": "0:47:53.4",
+      "speaker": "Jason Staten",
+      "text": "Then what will is that they will continue to serve requests and then the goal is that eventually they’ll see each other once again and come back to an eventually consistent state. But during that intereim when they’re down they can still feel the request and hopefully have a resolution pattern in place. And that’s where distributed computing gets really hard and-"
+    },
+    {
+      "timestamp": "0:48:21.0",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:48:21.8",
+      "speaker": "Jason Staten",
+      "text": "Promises that some databases don’t necessarily always hold up. There is a blog post series, I think it was called “Call me maybe”, and-"
+    },
+    {
+      "timestamp": "0:48:31.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Hmm (laughs)"
+    },
+    {
+      "timestamp": "0:48:31.9",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:48:31.7",
+      "speaker": "Jason Staten",
+      "text": "It’s about a project called “Jeppson” and his name is like, a fire on, A-P-H-Y-R, on twitter. It’s Kyle something-"
+    },
+    {
+      "timestamp": "0:48:42.2 `",
+      "speaker": "Safia Abdalla",
+      "text": "Oh yeah."
+    },
+    {
+      "timestamp": "0:48:42.9",
+      "speaker": "Jason Staten",
+      "text": "An interesting character to follow on Twitter, but he is pretty brilliant when it comes to going and putting databases to the test."
+    },
+    {
+      "timestamp": "0:48:52.0",
+      "speaker": "Safia Abdalla",
+      "text": "Hmm."
+    },
+    {
+      "timestamp": "0:48:52.4",
+      "speaker": "Jason Staten",
+      "text": "Where, like, he’ll go and make a set of virtual machines that are all running a database, and then he’ll go and like, split brain them and fire a whole bunch of requests and see what the databases do, and then can they like, consolidate those requests back together? Or like, do requests that were sent get lost? And he goes and he puts a whole bunch of different databases through the wringer to see actually what happens when they have that happen, because partition tolerance is definitely like, the hardest thing, I would say. ‘Cause consistency being easy in terms of like, if something’s down you can just stop the world and say, “I’m not going to be available at all.”"
+    },
+    {
+      "timestamp": "0:49:30.9",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:49:31.6",
+      "speaker": "Jason Staten",
+      "text": "And so like, yeah. I am consistent and partition tolerant by saying, “I don’t accept requests unless everybody is alive and talking to me.”"
+    },
+    {
+      "timestamp": "0:49:38.7",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:49:39.7",
+      "speaker": "Jason Staten",
+      "text": "But uh…"
+    },
+    {
+      "timestamp": "0:49:41.3",
+      "speaker": "Safia Abdalla",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:49:41.4",
+      "speaker": "Jason Staten",
+      "text": "Yeah, the other ones though are definitely trickier. So it’s a good read. I will get a link to you, his blog post ‘case they’re a good series."
+    },
+    {
+      "timestamp": "0:49:50.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Cool, yeah. As I was reading the section it’s talking about eventual consistency and how RethinkDB does this as an example of a distributed database, and I was wearing my RethinkDB shirt as I was reading that actually. I was like, “Oh!”"
+    },
+    {
+      "timestamp": "0:50:05.2",
+      "speaker": "Safia Abdalla",
+      "text": "Ooh. Repping!"
+    },
+    {
+      "timestamp": "0:50:06.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. And, you know, it mentions that RethinkDB shuttered its door as a company but it’s still on open source and will continue on, so that’s pretty cool. I don’t know, have either of you used a distributed database before?"
+    },
+    {
+      "timestamp": "0:50:19.4",
+      "speaker": "Jason Staten",
+      "text": "I’ve used MongoDB."
+    },
+    {
+      "timestamp": "0:50:22.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+    {
+      "timestamp": "0:50:22.0",
+      "speaker": "Jason Staten",
+      "text": "But not Rethink. And-"
+    },
+    {
+      "timestamp": "0:50:24.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay."
+    },
+    {
+      "timestamp": "0:50:25.1",
+      "speaker": "Jason Staten",
+      "text": "Went through the process of actually migrating Mongo over to a postgres database and in the process found some consistency flaws in it. So… That may be in part of the way that we built the application around it and not understanding the tradeoffs that we were making on that front, but yeah. I’ve used Mongo and Rethink seems… In my mind I’ve always looked at is like a better Mongo, but-"
+    },
+    {
+      "timestamp": "0:50:55.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:50:56.0",
+      "speaker": "Jason Staten",
+      "text": "I haven’t spent enough time to be totally positive on that front."
+    },
+    {
+      "timestamp": "0:50:59.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, I don't know if Firebase or as is now known, Firebase Firestore, is in this camp of distributed databases or not. Do you know?"
+    },
+    {
+      "timestamp": "0:51:12.0",
+      "speaker": "Jason Staten",
+      "text": "I don’t know what guarantees they provide."
+    },
+    {
+      "timestamp": "0:51:14.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay. It does seem similar to this if it’s not."
+    },
+    {
+      "timestamp": "0:51:17.5",
+      "speaker": "Jason Staten",
+      "text": "They do something to scale out wide, but I’m not sure so I can’t speak to it. I’ve never heard the alternative to ACID, that BASE that was mentioned in there. That was new to me."
+    },
+    {
+      "timestamp": "0:51:29.4",
+      "speaker": "Safia Abdalla",
+      "text": "Yeah, I had not heard of it either."
+    },
+    {
+      "timestamp": "0:51:32.0",
+      "speaker": "Jason Staten",
+      "text": "Basically Available, Soft state, and Eventually consistent."
+    },
+    {
+      "timestamp": "0:51:34.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh! Okay."
+    },
+    {
+      "timestamp": "0:51:35.8",
+      "speaker": "Safia Abdalla",
+      "text": "I’ve heard of the term “eventually consistent” but I haven’t heard of basically available, and then soft state. And then kind of all three of those being clumped into one concept."
+    },
+    {
+      "timestamp": "0:51:45.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah, it’s confusing ‘cause it’s… BASE has three letters but it’s really only three things: Basically Available, Soft state, and Eventually consistent."
+    },
+    {
+      "timestamp": "0:51:57.2",
+      "speaker": "Jason Staten",
+      "text": "Yeah, eventually consistent is the term most familiar for me. It was something that I’ve learned a bit about when looking at event sourcing as a way of storing things."
+    },
+    {
+      "timestamp": "0:52:10.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I just now got it! Acid and base!"
+    },
+    {
+      "timestamp": "0:52:14.1",
+      "speaker": "Jason Staten",
+      "text": "Ooh! Boom."
+    },
+    {
+      "timestamp": "0:52:16.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "I didn’t, I didn’t understand-"
+    },
+    {
+      "timestamp": "0:52:16.6",
+      "speaker": "Safia Abdalla",
+      "text": "Oh my gosh!"
+    },
+    {
+      "timestamp": "0:52:17.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "That they were like, opposites."
+    },
+    {
+      "timestamp": "0:52:18.7",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:52:19.3",
+      "speaker": "Safia Abdalla",
+      "text": "Wait, no. I just got it, too. This is…"
+    },
+    {
+      "timestamp": "0:52:22.1",
+      "speaker": "Jason Staten",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:52:23.0",
+      "speaker": "Safia Abdalla",
+      "text": "We need to-"
+    },
+    {
+      "timestamp": "0:52:23.9",
+      "speaker": "ALL",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:52:23.9",
+      "speaker": "Safia Abdalla",
+      "text": "No! (laughs) Oh my gosh, Adam. You-"
+    },
+    {
+      "timestamp": "0:52:28.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "He must have tried so hard to make that “base”."
+    },
+    {
+      "timestamp": "0:52:33.3",
+      "speaker": "Safia Abdalla",
+      "text": "Oh my gosh, okay. Wow."
+    },
+    {
+      "timestamp": "0:52:35.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "(laughs)"
+    },
+    {
+      "timestamp": "0:52:36.2",
+      "speaker": "Safia Abdalla",
+      "text": "Honestly, hat’s off. That’s pretty impressive."
+    },
+    {
+      "timestamp": "0:52:39.3",
+      "speaker": "Jason Staten",
+      "text": "Yeah. That was too cunning."
+    },
+    {
+      "timestamp": "0:52:41.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Jason, did you get it just now, too? Or did you…"
+    },
+    {
+      "timestamp": "0:52:43.5",
+      "speaker": "Jason Staten",
+      "text": "Oh I got it just now, yeah. I-"
+    },
+    {
+      "timestamp": "0:52:45.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Okay. Yes."
+    },
+    {
+      "timestamp": "0:52:45.3",
+      "speaker": "Jason Staten",
+      "text": "Didn’t even pick it up."
+    },
+    {
+      "timestamp": "0:52:47.7",
+      "speaker": "Safia Abdalla",
+      "text": "We’re here just unraveling all of the puns in computing."
+    },
+    {
+      "timestamp": "0:52:51.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yes, it’s so full of clever namings that are puns and acronyms within acronyms."
+    },
+    {
+      "timestamp": "0:52:57.8",
+      "text": "I don’t really have anything else in this chapter. I thought… But I do think the part was cool that said how much data different companies collect and store so that NSA collects 29 petabytes per day, but Google collects 100, and Facebook collects 600. I don’t know how Facebook is collecting more than Google."
+    },
+    {
+      "timestamp": "0:53:20.6",
+      "speaker": "Safia Abdalla",
+      "text": "Well, ehh."
+    },
+    {
+      "timestamp": "0:53:21.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "That’s crazy."
+    },
+    {
+      "timestamp": "0:53:22.5",
+      "speaker": "Safia Abdalla",
+      "text": "I can see it, kind of."
+    },
+    {
+      "timestamp": "0:53:23.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "It’s like Google is collecting the entire internet, and then Facebook is collecting people."
+    },
+    {
+      "timestamp": "0:53:31.2",
+      "speaker": "Jason Staten",
+      "text": "But I mean, Facebook is also, in some regard, collecting the entire internet from a different side. Like, ‘cause I mean-"
+    },
+    {
+      "timestamp": "0:53:37.9",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:53:38.1",
+      "speaker": "Jason Staten",
+      "text": "People interaction is like huge and then there’s Facebook trackers on everything ‘cause everybody’s got the share it button."
+    },
+    {
+      "timestamp": "0:53:44.2",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:53:45.6",
+      "speaker": "Jason Staten",
+      "text": "So, I can see it."
+    },
+    {
+      "timestamp": "0:53:46.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yep, yep. But then Google’s storing the most amount of data, 15,000 petabytes. And I thought it was cool, too to like, put these numbers in perspective by thinking about how many years that would be if it was seconds instead of bytes."
+    },
+    {
+      "timestamp": "0:54:02.1",
+      "speaker": "Jason Staten",
+      "text": "Huh, I hadn’t considered that."
+    },
+    {
+      "timestamp": "0:54:03.6",
+      "speaker": "Adam Garrett-Harris",
+      "text": "A million seconds is almost 12 days. A billion seconds is just over 31 years, and then a trillion seconds jumps to 317 centuries. (laughs)"
+    },
+    {
+      "timestamp": "0:54:19.9",
+      "speaker": "Jason Staten",
+      "text": "(laughs) Jeez."
+    },
+    {
+      "timestamp": "0:54:20.7",
+      "speaker": "Adam Garrett-Harris",
+      "text": "That’s crazy."
+    },
+    {
+      "timestamp": "0:54:21.4",
+      "speaker": "Jason Staten",
+      "text": "And those are true Big Data problems."
+    },
+    {
+      "timestamp": "0:54:24.1",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah."
+    },
+    {
+      "timestamp": "0:54:24.9",
+      "speaker": "Jason Staten",
+      "text": "That is one thing that he does talk about and we mentioned before, is like overestimating the amount of data that’s in our systems is easy to do. A lot of times you can hold it in in memory and you don’t need, like, [inaudible 0:54:36.1] to go and process your gigabyte of data, or however much you have. And you can load that readily and run it with like, a Python script and probably get your answer a lot faster."
+    },
+    {
+      "timestamp": "0:54:48.4",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Oh, okay. So, I wasn’t completely understanding when I was reading the book but now I think I get it. So if your data is bigger than the amount of RAM that you have when it’s running a query it can’t hold all that data in memory so that’s-"
+    },
+    {
+      "timestamp": "0:55:03.6",
+      "speaker": "Jason Staten",
+      "text": "Right."
+    },
+    {
+      "timestamp": "0:55:04.5",
+      "speaker": "Adam Garrett-Harris",
+      "text": "That’s the problem."
+    },
+    {
+      "timestamp": "0:55:05.4",
+      "speaker": "Jason Staten",
+      "text": "Yeah. So then you wind up having to like, page onto disc, like, put memory onto disc to pull new stuff out to your RAM again in order to do it, and it just becomes a lot slower like, perf just dives. Like, as soon as you start using disc instead of RAM… So yeah, you just, like if your data passes RAM size then yeah, you’re going to run into performance problems. And that’s when you need sharding and application."
+    },
+    {
+      "timestamp": "0:55:36.3",
+      "speaker": "Adam Garrett-Harris",
+      "text": "But that’s pretty advanced database stuff right there if you need to do sharding."
+    },
+    {
+      "timestamp": "0:55:40.0",
+      "speaker": "Jason Staten",
+      "text": "Yep, and the big takeaway from it is if you’re going to do that just let your database pick the key on how it separates out data and don’t try and be too smart and pick out ways that you want to separate it ‘cause you may likely get it wrong."
+    },
+    {
+      "timestamp": "0:55:54.8",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Yeah. All right. Well, anything else on this?"
+    },
+    {
+      "timestamp": "0:55:58.5",
+      "speaker": "Safia Abdalla",
+      "text": "Not at the moment."
+    },
+    {
+      "timestamp": "0:55:59.5",
+      "speaker": "Jason Staten",
+      "text": "That’s all I’ve got."
+    },
+    {
+      "timestamp": "0:56:00.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Cool. Well…"
+    },
+    {
+      "text": "Thanks so much for listening! If you want to support the show please rate us in iTunes and follow us on Twitter and say, “Hi!” on Twitter, we’d really appreciate that. Our Twitter account is @BookBytesFM. I’m @AGarrHarr, Jason is @StatenJason, and Safia is @CaptainSafia. As always you can find the show notes and transcript for the episode at orbit.fm/BookBytes/17. See you next time."
+    },
+    {
+      "timestamp": "0:56:30.5",
+      "speaker": "Safia Abdalla",
+      "text": "Bye, everyone."
+    },
+    {
+      "timestamp": "0:56:31.5",
+      "speaker": "Jason Staten",
+      "text": "Bye."
+    },
+    {
+      "timestamp": "0:56:32.0",
+      "speaker": "Adam Garrett-Harris",
+      "text": "Bye."
+    },
+    {
+      "text": "(Exit music: Electro swing)"
+    }
+  ]
+}
