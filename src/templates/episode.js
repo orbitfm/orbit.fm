@@ -146,9 +146,9 @@ export default ({ data }) => {
   const transcript = data.transcriptsJson && data.transcriptsJson.transcript;
   const transcriptsLink =
     'https://github.com/orbitfm/orbit.fm/tree/master/transcripts';
-  const transcriptLink = `${transcriptsLink}/${episode.podcast.fields.slug}-${
-    episode.season ? leftPad(episode.season, 3, '0') : ''
-  }-${leftPad(episode.episodeNumber, 3, '0')}.json`;
+  const transcriptLink = `${transcriptsLink}/${episode.podcast.fields.slug}${
+    episode.season ? `-${leftPad(episode.season, 3, '0')}` : ''
+  }-${leftPad(episode.episodeNumber, 3, '0')}.txt`;
   const hostsImages =
     episode && episode.hosts
       ? episode.hosts.reduce((res, h) => {
