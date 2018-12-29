@@ -1,0 +1,768 @@
+(Intro music: Electro Swing)
+
+0:00:12.6 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. We’re continuing our- No, it’s not even the Summer anymore, we’re like, into the Fall with this Imposter’s Syndrome. We’re talking about The Imposter’s Handbook: A CS Primer for Self-Taught Programmers by Rob Conery. So we’re gonna go over the last two chapters, chapters 14 and 15 which is “Testing” and “Essential Unix.”
+
+0:00:36.2 **Adam Garrett-Harris** I’m Adam Garrett-Harris.
+
+0:00:38.3 **Safia Abdalla** I’m Safia Abdalla.
+
+0:00:40.2 **Jen Luker** I’m Jen Luker.
+
+0:00:41.3 **Jason Staten** And I’m Jason Staten.
+
+0:00:43.0 **Adam Garrett-Harris** So, we’ve been doing this book news section and one we haven’t mentioned yet is the sequel to this book is coming out, which is Season Two of Imposter’s Handbook and it’s for sale right now, currently in presale which means you can read it in advance and then submit issues on GitHub if you see any problems with it. And it’s written by Rob Conery and his friend Scott Hanselman.
+
+0:01:11.9 **Jason Staten** I’m excited.
+
+0:01:13.0 **Adam Garrett-Harris** Yeah! Did you look at the topics?
+
+0:01:15.7 **Jason Staten** I did once before and I do not know them off of the top of my head right now but I know looking at it I was like, “All right, I’m ready for this.”
+
+0:01:25.2 **Adam Garrett-Harris** Yeah, it looks like he’s doing a real deep dive into information flow all the way from binary to encoding and network protocols.
+
+0:01:36.2 **Jason Staten** Nice!
+
+0:01:37.0 **Adam Garrett-Harris** Yeah, so I’m pretty excited. We, I don’t know if we’ll talk about it on here yet, but it is available for people to read.
+
+0:01:43.1 **Jason Staten** Yeah, we’re already lined up for the next one.
+
+0:01:45.0 **Adam Garrett-Harris** Yeah! So I should mention that. Our next book is “Code Girls.”
+
+0:01:48.2 **Jen Luker** I’m pretty excited about that one.
+
+0:01:49.8 **Adam Garrett-Harris** Yeah. Yeah, do you want to give a quick explanation what that’s about?
+
+0:01:52.8 **Jen Luker** No.
+
+0:01:53.4 **Adam Garrett-Harris** No? (laughs)
+
+0:01:54.1 **Jason Staten** (laughs)
+
+0:01:54.8 **Adam Garrett-Harris** So that’s about the women who helped crack the enemy codes during World War II and yeah, I’m pretty excited about that, too.
+
+0:02:05.1 **Jen Luker** I didn’t give my description because I haven’t started reading it yet, so.
+
+0:02:09.3 **Adam Garrett-Harris** (laughs) I mean, yeah. I’m… I’m into it, I don’t know how far, but it’s kind of a long book.
+
+0:02:17.5 **Jen Luker** Hmm. But we’re breaking it up though, aren’t we?
+
+0:02:20.7 **Adam Garrett-Harris** Yeah, yeah.
+
+0:02:22.0 **Jen Luker** Into not chapters but…
+
+0:02:25.0 **Adam Garrett-Harris** Parts. I think there’s three parts.
+
+0:02:27.3 **Jen Luker** Yeah, three episodes.
+
+0:02:29.1 **Adam Garrett-Harris** So, let’s get into testing.
+
+(Typewriter Dings)
+
+0:02:33.0 **Jason Staten** This is definitely an opinionated-
+
+0:02:35.9 **Jen Luker** (laughs)
+
+0:02:36.6 **Jason Staten** Topic in the industry, for sure. And I guess, sound off real quick. Do you do test driven development and with that is it all the time, some of the time, or rarely if ever?
+
+0:02:52.5 **Jen Luker**  Some of the time.
+
+0:02:54.1 **Safia Abdalla** For me it depends on the context and the open source project that I work on. We’ve got pretty heavy test driven development going on, good coverage and all that. At work I think it depends on a lot of different factors and tends to be like a personal choice with the developer, but we do have things like tests running on pull request filters and tests on pre-commit hooks and pre-push hooks and stuff like that. So there’s like, set up an infrastructure for it but it’s not like a super strict, “You have to put in a test first and then start coding.” It’s just, “You should have a test with every pull request you merge.”
+
+0:03:37.5 **Adam Garrett-Harris** Yeah. So for me at work we do test driven development almost all the time. The exception is for things that are harder to test or would be more fragile like how the UI looks. So all of the backend is TDD and in the frontend where it makes sense. What about you, Jason?
+
+0:04:02.1 **Jason Staten** I would say that I fall in somewhere between that sometimes, not too often. I used to be more of an advocate of it, and like, I guess more of a practitioner of it and that kind of fell off as time went on. Like, I guess when I was writing Ruby it was just what you did and so that’s what I did and a factor in that was that with Ruby because when you have so many dynamic features related to it if you are not running a test suite then you will find all sorts of issues at production time and so, it was really necessary. ‘Cause it was like, full on spell checker. Like, if you typo’d something you would not know until your code was executing whereas in other environments you have a little bit more help from the tooling on that. And so it’s led to probably a little bit more lax standards than where I should be at, but that’s my realm.
+
+0:04:56.5 **Adam Garrett-Harris** Yeah, I feel like things like TypeScript or aesthetically typed languages really reduce the number of tests you need. So with JavaScript you might have a test that ensures that it returns a number or something and you don’t need those kinds of tests with TypeScript.
+
+0:05:13.3 **Jason Staten** Yeah, that’s a thing that I’ve really liked about working in Rust over the course of this book, has been its type system. It’s pretty rigorous on many of the things that you’re doing and not doing. It’s not even just the semantics of like, are you returning the correct type but also are the contracts you’re making about like, are you going to mutate this data? Or like, if you’re trying to mutate data but you haven’t said that you want to then the compiler will actually prevent you from doing that. And so you get a level of guarantees that just come from the tooling that you don’t actually have to write a test for. And so it’s not that you don’t have to write tests but you get a good number of them checked for you all the time just as you write and compile the code.
+
+0:05:58.3 **Safia Abdalla** Yeah, that’s a good point, Jason. And I think it touches a little bit going further into the chapter on the distinction that he provided between behavior driven development and test driven development with the notion that, you know, when you’re writing a test using TDD you’re generally doing something like, testing all of the inputs, testing different values, all of that stuff. It’s like, very, I think the word he used to describe it was clinical. And when you’re doing behavior driven development, you know, you’re testing kind of user workflows, and I think one of the things with TypeScript is that it takes away a lot of that clinical checking that you would have to do in tests like you mentioned and it puts it in the type checker.
+
+0:06:39.7 And that’s why as I was reading this I realized that nowadays when I’m writing code most of the tests I’m writing are not like, tests as in the TDD style but more behavior driven tests like, testing out the full user workflow for a feature that I’m adding, and that tends to just kind of fit better in with the way I develop software. So, you know, you get assigned a task to do and usually the task is “add a feature,” and when I’m adding a feature I think about like, the full user story and the behavior around it and test that, but not necessarily test like, “Does this button render this way when I do this?” Or, “If I pass null to this will it do that?”
+
+0:07:21.1 **Jason Staten** Hmm.
+
+0:07:21.6 **Adam Garrett-Harris** Yeah. When I think of behavior driven development I think of the idea that the names of the tests should be readable to a stakeholder. And I think he mentions in the book it’s very rare for a stakeholder to ever actually do that, like nobody exports the names of their tests and then hands them over to a business person and then says, “Here’s what the code does.” But it gets you thinking in more of that mindset, I guess.
+
+0:07:48.2 **Safia Abdalla** Yeah, and I definitely do find myself thinking in more of that mindset, like around business logic when I’m coding.
+
+0:07:56.4 **Adam Garrett-Harris** Now are those still unit tests or are they more like integration or acceptance tests?
+
+0:08:01.1 **Safia Abdalla** The way I’ve written them they’re set up as unit tests, a few of them are integration tests just ‘cause they made sense with the existing set up that we had, but yeah, for the most part they’re unit tests.
+
+0:08:12.3 **Adam Garrett-Harris** Cool.
+
+0:08:13.1 **Jason Staten** I do tend to think of them as being something that’s a little bit higher than unit, at least like, when I hear the comparison of them. And maybe not full on integration, like starting up your whole application, but the thing that I like about doing that sort of style, like testing multiple pieces or like the bigger picture of things is it gives you more flexibility when you’re writing code, and I guess in particular more flexibility to make changes to your code. One thing that I’ve run into before with doing test driven development is because the model of my coding was driven by all of my tests when I was to go back and make changes to my code, any time I would do that potentially you would get like, 10 tests failed because I went and removed this line. And it’s kind of discouraging to have like, a whole bunch of tests fail just because you changed like, one thing.
+
+0:09:06.5 I mean, it’s good that they’re there and they’re checking it, like that’s what you want. But at the same time, like, the amount of maintenance that can come from a test suite made it that way can be burdensome. And I know that if done properly, like, it should be straightforward but I maybe hadn’t gotten to the point of doing it quite properly, but doing some of those slightly higher level, or behavior style tests where it’s like, these things need to happen, but the details are a little bit less important and may not be asserting on those, but like, as long as I give this input and get my desired end goal output in terms of more feature or behaviorish, then I’m happy. And you know, the details can slide a little bit more.
+
+0:09:51.2 **Adam Garrett-Harris** Yeah, I’ve had that kind of issue. Typically when that happens it means I’m testing something that should be like, a private method because it’s just implementation detail and I’m tempted to want to test those things because it’s part of the code that I’m writing, but really, if it’s not part of the API or something I shouldn’t be testing that method, probably.
+
+0:10:14.4 **Jason Staten** One other thing that I came across during the process of doing Rust, and I’ve seen it in the past as well with other languages, and it’s called QuickCheck, which is for property testing. And I think I originally saw it in Haskell, but QuickCheck is a way of saying that I want to test the method and assert some property about it. Like, for an example, if I were to go and create a reverse function that reversed an array then I could go and say that for all inputs that are an array that if I reverse it and then reverse it again, it will be equivalent to the original input.
+
+0:10:55.7 **Adam Garrett-Harris** Hmm.
+
+0:10:56.5 **Jason Staten** And so what QuickCheck will do is it will call your function some number of times, like a huge number of times with a whole bunch of randomly generated inputs, and if it succeeds then you just get like, a passing test. But if it fails then what it’ll try and do is actually reduce the input set to the smallest possible reproduction case. So that way like, if it fails with a list of 1,000 items in it, it may just be that your reversal algorithm doesn’t handle having nulls in the list or something like that, and it can boil it down to like, that “It’s having null in here that is actually making the failure case.”
+
+0:11:33.4 **Adam Garrett-Harris** That is interesting. It sounds a lot like in Elm, there’s a thing called Fuzz Testing.
+
+0:11:37.5 **Jason Staten** Mm-hmm (affirmative).
+
+0:11:38.1 **Adam Garrett-Harris** And you kind of just say like, “Hey, run this test 100 times with various inputs.” And then if it fails you can see why.
+
+0:11:45.3 **Jason Staten** Yeah, that sounds really similar. I used the same mechanism for testing when I was writing the various sorting algorithms for earlier in the book to assert that any of my sorting algorithms, whatever output they produced had to be the same as whatever the built in output of Rust built in sort was.
+
+0:12:05.8 **Adam Garrett-Harris** Hmm.
+
+0:12:05.1 **Jason Staten** Because I assumed, like, Rust’s built in sort is going to be correct.
+
+0:12:08.8 **Adam Garrett-Harris** (laughs)
+
+0:12:08.8 **Jason Staten** Like, if not there’s something seriously wrong. And so knowing that I am fallible and likely to write an algorithm that is not quite right, if I go and put QuickCheck against it say, for any given input it needs to match the Rust implementation then I know that my implementation is true for that property.
+
+0:12:28.1 **Adam Garrett-Harris** So, I want to ask y’all, for those of you that don’t use TDD very much, which I guess is all three of you, why not? I guess I should say who don’t use it all the time.
+
+0:12:40.8 **Safia Abdalla** Yeah, I would say for me sometimes it’s like, things need to get pushed out the door really quickly ‘cause there are deadlines and there’s just like, no time to test. And I know this sounds bad and terrible and all that, but like, usually they’re kind of the first thing to go or, you know, you’ll add tests later but it never gets done, things like that. And usually it's just like in situations where there’s urgency around getting something shipped and there’s not a ton of time to be like,very formulated about it. I would say that’s one example, and other cases mostly it’s just been like, the testing infrastructure isn’t there. You’re trying to test this new component or interface and like, you don't know how to set up the mocks properly because no one’s ever done it before. And there’s all of these weird, like, modules being injected and how do you test that?
+
+0:13:32.8 So just like, sometimes, the setup for tests isn’t really well done and that discourages you from writing the test because well, now you have to go out and like, set up your testing environment before you can even actually get to work. But other than that, if I know, like, a test is going to be easy to add or I know what I need to do to actually like, set up a unit test and like, I’m in no rush to get something out the door, I’ll do it.
+
+0:13:59.9 **Jen Luker** For me, it’s not that I don’t do it all the time, even though it’s not really all the time, it just depends on what it is I’m writing. It just seems like not every single bit of code needs to be unit tested. It’s mostly the crud functions that most specifically need it more than, I don’t know, a small little function that doesn’t really do much.
+
+0:14:23.0 **Safia Abdalla** Yeah.
+
+0:14:23.0 **Adam Garrett-Harris** Yeah. I think trying to achieve 100% test coverage is not… not good.
+
+0:14:29.2 **Jen Luker** Right.
+
+0:14:29.2 **Safia Abdalla** Yeah, I agree.
+
+0:14:29.7 **Jen Luker** So, for me it’s more like the test driven development happens much more efficiently and much more effectively if I know what I’m writing is going to be larger than a 3-line function. So-
+
+0:14:43.2 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:14:43.8 **Jen Luker** It has to do with the purpose for the test. It’s not just for testing the method it’s for making sure that what you’re writing is also clean and efficient and doesn’t include a lot of extra code that you won’t necessarily need. It’s about trying to make sure that you only write the bare minimum of what you need in order to get a test to pass, and then making sure that it fails in the right spots, too.
+
+0:15:12.4 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:15:12.9 **Jen Luker** So it just seems like, for me, it’s more to do with complexity of the thing that I’m testing than it does with the function of that class or object or function.
+
+0:15:28.2 **Adam Garrett-Harris** Cool.
+
+0:15:29.1 **Jason Staten** I’m kind of in that same camp of not having quite the same infrastructure, or correct infrastructure to build out stuff well. Like, sometimes it is the mocking story and I know that like, that is a sign that whatever thing that I’m depending on may not be correctly, like, isolated or something like that.
+
+0:15:51.0 **Adam Garrett-Harris** So like, if it’s hard to test then that may be a sign that it’s not designed well? Is that what you’re trying to say? Or…
+
+0:15:58.7 **Jason Staten** Yeah. I would say, like, if your code isn’t testable, like that can be, it can be sign. Like, it doesn’t necessarily for sure like, say like, “Oh, this is poorly designed.” I mean, sometimes there are things that are difficult to test and have to be for one reason or another. I mean, maybe they’re just inherently complex or involve a lot of dependencies. Maybe it’s like an orchestration type class that pulls in a lot of stuff. Then yeah, that can be pretty painful to test.
+
+0:16:30.6 I actually find myself blaming, in particular working with React during the day, I find myself that I don’t really enjoy writing tests for React. When it’s a small project it’s not too big of a deal, but like, if it grows and it’s something that say, has like, Redux and internationalization and other things that involve React-like context, making those tests and like, the setup process for them is just a pain to deal with. And please direct me if I’m not right on that front, but I find myself more prone to writing tests for if I’m making a just straight JavaScript module that has a bunch of more, like, utility-esque functions that take in an input and give out an output. I am more apt to actually go and do those TDD. But with React I find that it’s painful and it doesn’t excite me to actually go and write the tests. I’m like, “Oh what’s all the boilerplate that I have to write to even make this thing successfully run?”
+
+0:17:30.5 And then the other thing, too, is a lot of times, at least in the way that I try and write my code, is that there aren’t too many branches and conditions so it’s basically just asserting it like, if I set this prop on this thing, like, it’s gonna render this way.
+
+0:17:43.5 **Adam Garrett-Harris** (laughs)
+
+0:17:44.7 **Jason Staten** And that’s that. And then I feel like this is a super valuable test.
+
+0:17:49.1 **Adam Garrett-Harris** Yeah, but then you don’t want to test like, “Oh, the background color is this, and the borders are rounded, and how’s this text?” Because-
+
+0:17:57.0 **Jason Staten** It’s-
+
+0:17:57.2 **Adam Garrett-Harris** That’s gonna change all the time.
+
+0:17:58.6 **Jason Staten** Yeah.
+
+0:17:59.5 **Adam Garrett-Harris** Yeah, I totally agree. With React it’s not fun and probably not necessary.
+
+0:18:03.7 **Jen Luker** I still feel like there has to be some sort of… I mean we have different types of tests for reasons, right? Like, we have our unit tests for trying to make sure that the complexity that we’re coding is limited, whereas the other tests that we’re writing, such as behavior driven, would be much more closely related to like, crud processes making sure that what we’re coding actually functions the same way in the long run. So even if we go in and modify our code to be completely different and fail our unit tests, it may still pass our behavioral or functional tests because of what we need it to do is still the same. I feel that no matter what, you need to have some sort of behavioral tests when it comes to your crud processes. Crud being like, create, read, update, and delete.
+
+0:18:56.2 **Adam Garrett-Harris** Yeah.
+
+0:18:55.4 **Jen Luker** Whereas the unit tests are much more for us and making sure that our complexity stays limited.
+
+0:19:05.1 **Safia Abdalla** Yeah, and I think that’s why oftentimes the things that I see most unit tested, like Jason mentioned, are things like, utility files where you’re like, checking that something formats a date correctly or makes some kind of, like, numerical computation correctly as opposed to like those entire behavioral workflows.
+
+0:19:24.4 **Adam Garrett-Harris** Yeah.
+
+0:19:25.3 **Jason Staten** I’ve talked about Gary Bernhardt a couple of times because I really enjoy watching his talks and screencasts, and one of his screen casts that he made was one that was called “Functional Core, Imperative Shell.” And the idea was that you have, kind of two different segments in your application, there’s not like a specific hard line drawn, but it becomes obvious as you’re building out different components or different module of your application in that like, the core of your application should be written in more of a functional style where it’s very much a pipeline of things. Like, it’s functions just passing output to other functions and not really stateful. And those types of things are pretty straightforward to test and so, like, you’re able to go and make a nice test suite against them and they're not dependent on external things like databases and whatnot. And so they are also really fast because he’s adamant about having a really fast test suite because slow test suites also are discouraging.
+
+0:20:27.9 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:20:28.5 **Jason Staten** I thought about that today because I have been refactoring a massive amount of tests at work. And then on the flip of it there is the imperative shell so it is the code that is very stateful and deals with things like user input and like, database and/or screen output or something like that. And on that side it says like, testing here is, it’s way more difficult and way less beneficial. And so the goal is like, you want to have that core as big as you can, so you can have a like, a thoroughly tested application, but those things on the edges, like, because they’re difficult like the benefit of actually doing it can be much lower.
+
+0:21:10.9 **Safia Abdalla** Yeah.
+
+0:21:11.5 **Adam Garrett-Harris** Yeah, yeah. I really want to take that business logic out of that shell and make them as dumb as possible and just very presentational. Yeah, I like that. That like you can test those things, but it’s hard and it has like, decreasing benefits.
+
+0:21:25.5 **Safia Abdalla** I think like, one of the things about testing your code is you have to like, really analyze and understand the complexity and interconnectedness of how the software you’re working on works to be able to like, isolate things and test them well enough. ‘Cause I’ve definitely seen situations where like, someone will like, write unit tests for something and they’ll like, look good, and you know, you’ll merge them and you’ll go ahead and then like, three months later there’s like a huge bug discovered that those same unit tests didn’t catch because there wasn’t an understanding of like, the complexity and the side effects caused by a particular bit of code.
+
+0:22:05.5 **Adam Garrett-Harris** Hmm.
+
+0:22:06.1 **Safia Abdalla** Like, writing unit tests in and of itself is like writing a feature or fixing a bug. Like, I don’t think it’s just like icing you put on a cake or something like that. It definitely is part of like, the cake batter. That was a terrible, what am I doing with this analogy? (laughs)
+
+0:22:20.9 **Jason Staten** (laughs)
+
+0:22:22.6 **Adam Garrett-Harris** I like it. I like it, keep going.
+
+0:22:23.7 **Jason Staten** Yeah.
+
+0:22:24.1 **Safia Abdalla** Yeah, but I definitely think it’s like, test code is code in and of itself, and like, architecting it, when we were talking earlier about having good test infrastructure, figuring out when you write test and when you don’t is the same as figuring out when you write code and where you don’t.
+
+0:22:40.0 **Adam Garrett-Harris** Yeah, and refactoring your tests can be as important as refactoring your code.
+
+0:22:44.1 **Safia Abdalla** Yeah. And I think one of the things even when we like, maybe I’m just getting the wrong impression of it, even when we talk about test driven development it still treats tests as this kind of entity that is separate from your code base and like, additive. When really I think what makes it hard is you have to figure out a way to write code that is like, customer facing, and code that is developer facing. For example your tests, this could also be like your configurations and stuff like that, that like, work as one. And when those two things clash together I think is when it gets really hard to write tests.
+
+0:23:21.8 **Adam Garrett-Harris** Yeah, I really like having my test files right next to the thing I’m testing as opposed to stashed away in some other folder that you forget to look at.
+
+0:23:29.8 **Safia Abdalla** Yeah, I agree. And I think that’s one of the reasons that for the open source project I work on has a really good testing culture, it’s ‘cause we kind of adopt that kind of philosophy of having your tests in the same directory as your components or your source files.
+
+0:23:45.1 **Jen Luker** So I want to add to that a bit in that one of the benefits of having the files themselves co-located in the same folder, and not just your tests but also your CSS and you know, any other additional pieces that you have and that nesting them is that when that feature no longer used you just delete the entire folder.
+
+0:24:03.5 **Adam Garrett-Harris** Yeah.
+
+0:24:04.0 **Jen Luker** So it’s writing code for deletion later.
+
+0:24:08.3 **Safia Abdalla** Yeah. And I feel like this whole putting your tests next to your source thing, maybe I’m just not as experienced with this, was like, kind of a fairly new approach to get popular? Or was this something that was just always done and I was not aware of it?
+
+0:24:25.7 **Jen Luker** I don’t think it was necessarily always done. I do think that with increased understanding of Webpack and how it’s utilized it’s starting to become much more popular. Before it was just easier to say, “Okay, it’s in this folder. We’re just gonna do it that way because you can just import it and test it and run it that way.” But I think as people just dive deeper into our bundlers it’s easier to understand.
+
+0:24:53.8 **Safia Abdalla** Yeah.
+
+0:24:53.8 **Adam Garrett-Harris** Yeah, that’s a good point. It used to be easier to say, “Here’s all my test files in this folder. Run those tests.”
+
+0:24:59.1 **Jen Luker** Mm-hmm (affirmative).
+
+0:24:59.5 **Adam Garrett-Harris** And tell your bundler, “Here’s all my source files, bundle every single file in this folder whether I need it or not.” So you don’t want to put your tests in there and then ship those to customers.
+
+0:25:09.7 **Jen Luker** And I don’t think it’s that complicated anymore. I think the people understand how to set it up initially in a way that you can do both without complexity.
+
+0:25:23.4 **Jason Staten** This is another case that I actually get to share a little bit of love for Rust, and that is that you don’t even write your test in a separate file, but you actually write them in the same file as your code. Like, in terms of unit tests, you would go and you’d just make an additional module inside of your current file that you’re working on, generally it’s called test. And it gets compiled away like, during any production build, but it exists during test builds.
+
+0:25:52.0 And secondly when you go and you set up a new project using cargo, their package manager, it’s got cargo test built into it, so you don’t have to go figure out a testing framework whether you want to use TAP or tape or Jest or QUnit, or whatever other thing that you ought to. Like, they have one that’s just there that’s built in when you start a project. Like, you have testing infrastructure that already exists and you don’t have to make any decisions on that front which is really nice for getting a good testing culture.
+
+0:26:29.2 **Safia Abdalla** I think those two things are really closely connected, like culture and infrastructure. ‘Cause I think when you’re writing a test, like, you’re not just writing it for yourself, you’re writing it for everybody who’s going to be reviewing your PR or touching that code after you. And I always think like, that’s the first… well, I think for anything code related, the first thing if you want to change your code base you have to change your culture first. And sometimes some teams have a poor testing culture, some have a medium, some have a really good one that’s stringent. And I think it tends to be like, super dependent on the business.
+
+0:27:05.4 Like, I remember one of my first jobs was working at Bank of America and they had like, a really solid testing culture, obviously because they were a bank, but also because they would get audited before every software release and part of the audit was looking through their tests and making sure that like, everything was tested correctly.
+
+0:27:25.6 And so that kind of like, I guess business climate influenced team culture which influenced how well their testing infrastructure was set up. Like, they had really good testing infrastructure there. I don’t know, we could probably talk for hours about infrastructure and culture and tests and all of that good stuff.
+
+0:27:43.8 **Jen Luker** I also want to say that there’s a difference between a stringent testing culture and a good testing culture in that, you know, as we’ve mentioned before but I really want to reiterate it here, that reaching 100% test coverage is really brutal and isn’t always necessary. So there can be cases where it’s too stringent and that makes it much more painful for anything to happen. So I think that separating those two things and saying healthy test culture-
+
+0:28:16.9 **Safia Abdalla** Hmm.
+
+0:28:18.2 **Jen Luker** Is better than saying stringent is equal to good.
+
+0:28:21.3 **Safia Abdalla** Ditto what she said, basically. But I agree, I think that it’s not just about the stringent ness. I don’t think anything software related should be judged on how stringent it is because I think that’s where you get into areas that are very dark and not good and bad. But I do think just… There’s  a certain level of like, accountability that you have to have as a team to make sure that you’re building a healthy testing culture.
+
+0:28:47.2 **Adam Garrett-Harris** Nice. Shall we move on to Essential Unix?
+
+0:28:51.6 **Jason Staten** Yes.
+
+0:28:52.1 **Safia Abdalla** Sure.
+
+0:28:53.2 **Adam Garrett-Harris** All right, but first we’ve got a sponsor.
+
+0:28:55.3 **Jen Luker** Yay!
+
+(Typewriter Dings)
+
+0:28:57.2 **Adam Garrett-Harris** This episode of BookBytes is brought to you by V School. Established in 2013, V School is Utah’s highest ranked coding boot camp, and the first of its kind in Utah! They really care about diversity, they partnered with Adobe to provide inclusion based scholarships to foster a diverse workforce. And you can choose to learn full-time, or part-time in the evenings.
+
+0:29:15.8 You’ll immerse yourself in learning new skills like React, or full-stack development. They take care of everything you need so you can just focus on learning, including free housing if you need it and this is really cool ‘cause it’s just a few blocks from school and you can, or you can actually learn from home in their virtual classroom. You’ll get a super transcript when you finish, it’s like a portfolio, transcript, and letter of recommendation all in one, and it will help an employer to quickly understand your strengths, abilities, and then the work you’ve accomplished.
+
+0:29:45.0 They encourage you to take a campus tour, meet their students, faculty, and even shadow a class to see if it’s a good fit for you. If you go visit, tell them you heard about them on BookBytes. Check out VSchool.io, that’s the letter “V” School dot io.
+
+0:29:59.1 V School. Life awaits. Launch a career in code, design, or data. And thanks to V School for sponsoring the show.
+
+(Typewriter Dings)
+
+
+________________
+
+
+
+
+0:30:09.4 **Adam Garrett-Harris** So, Unix! I always think saying unix out loud is really weird because it sounds like something else.
+
+0:30:16.1 **Safia Abdalla** It sounds like a pokemon.
+
+0:30:16.8 **Adam Garrett-Harris** E-, it sounds like E-U-, how do you spell it?
+
+0:30:20.8  **Jen Luker** Mm-hmm (affirmative).
+
+0:30:21.6 **Adam Garrett-Harris** You know what I’m talking about?
+
+0:30:23.5 **Jen Luker** Yes.
+
+0:30:23.9 **Adam Garrett-Harris** E-U-N-O-C-H?
+
+0:30:26.0 **Jen Luker** Yes.
+
+0:30:26.6 **Safia Abdalla** No. I know the word you’re talking about but I’ve never said it out loud or heard it. So…
+
+0:30:32.6 **Adam Garrett-Harris** Yep, yeah. It’s, a eunuch is a man who’s been castrated.
+
+0:30:37.0 **Safia Abdalla** (laughs) I was not expecting that definition to come up.
+
+0:30:41.5 **Jason Staten** You learn something every day.
+
+0:30:43.3 **Safia Abdalla** Yeah.
+
+0:30:46.4 **Adam Garrett-Harris** Moving on.
+
+0:30:46.9 **Safia Abdalla** Okay.
+
+0:30:47.3 **Jen Luker** Yes, please.
+
+0:30:51.8 **Adam Garrett-Harris** So what did y’all think of this chapter?
+
+0:30:55.3 **Safia Abdalla** I thought it was interesting. I had prior understanding of a lot of the things that were mentioned so some of it wasn’t, it wasn’t as like, eye-opening as some of the other chapters. But I really appreciated the like, Make section and talking about the history of BuildTools and why most programming languages tend to have their own build tools, because Make came from the deepest pits of hell.
+
+0:31:24.9 **Jason Staten** (laughs)
+
+0:31:26.8 **Adam Garrett-Harris** Wait, did it say that in here?
+
+0:31:28.2 **Safia Abdalla** No, that was my language.
+
+0:31:30.0 **Adam Garrett-Harris** So, I’ve never used Make. I’ve heard of Make, I’ve heard of Jake and Rake, but yeah, when I learned about Make in this book I thought, “That’s really cool! Like, you could just use that in pretty much any language you’re writing code in.”
+
+0:31:42.3 **Safia Abdalla** Yeah. It gets really complicated really fast. I remember-
+
+0:31:46.9 **Adam Garrett-Harris** Yeah, I’m sure.
+
+0:31:46.9 **Safia Abdalla** Working on some things and you’d just have like, Make files and you would have to like, track down references within the Make file, and it just got like, really hard to navigate.
+
+0:31:58.8 **Adam Garrett-Harris** Yeah.
+
+0:31:59.4 **Jason Staten** Also, I did on the topic of Make, he talks about going and building a JavaScript project with it as an example and that was something that you, I guess, you can still do and did previously used to where he goes and just concatenates the files together, and it brings you back to the days of like, having a whole bunch of self-evaluating functions wrapping everything ‘cause it all got dumped on [the global? (inaudible) 0:32:27.5]. And so you didn’t really write stuff in modular form.
+
+0:32:31.9 Or I guess you did and you wrote it in like, AMD syntax which like, wrapping everything in a “define” or something like that. Like, that’s what that brought back memories of and I don’t miss doing that. Especially because like, you still have, there’s some concerns about like, ordering and whatnot. And like, the solution of numbering things doesn’t really work out well as you really scale stuff out and so it’s actually like, the case where I started to see value in some of the bundlers such as Webpack or Rollup or Parcel or whatever other slew of other ones.
+
+0:33:14.3 Like, in terms of like, grunt and gulp you could use Make in place of them or NPM scripts for that matter, which is just a task runner that’s even, it’s even simpler than Make ‘cause it doesn’t have like, depencies and whatnot in it. But things like Webpack and the others, they actually go and are parsing your code base and creating a dependency graph in order to figure out ordering of loading of things. And so like, they certainly do a lot more than just going and cancatinating your files together. So I think some of the additional stuff that they do, like the going and minifying after the fact is something that you could go and hand off to like, a piping, like, using Unix Pipes, which, hey we haven’t really talked a lot about yet but we can get into, but you know, like handing it off through that process. That is something you could do. Like, with minification after the fact, but there is value in what they do and like, just substituting Make for it is going to mean that you’re definitely down in those pits of hell trying to figure out your dependencies.
+
+0:34:21.9 **Adam Garrett-Harris** Make is not recommended for JavaScript in 2018.
+
+0:34:25.1 **Jason Staten** (laughs)
+
+0:34:25.8 **Jen Luker** No.
+
+0:34:26.5 **Adam Garrett-Harris** Totally agree, yeah.
+
+0:34:27.2 **Jason Staten** (laughs)
+
+0:34:28.1 **Adam Garrett-Harris** I was like, that’s an interesting example, but I don’t do it.
+
+0:34:32.2 **Safia Abdalla** It definitely is a good way to like, look under the hood of what’s going on in some of the build tools that exist currently, ‘cause I definitely do think one of the like, overwhelming things about BuildTools is that they are a little opaque for some people, especially if you’re like a beginner. So I think this chapter would be really helpful to go through if you just want to like, get a sense of what’s going on under the hood. Or what it looks like is going on under the hood.
+
+0:34:56.9 **Adam Garrett-Harris** Yeah. So I thought this chapter, speaking of pipes, I thought this chapter was gonna be more about really kind of basic commands you would run in Unix like CD and LS and kind of the Unix philosophy of each of these programs or these tiny little programs that do one thing and do it really well, and the open/close principle where we’re not gonna change that program if you want some additional functionality. You pipe the output of that program into another program to extend the functionality. It kind of got into a little bit, I guess. ‘Cause he writes a shell script later on in the chapter.
+
+0:35:31.1 **Jason Staten** It is true. Like, I mean we talked about standard in and standard out but...
+
+0:35:36.2 **Adam Garrett-Harris** Yeah.
+
+0:35:36.6 **Jason Staten** I don’t know if I actually caught it. Like, the whole like, Unix philosophy that like, everything is a file. Like, that’s kind of a core concept as well is like, you should be able to go open up anything. Like, if you want to go and like, open up your mouse device and start piping that through sed or something else, you can do that. You may get complete garbage that’s handed through, but everything lives on your file system, but just like, as a file. Like, and-
+
+0:36:07.1 **Adam Garrett-Harris** Hmm.
+
+0:36:07.0 **Jason Staten** It appears the same with, you know, caveats here and there because modern Unix doesn’t do that.
+
+0:36:13.7 **Adam Garrett-Harris** So what does that mean, exactly? Can you expand on that idea of everything is a file.
+
+0:36:18.4 **Jason Staten** Yeah, so for example, if you go and, this is speaking more to Linux. I am, I find myself digging less at the internals when I’m on OS10. And like, say you were to go and like, plug a mouse into your computer then if you look under a directory at like, the root of your file system, like you’d have a folder called /dev inside of there.
+
+0:36:46.7 **Adam Garrett-Harris** Hmm.
+
+0:36:47.4 **Jason Staten** And if you list everything that’s inside of /dev, yeah, it exists on OS10, too. But if you list in there, like, you’ll notice that there’s a whole bunch of things in there that are like, devices. And it’s like, a device is not a file, but in fact, like, the way that the kernel handles it it actually does turn it into a file. Like, every USB device is just a file that you can go and you can write to and read from if you want to.
+
+0:37:12.8 **Adam Garrett-Harris** Is it using that file? Like when the mouse moved around? Is it like writing stuff to that file?
+
+0:37:20.0 **Jason Staten** Yeah, like if you... I don’t know which particular file that it would be, but like, yeah you could find your mouse and you could start piping that into cat if you wanted to and you could watch what it looks like when your mouse moves. And like you could create any application to go and to listen to that. What’s cool about that is like, it’s sharing that same interface across like, whatever thing that you’re using. Like, if you actually writing to a file or if you ‘re talking to a piece of hardware, or yeah. It’s just everything winds up being a, having that same interface of just being a file that you can go and open up and read from and write to. It’s like, just an input/output system.
+
+0:38:01.5 **Adam Garrett-Harris** Yeah, that’s cool.
+
+0:38:02.3 **Jason Staten** Yeah, I guess I don’t step back and appreciate the value of that enough and so that is a positive that came from the chapters, thinking on that. Also I’m glad that he brings up Vim as well, ‘cause I’m a Vim user, myself.
+
+0:38:16.5 **Adam Garrett-Harris** Yay! Vim!
+
+0:38:17.9 **Jason Staten** (laughs)
+
+0:38:17.9 **Safia Abdalla** (laughs)
+
+0:38:18.6 **Jason Staten** Heh, yeah. Yay Vim! I would say that like, it seemed a little strange. Like, if you’re trying to learn Unix, like, getting dropped into Vim, like gives you the sense of like, I brand this command and I can’t escape from it now.
+
+0:38:34.4 **Safia Abdalla** (laughs)
+
+0:38:35.1 **Jason Staten** Like, does that…
+
+0:38:35.7 **Adam Garrett-Harris** (laughs) Yeah.
+
+0:38:36.5 **Jason Staten** That certainly happens and so like, I mean, having to learn how to bat, like-
+
+0:38:40.5 **Adam Garrett-Harris** And also your Vim will not look as pretty as his if it’s the first time you’re using it.
+
+0:38:44.8 **Jason Staten** Yeah. Like, it will be be pretty plain and you… Yeah, it won’t even have like syntax highlighting or anything like that to begin with and so I also would say with caution, like if you’re going to learn Unix, like, you don’t have to learn Vim and the same time. You will only-
+
+0:38:59.6 **Adam Garrett-Harris** Or Emacs.
+
+0:39:00.5 **Jason Staten** Or Emacs-
+
+0:39:01.3 **Jen Luker** Mm-hmm (affirmative).
+
+0:39:01.7 **Jason Staten** Like, I’m not a big promoter of GNU Nano but it is also like, what you would probably expect.
+
+0:39:07.4 **Jen Luker** It at least has the commands at the bottom to tell you exactly which ones to do when, so…
+
+0:39:12.6 **Adam Garrett-Harris** Yes.
+
+0:39:13.1 **Jason Staten** Yes.
+
+0:39:13.5 **Jen Luker** I end up using GNU Nano when I’m in it more often than the others. However, I do like the fact that he kind of jumped into dot files for a minute to talk about basically saving them to GitHub and how lots of people do it and how that’s how they get their cool configs and how you can get their cool configs, too.
+
+0:39:29.5 **Adam Garrett-Harris** Yeah! So I’ve got my dot files up on GitHub. I think, Jason, you have yours as well, right?
+
+0:39:34.8 **Jason Staten** Yeah. I’ve got mine up there, we can link to them.
+
+0:39:37.7 **Jen Luker** So do I, but not as well.
+
+0:39:39.3 **Safia Abdalla** Yeah, I’ve got mine up there, but I don’t think I’ve updated them in a while, mostly ‘cause I’ve found my like, sweet spot of my configs, so.
+
+0:39:49.0 **Adam Garrett-Harris** Yeah, mine change all the time because they have all sorts of things in there like installing gooey applications with homebrew cask.
+
+0:39:56.4 **Safia Abdalla** Hmm. Cool
+
+0:39:56.9 **Adam Garrett-Harris** And then I’ve got one for MacOS and I’ve got one for Linux.
+
+0:40:01.1 **Safia Abdalla** The only weird thing, or I guess not weird thing, but for a while I was working in Vim with no syntax highlighting.
+
+0:40:08.0 **Adam Garrett-Harris** Oh man!
+
+0:40:08.7 **Safia Abdalla** Why did I do it…?
+
+0:40:10.9 **Adam Garrett-Harris** (laughs)
+
+0:40:11.3 **Safia Abdalla** Sorry, I’m remembering now. It was kind of just like a mental exercise I was doing to like, make myself more alert when I was coding ‘cause usually when you have syntax highlighting on it tends to like-
+
+0:40:24.5 **Adam Garrett-Harris** Like, turn your brain off?
+
+0:40:25.6 **Safia Abdalla** For me, personally, I didn’t pick up- Yeah, I didn’t pick up as many of the patterns and subtleties so one of the things I’ve found is when I had no syntax highlighting on I was like, making less typos and having less verbose code and things like that.
+
+0:40:38.3 **Adam Garrett-Harris** Hmm. Yeah, it’s like whiteboarding.
+
+0:40:40.8 **Safia Abdalla** Yeah, it wasn’t that bad. One of the interesting things is, like, after a while your brain will, or my brain, I will not generalize.
+
+0:40:49.3 **Adam Garrett-Harris** (laughs)
+
+0:40:49.9 **Safia Abdalla** My brain just kinda like, started filling in things like, “Oh, function’s not a word you care about.” Or, “Def is a keyword you don’t care about. Or if, or elseif are words you don’t care about.” Like, my brain took care of that in and of itself, which was kind of cool to see. Like, it kind of learned to filter out the things that weren’t relevant on its own.
+
+0:41:08.9 **Adam Garrett-Harris** That’s cool
+
+0:41:09.6 **Jen Luker** Which is also a problem when it’s spelled incorrectly.
+
+0:41:11.8 **Adam Garrett-Harris** Hmm.
+
+0:41:12.2 **Jen Luker** (laughs)
+
+0:41:13.8 **Safia Abdalla** Yeah, but that was only for like… Like language-specific keywords. Like, your ‘Def’, your ‘function’-
+
+0:41:19.7 **Jen Luker** Right.
+
+0:41:19.8  **Safia Abdalla** Your ‘if’, your ‘elseif’, yeah.
+
+0:41:21.3 **Jen Luker** Right. I’m just saying if you said F-I instead of if in the wrong language then…you know...
+
+0:41:26.8 **Adam Garrett-Harris** Yeah.
+
+0:41:27.5 **Jen Luker** Your mind still might autocorrect.
+
+0:41:30.1 **Adam Garrett-Harris** Funct key on.
+
+0:41:30.8 **Safia Abdalla** Is it Ruby that your if statements like, you end them by putting F-I-? No! It’s-
+
+0:41:36.6 **Jason Staten** That’s Bash.
+
+0:41:37.7 **Safia Abdalla** It’s Bash, yes. That’s why I was thinking about it. Got it.
+
+0:41:40.1 **Adam Garrett-Harris** Ah, yeah.
+
+0:41:41.0 **Jason Staten** Yeah, Ruby is “end”.
+
+0:41:43.0 **Safia Abdalla** Yes.
+
+0:41:43.5 **Jason Staten** You have “end” all over.
+
+0:41:44.4 **Jen Luker** Mm-hmm (affirmative).
+
+0:41:45.1 **Safia Abdalla** Yeah.
+
+0:41:46.4 **Jen Luker** So I actually learned to code in Notepad. So…
+
+0:41:50.2 **Adam Garrett-Harris** Yeah, I did, too.
+
+0:41:51.3 **Jen Luker** I spent years coding in Notepad before discovering that there were other IDEs that actually color coded things. And-
+
+0:41:59.4 **Adam Garrett-Harris** Yeah. Did you upgrade to Note++?
+
+0:42:01.5 **Jen Luker** No.
+
+0:42:01.7 **Adam Garrett-Harris** Notepad++?
+
+0:42:02.8 **Jen Luker** I still didn’t, even when it was out. I found it annoying and stuck with just notepad.
+
+0:42:07.8 **Adam Garrett-Harris** Hmm.
+
+0:42:08.9 **Jen Luker** So, it took me a long time to get used to color coding. (laughs)
+
+0:42:12.0 **Adam Garrett-Harris** Yeah, and I was going through a course one time called Startup Engineering on Coursera I think, and one of the things they had you do, and it was like, it was about learning how to code and making a, creating a startup company. It like, made you use Emacs instead of Screen on a like, remote server and I was like, “Man, if you didn’t know any better, like, this is a really high bar of entry just to start typing some code.”
+
+0:42:41.3 **Safia Abdalla** (laughs)
+
+0:42:43.0 **Jason Staten** (laughs)
+
+0:42:44.9 **Jen Luker** At least you could exit the file though.
+
+0:42:46.5 **Adam Garrett-Harris** Yeah!
+
+0:42:47.7 **Safia Abdalla** Without, you would have to break a few fingers in the process.
+
+0:42:50.6 **Adam Garrett-Harris** Yeah (laughs).
+
+0:42:50.9 **Safia Abdalla** We just had a few Emacs users close out the podcast of this episode (laughs).
+
+0:42:56.4 **Jen Luker** (laughs) Oh, no. This house is an Emacs house, so…
+
+0:42:59.8 **Safia Abdalla** (laughs)
+
+0:43:01.2 **Jen Luker** We don’t Vim in this house. We don’t Vim, otherwise I’m getting divorced, so…
+
+0:43:05.0 **Safia Abdalla** Oh! (laughs)
+
+0:43:05.3 **Jen Luker** This is an Emacs house.
+
+0:43:08.4 **Adam Garrett-Harris** Actually, ed is the one true editor.
+
+0:43:12.1 **Jen Luker** Right!
+
+0:43:12.4 **Jason Staten** There-
+
+0:43:13.7 **Jen Luker** This is why I use GNU Nano
+
+0:43:14.9 **Jason Staten** You keep going on with ed.
+
+0:43:16.5 **Safia Abdalla** This is why I etch all my code into a stone tablet.
+
+0:43:19.6 **Jen Luker** Right? It’s even easier actually-
+
+0:43:22.0 **Safia Abdalla** I think I’ve made that joke before which is kinda sad.
+
+0:43:24.4 **Adam Garrett-Harris** (laughs)
+
+0:43:25.2 **Jen Luker** VS Code, VS Code, peeps.
+
+0:43:27.5 **Jason Staten** Aren’t you supposed to like, go one deeper and like, say like, it’s the flapping of the butterfly’s wings that I use in order to make that happen?
+
+0:43:34.8 **Adam Garrett-Harris** (laughs)
+
+0:43:35.5 **Jason Staten** Like…
+
+0:43:36.4 **Adam Garrett-Harris** The butterfly effect, yeah.
+
+0:43:37.0 **Jason Staten** We need to find relevant XKCD, ‘cause there’s definitely one.
+
+0:43:40.5 **Safia Abdalla** Yeah, there is that joke.
+
+0:43:41.9 **Adam Garrett-Harris** (laughs)
+
+0:43:42.8 **Safia Abdalla** One last thing that I really appreciated about this chapter, and it was kind of sandwiched in at the very end, was the section about cron.
+
+0:43:50.9 **Jason Staten** Mm-hmm (affirmative).
+
+0:43:51.6 **Adam Garrett-Harris** Yeah.
+
+0:43:52.0 **Safia Abdalla** I feel like cron is, maybe it’s not super underappreciated but it took me a while to start using it as regularly as I did. Though it’s mostly because the syntax for it is really confusing, so cron is used to kind of like, schedule scripts or programs to be run on a regular interval within your machine and the syntax for scheduling when that interval is can get a little hairy if you’re new to it and it’s one of those things where you have to kind of like, memorize what number goes where and what it means.
+
+0:44:24.4 So it’s just one of those things you end up always having to look up, but I think cron is like, super useful for things like, in the example he referenced like, scheduling backups of your database, but also you can just kind of like, use it as like, a developer on a regular day-to-day basis. Maybe set up something like a reminder every 30 minutes to stand up. See, you don’t need an Apple Watch for that.
+
+0:44:46.9 **Adam Garrett-Harris** Yeah, you could use the, there’s a command in MacOS and probably in lots of Unix versions called “say.”
+
+0:44:53.8 **Jason Staten** Hmm.
+
+0:44:54.6 **Adam Garrett-Harris** Okay…
+
+0:44:54.8 **Safia Abdalla** Oh!
+
+0:44:55.9 **Adam Garrett-Harris** You could have a reminder that says it out loud and they have different voices. There’s a voice called whisper and it’s super creepy.
+
+0:45:02.1 **Jason Staten** (laughs)
+
+0:45:02.7 **Safia Abdalla** Mm-hmm (affirmative).  For Say you can do a really great prank when somebody moves away from their computer, you know, open up a terminal session and then sleep for a certain number of minutes and then after sleep do “say something”. So they’ll like get back to their desk and be working and then like, 20 minutes later-
+
+0:45:19.6 **Adam Garrett-Harris** Yeah (laughs)
+
+0:45:20.1 **Safia Abdalla** Their like, computer will whisper something at them.
+
+0:45:23.6 **Adam Garrett-Harris** Yeah. Or you could put it in their Bash login or ZSH login file, and it will-
+
+0:45:28.5**Safia Abdalla** Yeah.
+
+0:45:28.5 **Adam Garrett-Harris** Do it every time they open up a new terminal.
+
+0:45:30.9 **Safia Abdalla** Yeah.
+
+0:45:31.2**Jason Staten** Uh…
+
+0:45:32.0 **Safia Abdalla** So if you’re listening, please tell us what fun pranks you can cook up with the Say command and share them on Twitter with us, ‘cause I’d love to know.
+
+0:45:36.8 **Jason Staten** (laughs)
+
+0:45:39.6 **Adam Garrett-Harris** Yes.
+
+0:45:40.1 **Jason Staten** And prepare yourself for revenge, too because I know for me, like, if somebody messes with my machine if I’ve stepped away from it, all bets are off. And, uh...
+
+0:45:48.6 **Jen Luker** (laughs)
+
+0:45:49.2 **Jen Luker & Safia Abdalla & Adam Garrett-Harris** (laughing)**
+
+0:45:49.6 **Jason Staten** You may not have a good experience.
+
+0:45:52.1 **Jen Luker** I mean, they did call it Hasselhoffing for a reason.
+
+0:45:54.6 **Jason Staten** On the topic of cron there were a couple of things that I was curious about and thought, the first one is cron and daylight savings. And so daylight savings time can be problematic with cron. Depending on the implementation, some will attempt to immediately run it afterwards and others will just skip that run. So, if you’re running database backups and you happen to have a machine time that is on a timezone that’s not ETC or something and you’re dealing with daylight savings, be wary.
+
+0:46:29.4 **Jen Luker** Don’t schedule anything at 2 AM.
+
+0:46:32.5 **Safia Abdalla** (laughs)
+
+0:46:32.5 **Jason Staten** No. (laughs)
+
+0:46:33.2 **Jen Luker** Between… Just don’t do it-
+
+0:46:34.9 **Jason Staten** No.
+
+0:46:35.1 **Jen Luker** Because it will run twice. Anything between 2 and 3, that’s when daylight savings time actually switches for some weird reason, is at 2 AM. So-
+
+0:46:42.6 **Jason Staten** Hmm.
+
+0:46:43.0 **Adam Garrett-Harris** Really?
+
+0:46:42.9 **Jen Luker** Don’t schedule anything for then and you’re fine.
+
+0:46:44.5 **Adam Garrett-Harris** Huh, that’s odd.
+
+0:46:46.1 **Jason Staten** Yeah.
+
+0:46:46.0 **Jen Luker** Yeah, you either skip the 2 AM hour, or you repeat the 2 AM hour.
+
+0:46:49.7 **Adam Garrett-Harris** Wow. I guess ‘cause that’s more than likely when you’re asleep than midnight?
+
+0:46:55.2 **Jen Luker** I don’t know, but that’s what happens. So…
+
+0:46:57.3 **Adam Garrett-Harris** Huh.
+
+0:46:58.0 **Jen Luker** As far as computers are concerned, that’s when it happens and therefore if you just don’t schedule anything between 2 and 3, you’d never run into the problem.
+
+0:47:05.9 **Jason Staten** Just, UTC all the time.
+
+0:47:08.5 **Adam Garrett-Harris** (laughs) Yeah.
+
+0:47:09.7 **Jason Staten** And one other thing that you can run into with cron as well is if you happen to have a long-running task with it, like say you’re running a cron that happens every five minutes and your task takes longer than five minutes, then you can also wind up with cases where you have the same process running more than once because cron will just go and start it up. Like, by default. It doesn’t say, “Oh this thing is already running, I’m going to stop what I’m doing.”
+
+0:47:37.2 That is something that you have to take care of yourself and there is a utility, I’ve got a link to the man pages for it, it’s called FLock, or F-Lock which goes and creates a file, Unix-like right? And you tell FLock that you want to give it a file descriptor which is the way that Unix handles files. Like, it has some number that represents actually opening or closing a file, and if it can access it then it gives a zero return from it, which zero is good in Unix. Like, that means all systems go.
+
+0:48:16.8 **Adam Garrett-Harris** Zero good, one bad?
+
+0:48:18.1**Jason Staten** Yes. Zero and greater than zero, or I guess non-zero, is bad. And so it, yeah, it gives a zero when it’s able to go and access that file. Otherwise it will fail and you can go and exit the program early. And so, yeah. I’ll offer a link to FLock, but it’s something you may want to use if you have the potential of an overlapping cron jobs; otherwise you can do bad things, like, I mean, yeah. You can do double processing and other things like that.
+
+0:48:48.0 And I had a friend of mine who wrote a cron job for a company where it was sending text messages and yeah, the task was running like every minute or five minutes or something like that, and his tasks started taking longer than he expected them to because they interacted with remote services to send actual text and then he started sending like, double texts out to people and it was not good.
+
+0:49:12.9 **Adam Garrett-Harris** Hmm.
+
+0:49:13.3 **Jason Staten** And it was really expensive for him. So-
+
+0:49:15.3 **Adam Garrett-Harris** Oh yeah.
+
+0:49:16.1 **Jason Staten** Yeah. Be wary of double jobs running.
+
+0:49:19.8 **Adam Garrett-Harris** And the Ides of March.
+
+0:49:21.2 **Jason Staten** (laughs)
+
+0:49:21.7 **Safia Abdalla** (laughs)
+
+0:49:24.2 **Adam Garrett-Harris** Okay. So the final chapter is called “Final Thoughts”, do y’all have any final thoughts about Final Thoughts?
+
+(Typewriter Dings)
+
+
+
+
+________________
+
+
+
+
+
+0:49:30.1 **Jen Luker** Reasons why you take notes online, is because your Wunderlist might become a book.
+
+0:49:35.4 **Adam Garrett-Harris** Hmm. Yeah. Or your Evernote notebook might become a book. Or your blog post series might become a book.
+
+0:49:42.2 **Jen Luker** Trello, Todoist, who knows. Whatever your decide to do, keep track of some of these things.
+
+0:49:48.0 **Adam Garrett-Harris** Yeah, that’s really cool. I didn’t think of that. He just mentioned he had a series of tasks in Wunderlist, things he wanted to know someday, and to turn it into a book. That’s pretty cool.
+
+0:49:58.9 **Safia Abdalla** But it obviously, definitely, was not that easy.
+
+0:50:01.5 **Adam Garrett-Harris** It- No, it just magically just turned into a book! (laughs)
+
+0:50:04.1 **Jason Staten** Yeah-
+
+0:50:04.4 **Adam Garrett-Harris** He woke up one day-
+
+0:50:04.9 **Safia Abdalla** Oh gosh, you should have told me that before I wrote mine! (laughs)
+
+0:50:08.8 **Adam Garrett-Harris** Yeah.
+
+0:50:10.1 **Safia Abdalla** Is there some incantation I forgot about?
+
+0:50:12.8 **Jason Staten** It’s good marketing for Wunderlist.
+
+0:50:14.4 **Jen Luker** (laughs)
+
+0:50:15.0 **Safia Abdalla** Yeah! (laughs) ‘Cause I believe he worked there, yeah.
+
+0:50:17.9 **Jen Luker** Point is, take notes. You never know when you might be able to use them to write a book. How about that?
+
+0:50:23.7 **Safia Abdalla** Yeah. My final thought it you don’t have to want to write a book or write blog posts or any, produce anything. Just having like, a methodical and curious and eager approach to your own learning is really helpful, and just recognizing that computer science is, although a new field, one that is built on like, centuries of discovery across like, math and physics and logic and all of these things. So there’s always more to discover.
+
+0:50:52.2 **Adam Garrett-Harris** That’s very inspiring.
+
+0:50:53.2 **Jen Luker** Yeah, I think that’s where we end the podcast.
+
+0:50:55.5 **ALL** (laughing)
+
+0:50:57.6 **Adam Garrett-Harris** Just end it right there. Yeah, totally.
+
+0:51:00.0 **Jen Luker** Forever.
+
+0:51:00.8 **Adam Garrett-Harris** We don’t need to do-
+
+0:51:01.5 **Safia Abdalla** (laughs) Oh, boy!
+
+0:51:02.4 **Jason Staten** Whoa!
+
+0:51:03.2 **Adam Garrett-Harris** Social media promotion- Forever! (laughs)
+
+0:51:04.7 **Jason Staten** (laughs)
+
+0:51:05.2 **Jen Luker** (laughs)
+
+0:51:07.0 **Jen Luker** Or until next episode. I’m like, it is the end of the book so…
+
+0:51:12.6 **Adam Garrett-Harris** So next episode we’ll be talking with Rob Conery about this book and other things, I suppose. So be sure to tune in for that! And keep up with the show by subscribing in your podcast player or on Twitter and you’ll find out about that episode. Thanks! And I’ll see y’all next time.
+
+0:51:30.1 **Jason Staten** See ya!
+
+0:51:31.0 **Safia Abdalla** Bye, folks.
+
+0:51:32.1 **Jen Luker** Bye!
+
+0:51:32.7 **Adam Garrett-Harris** Bye.
+
+(Exit music: Electro swing)
