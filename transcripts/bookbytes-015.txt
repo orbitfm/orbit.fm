@@ -1,0 +1,659 @@
+﻿(Intro music: Electro Swing)
+
+0:00:13.2 **Adam Garrett-Harris** Hello, and welcome to BookBytes, a book club podcast for developers. We’re continuing our summer of an Imposter’s syndrome by talking about “The Imposter’s Handbook” by Rob Conery which is a CS primer for self-taught programmers. So today we’re going to go over chapters 8 and 9: Advanced Algorithms and Compilation.  I’m Adam Garrett-Harris.
+
+0:00:36.5 **Safia Abdalla** I’m Safia Abdalla.
+
+0:00:38.2 **Jen Luker** I’m Jen Luker.
+
+0:00:39.5 **Jason Staten** And I’m Jason Staten.
+
+0:00:41.0 **Adam Garrett-Harris** All right, so what about Advanced Algorithms?
+
+(Typewriter Dings)
+
+0:00:45.5 **Adam Garrett-Harris** I think he kind of mentioned here ke’s kind of using the term “advanced” loosely. It’s kind of just like, algorithms part two, but I don’t know, some of these are kinda complicated.
+
+0:00:53.9 **Jen Luker** Yeah, I think their argument was that you are more likely to use some algorithms than others. Like, no one’s really going to make you do a bubble sort, but you’re going to end up using some of these others more often.
+
+0:01:08.0 **Jason Staten** Yeah, I like that description where you had mentioned that these are more likely the things that you’re going to get paid to do versus going and writing your own bubble sort is probably not going to keep your employer happy if that’s what you’re doing.
+
+0:01:21.7 **Adam Garrett-Harris** (laughing) Yeah, so it’s like these are solving real problems and they’re not necessarily going to be built into the language or the library you’re using.
+
+0:01:34.1 **Jen Luker** So, let’s talk about it! (laughs)
+
+0:01:36.9 **Adam Garrett-Harris** (laughs)
+
+0:01:39.6 **Jason Staten** Dynamic programming.
+
+0:01:40.7 **Jen Luker** Hey! There you go!
+
+0:01:42.5 **Jason Staten** Yeah, so it brings up dynamic programming at the start. Like, what was your takeaway, this is kind of open to whoever, about what dynamic programming is?
+
+0:01:51.3 **Jen Luker** Nothing. Absolutely nothing.
+
+0:01:54.0 **Adam Garrett-Harris** Yeah, I had never heard of it before.
+
+0:01:56.0 **Safia Abdalla** I was going to say, it was one of those things that brought horrific flashbacks to my undergraduate computer science courses, because I did learn about dynamic programming in an algorithms course, and I think the big thing was that the way that I used it in my course was like, very theoretical and in hindsight, now that I’ve been in the industry for a while, I think the like, mathematical basis of dynamic programming is a lot less important to grasp than the approach that it lays out for problem solving. Obviously when you’re in college you’re like, given problem sets, people expect you to have a proof and a solution for something, and I was getting really caught up in that, and one of the things that this chapter kind of helped remind me of is that it’s not really about the details but about the general approach that dynamic programming kind of embodies. So, yeah, I liked it.
+
+0:02:51.2 **Adam Garrett-Harris** What is the general approach?
+
+0:02:52.8 **Safia Abdalla** Yeah, so I would say if I could break it out into a simple phrase, dynamic programming is about taking a problem and breaking it into a smaller, more manageable problem and then building on top of that. So, for example, let’s say that you’re asked to like, sort through a list of 10 things. Well, first you would start off by solving the problem of sorting a list of just 9 things, because that’s less complicated to solve than sorting 10 things, and you can kind of break it down further and further like we talked about in, I think it was the last chapter actually, where we were talking about mergesort and how you kind of break it down into the smallest possible piece and then you remember what those individual smaller solutions were and build up to the bigger problem. I hope I’m explaining this well. So, in my mind, that’s what dynamic programming is really about, is when you’re given a huge task, find a task that’s smaller, solve that, and see if you can use the solution to that to solve your bigger problem.
+
+0:04:01.4 **Adam Garrett-Harris** Sounds like the divide-and-conquer approach that we talked about last time.
+
+0:04:05.8 **Safia Abdalla** Yeah, a little bit. I think one of the key elements to dynamic programming, well I’m not totally certain of this, is that recursion is a big part of it which I think, depending on how you implement divide-and-conquer you might be using recursion, but I think the idea with dynamic programming is that like, the function you use to solve for n is the same one you would use to solve for n-1 and for n-2, and you can kind of nest those calls and store the solution, like memoize it, and then build it back up. Wow, this is so weird when you have to like, explain the way you perceive things out, using words and stuff.
+
+0:04:44.4 **Adam Garrett-Harris & Jason Staten**  (laughing)
+
+0:04:43.8 **Safia Abdalla** Communication’s hard, huh?
+
+0:04:46.1 **Adam Garrett-Harris** Yeah, and I like how he says that memoization is like fancy word for caching-
+
+0:04:50.8 **Safia Abdalla** Yeah.
+
+0:04:51.2 **Adam Garrett-Harris** I always think it's funny, like when you say “memoize” it sounds like you have a speech impediment and you’re trying to say “memorize.”
+
+0:04:56.8 **Safia Abdalla** (laughs) Yeah, it’s kind of a funny word.
+
+0:04:57.8 **Jason Staten** (laughs) I had never thought of that.
+
+0:05:00.1 **Adam Garrett-Harris** (laughs) “I’m just gonna memoize this.”
+
+0:05:01.8 **Safia Abdalla** Yeah, I wonder… Yeah, it is a funny word.
+
+0:05:03.7 **Jen Luker** I’m so glad that I’m not the only one that picked up on that.
+
+0:05:06.7 **Jason Staten** (laughs)
+
+0:05:07.1 **Safia Abdalla** So yeah, I guess that’s... My take on it is just there’s like, way more formal steps about it, like if I am sorting a list of n items, how might I go about sorting a list of n+1 items? Like, what would I need to do to make that jump to like, solve for the next case? And that’s where the recursion comes in. Sorry, I’m getting into the details again, it’s so hard to break away from that, 'cause like, I think the details are definitely important to grasp of dynamic programming, but I think the more relevant thing,and the thing that I think is more applicable in the day-to-day life of a software engineer is just, if you have a problem, see if you can try and break it up into a smaller problem and then build back up from it.
+
+0:05:55.2 **Adam Garrett-Harris** Yeah, that makes sense.
+
+0:05:56.7 **Jen Luker** So, breaking something down into a smaller problem and then using the solution to those pieces to create the total solution sounds nothing like a dynamic thing to me, which you know,  it sounds much more like recursion or something. So, I loved the story of the origin of the word “dynamic” or the words “dynamic programming.” What did you think of that story?
+
+0:06:21.1 **Adam Garrett-Harris** Yeah, I thought you were about to tell it, why don’t you go ahead and tell the story?
+
+0:06:22.4 **Jen Luker** Oh, right. Okay, so the story is essentially, without reading it out, is that a man named Richard Bellman was trying to do mathematics research in the ‘50s, except for the fact that there’s this guy named Wilson as the secretary of defense and he, as the book says, “actually had a pathological fear and hatred of the word, research. I'm not using the term lightly; I'm using it precisely.” So in order to avoid the anger and frustration of the Rand Corporation and the Secretary of Defense, he came up with dynamic programming as essentially a translation for mathematical research. Which kind of turns around says it means absolutely nothing, and it’s been been assigned this algorithmic thing because that’s kind of what it resulted in, was discovering some of these algorithms that we’re going to talk about in a minute. But I just thought that was an awesome story, that the definition actually has nothing to do with the name because the name was technically to hide the concept of mathematical research.
+
+0:07:25.7 **Adam Garrett-Harris** Yeah, it’s just all political.
+
+0:07:27.5 **ALL** (laughing)
+
+0:07:27.7 **Jen Luker** Yeah!
+
+0:07:28.4 **Jason Staten** It kinda reminds me-
+
+0:07:29.3 **Jen Luker** Politics!
+
+0:07:30.8 **Jason Staten** Of a term that we run into a lot now. So there’s this scary idea of, think of having a server that’s exposed on the internet, that’s scary! But if you-
+
+0:07:42.4 **Adam Garrett-Harris** Oh!
+
+0:07:42.6 **Jason Staten** Call it something fluffy and nice, like a cloud-
+
+0:07:45.0 **Jen Luker & Safia Abdalla & Adam Garrett-Harris** (laughing)
+
+0:07:45.1 **Jason Staten** Then everybody’s on board.
+
+0:07:48.1 **Adam Garrett-Harris** Oh man, yeah.
+
+0:07:48.7 **Jen Luker** Like, you know those are still servers, right?
+
+0:07:50.2 **Jason Staten** (laughs) Yeah.
+
+0:07:51.2 **Adam Garrett-Harris** The cloud is just someone else’s computer.
+
+0:07:53.8 **Jen Luker** Right? Like, it’s just not your own.
+
+0:07:54.2 **Safia Abdalla** Like, you really just want to get rid of the server? Just go serverless.
+
+0:07:58.7 **Jason Staten** Exactly. (laughs)
+
+0:08:00.3 **Adam Garrett-Harris** Ugh. And then serverless isn’t even serverless.
+
+0:08:04.0 **Safia Abdalla** Yeah (laughing).
+
+0:08:04.3 **Jen Luker** No, it’s not.
+
+0:08:05.4 **Safia Abdalla** But yeah, I think-
+
+0:08:07.3 **Jen Luker** Anyway.
+
+0:08:07.9 **Safia Abdalla** It’s, I think, so that kind of, oh my gosh, I’m going to go on a tangent again. Stop.
+
+0:08:13.8 **Jen Luker** (laughs)
+
+0:08:13.0 **Jason Staten** Let’s hear it!
+
+0:08:14.1 **Adam Garrett-Harris** (laughs)
+
+0:08:14.9 **Jen Luker** Yay, tangents!
+
+0:08:16.0 **Safia Abdalla** But no, I thought it was just  interesting, this conversation that we’re having about the words that we use to describe things in our field and where they come from and how it kind of circles back to the original thesis of this book that oftentimes, one of the most confusing things about the industry is the jargon and this conversation we just had had like, a certain level of self awareness, and you know, even the story that Jen pointed out in which Bellman shared the origin of the word dynamic programming, there’s like, a certain level of awareness that the ways in which we describe things do have a sense of ambiguity and like, lack of precision to them. So, yeah, I just thought that was an interesting discussion we just had and kind of interesting historical context to it.
+
+0:08:59.1 **Jen Luker** Our ability to explain things poorly started in the ‘50s.
+
+0:09:03.4 **Safia Abdalla** (laughs)
+
+0:09:03.6 **Jen Luker** Or, you know...
+
+0:09:04.7 **Adam Garrett-Harris** (laughs)
+
+0:09:04.7 **Jen Luker** The dawn of time.
+
+0:09:05.2 **Safia Abdalla** Yeah. (laughs)
+
+0:09:06.8 **Adam Garrett-Harris** Yeah, so the first type of problem it tries to solve is generating a Fibonacci series, which I’m sure we’ve all done.
+
+0:09:15.7 **Jason Staten** Have we all done it?
+
+0:09:17.9 **Jen Luker** Well, yeah.
+
+0:09:18.4 **Adam Garrett-Harris** I don’t know. Yeah. That’s a good question. Have we?
+
+0:09:19.9 **Jen Luker** Yes.
+
+0:09:20.2 **Safia Abdalla** Yeah.
+
+0:09:20.7 **Adam Garrett-Harris** Yeah, and I am, I’m sure you did Jason, right?
+
+0:09:23.3 **Jason Staten** Yep. Yeah, I went and did it inside of Rust and-
+
+0:09:26.6 **Adam Garrett-Harris** Of course.
+
+0:09:27.3 **Jen Luker** Yeah. Of course you did.
+
+0:09:29.8 **Jason Staten** Well that’s my whole goal for this, right? And-
+
+0:09:32.4 **Jen Luker** Yep.
+
+0:09:33.1 **Jason Staten** I found that Rust is, I mean not just Rust, but computers are really fast, so-
+
+0:09:37.8 **Adam Garrett-Harris** Yeah.
+
+0:09:38.9 **Jason Staten** By doing it, I don’t have an example of the slow way of doing it with recursion and building up a new stack frame every time. I just kind of skipped straight ahead and made an iterator sort of pattern of it where it becomes a greedy algorithm which we can touch on in just a minute, and because of that it becomes so fast that I had to go and start finding like the 150th Fibonacci in order to start even having Rust benchmark show something that was not zero nanoseconds for it to run.
+
+0:10:10.9 **Adam Garrett-Harris** (laughs)
+
+0:10:11.9 **Jason Staten** And the number size is as big as I can get it inside of an unsigned 128 bit integer, so it’s really big. I don’t know how many digits it is. I’ll have to count that sometime, but it’s really big and I am impressed with computers, that they’re super fast. So when you all implemented it, like did you start with like the classic recursion style? Like is that what you were first exposed to?
+
+0:10:39.2 **Jen Luker** I actually started doing it for a scrum counter thing, but someone else immediately wrote it much better than me but it was just so that we could estimate stories which meant I only needed to go to up 144. So, yes. I kind of did it the slow way and then optimized as I went.
+
+0:10:59.9 **Adam Garrett-Harris** I don’t remember the first time I did it, but I did it in an interview and it was actually on paper instead of a whiteboard strangely, but I did it. I just did it with a for loop I believe, I iterated. And then, you know, I did that pretty quickly and then they said, “Okay, now do it with recursion.” And I remember in the interview really struggling with recursion because I just hadn’t quite wrapped my head around it and I hadn’t done it in a long time, and I felt like I totally failed that interview but I actually ended up getting that job. So…
+
+0:11:33.0 **Jason Staten** Nice, maybe you spoke your mind well enough, or it like, gave people the understanding of how you were working through the problem, because-
+
+0:11:39.6 **Adam Garrett-Harris** Yeah.
+
+0:11:39.9 **Jason Staten** Hopefully that’s what they were looking for and not for you to solve Fibonacci as fast as possible.
+
+0:11:45.8 **Adam Garrett-Harris** Yeah, yeah. I was definitely speaking out loud and got pretty close and they were like, “Okay, yeah. I see where you’re going with this.” And one of the problems I had with it I think was I was trying to output the entire series instead of just the nth number.
+
+0:12:00.6 **Jason Staten** I think that that gets into the greedy topic as far as I understand. So the book talks about greedy algorithms and it describes them as an algorithm that does what’s best at the moment and so if you don’t need, say the entire list of all Fibonaccis but if you just need the nth Fibonacci then just calculate that and don’t worry about the rest of the list of them, and that can benefit you by, I guess first space-wise. Like, you don’t have to go and hold all those numbers somewhere. So for calculating n Fibonacci you don’t need to consume n numbers of space but instead you only have to consume a single cell. So, yeah. A space complexity of 1 which is much better.
+
+0:12:50.1 **Adam Garrett-Harris** Oh, and I feel like who should explain for the listener who’s not familiar. A Fibonacci series is a series of numbers where each number is the sum of the previous two numbers. And one thing I learned from this book is I always thought it started with zero and one, but you can start with any two numbers.
+
+0:13:07.3 **Jen Luker** You can, but traditionally it starts with zero.
+
+0:13:09.9 **Adam Garrett-Harris** Yeah, zero and one.
+
+0:13:11.6 **Jen Luker** And one. What’s also interesting is if you take any two numbers besides zero and one and one, I think it’s actually after you get to 3, it’s like, 3/5 or 8/5 it’s actually divides out into the golden number.
+
+0:13:31.2 **Adam Garrett-Harris** Oh right, it starts, if you, what is it? If you divide the number by the previous number it starts approaching ….
+
+0:13:38.7 **Jen Luker** Yes.
+
+0:13:39.1 **Adam Garrett-Harris** The golden number?
+
+0:13:40.3 **Jason Staten** Yeah there’s a way that you can use that that you can generate Fibonaccis crazy fast. Like it, up to a certain point, so if you instead of actually going and doing the addition, if you just do like a single multiply against it you can get it up to a really large number before you start to get inaccurate, and I know that-
+
+0:13:59.8 **Adam Garrett-Harris** Hmm.
+
+0:13:59.9 **Jason Staten** That was like a Project Euler thing ‘cause you had to calculate some like, huge Fibonacci or something like, I think Fibonacci(1,000) or something. And so in order to do that you have to be fast. So...I will dig for that. See if I can find something on it, ‘cause I remember I was kind of blown away that you could just multiply up to a certain extent.
+
+0:14:19.8 **Jen Luker** Yeah, take 55 and multiply by 1.61 and it’s essentially 84.
+
+0:14:24.3 **Jason Staten** Yeah.
+
+0:14:25.0 **Adam Garrett-Harris** Hmm. Okay so I thought this section was pretty interesting talking about heuristics and it mentions the traveling salesman problem and how it’s NP hard and one way, one heuristic to solve it is nearest neighbor, and so that was kind of what I was mentioning when we were talking about heuristics last time is nearest neighbors. Just pick the nearest city and it’s going to be pretty good most of the time.
+
+0:14:50.6 **Safia Abdalla** Yeah.
+
+0:14:51.5 **Adam Garrett-Harris** But that’s also example of a greedy algorithm.
+
+0:14:54.2 **Safia Abdalla** Prior to recording this podcast I was planning on doing a planned tangent so this one’s not spontaneous.
+
+0:15:01.8 **Adam Garrett-Harris** Nice!
+
+0:15:02.2 **Jason Staten** (laughs)
+
+0:15:02.2 **Safia Abdalla** But just to kind of elaborate a little bit more on the greedy algorithm section and specifically the heuristics portion that Adam just covered.
+
+0:15:10.6 **Jen Luker** (laughs) Thanks, Adam!
+
+0:15:11.3 **Safia Abdalla** And basically-
+
+0:15:12.3 **Adam Garrett-Harris** (laughs) You’re welcome?
+
+0:15:13.5 **Safia Abdalla** Ah, yes.
+
+0:15:14.3 **Jason Staten** (laughs)
+
+0:15:14.3 **Safia Abdalla** Adam’s just setting me up. He warmed up the stage now I gotta get up there and deliver and hopefully I do with this tidbit. So I was just you know, researching ‘cause this section of the book lists a few greedy algorithms that I was like, you know, can I go out and pick a few more to share with people so you all have a better sense of what they are? \n\nAnd so I thought a little bit about some of like the different things that I had done at university courses that were solvable using greedy algorithms and one of the ones that I found that I thought would be a good segue from some of the things covered in this chapter is around job scheduling, and we’ll probably touch on this a little bit later, but your CPU on your computer can technically only execute one piece of code at a time. Let’s assume that it’s like a single core CPU from 1991 or something. So it can only execute one piece of code at a time and the reality is that you as a programmer might be wanting to run code from different programs at the same time. So maybe you have your browser open and maybe you have like your text editor open, maybe you’ve got your spotify open and your CPU has to, very quickly, schedule those processes in such a fashion that you don’t notice the fact that it’s switching between which code from which process it’s running. \n\nAnd one of the ways that it does this uses greedy algorithms and by the way, the example I’m presenting now is specifically for like, scheduling processes on your CPU, but really this can apply to anything that’s like, “I have a list of things I need to do, like a job, and I know it’s going to start at this time and it’s going to end at this time. So I know how long it will take and I want to figure out what is the sequence in which I should do these jobs?” And greedy algorithms come into play here and essentially there’s a couple of different techniques for doing it. \n\nYou might do a greedy algorithm where the local optimization that you make is something like, you always pick the job that’s going to start first. So it’s just sorted… In the end you get all of your jobs sorted by, in ascending order by when they started. You might also pick when the job ends. So you pick all of the jobs that will end sooner earlier in the process. Or you might optimize by greedily choosing always the job that's going to be the shortest to complete. And one of the things about greedy algorithms is that although they are generally optimal, they’re not always optimal. So in some cases you might be in a situation where you’re scheduling like six different jobs and you can only do two of them at the same time and there’s some conflicts involved so you can’t do like,  job A and job C at the same time. And if you’re picking a heuristic in a greedy implementation like, I’m gonna do the ones that start earliest first, you might actually end up in a situation where you're not completely allocating your job board as well as you should or things are taking longer than they need to to finish because the dependencies aren’t mapped out right. \n\nSo yeah, that was my little tangent, this like, general problem or area, if you’re interested in learning more about it, is called interval scheduling and you can see how it comes, its applications in like, scheduling jobs in your CPU or just kind like, more general software type applications where you know, you want to build an app where people can schedule something or like, organize a gantt chart or something like that. So yeah, that was my planned tangent of other information to share (laughs). That’s it. Fin. End of short notes.
+
+0:19:15.1 **Jen Luker** This should be a segment.
+
+0:19:17.0 **Safia Abdalla & Jason Staten & Adam Garrett-Harris** (laughing)
+
+0:19:18.2 **Safia Abdalla** Pull me off the stage now.
+
+0:19:19.2 **Jen Luker** (laughs)
+
+0:19:20.0 **Adam Garrett-Harris** I’ve seen a scheduling problem like that before in an interview where they had like, you’re an actor and you have different movies that you can be in and each movie pays you a certain amount but they have a start date and an end date so you can't be in any movies that are overlapping during filming and you have to pick which set of movies will get you the most money.
+
+0:19:41.6**Safia Abdalla** Oh, that’s a really good problem. So yeah, if you’re listening and you’re somebody who’s out there doing job interviews or just solving interesting problems, good to know that if you get that kind of problem statement a greedy algorithm is a good first approach to take.
+
+0:19:56.6 **Jason Staten** It’s also something that we encounter even in the web development space is like, a problem that browsers have to solve is when do they go and update the UI versus running our code? And there is, I mean JavaScript’s own event loop, which I won’t go down that rabbit hole, but there is like… Some things happen with greater priority than others. So for example, and update to the browser’s dom is something that’s going to happen as a micro task rather than a macro task in JavaScript and so like, if that needs to happen it will get prioritized before something like a user click. So it’ll make sure that he browser draws before the click because in terms of the browser's algorithm they’ve found that that is the optimal path for it. Or somebody at some point decided that. So, yeah. Those algorithms are all around us.
+
+0:20:52.4 **Safia Abdalla** That’s really cool.
+
+0:20:53.3 **Adam Garrett-Harris** They’re all around us!
+
+0:20:55.0 **Jason Staten** Yeah.
+
+0:20:55.2 **Safia Abdalla** They’re everywhere!
+
+0:20:55.7 **Adam Garrett-Harris** Just have to open your eyes.
+
+0:20:56.8 **Jason Staten** There’s greed everywhere.
+
+0:20:57.7 **Safia Abdalla** (laughs)
+
+0:20:58.4 **Adam Garrett-Harris** Okay. So the chapter concludes with two different ways to find the shortest path in a graph. There’s the Bellman-Ford and the Dijkstra's Algorithm.
+
+0:21:12.5 **Jason Staten** Yep.
+
+0:21:12.9 **Adam Garrett-Harris** Who’s going to explain those?
+
+0:21:14.0 **Jason Staten** I could talk a little bit about them.
+
+0:21:15.4 **Adam Garrett-Harris** Okay.
+
+0:21:16.4 **Jason Staten** I went and implemented Bellman-Ford inside of Rust and I did not actually get around to doing Dijkstra’s, just timewise didn’t get to it, but I still want to do a comparison of them. But a basic explanation of the Bellman-Ford is that you pick some source node in a graph. So say you have a graph of seven nodes and they have edges that connect to each other that are directed, so like, a can go to b, but not necessarily back to a. And so yeah, it’s a directed graph. It doesn’t have to have, it can have cycles in it, that’s okay.
+
+0:21:52.6 **Adam Garrett-Harris** But it’s weighted.
+
+0:21:53.6 **Jason Staten** Yes, so the edges are weighted. So kind of think traveling salesman problem or something where like distances or whatever you want to consider to be a weight is, but yeah.
+
+0:22:04.4 **Jen Luker** PITA factor.
+
+0:22:05.5 **Jason Staten** Yes and the objective of it is given a certain source node, finding out what the shortest path to any other node within that graph. And the way that Bellman-Ford goes about doing that is you start at that source node and then you go and find the lengths for whatever other nodes that it’s attached to and you say like, “This is the length for those things”. You go and you memoize those values or you cache those values in some sort of look up and from there you progress onto yet another node and it doesn’t particularly matter the order. The book actually questions whether or not the order matters and it doesn’t, but you progress onto another node and from there you measure the distances between that as well as back from the original. \n\nSo like if you start at node a and it’s connected to b and b is connected to c, then you go and you take b’s current length that exists in your lookup table and add it to b’s weight to c and you wind up going and traversing all of the nodes, I guess it winds up being Big-O(n squared) is really the worst case or like, that’s the algorithmic complexity of it. And by doing that, as you traverse the tree, eventually you wind up in a case where you haven’t actually updated your memoization table and at the point you know that your table is what’s known as relaxed or it’s stable. And at that point you know that you have found all of the shortest paths from a given source node for that graph.
+
+0:23:44.0 **Adam Garrett-Harris** Yeah. I like this idea of relaxation-
+
+0:23:47.2 **Jason Staten** Mm-hmm (affirmative)
+
+0:23:47.8 **Adam Garrett-Harris** Because you start off and assume the distance is just infinite, and then as soon as you find one you’re like, “Oh, well that’s better.” And any time you find a shorter path you start to relax, and it doesn’t really sound like relaxing to me, it sounds more like tightening, like you’re getting closer and closer to the real answer.
+
+0:24:03.3 **Jason Staten** Yeah, I don’t know why the term is relaxing.
+
+0:24:06.9 **Jen Luker** I think it’s more like it’s settling in.
+
+0:24:10.2 **Adam Garrett-Harris** Oh, yeah.
+
+0:24:10.4 **Jason Staten** Yeah, I guess if you’re relaxing on like a memory foam bed eventually the bed stops collapsing underneath of you, right? Like, once you’ve relaxed enough?
+
+0:24:17.9 ***Jen Luker** (laughs)
+
+0:24:17.7 **Adam Garrett-Harris** Hopefully!
+
+0:24:19.2 **Jason Staten** (laughs)
+
+0:24:19.1 **Jen Luker** Doubt it.
+
+0:24:19.9 ***Adam Garrett-Harris & Jason Staten** (laughing)
+
+0:24:21.7 **Adam Garrett-Harris** If not, there’s a problem.
+
+0:24:23.9 **Jason Staten** Right, you gotta get yourself a new mattress. So yeah, that is the Bellman-Ford and I did go and look through his algorithm and there were a couple of things in there that I think could potentially be improved. So if you are on page 205 where it is actually iterating over the table, one of the things that he actually does in this table is he looks up all of the edges for a given, I guess I’ve been calling them nodes, so I’ll stick with that, but he calls them vertices I guess, or a vertex, but for a given vertex he goes and finds all of the edges for that, and that isn’t actually necessary I found when I was building out the algorithm. Rather like, if you just do it against all edges it continues to work even without doing that check so it’s kind of an unnecessarily traversal of the tree, or iteration of the tree.
+
+0:25:16.7**Adam Garrett-Harris** Hmm.
+
+0:25:16.7 **Jason Staten** So yeah, I was kind of surprised when looking at that but you don’t actually have to do it node by node. It seems weird but it actually works out just fine. And in all the examples I looked at between like Wikipedia’s example implementation, they actually don’t care which one you’re iterating from. The fact is that you’re traversing over all the nodes enough that it does just stabilize, or the numbers stay consistent. I was kind of mind-blown.
+
+0:25:46.2 **Jen Luker** Something that he did say when he wrote these algorithms is that he wanted to write them for clarity and not for efficiency. So he assumed that people would find better ways of doing it and that you’d find things within this that wouldn’t necessarily be required but that it was easier for him to understand it this way. So he was hoping that by writing it that way it would be easier for everyone else to understand as well.
+
+0:26:09.0 **Jason Staten** I will have to talk to Rob about that and see his thoughts. Following up with Bellman-Ford, another graph traversal, it’s got the same objective as going and finding the shortest path between a source node and any given other node.
+
+0:26:26.7 **Adam Garrett-Harris** Basically every other node that is reachable.
+
+0:26:29.3 **Jason Staten** Yes.
+
+0:26:30.3 **Adam Garrett-Harris** Yeah.
+
+0:26:30.6 **Jason Staten** Yeah. So it finds the shortest path between some starting node and every other node. It gives you a lookup of that out of it. And Dijkstra happens to be a complexity of Big-O(log n) so n being the number of nodes or vertices on that graph which generally it can go and beat out Bellman-Ford. And the way that it does that is by kind of improving its heuristics or taking a different set of heuristics by always going and following that lowest weight vertices from the given node that you’re on and then once you have done that then you know that you have travelled that shortest path. The book describes it pretty well with some pictures to kind of-
+
+0:27:20.9 **Adam Garrett-Harris** Yeah. Let me see if I can explain it a little differently. So-
+
+0:27:24.3 **Jason Staten** Yeah!
+
+0:27:25.2 **Adam Garrett-Harris** For each iteration you visit the vertice that has the smallest value that is unvisited.
+
+0:27:34.7 **Jason Staten** Mm-hmm (affirmative).
+
+0:27:35.4 **Adam Garrett-Harris** Yeah, and you, so you have to keep track of which ones are visited and you only visit each one once.
+
+0:27:39.9 **Jason Staten** Yep.
+
+0:27:40.5 **Adam Garrett-Harris** And kind of like how it comes up with that is it realizes if you’re going between points a and z and along the way you visited b, if you found the shortest path between a and z and includes b, then… Wow, I just lost my train of thought.
+
+0:27:58.7 **Jen Luker** It basically travels to the shortest node and then travels to every single one if its nodes to say, “Okay, well if we start at this beginning and we go to this next node and it allows you to go to this next node, this is how much that next node’s going to have.” And then it does it for every other path it could possibly start with from that point. And then it goes backtracks once it knows it can’t go any further and starts again and goes, “Okay, so that was the lowest node, let’s go to the higher node and see where it can go and all the paths in which it can go to.” And it allows it to go through every single node once as opposed to having to visit them all, over and over and over again to see if every possible iteration is going to be faster than the previous computed iteration.
+
+0:28:42.8 **Jason Staten** Mm-hmm (affirmative).
+
+0:28:43.4 **Adam Garrett-Harris** Yeah.
+
+0:28:44.1 **Jen Luker** I actually think a lot more on the lines of the Dijkstra one than I do from the Bellman-Ford thought. So the Dijkstra one ran much better with how I naturally looked at the graph and figured out what the numbers were.
+
+0:28:56.1 **Adam Garrett-Harris** So there are a couple of “gotcha”s with these. One is that Dijkstra’s Algorithm doesn’t work with negative weights because it, like for instance if you go from the starting node and the ones that are connected to it, it’s going to assume that’s just the… That’s just the smallest distance, but if there was a negative weight somewhere that may actually be a shorter distance. Just given the fact that it only visits it once, it doesn't take into account negative weights. So if you have a negative weight you have to use Bellman-Ford. \n\nBut even with Bellman-Ford if there’s a negative cycle then it’s not going to work because if there's a negative cycle you can just keep looping that cycle to make it smaller and make the value smaller and smaller and smaller.
+
+0:29:41.5 **Jason Staten** Yeah. With the Bellman-Ford if you actually want to find a negative cycle you can do that as well by looking at that produced value of it and if the weight of any traversal is less than the weight of any given node you are in a case where you have a negative cycle.
+
+0:30:04.4 **Adam Garrett-Harris** In another book, I read if the Bellman-Ford’s given a graph with a negative cycle it should return something indicating that it’s unsolvable.
+
+0:30:12.2 **Jason Staten** Mm-hmm (affirmative).  So there are some cases that that is actually a necessary thing. I was trying to find like real world use cases and the closest I could find was some Quora that was talking about like, network lookup type stuff that is a little bit beyond me, or like I didn’t quite pick up on all of it. “But there are some cases that like, Dijkstra’s needs more information available to it than what Bellman-Ford needs and because of that it made Bellman-Ford a reasonable choice in some scenarios, like network lookup wise.
+
+0:30:47.4 **Adam Garrett-Harris** Hmm.
+
+0:30:48.0 **Jason Staten** Yeah. I can link to that as well and maybe somebody can explain it to me in simpler terms, but it was good to find a case that like, even though it's algorithmically better or like, timewise more performant, it may not always be the correct choice.
+
+0:31:05.9 **Adam Garrett-Harris** Yeah and another thing is if you’re working with an unweighted graph then you can just use a breadth-first search.
+
+0:31:11.7 **Jason Staten** Mm-hmm (affirmative).
+
+0:31:12.2 **Adam Garrett-Harris** Because like, simply the least number of traversals will be the quickest. Like-
+
+0:31:16.2 **Jason Staten** Makes sense.
+
+0:31:17.1 **Adam Garrett-Harris** Yeah.
+
+0:31:18.1 **Jen Luker** So we’ve been using the word “heuristics” a lot and I’d heard it before but didn’t actually know what it was. I wondered if it was like this whole major concept and the book essentially said heuristics is a fancy word for rule of thumb.
+
+0:31:31.4 **Adam Garrett-Harris** Yeah. It’s like a good enough…
+
+0:31:33.5 **Jason Staten** Information that you make a decision on.
+
+0:31:36.2 **Jen Luker** Yeah.
+
+0:31:36.7 **Adam Garrett-Harris** Yeah.
+
+0:31:37.3 **Jason Staten** So…
+
+0:31:37.8 **Adam Garrett-Harris** Yeah so it’s a heuristic as opposed to an algorithm which will always give you the best answer.
+
+0:31:43.1 **Jason Staten** Yeah.
+
+0:31:44.2 **Adam Garrett-Harris** All right! We have a sponsor for this episode which is V School. \n\nSo V School was established in 2013 and is Utah’s highest ranked coding boot camp. And they have some different options. You can choose to learn full time or part time in the evenings and you’ll completely immerse yourself in learning new skills. They take care of everything you need, including free housing if you need it, and the housing’s just a few blocks from school so you can focus on learning and it’s located in beautiful Salt Lake City, Utah. \n\nOr you can learn from the comfort of your own home with one of V School’s 100% virtual classrooms. If you’re interested they encourage you to take a campus tour. You can meet the students and faculty and even shadow a class. If you’re interested check out VSchool.io and thanks to V School for sponsoring this podcast!
+
+0:32:34.4 **Jason Staten** Yeah, thanks!
+
+0:32:35.2 **Adam Garrett-Harris** All right. How are we going to talk about compilers?
+
+0:32:38.1 **Jen Luker** They’re hard. Next chapter.
+
+0:32:40.1 **Adam Garrett-Harris & Jason Staten** (laughing)
+
+(Typewriter Dings)
+
+0:32:42.5 **Adam Garrett-Harris** So I think we can start off with the basic steps it goes through. I think I can kind of wrap my head around the basic steps.
+
+0:32:50.4 **Jason Staten** Lets even back up and just talk about like what a compiler is before we even talk about the steps. A compiler, or what compilation is. ‘Cause that-
+
+0:33:00.7 **Adam Garrett-Harris** Yeah.
+
+0:33:01.1 **Jason Staten** I guess is the chapter. And a compilation is, at its core, I tried to describe this at a company meetup once, and it, basically, it’s a machine or something that takes an input in the form of a type of well structured code and produces some sort of output given that code and that is very, very high level. And basically that is to say that it’s a function, but like to boil it down a little bit more in terms of what we do with computers, is it lets you write code, say something like JavaScript, and then it can go and turn that JavaScript into either bytecode that V8 can understand, or some languages like Rust it will go and compile Rust into assembly language. And so you get to type nice high level human-friendly type things and it goes and it takes that human-friendly type stuff and, through a series of steps, converts it into something that a computer can understand and execute.
+
+0:34:13.3 **Adam Garrett-Harris** Yeah, and I would also like to point out the difference between compiling and transpiling, because transpiling is a term that I’ve heard about recently over the last few years with things life CoffeeScript and TypeScript. And basically transpiling is a type of compiling. So compiling is going from one language to another and transpiling is going from one language to another language that has a similar level of abstraction. So TypeScript and JavaScript are in the same level of abstraction. It’s not going down to bytecode or something lower.
+
+0:34:52.4 **Jen Luker** So we’re talking English to Chinese versus British to American.
+
+0:34:56.7 **Adam Garrett-Harris** I don’t quite understand that analogy.
+
+0:34:59.7 **Jason Staten** Maybe like, English to Latin versus, I don’t know, something a lower level. ‘Cause I guess Chinese I would consider to be at the same level of abstraction like, while, I mean one-
+
+0:35:11.0 **Jen Luker** Well, yeah. But I mean as far as levels of abstraction it’s not, it doesn’t really matter per se the level of abstraction. The difference is that you’re taking it from one thing that humans understand and turning it into another thing which computers understand. You could say the same things for languages in that we’re taking it from one thing an American would understand versus another thing that Chinese would understand. So I mean, yes it does continue to go more and more low level in that it’s harder and harder for us to understand, but I think that high level and low level in the translation of things is just a human definition of how far away from human comprehension it is, without the help of computers.
+
+0:35:57.4 **Adam Garrett-Harris** Yeah, I think… I can’t find it right away, but there's a list of different levels of abstraction for computer programming languages.
+
+0:36:06.2 **Jen Luker** Yeah, there is. I’m just… I was trying to choose something that was a little bit easier to say that, you know, the difference between compiling and transpiling, and I guess you could say the trans portion of transpiling would be like translation.
+
+0:36:19.0 **Adam Garrett-Harris** Hmm.
+
+0:36:19.8 **Jen Luker** So maybe compiling would be a language humans could understand to a language that birds could understand.
+
+0:36:27.8 **Adam Garrett-Harris** Yeah. I’m not great at analogies. (laughs)
+
+0:36:31.1 **Jen Luker** So, you know, all the way down to you know, something ants could understand.
+
+0:36:38.0 **Jason Staten** I’m still, yeah, caught at like, what the true terminology, ‘cause I mean you could also go, in some ways, upward. Like have you heard of Emscripten where it will go and take like, C code and then compile it into JavaScript code?
+
+0:36:53.6 **Jen Luker** Which is you know, which is the argument that it’s just… There’s no actual true… The levels of the abstraction is still just like a human, mental construct. There’s levels and there’s the reasonings in which we say there’s these levels, but I think that when you’re talking about it we’re still talking about two different languages, we're just talking about JavaScript versus binary.
+
+0:37:19.5 **Adam Garrett-Harris** Okay, so I actually found a little article mentioning the levels of programming languages.
+
+0:37:25.4 **Jen Luker** Mm-hmm (affirmative).
+
+0:37:26.0 **Adam Garrett-Harris** And there’s machine languages, which is basically zeros and ones, then there’s assembly languages, and then theres high level languages.
+
+0:37:34.1 **Jen Luker** Right.
+
+0:37:34.6 **Adam Garrett-Harris** And that’s pretty much it. Pretty much every language we write in is high level languages unless you want to get down into assembly. You probably don’t want to get down into zeros and ones.
+
+0:37:44.3 **Jen Luker** Right, so I’m just saying maybe it goes from, you know, it’s like the Rosetta Stone of you know, languages for us. That it’s essentially, breaks it all the way down to like, hieroglyphs.
+
+0:37:57.7 **Adam Garrett-Harris** Yeah. (laughs)
+
+0:37:59.7 **Jen Luker** It, which is also why I chose, I mean I guess I should have chosen something closer to like, Japanese for kanji, but… it’s still very similar.
+
+0:38:08.9 **Adam Garrett-Harris** Yeah.
+
+0:38:09.4 **Jen Luker** In that it’s translating from one understandable language to us, to an understandable language to someone who isn’t us. (laughs)
+
+0:38:19.3 **Adam Garrett-Harris** (laughs)
+
+0:38:20.5 **Jen Luker** I mean if we looked at it long enough we could figure out binary, but you know, we’ve also figured out how birds talk to each other, too. It doesn’t necessarily mean we understand it just by looking at it.
+
+0:38:30.8 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:38:31.8 **Safia Abdalla** Yeah. A good benchmark that I use in trying to figure out, like is it compiling and transpiling? And this I learned a while back from somebody, I think just like, a random conversation you have with people where somebody says something smart and it stays with you. \n\nBut a good way of kind of, for me, of figuring it out is at the same level of abstraction can you say that the way you represent the data in those two languages is relatively the same? So for example, with like TypeScript and JavaScript, how would you represent a string? Well, you know, in memory a string is like a sequence of characters and if you were to kind of differentiate that between compiling the way that, you know, assembly thinks about strings is way different than the way JavaScript thinks about strings. \n\nSo for me, it like helps to think about how is the data treated or how is the data represented at each of those levels and is it different enough to warrant being called a compiler. So.
+
+0:39:41.3 **Jen Luker** And I guess, at the same time, we’re talking about something similar to the squares and rectangles problem. Like, all squares are rectangles but not all rectangles are squares.
+
+0:39:52.8 **Safia Abdalla** Yeah.
+
+0:39:52.9 **Jen Luker** So all of transpiling is compiling, but not all of compiling is transpiling.
+
+0:39:57.9 **Adam Garrett-Harris** Yeah.
+
+0:39:57.9 **Safia Abdalla** Yeah.
+
+0:39:59.1 **Adam Garrett-Harris** Okay, so a compiler takes the code through a series of steps to get to that final form.
+
+0:40:06.6 **Safia Abdalla** Yeah. I think, probably one of the most important things that is good to take away from the whole compiler process is just the fact that a compiler actually optimizes your code. So, you know, you write a for loop or you write some sort of code and you could optimize it as much as you like, but the compiler itself is going to go in and make some low level optimizations based on its understanding of the machine language that it’s compiling down to and its understand of what it is that you’re trying to do.
+
+0:40:41.3 **Adam Garrett-Harris** Yeah, and also you may have some syntactic sugar or something where you can write a map instead of a for loop, but underneath the hood it’s probably still just a for loop.
+
+0:40:51.6 **Safia Abdalla** Yeah. Which is the point of compilers. Oh! I want to go on another tangent! No, I can’t.
+
+0:40:58.5  **Adam Garrett-Harris** (laughs)
+
+0:40:59.4 **Jason Staten** (laughs)
+
+0:40:59.6 **Safia Abdalla** It’s a history tangent that involves Grace Hopper, who is interested?
+
+0:41:03.5 **Jason Staten** She is very related to compilers.
+
+0:41:05.7 **Safia Abdalla** (laughs) Yes.
+
+0:41:06.4 **Jen Luker** Go forth!
+
+0:41:08.0 **Safia Abdalla** So, yeah, Grace Hopper invented the compiler, she’s super badass and legendary. Her name comes up a lot when you think about women in computing but unfortunately most people don’t know the actual like, revolutionary thing she did was that she invented the concept of the compiler. Prior to her sitting down and saying that you don’t have to write programs in low level machine code, like that’s not a good thing to do, instead you can write programs in a more natural language and then build translators that take that more natural language and convert it into machine code. And if you-
+
+0:41:43.1 **Adam Garrett-Harris** That is so smart.
+
+0:41:44.1 **Safia Abdalla** Yeah, if you think about it, this is like, why we can, this is like, it’s such a huge deal ‘cause it’s why we can build software and why we build websites and why Facebook and Google and all these companies exist.
+
+0:41:56.1 **Jen Luker** As opposed to punch cards.
+
+0:41:57.6 **Safia Abdalla** Yeah, like how hard would it be to build Google in like, assembly language or some other low level language?
+
+0:42:04.1 **Jen Luker** Telling it which transistors to manually turn on and and off.
+
+0:42:07.0 **Safia Abdalla** (laughs) Yeah. And so it’s real interesting. She actually faced a lot of resistance from people who were, really had like a gatekeeping ideology around programming and didn’t want it to be easier for people to do ‘cause there was like a sense of elitism or whatever around it, and I think she hopped between a couple of different companies before she actually landed at wherever it was that she built-
+
+0:42:30.6 **Adam Garrett-Harris** I see what you did there.
+
+0:42:31.9 **Safia Abdalla** What?
+
+0:42:32.7 **Adam Garrett-Harris** “Hopped.”
+
+0:42:33.9 **Jen Luker** (laughing)
+
+0:42:34.8 **Safia Abdalla** What did I say?
+
+0:42:35.8 **Jen Luker** Grace Hopper hopped!
+
+0:42:36.6 **Jason Staten** Oh.
+
+0:42:37.4 **Safia Abdalla** Oh! (laughs) Not intended at all, but I’ll take it!
+
+0:42:40.1 **Jason Staten** (laughs)
+
+0:42:41.5 **Adam Garrett-Harris** (laughs)
+
+0:42:42.2 **Safia Abdalla** But yeah, I think it’s really cool. So that underscores a lot of the basis of compilers which was that you as a person can spend time doing things like high level problem solving and then you give that code that you write that has your high level problem solving to a computer and it takes care of all the nitpicky optimizations and the making it better and all of that. And yeah, that’s like a big deal! A huge deal! So thank you, Grace Hopper.
+
+0:43:09.6 **Adam Garrett-Harris** That’s super cool.
+
+0:43:10.7 **Jason Staten** Yeah.
+
+0:43:11.5 **Adam Garrett-Harris** So, Jason. I want to hear about your experience because I know you took some time to build a compiler in Rust. So what was that like?
+
+0:43:19.9 **Jason Staten** That’s putting a lot on me. I started some of the progress on it and a good place to start with a compiler is actually going and reading the code that you’re given and that first step in there is called lexing and what lexing does is it goes and walks through the code, often character by character, and it goes and tokenizes the things that it finds. \n\nSo if it’s reading through your code it will look like, let’s say we were doing some JavaScript ‘cause why not? If you are lexing and you find the letters “F-U-N-C-T-I-O-N” then your lexer will say, “Oh, I found a function keyword and I’m going to store that.” It’s not adding any additional meaning to it, all it’s saying is like, “I found a function keyword.” There’s no processing beyond that. And then it will find an opening parenthesis and a closing parenthesis. A lot of times those are our tokens of their own, and if it finds a quote then it will know to continue walking along until it finds a closing quote for that thing, and then once it finds that it says, “Okay, I found a string literal.” And that is kind of what the lexing process is, it goes and it finds pieces of your code that are distinct. \n\nSo one way to kind of think about it is like, say you’re looking at your code editor a lot of times certain things are highlighted in there. I’m actually looking at Rust right now, but there’s like FN that’s highlighted and then like, name of the function is highlighted shortly after that. So like, those are all kind of different tokens that exist within the code. It doesn’t assign a lot of meaning to them other than saying, “This looks like this. This looks like an identifier or a number or a string or something.” \n\n And then after you’ve lexed your code, the next step is to go ahead and parse your code with a parser. And a parser goes and it starts at your first token and it knows to say, “Oh, all right. Well if I find a function then what should come after it most likely, it’s either a name of the function if that function happens to have a name, or it’s just like an open parenthesis.“  And so like, a parser starts to go and put those tokens together and start assigning meaning to those. And for me, like that’s always been something that’s gotten combined a little bit more between parsing and then the chapter also mentions semantic analysis and I’ve kind of lumped those in my mind of like, it goes and it takes the tokens and it gives meaning to those things. \n\nAnd oftentimes when you are parsing something you start to produce what’s known as an abstract syntax tree, or AST in some cases, and that is like the hierarchy of how the code is laid out. Code that is inside of a “if” statement. Like you have an if and you have a conditional to that and then you have a block or a body of that if, and within that there is more code and underneath each one of those things there are more and more hierarchies of code until you ultimately get to leaf nodes within there. \n\nAnd once you’ve gone and built out your abstract syntax tree, then you can progress onto some of what Safia was talking about where you have optimization. So if you happen to find, say a mathematical expression, like say your code finds 1+2, your compiler can do an optimization pass to say, “Hey, I know what 1+2 is, and it will always be 1+2, I’m just going to replace those 3 nodes within the abstract syntax tree with a single 3 instead.” It can go and find common patterns and go and optimize those things. It can see like, you’re doing a for loop here, but you’re doing absolutely nothing inside of it. I don’t even need to run the for loop if the for loop has no body on it, most likely. Depending on the language you're working with, obviously, because some for loops actually do have side effects just by looping over them, but that is definitely language dependent and optimizations are a hard problem to solve because you can wind up giving people issues if they are relying on that optimization potentially not happening. \n\nSo it is  definitely a heuristic based thing. And then after it’s done however many optimization passes that it decides to do, then you get into code generation where you go and take that syntax tree and produce some sort of output with it and that can be something that either a native code, so producing assembly language that compilers know how to understand, or it is also something that can be an intermediate language like, say you’re writing Java or C#, they have an intermediate language that their virtual machines know how to execute and you can also go and produce if you are transpiling, which is kind of just a subset of compiling, then I mean, you can go and produce whatever output language that will potentially get run by some other compiler later on. But that’s kind of the process of writing a compiler at a really high level.
+
+0:48:47.7 **Adam Garrett-Harris** So how far did you get and what type of language were you trying to compile?
+
+0:48:54.1 **Jason Staten** So I was following along a guide for, there is a language tool set that’s actually brought up in the book called LLVM. And LLVM is short for Low Level Virtual Machine and it is a way to write, it’s kind of like a virtual machine that’s super low level in some way, or like a base subset of stuff that you can write to instead of writing directly for a given CPU architecture. So instead of writing for Intel or AMD or something on that front, if you write to LLVM then it will be cross compatible on that front in some cases.
+
+0:49:34.8 **Adam Garrett-Harris** So basically, are you saying you compile from something like Java to LLVM? And then it’s like a language that can run on any computer?
+
+0:49:45.5 **Jason Staten** Yes, I guess Java would not be the best example ‘cause it... but like, a language at the same abstraction or whatever you want to say. But they have a tutorial on their website that I can go and link to called Kaleidoscope, that they have you workout to build this language that kind of looks similar to Python when you write it. Like you use like def to create a function, and it’s super basic. It only has numbers. It doesn’t have string literals or anything in it, and they have you work through the process of writing a lexer and parser and producing something that LLVM can take over from there and create workable machine code. \n\nAnd I got through the process of writing a lexer on it. I want to continue onward. Actually that was something that I attempted to stream over Twitch and it was pretty ugly. I’ll link to it as well but it was mostly me just struggling with reading some things in with Rust. So it’s not that exciting but I have since found better ways of working with code to lex it. So I’m going to continue on that process actually, because I want to make it happen. Like this tutorial makes it seem so straightforward but it’s also written-
+
+0:50:58.7 **Adam Garrett-Harris** (laughs)
+
+0:50:59.2 **Jason Staten** For… They have both an OCaml tutorial and a C++ and it’s kind of interesting because Rust falls kind of somewhere in between where it's got a nicer type system than C++ so some of its things are well suited there, but then, and more like OCaml-esque but at the same time they’re using a parsing library that OCaml has available that Rust does not. So it’s like, “Just use this thing.” And I don’t have that available.
+
+0:51:26.4 **Adam Garrett-Harris** So at what point in the compilation process does the compiler find errors?
+
+0:51:32.2 **Jason Staten** It can find it at really any step within it. So if you’re lexing and you’re searching for tokens and it comes across something that it doesn’t understand, like right there it can bail out and it can say, “You tried to go and put an emoji in here and this language does not support emojis” or something.
+
+0:51:50.6 **Adam Garrett-Harris** Oh, okay.
+
+0:51:51.6 **Jason Staten** And then parsing you definitely are more likely to run into problems where like it’s gone and parsed a token but then you have put something incorrect like, say you threw a semicolon between your “if” and its parenthesis after it then it’s going to say like, “Found unexpected semicolon at this position.” Like, that’s probably more common where you’ll run into it. I don’t, I guess optimization it probably shouldn’t be. Like, once you’ve parsed out something successfully, like, optimization should be safe pass over stuff, but those are kind of the places that I can think of. I guess during optimization you could go and find things to warn about, like for example, Rust will go and warn you if you are doing something you probably shouldn’t that can be a time to also produce warnings during your optimization. So you’re not actually changing code but you are at least letting the user know like, “Watch out.”
+
+0:52:46.4 **Adam Garrett-Harris** Yeah.
+
+0:52:47.4 **Safia Abdalla** Shout out to Jason for being very diligent. Like I said, I really admire the way he’s always on top of his learning and just like very proactive about it. I definitely need to do way more of that. I think Jason’s a great example of that. So, thank you Jason for putting in that work and sharing it.
+
+0:53:01.4 **Adam Garrett-Harris** Yeah. Everyone be more like Jason.
+
+0:53:04.0 **Safia Abdalla** Yeah! Everyone be like Jason.
+
+0:53:06.5 **Jason Staten** (laughs) Everyone needs to be more like everybody else on this. Like everybody does a great job. Like, I mean, Safia like, going back to you you’re digging in at like node internals and stuff like that. And Jen, you’re always giving great talks all over the place. And Adam, like you’re organizing this show and many other ones. So everybody has amazing things that they’re doing.
+
+0:53:30.2 **Safia Abdalla** Hoorah!
+
+0:53:30.9 **Jason Staten** Yeah. Go us!
+
+0:53:32.5 **Jen Luker** (laughs)
+
+0:53:32.9 **Adam Garrett-Harris** (laughs) Well the rest of the chapter kind of gets into garbage collection and some things like that that I read, but honestly I don’t have much to say about. It’s good to know that it exists and I don’t work with garbage collection that much so I don’t have anything to say about it.
+
+0:53:48.8 **Jen Luker** Isn’t it awesome we don’t have to work with garbage collection much? Is pretty much-
+
+0:53:52.4 **Adam Garrett-Harris** Yes!
+
+0:53:52.6 **Jen Luker** What that portion of the chapter said.
+
+0:53:55.0 **Jason Staten** I-
+
+0:53:55.5 **Adam Garrett-Harris** Yes!
+
+0:53:56.2 **Jason Staten** I mean in one way you kind of do work with it, but it works so well you don’t really have to worry about it that much. So...
+
+0:54:02.0 **Jen Luker** Well, I don’t have to manually clean up my own trash apparently, so we’re good.
+
+0:54:06.8 **Jason Staten** Yeah.
+
+0:54:07.4 **Adam Garrett-Harris** (laughs) If only life worked like that.
+
+0:54:09.9 **Jen Luker** I need life to work like that.
+
+0:54:11.4 **Adam Garrett-Harris** I guess it’s called “Get a cleaner.” A housecleaner.
+
+0:54:16.2 **Jen Luker** (sigh) If only.
+
+0:54:18.3 **Jason Staten** That has been an enlightening thing about learning Rust. I’m not going to get too much into all the topics, but if you are used to working in a garbage collected language, Rust is not one and so it puts you in a very different mindset about what you’re actually doing with things. And simply just thinking about it and not necessarily saying like, “You have to write in a language like this because it’s super performant and you have all sorts of control.” But it is enlightening at the same time.
+
+0:54:44.7 **Jen Luker** I learned to program on C++ so I had to handle that back in the day, and therefore I greatly appreciate the fact that I don’t have to do it now.
+
+0:54:53.5 **Jason Staten** Okay, so imagine C++ but you don’t have to write malloc or free.
+
+0:54:59.1 **Jen Luker** (gasp) C?
+
+0:55:01.1 **Jason Staten** And you’ll do malloc in free and C, but instead Rust compiler will actually do those things for you. It’s just embedded in the type information. So-
+
+0:55:11.1 **Adam Garrett-Harris** Hmm.
+
+0:55:11.9 **Jason Staten** You still write like-
+
+0:55:12.4 **Jen Luker** So when it compiles it just adds that stuff for you? “Oh, I see you did something. We’re gonna just clean that up for you.”
+
+0:55:18.6 **Jason Staten** Yes, but it doesn’t do garbage collection but instead, just by the way that you write your code, it gives it the information it needs to know when you allocate and free memory on its own and lets you do it in a safe way so you’re never going to go and try and read from memory that you just freed or something, so… It does a lot of handholding for you. So it’s still not like at the same raw level of C or C++ where you’re-
+
+0:55:43.0 **Jen Luker** Or objective C.
+
+0:55:45.2 **Jason Staten** Yeah. Unless you want to, then you can always break out and go wild in Rust if you want to, but I’ve only had one situation that I’ve had to do that and it was more of an optimization than a necessity.
+
+0:55:57.5 **Adam Garrett-Harris** Cool. Well I don’t have anything else for this chapter unless you all do.
+
+0:56:00.7 **Jen Luker** No, I think we’re good.
+
+0:56:01.7 **Jason Staten** Any more tangents, Safia?
+
+0:56:03.1 **Safia Abdalla** Not at the moment. I’m all tangented out, admittedly I got four hours of sleep last night and I think I’m hitting my wall. (laughs)
+
+0:56:10.4 **Adam Garrett-Harris** Well, let me close the show out. \n\nSo, thanks so much for listening. You can follow the show on Twitter @BookBytesFM and you can follow all of us on Twitter as well, and please subscribe in your favorite podcast player and rate the show if you liked it. And you can also find the transcripts online at orbit.fm/bookbytes/13? And actually we’ve got a review this time if someone wants to read that.
+
+0:56:33.4 **Safia Abdalla** I can do it. All right. We’ve got a review from Jake Lingwall who says, “I was confident that I’d subscribed to every developer podcast I needed. It seemed like many angles from tech to community to interviewing, etc were covered. And then I found BookBytes and realized that the hole was missing in my lineup. I read tech business books all the time so this podcast was right up my alley and now it’s part of my regular rotation. Looking forward to being part of the BookBytes club for a long time.” Thanks for being a part of the club, Jake! And be sure to share this podcast with your friends and have them be a part of the club, too.
+
+0:57:07.8 **Adam Garrett-Harris** Yeah. I think this is a really awesome review, it’s cool to know that we’re kind of filling in a hole. That’s kind of why I started it. And Jake is a friend of the show, so Jason and I know him, worked with him. So, thanks!
+
+0:57:20.5 **Jason Staten** Thanks, Jake.
+
+0:57:21.0 **Safia Abdalla** Thanks for making us feel good about ourselves.
+
+0:57:23.3 **Jen Luker & Safia Abdalla** (laughing)
+
+0:57:26.3 **Adam Garrett-Harris** Yeah. That’s good. All right, well I’ll see you all next time. We’ll talk about software patterns and principles.
+
+0:57:30.9 **Jason Staten** See ya.
+
+0:57:31.4 **Safia Abdalla** Bye, folks.
+
+0:57:32.5 **Jen Luker** Bye.
+
+0:57:33.0 **Adam Garrett-Harris** See ya.
+
+(Exit music: Electro Swing)
