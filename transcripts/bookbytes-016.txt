@@ -1,0 +1,443 @@
+﻿(Intro music: Electro Swing)
+
+0:00:12.4 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. We’re continuing our summer of Imposters’ Syndrome by talking about “The Imposter’s Handbook” by Rob Conery, which is a CS primer for self-taught programmers. Today we’re going to go over the chapters about software design patterns and software design principles.
+
+I’m Adam Garrett-Harris.
+
+0:00:35.9 **Safia Abdalla** I’m Safia Abdalla.
+
+0:00:37.2 **Jen Luker** I’m Jen Luker.
+
+0:00:38.2 **Jason Staten** I’m Jason Staten.
+
+0:00:39.3 **Adam Garrett-Harris** All right. So let’s talk about first what is software design patterns? And then just an overview of something interesting or new that we learned.
+
+0:00:52.1 (Typewriter Dings)
+
+0:00:53.7 **Jason Staten** Any takers on it?
+
+0:00:54.6 **Adam Garrett-Harris** I think we kind of talked about software design patterns when we went through “Apprenticeship Patterns” because those are soft skills versions of the same thing.
+
+0:01:02.8 **Safia Abdalla** Yeah.
+
+0:01:03.6 **Adam Garrett-Harris** Where it’s like a common solution to a common problem.
+
+0:01:07.1 **Safia Abdalla** Yeah, that’s a pretty good concise definition I was kind of a little speechless, because I was struggling to come up with a good definition of design patterns, and that was actually one of the things that I really liked about this chapter and what was new to me. There were patterns that I already knew and things that I was using that I never just had the words for. So as I was reading this chapter it was really great to say, “Oh. That design that I implemented that I really didn’t have like, a name for? That’s what it’s called.” Or that thing that somebody was talking about that I was like, “Oh, that seems like a useful pattern. That’s what it’s called.” So that was one thing that I really liked about the book is that it gave me the words to use to define the things that I already, kind of, had experienced or seen.
+
+0:01:52.0 **Adam Garrett-Harris** Uh-huh, interesting. So did you study this in college in your computer science degree?
+
+0:01:57.6 **Safia Abdalla** Yeah! So that’s a great question ‘cause actually… let me think. No, I did not. There weren’t any classes at the university that I went to that were just like, software design. There was a software engineering class but it didn’t talk about this particular set of things. This was my first time like, seeing the term, “Facade”, I think that’s how it’s pronounced, used to define the pattern of an abstraction that hides implementation details. Like, you know, that’s… Again, like I knew the definition but I didn’t know the word so it was great to kind of see that. Or like, a Bridge or a Composite.
+
+0:02:35.5 **Adam Garrett-Harris** Yeah that’s interesting.
+
+0:02:36.7 **Safia Abdalla** Yeah.
+
+0:02:37.2 **Adam Garrett-Harris** I feel like I didn’t really do any of these things until I learned about them first.
+
+0:02:42.3 **Safia Abdalla** Huh.
+
+0:02:43.1 **Adam Garrett-Harris** So when I was fairly early in my career… Yeah, I was just making stuff up. I don’t feel like I did anything this good. And then I read “JavaScript Design Patterns” by Addy Osmani and I started learning about these things like Façade Pattern and Module Pattern, Revealing Module Pattern, and stuff like that. Factory pattern and Flyweight, things like that. And I was like, “Oh, that’s really smart. That solves a problem that I’ve encountered but I’ve just never come up with a solution to it.”
+
+0:03:15.8 **Safia Abdalla** I should clarify. It’s not like I used every pattern in this chapter in my career. Like some of them were definitely new to me, both in like definition and design, and also the term. But, you know, for some of them I had used the pattern I just never really knew what to call it.
+
+0:03:33.0 **Jason Staten** For all the things that my university skipped over, the Gang of Four “Design Patterns Book” was actually one of the things we spent a bit of time on. And while I learned about them, didn’t necessarily have a use case for all of them, but they are kind of those things that sit in the back of my mind that there is like, a common pattern for so like, they can resurface. And then, kind of like Adam said, where not so much, not doing them before learning about them but knowing about some of the design patterns, it does give a chance to intentionally go and do them. So that’s the nice thing for me is that you can think about a specific scenario and being able to have some level of pattern to approach it with. And you definitely don’t need to use all of them. Many of them actually serve a similar purpose as like a way to go and extend functionality of something that you already have within your codebase without going and making large changes across your codebase because of it. Kind of increasing maintainability, or at least that’s the goal of some of them.
+
+0:04:40.2 **Safia Abdalla** Yeah, so I have a question from say, a newer engineer to someone who’s worked more in the industry. When you’re having design discussions with your workmates and you’re trying to convey that you want to use one of these patterns for something you’re implementing, do you use the actual term? Like, do you say, “Oh, let’s use the Mediator Pattern to do x,y,z.” Or like, is this part of your lingo? Or generally not?
+
+0:05:08.9 **Jen Luker** Some of these are. Like, Constructors and Factories and Builders and things but once we got deeper in and started talking about like, Mediators and you know, Facades, those I hadn’t heard of before. Flyweight? Not even close.
+
+0:05:23.3 **Safia Abdalla** (laughs)
+
+0:05:24.3 **Jen Luker** But Decorators? That’s a big conversation in JavaScript right now.
+
+0:05:28.4 **Safia Abdalla** Yeah.
+
+0:05:29.4 **Jen Luker** You know, Composites? So I mean, it’s not so much “We’re gonna use this pattern.” As much as you just say, “I’m gonna use a Factory.” And people know what that means.
+
+0:05:36.5 **Safia Abdalla** That makes sense.
+
+0:05:37.9 **Jason Staten** Similar for me.
+
+0:05:38.7 **Safia Abdalla** Yeah.
+
+0:05:39.7 **Jason Staten** It’s... a few of them that are more common, definitely I think Decorator is one of the more common ones and a Factory, I’d say. And I guess, for something like Flyweight I don’t think that’s ever come up as a topic. Like I had to relook at the definition of it and it’s probably a factor of, most of the time, I’m not in need of something like the Flyweight. But I did go and find a pretty good example of where it can be applicable, though.
+
+0:06:11.1 Because even with Rob’s example I wasn’t totally solid on it. I’m like, “Why would I want to do this thing?” Other than it made it so you could instantiate some more instances, or like, you’d instantiate lots of instances and share a bit of memory and there’s actually a website that’s called Game Programming Patterns that covers the Flyweight in terms of actually rendering a game.
+
+0:06:36.2 So if you think about a game that has a forest-type background to it and in the forest there are thousands of trees, or just an immense amount of trees, and you have to draw those things through the GPU, if you have one hopefully you do at this point, and to actually go and spend the time to draw all those things would be really expensive to do and GPUs now have what’s called instance rendering where you can say, “I actually want to draw the same tree over and over and over, I just want to put it in different places.”
+
+0:07:09.6 And so it’s kind of a form of doing the Flyweight where you go and give like, the actually polygons that are supposed to get rendered, those are all identical it’s just where location-wise it gets rendered, and so it breaks the Flyweight up into two different parts for a model. You have first your intrinsic state which is a shared state amongst everything, like, the polygons that need to get drawn. And then each model also has extrinsic state, which is a unique state for each model being something like its position, and I thought that that was a pretty good example. I’ll share a link with all of you because it was insightful to me.
+
+0:07:46.5 **Jen Luker** Please do, I’m really interested in that.
+
+0:07:48.8 **Adam Garrett-Harris** Can you explain really quick what Flyweight is exactly in a more general sense?
+
+0:07:54.4 **Jason Staten** So a Flyweight is a way to share memory across a whole bunch of object instances. So say you’re newing up a whole bunch of objects. Rob does give the example of like, a query-type provider, and those happen to have a list of tables in them. I have to go and look up exactly which page it’s on, but you go and are able to reuse that same piece of static memory across all of the instances as if each instance had that state within it. And so it saves you a lot of memory, because to go and to load all of the tables from the database every time you wanted to make a query would be really expensive, but if just the first time it loads it and then the rest of the time they just share it, that’s what the Flyweight does, is it’s sharing memory but it’s kind of behind the scenes.
+
+0:08:46.5 **Adam Garrett-Harris** Okay. And I guess it’s called Flyweight because it kind of loads up once and then after that it has momentum because it’s already ready to go.
+
+0:08:56.5 **Jason Staten** Yeah.
+
+0:08:57.7 **Adam Garrett-Harris** Cool. What other patterns did y’all find interesting?
+
+0:09:01.2 **Safia Abdalla** I found the Composite Pattern quite interesting, which is basically a pattern that links parent/child relationships. So it allows you to develop relationships for things wherein if the child doesn’t exist the parent can’t either. And the example that the book showed, it’s on page 252, is example of a connection pool for a database which is basically a way for keeping a certain number of connections to your database alive that you can use when you’re executing queries so you don’t have to reconnect to the database every time.
+
+0:09:41.6 I actually found it really useful ‘cause we were talking about connection pools at work a while back and we were talking about some bug that we were dealing with and, at the time, I hadn’t realized that it was a Composite Pattern. And in hindsight, knowing this would have kind of helped me understand things a little quicker. So it’s just kind of cool to see an example that was really direct to me and also the word for what that design pattern was.
+
+0:10:08.9 **Adam Garrett-Harris** Yeah, that’s cool.
+
+0:10:10.2 **Jason Staten** Yeah, nice to be able to put a name to something. Something that you’re doing.
+
+0:10:14.8 **Safia Abdalla** Yeah.
+
+0:10:15.5 **Jason Staten** For me, one of the things that I didn't quite grasp was the Adapter versus Bridge and what the major difference between those two patterns was, and I looked over the code and it was kind of clear? But not totally.
+
+0:10:32.6 The major difference that I was able to find, after spending some time on some of the stack overflow and software engineering stack exchanges, was that the Adapter is for making something fit another interface. So I went and did the Adapter Pattern in Rust and I kind of had the notion of an .mp3 file and an .ogg Vorbis file and say they were implemented from separate libraries or something like that, like one from /lib/mp3 and the other one from /lib/ogg or something. And I wanted to use those things under the same interface, an Adapter would allow me to do that; to make them both be able to play their audio even though their underlying implementations might be different, and actually, in Rust, in order to do that it’s just a matter of implementing a trait. So rather that actually adding some sort of wrapping class, traits kind of take place of it, but it something like Java or C# or even JavaScript, if you wanted to make that thing fit you might have to wrap it with something.
+
+0:11:42.1 And a Bridge, on the other hand, is something that you would implement before the alternatives are implemented. And what that allows you to do is code up almost like an adapter itself, but that’s built against an interface. So it’s built kind of two levels deep and what that allows you to do is make changes to what the bridge provides, but because it’s implemented against the interface, the interface stays the same, but the Bridge is able to change. And I guess I haven’t found myself actually ever needing to use a Bridge but, in simplest terms, the Adapter is for connecting things that have already been implemented. And the bridge is designed for things that have yet to be implemented but you know there are going to be lots of implementations.
+
+0:12:30.1 **Adam Garrett-Harris** Oh, okay. Interesting. So those two things almost sound, now that you explain it like that, sound similar to the one I wanted to talk about which is the Façade Pattern. Do you see some similarities there? Because the facade pattern is kind of putting a bit of code between some other code. So it’s a façade to that other code. And I think, in general, the book says it hides implementation details. So I guess it kind of makes it simpler, but it also allows you to change out what is behind the façade.
+
+0:13:02.4 **Jen Luker** It’s more like you’d use a Façade to choose which adapter you’re going to use. So you would pass your entire query to the Façade, the Façade would be the one that’d say, “Okay, well this is what this is, so we’re going to use the JsonAdapter.” Or, “This is what this is, so we’re gonna use the XmlAdapter.” And that Adapter would then talk to the database it needs for those purposes.
+
+0:13:24.9 **Adam Garrett-Harris** Okay.
+
+0:13:26.1 **Jason Staten** So that Façade happens to be, or have a Factory behind the scenes that is allowing multiple implementations to be used across a Bridge?
+
+0:13:35.5 **Jen Luker** Yes!
+
+0:13:36.3 **Adam Garrett-Harris** (laughs)
+
+0:13:36.9 **Jason Staten** All right.
+
+0:13:37.8 **Jen Luker** So you have the Façade that you just tossed stuff at, the Façade says, “Okay, this is the Adapter we need.” And then the Adapter uses the Bridge to actually connect to the portion of the code that we need to talk to the database.
+
+0:13:49.2 **Jason Staten** Yeah, and all that messy stuff that goes on back there, that’s kind of the whole notion of the façade, is kind of simplifying the interface of something so users don’t necessarily have to deal with it, or know about the implementation details which can sometimes be really good. And sometimes you do need to expose the internals, but if you think about something like Babel versus the Babylon parser. That will, it kind of covers up all that. It’s a Façade in front of it that lets you work nicely with it and you don’t have to concern yourself with all the details of the parser and instead you just say, “I want these plugins.”
+
+0:14:26.3 **Adam Garrett-Harris** Yeah. I feel like I’ve done kind of a simple version of a façade before where… I don’t know, I have an API coming in with certain data and maybe the endpoint isn’t even built yet, so instead while I’m waiting on the endpoint to be built, I make a Façade and, it’s probably just looking at a .json file or something and then returning me stuff, and I’m building a Façade for the way that I want the API to look, and then after the API is built if the data comes back slightly differently that’s fine. The Façade can just rearrange it a little bit and pass it on.
+
+0:15:02.2 **Jen Luker** I feel like that’s what a mock is.
+
+0:15:04.1 **Adam Garrett-Harris** Yeah.
+
+0:15:05.0 **Jason Staten** I mean, I guess that that would, in some ways, fall under it because you’re not changing details under the hood. I feel like Façade is also kind of a generic name for a pattern, because I mean it definitely allows something like mocking, but also I mean, mocks are a form of the Adapter Pattern in some sense in that, like, you have a fake implementation of an interface that’s programmed against.
+
+0:15:31.9 **Adam Garrett-Harris** Yeah. Yeah, I feel like Façade might be an overloaded term.
+
+0:15:35.5 **Jason Staten** And there’s… Really, I feel like, a lot of overlap amongst all of these. Or like, they’re kind of… I don’t know.
+
+0:15:42.7 **Jen Luker** A lot of them are similar it’s just where in the level of implementation is it actually located.
+
+0:15:49.2 **Jason Staten** Mm-hmm (affirmative).
+
+0:15:49.7 **Adam Garrett-Harris** Yeah. Jen, did you have one that you found interesting?
+
+0:15:53.2 **Jen Luker** I thought I did the Flywheel (laughs).
+
+0:15:54.7 **Adam Garrett-Harris** Oh!
+
+0:15:55.8 **Jen Luker** Except-
+
+0:15:56.0 **Adam Garrett-Harris** Flyweight.
+
+0:15:56.5 **Jen Luker** (laughs)
+
+0:15:57.8 **Adam Garrett-Harris** Yeah. Oh, I thought Jason did that one?
+
+0:16:01.5 **Jason Staten** I talked a little bit about it.
+
+0:16:03.6 **Jen Luker** Jason did do that one-
+
+0:16:05.3 **Adam Garrett-Harris** (laughs).
+
+0:16:06.1 **Jason Staten** (laughs)
+
+0:16:04.8 **Jen Luker** But I was the one who mentioned it. (laughs)
+
+0:16:07.6 **Adam Garrett-Harris** Cool. All right, well, anything else about this chapter?
+
+0:16:10.6 **Jen Luker** You know, some of the portions at the end I really liked. One quote, more specifically, from it says that, you know, “As you implement patterning as we’ve done here, the code you write tends to become more generalized and you end up writing a lot more of it just to do a simple operation. This is not what these patterns are for. A design pattern should make things simpler. If you implement one, have a look at your code before and after and see if it makes more sense or less.” So I liked the idea of, you know, diving into the next chapter of YAGNI in that you don’t necessarily need to dive into these patterns until the complexity gets to the point that these actually simplify them.
+
+0:16:53.6 **Adam Garrett-Harris** Yeah, that’s a good point. You don’t want to use them just for the sake of using them, or to look smart.
+
+0:17:00.4 **Jason Staten** I agree with that, and that is also another why things like GIT are so amazing because if you go and, before you refactor some of your code into some of these design patterns, you go and make the change and then all you have to do is roll back quite simply and, you know, if you said, “This was not really worth it to spend all this time on a Façade with a Factory that bridges.” Then you can roll back out.
+
+0:17:27.1 **Jen Luker** So since you mentioned GIT, you opened that can of worms and I’m going to totally take the…
+
+0:17:31.8 **Jason Staten** Take the wheel.
+
+0:17:33.0 **Safia Abdalla** (laughs)
+
+0:17:33.0 **Jen Luker** Take the, yeah, I’m taking Safia’s tangent for this section. (laughs)
+
+0:17:36.8 **Adam Garrett-Harris** (laughs)
+
+0:17:37.8 **Jen Luker** And I’m gonna say that one of my favorite uses for GIT is specifically that. To be able to make those refactors and really see if the change made a difference. And I also use GIT as a way to adventurously make refactors. It’s how I learned to understand webpack as deeply as I do, it’s because I wasn’t I wasn’t afraid of changing it because I’d just roll back if I break everything. So, I learned a lot about how my programs work, how webpack works, how Babel works based on the benefits of being able to just back up and refactor at will. And that’s the end of my tangent.
+
+0:18:23.2 **Jason Staten** I’ll take that and wrap it right back into the chapter. So, he mentions a pattern that’s called The Memento Pattern and he didn’t actually describe it in the book but he said it’s yet another that’s within the Gang of Four, and I’ve looked up what it is and it isc a form of undoability. So-
+
+0:18:41.1 **Jen Luker** Yay!
+
+0:18:42.1 **Adam Garrett-Harris** (laughs)
+
+0:18:42.3 **Jason Staten** Yes! (laughs) And so GIT very much allows you to do that where The Memento Pattern is something where you can say, “All right, I want kind of a saved state for this thing so that way I can roll back to that point whenever I want to.” And then the object itself knows how to use that memento to kind of rehydrate itself back to the original state. So, for example if you do a ‘git commit’ and you get yourself a SHA, then you have a state that you can tell your git head pointer to point at whenever you want to, much like The Memento Pattern.
+
+0:19:16.1 **Jen Luker** Which, again, is great for teaching yourself things by breaking it and fixing it again.
+
+0:19:21.1 **Jason Staten** Yes.
+
+0:19:21.4 **Adam Garrett-Harris** Cool. Let’s go to a sponsorship real quick.
+
+So this episode of BookBytes is brought to you by V School. It’s established in 2013 and it’s Utah’s highest ranked coding boot camp and the first of its kind in Utah. It’s actually GI Bill approved and one of only two coding boot camps nationally to partner directly with Adobe on inclusion-based coding scholarships.
+
+You can choose to learn full-time or part-time in the evenings and completely immerse yourself in learning new skills. They really encourage you to take a campus tour. It’s in Salt Lake City. You can come meet their students and faculty and even shadow a class and see if it’s a good fit for you.
+
+And if you go visit, tell them you heard about them on BookBytes and it will help support the show.
+
+V School. Life awaits! Launch a career in code, design, or data.
+
+0:20:12.7 And thanks to V School for sponsoring the show. All right! Software Design Principles.
+
+(Typewriter Dings)
+
+0:20:22.4 **Safia Abdalla** Favorite chapter out of the pair. Again, because it referenced things that I had heard people discuss recently and I had done the thing where I kinda like, was in the meeting where it was mentioned and I nodded and pretended that I knew what people were talking about and then I went back to my desk and like googled what it was to try and figure it out. Which we’ve all done at some point. (laughs). But in that case, for me, it was the YAGNI pattern which touches on what we were talking about earlier with respect to not adding unnecessary complexity to your software if you don’t know that you’re gonna need it.
+
+0:20:58.8 And I think one of the most common ways that I’ve been stabbed with this is attempting to like, future-proof things in anticipation of a use case that might come up and then just implementing really terrible, messy code and the use case that you imagine never comes up, and you didn’t really need the thing that you ended up writing.
+
+0:21:21.0 **Adam Garrett-Harris** For those of us that can’t go google right now, what is YAGNI stand for?
+
+0:21:24.7 **Safia Abdalla** So YAGNI stands for “You Ain’t Gonna Need It!”
+
+0:21:28.0 **Adam Garrett-Harris** (laughs)
+
+0:21:30.2 **Safia Abdalla** Which is a…
+
+0:21:31.4 **Jen Luker** Favorite of mine. (laughs)
+
+0:21:33.5 **Safia Abdalla** We’ve got another friend of the YAGNI.
+
+0:21:36.2 **Jen Luker** Absolutely! Both YAGNI and DRY, which is “Don’t Repeat Yourself”, are definitely favorites of mine, but you do have to be careful with DRY, but let’s go back to YAGNI because I love YAGNI, I use it all the time.
+
+0:21:55.0 **Adam Garrett-Harris** Yeah, I actually had to google this a couple weeks ago when I heard someone at work say, “YAGNI.” And I went and googled it and I was like, “Oh yeah, okay.”
+
+0:22:03.2 **Jen Luker** The basic is you can’t future-proof, and if you future-proof too hard then you end up with a lot of code that you don’t necessarily need, like you said before. The benefit of this is you only code what you need right now, and if you end up getting to the point where you’re going to need it later, code it then. I mean, two separate stories and therefore you can kinda test out that the concept that you’re working on, right now, works before you try to expand on it later. If you spend too much time future-proofing you end up wasting lots and lots of time and you add lots of complexity to your code for something that you could have just whipped out real fast and been done with and never touched again, possibly.
+
+0:22:50.0 **Safia Abdalla** Yeah, and I think, probably, software engineering might be one of the things where YAGNI is the most needed just ‘cause it’s so easy to add another column to the database or another method to this class, or another, you know, prop to this component. Like, it’s so easy to just go down that rabbit hole that you have to like, restrain yourself from adding extra things that you’re not gonna necessarily need at the moment.
+
+0:23:20.6 **Adam Garrett-Harris** Yeah, unlike with like, road construction you don’t have to get approval to go buy more cement, just in case you might need it, need it (laughs).
+
+0:23:28.1 **Jason Staten** With YAGNI, much like a logical fallacy when you’re debating with somebody, don’t use YAGNI as your sole reason for shutting somebody down-
+
+0:23:40.4 **Adam Garrett-Harris** Oh!
+
+0:23:40.3 **Jason Staten** When they do want to go and implement something, because that is pretty rude to say. Like, if they have something with an eye towards the future and your counter argument is, “You ain’t gonna need it.” Then that can be not productive. But rather, have that discussion with them because, oftentimes, like, if somebody is seeing something and you’re not, it’s good to go and at least come to the same page so that way you can both agree or disagree that you’re going to need something in the future.
+
+0:24:07.2 **Jen Luker** Absolutely. That’s definitely a good idea to have that discussion. I’ve also been in conversations with people that have just gotten excited about, you know, an aspect of a program and they say, “But well we could do this! And we could do that! And we could add this! And we could change this! And we could modify it in order to be able to do all of these things!” When the actual goal of the program was just to do this one thing. And yes, maybe those things might be useful in the future, but if we’re not going to be potentially needing those things in the next 3 months, 6 months, 9 months, 5 years? Then don’t spend the time, right now, getting those implemented. And I think that that’s where it’s really supposed to be used. You know?
+
+0:24:49.5 And I really like the fact that they’ve brought in test-driven development as a way of enforcing YAGNI in that if the code that you’re writing and the implementation that you’re using doesn’t actually touch a bit of code, then you don’t need it. So the use case that’s required is what your test defines, and if you don’t have to test it,, if you don’t have to touch it, if you don’t touch it, then you don’t need it.
+
+0:25:15.9 **Safia Abdalla** Yeah. Can I go on a side rant about TDD?
+
+0:25:19.5 **Jen Luker** Yes.
+
+0:25:20.1 **Jason Staten** Yes, please.
+
+0:25:20.5 **Safia Abdalla** (laughs) So, I’ve been… I’ve struggled with TDD for a long time. Like, at internships, and open source work, stuff like that. And one of the things that I always run up against is the fact that TDD requires that you outline the design for your code in tests, and I’ve always tended to be the person who, as I’m thinking through a problem, I’ll prototype it in code and then evolve it to a complete implementation, not write a spec for it and then write the implementation. So I’ve always, you know, struggled and I think fairly struggled with TDD just ‘cause it doesn’t align with the way I think; which is at first, I think about how to solve a problem and tinker with the different solutions and then write the test for it. Not, you know, write the exam and then study for it. Do you get what I mean?
+
+0:26:18.7 **Jen Luker** I think a couple different things. So there’s two aspects that I really think of when I go for test-driven development. One of them is that it is a paradigm shift, just like going to like, state-based architecture was a huge paradigm shift. Same thing goes with test-driven development. There’s some that say you have to write all of your tests before you start coding and that’s like, ridiculous. I like to start with, you write just enough tests to get your first fail. So at that point your tests starts with, you know, does one equal false? So it’s just like, a very simple did you instantiate a class or did you create anything whatsoever? And it’s going to fail so then you write the thing to make it pass, you know? Does it exist? True! Good enough, okay. So now what’s the next portion? So it’s step-by-step, you end up doing your tests as you’re writing your code.
+
+0:27:12.6 For me, I like to prototype out my code through code comments so I start commenting out like, “Well I need this and I need this, and if I’m going to do this and I’m going to do that.” And my code gets more and more commented as I get deeper into the implementation, but as I’m getting to that level my tests get more and more detailed as well. So, for me, test-driven development is I write just enough a test to be able to get the next part failing and then make it pass. It’s not getting it all written and getting it all completed and then starting to code the thing that you’re coding.
+
+0:27:50.2 **Jason Staten** So some spoilers for both of you, that in the testing chapter he actually goes through a big TDD advocate, Brad Wilson, and he goes through the implementation process and, much like you just said, Jen, he outlines kind of his desired flow of code just in comments that sit within a test and kind of figures out just the general flow of things and like, how he wants to approach it before even throwing down actual code of something.
+
+0:28:22.4 **Jen Luker** Mm-hmm (affirmative).
+
+0:28:23.1 **Jason Staten** And also what I’ve found too, is as people get more and more comfortable with TDD they start taking off bigger and bigger chunks so you’re not asserting always the simplest possible thing, like, every single time.
+
+0:28:37.7 **Jen Luker** Right.
+
+0:28:38.1 **Jason Staten** To the point where it’s kind of ridiculous. It’s like, the exercises like doing the bowling game up front to get the pattern down, is excellent. But in time, you realize, “No, I don’t need to assert zero is equal to zero.“
+
+0:28:51.8 **Jen Luker** Right.
+
+0:28:52.5 **Jason Staten** Necessarily. Like, I mean if that’s what you need and that’s what makes you productive… But you have to find your level of granularity to work through things; or even if the solution is really well suited to TDD. I mean, occasionally, for me, it’s just like, figuring out an API or something like that and I’m like, “What do I even want this thing to look like?” Prior to necessarily implementing anything about it’s ‘cause it’s just knowing like, the actual DSL that I’m working with.
+
+0:29:17.2 **Safia Abdalla** Yeah, so that’s interesting. It seems like, you know, a TDD is really, really is you’re still doing that prototyping and that exploration that I was talking about, but you’re doing it in the context of a test suite, not you know, your actual codebase.
+
+0:29:31.6 **Jen Luker** And I say I do them both at the same time. I actually am writing the codebase at the same time. As I’m writing increasingly more complex tests, I’m writing increasingly more complex code. So I do them hand-in-hand, they go together. It’s just that the part I’m writing for my test is like, just barely half a step ahead of what my code is doing.
+
+0:29:53.6 The second point that I wanted to make about TDD is that I don’t think it’s always necessarily. I think that it benefits me the most when it gets beyond something really basic. So once I actually have to start thinking about laying something out, that’s when I start writing tests. And that may or may not be what everyone does. I definitely see the value in TDD, but if it’s something that’s really simple, I already know how to implement it, it’s three lines, I don’t need a full test to make sure that I create this code in a way that’s testable and clean and concise and all the other benefits of TDD. So I don’t always use it. And yeah.
+
+0:30:41.6 So that may be “Jen’s Unpopular Opinion of the Day” but, as soon as I have to sit down and actually architect something tests really help me kind of find those cases that I didn’t think about before and may not have until I ran into them later. So it kind of helps me architect things better from the beginning. That’s when I use TDD.
+
+0:31:05.0 **Safia Abdalla** No, that’s makes total sense. All right, I’m going to stop this tangent now because we’re getting close to the mark and it looks like we’ll be able to have a super extensive discussion on tests. And the-
+
+0:31:14.8 **Jen Luker** Later.
+
+0:31:15.3 **Safia Abdalla** In future episodes, so stay tuned for that, listeners.
+
+0:31:18.0 **Jason Staten** That was just a preview.
+
+0:31:20.1 **Adam Garrett-Harris** (laughs) It was just a tribute.
+
+0:31:22.9 **Jason Staten** (laughs)
+
+0:31:23.7 **Jen Luker** (laughs) Oh, throwback to React Rally.
+
+0:31:27.2 **Jason Staten** So, on 276, they talk about the wrong abstraction and specifically, the quote from Sandi Metz is one that I’ve heard many a time and I am a fan, where it says that, “Duplication is far cheaper than the wrong abstraction. Prefer duplication over the wrong abstraction.” And I am definitely on board with that.
+
+0:31:51.0 In one concrete example of that, that pertains to daily work for me, is in React I use Redux; and Redux, you do a lot of the same thing over and over. And I have been tempted at times, I’ve had coworkers tempted at times, to go and wrap up some of the things that we were doing there in some kind of patterns, but then it always winded up being this thing that doesn’t necessarily fit all cases.
+
+0:32:18.6 And so by actually having used Redux in the raw with what we’re doing, or I guess Redux with the React adapter so that kind of minimal layer, it’s made it where there is a decent amount of boilerplate code but it’s very linear. Like, you just always do that same pattern every time even though, like your use case may be a little bit different, because of the level of abstraction that it happens to be at it allows it to be reused in lots of cases and not having to shim it in to some abstraction on top of it. That has been a thing that I have noticed or, brought about my current day.
+
+0:32:57.7 **Adam Garrett-Harris** Yeah, another thing related to React is separation of concerns, and I think at first a lot of people objected to React because it puts your HTML and your JavaScript together and they thought, “This is a separation of concerns. You should have your HTML separate from your JavaScript.” But when you think about it, kind of in a different slice, like I guess like a vertical slice, you can separate it out differently. Instead of how it looks and how it behaves you can separate it out into components, which both look a certain way and behave a certain way.
+
+0:33:34.6 **Jen Luker** I also like the part that says, “The term ‘separation of concerns’ honestly doesn’t mean anything anymore, but it used to.”
+
+0:33:41.5 **Adam Garrett-Harris** (laughs)
+
+0:33:42.2 **Safia Abdalla** (laughs)
+
+0:33:43.3 **Jason Staten** Yeah. ‘Cause saying that it means, “I’m doing the right thing.” Or, “I’m trying to do the right thing.”
+
+0:33:49.4 **Jen Luker** Whatever that thing happens to be.
+
+0:33:51.9 **Adam Garrett-Harris** Yeah, I feel like a lot of these terms can be something that just gets repeated in a conversation and you just say it and it makes you feel better about your code because you think you’re doing it the right way, but it doesn’t help explain why it’s better to anybody else.
+
+0:34:06.5 **Jen Luker** There’s another sentence that says, “And this is where we come up against the weight of history and a little trick that every politician knows: if you say something long enough, it becomes true. I think it’s the same with the phrase ‘separation of concerns’, it’s reminiscent of the phrase, ‘I could care less.’ or ‘Hone in on.’ These phrases make no sense at all but for some reason popular American-English vernacular has twisted them to mean something, and as time goes on, they get adopted.”
+
+0:34:30.3 So it’s just one of those, you know, phrases get, you know, not just adopted but converted into something that means something. And separation of concerns seems to mean that you’re focusing your attention upon some aspect and your, you know, that aspect’s point of view means that the others are currently irrelevant concerning what you’re thinking about. So you could be looking at making it clean, or making sure that you’re doing a specific vertical slice or it could mean a specific horizontal slice and however way that you're looking at it at that time is separating the concern that you’re considering from everything else.
+
+0:35:11.7 And that kind of was the original meaning and now we’ve taken it to be that we’re trying to isolate one aspect of it away from everything else. So we want to make sure that either it’s the MVC model or it’s the component model or something to that effect. We’re trying to find the best way to slice it to make it good.
+
+0:35:32.3 **Safia Abdalla** Yeah, I think the difficult thing in communicating separation of concerns, and some of the engineering discussions I’ve had, is that everybody has different perspective on what the concern is.
+
+0:35:43.6 **Jen Luker** Mm-hmm (affirmative).
+
+0:35:44.5 **Safia Abdalla** So it’s hard to kind of align and get that to match up.
+
+0:35:49.7 **Adam Garrett-Harris** Yeah I think it’s related to another pattern that’s not in the book, but it’s just called “Do one thing, and do it well”, I guess. Where each program should only do one thing and do it well.
+
+0:36:01.6 **Safia Abdalla** Yeah. I learned that lesson the hard way a long time ago. But that’s a tangent so…
+
+0:36:06.7 **Adam Garrett-Harris** (laughs)
+
+0:36:09.2 **Jason Staten** And it also comes with its own challenge. Like, what one thing does Facebook do well? I mean, one thing?
+
+0:36:18.3 **Jen Luker** React.
+
+0:36:19.7 **ALL** (laughing)
+
+0:36:20.4 **Safia Abdalla** Oh, I was going to go in a completely different direction with that! (laughs) I was going to say give your data to people who shouldn’t have it.
+
+0:36:27.7 **Adam Garrett-Harris** Yeah.
+
+0:36:28.1 **Jen Luker** Yeah. Yeah, we read that book! (laughs)
+
+0:36:30.4 **Safia Abdalla** (laughs)
+
+0:36:33.5 **Adam Garrett-Harris** Yeah and not every program follows the ‘Do One Thing Pattern’.  A lot of programs try to do everything or many things. I was just working with a program the other day, a command line program that will… It was some command line program that worked with images and it only took in certain formats, and the reason was that ImageMagick is already a command line program that is really good at converting to different formats and so, you know, they weren’t going to take all the time to do that when you could just use ImageMagick and then take that format and put it into this other program and it’s kind of the Unix philosophy.
+
+0:37:10.2 **Safia Abdalla** Hmm. Yeah.
+
+0:37:12.8 **Jason Staten** I almost stepped into the Unix philosophy stuff, but there is a whole chapter on it so, I will-
+
+0:37:17.8 **Adam Garrett-Harris** Yeah! That’s another preview.
+
+0:37:18.4 **Jason Staten** For until then. That may, that might come at the same time testing.
+
+0:37:23.5 **Jen Luker** Oh hey that’s gonna be a-
+
+0:37:24.2 **Safia Abdalla** That’s gonna be a good episode. Y’all better stay listening!
+
+0:37:27.5 **Adam Garrett-Harris** (laughs)
+
+0:37:28.3 **Jen Luker** (laughs)
+
+0:37:28.5 **Safia Abdalla** That’s some good stuff coming up.
+
+0:37:29.7 **Jason Staten** Yeah.
+
+0:37:30.6 **Jen Luker** Especially since we’re like, really close to that, that’s gonna be fun.
+
+0:37:33.4 **Safia Abdalla** Mm-hmm (affirmative).
+
+0:37:34.7 **Jason Staten** I think one of the things that stands out to me with all of these principles as well, including separation of concerns, is a lot of being mindful about the code that you’re writing with the, having an eye to being able to maintain it, and that obviously depends on what you’re writing, who you’re writing it for, like if it’s something that only you are going to read versus having a team that you’re working with.
+
+0:38:01.6 For example, things like the Law of Demeter, or principle of least knowledge, where something like digging at the internals of something you’re consuming might not be good and if you’re say, dotting three levels deep, then that might not be good. But it also might be entirely fine. But they are things that you can consider.
+
+0:38:27.5 So for example, like if I see some body going, and especially like, within a snippet of JavaScript code where somebody is dotting into some data they received from an endpoint four levels deep, or something like that. While it can be appropriate to be digging into the object, it also might be possible that the end point is going to get back complete garbage on some other time. Like if it’s not entirely constrained there because you know, some real world end points don’t always give consistent stuff back, and so it’s more of like a flag to me. So not necessarily like, “You’re doing it wrong.” But a like, “Are you sure about this?”
+
+0:39:07.0 Like, when I’m reviewing code, like that’s sometimes a question that I’ll ask on something. It’s like, “Okay, you’re really digging into this thing, are you sure that it’s going to be all right? You feel good on it? Carry on.”
+
+0:39:17.9 **Jen Luker** Hmm.
+
+0:39:18.7 **Adam Garrett-Harris** Yeah, you said something there. You said it’s a flag, and that reminds me of, it’s a thing called “code smells”, I think that’s from clean code.
+
+0:39:27.5 **Jason Staten** Yeah.
+
+0:39:27.7 **Adam Garrett-Harris** And one of the code smells is inappropriate intimacy, which is exactly this.
+
+0:39:31.8 **Jen Luker** I also like the quote from Martin Fowler that says, “I'd prefer it to be called the Occasionally Useful Suggestion of Demeter.”
+
+0:39:39.3 **Adam Garrett-Harris** (laughs)
+
+0:39:39.3 **Jason Staten** (laughs)
+
+0:39:40.7 **Adam Garrett-Harris** Instead of the law? Yeah.
+
+0:39:42.3 **Jen Luker** Yes.
+
+0:39:45.0 **Jason Staten** Yeah. (laughs)
+
+0:39:47.0 **Safia Abdalla** So one of the things I wanted to maybe finish off this section with, since it talks a little bit about software design and actually writing code that you ship to people who use on a regular basis, is, since I’ve started working full-time, one of the biggest distinctions between, you know, like, working and open source and doing college work and working outside of projects and all that stuff, is when you work full-time you have to keep all of these design principles in mind and all of these like, engineering techniques as you’re like, dealing with deadlines and meetings and all of the stuff.
+
+0:40:27.1 So one of the things that I’ve just struggled with is like, keeping all of these best practices in mind when you’re at work which can get like, a little crazy sometimes. And, you know, it’s a book, it’s written, it makes it look like it’s really easy to always be thinking about these things or always implementing them, but they’re definitely habits that you have to develop and, like anything, you have to put it into practice.
+
+0:40:48.6 So one of the things that I’ve been going out of my way to do is I kind of will pick one habit that I want to get good at. I’ll say like, “For the next two weeks I’m just going to get really good at writing in a test for all of my pull requests.” Or, “For the next two weeks I’m going to get really good at making sure that I don’t implement this certain bad design pattern in my code.” And I’ll just do it and keep that in mind and slowly build the kind of muscle memory that I need to start keeping all of these design principles in mind in the future as I’m coding.
+
+0:41:19.9 So if all of this is like, very overwhelming to you and it’s super scary or like, I definitely feel like an imposter right now, it’s fine. Just pick a technique that you want to improve on or something you want to get better at and focus on it and start to have it be part of your muscle memory.
+
+0:41:35.8 **Jen Luker** Not only that but, again, like “Apprenticeship Patterns”, going back to the first book that we read, this book is meant to help give you the language to start these conversations. So though some of these things may be best practices, though people may talk about them a lot, some of them are more useful than others; and the point here is to be able to give you that knowledge and vocabulary enough to be able to know what to look up in the first place. So, I don’t think that all of this needs to be committed to memory. I think that it’s just a good reference.
+
+0:42:08.4 **Adam Garrett-Harris** Yeah, I found it helpful as I was learning things, just knowing something exists, I’ll just put that in my back pocket, sometimes, and just know that it exists and not have to dig in too deeply. And just knowing that it exists in the future can help me out, and like you said, Jen, help you look it up when you need it.
+
+0:42:27.2 **Jason Staten** A note of things that exist that you may or may not have used, have any of you used Dependency Injection or Inversion of Control?
+
+0:42:37.7 **Adam Garrett-Harris** Yeah, I mean, I think when you get into unit testing that’s one of the things that makes it more unit testable.
+
+0:42:43.1 **Jen Luker** I’ve used it for instantiating databases when the database calls are common but the classes that are utilizing them are not.
+
+0:42:53.7 **Jason Staten** Yeah, I certainly feel like, in some ways, like, the Dependency Injection/Inversion of Control scene is a lot stronger within static languages; especially like C# or Java where in order to do something like, say you want to mock out your database, then you are able to go and create some container that it can go put in an, you know, i-database that it happens to be a mock instance that you want to work that way.
+
+0:43:21.2 **Jen Luker** Just tell that to Bobby Tables.
+
+0:43:23.0 **Jason Staten** (laughs)
+
+0:43:24.3 **Adam Garrett-Harris** (laughs)
+
+0:43:25.4 **Jason Staten** I guess one other note on Inversion of Control, though. I was thinking on it and a case that I use it, in a not static language, is actually in React. So, a React component happens to be something that is a case of Inversion of Control, because if you think about it, a React component is something that you, yourself, never actually go and new up; but instead you create at element that describes the thing that needs to get newed up and then React goes and it instantiates the thing with the prompts passed in the way that you need it to be and it calls your life cycles hooks, and your render. So it’s really something that you write the code for but you don’t have any responsibility of newing it up or passing things in directly.
+
+0:44:11.3 **Jen Luker** Ain’t it grand?
+
+0:44:12.5 **Jason Staten** Yeah.
+
+0:44:13.4 **Adam Garrett-Harris** That’s cool.
+
+All right. Well next time we’ll be talking about functional programming, which I am super excited about, and databases.
+
+0:44:21.1 **Jason Staten** Yay.
+
+0:44:21.1 **Adam Garrett-Harris** Which I know Jason knows a lot about.
+
+0:44:24.5 **Jason Staten** Don’t put me on the spot.
+
+0:44:26.2 **Adam Garrett-Harris** Yep. (laughs) So yeah. Thanks so much for listening and if you want, go leave a review on iTunes and I’ll see y’all later.
+
+0:44:34.2 **Safia Abdalla** Bye.
+
+0:44:34.7 **Jason Staten** Bye. Bye.
+
+0:44:35.6 **Adam Garrett-Harris** Bye.
+
+(Exit music: Electro Swing)

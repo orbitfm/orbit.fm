@@ -3,7 +3,7 @@
   "episode": "16",
   "transcript": [
     {
-      "text": "(Intro music: Electro swing)"
+      "text": "(Intro music: Electro Swing)"
     },
     {
       "timestamp": "0:00:12.4",
@@ -35,7 +35,7 @@
     },
     {
       "timestamp": "0:00:52.1",
-      "text": "Typewriter Dings"
+      "text": "(Typewriter Dings)"
     },
     {
       "timestamp": "0:00:53.7",
@@ -159,15 +159,15 @@
     },
     {
       "timestamp": "0:06:11.1",
-      "text": "Because even with Rob’s example I wasn’t totally solid on it. I’m like, “Why would I want to do this thing?” Other than it made it so you could instantiate some more instances, or like, you’d instantiate lots of instances and share a bit of memory and there’s actually a website that’s called Game Programming Patterns that covers the Flyweight in terms of actually rendering a game. "
+      "text": "Because even with Rob’s example I wasn’t totally solid on it. I’m like, “Why would I want to do this thing?” Other than it made it so you could instantiate some more instances, or like, you’d instantiate lots of instances and share a bit of memory and there’s actually a website that’s called Game Programming Patterns that covers the Flyweight in terms of actually rendering a game."
     },
     {
       "timestamp": "0:06:36.2",
-      "text": "So if you think about a game that has a forest-type background to it and in the forest there are thousands of trees, or just an immense amount of trees, and you have to draw those things through the GPU, if you have one hopefully you do at this point, and to actually go and spend the time to draw all those things would be really expensive to do and GPUs now have what’s called instance rendering where you can say, “I actually want to draw the same tree over and over and over, I just want to put it in different places.” "
+      "text": "So if you think about a game that has a forest-type background to it and in the forest there are thousands of trees, or just an immense amount of trees, and you have to draw those things through the GPU, if you have one hopefully you do at this point, and to actually go and spend the time to draw all those things would be really expensive to do and GPUs now have what’s called instance rendering where you can say, “I actually want to draw the same tree over and over and over, I just want to put it in different places.”"
     },
     {
       "timestamp": "0:07:09.6",
-      "text": "And so it’s kind of a form of doing the Flyweight where you go and give like, the actually polygons that are supposed to get rendered, those are all identical it’s just where location-wise it gets rendered, and so it breaks the Flyweight up into two different parts for a model. You have first your intrinsic state which is a shared state amongst everything, like, the polygons that need to get drawn. And then each model also has extrinsic state, which is a unique state for each model being something like its position, and I thought that that was a pretty good example. I’ll share a link with all of you because it was insightful to me. "
+      "text": "And so it’s kind of a form of doing the Flyweight where you go and give like, the actually polygons that are supposed to get rendered, those are all identical it’s just where location-wise it gets rendered, and so it breaks the Flyweight up into two different parts for a model. You have first your intrinsic state which is a shared state amongst everything, like, the polygons that need to get drawn. And then each model also has extrinsic state, which is a unique state for each model being something like its position, and I thought that that was a pretty good example. I’ll share a link with all of you because it was insightful to me."
     },
     {
       "timestamp": "0:07:46.5",
@@ -206,7 +206,7 @@
     },
     {
       "timestamp": "0:09:41.6",
-      "text": "I actually found it really useful ‘cause we were talking about connection pools at work a while back and we were talking about some bug that we were dealing with and, at the time, I hadn’t realized that it was a Composite Pattern. And in hindsight, knowing this would have kind of helped me understand things a little quicker. So it’s just kind of cool to see an example that was really direct to me and also the word for what that design pattern was. "
+      "text": "I actually found it really useful ‘cause we were talking about connection pools at work a while back and we were talking about some bug that we were dealing with and, at the time, I hadn’t realized that it was a Composite Pattern. And in hindsight, knowing this would have kind of helped me understand things a little quicker. So it’s just kind of cool to see an example that was really direct to me and also the word for what that design pattern was."
     },
     {
       "timestamp": "0:10:08.9",
@@ -230,11 +230,11 @@
     },
     {
       "timestamp": "0:10:32.6",
-      "text": "The major difference that I was able to find, after spending some time on some of the stack overflow and software engineering stack exchanges, was that the Adapter is for making something fit another interface. So I went and did the Adapter Pattern in Rust and I kind of had the notion of an .mp3 file and an .ogg Vorbis file and say they were implemented from separate libraries or something like that, like one from /lib/mp3 and the other one from /lib/ogg or something. And I wanted to use those things under the same interface, an Adapter would allow me to do that; to make them both be able to play their audio even though their underlying implementations might be different, and actually, in Rust, in order to do that it’s just a matter of implementing a trait. So rather that actually adding some sort of wrapping class, traits kind of take place of it, but it something like Java or C# or even JavaScript, if you wanted to make that thing fit you might have to wrap it with something. "
+      "text": "The major difference that I was able to find, after spending some time on some of the stack overflow and software engineering stack exchanges, was that the Adapter is for making something fit another interface. So I went and did the Adapter Pattern in Rust and I kind of had the notion of an .mp3 file and an .ogg Vorbis file and say they were implemented from separate libraries or something like that, like one from /lib/mp3 and the other one from /lib/ogg or something. And I wanted to use those things under the same interface, an Adapter would allow me to do that; to make them both be able to play their audio even though their underlying implementations might be different, and actually, in Rust, in order to do that it’s just a matter of implementing a trait. So rather that actually adding some sort of wrapping class, traits kind of take place of it, but it something like Java or C# or even JavaScript, if you wanted to make that thing fit you might have to wrap it with something."
     },
     {
       "timestamp": "0:11:42.1",
-      "text": "And a Bridge, on the other hand, is something that you would implement before the alternatives are implemented. And what that allows you to do is code up almost like an adapter itself, but that’s built against an interface. So it’s built kind of two levels deep and what that allows you to do is make changes to what the bridge provides, but because it’s implemented against the interface, the interface stays the same, but the Bridge is able to change. And I guess I haven’t found myself actually ever needing to use a Bridge but, in simplest terms, the Adapter is for connecting things that have already been implemented. And the bridge is designed for things that have yet to be implemented but you know there are going to be lots of implementations. "
+      "text": "And a Bridge, on the other hand, is something that you would implement before the alternatives are implemented. And what that allows you to do is code up almost like an adapter itself, but that’s built against an interface. So it’s built kind of two levels deep and what that allows you to do is make changes to what the bridge provides, but because it’s implemented against the interface, the interface stays the same, but the Bridge is able to change. And I guess I haven’t found myself actually ever needing to use a Bridge but, in simplest terms, the Adapter is for connecting things that have already been implemented. And the bridge is designed for things that have yet to be implemented but you know there are going to be lots of implementations."
     },
     {
       "timestamp": "0:12:30.1",
@@ -480,7 +480,7 @@
     },
     {
       "timestamp": "0:20:12.7",
-      "text": "And thanks to V School for sponsoring the show. All right! Software Design Principles. "
+      "text": "And thanks to V School for sponsoring the show. All right! Software Design Principles."
     },
     {
       "text": "(Typewriter Dings)"
@@ -492,7 +492,7 @@
     },
     {
       "timestamp": "0:20:58.8",
-      "text": "And I think one of the most common ways that I’ve been stabbed with this is attempting to like, future-proof things in anticipation of a use case that might come up and then just implementing really terrible, messy code and the use case that you imagine never comes up, and you didn’t really need the thing that you ended up writing. "
+      "text": "And I think one of the most common ways that I’ve been stabbed with this is attempting to like, future-proof things in anticipation of a use case that might come up and then just implementing really terrible, messy code and the use case that you imagine never comes up, and you didn’t really need the thing that you ended up writing."
     },
     {
       "timestamp": "0:21:21.0",
@@ -571,7 +571,7 @@
     },
     {
       "timestamp": "0:24:49.5",
-      "text": "And I really like the fact that they’ve brought in test-driven development as a way of enforcing YAGNI in that if the code that you’re writing and the implementation that you’re using doesn’t actually touch a bit of code, then you don’t need it. So the use case that’s required is what your test defines, and if you don’t have to test it,, if you don’t have to touch it, if you don’t touch it, then you don’t need it. "
+      "text": "And I really like the fact that they’ve brought in test-driven development as a way of enforcing YAGNI in that if the code that you’re writing and the implementation that you’re using doesn’t actually touch a bit of code, then you don’t need it. So the use case that’s required is what your test defines, and if you don’t have to test it,, if you don’t have to touch it, if you don’t touch it, then you don’t need it."
     },
     {
       "timestamp": "0:25:15.9",
@@ -600,7 +600,7 @@
     },
     {
       "timestamp": "0:27:12.6",
-      "text": "For me, I like to prototype out my code through code comments so I start commenting out like, “Well I need this and I need this, and if I’m going to do this and I’m going to do that.” And my code gets more and more commented as I get deeper into the implementation, but as I’m getting to that level my tests get more and more detailed as well. So, for me, test-driven development is I write just enough a test to be able to get the next part failing and then make it pass. It’s not getting it all written and getting it all completed and then starting to code the thing that you’re coding. "
+      "text": "For me, I like to prototype out my code through code comments so I start commenting out like, “Well I need this and I need this, and if I’m going to do this and I’m going to do that.” And my code gets more and more commented as I get deeper into the implementation, but as I’m getting to that level my tests get more and more detailed as well. So, for me, test-driven development is I write just enough a test to be able to get the next part failing and then make it pass. It’s not getting it all written and getting it all completed and then starting to code the thing that you’re coding."
     },
     {
       "timestamp": "0:27:50.2",
@@ -649,11 +649,11 @@
     },
     {
       "timestamp": "0:29:53.6",
-      "text": "The second point that I wanted to make about TDD is that I don’t think it’s always necessarily. I think that it benefits me the most when it gets beyond something really basic. So once I actually have to start thinking about laying something out, that’s when I start writing tests. And that may or may not be what everyone does. I definitely see the value in TDD, but if it’s something that’s really simple, I already know how to implement it, it’s three lines, I don’t need a full test to make sure that I create this code in a way that’s testable and clean and concise and all the other benefits of TDD. So I don’t always use it. And yeah. "
+      "text": "The second point that I wanted to make about TDD is that I don’t think it’s always necessarily. I think that it benefits me the most when it gets beyond something really basic. So once I actually have to start thinking about laying something out, that’s when I start writing tests. And that may or may not be what everyone does. I definitely see the value in TDD, but if it’s something that’s really simple, I already know how to implement it, it’s three lines, I don’t need a full test to make sure that I create this code in a way that’s testable and clean and concise and all the other benefits of TDD. So I don’t always use it. And yeah."
     },
     {
       "timestamp": "0:30:41.6",
-      "text": "So that may be “Jen’s Unpopular Opinion of the Day” but, as soon as I have to sit down and actually architect something tests really help me kind of find those cases that I didn’t think about before and may not have until I ran into them later. So it kind of helps me architect things better from the beginning. That’s when I use TDD. "
+      "text": "So that may be “Jen’s Unpopular Opinion of the Day” but, as soon as I have to sit down and actually architect something tests really help me kind of find those cases that I didn’t think about before and may not have until I ran into them later. So it kind of helps me architect things better from the beginning. That’s when I use TDD."
     },
     {
       "timestamp": "0:31:05.0",
@@ -697,11 +697,11 @@
     },
     {
       "timestamp": "0:31:51.0",
-      "text": "In one concrete example of that, that pertains to daily work for me, is in React I use Redux; and Redux, you do a lot of the same thing over and over. And I have been tempted at times, I’ve had coworkers tempted at times, to go and wrap up some of the things that we were doing there in some kind of patterns, but then it always winded up being this thing that doesn’t necessarily fit all cases. "
+      "text": "In one concrete example of that, that pertains to daily work for me, is in React I use Redux; and Redux, you do a lot of the same thing over and over. And I have been tempted at times, I’ve had coworkers tempted at times, to go and wrap up some of the things that we were doing there in some kind of patterns, but then it always winded up being this thing that doesn’t necessarily fit all cases."
     },
     {
       "timestamp": "0:32:18.6",
-      "text": "And so by actually having used Redux in the raw with what we’re doing, or I guess Redux with the React adapter so that kind of minimal layer, it’s made it where there is a decent amount of boilerplate code but it’s very linear. Like, you just always do that same pattern every time even though, like your use case may be a little bit different, because of the level of abstraction that it happens to be at it allows it to be reused in lots of cases and not having to shim it in to some abstraction on top of it. That has been a thing that I have noticed or, brought about my current day. "
+      "text": "And so by actually having used Redux in the raw with what we’re doing, or I guess Redux with the React adapter so that kind of minimal layer, it’s made it where there is a decent amount of boilerplate code but it’s very linear. Like, you just always do that same pattern every time even though, like your use case may be a little bit different, because of the level of abstraction that it happens to be at it allows it to be reused in lots of cases and not having to shim it in to some abstraction on top of it. That has been a thing that I have noticed or, brought about my current day."
     },
     {
       "timestamp": "0:32:57.7",
@@ -745,11 +745,11 @@
     },
     {
       "timestamp": "0:34:30.3",
-      "text": "So it’s just one of those, you know, phrases get, you know, not just adopted but converted into something that means something. And separation of concerns seems to mean that you’re focusing your attention upon some aspect and your, you know, that aspect’s point of view means that the others are currently irrelevant concerning what you’re thinking about. So you could be looking at making it clean, or making sure that you’re doing a specific vertical slice or it could mean a specific horizontal slice and however way that you're looking at it at that time is separating the concern that you’re considering from everything else. "
+      "text": "So it’s just one of those, you know, phrases get, you know, not just adopted but converted into something that means something. And separation of concerns seems to mean that you’re focusing your attention upon some aspect and your, you know, that aspect’s point of view means that the others are currently irrelevant concerning what you’re thinking about. So you could be looking at making it clean, or making sure that you’re doing a specific vertical slice or it could mean a specific horizontal slice and however way that you're looking at it at that time is separating the concern that you’re considering from everything else."
     },
     {
       "timestamp": "0:35:11.7",
-      "text": "And that kind of was the original meaning and now we’ve taken it to be that we’re trying to isolate one aspect of it away from everything else. So we want to make sure that either it’s the MVC model or it’s the component model or something to that effect. We’re trying to find the best way to slice it to make it good. "
+      "text": "And that kind of was the original meaning and now we’ve taken it to be that we’re trying to isolate one aspect of it away from everything else. So we want to make sure that either it’s the MVC model or it’s the component model or something to that effect. We’re trying to find the best way to slice it to make it good."
     },
     {
       "timestamp": "0:35:32.3",
@@ -888,7 +888,7 @@
     },
     {
       "timestamp": "0:38:01.6",
-      "text": "For example, things like the Law of Demeter, or principle of least knowledge, where something like digging at the internals of something you’re consuming might not be good and if you’re say, dotting three levels deep, then that might not be good. But it also might be entirely fine. But they are things that you can consider. "
+      "text": "For example, things like the Law of Demeter, or principle of least knowledge, where something like digging at the internals of something you’re consuming might not be good and if you’re say, dotting three levels deep, then that might not be good. But it also might be entirely fine. But they are things that you can consider."
     },
     {
       "timestamp": "0:38:27.5",
@@ -896,7 +896,7 @@
     },
     {
       "timestamp": "0:39:07.0",
-      "text": "Like, when I’m reviewing code, like that’s sometimes a question that I’ll ask on something. It’s like, “Okay, you’re really digging into this thing, are you sure that it’s going to be all right? You feel good on it? Carry on.” "
+      "text": "Like, when I’m reviewing code, like that’s sometimes a question that I’ll ask on something. It’s like, “Okay, you’re really digging into this thing, are you sure that it’s going to be all right? You feel good on it? Carry on.”"
     },
     {
       "timestamp": "0:39:17.9",
@@ -955,15 +955,15 @@
     },
     {
       "timestamp": "0:40:27.1",
-      "text": "So one of the things that I’ve just struggled with is like, keeping all of these best practices in mind when you’re at work which can get like, a little crazy sometimes. And, you know, it’s a book, it’s written, it makes it look like it’s really easy to always be thinking about these things or always implementing them, but they’re definitely habits that you have to develop and, like anything, you have to put it into practice. "
+      "text": "So one of the things that I’ve just struggled with is like, keeping all of these best practices in mind when you’re at work which can get like, a little crazy sometimes. And, you know, it’s a book, it’s written, it makes it look like it’s really easy to always be thinking about these things or always implementing them, but they’re definitely habits that you have to develop and, like anything, you have to put it into practice."
     },
     {
       "timestamp": "0:40:48.6",
-      "text": "So one of the things that I’ve been going out of my way to do is I kind of will pick one habit that I want to get good at. I’ll say like, “For the next two weeks I’m just going to get really good at writing in a test for all of my pull requests.” Or, “For the next two weeks I’m going to get really good at making sure that I don’t implement this certain bad design pattern in my code.” And I’ll just do it and keep that in mind and slowly build the kind of muscle memory that I need to start keeping all of these design principles in mind in the future as I’m coding. "
+      "text": "So one of the things that I’ve been going out of my way to do is I kind of will pick one habit that I want to get good at. I’ll say like, “For the next two weeks I’m just going to get really good at writing in a test for all of my pull requests.” Or, “For the next two weeks I’m going to get really good at making sure that I don’t implement this certain bad design pattern in my code.” And I’ll just do it and keep that in mind and slowly build the kind of muscle memory that I need to start keeping all of these design principles in mind in the future as I’m coding."
     },
     {
       "timestamp": "0:41:19.9",
-      "text": "So if all of this is like, very overwhelming to you and it’s super scary or like, I definitely feel like an imposter right now, it’s fine. Just pick a technique that you want to improve on or something you want to get better at and focus on it and start to have it be part of your muscle memory. "
+      "text": "So if all of this is like, very overwhelming to you and it’s super scary or like, I definitely feel like an imposter right now, it’s fine. Just pick a technique that you want to improve on or something you want to get better at and focus on it and start to have it be part of your muscle memory."
     },
     {
       "timestamp": "0:41:35.8",
@@ -1069,7 +1069,7 @@
       "text": "Bye."
     },
     {
-      "text": "(Exit music: Electro swing)"
+      "text": "(Exit music: Electro Swing)"
     }
   ]
 }
