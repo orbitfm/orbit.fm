@@ -186,7 +186,11 @@ export default ({ data }) => {
         <div>{episode.shortDescription}</div>
         <AudioContainer>
           <ConnectedPlayButton
-            url={`https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`}
+            url={`${
+              process.env.PODCAST_REDIRECT_URL
+                ? process.env.PODCAST_REDIRECT_URL
+                : ''
+            }${episode.audioUrl}`}
             podcast={episode.podcast.name}
             title={episode.name}
           />
@@ -244,9 +248,11 @@ export default ({ data }) => {
               {transcript.map((item, i) => (
                 <div name={item.timestamp} key={i}>
                   <ConnectedTimestamp
-                    url={`https://www.podtrac.com/pts/redirect.mp3/${
-                      episode.audioUrl
-                    }`}
+                    url={`${
+                      process.env.PODCAST_REDIRECT_URL
+                        ? process.env.PODCAST_REDIRECT_URL
+                        : ''
+                    }${episode.audioUrl}`}
                     podcast={episode.podcast.name}
                     title={episode.name}
                     timestamp={item.timestamp}

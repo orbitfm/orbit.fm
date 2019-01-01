@@ -24,7 +24,11 @@ const serialize = ({ podcast, siteMetadata }) =>
             oxfordComma: true,
           }),
           enclosure: {
-            url: `https://www.podtrac.com/pts/redirect.mp3/${episode.audioUrl}`,
+            url: `${
+              process.env.PODCAST_REDIRECT_URL
+                ? process.env.PODCAST_REDIRECT_URL
+                : ''
+            }${episode.audioUrl}`,
             length: episode.audioLength,
             type: 'audio/mp3',
           },
@@ -55,8 +59,8 @@ const serialize = ({ podcast, siteMetadata }) =>
                   href: episode.image
                     ? `https:${episode.image.file.url}`
                     : episode.podcast.image
-                      ? `https:${episode.podcast.image.file.url}`
-                      : ``,
+                    ? `https:${episode.podcast.image.file.url}`
+                    : ``,
                 },
               },
             },
@@ -142,7 +146,12 @@ module.exports = {
         }
       `,
         setup: (
-          { query: { site: { siteMetadata }, allContentfulPodcast } },
+          {
+            query: {
+              site: { siteMetadata },
+              allContentfulPodcast,
+            },
+          },
           i
         ) => {
           // If allContentfulPodcast.edges[i] then this is a normal feed
@@ -211,7 +220,10 @@ module.exports = {
           };
         },
         feeds: ({
-          query: { site: { siteMetadata }, allContentfulPodcast },
+          query: {
+            site: { siteMetadata },
+            allContentfulPodcast,
+          },
         }) => [
           ...allContentfulPodcast.edges.map(({ node }, i) => ({
             serialize: ({ query: { site, allContentfulPodcast } }) =>
@@ -223,7 +235,10 @@ module.exports = {
           })),
           {
             serialize: ({
-              query: { site: { siteMetadata }, allContentfulPodcast },
+              query: {
+                site: { siteMetadata },
+                allContentfulPodcast,
+              },
             }) =>
               serialize({
                 podcast: {
