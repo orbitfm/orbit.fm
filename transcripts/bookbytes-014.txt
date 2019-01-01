@@ -1,0 +1,531 @@
+﻿(Intro music: Electro Swing)
+
+0:00:13.8 **Adam Garrett-Harris** Hello, and welcome to BookBytes, a book club podcast for developers, and this week we’re talking about 2 more chapters of “The Imposter’s Handbook: A CS Primer for Self-Taught Programmers” by Rob Conery; and this week we’re going to go over, we’re going to finish up the chapter on data structures and then talk about simple algorithms. I’m Adam Garrett-Harris.
+
+0:00:35.5 **Jen Luker** I’m Jen Luker.
+
+0:00:37.2 **Safia Abdalla** I’m Safia Abd-
+
+0:00:37.9 **Jason Staten** I’m Jason State- Oh!
+
+0:00:39.3 **Jason Staten, Safia Abdalla, & Jen Luker** (laughing)
+
+0:00:40.7 **Jason Staten** Go, Safia.
+
+0:00:42.2 **Safia Abdalla** I’m Safia Abdalla.
+
+0:00:43.5 **Jason Staten** I’m Jason Staten.
+
+0:00:45.0 **Adam Garrett-Harris** All right, do we want to do another “Book News”? ‘Cause I’ve got one.
+
+0:00:48.5 **Jason Staten** Let’s hear it!
+
+0:00:48.9 **Adam Garrett-Harris** All right. “Eloquent JavaScript”, the third edition is coming out. I’m don't know if you all are familiar with it, but it's the yellow book on JavaScript with the bird on it, like a peacock?
+
+0:00:58.9 **Safia Abdalla** Yeah.
+
+0:00:59.7 **Adam Garrett-Harris** So, it’s going to be updated with all of the new JavaScript stuff, and it’s always been free and you can already read it online for free, and then a paper edition is going to come out in October. So, that’s pretty exciting.
+
+0:01:13.4 **Jason Staten** Nice. I’ll have to check it out.
+
+0:01:15.0 **Adam Garrett-Harris** All right, so we need to finish data structures real quick.
+
+(Typewriter Dings)
+
+0:01:19.6 **Adam Garrett-Harris** What is a hash table?
+
+0:01:21.6 **Jen Luker** I’m like, flipping pages, where is the hash table page?
+
+0:01:24.7 **Adam Garrett-Harris** 115.
+
+0:01:26.3 **Jen Luker** Oh! You mean the one that I have marked as “Start”?
+
+0:01:28.7 **Adam Garrett-Harris** (laughs)
+
+0:01:30.3 **Jason Staten** So, hash tables are a data structure that goes and indexes the values within it by going and hashing those values into a computed value that is consistent for all values put into it, and because everything is based upon its hash, going and adding to, and looking up items from a hash table are usually a Big-O(1), they’re pretty consistent so long as your hashing algorithm can produce unique results for the values that are passed into it.
+
+0:02:06.5 **Adam Garrett-Harris** Yeah. So, I think it’s pretty interesting what happens when there’s a collision. One option is you just like, move to the next available spot, but that could get really bad, or you could just use a link to list if there’s more than one value there.
+
+0:02:21.2 **Jason Staten** Yeah, that’s definitely a challenging problem to deal with and hopefully you find a decent hashing algorithm so you don’t have to bump into that very much, ‘cause I’m sure perf goes way down as you wind up having lots and lots of collisions.
+
+0:02:35.1 **Adam Garrett-Harris** Yeah, I remember in college we had to try to write a hashing algorithm that didn’t have very many collisions and it was extremely hard, but I guess generally you’re not going to write your own.
+
+0:02:43.7 **Jason Staten** Yeah. A lot of times libraries that you use will have, or sorry, some, whatever language you’re using will have a hash table built into it, especially if you’re using something like Ruby where hash tables are like, the core data structure that you use everywhere; and so, they’ve actually had times in the past where they’ve made pretty dramatic improvements to it and it just speeds up Ruby across the board because they’ve made hashing faster.
+
+0:03:07.3 **Adam Garrett-Harris** Cool. Well, unless anyone has something else about hash tables I think we’re going to skip over dictionaries and talk about trees.
+
+0:03:15.0 **Jen Luker** Oh, trees.
+
+0:03:16.3 **Jason Staten** What’s a tree, Jen?
+
+0:03:17.8 **Jen Luker** Trees are a type of graph, essentially… It’s pretty much what you’re used to seeing regarding data. They have like, the bubble at the top and then they have the bubbles that are divided from down below. A tree kind of like a family history tree where you have you and then it breaks out and you have your parents, and then you have, each of them has their parents, you’ve got great-grandparents, all the way down. So, that’s technically a binary tree, but trees don’t necessarily have to have just two values on each side, they could actually have a really large set of limbs as you follow that tree.
+
+0:03:52.8 **Adam Garrett-Harris** Yeah, a family tree is kind of interesting, right? Because you’ve got, I guess it’s kind of upside down. Or you would have to start with yourself at the top of the tree-
+
+0:04:03.0 **Jen Luker** Yes.
+
+0:04:03.1 **Adam Garrett-Harris** And then your parents below you, and then their parents below each of them. Okay. I was thinking of it the other way around, like if your parents are above you that’s… That’s definitely a graph, but that would be a, I guess it’s also a tree.
+
+0:04:16.1 **Jen Luker** It’s technically a heap (laughs), I guess.
+
+0:04:19.1 **Adam Garrett-Harris** Yeah, based on age?
+
+0:04:21.8 **Jen Luker** Yeah, birthdate.
+
+0:04:23.7 **Adam Garrett-Harris** So, I guess, we should… You said it’s a type of graph?
+
+0:04:27.1 **Jason Staten** Yeah, that’s actually a note that’s mentioned later on in this chapter towards the end when they actually do cover graphs, and they say that all of these other data structures that we’ve covered throughout the chapter are all, also, forms of graphs. It’s kind of mind-blowing.
+
+0:04:40.5 **Adam Garrett-Harris** Yeah, so I think the key difference between a tree and a graph is that a tree is a graph that is acyclical, so it has no cycles, so there’s never a loop.
+
+0:04:52.2 **Jen Luker** Yeah, it’s a hierarchical structure, which is linear.
+
+0:04:56.6 **Adam Garrett-Harris** Yeah.
+
+0:04:57.7 **Jen Luker** I always found them funny that they called them trees, primarily because when you’re used to looking at trees you’re starting from the trunk and it goes up into the sky, but almost all definitions of digital trees are the trunk is in the air and then everything goes back down, kind of like roots instead of branches and leaves. Alas-
+
+0:05:14.6 **Adam Garrett-Harris** Yeah, I think of it as a, it’s kind of like a Christmas tree where you start at the star.
+
+0:05:19.4 **Jason Staten** Same, same here.
+
+0:05:19.8 **Jen Luker** That’s a good way to put it, but I’d never made that connection.
+
+0:05:23.2 **Adam Garrett-Harris** And then you’re going from ornament to ornament on the way down.
+
+0:05:25.7 **Jason Staten** Well that’s deep.
+
+0:05:26.9 **Jen Luker** Yeah.
+
+0:05:27.3 **Jason Staten** I hadn’t thought about it as ornaments, but I did definitely have the Christmas tree vision in my mind. You just draw a little straight trunk underneath of it and put some present there and you’re good.
+
+0:05:35.9 **Jen Luker** (laughs) Hmm.
+
+0:05:38.3 **Jason Staten** So, a common place for trees that I can think of that I, myself, have actually interacted with, actually, pretty recently this week I had to write a codemod for some JavaScript at work where we needed to go and upgrade a jQuery version from 2 to 3, and there are some common cases where if you find a certain pattern you need to go and swap it out with something else, that’s kind of what a codemod allows you to do.
+
+And when you are creating a codemod you do it based on what’s known as the abstract syntax tree, which is a tree data structure that is created from reading and parsing JavaScript code so you wind up having a tree-like structure that perhaps is a function expression, and a function expression has a couple of children underneath of it, one of them being a parameters type node, and also a body type node. And then the body type node has member expressions where it’s maybe calling console log or something, and it goes real deep; but there’s a really cool tool called AST explorer that you can go and put a snippet of JavaScript code into and it will give you back the tree structure that represents that piece of code, and it is invaluable for creating codemods with.
+
+0:07:06.3 **Jen Luker** Or anything that you’re trying to transpile.
+
+0:07:10.6 **Jason Staten** Definitely.
+
+0:07:11.6 **Jen Luker** Like Babel.
+
+0:07:12.9 **Adam Garrett-Harris** Yeah, I guess also with TypeScript, or linters.
+
+0:07:18.2 **Jen Luker** Mm-hmm (affirmative). Speaking of which, I just released a linter last week.
+
+0:07:22.9 **Adam Garrett-Harris** You released a linter?
+
+0:07:24.6 **Jen Luker** I did.
+
+0:07:25.2 **Adam Garrett-Harris** What?
+
+0:07:26.4 **Jen Luker** Mm-hmm (affirmative)- So, you know how we have eslint-plugin-JSX-a11y?
+
+0:07:33.7 **Jason Staten** Yes.
+
+0:07:33.7 **Adam Garrett-Harris** No. (laughs)
+
+0:07:35.1 **Jen Luker** You didn’t know? Ah!
+
+0:07:36.1 **Adam Garrett-Harris** No.
+
+0:07:37.4 **Jen Luker** So, there- You know, eslint, though, right?
+
+0:07:39.6 **Adam Garrett-Harris** Yeah.
+
+0:07:40.6 **Jen Luker** Well, eslint-plugin-JSX-a11y actually tests for accessibility while you’re coding. So, you can lint for accessibility requirements.
+
+0:07:50.5 **Adam Garrett-Harris** Awesome.
+
+0:07:51.4 **Jen Luker** Yes, well it turns out that when we’re talking about React Native it kind of lands right in that space in between the web, and DOM, and React; and the ability to test apps in the native world. So, there’s accessibility tests for the web through like, axe-core or something to that effect, and there’s accessibility testing through iOS and Android, but there’s really nothing for React Native. So, Formidable and a great guy named Alex Saunders wrote JSX-plugin-react-native-a11y, and I released it as part of my chain react talk last week.
+
+0:08:34.1 **Adam Garrett-Harris** Oh, that’s awesome. Congrats!
+
+0:08:36.1 **Jen Luker** Thank you.
+
+0:08:36.3 **Jason Staten** Nice. All-
+
+0:08:36.9 **Adam Garrett-Harris** That’s good, I’m sure that’s going to help a lot of people, and it’s great.
+
+0:08:40.6 **Jason Staten** Nice work, Jen.
+
+0:08:41.5 **Jen Luker** Thanks.
+
+0:08:42.5 **Adam Garrett-Harris** So, another type of tree is a trie. I think it’s pretty funny because it comes from the word “retrieval” so it technically should be pronounced “tree” as well, but then it would just be confusing, but you know it’s spelled, T-R-I-E.
+
+0:08:56.2 **Jen Luker** You think it’s not confusing already?
+
+0:08:59.1 **Adam Garrett-Harris** Yeah, it’s pronounced “try”, it’s not spelled that way. Anyway, and it’s a tree, but it’s a tree that can help you... spell out words?
+
+0:09:10.3 **Jen Luker** Isn’t that cool?
+
+0:09:11.5 **Adam Garrett-Harris** Yeah.
+
+0:09:12.4 **Jen Luker** It’s an, it’s like a word completion.
+
+0:09:14.8 **Adam Garrett-Harris** Yes, so it can be used for when you’re typing into a search and you need to suggest what could come next. So, as you go down the tree it kind of narrows down what possible words you’re typing.
+
+0:09:27.6 **Jason Staten** Also, it’s way cool that it shares parts of entries that are within that trie as well. So-
+
+0:09:35.2 **Adam Garrett-Harris** Yeah.
+
+0:09:35.9 **Jason Staten** For example, the word “impart” and “imposters” both share I-M-P- and so, you don’t actually wind up duplicating those nodes, but instead they are shared for each of those entries, so tries are also space efficient as well.
+
+0:09:51.8 **Adam Garrett-Harris** Oh yeah. I think another thing this picture in the book doesn’t show, is where a word ends. So, for example, “imposters” could actually end at “imposter”, so I think one thing you can do is at the end of the word also add a node that’s just like some sort of indication, like a null node or something. Some sort of indication that that can be the end of a word.
+
+0:10:13.9 **Jason Staten** Hmm, yeah. I can see the need for that if you had a word that is completely within another word.
+
+0:10:19.8 **Adam Garrett-Harris** Yeah, like you can’t assume that “impost” is a word, but “imposter” is.
+
+0:10:24.0 **Jen Luker** Yeah, but I’m not entirely sure that you need to define the end of the word because the word itself ends. So, “imposters” may fall completely within that word, but you’re going to end up with “imposter” and “imposters” under the “imposter” parent. So-
+
+0:10:38.5 **Adam Garrett-Harris** Yeah, but it’s just hard to tell, is “Imposte”? Is “impost”? Is “impos”? “Impo”?
+
+0:10:44.5 **Jen Luker** But as you go down that list, it’s going to limit based on what’s available.
+
+0:10:48.7 **Adam Garrett-Harris** Yeah, but if someone typed in i-m-p-, you wouldn’t want to suggest “impo” as a possible word, unless it’s really a word!
+
+0:10:57.0 **Jen Luker** But no, there wouldn’t be anything under “impo”.
+
+0:10:59.7 **Adam Garrett-Harris** But how do you know you can suggest “imposter” and not “imposters”?
+
+0:11:02.8 **Jen Luker** Because “imposter” exists and “impo” doesn’t.
+
+0:11:05.1 **Adam Garrett-Harris** But how do you know it exists?
+
+0:11:07.2 **Jen Luker** Because it’s part, one of the children.
+
+0:11:09.6 **Adam Garrett-Harris** It, I mean, “impo” exists, i-m-p-o-...
+
+0:11:13.9 **Safia Abdalla** I think you probably could do some sort of like, suffix check. So, like “imposter” and “imposters” are two words and they both have the same like, “Imposte” root, or I guess “impost” depending how you look at it, but like, what is the root of the word? “Impo”, like there’s no valid root for it, so it might be that or maybe like, each path on the tree is ranked, so, you know, it’s more likely that from “o” you want to go out to another node than terminate at “o”.
+
+0:11:52.7 **Jen Luker** I mean, if you’re looking at that picture, what you’re looking at is that you have “imp” and then you have it break out into “impart” and it separates into the “o” but it completes it with “osters”. So, you’d have “osters” or it would go all the way down to “oster” and then you’d have a side node that would have an “s”. So, it would become a sibling to the “r”. You end up dividing it, but because of the fact that “impo” isn’t a child under the “o” letter there, it’s not one of the options.
+
+0:12:25.3 **Adam Garrett-Harris** Okay, so I’m looking at, actually a different book I used when reading this book. It was another book I used as a reference, and it’s called “Cracking the Coding Interview”, and so, when it goes over tries-
+
+0:12:38.6 **Jen Luker** Mm-hmm (affirmative).
+
+0:12:39.5 **Adam Garrett-Harris** It says-
+
+0:12:40.8 **Jen Luker** Add a null node?
+
+0:12:41.9 **Adam Garrett-Harris** It has little, it has little nodes, yeah. It says there’s null nodes to indicate complete words and it makes them on the graph with an asterisk. So, for instance it’s got “man” and “many” and so after “n” you have a “y” and an asterisk, and then after “y” you have an asterisk. So, yeah, I feel like that’s just something this book kind of glossed over, because it’s just not going into that much detail.
+
+ 0:13:10.8 **Jason Staten** This discussion definitely makes me want to go and implement it, just to see what approach I would have to take to make sure I’m showing only entries that are there, and not every partial entry. So, I could take that on for you, Jen, to see what I can find from that side of things, as a little challenge to myself.
+
+0:13:28.6 **Jen Luker** Sure. It’d be interesting. I mean, I’ve used auto-completions, I’ve written auto-completions, but…
+
+0:13:34.4 **Adam Garrett-Harris** Yeah, and I may not have entirely understood what you were trying to explain with just audio only.
+
+0:13:38.9 **Jen Luker** Yeah. It’s just anything that came off of “o” would have its own, it would be like all the children that came off of “o”, but because there’s none that just end at “o”, I guess, but that would be part of your definition is that there’s no asterisk all by itself, as a child, saying “impo” is a possible word.
+
+0:13:56.9 **Adam Garrett-Harris** Yeah. All right! Should we move onto algorithms?
+
+0:14:01.9 **Safia Abdalla** Yeah.
+
+0:14:02.7 **Adam Garrett-Harris** So, actually, we’ve got a sponsor first.
+
+0:14:05.9 **Jen Luker** Do we?
+
+0:14:06.1 **Safia Abdalla** What? (laughs)
+
+0:14:06.7 **Adam Garrett-Harris** Yeah. (laughs) So, this week’s sponsor is V School.
+
+V School was established in 2013 and is Utah’s highest ranked coding boot camp, and it’s the first of its kind in Utah. You can choose to learn full-time or part-time in the evenings, and you’ll immerse yourself learning new skills. So, even before classes start you’ll get a career counselor to help you find a job when you graduate, and they take care of everything so you can focus on learning, including free housing if you need it, and the housing’s just a few blocks from school. It’s located in beautiful Salt Lake City, Utah. Or you can learn from the comfort of your own home with V School’s 100% virtual classroom. You’ll get a super transcript, which is kind of like a portfolio, transcript, and letter of recommendation all in one, and it will help a potential employer quickly understand your strengths and abilities, and what you’ve accomplished.
+
+0:15:02.0 **Jen Luker** That sounds pretty cool.
+
+0:15:03.1 **Adam Garrett-Harris** Yeah.
+
+0:15:03.4 **Jason Staten** Yeah.
+
+0:15:04.3 **Adam Garrett-Harris** If you’re interesting in V School, head on over to https://vschool.io/ and it will help support the show, and definitely tell them that you heard about it from BookBytes. Thanks to V School for supporting the show.
+
+(Typewriter Dings)
+
+0:15:16.4 **Adam Garrett-Harris** So, simple algorithms. So, Jason and I were talking about this and our algorithm for going through these chapters was O(n), well, actually (mn) where m is the number of hosts and n is the length of the chapter, and so, we wanted to speed that up by each of us just picking our favorite algorithm, and so that should make it O(1).
+
+0:15:39.6 **Jen Luker** You nerds.
+
+0:15:41.3 **ALL** (laughing)
+
+0:15:43.3 **Jason Staten** I, uh, definitely agree with that. So-
+
+0:15:46.9 **Jen Luker** (laughs) The nerd part or the O(1) part? ‘Cause-
+
+0:15:50.1 **Jason Staten** Oh, I’m not-
+
+0:15:50.8 **Jen Luker** That was way cooler.
+
+0:15:51.3 **Jason Staten** I’m not gonna back track from either.
+
+0:15:54.2 **Jen Luker & Adam Garrett-Harris** (laughing)
+
+0:15:56.4 **Jason Staten** I’ve definitely been geeking out with this book, I’ve really enjoyed it so far.
+
+0:16:00.8 **Jen Luker** Yeah, it’s been great.
+
+0:16:02.0 **Jason Staten** So, speaking of geeking out on things then, I actually will jump in line and I will talk about my sort that I wanted to do. So, first, kind of going back to the last chapter related to a data structure that we didn’t spend a lot of time on, but it is a tree, and it’s called a heap; and a heap is a special kind of tree where a parent either has a higher or lower, they call it priority, but you can think of it as a value, than its sibling nodes, but those sibling nodes themselves don’t have to have any specific order to them. So, for example, if you were to have a heap of 3 nodes, with the highest priority at the top, say you had 3, 5, and 7 as your values within it, then 7 could be at the top, and then 5 could be on the left side of that, and 3 could be on the side. The order of 3 and 5 doesn’t particularly matter.
+
+And the value in that is you can insert and move things around within a tree pretty quickly, because as we talked before, a tree winds up becoming a divide-and-conquer type strategy when you’re interacting with it where you only need to figure out which level something belongs in rather than having to figure out the exact position of something within a tree when you’re inserting, or removing, and rearranging in a tree.
+
+So, first a heap has the value or use case of being useful for a prioritized queue, and a prioritized queue would be something you would want to use in the case of, say you have a RabbitMQ type worker process where you have a queue of things that you’re putting a whole bunch of tasks into and sometimes tasks will have higher priorities than others. By using a heap you can insert into them very quickly with a, it is a Log(n) type insertion time to put something into that, and then actually pulling off of the top of one winds up being a Big-O(1) operation to go and remove the item because it’s exact where it’s at, and then a log(n) type operation to go and rebalance the tree again.
+
+But heaps also have the benefit of being useful for sorting as well, and the way that you can do that is by converting your list structure, oftentimes it’s an array, and reorganizing the items into a complete heap structure, and a complete heap is the one that happens to have the greatest or lowest priority at the root node, or the first node on it, and then your second level of the tree and third level of the tree are just denoted purely by the indexes within that array.
+
+So, kind of a cool thing about it is a heap can be represented by an array-type structure and you don’t actually have to have individual node-type structures that point to other structures. So, it makes it really memory efficient because it’s just a contiguous set of memory, and because of that, going and doing a heapsort winds up being an (n log n) type Big-O, and I just thought it was pretty awesome. I went and actually implemented it today in Rust and it is, by far, the fastest algorithm that I went ahead and implemented. I did bubble sort insertion, merge selection, and heap, and heap, I mean because of its (n log n)-type speed, it outdid everything that I wrote, but the built in sorts are still definitely faster in terms of actual runtime. Their Big-Os are still the same as heaps being (n log n), but heap is definitely on top, or it’s top of the heap of my source that I wrote.
+
+0:20:07.0 **Adam Garrett-Harris** (laughs) Nice.
+
+0:20:08.8 **Jason Staten** Yeah.
+
+0:20:09.6 **Adam Garrett-Harris** So, question.
+
+0:20:11.1 **Jason Staten** Yeah?
+
+0:20:11.7 **Adam Garrett-Harris** So, normally a heap, like you said, a min heap or a max heap would be represented with a tree, and it looks like a tree, like, when I see a picture of it in the book here.
+
+0:20:23.4 **Jason Staten** Mm-hmm (affirmative).
+
+0:20:24.2 **Adam Garrett-Harris** And you said you can actually do it as an array-
+
+0:20:29.6 **Jason Staten** Mm-hmm (affirmative).
+
+0:20:30.3 **Adam Garrett-Harris** Where you just specify what level of the tree each item would be at, if it were in a tree, and that’s great because its contiguous piece of memory. Do you do that for a sort because you already know how many items are going to be in the heap? And like, normally if you were just building the tree, ad hoc, you would know how many items are in there?
+
+0:20:53.2 **Jason Staten** So, even if you are building it with an unknown set of entries in it, that is a case where it could be backed by one of the more dynamic-type list structures, like the dynamically allocating arrays that when they get beyond their capacity they go and reallocate another set of memory, kind of like what JavaScript arrays do automatically for you, and some of the other languages, like Java, has a list that will do that under the hood.
+
+So, it’s not so much about knowing the size but the benefit could come from… First, if you are able to back it with an array, a lot of times arrays are the type of thing that you want to be sorting. I mean, I generally don’t find myself sorting other types of data structures too often, and so by using a heapsort on it and just backing it by the original data source, then you actually don’t have to go and allocate other memory in order to do the sort, whereas some other sorts actually require you to go and copy the original data source in order to rearrange it.
+
+So, it’s in place and doesn’t require additional memory allocation which is good for like, low memory type devices and stuff. And the way that you can go and specify what level something is at is by looking at its index within the backing array. So, for example, index(0) is the root node, and there’s only one node at the root node level, and then indexes 1 and 2 are nodes that are at the second level, and then indexes,  I guess 3 through… Oh, it got me multiplying it. (laughs) But uh…
+
+0:22:34.1 **Adam Garrett-Harris** (laughs)
+
+0:22:34.8 **Jason Staten** Yeah, so like, everything under there, you have 4 nodes under there ‘cause every layer is 2 to the whatever level that it’s at, and it’s just known by the index that it’s at. So you’re not even keeping track of “this is the level that thing’s at” other than relying on the existing index that it is in the array.
+
+0:22:53.7 **Adam Garrett-Harris** Gotcha.
+
+0:22:54.2 **Jason Staten** And there is a really cool blog post about it, about “Heapify All The Things” and it is written by Vaidehi Joshi on Medium, and I will go and share a link that you can check out there, because it is an illustrated guide to doing a heapsort and I found it as an excellent resource to go along with the book.
+
+0:23:19.9 **Adam Garrett-Harris** Awesome, yeah. It seems like an illustrated guide would go great with the book. All right, Safia, you want to tell us about merge sort?
+
+0:23:27.5 **Safia Abdalla** Sure. So, I decided to choose merge sort because it was related to a sorting algorithm that I brought up in one of my tangents during the last podcast episode which was Timsort.
+
+0:23:39.6 **Adam Garrett-Harris** It’s not a tangent, it’s a side note.
+
+0:23:42.2 **Safia Abdalla** It’s a side note, of- Oh! That’s right, we’re being punny here, perfect.
+
+0:23:47.1 **Jason Staten & Adam Garrett-Harris** (laughs)
+
+0:23:47.0 **Safia Abdalla** One of my “side notes” during the last episode. So, merge sort, although it’s used in Timsort which we mentioned last episode, is actually a really old sorting algorithm. It was invented in the 1940s by somebody who was mentioned in the book a little earlier, Von Neumann who was tinkering a lot with computers in the ‘40s, as many of us do now I guess, and it was really interesting about merge sort was it applied the principle of divide-and-conquer, and this was also something that the book touched on in the last chapter. I think the, you know, in general, divide-and-conquer for solving any kind of problem tends to be like, a pretty common tool across computing, and merge sort was like, one of the first applications of that. It’s been around for 80 years and it’s pretty reliable.
+
+So, with all of that background aside, what does merge sort actually do? Merge sort, essentially, works by dividing the lists that you want to sort into smaller and smaller sublists and sorting on those. So, the idea is that instead of taking the time to sort a list of 20 items, you sort the 10 lists of 2 items contained within that list and then you build back up. And this actually ends up being a really efficient technique. We mentioned in the Big O chapter, we learned about how, you know, generally when you have these sort of like, divide-and-conquer type techniques you get really good runtimes and the runtimes usually tend to be a log(n) because you’re always taking half of what you were looking through before, generally, and that’s the case with this.
+
+So, the efficiency, or the time complexity of the algorithm is O(log n)-, O(n log n), and Jason mentioned a little bit about how much space heapsort takes up, merge sort takes up, I guess a space complexity of O(n) which basically means that if you have a list of 20 items and with merge sort you’re breaking it up into smaller lists that you want to sort through, then you would need basically the same amount of space as the number of items in your list for all of those sublists that you’re working through.
+
+0:26:10.6 **Adam Garrett-Harris** Is that in addition to the list that you already have saved?
+
+0:26:14.4 **Safia Abdalla** Yes.
+
+0:26:15.1 **Adam Garrett-Harris** Okay.
+
+0:26:16.2 **Safia Abdalla** So, O(n) extra space.
+
+0:26:19.0 **Adam Garrett-Harris** Okay.
+
+0:26:20.4 **Safia Abdalla** Yeah, one of the things that I think is cool to note in one of the visualizations that is on page 145 if you’re looking at PD,F is you can kind of see how much merge sort looks like a binary tree, ‘cause you’ve got those successive splits, and it was touched on in the last chapter, you know a binary tree is basically a tree where every node is either a terminating node or has 2 children.
+
+So, I thought that was a really cool way to showcase those analogous principals. Like, you know, a binary tree is a divide-and-conquer representation technique, I guess is the way you might say it, or data structure; and so is merge sort. That’s all I have to say about it. My biggest was that it’s like really old, as most things in computers are. It’s been around for a while and it’s pretty time tested and I think that’s what’s cool about algorithms. Once you’ve got something that’s space efficient and time efficient you can take it anywhere.
+
+0:27:27.8 **Adam Garrett-Harris** Nice.
+
+0:27:28.6 **Jason Staten** One thing that confused me initially about merge sorts was, okay, we’re breaking everything up and now we have all of these lists of a single value and then I’m merging them back together. Like, how does that make anything faster, because then when I have a list of 2, and then another list of 2, how do I- my initial thought was like, okay well, I have compare all of these things, and it turns out the efficiency comes from having those two lists of 2 that you’re assembling back together, those 2 lists are already sorted and so the only things that you need to look at are the things on the I guess the left side of the list, or the head of those lists and that is the order that you assemble them back. You don’t have to check each item in one list against all of the items in the other ones. You only have to look at the heads of the list and that’s where the efficiency can come from.
+
+0:28:19.1 **Safia Abdalla** Yeah, and the code, the JavaScript code on page 148 kind of shows that, that you’re always just checking the first item, and-
+
+0:28:26.8 **Jason Staten** Mm-hmm (affirmative).
+
+0:28:27.6 **Safia Abdalla** The trend is kind of that although you’re still sorting you’re always sorting elements that are more sorted than they were before so your list is getting less chaotic as the algorithm runs and you only have to compare those first things.
+
+0:28:44.0 **Adam Garrett-Harris** Yeah, Jason. I had the same thought as you. It seems very, and it doesn’t seem very efficient because that’s not how I would do it. I think he mentions in the book that the sort that’s most like how a human would do it is selection sort ‘cause you just kind of look for the smallest one, and then look for the next smallest one.
+
+0:29:03.8 **Jason Staten** Mm-hmm (affirmative).
+
+0:29:04.5 **Safia Abdalla** Yeah, and I think that’s- Oh, I’m going to go on a side note again, I will pause it. But yeah, it kind of goes back on… It was, ‘cause it was invented in the ‘40s, it was one of the first sorting algorithms that was designed to be written on a computer and specifically like, a Von Neumann machine, because as is noted, you need the additional memory to keep track of all of the sublists.
+
+0:29:28.0 **Jason Staten** Mm-hmm (affirmative).
+
+0:29:27.8 **Safia Abdalla** And then you also need like, your CPU to actually do the magic. So, it was like, definitely like, very designed to be run on a computer and not, definitely not, by a person, ‘cause I would not sort a deck of cards or something, like this.
+
+0:29:41.1 **Adam Garrett-Harris** (laughs) Yeah. Okay, so you said you need the additional memory. Jason, is the heapsort in place? Like, does it need additional memory?
+
+0:29:51.7 **Jason Staten** So, heapsort does not need additional memory so that is one benefit to it. It also did come a bit later. I think it came in the mid or later ‘60s, so definitely after merge sort; and one difference between the 2 algorithms as well, even though they have the same runtime merge sort winds up being a stable sorting algorithm whereas a heapsort is not stable, meaning that if, say you have 2 duplicate items in terms of their priority or ordering, those may get swapped in a heapsort whereas a merge sort will always make sure that if something came first before the list was sorted, like one duplicate came first before the list was sorted, it will continue to remain before it after the list is sorted.
+
+0:30:43.1 **Adam Garrett-Harris** Ah, which doesn’t sound important if all you’re sorting is numbers, but if you’re sorting numbers that have other data associated with it, it could be a big deal.
+
+0:30:52.0 **Jason Staten** Yes.
+
+0:30:52.9 **Adam Garrett-Harris** Cool, Jen what was your algorithm you wanted to talk about?
+
+0:30:56.1 **Jen Luker** Mine is quicksort.
+
+0:30:57.9 **Jason Staten** Sounds fast.
+
+0:30:59.2 **Jen Luker** Yeah! Well, sort of.
+
+0:31:01.8 **Jason Staten & Adam Garrett-Harris** (laughing)
+
+0:31:03.5 **Jen Luker** So, the thing with quicksort is it is an inplace sorting algorithm. It’s also a divide-and-conquer sorting algorithm. So, what you end up doing is you start with the very last element and then you look before it starting at the very beginning and you determine if it’s larger or smaller than the current or the very last element. So, in this example they had a list of numbers from 1-8, and they were very much jumbled up. So if the very last number is 6 then you’re going to look at the first one which is a 5, okay it’s still bigger. Then you’re gonna look at the first one which is a 2, and that 6 is still bigger and you’re going to look at the next one and it’s an 8. So, what happens there is that you’re actually going to swap those 2 numbers. So, now you know that that end position is now like, the largest of what’s going on, right?
+
+At that point… Oh, goodness gracious. Yeah, so you swap them, and then at point you’re going to go drop down a number so then you’re going to look at the next one and it’s going to be 6, or the next one’s a, like a 7 and you go back to the original position and it’s a 6, so they swap it all back around and things that-
+
+So, the point is, is that they’re trying to take the end of the list and compare it to the beginning of the list and make sure that they end up in the correct order all the way through. So, you end up merging in the center with the first half of the list and the second half of the list being sorted semi separately.
+
+This makes it a (n log n) type of algorithm, just like a merge sort. However, if the list is already sorted it could be an n squared algorithm. So, it can be much, much, much slower because it has to compare every parameter in the list on every other parameter in the list to verify that it’s actually in the correct order. So, to avoid that you end up choosing a median number as your beginning pivot to verify that you know that the bottom half of the list is going to be different than the top half of the list. So, that way you’re only comparing half the list, essentially, at each time.
+
+0:33:08.3 **Adam Garrett-Harris** So, it looks like you… You said you swap the 8 and the 6?
+
+0:33:12.6 **Jen Luker** Yeah.
+
+0:33:13.2 **Adam Garrett-Harris**  It looks like you kind of, you throw the 8…
+
+0:33:18.3 **Jen Luker** To the end of the list.
+
+0:33:19.8 **Adam Garrett-Harris** To the end?
+
+0:33:20.8 **Jen Luker** Right.
+
+0:33:21.0 **Adam Garrett-Harris** And the 6? The 6 stays as the second to last one? So, it's actually the second to last one goes where the 8 was. So, it’s kind of like 3 different things moving around, but essentially you’re just throwing the 8 after the 6.
+
+0:33:32.3 **Jen Luker** That’s interesting.
+
+0:33:34.3 **Adam Garrett-Harris** I wonder, it mentions, if you want to make it more efficient then you pick a better pivot, which is a median?
+
+0:33:41.3 **Jen Luker** Yeah, they choose a median.
+
+0:33:43.0 **Adam Garrett-Harris** So, I wonder how you choose the median, ‘cause how do you… If you have it sorted already, that’s easy to choose the median, but how do you know what the median is?
+
+0:33:50.7 **Jen Luker** Probably the same way the rest of us do. We go through the list real fast and, you know, find out the length of the… You know.
+
+0:33:56.5 **Adam Garrett-Harris** Oh!
+
+0:33:57.3 **Jason Staten** Right, ‘cause that, I mean, it’s already (n log n) and so you to go and traverse the list one more time, still keeps that same time, I mean maybe it’s 2(n log n) but then we drop the 2.
+
+0:34:08.1 **Jen Luker** It’d be (n log n)+1.
+
+0:34:10.4 **Adam Garrett-Harris** It would be n+(n log n), and then you just, you ignore the n+...
+
+0:34:15.5 **Jen Luker** Yeah.
+
+0:34:15.7 **Adam Garrett-Harris** Because that’s not that big of a deal.
+
+0:34:17.2 **Jason Staten** Right.
+
+0:34:17.9 **Adam Garrett-Harris** So, I guess what you’d do is go through the whole thing and, wow, I’m trying to construct an algorithm just off the top of my head, but basically like, you would have a list of smaller numbers, a list of bigger numbers, and then you’d have a current current median and then you might find one that’s more median that that. (laughs)
+
+0:34:33.7 **Jen Luker** Mm-hmm (affirmative).
+
+0:34:34.8 **Adam Garrett-Harris** Because a median is more than just like, it’s a… Mean is where you add them all up and divide by the length.
+
+0:34:41.0 **Jen Luker** Yeah, median is the middle number.
+
+0:34:42.7 **Adam Garrett-Harris** Yeah.
+
+0:34:44.1 **Jen Luker** So, you find the length of it and you just, divide it in 2 and grab that one, so it’s almost just an index sort it’s just a 1.
+
+0:34:50.3 **Adam Garrett-Harris** Yeah.
+
+0:34:51.1 **Jason Staten** I know that a quicksort is actually what Rust chooses to use as its default implementation algorithm, and I don’t know what strategy they use for making sure it doesn’t run into the n squared type situation, but they have a, I think whitepaper that they link to in their docs that I’ll have to go and pull up, but yeah. There has been a lot of thought into that because you definitely don’t want to run into the worst case.
+
+0:35:17.0 **Jen Luker** Yeah.
+
+0:35:17.3 **Jason Staten** In that point you’re better off potentially choosing some of these other algorithms. Like, if you’re likely to run into a sorted dataset, which, sorted datasets are things that we run into a lot which is why, as we brought up last episode talking about Timsort, where it can go and kind of gather heuristics about those things and if it’s looking like it’s sorted then just roll with it and assume that.
+
+0:35:41.7 **Jen Luker** And I wonder if it’s actually a combination of a merge sort and a quicksort. So, if you go find your median then you’ve got on your one list of numbers on one side and your other list of numbers on the other side and then you’re at least using your pivots at that point to make sure that each half is sorted, and then all you’re doing is picking the first number of the first list, and first number of the second list and going, “Yeah, they’re good.” So, they end up being really, really similar. The reason that a quicksort is considered a quicksort over a merge sort is because there’s fewer pivots that actually have to take place compared to the number of steps that are in a merge sort, usually. So, it tends to be faster.
+
+0:36:25.4 **Adam Garrett-Harris** Gotcha.
+
+0:36:26.4 **Jen Luker** But not always.
+
+0:36:27.8 **Adam Garrett-Harris** All right, I want to talk about graph traversal. I think mostly what it’s talking about in this book is traversing over a tree. That’s like, a pretty common type of graph traversal. The difference between traversing of a graph that has cycles or loops in a tree is that if it’s a graph and has cycles you have to mark each node as “visited” so you make sure you don’t get into an infinite loop and keep visiting the same nodes over and over.
+
+0:36:55.9 **Jen Luker** I feel like this is just such a difficult chapter to go through because it’s so visual and all we have is audio at this point. So, it’s just hard.
+
+0:37:06.7 **Adam Garrett-Harris** Yeah. So, and then when it comes to traversing over a graph you have 2 possible ways to do it. One is depth-first, and one is breadth-first, and so, depth-first just keeps going down as far as it can until it can’t go any farther, and then it goes back up, and goes down as far as it can and back up; and that might be what you want and that method using recursion. And if you want to use breadth-first you might think that uses recursion, too, but you can’t really, I don’t think that’s possible to do that with recursion. Instead you use a queue.
+
+Now, what I learned from this book that I didn’t know is that you can use a stack to do depth-first and then a queue, of course, to do breadth-first. It’s pretty interesting, so like, you just add the top node, the root node, to the queue or stack and then as long as there’s something in the queue or stack, you just keep adding its children to the queue or stack, and then you just keep looping and you pop off the next thing. You just pop off the next thing and add its children do the queue.
+
+0:38:14.4 **Jason Staten** Hmm.
+
+0:38:15.3 **Adam Garrett-Harris** So, one of the reasons why you might want to use breadth-first is you might want it to stay as close to the root as possible and not get too far off track; and one of the reasons you might want to do that is you’re trying to find a path between 2 nodes and so if you do breadth-first you may only have to go 4 levels deep to find it, whereas going depth-first, you might have to search through the whole tree almost, ‘cause you dont know how deep the tree’s going to be.
+
+What’s also super interesting is if you want to find the path between 2 nodes you can do simultaneous breadth-first searches from both of those nodes, and then as soon as they overlap you’ve got a path. And that was not in this book, that was actually from “Cracking the Coding Interview”.
+
+0:39:04.9 **Jason Staten** That’s an interesting point. You did bring up traversal of a, just any graph, and there is actually a way, like a pretty common way, to go and find if there is a cycle within that graph, and there is an algorithm called Tarjan's strongly connected components algorithm.
+
+0:39:28.3 **Adam Garrett-Harris** Hmm.
+
+0:39:29.3 **Jason Staten** I’ll send over a link to the Wikipedia, but its time in order to do that is a Big O(the number of edges and nodes that are within the graph), and by doing that it’s able to go and determine if there is a cycle within that, and kind of like you said, it’s going through and keeping track of nodes that have already existed simply by building up a stack, and so it actually has to be done in a depth-first sort of manner because if you do breadth-first then you don’t have necessarily the history of where you’ve been everywhere else, and if you’re on a cycle then you will continue to stay on that cycle indefinitely, potentially.
+
+0:40:13.6 **Adam Garrett-Harris** Oh, yeah.
+
+0:40:14.5 **Jason Staten** So, it is certainly an interesting algorithm, and yeah, I’ll link to it.
+
+0:40:20.6 **Adam Garrett-Harris** Yeah, and I bet it’s cool to see videos of a lot of these things ‘cause you can see the path as it changes and goes up and down the tree.
+
+0:40:28.9 **Jason Staten** Yeah, the Wikipedia article has a little animated gif that it actually calls out all of the cycles that are within a little sample graph. So, you can actually see which cycles exist, not just “does one exist?”, but “where are the cycles actually at?”
+
+0:40:42.2 **Adam Garrett-Harris** Oh nice!
+
+0:40:43.1 **Jason Staten** Yeah.
+
+0:40:44.5 **Adam Garrett-Harris** All right, we actually made it through that chapter in a decent amount of time.
+
+0:40:47.7 **Jen Luker** We did. I’m surprised.
+
+0:40:49.1 **Safia Abdalla** Yeah!
+
+0:40:50.2 **Jason Staten** (laughs)
+
+0:40:50.2 **Adam Garrett-Harris** Yay! (laughs)
+
+0:40:51.0 **Jen Luker & Safia Abdalla** (laugh)
+
+0:40:52.0 **Adam Garrett-Harris** All right. Thanks so much for listening. If you want to support the show please go rate us on iTunes. You can follow us on Twitter @BookBytesFM and I’m @AGarrHarr, Safia, what are you? You’re @CaptainSafia, right?
+
+0:41:04.8 **Safia Abdalla** Yes, I am. Yep.
+
+0:41:06.3 **Adam Garrett-Harris** Jason, you’re @StatenJason?
+
+0:41:08.3 **Jason Staten** Correct.
+
+0:41:09.1 **Adam Garrett-Harris** And Jen, you’re @KnitCodeMonkey?
+
+0:41:11.8 **Jen Luker** Yes, I am.
+
+0:41:12.5 **Adam Garrett-Harris** Awesome. So, who wants to read a review this week?
+
+0:41:16.7 **Jen Luker** All right. So, Masonite.bmw said, “I have listened to one episode and loved it! I look forward to reading a few of the books they tackle. It’s good to hear the insights from other people, when I read stuff on my own sometimes I only see it through my own perspective. This podcast adds a lot to the experience of reading books around the tech industry.” Thank you Masonite.BMW.
+
+0:41:37.4 **Adam Garrett-Harris** Yeah, and Mason is actually a friend of, Jason and I both know him. We’ve worked with him, so I appreciate that.
+
+0:41:45.8 **Jason Staten** Thanks.
+
+0:41:47.3 **Adam Garrett-Harris** Yeah. All right. Next episode is advanced algorithms and probably that’s it.
+
+0:41:55.1 **Jason Staten** I could see it taking up a good chunk of time, but also I did definitely like this strategy this time of going through and each of us kind of digging into one specific one. I liked it.
+
+0:42:06.5 **Adam Garrett-Harris** Yeah, I think we can do the same thing next time.
+
+0:42:08.6 **Jason Staten** Sure.
+
+0:42:09.8 **Adam Garrett-Harris** All right. See you next time.
+
+0:42:11.0 **Safia Abdalla** Bye.
+
+0:42:11.4 **Jason Staten** Bye.
+
+0:42:12.5 **Adam Garrett-Harris** Bye.
+
+(Exit music: Electro Swing)
