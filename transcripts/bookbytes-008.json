@@ -1,8 +1,9 @@
 {
   "podcast": "BookBytes",
   "episode": "8",
-  "transcript": [    {
-      "text": "(Intro music: Electro Swing)"
+  "transcript": [
+    {
+      "text": "(Intro Music: Electro Swing)"
     },
     {
       "timestamp": "0:00:13.9",
@@ -602,7 +603,7 @@
     {
       "timestamp": "0:35:41.1",
       "speaker": "Safia Abdalla",
-     "text": " Jen and I are really passionate about this."
+      "text": "Jen and I are really passionate about this."
     },
     {
       "timestamp": "0:35:43.7",
@@ -812,7 +813,7 @@
     {
       "timestamp": "0:48:20.7",
       "speaker": "Adam Garrett-Harris",
-      "text": "Okay. (laughs)"
+      "text": "Okay.  (laughs)"
     },
     {
       "timestamp": "0:48:21.4",
@@ -921,7 +922,7 @@
     },
     {
       "timestamp": "0:52:51.0",
-      "speaker": "afia",
+      "speaker": "Safia Abdalla",
       "text": "Mm-hmm (affirmative)."
     },
     {
@@ -1220,7 +1221,7 @@
       "text": "Thanks so much for listening. And if you haven’t left a review yet, head over to orbit.fm/bookbytes/giveaway. If you leave a review on Apple Podcast, you can enter to win a copy of “Technically Wrong” by Sara Wachter-Boettcher. We’re giving out 5 of these, so your chances to win are really good. By leaving a review, it will help us, I think. It’ll let Apple’s algorithm know that people like the show and hopefully they’ll recommend us to more people. Be sure to tune in next week because we will be talking with the author, Sara Wachter-Boettcher, and that’s a really good show. You won’t want to miss it. The best way to keep up with the show is to follow us on Twitter @Bookbytesfm and to subscribe in your favorite podcast player, and you can find the show notes and transcription for the episode, as always, at orbit.fm/Bookbytes/8. See you next time."
     },
     {
-      "text": "(Exit music: Electro Swing)"
+      "text": "(Exit Music: Electro Swing)"
     }
   ]
 }

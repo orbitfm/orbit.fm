@@ -1,0 +1,489 @@
+﻿(Intro Music: Electro Swing)
+
+0:00:13.9 **Adam Garrett-Harris** Hello, and welcome to BookBytes! This show is a book club for developers where we come together and talk about a book we’ve all been reading and discuss it with one another. This week we’re discussing “Technically Wrong: Sexist Apps, Biased Algorithms, and Other Threats of Toxic Tech” by Sara Wachter-Boettcher. I’m Adam Garrett-Harris.
+
+0:00:32.8 **Jen Luker** I’m Jen Luker.
+
+0:00:34.3 **Safia Abdalla** I’m Safia Abdalla.
+
+0:00:35.1 **Jason Staten** I’m Jason Staten.
+
+0:00:36.2 **Adam Garrett-Harris** So, last time we talked about… We kinda split this book up in a different way than normal. We’re trying something new where we’re doing it by topic instead of by chapter. So last time we talked about the tech, like the websites, apps, and just other technology and how they’re insensitive, or non inclusive, or destructive, or harmful to a lot of people, and this week we’re talking about the companies and the people that make this tech, and how we got here, why things are the way they are, why this tech isn’t considering all the use cases for all its users, and why there isn’t more diversity within these companies.
+
+0:01:16.0 **Jen Luker** Money.
+
+0:01:16.8 **Safia Abdalla** (laughs)
+
+0:01:17.8 **Adam Garrett-Harris** (laughs) “Money.” Yeah. So what do you mean?
+
+0:01:22.1 **Jen Luker** A lot of these companies and what they’re trying to set out to do have nothing to do with wanting to specifically be exclusive or to avoid catering to diverse groups, it has more to do with how they view edge cases and their financial gains based on these things. The more that you stay interacting with their products the more they make on everything from advertising to selling your information. So, when it comes down to it, it really, really does come down to money.
+
+0:02:01.5 **Safia Abdalla** I’m gonna push back on that a little bit, Jen, and say that I don’t think it’s about money as much as it is about entrenched racism and sexism in society at large, and just the eurocentric patriarchy that we have to account for that dictates a lot of the way that things are run. And I say this because there’s a lot of research that’s been done that proves that when you have more inclusive and diverse teams, you earn more profits. That when you have diverse board of directors, diverse leadership, you make more money as a business. You get more customers, you can reach out to more people. So, if this was, you know, this like purely capitalist, every owner’s just out to get the money and that’s all it was, then there would be more people who were underrepresented and marginalized in the tech industry because it is the rational thing to do from a financial perspective for your business; But, the reality is that a lot of it is centered on the fact that tech emerged as a new industry but followed existing power structures and those existing power structures were ones that tended to favor men, specifically White men and then just kind of structured everybody else as below that. And that’s kind of the way that I see it.
+
+0:03:31.8 **Jen Luker** And I do absolutely, absolutely, agree with you on that. I think the very glossed over point that I very definitely did not make was that the racist and sexist and, you know, just the… Those perspectives are so underlying and so ingrained in our culture that it’s not that they’re trying to be that way, so much as it just doesn’t occur. And you’re right that the research shows that more diversity breeds and creates more money, but the thought doesn’t occur. It’s kind of contrary to what the culture itself has been taught is true.
+
+0:04:15.7 **Safia Abdalla** Yeah.
+
+0:04:16.3 **Jen Luker** So, it’s… I really like the part where the research showed that based on the fact that we are using historical data to develop data models, because of the fact that the historical data itself was racist and sexist, it’s actually continuing the perception of racism and sexism into the future. So, all of its predictions are based on the past which were more racist and sexist than we are intending the future to be, and I think that, again, that comes down to the fact that the culture is still in the process of change, and it may still be at the very beginning of change.
+
+0:04:51.7 **Safia Abdalla** Mm-hmm (affirmative).
+
+0:04:52.8 **Jen Luker** And all the data that we have is, you know, like… The movements are only decades old, it’s not like they’re centuries old. So, the data that we have is already sexist.
+
+0:05:06.2 **Safia Abdalla** Yeah.
+
+0:05:07.0 **Jen Luker** So, I agree.
+
+0:05:07.6 **Safia Abdalla** And I think in addition to, you know, the data and the technical aspects of the products that are built, I think it also is, a little, a lot law about management and where… I can only speak from my perspective as a person of color, where people of color tend to end up being in companies.
+
+0:05:28.3 **Jen Luker** Mm-hmm (Affirmative).
+
+0:05:29.2 **Safia Abdalla** So, I won’t name any names, but a few of the companies that were mentioned in the book are places that I know hire people of color, or claim they hire people of color and will like, flaunt those statistics; But, the problematic aspect is those people of color are not set up to succeed in those organizations. And I think this is best highlighted in the story that was presented in chapter 2. A brief summary of it: A woman, I’m not sure if she was a woman of color, is trying to make a case for a product decision and she’s consistently ignored and put down a little bit by her White male colleagues and you know, the product ends up flopping. But, you know the root cause of it was that she was there, she just wasn’t supported.
+
+0:06:21.6 **Jen Luker** Mm-hmm (Affirmative).
+
+0:06:21.6 **Safia Abdalla** And so, I think, it’s… Not just having people at the table, it’s making sure that when they speak they’re heard and accounted for. And I’m very salty about this because I’m one of those people who, I’m a person of color, I’m a woman of color, I do get a seat at the table and I’m thankful for that, but oftentimes I come to sit at the table and I realize that I’m not welcome there and that I’m actually the token at the table.
+
+0:06:47.6 **Jen Luker** Yeah, there’s definitely a huge difference between diversity and inclusivity.
+
+0:06:52.3 **Safia Abdalla** Yeah, and I think that’s where a lot of the conversation needs to focus on is not just having diverse companies, but have companies that empower diverse individuals to make product decisions that reach the end user. Yeah, I think… I could go on all day about this because this is like, my life story here basically.
+
+0:07:14.2 **Jen Luker** And that makes me angry!
+
+0:07:16.3 **Jason Staten** That’s what we’re here for.
+
+0:07:17.0 **Safia Abdalla** Yeah, and yeah. Go ahead, Jason.
+
+0:07:20.2 **Jason Staten** I was just saying, that’s definitely why I am glad to have you, Safia, and you, Jen, on the show to get your perspective. Even the last couple of minutes are an enlightening conversation to listen to.
+
+0:07:37.8 **Safia Abdalla** Yeah.
+
+0:07:38.0 **Jason Staten** And I would agree that a lot of the problems that we deal with can stem from a, almost a cultural blindness or a blindness of the individuals of not necessarily thinking about reaching out to someone who is different than them, because oftentimes the people that we associate are just like us in that, you know, they’re White, they’re male, they’re straight, and so when you are thinking of maybe people to hire in for job, like, those are often immediately the person that you think of. And I would say, easy, which is another reason why it just kind of perpetuates the problem of rather than stretching yourself in terms of your own personal network and your company at large to get a more diverse company set up. Instead, it’s taking in who you know and saying, “Well, you know, we got a position filled and they can do it, so that’s all we need.” When in fact, that’s a very lazy approach, I would say.
+
+0:08:55.0 **Safia Abdalla** I’m curious to know for you folks who’ve been working in the industry at, I think, a variety of positions, have you worked at an organization that had some sort of bias training or workshops come in? Or has that not happened?
+
+0:09:10.1 **Jen Luker** We’ve had bias training, but the bias training that we have is “Please click through this like, slideshow for 30 seconds and answer this super simple common sense question at the end and then you’re all done and happy.”
+
+0:09:21.5 **Safia Abdalla** So, no.
+
+0:09:22.0 **Jen Luker** Yeah, right? It’s like, no. It’s not enough. I mean, the sexual harassment training is the exact same. Disappointing that they think that you can just like, read 2 sentences on the slide and read 6 lines and then answer questions and think that you’re suddenly enlightened.
+
+0:09:38.7 **Safia Abdalla** Yeah. How about you, Jason and Adam?
+
+0:09:41.4 **Adam Garrett-Harris** I don’t think I’ve had training on this subject, and as far as any other trainings being biased, I probably just am not aware of that happening. And I hope after reading this book, I'm a lot more aware of this happening, and a lot more sensitive to it because it just, it feels like… I’ve never thought about it that much, it doesn’t feel like it affects me that much, but this book has just really opened my eyes and made me think about this a lot more and how valuable it is to have diverse companies and teams.
+
+0:10:14.2 **Jason Staten** It’s been actually a recent change in Domo’s strategy actually, to strive to improve diversity within the company. As every company states, there’s a long ways to go, but they are taking a couple of good steps. Firstly they brought on, actually, a director to help assisting in getting that training initiated, so I, myself, have not actually participated in one just yet, but the program is underway and they do have somebody on that. And another thing that Domo is actually leading on is an effort that can be found at parity.org, and the idea behind Parity.org is companies can go and pledge that before they hire for any position, VP or above, that, much like what’s known as “The Rudy Rule” in the NFL where a diverse coach, or a diverse person needs to be interviewed for a head coach position, for the companies that take the parity.org pledge, they will commit to, any position VP or above, to interview at least one woman. It doesn’t necessarily mean that they have to hire based on some hard metric, but they will interview with that and then starting with women and branching out to greater sets of diversity, as well. I think it is a good step. I think there’s still a ways to go, but I know at least now they did a push towards a lot of NASDAQ companies and there are at least 300 companies that are signed onto that now.
+
+0:12:07.6 **Safia Abdalla** That’s interesting, of like, the people on this podcast who have careers in tech, one has had just kind of like, lackluster bias training. Adam, I think you didn’t have any provided by your company, and then Jason, that’s soon to happen. Okay. See, I asked that just because I think it’s one of those weird things. It’s sort of a chicken and egg problem, at least for me personally. I find that in order for companies to be very proactive about inclusion at their organizations they need to have somebody who is some sort of marginalized individual in a leadership position who can advocate for those things and push them, but usually for that person to get there they have to overcome a lot of the biases and microaggressions that happen daily in the office so then they can change the environment that they rose up in.
+
+0:13:05.8 **Adam Garrett-Harris** But even once they’re there it seems like it would be hard for them to advocate, because if they speak up then they’re seen as abrasive or something.
+
+0:13:15.9 **Safia Abdalla** Yeah. My favorite word, aggressive.
+
+0:13:18.5 **Adam Garrett-Harris** Aggressive.
+
+0:13:19.9 **Safia Abdalla** Yeah.
+
+0:13:20.6 **Jen Luker** Annoying.
+
+0:13:21.6 **Safia Abdalla** Annoying, oh boy. That’s a fun one.
+
+0:13:24.7 **Jen Luker** Like, I worked at a company where, well actually my entire career, I have never worked with another female developer. I’ve worked, I mean, my current company has 60 developers in 2 countries and I’m the only-
+
+0:13:40.0 **Safia Abdalla** You said 60?
+
+0:13:40.6 **Jen Luker** Female developer.
+
+0:13:41.0 **Safia Abdalla** 60?
+
+0:13:41.7 **Jen Luker** 60.
+
+0:13:42.5 **Safia ** That is 6-0? Across 2 countries, okay.
+
+0:13:45.8 **Jen Luker** Yes.
+
+0:13:46.7 **Adam Garrett-Harris** Wow.
+
+0:13:47.5 **Jen Luker** And I am the only female dev. And I finally made it to team lead and was able to start really advocating a little bit more for this, and it wasn’t very long before people started kind of freaking out. Like, they’d ask questions every once in a while about, “Hey, so what do you think about this? Is this weird? Is this awkward? Like, why is this a problem?” and try to have real genuine, intellectual, ‘I want to learn and be better’ type questions, but whenever I started really answering those questions in a way that started to get uncomfortable, everyone was just like, “Whoa, whoa, whoa. We’re all done now.”
+
+0:14:21.8 **Safia Abdalla** Yeah.
+
+0:14:22.0 **Jen Luker** And that was kind of that. So, 60 developers and I’m the only female.
+
+0:14:26.8 **Safia Abdalla** So, Jen, I’m curious. Is this the first organization that you’ve worked at where you were the only female developer? Have you worked at other companies where you weren’t? Like, what’s been your career experience with that? Being the only female developer.
+
+0:14:41.2 **Jen Luker** Yeah, I’ve had multiple jobs and I’ve always been the only woman. Yeah, this is the largest company that I’ve been at. I’ve been at a couple of different other ones, but yeah, I’ve always only ever been the only woman developer. There’s lots of other woman in the industry, or in the companies. There’s even women in leadership, but I’ve never worked with another developer that was a woman. And you know, with that matter, the racial diversity is also ridiculously lacking. I mean, even across 2 countries, everyone’s White male. There’s a couple that are Hispanic, but that’s it.
+
+0:15:17.9 **Safia Abdalla** Yeah. I haven’t had the experience where I was the only woman, but I have had the experience of being the only woman of color at an organization. I think that’s accurate to say.
+
+0:15:30.0 **Jason Staten** So, Adam. You had mentioned that when people get into a role that allows them to be an influencer, I actually thought of a, kind of a specific, instance. There’s a transgender woman named Coraline Ada Ehmke who is a big influencer in the Ruby space, and she worked at GitHub for a year and she wrote a long blog post about her experience there of really liking what they had promised initially, and was a strong advocate for some of GitHub’s privacy and security features of like, the ‘first time contributor’ badge that you see on a pull request was a big, big thing that she contributed to
+
+0:16:27.1 **Adam Garrett-Harris** Oh, cool.
+
+0:16:27.8 **Jason Staten** And she had some eventual issues where it was kind of the most passive way of bringing up problems where a manager gives you a poor review. And that’s something that I feel like I hear a lot of in stories, is oftentimes somebody will have a bad experience and they may not even know that there’s a problem until they kind of get a backhanded review that’s like, “You’re not necessarily meeting expectations” and it can kind of crumble from there. And that’s not something personally that I’ve had to go through, and it, at the same time, seems like a common pattern to me is to push somebody out that’s different than the rest of the company through a kind of formal means in some way to say like, “No, we’re not doing anything wrong.” It just… Kind of being, behind the scenes, sexist or racist or so forth.
+
+0:17:30.9 **Safia Abdalla** Yeah, I think that’s a great point to bring up, Jason, and for those of you who are long time listeners to the podcast, you might know that I recently came out of a job search process and Coraline’s experience was actually one of the big motivators for me prioritizing asking about the review process when I was talking with companies. So, some of the questions that I would ask is, you know, what kind of metrics or dimensions do you assess in your performance reviews? How often do you do performance reviews? How do performance reviews correlate with bonuses or raises? How do performance reviews correlate with positions changes or like, you know, rank raises. There might have been a couple of other questions that I asked, but, you know, it was actually something that hadn’t even come to mind for me until Coraline’s experiences and other underrepresented and marginalized individuals started to come out about the review process and how it can be a formal way of discriminating or ostracizing individuals. And I was like, “Oh! I should, you know, try and use that as a way to vet companies and see how much time and thought they put into their review process and how it can potentially be gained to do more harm than good.”
+
+0:18:51.7 **Adam Garrett-Harris** Yeah, I think that’s great to know, to be aware of those, that you can ask those types of questions, because as a White male, you would never need to ask those questions, and so it’s sad that you have to use those kind of strategies, but it’s great to hear that there are strategies that you can use. Like, I was thinking about one of the stories in this book is about how the HR process was so terrible And so, like, maybe that’s another questions you would ask is what does the HR do about violations?
+
+0:19:23.7 **Safia Abdalla** Mm-hmm (affirmative), I had not thought to ask of that, but for those of you who are listening, now you know. Ask about reviews, ask about HR processes, and I think that’s a good thing. I think oftentimes when I see like, blog posts or stuff written for developers they’re like, “What kind of things should you ask about your job when you’re interviewing the company?” It’s generally things like what’s remote work like? Or, you know, what laptop do you give? Or what technology do you use? Or hours and stuff, but I think the more developers start to ask companies, at the interview process, about their reviews, HR, how people are managed in the organization, the more companies will start seeing that as a priority and something they should improve on if they want to attract and retain hires.
+
+0:20:10.4 **Adam Garrett-Harris** Yeah, so that’s one of the problems the book talks about is that they blame the pipeline that there’s not enough diverse people coming through schools or boot camps or whatever, and then they actually have like a leaky bucket problem where even the few hires they do get they’re not able to retain.
+
+0:20:27.7 **Safia Abdalla** Mm-hmm (affirmative).
+
+0:20:28.5 **Jen Luker** You know, there was an additional point to that that I’ve seen recently where a lot of times the analytics themselves are biased. So, for instance, if you use like, “How many women are in technology?” Or, “How do you market these things to women?” You look at the statistics of people that are interacting with your product. So, like, Stack Overflow for instance has like a 92% men use it versus an 8%ish like, women use it, right? So, if you’re looking at that then you’d think that approximately 92% of programmers are men, and that’s not necessarily true. There’s a lot of additional factors that go into why women don’t contribute to websites such as Stack Overflow. You take that into account and then you also take into account that if you do not provide your gender that there are algorithms to try to identify what your gender is based on the sites that you go to and the activities that you partake in. So, if you’re really into sports or you look up a lot of developer websites then they may think that you’re a man, whether you’re not or you are is irrelevant. They just classify you as such. As a woman who interacts with a lot of things that would be technically classified as male dominated, they would not classify me as female and therefore in statistics I would come up as part of that male analytic, even though that’s inaccurate. So, making assumptions based on data makes, you know, gets more and more inaccurate over time.
+
+0:22:09.9 **Adam Garrett-Harris** Yeah, it’s starting off with biased assumptions, right?
+
+0:22:13.8 **Jen Luker** Mm-hmm (affirmative).
+
+0:22:13.8 **Adam Garrett-Harris** It’s kind of like what you were talking about earlier where you have biased data when it comes to things like machine learning, you have to have some sort of data set and if that’s biased it’s just a vicious cycle that keeps getting reinforced.
+
+0:22:24.4 **Jen Luker** Right, so you take that and you also look at the fact that there’s now new products that are out on the market that try to say that they’re unbiased. So, they’re trying to use generic information based on like, a profile that you’re providing to try to find better people that would match your demographic or your profile in order to improve your hiring and your attrition statistics. So, if you insert someone who’s like, “Take my best developer and I want them to also have like, better soft skills.” The software itself, based on all of this data that we’ve had before, is now looking at this person saying, “Okay, well they were in a fraternity, and they went to a high end school, and they also did these other things. So, let’s look for people like that.” These people are going to rank better for you than someone who maybe went to a state school and you know, weren’t quite as involved in as much extracurricular activities. So, you end up with breed- you know, like works with like, and you just end up with more people that are like yourself, and you really miss out on a lot of the diversity that is available and out there and would be even better than the job than yet another person that’s just like you. And so, when we’re looking at this data, and when we’re working with this data, we have to be asking those questions, and those are questions that we necessarily haven’t been trained specifically to ask. Like,what are the biases that our data is, in fact, built with? And how are we going to work with that data in order to counteract that? So, it may be unbiased in the fact that it’s doing exactly like you told it to, “Find someone like my developer but with better soft skills.” But it doesn’t do a very good job of finding diverse hires. So, you end up, again, with just the same people and wondering what the pipeline- And that was the argument against the pipeline, that’s where I was going with this. Is that when you’re looking at that, you’re saying there’s a pipeline problem, there’s only 8% of women that use Stack Overflow, which based on whether you’ve provided your gender or not and they’re just demographic profiling you based on the websites you go to, it may be more like 25% or it may be 50% for all we know, but because of the fact that the data is biased, it says 92% versus less.
+
+0:24:46.2 **Safia Abdalla** Yeah. I think there’s another dimension to the pipeline problem, and I think it’s the fact that oftentimes underrepresented and especially so marginalized individuals are expected to achieve higher standards, or be better, in order to even get the chance for an interview, or a preliminary review or something like that. I don’t know if we’re calling out companies in this podcast, but this is-
+
+0:25:15.8 **Adam Garrett-Harris** Well, the book does.
+
+0:25:17.6 **Safia Abdalla** Yes, so…
+
+0:25:18.2 **Jen Luker** Yeah, but do we?
+
+0:25:19.9 **Safia Abdalla** Yeah.
+
+0:25:19.9 **Adam Garrett-Harris** (laughs)
+
+0:25:20.8 **Safia Abdalla** I’ll… They're a big company and I think this was like, public commentary on it, but there’s like little search engine company called Google, and a while back they started this program with Howard University, which is a historically Black College, and the program was sort of like an extension school/summer program. The idea was they would have Google engineers come teach classes at Howard, and then some Howard students would come in and, I think it was like quasi-internships at Google, I really don’t want to mess up the facts on any of this, but my initial reaction when I read the information about it was this feeling that the kids at the historically Black College, HBCU, had to do more to get a foot in the door at Google, than somebody from MIT who could slap their resume into one of Google’s application pages and like, check all the boxes on their automated filters. And like, I get it. I get that, as marginalized individuals, sometimes you need extra support and help to get to a point where you know you can get into the door, but I don’t know, sometimes for me personally it feels like that thing where people are trying to support you and, you know, give you resources, the tone of it can sometimes mean, “You’re not good enough, so we need to give you these things to be better.” Not, “There is a system that oppresses you. That is not your fault. So, we’re going to attempt to improve the situation by giving you these resources.” And sometimes the blame can be put on the marginalized individuals themselves to adhere to the standards of the pipeline, not on like, the whole system that disadvantages certain individuals. And maybe that’s just a tone that I’m reading in some of like, the programs and things that I get emails about, but sometimes it feels a little bit like, “You gotta do more, you gotta be better.” Not, “We failed you.”
+
+0:27:19.7 **Jen Luker** That’s one of the exact reasons why I’ve always been angry about the, you know, the… Suddenly I’ve lost my words. So, there was a program that became like, federally standardized that had to do with making sure that you had like, certain types of racial and gender quotas in order to fill, before you could start hiring like… Or start adding White males to your schools, and I was always really angry about those because I always felt like they had to make special accommodations to allow women in, when they’d much rather be just having men in. And I always dreamt of that ideal of it doesn’t matter. It really doesn’t matter.
+
+0:28:12.9 **Safia Abdalla** Yeah.
+
+0:28:13.1 **Jen Luker** You’re going to hire me because my skills are good, and that’s why you’re hiring me, because I’m smart and because I work hard. And I’ve always really felt like I’ve had to work twice as hard to be considered half as good.
+
+0:28:22.2 **Safia Abdalla** Mm-hmm (affirmative).
+
+0:28:23.3 **Jen Luker** And it just- It still makes me angry that it’s almost required that we have these things just to tell people to treat people with some modicum of respect and to actually look at their skills.
+
+0:28:35.4 **Safia Abdalla** Yes, I think that’s a great way to phrase it. And I’m gonna cover my-- Excuse my language a little bit on this. I’m not, you know, speaking out against the individuals who participated in Google’s program, or the Google engineers who helped put it out or any of that. This is not targeted at individuals, it’s just, you know, an example that sticks out to me about how sometimes I perceive the tone in these things.
+
+0:29:00.6 **Adam Garrett-Harris** I think the way that you perceive it is perfectly valid because no one can tell you how you feel is wrong, you know what I mean? Like, that makes perfect sense. And Jen, when you’re talking about having to work twice as hard, I was gonna mention that. Like, not only is it harder to get the job or get your resume looked at, but even once you have the job you feel like you have to work twice as hard, like you said.
+
+0:29:24.5 **Jen Luker** Like-
+
+0:29:24.6 **Adam Garrett-Harris** And I feel like I could do nothing for a week and my employer would be like, super happy with me.
+
+0:29:30.9 **Jen Luker** Yeah, no. Absolutely not. It’s even difficult to ask questions sometimes. You get to the point where if you ask a question it’s not just that, “Oh, she doesn’t know that thing, she needs more training.” It’s, “Oh, god. She must be stupid and doesn’t know anything.” It’s like, everything that I’ve done up until then can get just completed discounted because I didn’t know something, that my facts were wrong once I’m completely unreliable for who knows how long.
+
+0:29:53.3 **Safia Abdalla** Yeah.
+
+0:29:53.9 **Jen Luker** It can be really, really hard to, you know, admit that I’m wrong or to admit that I don’t know something, and since we’re CYAing all over the place here…
+
+0:30:05.4 **Safia Abdalla** (laughs)
+
+0:30:05.8 **Jen Luker** The company that I, you know, where I’m the only developer in 60, they’ve only interviewed 3 women, and by interviewing I mean they brought in specifically, kinda sorta skipping most of the interview process to bring in the only 3 women that have ever applied.
+
+0:30:25.7 **Saifa** Ugh.
+
+0:30:26.4 **Jen Luker** In the 6 years that I’ve been there. So, for me I feel like they’re looking at this saying there’s a pipeline problem because there’s only been 3 women to apply. However, if you look at like, the company profile and you look at how the job posting is worded, I can tell you exactly why women aren’t applying, you know? Let alone people of color in general. I can tell you why. But that’s also something that’s really difficult to overcome when those job postings aren’t just the realm of me, or my boss, or even my boss’ boss, or my boss’ boss’ boss, and it goes way high up in the heirarchy of “Sorry, but we’re dictating this and this is just how it’s going to be.” And it really, really sucks because the place that I work is really fantastic. They’ve been really welcoming, they’re great with training me, and supporting me, and promoting me, and you know, I’ve never felt like the fact that I’m a women, let along the only women amongst that many develoeprs has ever been a hindrance. And it’s really sad that there’s this great place, and they have openings, that has a really hard time hiring women. So, I mean there’s even good companies out there that are available and willing, they just can’t get applicants.
+
+0:31:43.4 **Safia Abdalla** Yeah, and you highlihgted this really interesting point about kind of like, the sped up interview process to get women through the door.
+
+0:31:51.8 **Jen Luker** Mm-hmm (affirmative).
+
+0:31:52.4 **Safia Abdalla** And this reminds me of a situation that really upset me, and this happened about 2 years ago. I was attending, we’re just CYAing all over the place. I was attending this conference for female developers. You know which one it is ‘cause there’s only one.
+
+0:32:07.6 **Jen Luker** Mm-hmm (affirmative).
+
+0:32:08.3 **Safia Abdalla** And you know, at this conference it’s all entirely for women in computing, and there was a ton of young women there who are attending universities, majoring or minoring in computer science, and a lot of companies with booths who want to hire. And I remember I was, you know, just like going around talking to young women who were my age who were at universities, majority of them private colleges like your MITs, and your Stanfords, and your Northwesterns, like, you know, they’re not… They’re talented and smart individuals. And these companies were just not being… How do I phrase it? Like, the questions they would interview them with were way below their level, it was almost patronizing was the interview process for a lot of these organizations, and that really upset me, because it was the kind of thing where it was like… I can only relay this secondhand, but a lot of the girls that I talked to felt like the questions were patronizing and that the companies were trying to give them easy questions to get them in through the door and say that they hired X number university women for internships from this conference process. And this is like, I guess another aspect of the whole like, “You need to be better-”
+
+0:33:27.8 **Jen Luker** Mm-hmm (affirmative).
+
+0:33:27.9 **Safia Abdalla** “In order to sit with us.” Is the like, “Oh, we gotta like lower the bar for you. Or give you this really easy interview because that’s all you can handle.” And I’m like-
+
+0:33:36.5 **Jen Luker** And I hate that!
+
+0:33:37.8 **Safia Abdalla** These are computer science majors from really good schools! Not saying that’s what you have to be to get a job in the industry, but these are smart individuals! You can challenge them and they can succeed! You don’t have to patronize and demean their intelligence because you want to say you hired women. Aaah! So frustrating. I’ve been (laughs)-
+
+0:33:58.5 **Adam Garrett-Harris** Hmm.
+
+0:33:59.4 **Safia Abdalla** I’ve been keeping that story for such a long time and I think that this probably still happens at this conference. It’s just… Like this… They don’t care. It’s a game to them. It’s a game of numbers.
+
+0:34:11.7 **Jen Luker** You know, and I actually had a story that was similar. Similar type of hiring status, similar type of, you know, bring women in and have them all interview with these various companies, and this one woman walked out and she’s like, “I didn’t get anyone to call me. I didn’t get anyone to- No one would take my resume and the ones that did just kind of stuck it in the pile with all the rest.” And as I’m walking out of this conference, there were all of these other women that were talking and giggling and saying, yeah they got offers from these, and they got offers from those people, and they have interviews set up for all of these other ones, and the only difference was she was a woman of color.
+
+0:34:50.2 **Safia Abdalla** Hmm.
+
+0:34:52.3 **Jen Luker** And-
+
+0:34:53.8 **Adam Garrett-Harris** That’s the story- Is that the story from the book? Or is that something different?
+
+0:34:57.4 **Jen Luker** It might be a story from the book, actually. Now that I think of it.
+
+0:34:59.7 **Adam Garrett-Harris** Yeah, yeah, I believe that’s in there. It’s a-
+
+0:35:01.9 **Jen Luker** But it made me even more angry that… Ugh, again it’s like, why does this have to matter? Why does my reproductive organs and the color of my skin have to matter? What does this have to do with my ability to do the job, or my ability to provide beneficial, accurate feedback on product development.
+
+0:35:28.4 **Adam Garrett-Harris** Yeah. Yeah, why can’t they just respect people and take them seriously?
+
+0:35:34.0 **Safia Abdalla** Yeah, and I think-
+
+0:35:35.3 **Jason Staten** On the-
+
+0:35:36.1 **Safia Abdalla** Oh, go ahead Jason.
+
+0:35:37.1 **Jen Luker** (laughs) Poor Jason’s been trying to talk for a while.
+
+0:35:39.5 **Safia Abdalla** Yeah, sorry.
+
+0:35:41.1 **Jason Staten** It’s alright.
+
+0:35:41.1 **Safia Abdalla**  Jen and I are really passionate about this.
+
+0:35:43.7 **Jen Luker** (laughs)
+
+0:35:43.8 **Jason Staten** And I love it. I… Keep at it because I feel like it is more important for me to listen than constantly just keep talking because, you need to be heard. Just thinking about the having to work harder to feel as if you need to work harder, or having to deal with softballs getting pitched at you in an interview just to make the interviewees feel good, It makes me think of a story about a man named Daniel Kish, who is sometimes known as Batman, where he can use sonar to ride a bicycle because he’s been blind since he was an infant. And there’s a podcast episode on “This American Life” about him where one of the biggest challenges that he and many other people who are blind face is that people’s expectations of them are lower than that of somebody who’s sighted. Like, the fact that he’s able to ride a bicycle being questioned by people when in fact, I mean, he’s well equipped other than having immediate vision, but he has a fully functioning body that can do thing. And what can often happen is people who are disadvantaged for, whether it be gender, sex, or disability, or anything else, is that the expectations of people around them can even set them up, or people can fulfill those expectations, and instead do worse or think to themselves, “I’m not cut out for this field”, because people have expectations that they’re not going to be, maybe an amazing developer, or a successful developer. You know, if they’re constantly getting, just given low bars to achieve over, like, that’s all that they can strive for. So, I think even in one way, like people may feel like they have good intentions, and that they’re trying to get somebody in that is diverse, at the same time, by lowering that bar, it’s actually a hindrance to that person. So, I love that you both brought that up, so thank you for sharing.
+
+0:38:10.7 **Safia Abdalla** Yeah, and I think-
+
+0:38:10.7 **Jen Luker** Speaking of lowering the bar, I have a cousin whose wife is deaf and because of the fact that she was deaf there were major concerns with everyone in the hospital when she had her baby that she was going to be an incompetent mother. She’s a college graduate, she knows sign language, she can even speak. She was nervous about being able to hear her baby and she was kind of afraid to go home because she was afraid about being alone with her baby and not hearing her baby cry, but the hospital staff themselves were all like, terrified to send this baby home with this women who’s intelligent and capable and competent, because she was deaf. And my mother is deaf and the concern was also there. My mom had 6 children and you know, the question was always, you know, is she going to be okay taking care of this child? Is she even capable? It’s ridiculous. And might I also add to this story, speaking of companies and diversity and product development that I was able to find one baby monitor that would vibrate more and more intensely based on the volume of the baby crying.
+
+0:39:39.2 **Safia Abdalla** What?
+
+0:39:40.3 **Jen Luker** So, if it was a whimper it would not vibrate very hard and it would show a light that would only go so high, and then as the baby’s crying got more and more intense, the vibrating on the baby monitor got more and more intense, and it was a wrist watch essentially, it was just a wrist monitor.
+
+0:39:57.1 **Adam Garrett-Harris** Hmm.
+
+0:39:57.1 **Jen Luker** So, she could go to sleep, safely knowing that when her baby started crying this baby monitor would vibrate and wake her up. I found one.
+
+0:40:07.7 **Safia Abdalla** I’m so surprised that those don’t exist more often. Wow.
+
+0:40:11.1 **Jen Luker** And, it was being discontinued.
+
+0:40:13.9 **Safia Abdalla** Ugh.
+
+0:40:14.6 **Adam Garrett-Harris** Ooh.
+
+0:40:15.2 **Safia Abdalla** That’s the worst. I wanna… This might steer away from the lowering the bar conversation, and I think there’s like, an interesting contradiction to it, which is sometimes the bar can be raised a lot to an obscene amount when you’re an underrepresented or marginalized individual. And I’m thinking about this specifically in the context of a recent event that occurred as we’re recording this podcast with Theranos, which is a startup company that ended up being a huge hoax, and you know, was basically a waste of investor money and there was a lot of deception and stuff associated with it. And some of the commentary that I’ve been seeing in the community of Black women who are also in the startup world, whether as founders or as investors, is the fact that sometimes the bar can be raised to a very high extent if you’re an underrepresented individual, that people won’t invest in you. And I think that maybe it is lowering the bar/raising it, but people won’t invest in you or, you know, task you with managing that big project, or hire you because they believe that you can’t do it, and because they believe they can’t do it they end up more rigorously questioning you, you know, they want to know everything about your company’s financials. They want to know every flaw in your product or your team, and just this incessant grilling on your business, which is fair. Like, companies can do their due diligence, but that same level of rigor and examination isn’t often afforded to organizations or opportunities that are given to individuals who, in the case of Theranos, are White women or individuals who are White men. That sometimes you do have to respond to like, severe inquiry and doubt before you can get in somewhere, which I guess is kind of the reverse of lowering the bar. So it’s weird because, you know, sometimes… And I had this with my interview process recently, like, I’ll go into a company and I won’t know if they’re the kind of place that thinks I’m not worth it and is going to grill me really hard, or thinks that I must suck so they gotta make it easy for me. And those are like, 2 different approaches, or 2 different experiences that I’ve had which is it’s either lowered or raised. Which is confusing because you can never tell what you’re getting into.
+
+0:42:54.7 **Adam Garrett-Harris** Yeah, and it can be hard to know.
+
+0:42:56.8 **Safia Abdalla** Yeah! You can never know what you’re getting into.
+
+0:42:58.2 **Adam Garrett-Harris** Well it can be hard to know if they’re doing that to you because you’re a woman of color or if they do that to everybody, because I’ve had some really, really easy interviews.
+
+0:43:07.1 **Safia Abdalla** Yeah, that’s a good point. Yes.
+
+0:43:08.4 **Adam Garrett-Harris** I don’t know why. And then I’ve had other ones that were like, grueling, and I thought I did terrible but I got the job.
+
+0:43:13.8 **Safia Abdalla** Yeah.
+
+0:43:14.5 **Adam Garrett-Harris** And so, when you go into an interview they’re probably, hopefully, doing the same kind of interview to every candidate and then judging them based on each other how they did. So, they may be really hard and you think you didn’t do very well, but you did way better than everyone else.
+
+0:43:29.1 **Safia Abdalla** Yeah, and I think context is definitely key in the situation that I mentioned earlier with the conference and the hiring. Like, I think that was very obviously bias in play.
+
+0:43:38.0 **Adam Garrett-Harris** Yeah.
+
+0:43:39.0 **Safia Abdalla** But yeah, that’s a good point. So, anyway, that was something like, I guess relevant news that’s going on that I figured I’d include in the podcast to make it interesting for y’all listening.
+
+0:43:51.8 **Jen Luker** So, to go along with that, I also found that even if they do have the exact same interview process, the perception is different between one candidate versus another. So, male candidate who admits they don’t know something are seen as, you know, promising and willing to learn and look up things. But a woman who’s seen as not knowing something is seen as inexperienced and it can be not just, it’s that subconscious bias that also comes into play. So, even if the questions are the same the perception can still be different. And we really, really have to step out of ourselves and be very conscious of our own unconscious bias in order to try to circumvent that process, too. It can be quite difficult.
+
+0:44:47.3 **Adam Garrett-Harris** Yeah, and the other thing is men and women just communicate differently. So, men are less likely to admit they don’t know something. They’d rather go and research it, or guess. And I think like, if you don’t know something it’s better to ask than to just go and guess.
+
+0:45:04.2 **Jason Staten** That was one of my favorite bits of insight that we got when interviewing Dave Hoover about “The Apprenticeship Patterns” and what he would change about it. And given his answer being that he was mostly satisfied with the way that it is right now, but he would like to review it from the perspective of someone with a different level of privilege than him. I was talking to you the other day, Jen, about exposing your ignorance and that can be a different pattern for me to take action on than for you to take action on.
+
+0:45:45.5 **Jen Luker** Mm-hmm (affirmative).
+
+0:45:46.1 **Jason Staten** That where mine could be perceived as having a level of humility, that you could be received as, “Oh, Jen doesn’t know anything.”
+
+0:45:55.6 **Jen Luker** Having a level of ignorance.
+
+0:45:58.0 **Jason Staten** Correct, yes.
+
+0:45:59.3 **Jen Luker** So it can- Yeah, it’s very much to… It can be 2 very different animals, you know? It’s just we’re perceived completely differently and like you said, the communication between the 2 can be different, however you could be perceived- You know, if you say something straight at someone it can be seen as being direct, whereas mine is seen as being blunt.
+
+0:46:23.4 **Adam Garrett-Harris** Yeah.
+
+0:46:24.0 **Jen Luker** And, you know, even if we have the same communication styles, the expectation is different.
+
+0:46:30.0 **Adam Garrett-Harris** Yeah, yeah. And it does-
+
+0:46:30.1 **Jen Luker** You know, their concern is why don’t I smile when I say these things? No one cares if you smile, but I have to smile. I have to be kinder and softer. I can’t raise my voice because then I’m going overboard, you know? Even in leadership there’s a certain level of expectation that I have to be calmer and quieter and more reserved and more willing to let others dictate to me how things should be, and you know, be more of a delegate and more of a democracy type of team; Whereas, if that were a man, for instance, then they’d been seen as wishy-washy and you know, not taking control, you know? So, what’s expected of me is different than what’s expected of you in even a leadership role. So, sometimes some of the feedback I get is very much based on that. It’s like, “Well, you know, you were pretty stern about that…” And sometimes it’s, “Well, you weren’t listening and I had to get stern in order for you to listen to me.” Whereas, watching someone else do that on a similar team, but he’s a man, on his team he’s seen as taking control and leading the charge, and it can be exhausting trying to both be a leader and make my team better, while also fulfilling the perceptions of what other people think I should be.
+
+0:47:59.1 **Adam Garrett-Harris** Yeah, that sounds like so many extra responsibilities that you have to think about.
+
+0:48:05.1 **Safia Abdalla** I’m-
+
+0:48:05.2 **Jen Luker** Adapting into what other people want in order to not spend more time sitting in offices, getting in trouble.
+
+0:48:12.5 **Safia Abdalla** Yeah. I’m curious to know, I really want to flip the script a little bit and put Jason and Adam on the hot seat for a second.
+
+0:48:19.4 **Jen Luker** Yes!
+
+0:48:20.0 **Jason Staten** Uh-oh.
+
+0:48:20.7 **Adam Garrett-Harris** Okay.  (laughs)
+
+0:48:21.4 **Safia Abdalla** Have you ever been in situations where, you know, you were maybe more aware at the moment or you saw that you were given preferential treatment as a White man? Or in the context of an interaction with an underrepresented or marginalized individual? Like, this is like… I’m getting too long winded in my question, I guess. The question is: Has there been a situation where you saw discrimination happen or you were in a position where you benefited from an interaction because of your race and gender? And if so, how did you respond to that situation? Truly, the hot seat. (laughs)
+
+0:49:00.0 **Adam Garrett-Harris** Yeah. I have not worked with very many female developers, but one story I can think of is there was a man on my team who was a… Actually I’m curious, on the term “person of color”-
+
+0:49:13.2 **Safia Abdalla** Mm-hmm (affirmative).
+
+0:49:13.7 **Adam Garrett-Harris** Does that just mean anyone who’s non-White?
+
+0:49:15.8 **Safia Abdalla** I think so. I think that is so-
+
+0:49:18.3 **Adam Garrett-Harris** Okay.
+
+0:49:18.5 **Safia Abdalla** You know, Hispanic, or Native American or…
+
+0:49:21.1 **Adam Garrett-Harris** Yeah, so there was a man on my team who was of color, and he came in with not a lot of experience. So, he had actually no programming experience, so he was very happy to get that job, but he had to work so hard. He worked harder than anyone on the team and for years, and years, and years. And by that point, he was as good as anyone on the team, especially considering how hard he worked, but still he could just not get ahead. He couldn’t get a raise, a promotion, he couldn’t be taken seriously by our boss.
+
+0:49:55.0 **Saifa** Hmm.
+
+0:49:55.5 **Adam Garrett-Harris** So, I tried to help him out as much as I could, and to stand up for him and ask him questions in meetings, what he thought, and just to listen to him when he was telling me about the problems he was having.
+
+0:50:06.1 **Safia Abdalla** Were you in a position where you could go up to a manager or something or say or sponsor him, saying like, “Hey, I know you’re doing promotions next month. You should put him in for a promotion, or he should get a raise.” Or something like that?
+
+0:50:19.2 **Adam Garrett-Harris** You know, I probably could have. I didn’t feel like I was in a position to do that, and I also feel like it wouldn’t have helped. My thought was that he really just needed to start fresh at a new company, because he had such a bad start at that company.
+
+0:50:36.2 **Jen Luker** Here’s the question though. Even if it wouldn’t have helped get him the praise, it would have helped everyone around him know that it wasn’t acceptable. It would have helped him know that it wasn’t acceptable.
+
+0:50:50.2 **Adam Garrett-Harris** Yeah.
+
+0:50:51.3 **Jen Luker** I mean-
+
+0:50:51.8 **Adam Garrett-Harris** Yeah, you’re totally right.
+
+0:50:52.3 **Jen Luker** I’ve been… I was in a job that slowly crushed my soul. (laughs)
+
+0:50:59.3 **Safia Abdalla** Oh no.
+
+0:51:00.4 **Jen Luker** And, you know, got increasingly abusive and increasingly condescending and pushed me out by making me feel absolutely worthless before they just flat out fired me. And it’s taken years to come back from that, but nobody stood up for me. Nobody told me that I was good enough. Nobody said that I’d done good work. Nobody said anything. So, by the time that I was done, I was completely crushed. You reach a point where absolutely no one says anything positive that you believe the negative. And sometimes all it takes is just someone standing up for you, and it’s not just for you, it’s for everyone around you to recognize that it’s not acceptable. It’s like… I actually had this (laughs) this is a great story from years ago, but I was sitting there in a group of men and they were kind of complaining about their wives, you know?  They were like, “Oh yeah, you know, we try to go out to dinner and she’s always like, ‘Well, what do you want?’ and I’m like, ‘Well you choose, it’s you know, whatever.’ and she’s like ‘I don’t know.’ And she’s really indecisive and it’s really annoying and then I say ‘Taco Bell’ and she’s like, ‘I really hate Taco Bell so let’s not go there.’ It’s like, ‘Well then you decide!’ “ And you know, they were just kind of complaining a little bit, it wasn’t anything major, but my one coworker said, “Yeah, I really hate the fact that my wife is my best friend, and that she’s birthed my children, and helped me, and always supported me, and raised our lives, and always backed me up, and sometimes she’s indecisive about dinner.”
+
+0:52:30.6 **Adam Garrett-Harris** (laughs)
+
+0:52:30.6 **Jen Luker ** And every single man that was sitting there making, kind of fun and derogatory comments about their wives, shut up. Never once did I hear it happen again. Not once. It only took him one time of pointing out to them exactly what they were doing for them to never do it again.
+
+0:52:51.0 **Safia Abdalla** Mm-hmm (affirmative).
+
+0:52:51.5 **Adam Garrett-Harris** That’s fantastic.
+
+0:52:52.9 **Jen Luker** So, my question then is, what could you have done? What could you have said? And maybe it’s that one little thing, that one little comment, that one little extra helping hand, that one time of standing up for someone that really doesn’t deserve what they’re getting that not only makes an impact in that person’s heart that they really are worth it and they are doing a good job, but in everyone else’s around them. It brings that awareness to mind.
+
+0:53:19.1 **Safia Abdalla** Yeah, and I think that’s just a good thing to internalize for anyone listening as well, is it never hurts to say a good thing or to provide sponsorship. Even if that person is never going to know that you spoke up for them, having a supporter in higher ranks or in management is such an invaluable thing to underrepresented and marginalized individuals. Like, having someone who has a seat at the the table and is respected speak up for you is huge. Like, so many of the great things that have happened in my career are a result of that. So, if you’re listening and you're like, trying to figure out ways that you can help out, just sponsoring people; And in like, very tangible, meaningful ways like, asking that they be paid more,  or that they get promotions, or that they be given leadership roles on a big project. Like, that’s so huge.
+
+0:54:14.8 **Jen Luker** You know, sometimes it’s as much as just saying, “Hey, you know? Let’s ask Safia’s opinion on this. She’s sitting at the table, her opinion matters, let’s ask.” You know?
+
+0:54:24.4 **Safia Abdalla** Yeah, and I think that Adam, that was one of things that he did that I think is really great to do, too, is- And this is probably something that you can do more on a day-to-day basis, and I’m sure Adam would agree, because meetings happen all the time, is they very frequently, people turn into kind of like, kind of shouting matches were a lot of the same 2 people are talking over each other, or the same 3 people. So, if you notice someone who’s underrepresented or marginalized and it looks like they’ve got something to say, using your power to introduce them into the conversation can be a really good thing. As Jen and Adam pointed out.
+
+0:54:59.3 **Adam Garrett-Harris** Yeah, even if they don’t look like they something to say, I think. Because you may get used to not even being able to say anything, so you don’t even try anymore.
+
+0:55:07.1 **Jason Staten** Yeah.
+
+0:55:08.2 **Safia Abdalla** Hmm. Jason, I don’t want to let you off the hot seat. (laughs)
+
+0:55:10.4 **Jason Staten** Nope. Oh, yeah. I’ve had a little bit of time to think on it and I could think of a definitely particular instance where I worked with a woman who was at a small startup, small being under the size of 10, sometimes even smaller than that. And she was so impressive and in so many aspects. She did designs, she could do a level of development. She could do finance work. She just… So like, multifaceted and amazing to work with, and her, I guess one flaw, that I guess would say was taken up by the owner of the company was that she would commit to something and wouldn’t always hit the deadline exactly. And I was like, I’m a developer. I have plenty of times, myself that I don’t hit a deadline. I mean, there’s so many positives and yet something like that slips and like, it was so judged against. And there was like, one particular instance where she had stayed up all night to put together this report and didn’t quite have it done in time for some like, 9:00 am conference call, and she was on the verge of actually getting fired, and I was at lunch with this guy and I actually put my foot down pretty hard to say like, “We need her here. Like, she is the reason why our company is running as well as it is today. And we can’t go and let a mistake like this be the reason for letting somebody so key and essential for company go.” And it was something that I did and you know, I talk about it now and I don’t want to make myself sound like a person who has always done this, because this is something that has been a rare act for me and I guarantee you there are opportunities that I’ve missed in order to put my privilege to use to assist others who are in need. But it was one particular case where I feel like I could learn from as a positive experience for me, to continue to do, because that’s a case where I was able to help and did extend her time there for a little while longer. I mean, she eventually did move on. But, yeah. That is one experience I had were someone like me, being a developer, I mean, we’re all developers here, how many times have we let deadlines slip? And I mean, it’s part of it. But, you know, if something happens and it’s the wrong person it could totally be perceived the wrong way, ignoring all the positives and great things that we have achieved.
+
+0:58:23.6 **Safia Abdalla** Yeah, do you feel like… Was there extra pressure or the expectation that she reached those deadlines… Sorry, what I’m trying to say is was there bias in the decision to fire her because of the missed deadlines? Or was this something where if anyone across the organization missed a deadline, you were out? Or, if you were consistent- Like, do you get what I mean? Like-
+
+0:58:51.4 **Jason Staten** Yeah.
+
+0:58:52.0 **Safia Abdalla** Was the original… Yeah.
+
+0:58:52.9 **Jason Staten** Yeah, I see what you’re saying and I would say that there probably was a bias.
+
+0:59:02.2 **Safia Abdalla** Mm-hmm (affirmative).
+
+0:59:02.9 **Jason Staten** Because like I said, I mean me being a dev at the company had missed deadlines in the past. I mean I know sometimes deadlines are a little bit different when you have a client on a phone call waiting for something, but at the same time… I mean, when you’re doing enterprise business, like, stuff gets pushed back for numerous reasons. So, to say that a couple of hours is a fire-worthy instance can… Yeah, I would say certainly there was a bias.
+
+0:59:37.1 **Safia Abdalla** Yeah, I just, I wanted to flip the script a little bit and get your perspectives on the situation because I definitely do feel like a lot of times the dialog focuses on what women can do to progress in the workplace, or how they can change their emails, or how they can dress differently, or all this stuff. And I, I think it’s really great.
+
+0:59:56.9 **Jen Luker** Don’t forget to smile!
+
+0:59:59.2 **Safia Abdalla** Don’t forget to smile, I think it’s really great to kind of just, you know, get men into the conversation and ask them to be a little introspective about their own experiences.
+
+1:00:07.3 **Jen Luker** Like Safia said, she and I could talk about this…
+
+1:00:10.6 **Safia Abdalla** (laughs) All day!
+
+1:00:10.6 **Jen Luker** All week long. You know? We could talk and talk and talk and talk, but it’s not going to make any difference unless those of us that are not marginalized start talking and then just taking action. You know?
+
+1:00:23.5 **Safia Abdalla** Yeah.
+
+1:00:23.2 **Jen Luker** It takes more than just women and people of color talking about the crap that’s happened to us to make things change.
+
+1:00:31.4 **Safia Abdalla** I want to give a shout out to somebody who is in the tech community. Her name is Kim Crayton. If you look her up online, I'm sure you can find her social media and stuff, but she does a lot of work on diversity and inclusion and one of the terms that I really like that she… I don’t know if invented it, but I’ve seen her use it a lot, is the concept of being a “power ally” and a power ally is, you know, not just any ally or supporter of underrepresented and marginalized individuals, it’s actually somebody who’s going to go in and advocate or say something, or put their own reputation and safety and comfort on the line for the sake of somebody else. So, I really like that term, and I would say if you are listening and you’re somebody who’s interested in getting some interesting perspectives on diversity and inclusion you should definitely check out Kim Crayton’s work and some of her ideas. She’s got some really interesting thoughts on D&I from a business perspective and how people can approach it more proactively.
+
+1:01:36.3 **Adam Garrett-Harris** Well, I’m curious. Do you have any advice for us guys? I know you’ve already given some about being an ally, but do you have anything else you’d like to tell us?
+
+1:01:46.2 **Jen Luker** Be self aware. Just watch.
+
+1:01:49.1 **Safia Abdalla** Yeah.
+
+1:01:49.1 **Jen Luker** Watch yourselves, watch others. Become that power ally, and just the biggest thing is, just make others know, if you see something, that it’s not acceptable.
+
+1:01:58.3 **Safia Abdalla** Yeah. I really like that, and I think part of the self awareness is being okay with being uncomfortable.
+
+1:02:05.6 **Jen Luker** Yeah.
+
+1:02:06.3 **Safia Abdalla** Like, I think one of the things about being an underrepresented or marginalized individual in the tech industry is that you’re always uncomfortable. So, I think sometimes it’s good as somebody’s who’s, you know, in a position of privilege to be uncomfortable and think about times where maybe you weren’t the good guy, and where you like,dropped the ball on something, or where you inflicted more harm than good and, you know, let yourself wallow in that discomfort but then also think about how you can improve and be better in the future. I think that’s just like, generally good life advice is be introspective and always look to improve yourself.
+
+1:02:40.7 **Jen Luker** As Daniel Tiger says, “First say I’m sorry, and then ask ‘How can I help?’”
+
+1:02:46.4 **Safia Abdalla** (laughs)
+
+1:02:47.0 **Jason Staten** My kid loves that.
+
+1:02:48.5 **Adam Garrett-Harris** Hmm.
+
+1:02:48.5 **Safia Abdalla** It’s like kids’ shows have the answers to everything in life.
+
+1:02:52.2 **Jen Luker** It’s true! It’s the whole “Everything I needed to know in life, I learned in kindergarten.”
+
+1:02:56.6 **Safia Abdalla** Yes.
+
+1:02:56.6 **Jen Luker** Unfortunately it’s been so long since anyone’s reiterated those kindergarten lessons that so many people have forgotten them.
+
+1:03:02.6 **Safia Abdalla** So, I guess another action item for listeners is to just go watch “Daniel Tiger.”
+
+1:03:08.7 **Jen Luker** Truth!
+
+1:03:10.5 **Adam Garrett-Harris** (laughs)
+
+1:03:10.6 **Jen Luker** And why can’t our adult shows have like, some of those uplifting things, too? It’s like all we’ve done is post-apoc, nightmare, miserable, zombies, and murder, and-
+
+1:03:19.9 **Safia Abdalla** (laughs)
+
+1:03:20.8 **Jen Luker** Anger and like, abuse, and you know, why can’t we have some happy feel good stories where people are like, noble and kind to each other, and learn lessons from their mistakes? And become better people!
+
+1:03:35.6 **Safia Abdalla** It’s true. That’s an interesting observation, yeah.
+
+1:03:37.0 **Adam Garrett-Harris** Yeah!
+
+1:03:37.8 **Safia Abdalla** I’ll happily admit that I still watch “Arthur” and “Daniel Tiger” and a ton of stuff on PBS kids.
+
+1:03:45.0 **Jen Luker** Awesome.
+
+1:03:45.0 **Safia Abdalla** No problem with that. (laughs)
+
+1:03:47.9 **Jen Luker** I love Doc McStuffins.
+
+1:03:48.3 **Adam Garrett-Harris** Arthur’s great.
+
+1:03:49.3 **Safia Abdalla** (laughs) It is!
+
+1:03:50.5 **Jason Staten** Oh yeah. I know the kid songs. Probably one of the best parts of having a kid is being able to go and-
+
+1:03:58.9 **Adam Garrett-Harris** Yeah.
+
+1:03:58.9 **Jason Staten** Talk through those situations and say, “How should we handle those things?” I think what may happen to us, as adults, is we may assume that because we learned that thing in kindergarten or before, that we assume we’re experts at it already, and we say, “Yes, I know how to apologize! You just say ‘I’m sorry.’” And you forget the other part, but you know, it’s the “How can I help?” factor. And it’s like the same bias where people believe that they’re a great driver when, in fact, not everybody is a great driver. I mean, there has to be, there’s obviously a curve to it. And so...
+
+1:04:40.1 **Adam Garrett-Harris** Yeah. Most people think they’re above average.
+
+1:04:43.6 **Jason Staten** Right, and so our skills at conflict resolution are not actually as good as we think they are, and so we do need to exercise those things and make ourselves feel uncomfortable.
+
+1:04:54.9 **Adam Garrett-Harris** Thanks so much for listening. And if you haven’t left a review yet, head over to orbit.fm/bookbytes/giveaway. If you leave a review on Apple Podcast, you can enter to win a copy of “Technically Wrong” by Sara Wachter-Boettcher. We’re giving out 5 of these, so your chances to win are really good. By leaving a review, it will help us, I think. It’ll let Apple’s algorithm know that people like the show and hopefully they’ll recommend us to more people. Be sure to tune in next week because we will be talking with the author, Sara Wachter-Boettcher, and that’s a really good show. You won’t want to miss it. The best way to keep up with the show is to follow us on Twitter @Bookbytesfm and to subscribe in your favorite podcast player, and you can find the show notes and transcription for the episode, as always, at orbit.fm/Bookbytes/8. See you next time.
+
+(Exit Music: Electro Swing)
