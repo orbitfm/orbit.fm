@@ -5,7 +5,7 @@ const runScript = function(lineReader) {
   const transcript = [];
 
   lineReader.on('error', function(err) {
-    console.log(err.line);
+    console.log(err);
     return;
   });
 
