@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import Img from 'gatsby-image';
 import leftPad from 'left-pad';
 
-import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
@@ -160,121 +159,117 @@ export default ({ data }) => {
       : null;
 
   return (
-    <Layout>
-      <PageWithSidebar
-        title={
-          <Link to={`/${episode.podcast.fields.slug}`}>
-            {episode.podcast.name}
-          </Link>
-        }
-        headTitle={episode.podcast.name}
-        description={episode.podcast.shortDescription}
-        color={episode.podcast.primaryColor}
-        sidePanelChildren={
-          <PodcastInfo
-            fluidImage={episode.podcast.image.fluid}
-            podcastDescription={episode.podcast.description.description}
-            podcastName={episode.podcast.name}
-            podcastHosts={episode.podcast.hosts}
-            podcastPath={episode.podcast.fields.slug}
-          />
-        }
-      >
-        <Subscribe links={episode.podcast.subscriptionLinks} />
-        <h2>{episode.name}</h2>
-        <p>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</p>
-        <div>{episode.shortDescription}</div>
-        <AudioContainer>
-          <ConnectedPlayButton
-            url={`${
-              process.env.PODCAST_REDIRECT_URL
-                ? process.env.PODCAST_REDIRECT_URL
-                : ''
-            }${episode.audioUrl}`}
-            podcast={episode.podcast.name}
-            title={episode.name}
-          />
-        </AudioContainer>
-        <h3>Hosts</h3>
-        <ul>
-          {episode.hosts &&
-            episode.hosts.map(host => (
-              <li key={host.id}>
-                <Link to={`/people/${host.fields.slug}`}>
-                  <p>{host.name}</p>
-                </Link>
+    <PageWithSidebar
+      title={
+        <Link to={`/${episode.podcast.fields.slug}`}>
+          {episode.podcast.name}
+        </Link>
+      }
+      headTitle={episode.podcast.name}
+      description={episode.podcast.shortDescription}
+      color={episode.podcast.primaryColor}
+      sidePanelChildren={
+        <PodcastInfo
+          fluidImage={episode.podcast.image.fluid}
+          podcastDescription={episode.podcast.description.description}
+          podcastName={episode.podcast.name}
+          podcastHosts={episode.podcast.hosts}
+          podcastPath={episode.podcast.fields.slug}
+        />
+      }
+    >
+      <Subscribe links={episode.podcast.subscriptionLinks} />
+      <h2>{episode.name}</h2>
+      <p>{DateTime.fromISO(episode.publicationDate).toLocaleString()}</p>
+      <div>{episode.shortDescription}</div>
+      <AudioContainer>
+        <ConnectedPlayButton
+          url={`${
+            process.env.PODCAST_REDIRECT_URL
+              ? process.env.PODCAST_REDIRECT_URL
+              : ''
+          }${episode.audioUrl}`}
+          podcast={episode.podcast.name}
+          title={episode.name}
+        />
+      </AudioContainer>
+      <h3>Hosts</h3>
+      <ul>
+        {episode.hosts &&
+          episode.hosts.map(host => (
+            <li key={host.id}>
+              <Link to={`/people/${host.fields.slug}`}>
+                <p>{host.name}</p>
+              </Link>
+            </li>
+          ))}
+      </ul>
+      {episode.guests && (
+        <div>
+          <h3>Guests</h3>
+          <ul>
+            {episode.guests.map(guest => (
+              <li key={guest.id}>
+                <Link to={`/people/${guest.fields.slug}`}>{guest.name}</Link>
               </li>
             ))}
-        </ul>
-        {episode.guests && (
-          <div>
-            <h3>Guests</h3>
-            <ul>
-              {episode.guests.map(guest => (
-                <li key={guest.id}>
-                  <Link to={`/people/${guest.fields.slug}`}>{guest.name}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {episode.fields.showNotesFormatted && (
-          <div>
-            <h1>Show Notes</h1>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: episode.fields.showNotesFormatted,
-              }}
-            />
-          </div>
-        )}
-
-        <div>
-          <h1>Transcript</h1>
-          {transcript ? (
-            <h4>
-              Help improve this transcript on{' '}
-              <a href={transcriptLink}>GitHub</a>
-            </h4>
-          ) : (
-            <h4>
-              Help by adding a transcript on{' '}
-              <a href={transcriptsLink}>GitHub</a>
-            </h4>
-          )}
-          {transcript && (
-            <div>
-              {transcript.map((item, i) => (
-                <div name={item.timestamp} key={i}>
-                  <ConnectedTimestamp
-                    url={`${
-                      process.env.PODCAST_REDIRECT_URL
-                        ? process.env.PODCAST_REDIRECT_URL
-                        : ''
-                    }${episode.audioUrl}`}
-                    podcast={episode.podcast.name}
-                    title={episode.name}
-                    timestamp={item.timestamp}
-                  />
-                  <InlineList>
-                    <SpeakersImages
-                      src={getSpeakersImagesSrc(item.speaker, hostsImages)}
-                    />
-                    <span>{item.speaker}</span>
-                  </InlineList>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: markdown.render(item.text),
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          </ul>
         </div>
-      </PageWithSidebar>
-    </Layout>
+      )}
+
+      {episode.fields.showNotesFormatted && (
+        <div>
+          <h1>Show Notes</h1>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: episode.fields.showNotesFormatted,
+            }}
+          />
+        </div>
+      )}
+
+      <div>
+        <h1>Transcript</h1>
+        {transcript ? (
+          <h4>
+            Help improve this transcript on <a href={transcriptLink}>GitHub</a>
+          </h4>
+        ) : (
+          <h4>
+            Help by adding a transcript on <a href={transcriptsLink}>GitHub</a>
+          </h4>
+        )}
+        {transcript && (
+          <div>
+            {transcript.map((item, i) => (
+              <div name={item.timestamp} key={i}>
+                <ConnectedTimestamp
+                  url={`${
+                    process.env.PODCAST_REDIRECT_URL
+                      ? process.env.PODCAST_REDIRECT_URL
+                      : ''
+                  }${episode.audioUrl}`}
+                  podcast={episode.podcast.name}
+                  title={episode.name}
+                  timestamp={item.timestamp}
+                />
+                <InlineList>
+                  <SpeakersImages
+                    src={getSpeakersImagesSrc(item.speaker, hostsImages)}
+                  />
+                  <span>{item.speaker}</span>
+                </InlineList>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: markdown.render(item.text),
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </PageWithSidebar>
   );
 };
 

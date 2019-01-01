@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'react-emotion';
 import { graphql } from 'gatsby';
 
-import Layout from '../../components/Layout';
 import PageWithSidebar from '../../components/PageWithSidebar';
 
 const TextArea = styled.textarea`
@@ -60,47 +59,45 @@ const ContactPage = ({ data, location }) => {
   /*}*/
 
   return (
-    <Layout>
-      <PageWithSidebar
-        title="Contact"
-        headTitle="Contact"
-        description="We'd love to hear from you"
-        color="#33444c"
-        sidePanelChildren=""
+    <PageWithSidebar
+      title="Contact"
+      headTitle="Contact"
+      description="We'd love to hear from you"
+      color="#33444c"
+      sidePanelChildren=""
+    >
+      <form
+        name="contact"
+        method="POST"
+        action="/contact/thankyou"
+        data-netlify="true"
       >
-        <form
-          name="contact"
-          method="POST"
-          action="/contact/thankyou"
-          data-netlify="true"
-        >
-          <Label>Podcast:</Label>
-          <select name="podcast">
-            {data.allContentfulPodcast.edges.map(({ node }) => (
-              <option
-                value={node.name}
-                key={node.id}
-                selected={node.name.toLowerCase().replace(/\s/g, '') === show}
-              >
-                {node.name}
-              </option>
-            ))}
-          </select>
-          <Label>Topic:</Label>
-          <select name="topic">
-            <option value="Suggest a topic">Suggest a topic</option>
-            <option value="Suggest a guest">Suggest a guest</option>
-            <option value="Sponsor a show">Sponsor a show</option>
-            <option value="Other">Other</option>
-          </select>
-          <Label>Subject:</Label>
-          <Input type="text" name="subject" />
-          <Label>Message:</Label>
-          <TextArea name="message" />
-          <Button type="submit">Send!</Button>
-        </form>
-      </PageWithSidebar>
-    </Layout>
+        <Label>Podcast:</Label>
+        <select name="podcast">
+          {data.allContentfulPodcast.edges.map(({ node }) => (
+            <option
+              value={node.name}
+              key={node.id}
+              selected={node.name.toLowerCase().replace(/\s/g, '') === show}
+            >
+              {node.name}
+            </option>
+          ))}
+        </select>
+        <Label>Topic:</Label>
+        <select name="topic">
+          <option value="Suggest a topic">Suggest a topic</option>
+          <option value="Suggest a guest">Suggest a guest</option>
+          <option value="Sponsor a show">Sponsor a show</option>
+          <option value="Other">Other</option>
+        </select>
+        <Label>Subject:</Label>
+        <Input type="text" name="subject" />
+        <Label>Message:</Label>
+        <TextArea name="message" />
+        <Button type="submit">Send!</Button>
+      </form>
+    </PageWithSidebar>
   );
 };
 
