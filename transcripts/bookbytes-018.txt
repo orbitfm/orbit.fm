@@ -64,7 +64,7 @@
 
 0:02:36.6 **Jason Staten** Topic in the industry, for sure. And I guess, sound off real quick. Do you do test driven development and with that is it all the time, some of the time, or rarely if ever?
 
-0:02:52.5 **Jen Luker**  Some of the time.
+0:02:52.5 **Jen Luker** Some of the time.
 
 0:02:54.1 **Safia Abdalla** For me it depends on the context and the open source project that I work on. We’ve got pretty heavy test driven development going on, good coverage and all that. At work I think it depends on a lot of different factors and tends to be like a personal choice with the developer, but we do have things like tests running on pull request filters and tests on pre-commit hooks and pre-push hooks and stuff like that. So there’s like, set up an infrastructure for it but it’s not like a super strict, “You have to put in a test first and then start coding.” It’s just, “You should have a test with every pull request you merge.”
 
@@ -250,7 +250,7 @@
 
 0:28:18.2 **Jen Luker** Is better than saying stringent is equal to good.
 
-0:28:21.3 **Safia Abdalla** Ditto what she said, basically. But I agree, I think that it’s not just about the stringent ness. I don’t think anything software related should be judged on how stringent it is because I think that’s where you get into areas that are very dark and not good and bad. But I do think just… There’s  a certain level of like, accountability that you have to have as a team to make sure that you’re building a healthy testing culture.
+0:28:21.3 **Safia Abdalla** Ditto what she said, basically. But I agree, I think that it’s not just about the stringent ness. I don’t think anything software related should be judged on how stringent it is because I think that’s where you get into areas that are very dark and not good and bad. But I do think just… There’s a certain level of like, accountability that you have to have as a team to make sure that you’re building a healthy testing culture.
 
 0:28:47.2 **Adam Garrett-Harris** Nice. Shall we move on to Essential Unix?
 
@@ -286,7 +286,7 @@ ________________
 
 0:30:16.8 **Adam Garrett-Harris** E-, it sounds like E-U-, how do you spell it?
 
-0:30:20.8  **Jen Luker** Mm-hmm (affirmative).
+0:30:20.8 **Jen Luker** Mm-hmm (affirmative).
 
 0:30:21.6 **Adam Garrett-Harris** You know what I’m talking about?
 
@@ -464,7 +464,7 @@ ________________
 
 0:41:19.7 **Jen Luker** Right.
 
-0:41:19.8  **Safia Abdalla** Your ‘if’, your ‘elseif’, yeah.
+0:41:19.8 **Safia Abdalla** Your ‘if’, your ‘elseif’, yeah.
 
 0:41:21.3 **Jen Luker** Right. I’m just saying if you said F-I instead of if in the wrong language then…you know...
 
@@ -592,7 +592,7 @@ ________________
 
 0:45:02.1 **Jason Staten** (laughs)
 
-0:45:02.7 **Safia Abdalla** Mm-hmm (affirmative).  For Say you can do a really great prank when somebody moves away from their computer, you know, open up a terminal session and then sleep for a certain number of minutes and then after sleep do “say something”. So they’ll like get back to their desk and be working and then like, 20 minutes later-
+0:45:02.7 **Safia Abdalla** Mm-hmm (affirmative). For Say you can do a really great prank when somebody moves away from their computer, you know, open up a terminal session and then sleep for a certain number of minutes and then after sleep do “say something”. So they’ll like get back to their desk and be working and then like, 20 minutes later-
 
 0:45:19.6 **Adam Garrett-Harris** Yeah (laughs)
 
