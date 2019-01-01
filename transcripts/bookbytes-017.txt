@@ -44,7 +44,7 @@
 
 0:03:03.3 **Adam Garrett-Harris** Yeah! Yeah. It’s so weird. It doesn’t let you do any side effects at all, but side effects still have to happen, but they’re all taken care of by the Elm runtime.
 
-0:03:12.8 **Safia Abdalla** Yeah, and for me personally, the syntax was one of the hardest things to grasp, and also just its strictness around typing. Elm has a lot of type inference built in that’s designed to kind of avoid errors that might come up in runtime. So, you know, you have strict types to find for something that are going to capture all of like, the annoying corner cases and like flukes that you get when you might be running a program and give you a chance to deal with those. So navigating its strict [inaudible 0:03:49.1 ] and, like, building a good type model for the application was something I had to figure out, too. ‘Cause it was like you have to be like, very strict and precise about types and make sure that it all worked well in the Elm model. I don’t know if I’m explaining this well.
+0:03:12.8 **Safia Abdalla** Yeah, and for me personally, the syntax was one of the hardest things to grasp, and also just its strictness around typing. Elm has a lot of type inference built in that’s designed to kind of avoid errors that might come up in runtime. So, you know, you have strict types to find for something that are going to capture all of like, the annoying corner cases and like flukes that you get when you might be running a program and give you a chance to deal with those. So navigating its strict typeness and, like, building a good type model for the application was something I had to figure out, too. ‘Cause it was like you have to be like, very strict and precise about types and make sure that it all worked well in the Elm model. I don’t know if I’m explaining this well.
 
 0:04:06.4 **Adam Garrett-Harris** Yeah.
 
@@ -518,7 +518,7 @@ But beyond like, the forms of normalization that I learned in school, what I tho
 
 0:46:20.8 **Jason Staten** I guess you had talked about your interpretation, or like, how you read into consistency and how that varies versus atomic. And I know you were going through the CAP theorem, so… Availability. What do you understand that as?
 
-0:46:33.3 **Safia Abdalla** So the way I thought about it, given the context of what he explained in the book, is that… This might be [inaudible 0:46:45.2] to think about it, but any node that you send a request to, a node being some sort of machine that holds your data, is going to return a response to a request for a query.
+0:46:33.3 **Safia Abdalla** So the way I thought about it, given the context of what he explained in the book, is that… This might be a very [inaudible 0:46:45.2] way to think about it, but any node that you send a request to, a node being some sort of machine that holds your data, is going to return a response to a request for a query.
 
 0:46:56.9 **Jason Staten** Gotcha.
 
@@ -688,7 +688,7 @@ But beyond like, the forms of normalization that I learned in school, what I tho
 
 0:54:24.1 **Adam Garrett-Harris** Yeah.
 
-0:54:24.9 **Jason Staten** That is one thing that he does talk about and we mentioned before, is like overestimating the amount of data that’s in our systems is easy to do. A lot of times you can hold it in in memory and you don’t need, like, [inaudible 0:54:36.1] to go and process your gigabyte of data, or however much you have. And you can load that readily and run it with like, a Python script and probably get your answer a lot faster.
+0:54:24.9 **Jason Staten** That is one thing that he does talk about and we mentioned before, is like overestimating the amount of data that’s in our systems is easy to do. A lot of times you can hold it in in memory and you don’t need [Hadoop](https://en.wikipedia.org/wiki/Apache_Hadoop) to go and process your gigabyte of data, or however much you have. And you can load that readily and run it with like, a Python script and probably get your answer a lot faster.
 
 0:54:48.4 **Adam Garrett-Harris** Oh, okay. So, I wasn’t completely understanding when I was reading the book but now I think I get it. So if your data is bigger than the amount of RAM that you have when it’s running a query it can’t hold all that data in memory so that’s-
 
