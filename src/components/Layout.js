@@ -38,7 +38,7 @@ const ConnectedAudioPlayer = connect(
     reportedTime: updateTime,
     onPause: pausePlay,
   }
-)(props => props.url && <AudioPlayer {...props} />);
+)(props => <AudioPlayer {...props} />);
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, margin: `0 1rem 0 0` }}>
@@ -113,7 +113,7 @@ const Header = () => (
   />
 );
 
-const TemplateWrapper = ({ children, data }) => (
+const Layout = ({ children, data }) => (
   <div
     style={{
       height: '100%',
@@ -138,8 +138,8 @@ const TemplateWrapper = ({ children, data }) => (
   </div>
 );
 
-TemplateWrapper.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node,
 };
 
-export default TemplateWrapper;
+export default Layout;

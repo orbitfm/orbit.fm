@@ -58,7 +58,9 @@ class AudioPlayer extends React.Component {
   neverPlayed = true;
 
   componentDidMount = () => {
-    this.audio.src = this.props.url;
+    if (this.audio.src !== this.props.url) {
+      this.audio.src = this.props.url;
+    }
 
     if (this.props.time) {
       this.handleTimeChange(this.props.time);
@@ -68,10 +70,10 @@ class AudioPlayer extends React.Component {
       'timeupdate',
       event => {
         this.setState({
-          currentTime: Math.floor(this.audio.currentTime),
+          currentTime: Math.floor(event.target.currentTime),
         });
         if (this.props.reportedTime) {
-          this.props.reportedTime(Math.floor(this.audio.currentTime));
+          this.props.reportedTime(Math.floor(event.target.currentTime));
         }
       },
       false
@@ -87,7 +89,9 @@ class AudioPlayer extends React.Component {
       });
     });
 
-    this.playerHeight = this.component.getBoundingClientRect().height;
+    if (this.component) {
+      this.playerHeight = this.component.getBoundingClientRect().height;
+    }
   };
 
   componentDidUpdate(prevProps) {
@@ -120,12 +124,6 @@ class AudioPlayer extends React.Component {
       }
     }
   }
-
-  componentWillUnmount = () => {
-    if (window.removeEventListener) {
-      window.removeEventListener('resize', this.updateDimensions);
-    }
-  };
 
   handleVolumeChange = volume => {
     this.setState(
@@ -195,7 +193,7 @@ class AudioPlayer extends React.Component {
       rate,
     } = this.state;
 
-    const { isPlaying, onPlayClick, podcast, title } = this.props;
+    const { isPlaying, onPlayClick, podcast, title, url } = this.props;
 
     const styles = {
       AudioPlayer: {
@@ -254,54 +252,56 @@ class AudioPlayer extends React.Component {
 
     return (
       <div>
-        <div style={styles.AudioPlayer} ref={e => (this.component = e)}>
-          <audio ref={a => (this.audio = a)} />
-          <div style={styles.AudioPlayer__Title}>
-            {podcast} {title}
-          </div>
-          <div style={styles.AudioPlayer__Body}>
-            <div style={styles.AudioPlayer__Play}>
-              <PlayButton
-                isPlaying={isPlaying}
-                onClick={onPlayClick}
-                height={70}
-              />
+        <audio ref={a => (this.audio = a)} />
+        {url && (
+          <div style={styles.AudioPlayer} ref={e => (this.component = e)}>
+            <div style={styles.AudioPlayer__Title}>
+              {podcast} {title}
             </div>
-            <div style={styles.AudioPlayer__Slider}>
-              <Slider
-                value={currentTime || 0}
-                duration={duration}
-                onChange={this.handleTimeChange}
-                onDrag={this.handleTimeDrag}
-                onDragStop={this.handleTimeDragStop}
-              />
-            </div>
-            <button
-              type="button"
-              title="Change playback rate"
-              aria-label="Change playback rate"
-              style={styles.AudioPlayer__Rate}
-              onClick={this.handlePlaybackRate}
-            >
-              {rate}x
-            </button>
-            <div style={styles.AudioPlayer__Volume}>
+            <div style={styles.AudioPlayer__Body}>
+              <div style={styles.AudioPlayer__Play}>
+                <PlayButton
+                  isPlaying={isPlaying}
+                  onClick={onPlayClick}
+                  height={70}
+                />
+              </div>
+              <div style={styles.AudioPlayer__Slider}>
+                <Slider
+                  value={currentTime || 0}
+                  duration={duration}
+                  onChange={this.handleTimeChange}
+                  onDrag={this.handleTimeDrag}
+                  onDragStop={this.handleTimeDragStop}
+                />
+              </div>
               <button
                 type="button"
-                title="Mute toggle"
-                aria-label="Mute toggle"
-                style={styles.AudioPlayer__Mute}
-                onClick={this.handleMuteClick}
+                title="Change playback rate"
+                aria-label="Change playback rate"
+                style={styles.AudioPlayer__Rate}
+                onClick={this.handlePlaybackRate}
               >
-                {isMuted ? <UnmuteIcon /> : <MuteIcon />}
+                {rate}x
               </button>
+              <div style={styles.AudioPlayer__Volume}>
+                <button
+                  type="button"
+                  title="Mute toggle"
+                  aria-label="Mute toggle"
+                  style={styles.AudioPlayer__Mute}
+                  onClick={this.handleMuteClick}
+                >
+                  {isMuted ? <UnmuteIcon /> : <MuteIcon />}
+                </button>
+              </div>
+            </div>
+            <div style={styles.AudioPlayer__Time}>
+              {getMinutesAndSeconds(isDragging ? dragTime : currentTime)} /{' '}
+              {getMinutesAndSeconds(duration)}
             </div>
           </div>
-          <div style={styles.AudioPlayer__Time}>
-            {getMinutesAndSeconds(isDragging ? dragTime : currentTime)} /{' '}
-            {getMinutesAndSeconds(duration)}
-          </div>
-        </div>
+        )}
         <div style={styles.AudioPlayer__Spacer} />
       </div>
     );
