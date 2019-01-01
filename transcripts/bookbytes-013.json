@@ -5,151 +5,126 @@
     {
       "text": "(Intro music: Electro Swing)"
     },
-
     {
       "timestamp": "0:00:11.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Hello and welcome to BookBytes, a book club podcast for developers. We are talking about 2 more chapters of “The Imposter’s Handbook” by Rob Conery, at least as long as we don’t get distracted by turbo switches or something."
     },
-
     {
       "timestamp": "0:00:24.0",
       "speaker": "Jen Luker",
       "text": "It’s always a possibility."
     },
-
     {
       "timestamp": "0:00:24.7",
       "speaker": "Safia Abdalla",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:00:25.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, so we’re going to try to go over chapters 5 and 6, “Big-O” and “Data Structures”. I’m Adam Garrett-Harris."
     },
-
     {
       "timestamp": "0:00:33.3",
       "speaker": "Jen Luker",
       "text": "I’m Jen Luker."
     },
-
     {
       "timestamp": "0:00:34.6",
       "speaker": "Safia Abdalla",
       "text": "I’m Safia Abdalla."
     },
-
     {
       "timestamp": "0:00:36.1",
       "speaker": "Jason Staten",
       "text": "I’m Jason Staten."
     },
-
     {
       "timestamp": "0:00:37.4",
       "speaker": "Adam Garrett-Harris",
       "text": "All right, so, I was thinking about adding a section of book news, but I’m not sure. So, tell me if it sounds like a good idea or not."
     },
-
     {
       "timestamp": "0:00:44.5",
       "speaker": "Jen Luker",
       "text": "I think we try it, and if want to do a one off this time that’s fine, and if it works we do it again."
     },
-
     {
       "timestamp": "0:00:50.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Okay. Well I’ve got, I’ll just give one item of book news and that is that the 2nd edition of “Refactoring” by Martin Fowler is coming out and it will be written in JavaScript instead of Java."
     },
-
     {
       "timestamp": "0:01:02.5",
       "speaker": "Jen Luker",
       "text": "Oooh."
     },
-
     {
       "timestamp": "0:01:03.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. I’m pretty excited about it, and it should be on the shelves in the early fall of 2018. And that’s all I have about that! I read the first one and it was really hard for me to keep up with the Java that I didn’t know. (laughs)"
     },
-
     {
       "timestamp": "0:01:15.5",
       "speaker": "Jen Luker",
       "text": "Hopefully that won’t be a problem this time."
     },
-
     {
       "timestamp": "0:01:18.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:01:18.5",
       "speaker": "Jason Staten",
       "text": "That’s just showing that JavaScript really is dominating."
     },
-
     {
       "timestamp": "0:01:22.3",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, ‘cause he wrote a blog post about it and he’s not super happy about doing it in JavaScript, but there’s certain reasons why he chose it as the best language for this book."
     },
-
     {
       "timestamp": "0:01:31.4",
       "speaker": "Safia Abdalla",
       "text": "Hmm."
     },
-
     {
       "timestamp": "0:01:32.0",
       "speaker": "Jen Luker",
       "text": "Low entry, and JavaScript is taking over the world."
     },
-
     {
       "timestamp": "0:01:37.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. (laughs)"
     },
-
     {
       "timestamp": "0:01:38.9",
       "speaker": "Safia Abdalla",
       "text": "And space!"
     },
-
     {
       "timestamp": "0:01:39.6",
       "speaker": "Jen Luker",
       "text": "And space!"
     },
-
     {
       "timestamp": "0:01:40.8",
       "speaker": "Adam Garrett-Harris",
       "text": "And space. Okay."
     },
-
     {
       "timestamp": "0:01:41.9",
       "speaker": "Jen Luker",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:01:42.7",
       "speaker": "Adam Garrett-Harris",
       "text": "All right, let’s get into the book."
     },
-
     {
       "text": "(Typewriter Dings)"
     },
@@ -158,673 +133,561 @@
       "speaker": "Adam Garrett-Harris",
       "text": "What did you all think of Big-O?"
     },
-
     {
       "timestamp": "0:01:49.1",
       "speaker": "Jen Luker",
       "text": "Big-O was one of those things that I didn’t realize I knew."
     },
-
     {
       "timestamp": "0:01:52.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Oh! Is… Did you find it out while reading this?"
     },
-
     {
       "timestamp": "0:01:56.3",
       "speaker": "Jen Luker",
       "text": "I did. I had no idea what Big-O notation was, and then I learned, and I’m like, “Oh yeah! I totally know what this is.”"
     },
-
     {
       "timestamp": "0:02:02.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Nice!"
     },
-
     {
       "timestamp": "0:02:03.0",
       "speaker": "Jen Luker",
       "text": "So, that made it nice and a little bit easier to get."
     },
-
     {
       "timestamp": "0:02:05.3",
       "speaker": "Jason Staten",
       "text": "That is the reason why Rob Conery wrote this book, is a lot of times we know something but we don’t necessarily have the name for it, and so by going through it you now have a name to that thing that you were being wary of."
     },
-
     {
       "timestamp": "0:02:19.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Speaking of the name, it’s kind of a weird name."
     },
-
     {
       "timestamp": "0:02:22.0",
       "speaker": "Safia Abdalla",
       "text": "It is. Um..."
     },
-
     {
       "timestamp": "0:02:22.9",
       "speaker": "All",
-        "text": "(laughing)"
+      "text": "(laughs)"
     },
-
     {
       "timestamp": "0:02:26.3",
       "speaker": "Safia Abdalla",
       "text": "And I guess the abbreviation “Big-O” is representative of the symbol that’s used in it, which is Omega, and I think, I’m pretty sure that’s why it’s called Big-O, just because it’s…"
     },
-
     {
       "timestamp": "0:02:40.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Oh, is an Omega?"
     },
-
     {
       "timestamp": "0:02:41.4",
       "speaker": "Safia Abdalla",
       "text": "Yeah, so there’s like different kinds of classifications you can do for like, measuring time complexity. I think… So one of them’s Omega, one of them’s Theta, there’s like, different ways of expressing the bounds of how long it takes an application to run, or a program to run. This is all very foggy in my memory."
     },
-
     {
       "timestamp": "0:03:01.3",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. I think one is best case, one is a worst case."
     },
-
     {
       "timestamp": "0:03:04.6",
       "speaker": "Jen Luker",
       "text": "Yeah, but if you look at this, just on that first page, it says that it’s Order N [ O(n) ], or the like, so I wonder if the O is actually for “order”."
     },
-
     {
       "timestamp": "0:03:14.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Hmm."
     },
-
     {
       "timestamp": "0:03:14.9",
       "speaker": "Safia Abdalla",
       "text": "So, yeah. Sorry, I’m like trying to look this up just so I don’t misinform people on this podcast. So, there’s like, Big-O is one of them, there’s also Big Theta, so I like, learned this like, a while ago, and it’s one of those things where like, Big-O is one of the most important ones you need to know ‘cause it’s kind of like the one that’s commonly used in industry; and then most of the other ones are definitions I feel mostly come up in an academic context, but that’s what it is. I did not come prepared for this, did I? (laughs)"
     },
-
     {
       "timestamp": "0:03:46.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. Yeah, like when you talk about best case that’s not very useful, ‘cause you could say best case is you find it right away and it’s a constant or something."
     },
-
     {
       "timestamp": "0:03:58.8",
       "speaker": "Safia Abdalla",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:03:59.3",
       "speaker": "Adam Garrett-Harris",
       "text": "But best case is you don’t have to go through the whole thing, but that’s never going to happen."
     },
-
     {
       "timestamp": "0:04:02.7",
       "speaker": "Safia Abdalla",
       "text": "So, I found a really great stack overflow question where somebody asked, you know, “What’s the difference between Big-O and Big Theta?” and it… you know? I will just read it because it verbalized what I was trying to say about bounds and stuff much better. So, Big-O defines the upper bound for how long it’ll take something to run, and Big Theta is a definition of both the upper and the lower bound. So, in general, what this answer is saying is that in industry you use Big-O because it defines the upper bound which is like, the possible worst case scenario, and the reason that you would want to use Big Theta is it defines both the upper bound and the lower bound so it kind of gives you a range. So, if you have a small value for Big Theta, that’s basically saying that the variability between the worst possible time it would take your program to run, and the best possible time is like, very low. So, it’s like, basically if the range of those two values is really small then the difference between the worst case situation the best case situation is small so it’s like, trivial. And so like, yeah. Am I making any sense? (laughs)"
     },
-
     {
       "timestamp": "0:05:18.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, so it would be more accurate."
     },
-
     {
       "timestamp": "0:05:19.9",
       "speaker": "Jen Luker",
       "text": "If you’re trying to find something in an array and you only have one item in the array then it’s going to be a 1:1 ratio, so there’s really not going to be any difference between finding something in the array, the low bound is 1 and the high bound of that is 1; whereas, if you ‘ve got an array of a million and you’re trying to find one item, then the different operations that you can perform on it changes how long it’s going to take. So, you could totally luck out and pick the first one the first time and that would be like one operation. Or, you could have to go through the whole entire thing and it’s the very last one and you get it to like, a million operations. So, then it’s a much larger range of how long it can take, right?"
     },
-
     {
       "timestamp": "0:06:05.4",
       "speaker": "Safia Abdalla",
       "text": "Wait, sorry. Can you repeat that? I’m like, trying to read and process and go back into my memories for things. So, I’m like, all scatterbrained about this."
     },
-
     {
       "timestamp": "0:06:13.7",
       "speaker": "Jen Luker",
       "text": "(laughs) Okay."
     },
-
     {
       "timestamp": "0:06:16.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, it’s weird because we’re talking about stuff that’s not even in the book. (laughs)"
     },
-
     {
       "timestamp": "0:06:19.3",
       "speaker": "Safia Abdalla",
       "text": "Yeah, so yeah. I should bring it back. Basically, if you’re interested in time complexity and you’re like, curious about learning more about the ways that people might more rigorously define how long it will take programs to run and the bounds that they define for a program’s time complexity, there’s more. So much more! And some additional learning, if you’re interested, is to go look up Big Theta and Big-Omega and learn more about that. I do know that Khan Academy, in their computer science course has videos that explain all of the just different kinds of notations."
     },
-
     {
       "timestamp": "0:06:58.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. So, right off the bat it says that, “All the examples in this chapter use arrays, even though you wouldn’t normally use arrays, because it makes it simpler to just explain time complexity.” And then we’ll get into data structures in the next chapter."
     },
-
     {
       "timestamp": "0:07:13.0",
       "speaker": "Jen Luker",
       "text": "Talking about things other than arrays, including arrays."
     },
-
     {
       "timestamp": "0:07:16.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:07:17.0",
       "speaker": "Jason Staten",
       "text": "Yeah. Working with the array is, I guess first, nice as a construct that we’re all pretty familiar with. Like, if you do programming and you have a list of something, generally, an array is the first thing that you’ll go with because you’ll want to be pushing something onto a list, right? Like, you’ll have a bunch of things, an array just being an indexed piece of memory that usually is like, one continuous piece of memory, is a good data structure to work with from a starting point, and it also, just by us working through this Big-O chapter and talking about some of the costs that are involved with interacting with an array, it does kind of explain or start to show the value of working with a different data structure if you happen to be doing other operations that an array is not well suited for. And it also says that in, it specifically says in .NET, but in whatever language that you’re working in, often there are other type of data structures that come with that language that you can bank on. For example, JavaScript happens to have sets in it as well, so if you want set-like behavior and need its benefits, that is something that’s available to you. So, being aware of what’s in there can be beneficial for your performance."
     },
-
     {
       "timestamp": "0:08:35.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. So, I like how it starts out super simple and it’s like, “Hey. Say you have an array of 5 numbers and you want to get the first one. How many operations does that take? And it’s just one. And what if the array is 100 long? It’s still one. It doesn’t matter how long the array is, right? ‘Cause it’s just one operation.” That’s like, super ideal. If every algorithm could just be on operation that would be awesome."
     },
-
     {
       "timestamp": "0:08:57.8",
       "speaker": "Jason Staten",
       "text": "And I do like that it points out, as well, that even though it says one operation, it may not technically be like, that the CPU is doing exactly one thing, but we do go and kind of ignore some of the overhead involved with it. Like, oftentimes you know, you’ll go and you’ll make a read into memory and then load that thing onto the stack or something like that. And so, like, there are other things going on, potentially more than one, because I mean, there’s always lots of transistors involved in every little thing that you do, but boiling it down to that single operation, that “Yes, it is 1” or “It is constant” and how much time is required."
     },
-
     {
       "timestamp": "0:09:38.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. Like, it doesn’t matter if it’s actually you doing 5 things. If it’s 5 things every time it’s constant and you can just say it’s O(1)."
     },
-
     {
       "timestamp": "0:09:47.5",
       "speaker": "Jason Staten",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:09:48.3",
       "speaker": "Adam Garrett-Harris",
       "text": "What else?"
     },
-
     {
       "timestamp": "0:09:49.7",
       "speaker": "Jason Staten",
       "text": "So, it moves on from just accessing the index of an array onto iterating over an array. And so, if you are looping over an entire array you are doing something that has the Big-O(N), N being the number of elements that happen to be in that array, and that is totally unavoidable. Like, there is no way that you can loop over everything that’s in an array without actually going over each of the elements. Like, I mean there is no shortcut here, but do know that when you are doing a for loop or a for each on some JavaScript thing, you’re doing something that requires Big-O(N). I guess also referred to as linear type scaling."
     },
-
     {
       "timestamp": "0:10:32.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and you can like, break out of that early and end up not looking at all of them, hopefully. Hopefully you would do that. There’s no need to keep looking at all of it if you’ve already found what you’re looking for, but you know, worst case is you look at all of them."
     },
-
     {
       "timestamp": "0:10:46.6",
       "speaker": "Jason Staten",
       "text": "Yeah, that is true. Like, even if you are going to break out that is a good point. It’s that you may break out and most of the time you might breakout. But in the worst case you are going to take that long, therefore you still sit at Big-O(N) even if, in your particular use case you happen to bump into the right thing on the first or second iteration. That is like, very data specific rather that algorithm specific whereas the algorithm could potentially could take the whole N number of iterations before it finds what it’s looking for."
     },
-
     {
       "timestamp": "0:11:16.6",
       "speaker": "Jen Luker",
       "text": "The next set actually increases the complexity a fair amount, and one of the examples that they gave here was that maybe you duplicate an item in the array and now you have to find the duplications and for that it’s O of N squared [ O(N squared) ] because you have to go through the array twice to find all of the items that you have, and then compare it against itself to see if there is any duplication."
     },
-
     {
       "timestamp": "0:11:41.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. So, if you loop through it once, and then loop through it again that would be 2 to the Nth. ."
     },
-
     {
       "timestamp": "0:11:46.7",
       "speaker": "Jen Luker",
       "text": "Oh, right."
     },
-
     {
       "timestamp": "0:11:47.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Which is, essentially N."
     },
-
     {
       "timestamp": "0:11:47.4",
       "speaker": "Jason Staten",
       "text": "Hmm."
     },
-
     {
       "timestamp": "0:11:49.7",
       "speaker": "Adam Garrett-Harris",
       "text": "But, in this case it’s like a nested for loop."
     },
-
     {
       "timestamp": "0:11:52.8",
       "speaker": "Jen Luker",
       "text": "Right."
     },
-
     {
       "timestamp": "0:11:53.5",
       "speaker": "Adam Garrett-Harris",
       "text": "So, it ends up being like, NxN instead of N+N."
     },
-
     {
       "timestamp": "0:11:56.8",
       "speaker": "Jen Luker",
       "text": "Because you’re having to go through N for every single item."
     },
-
     {
       "timestamp": "0:12:00.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:12:01.3",
       "speaker": "Jen Luker",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:12:02.4",
       "speaker": "Adam Garrett-Harris",
       "text": "That’s not very good. (laughs)"
     },
-
     {
       "timestamp": "0:12:03.5",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "Hmm, no."
     },
-
     {
       "timestamp": "0:12:04.9",
       "speaker": "Adam Garrett-Harris",
       "text": "And like, I like seeing these things, it doesn’t include one in the book, but I like seeing a chart of these things and you can see like how bad some of these get when there’s a lot of elements."
     },
-
     {
       "timestamp": "0:12:14.4",
       "speaker": "Jen Luker",
       "text": "Oh yeah. It gets fun real fast. The exponential ones are always fun."
     },
-
     {
       "timestamp": "0:12:19.3",
       "speaker": "Safia Abdalla",
       "text": "I was just going to talk a little bit about the discussion on optimizations that he covers, and it starts on page 92 if you’re following in the book that I’m in, and it covers how you might optimize the summing function that he was talking about when he was showcasing linear time, and he uses this really cool math trick to convert the amount of time it takes for summing a list from O(N), the number of items in the list, to just a single, like, equation that you can use. So, it runs is O(1) and that kind of bit where he does that analysis, highlights one of the central themes that he goes on to cover in the rest of the chapter, which is that you can always make things better. Once you know the time complexity of something you can start to think a little bit about how you optimize it and improve it. And in future sections of this chapter he talks about how you can improve implementations that are slow. A little bit of foreshadowing there for you."
     },
-
     {
       "timestamp": "0:13:23.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. One thing I like about that is that it takes a little bit of additional information to create that equation and that is that the array is contiguous and starting at 1. So, it doesn’t skip any numbers, it doesn’t have any duplicates. And so, a lot of times in interview questions they give you some sort of extra information and you really need to use all of that information, there’s like, some reason why they’re telling you that, there’s some sort of optimization you can do with it."
     },
-
     {
       "timestamp": "0:13:55.4",
       "speaker": "Safia Abdalla",
       "text": "I really like that point of like, understand the assumptions and the context of the problem you’re solving and use that information to help you improve your algorithm. It reminds me… see, I don’t want to reference things again because I might get the details wrong, but I’ll leave it as a hint for folks and people can look it up if they’re interested. This kind of notion of thinking and recognizing the context of the problems you’re solving and using that to improve the run time of your program reminds me of something that I read about a long time ago about Timsort. T-I-M sort-"
     },
-
     {
       "timestamp": "0:14:32.6",
       "speaker": "Jason Staten",
       "text": "Oh!"
     },
-
     {
       "timestamp": "0:14:33.5",
       "speaker": "Safia Abdalla",
       "text": "Which is the, who’s exclaimed?"
     },
-
     {
       "timestamp": "0:14:37.1",
       "speaker": "Jason Staten",
       "text": "That was me. You keep going."
     },
-
     {
       "timestamp": "0:14:40.1",
       "speaker": "Safia Abdalla",
       "text": "Okay."
     },
-
     {
       "timestamp": "0:14:40.7",
       "speaker": "Adam Garrett-Harris",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:14:41.6",
       "speaker": "Safia Abdalla",
       "text": "Somebody got excited so-"
     },
-
     {
       "timestamp": "0:14:43.2",
       "speaker": "Jason Staten",
       "text": "Yes."
     },
-
     {
       "timestamp": "0:14:43.5",
       "speaker": "Jen Luker",
       "text": "Everyone but me."
     },
-
     {
       "timestamp": "0:14:45.1",
       "speaker": "Safia Abdalla",
       "text": "(laughs) So, Timsort is the default sorting method used in the Python programming language. If you’ve used Python and you like, call sort on a list of numbers or something, that algorithm is what is called on your list. And it’s really reformant I think. Like, the sorting worst case, or maybe average case, is O(n log n), again foreshadowing to something that’s covered later on in the book. And when I was reading about this I was really fascinated about it because one of the ways that algorithms is so optimal is because it leverages the fact that when you’re writing a computer program in the world and you know you’re not solving some like, problem set or math problem, it’s highly likely that the data that you’re going to get into your sorting function, or wherever you want to sort it, is probably already sorted in some way. You’ve got little bits of ordered sequences in a generally unordered list, and so the implementation of Timsort uses that fact that most data in the real world is partially sorted already to create an improved implementation of a sorting algorithm that uses 2 other sorting algorithms in it. The big point that I wanted to share there, and like, the thing that like, blew my mind, especially when I first learned about it, was like, “Oh yeah. You can kind of look at the program that you’re writing and say, you know, there’s no situation in the real world where data is completely random. There’s always going to be some sort of order.” And you can use that assumption to guide you to making a more efficient algorithm like Timsort in Python. I also think that now it’s used in maybe Java and a couple of other things, maybe. But yeah, if you’re interested in that, Timsort, a pretty cool thing to check out and read about."
     },
-
     {
       "timestamp": "0:16:36.9",
       "speaker": "Jason Staten",
       "text": "So, I’m glad you brought up Timsort, that is one of the resources that I actually have a link to that I want to share because it surfaced again recently and so there’s a good Hacker Noon about it, and it’s kind of awesome how it goes and, before going and doing the search, or early on in its process of sorting, it goes and actually gathers heuristics about your data that you’re sorting against, too. So, for example, if you’re doing a sort on a list that has fewer than 64 elements in it, then Timsort just does insertion sort so it doesn’t do anything real fancy. LIke, insertion sort is just kind of the slow, I guess it’s considered slow in like, the great scheme of things because, I mean, it is Big-O(N Squared). However, because it’s working on such a small list of things, like 64, that is a really small number for a computer to have to work with when it comes to working with an array size, that insertion sort is the fasted approach that it can take; because there’s no overhead of having to split the list or start creating indexes or pointers at other parts of the list to do more advanced sorts such as merge sort and quicksort which, I think, yeah, that does come a little later in the book, but yeah, it is a very practical approach because it’s assessing the data and making assumptions about it as it goes along. And so, yeah, I’m glad you’re also familiar with it, Safia, and I will share a link with you, Adam and Jen."
     },
-
     {
       "timestamp": "0:18:17.1",
       "speaker": "Safia Abdalla",
       "text": "And I want to let our listeners know that Jason and I did not coordinate that at all, we’ve just-"
     },
-
     {
       "timestamp": "0:18:22.0",
       "speaker": "Jason Staten",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:18:22.7",
       "speaker": "Safia Abdalla",
       "text": "Got some like, vulcan mind meld thing going on right now. (laughs) So, yeah. Thanks for sharing that and like, spelling out some of the heuristics that it uses a little bit more clearly for everyone listening. That’s super cool."
     },
-
     {
       "timestamp": "0:18:35.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, that was really cool. I’ve never heard of that. Okay, so we were talking about Nsquared and then there’s log, (log N). I love how it takes a break to explain logarithms because if you haven’t been in a math class for you while you might not remember logarithms, and I’d completely forgotten them like a year ago when I started reading about some interview stuff, preparing for interviews, and it’s basically the opposite operation from exponents."
     },
-
     {
       "timestamp": "0:19:06.2",
       "speaker": "Jason Staten",
       "text": "So, if you, for example, in the case that you want to solve 2 to the X equals 512, if you want to get that that is where you could go and use log in order to solve it. So, you could say “log 2” giving it the right side of that equals thing, 512, equals X will get you back your result."
     },
-
     {
       "timestamp": "0:19:29.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and logarithms have a base, as well, but you know, one thing about Big-O is the math, you want to simplify it as much as possible, like all the extra things don’t matter so it doesn’t even matter what base it is. You just say “log” “log N” It doesn’t matter if it’s log base 2n, but I guess like, with logarithms the thing to keep in mind is just if you’re splitting things in half, like if you’re doing a binary search, then it’s going to have a log in the complexity."
     },
-
     {
       "timestamp": "0:19:55.7",
       "speaker": "Jason Staten",
       "text": "Adam, you said binary search, what’s that?"
     },
-
     {
       "timestamp": "0:19:57.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Binary search, isn’t that what you mentioned? Did you mention that one earlier? No, you didn’t. So, binary search is a divide and conquer algorithm and we may be talking about it later in a couple of chapters, but you split the array in half and then you split it again. Or, actually you split it up completely and then you’re like, combining it. You’re repeating the same thing over and over. That wasn’t a very good explanation. I was thinking of a binary sort."
     },
-
     {
       "timestamp": "0:20:24.4",
       "speaker": "Jen Luker",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:20:24.9",
       "speaker": "Adam Garrett-Harris",
       "text": "A binary search is where you look halfway and then you decide which half to look at, you know, look half way and you get closer and closer until you find it."
     },
-
     {
       "timestamp": "0:20:31.1",
       "speaker": "Jason Staten",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:20:31.2",
       "speaker": "Jen Luker",
       "text": "So, one of the easiest things is to say okay, so you have a list of 1 to 100 and you start with 50 and you say, okay is the number you’re looking for higher or lower than 50? And you’re assuming this list is sorted, and at that point you say okay, well my number’s 27 so we’re gonna cut off everything above 50 because it’s below, and then we look at 1-50 and we divide it in half again and say 25, okay so is 27 higher or lower than 25? So, we know it’s higher than 25 so we cut off everything from 1-25. So then we look at you know, 25-50 and we find the middle point at like, 37, and is it higher or lower? It’s lower, you cut it in half and now we’re looking at 25-37 and you keep dividing it down until you land on our number, 27."
     },
-
     {
       "timestamp": "0:21:15.4",
       "speaker": "Adam Garrett-Harris",
       "text": "That was a better…"
     },
-
     {
       "timestamp": "0:21:16.7",
       "speaker": "Jen Luker",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:21:17.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, thank you."
     },
-
     {
       "timestamp": "0:21:18.0",
       "speaker": "Jason Staten",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:21:18.5",
       "speaker": "Jen Luker",
       "text": "You know, because of that you didn’t have to look through all of those numbers you otherwise would have and instead you have like, 8 steps instead of 100 steps or 27 steps to go from 1-27 to find your number."
     },
-
     {
       "timestamp": "0:21:29.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Right."
     },
-
     {
       "timestamp": "0:21:29.8",
       "speaker": "Jason Staten",
       "text": "So-"
     },
-
     {
       "timestamp": "0:21:30.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and the key is making sure it’s sorted first."
     },
-
     {
       "timestamp": "0:21:33.2",
       "speaker": "Jason Staten",
       "text": "Yeah, that is a requirement on binary search otherwise you will not find what you’re looking for."
     },
-
     {
       "timestamp": "0:21:38.3",
       "speaker": "All",
-        "text": "(laughing)"
+      "text": "(laughs)"
     },
-
     {
       "timestamp": "0:21:39.1",
-      "speaker": "Jen",
+      "speaker": "Jen Luker",
       "text": "Yeah, you can’t determine which half it’s in if it’s not sorted."
     },
-
     {
       "timestamp": "0:21:42.2",
       "speaker": "Jason Staten",
       "text": "Exactly. So, one real world metric. So, I went ahead and did some of these algorithms inside of Rust, because that’s what I’ve been sticking to, and I went and put a brute force search which is just looping directly over the list up against a binary search, and for the case of looking up index 900k in a list of a million items. For a brute force search every time it needed to go and find that, or in order to find that one time, it took 429 nanoseconds. I mean, fast in human time, but slow in computer. And to compare that to binary search, it actually took 19 nanoseconds in order to find it. So, dramatically different amount of time and so, if you do have a sorted list, like using an algorithm that has a smaller Big-O when you are working on larger datasets can really be beneficial there."
     },
-
     {
       "timestamp": "0:22:44.3",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and then if you double the list it would be even worse."
     },
-
     {
       "timestamp": "0:22:47.0",
       "speaker": "Jason Staten",
       "text": "Exactly. It just gets better and better of an option as your list size grows and grows."
     },
-
     {
       "timestamp": "0:22:51.7",
       "speaker": "Adam Garrett-Harris",
       "text": "So, what else stuck out in this chapter?"
     },
-
     {
       "timestamp": "0:22:54.1",
       "speaker": "Safia Abdalla",
       "text": "Well, I was glad to see that the book covered something I mentioned briefly, I think, in the complexity chapter which was a couple of episodes ago, which was space complexity versus time complexity, and recognizing that sometimes things might run out of memory resources before they actually finish executing. So, yeah I thought it was really cool that he, the author, had a chance to tack that in on the end of the chapter here."
     },
-
     {
       "timestamp": "0:23:22.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. I thought of you when I read that."
     },
-
     {
       "timestamp": "0:23:23.8",
       "speaker": "Safia Abdalla",
       "text": "Aww."
     },
-
     {
       "timestamp": "0:23:24.5",
       "speaker": "Adam Garrett-Harris",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:23:25.2",
       "speaker": "Safia Abdalla",
       "text": "It is page 106 and 105 for those who are following along."
     },
-
     {
       "timestamp": "0:23:30.0",
       "speaker": "Adam Garrett-Harris",
       "text": "I also thought the quick break for math geeks on 104 was pretty cool. I’ve seen this video before in \"Numberphile\" where they explain adding up all the natural numbers from 1-infinity equals -1/12th, and I’ll put a link for that in the show notes, it’s pretty cool."
     },
-
     {
       "timestamp": "0:23:46.6",
       "speaker": "Jason Staten",
       "text": "You’re not going to explain it right here, Adam?"
     },
-
     {
       "timestamp": "0:23:48.9",
       "speaker": "Adam Garrett-Harris",
       "text": "I cannot explain it, it’s weird. It’s weird."
     },
-
     {
       "timestamp": "0:23:52.3",
       "speaker": "Safia Abdalla",
       "text": "Yeah. There is an addendum here in the book that says, “Fair warning. You’ll get lost down this rabbit hole” in reference to it."
     },
-
     {
       "timestamp": "0:23:59.4",
       "speaker": "Jason Staten",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:24:01.1",
       "speaker": "Safia Abdalla",
       "text": "So-"
     },
-
     {
       "timestamp": "0:24:01.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:24:01.4",
       "speaker": "Safia Abdalla",
       "text": "Be prepared, reader!"
     },
-
     {
       "timestamp": "0:24:02.6",
       "speaker": "Adam Garrett-Harris",
       "text": "I did. I did click on a 2nd video after watching that one, but..."
     },
-
     {
       "timestamp": "0:24:06.1",
       "speaker": "Safia Abdalla",
       "text": "(laughs) That’s how they get you!"
     },
-
     {
       "timestamp": "0:24:08.4",
       "speaker": "Jason Staten",
       "text": "I also liked the section on thinking in Big-O, where Rob actually goes through and summarizes each of the Big-Os, or at least, not all of them, but at least the ones that you’ll likely care about as a developer. So, in particular with arrays, it says, “If you’re randomly accessing an array, it’s always Big-O(1).” So, you’re just grabbing an index off an array it’s constant time, like Big-O(1), one operation required. If you’re iterating over the list, then you have a Big-O(N). If you’re doing a nested loop then you have a Big-O(N Squared). If you are dividing that list up and working through those pieces then you have a Big-O(Log N). And if you’re iterating and then dividing, then you have a Big-O(N Log N). So, those are a nice, I don’t know, handy guide to keep in mind. So, when you look at a piece of code, it can be at least somewhat obvious to you of what the time complexity of it is. If you see a number of for loops just within it, like if you’re seeing nesting or something going on you can say, “Oh yeah, that is Big-O N Squared. Maybe we can improve this.” Or something."
     },
-
     {
       "timestamp": "0:25:20.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. That’s a good little cheat sheet. All right, are we ready for the next chapter? Data Structures?"
     },
-
     {
       "timestamp": "0:25:24.8",
       "speaker": "Jen Luker",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:25:25.4",
       "speaker": "Jason Staten",
@@ -833,1003 +696,836 @@
     {
       "text": "(Typewriter Dings)"
     },
-
     {
       "timestamp": "0:25:28.2",
       "speaker": "Adam Garrett-Harris",
       "text": "There's a funny little joke. He said something here at the beginning about JavaScript developers, that you just basically use arrays for everything."
     },
-
     {
       "timestamp": "0:25:34.8",
       "speaker": "Jen Luker",
       "text": "I thought we used objects for everything."
     },
-
     {
       "timestamp": "0:25:36.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Oh, yeah. Yeah, and arrays are objects which is weird."
     },
-
     {
       "timestamp": "0:25:39.9",
       "speaker": "Jason Staten",
       "text": "Yep. Objects with numeric keys."
     },
-
     {
       "timestamp": "0:25:41.4",
       "speaker": "Jen Luker",
       "text": "Well, that joke fell flat."
     },
-
     {
       "timestamp": "0:25:42.9",
       "speaker": "Adam Garrett-Harris",
       "text": "What was the joke? (laughs)"
     },
-
     {
       "timestamp": "0:25:43.9",
       "speaker": "Jen Luker",
       "text": "That everything is an object in JavaScript."
     },
-
     {
       "timestamp": "0:25:47.6",
       "speaker": "Adam Garrett-Harris",
       "text": "(laughs) Yeah. Yeah. Sorry, I didn’t… I don’t see the joke."
     },
-
     {
       "timestamp": "0:25:51.7",
       "speaker": "Jen Luker",
       "text": "I hope somebody out there laughs."
     },
-
     {
       "timestamp": "0:25:54.2",
       "speaker": "Safia Abdalla",
       "text": "Wait, what, what did you say?"
     },
-
     {
       "timestamp": "0:25:56.3",
       "speaker": "Jen Luker",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:25:57.1",
       "speaker": "Jason Staten",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:25:57.8",
       "speaker": "Jen Luker",
       "text": "He said he was referencing the part at the beginning of Data Structures saying that JavaScripters use arrays for everything. I said, “I thought we used objects for everything.” The joke being that everything in JavaScript is an object."
     },
-
     {
       "timestamp": "0:26:09.1",
       "speaker": "Safia Abdalla",
       "text": "Oh. Oh! I see. I thought you were saying that Rob wrote joke and I missed it, like in the book."
     },
-
     {
       "timestamp": "0:26:15.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I think I said that but it’s not. Not really. Anyway. Yeah. So, it starts off talking about arrays. I kind of forget this because I write in JavaScript so often, but arrays are typically a specific length and you can’t resize them because they take up a specific amount of memory and they have to be contiguous in memory. So, if you wanted to resize it you’d have to make it a completely new array and then copy everything, and then add on."
     },
-
     {
       "timestamp": "0:26:41.0",
       "speaker": "Jason Staten",
       "text": "Mm-hmm (affirmative)"
     },
-
     {
       "timestamp": "0:26:41.3",
       "speaker": "Safia Abdalla",
       "text": "That like, confused me for the longest time. I feel like different programming languages use array and list differently and I always get the terminology confused because sometimes a list is used to refer to something that is technically an array and vice versa. So I’m always like… that fact always surprised me, too."
     },
-
     {
       "timestamp": "0:27:01.3",
       "speaker": "Adam Garrett-Harris",
       "text": "Oh yeah, so, what is the difference between a list and an array in some language?"
     },
-
     {
       "timestamp": "0:27:06.7",
       "speaker": "Safia Abdalla",
       "text": "So, the distinction is that with an array you can do direct index based access, and a list is something where you have to do sequential access. So, to get to the next item you need to like, go through the previous one and generally that’s because a load local in memory, an array takes up a contiguous chunk of memory. So, all of the numbers that are next to each other in the list- … See! I did it again! (laughs)"
     },
-
     {
       "timestamp": "0:27:35.6",
       "speaker": "Adam Garrett-Harris",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:27:36.2",
       "speaker": "Safia Abdalla",
       "text": "All of the numbers that are next to each other in the array are also physically contiguous in memory so you can kind of just like, bounce directly from one to the next, but in a list they are not in the same chunks of memory so you might have the first three elements of your array in one chunk of memory and the next three in another so you can’t access them directly because you can’t compute their position as directly as you would if they were all lumped together in memory."
     },
-
     {
       "timestamp": "0:28:07.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I think you did it again. You said array when you meant list. (laughs)"
     },
-
     {
       "timestamp": "0:28:10.5",
       "speaker": "Safia Abdalla",
       "text": "Oh my goodness! Ahh! (laughs)"
     },
-
     {
       "timestamp": "0:28:12.6",
       "speaker": "Jason Staten",
       "text": "(laughs)"
     },
-
     {
       "timestamp": "0:28:15.3",
       "speaker": "Adam Garrett-Harris",
       "text": "I didn’t even realize that when you said “list” it meant the same thing as “linked list.”"
     },
-
     {
       "timestamp": "0:28:19.6",
       "speaker": "Jason Staten",
       "text": "Because it doesn’t, exactly mean the same thing as linked list."
     },
-
     {
       "timestamp": "0:28:22.7",
       "speaker": "Safia Abdalla",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:28:23.9",
       "speaker": "Jason Staten",
       "text": "So, in, I guess quick Rust note, in Rust you have arrays which are a fixed size type of data structure where you’d say, “This in an array and it’s holds 10 insigned integer 8 sizes” or something. LIke, 10 numbers in it and that is all it can hold and it can do no more, and then there’s also a, they call it a “vec”, short for “vector” and then that is the self growing type of data structure where if you keep pushing onto it beyond its capacity it will grow its own capacity; and whether or not it is a linked list and you have to follow something is dependent on the structure. I believe that a vec works in the way of once you surpass the capacity it will go and recreate the underlying structure with maybe doubling the size of what it was before. And so, like, say I have a vector that happens to have a capacity of 10 and I put the 11th item in it, or I go to do that, it will go and actually copy that original set of memory into an array, like an underlying array that has room for 20 elements, or something, in it. Whatever algorithm they choose to expand its capacity with. So, in that case it’s not actually linked and it still is contiguous memory, but there is a cost everytime that you surpass that underlying array’s capacity because it has to go and rebuild the array again."
     },
-
     {
       "timestamp": "0:29:49.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Cool."
     },
-
     {
       "timestamp": "0:29:49.7",
       "speaker": "Safia Abdalla",
       "text": "Yeah. Anyway. Words are hard to use sometimes. (laughs) But yeah, array, list, two different things despite the fact that I mix them up, and it’s weird ‘cause like, conventionally an array is a list of things so you’re tempted to call it a list but like, technically-"
     },
-
     {
       "timestamp": "0:30:04.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:30:05.4",
       "speaker": "Safia Abdalla",
       "text": "It’s not. Yeah."
     },
-
     {
       "timestamp": "0:30:06.9",
       "speaker": "Jen Luker",
       "text": "You know, this is something that I’m afraid to bring up because I don’t want to talk about it, or explain it really, but this is how I learned to understand monoids, Was the-"
     },
-
     {
       "timestamp": "0:30:16.0",
       "speaker": "Jason Staten",
       "text": "Here we go."
     },
-
     {
       "timestamp": "0:30:16.6",
       "speaker": "Adam Garrett-Harris",
       "text": "(laughing)"
     },
-
     {
       "timestamp": "0:30:17.3",
       "speaker": "Jen Luker",
-      "text": "Taking of the data, like how you circumvent the fact that you can’t change the parameter, is taking the data, copying it into a new variable, and making the changes to it, and then allowing the old one to die, and then using the new one instead. Because you can’t change parameters from one to the next, so...  but the example of the finite array was the one that finally made that click."
+      "text": "Taking of the data, like how you circumvent the fact that you can’t change the parameter, is taking the data, copying it into a new variable, and making the changes to it, and then allowing the old one to die, and then using the new one instead. Because you can’t change parameters from one to the next, so... but the example of the finite array was the one that finally made that click."
     },
-
     {
       "timestamp": "0:30:42.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:30:42.1",
       "speaker": "Jen Luker",
       "text": "It’s how to get around it."
     },
-
     {
       "timestamp": "0:30:43.2",
       "speaker": "Jason Staten",
       "text": "So, the book talks about why we should choose an array. Can anybody explain why we would choose an array?"
     },
-
     {
       "timestamp": "0:30:48.0",
       "speaker": "Adam Garrett-Harris",
       "text": "One reason is random data access. If you know the index you can just get it."
     },
-
     {
       "timestamp": "0:30:53.6",
       "speaker": "Safia Abdalla",
       "text": "I think that’s pretty much it. (laughs) It’s efficient. Is there another reason?"
     },
-
     {
       "timestamp": "0:30:58.2",
       "speaker": "Adam Garrett-Harris",
       "text": "It does mention that it, since it’s contiguous in memory it takes up less space ‘cause you don't’ have to have a pointer to the next thing."
     },
-
     {
       "timestamp": "0:31:04.0",
       "speaker": "Safia Abdalla",
       "text": "Oh, good call. Hmm."
     },
-
     {
       "timestamp": "0:31:06.5",
       "speaker": "Adam Garrett-Harris",
       "text": "I don’t think that matters as much anymore with computers with as much memory as we have."
     },
-
     {
       "timestamp": "0:31:11.3",
       "speaker": "Safia Abdalla",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:31:12.1",
       "speaker": "Jason Staten",
       "text": "I mean, not only is there a space value, there also is a performance benefit to it. So, when you are reading chunks of memory from your RAM through your CPU, your CPU just grabs bigger blocks of it at a time because it goes under the expectation that it’s going to be reading stuff beside what you’re already reading, and so you actually do get caching benefits from it as well. So, if you are doing something that’s really high performance, that’s also another case of concerning yourself with contiguous memory is if you want to have good CPU caching behavior, and not worry about time between CPU and RAM."
     },
-
     {
       "timestamp": "0:31:51.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Huh."
     },
-
     {
       "timestamp": "0:31:51.7",
       "speaker": "Safia Abdalla",
       "text": "That’s a great point, Jason."
     },
-
     {
       "timestamp": "0:31:53.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Okay, what about stacks and queues?"
     },
-
     {
       "timestamp": "0:31:55.2",
       "speaker": "Jen Luker",
       "text": "Stacks give you at least a couple of different parameters beyond a list. You can’t access them randomly but you can push, pop, and peek. So, it gives you the ability to push onto it, pop the top item off, and… oh goodness what is peek?"
     },
-
     {
       "timestamp": "0:32:10.9",
       "speaker": "Adam Garrett-Harris",
       "text": "Let’s see, you would just-"
     },
-
     {
       "timestamp": "0:32:11.7",
       "speaker": "Jen Luker",
       "text": "Just look at the list."
     },
-
     {
       "timestamp": "0:32:12.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Be looking, looking at the top item, but not-"
     },
-
     {
       "timestamp": "0:32:14.2",
       "speaker": "Jen Luker",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:32:14.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Popping it. Not removing it."
     },
-
     {
       "timestamp": "0:32:16.5",
       "speaker": "Jen Luker",
       "text": "So, it’s like a fancy list!"
     },
-
     {
       "timestamp": "0:32:18.1",
       "speaker": "Adam Garrett-Harris",
       "text": "It’s like a stack of pancakes, right? Like, you can’t get the pancake off the bottom, you have to get the one off on the top."
     },
-
     {
       "timestamp": "0:32:25.7",
       "speaker": "Jen Luker",
       "text": "Like that kids’ toy, the one with the-"
     },
-
     {
       "timestamp": "0:32:28.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:32:28.9",
       "speaker": "Jen Luker",
       "text": "Donuts that you stick on the pole."
     },
-
     {
       "timestamp": "0:32:30.1",
       "speaker": "Jason Staten",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:32:30.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. Or a Towers of Hanoi."
     },
-
     {
       "timestamp": "0:32:33.2",
       "speaker": "Jason Staten",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:32:33.8",
       "speaker": "Jen Luker",
       "text": "What?"
     },
-
     {
       "timestamp": "0:32:34.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Uh, so it’s kind of a famous puzzle where you have, that kids’ toy you were thinking of, right? You have three of those. So you have three rings-"
     },
-
     {
       "timestamp": "0:32:41.7",
       "speaker": "Jen Luker",
       "text": "Oh yeah!"
     },
-
     {
       "timestamp": "0:32:43.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Or you have three poles and then you have the different sized rings and you’re trying to move the entire stack from the left to the right, and you can never have a bigger ring on top of a smaller ring."
     },
-
     {
       "timestamp": "0:32:53.9",
       "speaker": "Jen Luker",
       "text": "Mm-hmm (affirmative). I remember that."
     },
-
     {
       "timestamp": "0:32:55.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. So, why use a stack or a queue… I guess we didn’t mention the difference between a queue and a stack."
     },
-
     {
       "timestamp": "0:33:00.8",
       "speaker": "Jason Staten",
       "text": "A stack is the, they use the term “last in, first out” to describe it, so the last item that you put onto that is the first one that you have to take off. So, if you pushed that on, you have to pop that off before you can get to anything lower in it, and it’s good in the use case of if you are traversing a tree. Like, if you think about, I mean, if you’re doing anything in a program that happens to be recursive, technically there you are using a stack, where every time you make a function call, or like you are looping back on itself. Like, you were building up a stack of local variable information, and eventually your recursion should finish Like, that’s the hope, right? Then you start to unravel that stack, and unraveling that stack would be popping off the top of that stack to get back where you came from. So, when you’re writing programs in most languages that we work with you are building up a stack every time you call into a function, and every time you return from that function, or exit that function, you are popping off of that stack and going back to the one prior to it."
     },
-
     {
       "timestamp": "0:34:06.5",
       "speaker": "Jen Luker",
       "text": "Like. Git stash and Git stash pop!"
     },
-
     {
       "timestamp": "0:34:09.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Oh yeah."
     },
-
     {
       "timestamp": "0:34:09.6",
       "speaker": "Jason Staten",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:34:10.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Totally."
     },
-
     {
       "timestamp": "0:34:10.7",
       "speaker": "Jason Staten",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:34:11.1",
       "speaker": "Jen Luker",
       "text": "You can keep popping as long as you’ve stashed, but pop only pulls the top one off the list."
     },
-
     {
       "timestamp": "0:34:16.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, is there a way in Git to just do a peek instead of pop? There might be."
     },
-
     {
       "timestamp": "0:34:22.5",
       "speaker": "Jen Luker",
       "text": "Yes, but I don’t remember what it is, right now."
     },
-
     {
       "timestamp": "0:34:24.9",
       "speaker": "Safia Abdalla",
       "text": "What would you want to peek at?"
     },
-
     {
       "timestamp": "0:34:26.3",
       "speaker": "Jen Luker",
       "text": "What the top item is."
     },
-
     {
       "timestamp": "0:34:27.6",
       "speaker": "Safia Abdalla",
       "text": "Oh, I think you can do “ls” on stash."
     },
-
     {
       "timestamp": "0:34:31.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, so that would show you your stashes, but not the actual diff. I wonder if you could just look at the last stash and see the diff of it."
     },
-
     {
       "timestamp": "0:34:41.6",
       "speaker": "Safia Abdalla",
       "text": "I think there’s like, a show or something. Like Git stash show. It might show you like-"
     },
-
     {
       "timestamp": "0:34:46.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Cool."
     },
-
     {
       "timestamp": "0:34:46.7",
       "speaker": "Safia Abdalla",
       "text": "The files."
     },
-
     {
       "timestamp": "0:34:47.6",
       "speaker": "Adam Garrett-Harris",
       "text": "I’ll have to look that up. Yeah. But yeah, with a stack he mentions one of his pet peeves, and I kind of have the same pet peeve, too. If you’re using a stack for something like plates or coffee cups, you’re always putting the new ones on top, and then people are taking them off the top and it’s like, how old are those coffee cups on the bottom? Have they been here like, 5 years, because you never get to the bottom of the stack?"
     },
-
     {
       "timestamp": "0:35:08.3",
       "speaker": "Jason Staten",
       "text": "And they’re pristine."
     },
-
     {
       "timestamp": "0:35:09.7",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, maybe. Unless they’re paper. I also think about it with, we have jars of snacks at work."
     },
-
     {
       "timestamp": "0:35:15.6",
       "speaker": "Jen Luker",
       "text": "(laughs) Oh…"
     },
-
     {
       "timestamp": "0:35:15.9",
       "speaker": "Adam Garrett-Harris",
       "text": "Jars of cashews and they like, they fill them up every week and it’s like-"
     },
-
     {
       "timestamp": "0:35:20.0",
       "speaker": "Safia Abdalla",
       "text": "Oh!"
     },
-
     {
       "timestamp": "0:35:20.5",
       "speaker": "Adam Garrett-Harris",
       "text": "How old are those cashews on the bottom?"
     },
-
     {
       "timestamp": "0:35:22.1",
       "speaker": "Safia Abdalla",
       "text": "You gotta give them a good shake every now and then!"
     },
-
     {
       "timestamp": "0:35:24.7",
       "speaker": "All",
-        "text": " (laughing)"
+      "text": "(laughing)"
     },
-
     {
       "timestamp": "0:35:27.7",
       "speaker": "Jason Staten",
       "text": "I used to work at a restaurant and proper protocol for that is you go and, when the mac and cheese is running low on the buffet, you go and you take that mac and cheese away, you put a new one on, and then you put the old mac and cheese on top."
     },
-
     {
       "timestamp": "0:35:41.8",
       "speaker": "Safia Abdalla",
       "text": "Mm-hmm (affirmative)."
     },
-
     {
       "timestamp": "0:35:41.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:35:42.9",
       "speaker": "Jason Staten",
       "text": "So, then old is on top. Otherwise, yeah, you wind up with… (laughing)"
     },
-
     {
       "timestamp": "0:35:45:9",
       "speaker": "Safia Abdalla",
       "text": "(laughing)"
     },
-
     {
       "timestamp": "0:35:45.9",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and you do the same thing with like, milk at the grocery store.They’re putting in the new milk at the back of the fridge and then you’re pulling it out of the front."
     },
-
     {
       "timestamp": "0:35:53.1",
       "speaker": "Safia Abdalla",
       "text": "Hmm, yeah."
     },
-
     {
       "timestamp": "0:35:54.0",
       "speaker": "Jen Luker",
       "text": "Well, but that’s different, you know? That's not a stack, that’s a queue."
     },
-
     {
       "timestamp": "0:35:58.0",
       "speaker": "Adam Garrett-Harris",
       "text": "That’s a queue! Yeah."
     },
-
     {
       "timestamp": "0:35:58.6",
       "speaker": "Jason Staten",
       "text": "Nice segue."
     },
-
     {
       "timestamp": "0:35:59.9",
       "speaker": "Adam Garrett-Harris",
       "text": "And there’s also the cereal holders that are a queue where you put the cereal in at the top and then you twist the thing down at the bottom."
     },
-
     {
       "timestamp": "0:36:06.6",
       "speaker": "Safia Abdalla",
       "text": "Oh yeah."
     },
-
     {
       "timestamp": "0:36:07.3",
       "speaker": "Jen Luker",
       "text": "So, speaking of a queue, it’s “first in, first out” and I think we’ve all, we all understand what a queue is. I mean, every time you stand in line at the grocery store, you know, first one gets helped first and then leaves, you know? Or, basically everything else we do in our lives where we stand in line. Like, beanstalk queues where you queue up a message that needs to be sent and when it gets to the front of the list it’s the one that’s handled first."
     },
-
     {
       "timestamp": "0:36:33.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Mm-hmm (affirmative). Oh, so it doesn’t talk about why use queues. It talked about why to use an array, it didn’t talk about why to use a stack or a queue, but, I guess if you’re in an interview, he mentions that several times, if you’re in an interview you might want to use this."
     },
-
     {
       "timestamp": "0:36:45.9",
       "speaker": "Jason Staten",
-      "text": "So, I mean, a queue, in its most basic form, just the first in, first out type queue can be good if you are dealing with, say multithreaded processing. So, say, for example, you have a CPU with 4 cores and you have 4 workers on it that are asking for something off of a queue, and they say like, “I want to do some work.” Like, “I want to send some emails” or something. Then you can go and you can put things onto that queue you can say, “Here’s an email that I want to get emailed eventually.” and workers could go and pick up something off of that queue and go run with it, and the benefit that you’ll get from the queue is that those workers, all they have to do is keep trying to de-queue off of the front of that queue and they’ll keep getting the most recent thing that was put on and so, that will ensure that your emails are sent pretty close to the order that you asked for them in,or  at least they’ll get picked off of the queue in the same order that you put them on."
+      "text": "So, I mean, a queue, in its most basic form, just the first in, first out type queue can be good if you are dealing with, say multithreaded processing. So, say, for example, you have a CPU with 4 cores and you have 4 workers on it that are asking for something off of a queue, and they say like, “I want to do some work.” Like, “I want to send some emails” or something. Then you can go and you can put things onto that queue you can say, “Here’s an email that I want to get emailed eventually.” and workers could go and pick up something off of that queue and go run with it, and the benefit that you’ll get from the queue is that those workers, all they have to do is keep trying to de-queue off of the front of that queue and they’ll keep getting the most recent thing that was put on and so, that will ensure that your emails are sent pretty close to the order that you asked for them in, or at least they’ll get picked off of the queue in the same order that you put them on."
     },
-
     {
       "timestamp": "0:37:41.1",
       "speaker": "Jen Luker",
       "text": "I did find it a little silly that it says, for the stack, “Honestly the biggest reason why you want to know what a stack is, and does, is for interviews. They come up often. You might not use them regularly in your current job, but you never know when they might fit something you’re trying to do.”"
     },
-
     {
       "timestamp": "0:37:54.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. I feel like if I was more familiar with these and if you’re working on really hard problems they would come up pretty often."
     },
-
     {
       "timestamp": "0:38:03.2",
       "speaker": "Jen Luker",
       "text": "I just think it’s funny that we probably use it way more than we actually think we do, because we don’t necessarily code them into the thing that we’re working on but you know, like, Git stash. You know, it’s a relatively common thing to do."
     },
-
     {
       "timestamp": "0:38:15.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and if you’re using recursion, you’re using it."
     },
-
     {
       "timestamp": "0:38:17.1",
       "speaker": "Jen Luker",
       "text": "Right, so I mean, we’re using these things, it’s just we don’t necessarily understand, I guess, that we’re using them."
     },
-
     {
       "timestamp": "0:38:23.5",
       "speaker": "Adam Garrett-Harris",
       "text": "But I think that they’re really good to have in your tool belt, you know? Just like, keep it there in your tool belt, you’ll never know when you’ll need it."
     },
-
     {
       "timestamp": "0:38:30.7",
       "speaker": "Jen Luker",
       "text": "You might need to keep it in the back, but it’s there."
     },
-
     {
       "timestamp": "0:38:33.1",
       "speaker": "All",
-        "text": "(laughing)"
+      "text": "(laughing)"
     },
-
     {
       "timestamp": "0:38:35.4",
       "speaker": "Jason Staten",
       "text": "Let’s move on to linked list. So, linked list is an awesome structure to go and build yourself, just because it is so simple. At least, a singly lengthed list, and so you have the notion of an element or a node on that linked list, and that node happens to have a value on it that can be, say a number or something you want to hold, and it also has a pointer to the next thing that comes in that list, and that’s generally how a linked list works is you have a whole bunch of that. So, if I have a linked list of numbers 1-5 then my first node happens to have a value of 1 and then it points to the next node that has a value of 2, and then it points to the next node that has a value of 3, and then I’ll stop there."
     },
-
     {
       "timestamp": "0:39:18.3",
       "speaker": "Jen Luker",
       "text": "This reminds me of a carousel with literal arrows."
     },
-
     {
       "timestamp": "0:39:24.1",
       "speaker": "Adam Garrett-Harris",
       "text": "What kind of carousel?"
     },
-
     {
       "timestamp": "0:39:26.5",
       "speaker": "Jen Luker",
       "text": "Like an image carousel."
     },
-
     {
       "timestamp": "0:39:28.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Oh, yeah."
     },
-
     {
       "timestamp": "0:39:29.3",
       "speaker": "Jason Staten",
       "text": "Oh."
     },
-
     {
       "timestamp": "0:39:29.3",
       "speaker": "Jen Luker",
       "text": "Or, a shopping cart item carousel."
     },
-
     {
       "timestamp": "0:39:31.5",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah I think of them as sliders, and every time I have to search for one I have to remember, “Oh yeah, these are called carousels.”"
     },
-
     {
       "timestamp": "0:39:38.8",
       "speaker": "Jen Luker",
       "text": "It’s because they go around, and around, and they never end."
     },
-
     {
       "timestamp": "0:39:41.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, with horses."
     },
-
     {
       "timestamp": "0:39:43.0",
       "speaker": "Jen Luker",
       "text": "Uh-huh (affirmative)."
     },
-
     {
       "timestamp": "0:39:43.7",
       "speaker": "Jason Staten",
       "text": "‘Cause I was thinking of a round carousel where a linked list was like, its tail, or last item was pointing back to the first one and that’s not a good situation to be in."
     },
-
     {
       "timestamp": "0:39:51.6",
       "speaker": "Adam Garrett-Harris",
       "text": "(laughs)."
     },
-
     {
       "timestamp": "0:39:52.0",
       "speaker": "Jen Luker",
       "text": "No, it’s not. You can have a beginning, you can have an end, and a lot of carousels that were utilizing this, they do in fact have that roundabout, you know, the last one points to the beginning. This is more scientific than that, but it was just something that it reminded me of."
     },
-
     {
       "timestamp": "0:40:09.4",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. I love the picture in the book of the hot air balloons and each balloon has a value, and then it has a guy with like, a telescope or something, looking at the next balloon, because these things can be anywhere, but as long as it can see where the next one is, then you can find the next value, and the last one is just the navigators just skydiving, ‘cause that’s just a null pointer."
     },
-
     {
       "timestamp": "0:40:34.3",
       "speaker": "Jen Luker",
       "text": "So, more like symbols then. Or smoke signals."
     },
-
     {
       "timestamp": "0:40:38.1",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. Yeah! Exactly!"
     },
-
     {
       "timestamp": "0:40:40.2",
       "speaker": "Jen Luker",
       "text": "Where the person on the top of the hill lights the light, or lights the fire and then the person at the top of the next mountain can see it and lights theirs which notifies the person at the next section. Message sending through fire."
     },
-
     {
       "timestamp": "0:40:52.6",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah. I’m gonna say that’s maybe not the greatest analogy, ‘cause you’re not like, sending a message through the linked list, but…"
     },
-
     {
       "timestamp": "0:41:00.1",
       "speaker": "Jen Luker",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:41:00.7",
       "speaker": "Adam Garrett-Harris",
       "text": "But there’s gotta be something we can use that analogy for."
     },
-
     {
       "timestamp": "0:41:03.6",
       "speaker": "Jason Staten",
       "text": "So, why should be use one?"
     },
-
     {
       "timestamp": "0:41:05.2",
       "speaker": "Jen Luker",
       "text": "Because there’s a finite end. So, when you finally hit the null pointer you know you’re done."
     },
-
     {
       "timestamp": "0:41:10.2",
       "speaker": "Jason Staten",
       "text": "Yeah, but I mean, I guess an array has a finite end as well. Like, it is termin- I guess, why should we choose one versus an array?"
     },
-
     {
       "timestamp": "0:41:17.2",
       "speaker": "Safia Abdalla",
       "text": "It’s generally used in situations where you don't know the size of the things that you’re going to store in the array because the list,a linked list, gives you the option of modifying the size by tacking an item at the end so it doesn’t constrain you with respect to how big your list can be and also how often it can regrow."
     },
-
     {
       "timestamp": "0:41:40.6",
       "speaker": "Adam Garrett-Harris",
       "text": "And I guess, also, if you’re in a situation where you don’t need to access an individual item quickly. If you know that you’re just going to traverse over it, then it’s fine. If you need to access an item just directly in the middle then an array might be better. Or something else might be better."
     },
-
     {
       "timestamp": "0:41:55.3",
       "speaker": "Jason Staten",
       "text": "Yeah. It says that if you are looking to access something by a specific index, like if you have a linked list of 10 items and you want to access the 5th item you have to step through each one of those links before you can access that value or you won’t get it directly."
     },
-
     {
       "timestamp": "0:42:12.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, yeah."
     },
-
     {
       "timestamp": "0:42:14.0",
       "speaker": "Jason Staten",
       "text": "You can also benefit from inserting into a linked list. So, inserting into the middle of a linked list, I should say. Or even at the front of a linked list for that matter. If you insert into a linked list it is a Big-O(1) type operation, because all you have to do is point a node at a different node, like you just create a new node that points at the next item. So, say, for example, to be specific, let’s say we were inserting at position 3 in our list, all we would have to do it update position 2 to point at a new node that will be in position 3, and then that new node, all it has to do is point at the next which would be previous position 3 in the list. And with an array on the other hand, if you were to go and insert something into the middle of an array, or try and add a value there, every other item after that index would have to go and be reindexed again. So, if you’re doing that on a really large list that is expensive. So, yet another reason why a linked list could be beneficial. And, I also did a little bit of digging because I was implementing a stack and looked at a couple of ways of approaching it, and a stack is a data structure that can be implemented in terms of either a linked list, or an array because, like, both of them have the ability that you can go and push and pop onto them. Like, I mean, an array you would just push onto the end of it until you reach its capacity; whereas like, a linked list, I mean if you go and push on it you’re just adding something. I tend to think of it as the front, I don’t know if that’s technically true, but it’s the easiest way for me to conceptualize it, and I did a little bit of digging and there’s a Quora question about it. About like, “What’s the difference between a linked list-” Or, sorry. “A stack implemented in terms of a linked list versus an array?” And the difference that I found is that using array is fast because you get that contiguous bit of memory, but it has a capacity that has to be reached, and then you have to accommodate for that, which is why we get ourselves into stack overflow situations when we’re diving really deep into something, like, codewise. So, programming stacks generally using an array for managing our stacks, but you could also use a linked list for it which allows this stack to grow to the bounds of whatever memory that your machine has. So, unless you get a lot larger in a list, but that’s done at the cost of speed."
     },
-
     {
       "timestamp": "0:44:44.1",
       "speaker": "Safia Abdalla",
       "text": "That’s a really great inquiry that you went on and I think it’s really cool ‘cause it kind of shows how these data structures start to interact with one another and that they’re all building on top of each other, which we get into in the next section of the chapter which is about… hash tables?"
     },
-
     {
       "timestamp": "0:45:00.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, and so, actually, I was thinking that maybe we should cut if off here and then next time talk about the remaining data structures, and as well as the simple algorithms, because there’s no way we’re going to get through simple algorithms and advanced algorithms next time."
     },
-
     {
       "timestamp": "0:45:17.7",
       "speaker": "Safia Abdalla",
       "text": "(laughs). Yeah. That’s a good call, and also a great place to leave everybody on a cliff hanger."
     },
-
     {
       "timestamp": "0:45:24.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah."
     },
-
     {
       "timestamp": "0:45:25.4",
       "speaker": "Jen Luker",
       "text": "Oh my goodness, how long is simple algorithms?"
     },
-
     {
       "timestamp": "0:45:28.1",
       "speaker": "Adam Garrett-Harris",
       "text": "It’s… It’s long! It’s long."
     },
-
     {
       "timestamp": "0:45:29.7",
       "speaker": "Jen Luker",
       "text": "Oh! Oh, oh! I finally found the end."
     },
-
     {
       "timestamp": "0:45:31.7",
       "speaker": "Jason Staten",
       "text": "(laughing)"
     },
-
     {
       "timestamp": "0:45:33.3",
       "speaker": "Safia Abdalla",
       "text": "(laughing)"
     },
-
     {
       "timestamp": "0:45:33.7",
       "speaker": "Jen Luker",
       "text": "Oh, goodness. Okay. Well… All right."
     },
-
     {
       "timestamp": "0:45:37.8",
       "speaker": "Adam Garrett-Harris",
       "text": "Does someone want to read a review?"
     },
-
     {
       "timestamp": "0:45:39.6",
       "speaker": "Jason Staten",
       "text": "So, it looks like we had a review from Adeola Badmus and they say, “A podcast that combines my craft, software engineering, and my hobby, reading, is one I totally love. I came across this on Twitter and I’m hooked after the first episode. I love how these are different people on the podcast. It gives room for diverse perspectives and angles. Looking forward to hearing the book authors on the podcast, too.”"
     },
-
     {
       "timestamp": "0:46:03.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, so thank you so much for leaving a review. If you like the show please go ahead and leave a review as well, tell your friends about it, and the best way to keep up with the show is on Twitter and to subscribe in your favorite podcast player. The show’s @BookBytesFm and you can follow all of us on Twitter as well. I’m @AGarrHarr Jason, what are you?"
     },
-
     {
       "timestamp": "0:46:24.7",
       "speaker": "Jason Staten",
       "text": "@StatenJason"
     },
-
     {
       "timestamp": "0:46:26.1",
       "speaker": "Adam Garrett-Harris",
       "text": "And Safia?"
     },
-
     {
       "timestamp": "0:46:27.4",
       "speaker": "Safia Abdalla",
       "text": "I am @CaptainSafia"
     },
-
     {
       "timestamp": "0:46:28.9",
       "speaker": "Adam Garrett-Harris",
       "text": "And Jen?"
     },
-
     {
       "timestamp": "0:46:30.0",
       "speaker": "Jen Luker",
       "text": "I am @KnitCodeMonkey"
     },
-
     {
       "timestamp": "0:46:31.2",
       "speaker": "Adam Garrett-Harris",
       "text": "Also, you can find the show notes and transcript for the episode at orbit.fm/bookbytes/13 . All right. See you."
     },
-
     {
       "timestamp": "0:46:39.9",
       "speaker": "Jason Staten",
       "text": "Bye."
     },
-
     {
       "timestamp": "0:46:40.4",
       "speaker": "Safia Abdalla",
