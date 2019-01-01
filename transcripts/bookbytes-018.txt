@@ -332,7 +332,7 @@ ________________
 
 0:31:58.8 **Adam Garrett-Harris** Yeah.
 
-0:31:59.4 **Jason Staten** Also, I did on the topic of Make, he talks about going and building a JavaScript project with it as an example and that was something that you, I guess, you can still do and did previously used to where he goes and just concatenates the files together, and it brings you back to the days of like, having a whole bunch of self-evaluating functions wrapping everything ‘cause it all got dumped on [the global? (inaudible) 0:32:27.5]. And so you didn’t really write stuff in modular form.
+0:31:59.4 **Jason Staten** Also, I did on the topic of Make, he talks about going and building a JavaScript project with it as an example and that was something that you, I guess, you can still do and did previously used to where he goes and just concatenates all the files together, and it brings you back to the days of like, having a whole bunch of self-evaluating functions wrapping everything ‘cause it all got dumped on the global. And so you didn’t really write stuff in modular form.
 
 0:32:31.9 Or I guess you did and you wrote it in like, AMD syntax which like, wrapping everything in a “define” or something like that. Like, that’s what that brought back memories of and I don’t miss doing that. Especially because like, you still have, there’s some concerns about like, ordering and whatnot. And like, the solution of numbering things doesn’t really work out well as you really scale stuff out and so it’s actually like, the case where I started to see value in some of the bundlers such as Webpack or Rollup or Parcel or whatever other slew of other ones.
 

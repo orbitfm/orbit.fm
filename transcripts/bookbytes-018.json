@@ -809,7 +809,7 @@
     {
       "timestamp": "0:31:59.4",
       "speaker": "Jason Staten",
-      "text": "Also, I did on the topic of Make, he talks about going and building a JavaScript project with it as an example and that was something that you, I guess, you can still do and did previously used to where he goes and just concatenates the files together, and it brings you back to the days of like, having a whole bunch of self-evaluating functions wrapping everything ‘cause it all got dumped on [the global? (inaudible) 0:32:27.5]. And so you didn’t really write stuff in modular form."
+      "text": "Also, I did on the topic of Make, he talks about going and building a JavaScript project with it as an example and that was something that you, I guess, you can still do and did previously used to where he goes and just concatenates all the files together, and it brings you back to the days of like, having a whole bunch of self-evaluating functions wrapping everything ‘cause it all got dumped on the global. And so you didn’t really write stuff in modular form."
     },
     {
       "timestamp": "0:32:31.9",
