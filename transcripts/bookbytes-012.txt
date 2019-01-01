@@ -1,0 +1,599 @@
+﻿(Intro music: Electro swing)
+
+0:00:11.3 **Adam Garrett-Harris** Hello, and welcome to BookBytes, this is a book club for developers where we come together and talk about a book we’ve been reading. We’re continuing our summer of imposter syndrome by reading “The Imposter’s Handbook” by Rob Conery, and this time we’re going to go over chapters 4 and 5 which is Machinery and Big O. I’m Adam Garrett-Harris.
+
+0:00:31.5 **Jen Luker** I’m Jen luker.
+
+0:00:32.3 **Safia Abdalla** I’m Safia Abdalla.
+
+0:00:33.2 **Jason Staten** And I’m Jason Staten.
+
+0:00:34.2 **Adam Garrett-Harris** So, before we get into the Machinery, Jason did you have some follow-up from last time?
+
+0:00:39.2 **Jason Staten** Yeah. Yeah, I was tasked with going and taking a look at the YCombinator and finding a somewhat succinct way of explaining it, and the shortest way I can explain it without saying what it’s already written as, is the YCombinator is a function that receives a function that hands that function back to itself. So, it can call itself recursively, if it chooses to.
+
+0:01:04.5 **Adam Garrett-Harris** Yeah, that’s pretty succinct, I don’t understand why you would do that, but it’s cool to know.
+
+0:01:09.5 **Jason Staten** It lets you do looping in Lambda calculus, because there’s no variable references there’s no other way to do recursion without giving a function a reference to itself. So, that would be why.
+
+0:01:20.1 **Adam Garrett-Harris** Awesome. Yeah, I definitely enjoyed all the real-time learning we saw last week with me and Safia, trying to understand Lambda calculus.
+
+(Typewriter Dings)
+
+0:01:29.9 **Adam Garrett-Harris** Well, let’s get into the Machinery chapter. This seems like a bit of a repeat, or a continuation of some of the history from the computation chapter, and I know like, Safia and Jen, you were kind of geeking out about that history.
+
+0:01:43.7 **Safia Abdalla** Yeah, a couple of episodes back.
+
+0:01:45.6 **Jen Luker** I love the history portion. If you look at my book there’s the entire section where they’re introducing the Machinery section, and I highlighted the whole thing with a lovely little note that says, “If you want to get me excited and invested in this, this is how you do it.” ‘Cause the whole thing just starts out-
+
+0:02:02.1 **Adam Garrett-Harris** Yeah. You were talking about one the chapters last time did not get you hooked.
+
+0:02:06.2 **Jen Luker** Until the very, very end. So, now this is the way to do it.
+
+0:02:09.3 **Adam Garrett-Harris** Okay so… What did you like about it?
+
+0:02:12.3 **Jen Luker** Well, it says, “We’ll visit Plato and ponder the true nature of things, drop in on Bernoulli in the 1500s and wind our way to Russia in the early 1900s. We’ll visit Bletchley park and Alan Turing in the early 20th century, eventually ending up back in the United States with John von Neumann, the creator of the modern computer.” What’s not so giggly about-
+
+0:02:29.2 **Adam Garrett-Harris** Yeah, that’s like a whirlwind tour.
+
+0:02:30.4 **Jen Luker** Jjumping into that and going, “Yes! The actual history! Let’s go!”
+
+0:02:37.0 **Adam Garrett-Harris** Yeah, I was confused that it was going to start of with Plato.
+
+0:02:39.9 **Jen Luker** Plato seems to be the beginning of all things, so it’s no wonder that they’d toss in Plato, and in this case the purpose that they brought in from Plato and philosophy was that he wondered if what we were experiencing was really the true representation of the universe. He felt that “the truth” was actually something that we couldn’t perceive as humans. He felt that it was bigger than us. That actually led very closely into computation by looking at mathematics and, you know, though things seem very random the concept is that if you observe it long enough, you would eventually start seeing those patterns, like phi, the golden ratio, pi and e, they think that those are, you know, ways in which you can say that that is the cosmic machinery. It’s the program that runs the universe.
+
+0:03:29.7 **Adam Garrett-Harris** So, basically, he was wondering if we were living in a computer simulation.
+
+0:03:33.1 **Jen Luker** Yes, which we recently had quite a few scientists get together to discuss.
+
+0:03:38.1 **Adam Garrett-Harris** Yeah, I've heard Elon Musk mention it, was he a part of that? Or no?
+
+0:03:41.9 **Jen Luker** Uh, he was, but actually quite a few other famous scientists from Bill Nye down went to that conversation.
+
+0:03:48.6 **Adam Garrett-Harris** Cool, I think it’d be very difficult to determine if you were in one.
+
+0:03:53.5 **Jen Luker** Yes, but the question is still there. I always felt like, you know, perhaps our universe was just the janitor tripping and falling and spilling on some Larger Hadron Collider.
+
+0:04:03.6 **Adam Garrett-Harris** (laughs)
+
+0:04:04.0 **Jen Luker** And we ended up with us, and that was the big bang.
+
+0:04:06.9 **Adam Garrett-Harris** Nice.
+
+0:04:07.1 **Jen Luker** And wondering if that’s how the next universe would be created.
+
+0:04:10.1 **Adam Garrett-Harris** (laughs)
+
+0:04:10.4 **Jen Luker** And it goes into that, you know, we’re the cell on the thumb nail of a giant who’s, again, the cell on a thumb nail of another giant.
+
+0:04:18.2 **Adam Garrett-Harris** Yeah, it’s like “Horton hears a Who”.
+
+0:04:19.7 **Jen Luker** Or “Animal House.”
+
+0:04:20.6 **Adam Garrett-Harris** “Animal House”? I don’t know that one.
+
+0:04:22.3 **Jen Luker** So, for the early 80’s there’s a movie called “Animal House” and it’s a John Belushi and essentially what happens is that college kids go hang out with the professor and they all get stoned, and the big thought there is our entire universe is the cell on the thumb nail of a giant whose entire universe is the cell on the thumb nail of a bigger giant, because you know, when you get stoned you have philosophical thoughts like this.
+
+0:04:46.3 **Adam Garrett-Harris** (laughs)
+
+0:04:46.7 **Jen Luker** And it was funny.
+
+0:04:47.4 **Adam Garrett-Harris** Anyone else want to chime in? Jason? Safia?
+
+0:04:49.4 **Jason Staten** Yeah, just liking your descriptions and deep philosophical perspectives on things.
+
+0:04:56.5 **Jen Luker** (laughs)
+
+0:04:57.4 **Jason Staten** And I really-
+
+0:04:58.7 **Jen Luker** I could go for days.
+
+0:04:59.8 **Jason Staten** Yeah. I like Rob Conery’s introduction from moving over Bernoulli's law of large numbers, that the more you observe, the more you realize that there’s a relationship there, and leading into the question of does that apply across multiple states, or moving through several things? So, the book goes on to talk about Markov chains and uses the analogy of a drunkard’s walk. So, if an intoxicated person is walking up and down the sidewalk from a given square on it, they have the potential to move forward one step or backwards one step with the same level of probability.
+
+0:05:42.0 **Adam Garrett-Harris** (laughs)
+
+0:05:42.8 **Jason Staten** It’s like, whatever state that they’re in, whether they’re on sidewalk square 3 or sidewalk square 4, they equally have the same amount of probability to move between that and the next square that they line up on. And so, Andrei Markov was the one who was able to go and prove that, that the law of large numbers still applies across a series of states and not simply just from a single state such as flipping a coin.
+
+0:06:09.2 **Jen Luker** I like that their description here actually led to flow charts, or started with flow charts but then moved to the drunkard example, which made a lot more sense to me. It’s the concept that the reality doesn’t always fit within a statistical model when you’re taking it on a case-by-case basis,but if you repeat that reality over, and over, and over, and over again the chances of the model fitting actually increases. So, when it comes to flow charts, for instance, on a case-by-case basis, they may not always apply, but as a general rule they’re quite accurate.
+
+0:06:41.8 **Jason Staten** I did actually have a question. Jen, do you have the physical copy of the book, or do you have the digital?
+
+0:06:46.9 **Jen Luker** The physical copy.
+
+0:06:48.2 **Jason Staten** So, for me, on page 66 in that book it says, “In the above diagram each orange circle is a state and the arrows dictate possible transitions.” And I see no orange circles or arrows in the above diagram, because… I mean, first…
+
+0:07:04.2 **Jen Luker** The above diagram is the drunken symbol.
+
+0:07:07.6 **Jason Staten** Where are the arrows?
+
+0:07:08.5 **Jen Luker** Not a clue, actually.
+
+0:07:09.6 **Adam Garrett-Harris** Yeah, I had the same problem, Jason. I was… I thought it might be the drunken diagram, but I think it’s actually missing one.
+
+0:07:15.0 **Jen Luker** Mm-hmm (affirmative).
+
+0:07:15.6 **Jason Staten** Safia, do you have the digital?
+
+0:07:16.6 **Safia Abdalla** I have the digital, as well, and it’s got the same issue. I think it might have just been an editing thing.
+
+0:07:21.7 **Jason Staten** Maybe a drunken mistake? (laughs)
+
+0:07:24.0 **Adam Garrett-Harris** Maybe-
+
+0:07:24.8 **Jen Luker** Maybe-
+
+0:07:25.3 **Adam Garrett-Harris** Maybe you put an issue on GitHub. I actually put it an issue about the cicada diagram and he was like, “Yep. That’s a mistake.”
+
+0:07:32.2 **Jen Luker** So, if you look there’s actually orange circles on 4 and 5, I wonder if the arrows were just missing from that diagram.
+
+0:07:39.0 **Adam Garrett-Harris** Yeah, could be.
+
+0:07:39.5 **Jason Staten** Yeah. [0:07:39.9 Inaudible]
+
+0:07:40.4 **Adam Garrett-Harris** Hey, Safia, do you have something to point out?
+
+0:07:43.2 **Safia Abdalla** Not for this chapter.
+
+0:07:47.8 **Jen Luker** (laughs)
+
+0:07:48.8 **Safia Abdalla** Or, the first part of this chapter.
+
+0:07:50.0 **Adam Garrett-Harris** Oh, okay.
+
+0:07:52.1 **Jen Luker** Cool. So, we’ll just keep going then.
+
+0:07:53.6 **Safia Abdalla** Yeah.
+
+0:07:54.1 **Adam Garrett-Harris** Cool. So, then it talks about a finite-state machine.
+
+0:07:57.0 **Jen Luker** Which I feel like flow charts fit and move through quite easily, except a finite-state machine takes it much more complicated than that, possibly? In that it gives you those specific steps but in the fashion that it can repeat.
+
+0:08:11.6 **Adam Garrett-Harris** Yeah, I really love the example it uses of hammering a nail into wood and how the nail can be in various states of outside the wood, in the wood a little bit, or completely in the wood. And then you take that concept and turn it into a flow chart where it goes from outside to when you hit it with the hammer it goes inside, and that can repeat over, and over, and over. Oh, and there’s another state, too, which is-
+
+0:08:35.7 **Jen Luker** Ouch. (laughs)
+
+0:08:36.0 **Adam Garrett-Harris** You bend the nail. Ouch, so you bend the nail.
+
+0:08:38.0 **Jason Staten** And so, that’s the… That is actually the difference between the deterministic and non deterministic types of finite-state machines. I did a little bit of digging because the chapter itself didn’t quite make it click all the way for me, so I did some googling on that front. And for me, looking back at it now it kind of makes more sense where in the initial diagram where it talks about a deterministic state machine the nail starts in the state of not in the wood, and you have the transition of hitting it with the hammer and that puts it into the partial state, and you could potentially do that over and over while it sits in that partial state, and-
+
+0:09:20.0 **Adam Garrett-Harris** Well, I guess the initial diagram doesn’t have it....repeating.
+
+0:09:22.5 **Jason Staten** Yeah, so I guess the transition of hitting with the nail only has one single progression to it, whereas a non deterministic state machine, you can have the same transition applied to a given state and you can wind up in multiple different states. So, depending on if you hit it with the hammer again, then it will either remain in the partial state, it will go to the complete state, or it will go to the bent nail state; and depending on what, like when you call the function of “hammer” there’s no guarantee of what result will come out of it.
+
+0:09:59.4 **Jen Luker** I liked-
+
+0:10:00.3 **Adam Garrett-Harris** Right. You-
+
+0:10:00.9 **Jen Luker** The point that when it was deterministic there was, you know, there were those three states, but the non deterministic said, “a program that will produce different results when run multiple times, even when the same input is given.” So, I mean you can put in a 6 into a function, but if you then multiply it by random number, then you could get out a 12, or you could get out a 36, or you could get out a 56 for… Well, not a 56, but you could get out any number of different randomly generated responses based on the fact that you’ve modified the input. In this case, when it’s talking about a finite-state machine and the only options that you have available, you still don’t know how many times do you have to hit the hammer to get the nail in? How far do you get the nail in before you bend it or hurt yourself? You know? There’s those different options, and if you bend it then you have to start over again. So, at any given time you could be anywhere in this chart; whereas the finite deterministic state machine says, it’s out, it’s halfway in, it’s in. That’s it.
+
+0:11:03.5 **Jason Staten** I actually took some time to go and model myself a small finite-state machine within Rust as a… ‘cause that’s kind of been the language I’ve been going along with thus far, and I have to say Rust pattern matching is excellent. I went and modeled myself a state machine of a microwave, so it starts off in the idle state being the one that uses the clock, or that shows the clock, and then when you press a digit it puts it into the time input mode, and when you press more digits it continues to put you into that mode until it, ultimately you press start, and it cooks, and on and so forth, and pattern matching was excellent for going and putting that machine together. So, I made a small microwave on my computer that at least progresses through those states. I’ll post a link up on GitHub, or to the GitHub.
+
+0:11:55.0 **Jen Luker** Awesome. I’m looking forward to talking about that again in a few pages, actually. ‘Cause they-
+
+0:11:58.5 **Adam Garrett-Harris** Why? What’s in a few pages?
+
+0:11:59.4 **Jen Luker** Uh, well in about 16 pages.
+
+0:12:01.4 **Adam Garrett-Harris** Oh.
+
+0:12:02.3 **Jen Luker** They talked about a calculator in the von Neumann architecture. They talked about the fact that you could have a physical calculator, but you also could have a digital calculator on your computer, a mac for instance.
+
+0:12:13.1 **Adam Garrett-Harris** I wish I had one of those.
+
+0:12:14.7 **Jen Luker** Mm-hmm (affirmative).(laughs) And they said the mac calculator is as much of a machine as the one you hold in your hand. So, it’s very much the machines running within machines. So, let’s go back to where we were ‘cause that’s like the very last page of this chapter.
+
+0:12:27.5 **Adam Garrett-Harris** Oh, okay. Sneak peak!
+
+0:12:29.3 **Jen Luker** It is.
+
+0:12:29.9 **Jason Staten** (laughs)
+
+0:12:30.1 **Jen Luker** I’m so excited to read what’s there.
+
+0:12:31.8 **Adam Garrett-Harris** Oh, okay. And then there’s a pushdown machine.
+
+0:12:33.6 **Jen Luker** Oh, are we all the way to pushdown machines?
+
+0:12:35.7 **Adam Garrett-Harris** Oh, I don’t know.
+
+0:12:36.7 **Jason Staten** (laughs)
+
+0:12:37.1 **Jen Luker** Oh! No, we were. We were kind of doing limitations of finite-state machines and speaking about alphabets and language, but after that was a pushdown machine. It was like, the same, the thing with the pushdown machine is that it’s a finite-state machine except it adds a stack option, which allows you to either push or pop parameters based on what you are looking for in that state, which changes it from a finite-state into a pushdown machine.
+
+0:13:03.3 **Adam Garrett-Harris** Nice. So, it’s like one of those like, kids’ toys with the rings. You can only get the ring off the top-
+
+0:13:07.6 **Jen Luker** Mm-hmm (affirmative).
+
+0:13:08.5 **Adam Garrett-Harris** Before you can get the next one.
+
+0:13:08.9 **Jason Staten** Right.
+
+0:13:09.5 **Jen Luker** Or reversed.
+
+0:13:10.2 **Adam Garrett-Harris** Yeah.
+
+0:13:10.5 **Jason Staten** Yeah, so it shows that the pushdown machine definitely has a lot more calculating power over the simple finite-state machine in that your finite-state machine, your only state or information that you hold is that of the state that you’re currently on, and the pushdown machine kind of breaks away from, or steps away from that in one direction by allowing you to hold additional information outside of the current state that your program resides in.
+
+0:13:40.4 **Adam Garrett-Harris** Yeah. So with the hammer and nail example, when the nail is partial that’s kind of all you know about the nail is it’s partially in. You don’t know how far it is in.
+
+0:13:48.1 **Jason Staten** Right.
+
+0:13:48.8 **Adam Garrett-Harris** Or anything else.
+
+0:13:49.0 **Jason Staten** You don’t know how many times you’ve hit it with the hammer.
+
+0:13:50.9 **Adam Garrett-Harris** Right.
+
+0:13:51.6 **Jason Staten** Yeah. Or, I mean, if you have like, a Tootsie Pop, you know? You have wrapper removed and you have licks, like, you can’t keep track of 3 times before it’s gone. So…
+
+0:14:01.8 **Adam Garrett-Harris** Yeah. It’s just, you have the lick function and either it’s still there, or you've reached the center.
+
+0:14:07.4 **Jason Staten** Right.
+
+0:14:07.7 **Adam Garrett-Harris** Yeah. So with the stack you can do like, what is the limit of the stack? Can it solve any problem? Or…
+
+0:14:13.5 **Jason Staten** So, it-
+
+0:14:14.5 **Adam Garrett-Harris** Or would the pushdown machine-
+
+0:14:16.1 **Jason Staten** States that the stack is… The problem with the stack is that it’s limited, and so that is where we progress on to the Turing Machine, and almost want to stay away-
+
+0:14:27.8 **Adam Garrett-Harris** Yeah, I mean I guess with a stack you can only… You can access more information but it’s still just one additional thing, and you can only access it from the top.
+
+0:14:36.0 **Jason Staten** I mean, I guess being limited to accessing from the top is a problem, and also it is limited in terms of space. Like, its stack is not infinite, and that is the bound that Turing went and broke and instead of having like, a limited stack, Turing went ahead and designed a machine with the notion of a tape as a holder of data, or holder of state, that could go infinitely in either direction, and on that tape it consisted of cells in one direction or the other that could either have some sort of empty state or they could hold an alphabet of some sort or a symbol of some sort. A lot of times it can be modeled with 1s or 0s, but there’s nothing that holds you, specifically, to that.
+
+0:15:19.7 **Adam Garrett-Harris** Yeah, so it’s kind of crazy that it’s infinitely long tape, but I guess it doesn’t actually have to be infinite as long as it’s long enough.
+
+0:15:27.8 **Jason Staten** Yeah. So the infinite lets you remove the limitation of what’s able to be calculated in it, and in turn allows a Turing Machine to calculate anything that you can calculate. If an algorithm is computable, a Turing Machine can compute it, is Turing’s claim.
+
+0:15:48.8 **Adam Garrett-Harris** Okay.
+
+0:15:49.5 **Jason Staten** Which falls very much in line, as it says, with Alonzo Church’s all total functions are computable. So, both Turing and Church were under the same track, just looking at it from different perspectives.
+
+0:16:02.9 **Adam Garrett-Harris** They were on the same tape.
+
+0:16:04.4 **Jason Staten** A-ha!
+
+0:16:05.3 **All** (laughing)
+
+0:16:05.9 **Adam Garrett-Harris** So, I like this little sentence here that says, “If you create an instruction set that’s capable of running on a Turing Machine, it is said to be Turing Complete, and all you need is conditional branching, loops, and variables, and memory.” So, I think that’s a term that gets thrown around a lot, or you hear a lot, but you might not really know what Turing Complete is. I know I haven’t really understood that before.
+
+0:16:30.8 **Jen Luker** Basically it seemed like there 4 rules, not just the 3. Those are what you use in order to make a Turing Complete program, but it has to run on a Turing Machine which has the 4 main parts, is-
+
+0:16:41.9 **Adam Garrett-Harris** Oh, right.
+
+0:16:42.7 **Jen Luker** A set of symbols defined in the alphabet or language a machine can understand, usually just 1s or 0s, but again, not limited to that, an infinitely long tape, or the ability to store information, and then a read/write ability. Here, he used a head, but you have to have the ability to read from that memory and to write to that memory, and then the rules for reading and writing the tape, and that’s what makes it Turing Complete.
+
+0:17:05.2 **Adam Garrett-Harris** So, I guess those rules are built into the machine itself. The rules for how to read and write it to the tape.
+
+0:17:12.5 **Jen Luker** Not necessarily. I mean, as you continue through the book they talked about how originally it was on the machine, the machine had one function, and then they talked about, “as we moved to more universal concepts how we included those instructions with the tape itself and not just on the computer reading the tape.” In other words, you program, or tell, the computer how it’s supposed to read this language. So, it’s kind of how we’ve converted binary into like, 5 different options. So, you don’t have to compile it down to just binary at this point, you also have like hexadecimal and you have a few other options in order to speak to the computer, but we’ve explained that essentially. So, we’ve included that with our operating systems to be able to tell the computer how to read it.
+
+0:18:02.8 **Adam Garrett-Harris** Yeah.
+
+0:18:03.4 **Jason Staten** That goes into a couple of the powerful concepts in a Turing Machine, as well. I need to find the line, specifically, where he says it, but the idea behind a Turing Machine is not that a machine is a standalone thing, but a Turing Machine, in fact, is something that can take another Turing Machine, itself, or like, one machine can take the output of another machine; and when you start thinking of it like that, if you turn your mind to think about say, Alonzo Church’s functions, or Lambdas, I mean a Lambda can take the output of another Lambda, or it can take a Lambda itself and utilize it. And so, in some ways, like they are very, very similar concepts, like they are very tightly tied together, and like, I really like that perspective of, you know, a function is a machine and a machine is a function, just different approaches to viewing it.
+
+0:19:00.7 **Jen Luker** So, tying into that, back to what I said about the calculator before, the mac calculator is as much of a machine as the one you hold in your hand. It’s machines running within machines. I liked the sentence at the very, very end of this chapter that said, “How many abstract machines are involved to execute the code you’re writing today? When you run a VM, or docker, or some container functionality of your choice, these are machines within a machine, executing machines, made up of smaller machines within other machines. It’s machines all the way down.
+
+0:19:29.4 **Jason Staten** Oh yes. I also took the time with some Rust and built myself out a Turing Machine.
+
+0:19:34.0 **Jen Luker** (laughs)
+
+0:19:35.7 **Jason Staten** And so, Rust, being a Turing Complete language that is on top of numerous other layers, I built myself a quick machine on top of that. Or, at least, quick to implement, not necessarily quick to run. Probably awful when it comes to runtime, but I made a machine that can go and take a binary number and increment it by 1, and it’s got a few constructs in it, the notion of a tape, which is a vector or a list of cells, and a cell is an enumeration that can be either a blank, a 0 or a 1, and then also, I have a machine, as well, that has transitions. And transitions just say, “What starting state are you in? When ending state will you go to after this transition if you read this value? And what do you want to write? And which direction do you want to move the head?” And so, with those 5 things I was able to go and define a bunch of transitions for my machine and execute that until getting to a finishing state knowing that I was done incrementing the number. It was kind of a fun exercise because that was something I had heard about while in college, is a Turing Machine, but I had never actually been tasked with building one out, and I made one. This one’s probably pretty crude, and a good Rust developer would probably laugh at it, but I was pretty proud that it actually worked.
+
+0:21:02.4 **Adam Garrett-Harris** I’m proud of you, too!
+
+0:21:02.4 **Jen Luker** As you should be!
+
+0:21:04.1 **Adam Garrett-Harris** Nice. So, anything else from the Machinery chapter?
+
+0:21:08.0 **Safia Abdalla** I had a minor side rant about more context for what was going on in this time period that relates to genetic algorithms, which is not technically related, but you know I always love an excuse to rant about history and genetic algorithms.
+
+0:21:24.5 **Jason Staten** Let’s do it.
+
+0:21:25.0 **Adam Garrett-Harris** We need like a side note sound effect, or something.
+
+0:21:28.3 **Jason Staten** (laughs)
+
+0:21:29.4 **Safia Abdalla** Yeah, like a little ding.
+
+0:21:29.8 **Jen Luker** DING. (ding sound effect also plays)
+
+0:21:31.0 **Safia Abdalla** So, I think it’s interesting because it kind of connects Turing and the work that was going on in the ENIAC. So, Turing is really well known for a lot of his work with the, breaking the bombe, the German Enigma codes, and for, you know, his notion of like, “The Turing Machine” and one of the things that he got interested in later in his life, and was kind of cut short by his tragic death, was he actually got really interested in biology and how biology and computing intersect. I’m going to try and pull up the name of the paper really quickly, just so I have it up, but he was really interested in figuring out a way to build machines that mimicked the aspects of evolution, which we talked about a while back, was pretty similar to what genetic algorithms do, and if you’re interested in learning more about that go listen to the first episode in this series. So, yeah. What I think is really cool is Turing was in England, he was working on these new ideas around computational biology and how you can think about nature as a computational system in and of itself, a lot like the ideas we were discussing earlier with Jen. And kind of started writing these papers and then his work didn’t really rise to prominence. Meanwhile, on the other side of the globe, in Princeton where the ENIAC machine was held, where John von Neumann, who was mentioned in this book as the creator of the von Neumann Machine, which we didn’t talk about, but it’s essentially the notion of separating out the memory or storage, and the actual computing system into a CPU. So, yeah, he was kind of at Princeton working on the ENIAC and at that same time there was a really intriguing man there by the name of Nils Aall Barricelli, and he was just kind of hanging around this lab with all of these people who are working on the ENIAC and trying out different ideas in computing, and one of the things that he was particularly interested in was simulating artificial life and trying to see if you can build a small evolving system within a computer. And I might be incorrect, my memory’s foggy, but he actually wrote programs for the ENIAC that were like, early versions of what are now genetic algorithms, and I think copies of those are still around in an archive somewhere so you can like, pull it out and see what he was working on. And yeah, he also published a paper about this topic, the notion of figuring out if you can capture patterns in nature, like evolution, and encode them into machine. So, create programs inspired by nature, the same way Turing was thinking. That paper didn’t get a lot of attention, either. It was, I think, published in 1953? ‘57? That’s a long time span, in the 1950s; but one of the reasons I think it’s really interesting is, you know, the notion that 2 people at around the same period in time were thinking about the same concept which was, “How can we observe the world and then try to encode our observations in programs?” And although their ideas didn’t get a lot of attention in the 1950s, they’re kind of popular concepts now, and it just also kind of shows the fact most new ideas are old and you can always kind of go back in time, whether you’re going to Plato, or Turing, or Barricelli and see the same idea reflected in different ways, and a computer is a great way to convey an idea in a new way, or the same idea in a new way. At least, when you think about it in the context of like, today versus 200 years ago. So, that was my interesting little tidbit. I always like to share it because I don’t think Turing gets enough attention for his computational biology work which is kind of what occupied his mind post working on the Bombe, and I just think it’s really neat stuff and that Barricelli was working on it, too. He also doesn’t get a ton of attention. Actually, like in the grand scheme of things, not that many people probably care about what some like, computer scientists in the ‘50s were up to, but yeah, it’s cool stuff. So, if you are interested in learning more, not just about what these machines were, at least when it comes to the ENIAC, and in fact, physically, but what people were actually programming on them and what kind of problems they were thinking of solving, looking into Barricelli and genetic algorithms is a good way to see how they were actually used. That’s my side note. DING! (ding sound effect)
+
+0:26:16.2 **Adam Garrett-Harris** Cool.
+
+0:26:16.4 **Jen Luker** So, it’s only been recently that we’ve gotten really interested in interdisciplinary fields, such as computational biology. So, when you’re looking at that and thinking, okay, so since the turn of the century we’ve really been diving into this, and it’s already 50 years old by the time anyone starts looking at it again, getting any interest in those again, and though they’ve been very slowly coming back to that, I mean where could we have been if Turing’s life hadn’t been cut short, you know?
+
+0:26:48.9 **Safia Abdalla** And another moral in that story: If you’ve got an idea, you’re working on an interesting program or something and it doesn’t get a lot of attention, don't worry ‘cause it’ll probably get really popular in 50 years.
+
+0:27:00.6 **Jason Staten** That does make me wonder, Safia, your topic about Barricelli and his thought on biology and how it relates to computation, is how that was an influence on Conway actually and the Game of Life. I know that was something that was introduced to me in school or was told to go and make a really simple version of that. Have you ever built that? Or have any of you built that?
+
+0:27:25.8 **Jen Luker** Yep.
+
+0:27:26.3 **Adam Garrett-Harris** Yep.
+
+0:27:26.6 **Safia Abdalla** I have not. I have only heard of it and I know the concept but I haven’t actually like, sat down and coded it.
+
+0:27:32.6 **Jason Staten** It is a fun exercise to do in a window of time. Like, if you have a spare day on a weekend or something to give it a shot, ‘cause it’s based on a couple of simple rules and there are 4 rules to the basic version of it and it is a way to do cell automation and also produce kind of a fun little visual sometimes.
+
+0:27:56.3 **Jen Luker** Although I’ve got to admit, at 3:00 in the morning, writing in Java right after learning C++, it was really hard. It got much better after sleep. Yes, so make sure you sleep before you start this thing.
+
+0:28:09.1 **Safia Abdalla** Um, so I-
+
+0:28:10.1 **Adam Garrett-Harris** So, it’s not the board game, “Game of Life”?
+
+0:28:13.0 **Jen Luker** No.
+
+0:28:13.6 **Adam Garrett-Harris** Where the one rule is if you choose not to go to college you’re probably going to lose.
+
+0:28:18.3 **All** (laughing)
+
+0:28:18.0 **Safia Abdalla** So, I did, I looked that up really quickly just now, Jason, and it looks like Barricelli’s algorithms were long distant ancestors of Conway’s work, so Barricelli preceded Conway. And I also verified another thing I mentioned earlier that the code for Barricelli’s program is probably out there somewhere, I just looked it up. The output for the like, little universe he built with simulated organisms, the output for that still exists. The output card that is, and it’s on archive and if you google it you can find pictures of it. It doesn’t mean anything to me, but I assume back in the 1950s if you were a programmer you could read this and understand it. (laughs)
+
+0:29:06.9 **Adam Garrett-Harris** That’s cool.
+
+0:29:07.9 **Jason Staten** Nice.
+
+0:29:08.4 **Adam Garrett-Harris** There should be art museums for computer code.
+
+0:29:10.3 **Jen Luker** They are increasingly beginning to exist.
+
+0:29:12.5 **Adam Garrett-Harris** Awesome.
+
+0:29:14.1 **Jason Staten** Can I hop in on one last thing on von Neumann architecture versus Turing Machine? It wasn’t totally clear to me when I was seeing between them both, reading this piece of it. I did a little bit of digging and found that the Turing model is more a theoretical model, and von Neumann actually came up with the architecture for building real machines, so actually getting rid of the infinite amount of space that’s necessary because you can’t build a real machine of infinite size, and so von Neumann's architecture of taking an input, separating, like Safia said, separating out CPU and memory unit in order to produce output is what we now model all of our current computers after. Generally, most computers are built under that same architecture.
+
+0:30:08.2 **Jen Luker** Keyboard, CPU, RAM, monitor. The 4 things you technically need to start an old computer was you had to have a keyboard plugged in, you had to have a monitor plugged in, you had to have your CPU plugged in, you needed to have your RAM in a motherboard. And if any of those things didn’t quite work your computer never booted. Everything else was fine, but you had to have those 4 things.
+
+0:30:28.7 **Adam Garrett-Harris** I guess you could do it without a monitor and just not see anything.
+
+0:30:30.9 **Jen Luker** Not back in the day. If you didn’t have it plugged in, it didn’t work.
+
+0:30:31.9 **Safia Abdalla** Or if it would print out. What was the thing where you would actually like, it would print out stuff as you were working on it?
+
+0:30:38.3 **Adam Garrett-Harris** Like a teletype?
+
+0:30:39.3 **Safia Abdalla** Yeah, I think that’s what it was.
+
+0:30:41.9 **Adam Garrett-Harris** Yeah, so on a teletype your text editor would be something like ed, so you would type one command on paper, and then it would print the next command on paper. So, a command might be 1, and 1 means “Hey, what’s on line 1?” and it would print that out, and then you could do something like D1 and it would delete line 1.
+
+0:31:00.7 **Safia Abdalla** That’s amusing to think about.
+
+0:31:00.7 **Jason Staten** If you were a bin user.
+
+0:31:01.6 **Jen Luker** And I think that’s that thing, sorry. To correct myself, it is like, you had to have your video card plugged in, not necessarily a monitor plugged in to the video card.
+
+0:31:09.3 **Adam Garrett-Harris** Oh, okay.
+
+0:31:10.2 **Jen Luker** And if you’re-
+
+0:31:10.8 **Adam Garrett-Harris** Yeah, I was showing some kids a raspberry pi a while back and had to explain that the computer has all these different parts because they’re not used to seeing all of these different parts separate.
+
+0:31:19.6 **Jen Luker** Mm-hmm (affirmative).
+
+0:31:20.2 **Safia Abdalla** Oh, that’s...
+
+0:31:20.6 **Jen Luker** They’re used to it all being in one piece.
+
+0:31:22.1 **Jason Staten** There was one other thing that’s missing in here that I wish Rob would have covered, and that is the turbo button. Like, where did that come from?
+
+0:31:29.2 **Jen Luker** (laughs)
+
+0:31:29.2 **Adam Garrett-Harris** Yeah!
+
+0:31:30.3 **Jason Staten** Where did it go?
+
+0:31:30.8 **Adam Garrett-Harris** (laughs) Yeah! I had a computer that had a power, a reset, and turbo.
+
+0:31:34.9 **Safia Abdalla** What is the turbo button? I think I’m a little too young for that term.
+
+0:31:38.2 **Jason Staten** So, the turbo… (laughing)
+
+0:31:41.4 **Adam Garrett-Harris** (laughing).
+
+0:31:43.9 **Jen Luker** (sighs)
+
+0:31:44.7 **Jason Staten** It was a button that was on old machines, and honestly, I don’t know the true justification other than like, not having it on would make things slow. So, I will, I guess task myself with looking up what that is; but it was a button that was on machines and being a video game player, why would you not want the turbo button pushed?
+
+0:32:03.5 **Jen Luker** It was essentially a way of overclocking your CPU without going in and manually messing with the pins which you could technically do at the time. So, it actually adjusted the power to different pins on the CPU to allow you to overclock it.
+
+0:32:17.0 **Safia Abdalla** Why did they not just… Why was that a thing? Sorry.
+
+0:32:20.4 **Jen Luker** Because you could burn out your CPU much faster. Heat was a problem, so if you over-
+
+0:32:25.4 **Adam Garrett-Harris** So, they wanted you to burn it out? So you’d buy a new computer?
+
+0:32:28.2 **Jen Luker** If you overclocked it you could get a little bit more computer for your money, but you also had a much shorter lifespan on that computer.
+
+0:32:37.3 **Jason Staten** It was totally worth it.
+
+0:32:37.6 **Jen Luker** So, you had to go with trade offs of price, you know, it was basically do you want more that you spend up front? Or do you want to distribute it over time? (laughs) It was cost efficient, or it wasn’t, depending on how hard you pushed it.
+
+0:32:53.6 **Safia Abdalla** Wait, so let’s like-
+
+0:32:54.1 **Jen Luker** But the turbo button-
+
+0:32:55.4 **Safia Abdalla** Like, wait, how hard you pushed it? Like, was this-
+
+0:32:58.2 **Jen Luker** You could heavily overclock it.
+
+0:33:00.0 **Safia Abdalla** So, it wasn’t a binary thing? It was like, analog? Like the harder you pushed it, the… what? Wow.
+
+0:33:07.1 **Jen Luker** I was like, so, it was kind of like you could take like a-
+
+0:33:12.2 **Safia Abdalla** Wait, like what year was this going on?
+
+0:33:14.1 **Jen Luker** In the 80s.
+
+0:33:15.0 **All** (laughing)
+
+0:33:15.6 **Safia Abdalla** Okay. Before I was born.
+
+0:33:17.4 **Jason Staten** I had one in the 90s.
+
+0:33:17.5 **Jen Luker** Yes, before you were born.
+
+0:33:20.5 **Adam Garrett-Harris** Yeah, me too.
+
+0:33:20.8 **Jen Luker** Yeah… Let’s talk about how old that computer really was? So-
+
+0:33:25.8 **All** (laughing).
+
+0:33:26.9 **Jen Luker** So, on your CPU, itself, not all the pins received power. So, you received power to a majority of the pins but there were a few extra pins on there that you could actually adjust and add extra female pin additions in order to allow it for those to connect. So, when you added those you could overclock it by like, if you did 1.2 modern example for this, like, take your 1.3 and make it a 1.7. Ideally, you’d only want to up it to 1.4, maybe 1.5 which is what the turbo button allowed you to do, but if you knew what you were doing you could go in there and actually make it a 1.7, but the chances of burning out your CPU, and your motherboard, went up exponentially as you overclocked it. So, the turbo button that they added later actually allowed you to do it in a slightly more safe fashion. So, they said, “Okay. This is a 1.3 but you can really push it to a 1.4, maybe a 1.5.” You know, so here’s a turbo button so that you can do it, to add more computations per second, but when you did that it dramatically increased the heat between not only in your CPU but also between the CPU and the motherboard.
+
+0:34:45.0 **Safia Abdalla** Why-
+
+0:34:45.9 **Jason Staten** Well-
+
+0:34:45.9 **Safia Abdalla** Go ahead, Jason. I’m… wow.
+
+0:34:47.9 **Jason Staten** Okay, okay. So, one other justification, thank you Wikipedia. So-
+
+0:34:51.8 **Adam Garrett-Harris** I am also on the Wikipedia article right now for turbo button.
+
+0:34:55.2 **Safia Abdalla** Okay, enlighten me, please.
+
+0:34:57.3 **Jason Staten** Early on, some programs and games were built with the expectation that they were running at the intel 8088 model-
+
+0:35:08.6 **Jen Luker** Mm-hmm (affirmative)
+
+0:35:08.7 **Jason Staten** At its 4.7 MHz, and when newer, faster CPUs were released there was still old software that expected that exact timing. So, you can imagine, like if you were playing a racing video game, then everything would just be faster because your CPU was faster and the game was not accommodating for potential different varying speeds of your CPU. So, you-
+
+0:35:34.0 **Jen Luker** But it was also a time where-
+
+0:35:35.4 **Safia Abdalla** So, it was like-
+
+0:35:36.4 **Jen Luker** People were sitting right there on the edge of the cutting edge, but most programs were still running on that old timing. So, like your mom’s WordPerfect for keeping her journal was totally fine on that system, you know? But if you wanted to play something that was super new and modern that ran off of the new technologies that were just barely installed in your systems, so you had to push the turbo button.
+
+0:35:59.4 **Safia Abdalla** Yeah. So, it was kind of like a backwards compatibility thing?
+
+0:36:02.7 **Jason Staten** Yeah.
+
+0:36:03.6 **Safia Abdalla** Like-
+
+0:36:03.7 **Jen Luker** Yeah.
+
+0:36:04.7 **Safia Abdalla** Okay. That’s interesting. I’ve never heard of that. I wonder-
+
+0:36:07.3 **Jen Luker** But before the turbo button it was opposite. You actually had to go in there and manually put the pins in.
+
+0:36:11.8 **Safia Abdalla** I know nothing of this, I am such a child. (laughs)
+
+0:36:15.8 **Jen Luker** I used to get paid $20 to put computers together for my dad. I would put like, 5 of them together one day, and the next day he would hand me a pile of disks and says, “Install DOS on all of these.” So, I got to play with these.
+
+0:36:24.4 **Safia Abdalla** See, my next series of questions are like, what is WordPerfect? But-
+
+0:36:29.1 **Jen Luker** Oh…
+
+0:36:29.9 **Safia Abdalla** Let’s not go down that.
+
+0:36:31.0 **Adam Garrett-Harris** (laughs)
+
+0:36:31.3 Let’s get into the Big O Chapter.
+
+0:36:32.5 **Adam Garrett-Harris** It’s just Word.
+
+0:36:33.5 **Jason Staten** (laughs)
+
+0:36:35.2 **Safia Abdalla** But it’s perfect?
+
+0:36:35.3 **Adam Garrett-Harris** So-
+
+0:36:36.1 **Jason Staten** Well-
+
+0:36:36.4 **Adam Garrett-Harris** I think this is also pretty interesting. There used to be a turbo button on some keyboards-
+
+0:36:41.9 **Safia Abdalla** What?!
+
+0:36:43.3 **Adam Garrett-Harris** Which did not speed up your CPU.
+
+0:36:45.4 **Jen Luker** No.
+
+0:36:45.4 **Adam Garrett-Harris** It actually just increased the keyboard repeat rate.
+
+0:36:48.9 **Safia Abdalla** That would make sense. So, in a way it was like you had these CPUs and they were like, getting faster so quickly that the other peripherals and software couldn’t keep up with them, so you kind of had to have a way to slow down the CPU to run these old programs.
+
+0:37:06.7 **Jen Luker** Yes.
+
+0:37:07.3 **Jason Staten** So, if you built a game before like, in a really simple game engine where it gives your render loop and you have like, your delta time that comes through and based on that you can adjust all of your properties of things. Before, like, that game loop would be under the assumption of “I’m always going to arrive at this place at the same time, because the CPU is working at that same rate.”
+
+0:37:30.5 **Safia Abdalla** Based on the frequency of that CPU.
+
+0:37:32.5 **Jason Staten** Mm-hmm (affirmative).
+
+0:37:33.5 **Safia Abdalla** Okay.
+
+0:37:33.7 **Jen Luker** So, it was interesting how... You remember the snake game where you’d eat a snake and it would get longer? Or you would eat the apples and then the snake would get longer?
+
+0:37:42.0 **Safia Abdalla** No. I’m kidding, I do.
+
+0:37:43.9 **All** (laughing)
+
+0:37:44.8 **Jen Luker** I’m like, I know it’s really old but there’ve been reiterations of this game.
+
+0:37:49.1 **Safia Abdalla** I know, at this point I’m just starting to play games with you folks.
+
+0:37:52.5 **Jen Luker** (laughs) Oh, anyway. I officially feel too old for this podcast. So-
+
+0:37:59.2 **Adam Garrett-Harris** That was like, the best game on those Nokia phones.
+
+0:38:02.0 **Jen Luker** Right? Okay, well that makes me feel also old. I remember when that game was brand spanking new. So, anyway, the snake would eat the apple, the snake would get longer. The problem was as the computers increased in speed, so did the timings of when those buttons pushed and how quickly the computer responded. So, when you were trying to do the really tight curves which a really long snake and you were having to time it to just exactly get right to the body and then turn to get the giant spirals going, if you had turbo buttons on or off actually changed that timing. So, when you were gaming, “gaming” at that point…
+
+0:38:42.2 **Jason Staten & Adam Garrett-Harris** (laughing)
+
+0:38:42.5 **Jen Luker** You know? The timing mattered a lot, because it would completely throw off your timing if you had either turbo on or turbo off depending on how you had gotten used to it; but with those cycles it was like, it was exactly that percentage. It would be, every time it would 6 then it would run, and it would reloop over those 400, or 4,000.
+
+0:39:01.1 **Adam Garrett-Harris** Oh yeah. I wrote a pawn game on the TI-83, super slow. Put it on the TI-83 Plus, it was great.
+
+0:39:07.5 **Jen Luker** Yep, but if you put it on the TI-86 you were screwed.
+
+0:39:11.1 **Adam Garrett-Harris** Why is that?
+
+0:39:12.5 **Jen Luker** ‘Cause then it ran way faster.
+
+0:39:13.6 **Adam Garrett-Harris** Oh, right. Well, I don’t think we have time to do the next chapter.
+
+0:39:16.5 **Jen Luker** I don’t think we do, either! (laughing) Oops!
+
+0:39:18.5 **Adam Garrett-Harris** So, next time on “Retro PC Gaming…”
+
+0:39:21.4 **All** (laughing)
+
+0:39:24.3 **Jen Luker** Yeah, so we’ll go over Big O notation.
+
+0:39:25.8 **Adam Garrett-Harris** Yeah, next time we’ll go over Big O notation, chapter 5.
+
+0:39:29.7 **Safia Abdalla** And we’ll discover what things about old computers I don’t know. (laughs)
+
+0:39:33.8 **Jen Luker** (laughing)
+
+0:39:34.7 **Adam Garrett-Harris** Right.
+
+0:39:35.4 **Jen Luker** Definitely too old for this podcast now.
+
+0:39:38.2 **Safia Abdalla** I think I’m too young for it, ‘cause I’m the odd one out.
+
+0:39:41.2 **Adam Garrett-Harris** No, that’s perfect.
+
+0:39:42.8 **Jen Luker** Eh, it’s more like these other 2 knew about the turbo button, but I knew about manually configuring it with pins.
+
+0:39:49.9 **Adam Garrett-Harris** Thanks so much for listening. If you want to support the show please rate us in iTunes, and you don’t even have to leave a review if you don’t want to you can just hit the star rating and that’ll help people find us. And actually we haven’t read a review in a while, can you read one, Safia?
+
+0:40:04.4 **Safia Abdalla** I sure can. We have Sierra who left a review saying, “It can be really difficult to find time to read books relevant to my career so it’s great to listen to a group of smart and thoughtful people analyze programming related books. Sound quality is great and all of the podcasters have interesting insights. Great so far.” So, if you agree with what Sierra says, spread the love and share the podcast with a friend, or 2.
+
+0:40:28.3 **Jen Luker** Or 10.
+
+0:40:28.3 **Adam Garrett-Harris** And Sierra’s actually a friend of the show, Jason and I have met her before.
+
+0:40:33.1 **Safia Abdalla** Thanks, Sierra!
+
+0:40:33.6 **Jason Staten** Thanks, Sierra.
+
+0:40:33.5 **Adam Garrett-Harris** So, it’s just a… Yeah, thanks. The best way to keep up with show is to follow up Twitter @BookBytesFM and to subscribe in your favorite player, podcast player. You can find the show notes and transcript, as always, at orbit.fm/BookBytes/11 See you next time!
+
+0:40:48.5 **Jen Luker** See ya.
+
+0:40:49.1 **Safia Abdalla** Bye, folks!
+
+0:40:49.1 **Jason Staten** Bye.
+
+(Exit music: Electro swing)
