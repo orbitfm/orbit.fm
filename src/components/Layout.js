@@ -14,45 +14,44 @@ const Footer = styled.div`
   }
 `;
 
+const ListItem = styled.li`
+  display: inline-block;
+  margin: 0 1rem 0 0;
+`;
+
 const ListLink = props => (
-  <li style={{ display: `inline-block`, margin: `0 1rem 0 0` }}>
+  <ListItem>
     <Link to={props.to}>{props.children}</Link>
-  </li>
+  </ListItem>
 );
 
+const TitleContainer = styled.div`
+  margin: 0px auto;
+  max-width: 1200px;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-content: space-between;
+`;
+
 const Title = ({ title }) => (
-  <div
-    style={{
-      background: '#333',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 1200,
-        padding: '1.45rem 1.0875rem',
-        display: 'flex',
-        justifyContent: 'space-between',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {title}
-        </Link>
-      </h1>
-      <ul style={{ listStyle: `none`, float: `right`, margin: `unset` }}>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/shows/">Shows</ListLink>
-        <ListLink to="/sponsors/">Sponsors</ListLink>
-      </ul>
-    </div>
-  </div>
+  <TitleContainer>
+    <h1>
+      <Link
+        to="/"
+        style={{
+          color: 'white',
+          textDecoration: 'none',
+        }}
+      >
+        {title}
+      </Link>
+    </h1>
+    <ul>
+      <ListLink to="/about/">About</ListLink>
+      <ListLink to="/shows/">Shows</ListLink>
+      <ListLink to="/sponsors/">Sponsors</ListLink>
+    </ul>
+  </TitleContainer>
 );
 
 const Header = () => (
