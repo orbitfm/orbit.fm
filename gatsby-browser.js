@@ -3,7 +3,8 @@ import { Provider } from 'react-redux';
 
 import createStore from './src/state/createStore';
 import './src/utils/global-styles';
-const Layout = require('./src/components/Layout').default;
+const ConnectedAudioPlayer = require('./src/components/ConnectedAudioPlayer')
+  .default;
 
 const store = createStore();
 
@@ -14,5 +15,8 @@ export const wrapRootElement = ({ element }) => {
 };
 
 export const wrapPageElement = ({ element, props }) => (
-  <Layout {...props}>{element}</Layout>
+  <div>
+    {element}
+    <ConnectedAudioPlayer />
+  </div>
 );

@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
+import Layout from '../components/Layout';
 import Page from '../components/Page';
 
 const Listing = styled.ul`
@@ -24,25 +25,27 @@ const ImageContainer = styled.div`
 `;
 
 const Shows = ({ data }) => (
-  <Page title="Shows" headTitle="Shows">
-    <Listing>
-      {data.allContentfulPodcast.edges.map(({ node }) => (
-        <Item key={node.id}>
-          <ImageContainer>
-            <Link to={`/${node.fields.slug}`}>
-              <Img fluid={node.image.fluid} />
-            </Link>
-          </ImageContainer>
-          <div>
-            <Link to={`/${node.fields.slug}`}>
-              <h2>{node.name}</h2>
-            </Link>
-            <p>{node.description.description}</p>
-          </div>
-        </Item>
-      ))}
-    </Listing>
-  </Page>
+  <Layout>
+    <Page title="Shows" headTitle="Shows">
+      <Listing>
+        {data.allContentfulPodcast.edges.map(({ node }) => (
+          <Item key={node.id}>
+            <ImageContainer>
+              <Link to={`/${node.fields.slug}`}>
+                <Img fluid={node.image.fluid} />
+              </Link>
+            </ImageContainer>
+            <div>
+              <Link to={`/${node.fields.slug}`}>
+                <h2>{node.name}</h2>
+              </Link>
+              <p>{node.description.description}</p>
+            </div>
+          </Item>
+        ))}
+      </Listing>
+    </Page>
+  </Layout>
 );
 
 export default Shows;

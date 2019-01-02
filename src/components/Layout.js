@@ -3,17 +3,6 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
-import { connect } from 'react-redux';
-
-import AudioPlayer from '../components/AudioPlayer';
-import { togglePlay, pausePlay, updateTime } from '../state/actions';
-import {
-  selectUrl,
-  selectPodcast,
-  selectTitle,
-  selectIsPlaying,
-  selectTime,
-} from '../state/selectors';
 
 const Footer = styled.div`
   text-align: right;
@@ -24,21 +13,6 @@ const Footer = styled.div`
     margin-bottom: 0;
   }
 `;
-
-const ConnectedAudioPlayer = connect(
-  state => ({
-    url: selectUrl(state),
-    podcast: selectPodcast(state),
-    title: selectTitle(state),
-    isPlaying: selectIsPlaying(state),
-    time: selectTime(state),
-  }),
-  {
-    onPlayClick: togglePlay,
-    reportedTime: updateTime,
-    onPause: pausePlay,
-  }
-)(props => <AudioPlayer {...props} />);
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, margin: `0 1rem 0 0` }}>
@@ -121,7 +95,6 @@ const Layout = ({ children, data }) => (
   >
     <Header />
     <div>{children}</div>
-    <ConnectedAudioPlayer />
     <Footer>
       <a
         href="https://www.contentful.com/"

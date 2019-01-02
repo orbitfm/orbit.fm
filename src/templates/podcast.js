@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import Layout from '../components/Layout';
 import PageWithSidebar from '../components/PageWithSidebar';
 import PodcastInfo from '../components/PodcastInfo';
 import Subscribe from '../components/Subscribe';
@@ -22,38 +23,40 @@ export default ({ data }) => {
     : [];
 
   return (
-    <PageWithSidebar
-      title={podcast.name}
-      headTitle={podcast.name}
-      description={podcast.shortDescription}
-      color={podcast.primaryColor}
-      sidePanelChildren={
-        <PodcastInfo
-          fluidImage={podcast.image.fluid}
-          podcastDescription={podcast.description.description}
-          podcastName={podcast.name}
-          podcastHosts={podcast.hosts}
-          podcastPath={podcast.fields.slug}
-        />
-      }
-    >
-      <Subscribe links={podcast.subscriptionLinks} />
-      <h2>Latest Episodes</h2>
-      {episodes
-        ? episodes.map(e => (
-            <EpisodeListing
-              key={e.id}
-              shortDescription={e.shortDescription}
-              publicationDate={e.publicationDate}
-              name={e.name}
-              path={e.fields.path}
-              podcastHosts={e.podcast.hosts.map(h => h.name)}
-              podcastName={e.podcast.name}
-              podcastPath={e.podcast.fields.slug}
-            />
-          ))
-        : null}
-    </PageWithSidebar>
+    <Layout>
+      <PageWithSidebar
+        title={podcast.name}
+        headTitle={podcast.name}
+        description={podcast.shortDescription}
+        color={podcast.primaryColor}
+        sidePanelChildren={
+          <PodcastInfo
+            fluidImage={podcast.image.fluid}
+            podcastDescription={podcast.description.description}
+            podcastName={podcast.name}
+            podcastHosts={podcast.hosts}
+            podcastPath={podcast.fields.slug}
+          />
+        }
+      >
+        <Subscribe links={podcast.subscriptionLinks} />
+        <h2>Latest Episodes</h2>
+        {episodes
+          ? episodes.map(e => (
+              <EpisodeListing
+                key={e.id}
+                shortDescription={e.shortDescription}
+                publicationDate={e.publicationDate}
+                name={e.name}
+                path={e.fields.path}
+                podcastHosts={e.podcast.hosts.map(h => h.name)}
+                podcastName={e.podcast.name}
+                podcastPath={e.podcast.fields.slug}
+              />
+            ))
+          : null}
+      </PageWithSidebar>
+    </Layout>
   );
 };
 

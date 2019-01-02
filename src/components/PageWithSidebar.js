@@ -16,9 +16,11 @@ const Container = styled.div`
 const Color = styled.div`
   background: ${props => props.color};
 `;
+
 Color.propTypes = {
   color: PropTypes.string.isRequired,
 };
+
 Color.defaultProps = {
   color: COLORS.BRAND,
 };
@@ -28,9 +30,11 @@ const BannerContainer = styled.div`
   padding: 40px;
   color: white;
 `;
+
 BannerContainer.propTypes = {
   color: PropTypes.string.isRequired,
 };
+
 BannerContainer.defaultProps = {
   color: COLORS.BRAND,
 };

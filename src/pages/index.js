@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
+import Layout from '../components/Layout';
 import Page from '../components/Page';
 import EpisodeListing from '../components/EpisodeListing';
 
@@ -38,41 +39,43 @@ const IndexPage = ({ data }) => {
   const latestEpisode = episodes[0];
 
   return (
-    <Page
-      title="Latest Episodes"
-      description={data.site.siteMetadata.description}
-      color={latestEpisode.podcast.primaryColor}
-      sidePanelChildren={
-        <Listing>
-          <h2>Shows</h2>
-          {data.allContentfulPodcast.edges.map(({ node }) => (
-            <Show key={node.id}>
-              <ShowImage>
-                <Link to={`/${node.fields.slug}`}>
-                  <Img fluid={node.image.fluid} />
-                </Link>
-              </ShowImage>
-              <p>{node.name}</p>
-            </Show>
-          ))}
-        </Listing>
-      }
-    >
-      {episodes.slice(0, 10).map(episode => (
-        <EpisodeListing
-          shortDescription={episode.shortDescription}
-          publicationDate={episode.publicationDate}
-          name={episode.name}
-          path={episode.fields.path}
-          fluidImage={episode.podcast.image.fluid}
-          podcastHosts={episode.podcast.hosts.map(h => h.name)}
-          podcastName={episode.podcast.name}
-          podcastPath={episode.podcast.fields.slug}
-          key={episode.id}
-        />
-      ))}
-      <Link to="shows">View all shows</Link>
-    </Page>
+    <Layout>
+      <Page
+        title="Latest Episodes"
+        description={data.site.siteMetadata.description}
+        color={latestEpisode.podcast.primaryColor}
+        sidePanelChildren={
+          <Listing>
+            <h2>Shows</h2>
+            {data.allContentfulPodcast.edges.map(({ node }) => (
+              <Show key={node.id}>
+                <ShowImage>
+                  <Link to={`/${node.fields.slug}`}>
+                    <Img fluid={node.image.fluid} />
+                  </Link>
+                </ShowImage>
+                <p>{node.name}</p>
+              </Show>
+            ))}
+          </Listing>
+        }
+      >
+        {episodes.slice(0, 10).map(episode => (
+          <EpisodeListing
+            shortDescription={episode.shortDescription}
+            publicationDate={episode.publicationDate}
+            name={episode.name}
+            path={episode.fields.path}
+            fluidImage={episode.podcast.image.fluid}
+            podcastHosts={episode.podcast.hosts.map(h => h.name)}
+            podcastName={episode.podcast.name}
+            podcastPath={episode.podcast.fields.slug}
+            key={episode.id}
+          />
+        ))}
+        <Link to="shows">View all shows</Link>
+      </Page>
+    </Layout>
   );
 };
 
