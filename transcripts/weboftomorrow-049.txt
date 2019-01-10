@@ -1,0 +1,667 @@
+﻿(Intro music: Electric guitar)
+
+0:00:13.8 **Adam Garrett-Harris** Welcome to Web of Tomorrow, a show about the web and people who build it. I’m Adam Garrett-Harris and this time my guest is Jen Luker.
+
+0:00:21.9 **Jen Luker** Hello.
+
+0:00:23.0 **Adam Garrett-Harris** Jen is a lead software engineer at Formidable Labs and a host on BookBytes Podcast, and also The Modern Web Podcast. So, she’s going to be talking about accessibility today, something that you’ve talked a lot about before. So, welcome to the show.
+
+0:00:39.9 **Jen Luker** Thank you.
+
+0:00:41.3 **Adam Garrett-Harris** So, first off, I’m going to say I don’t know a lot about accessibility, but I think it’s really important and I want to learn more about it. So, that’s one of the reasons that I want to talk to you about it.
+
+0:00:52.5 **Jen Luker** Fantastic. My favorite subject.
+
+0:00:55.1 **Adam Garrett-Harris** So, actually a while back I had been seeing A-1-1-Y, all over the place and I actually thought it was A-L-L-Y, I thought it was Ally.
+
+0:01:05.9 **Jen Luker** Mm-hmm (affirmative).
+
+0:01:06.7 **Adam Garrett-Harris** Like, I thought Ally was some sort of library that helped to help you with accessibility, and I didn’t realize what that stood for, at all. Can you explain that?
+
+0:01:13.9 **Jen Luker** Yes, it’s actually A-11-Y, and it’s because you start with A and then there’s 11 letters, and then there’s a Y in “Accessibility”. So, you know, it’s similar to other ones like Kubernetes, which is K8S.
+
+0:01:30.2 **Adam Garrett-Harris** Oh, okay.
+
+0:01:31.8 **Jen Luker** The reduction is mostly due to Twitter, back when we only had 140 characters, spending 11 characters where you could just spend 2 was really important.
+
+0:01:47.3 **Adam Garrett-Harris** Yeah, the only other one I think I’ve seen which is internationalization, as I18n.
+
+0:01:52.9 **Jen Luker** Mm-hmm (affirmative).
+
+0:01:53.7 **Adam Garrett-Harris** I guess there’s also localization, I forget the number on that one.
+
+0:01:58.0 **Jen Luker** I think it’s 13.
+
+0:01:58.9 **Adam Garrett-Harris** Yeah. Anyway, it’s interesting. So, what is accessibility?
+
+0:02:04.8 **Jen Luker** Accessibility is actually a really, really broad topic. So, I believe what you’re asking me about today is more closely related to web accessibility, but I will give you a little bit more of that generic definition. Accessibility in the sense that I appreciate it, is technology and tools, assistive technologies that allow you to access and interact with the web in the same way as everyone else, or as close to the same way as everyone else can.
+
+0:02:47.4 **Adam Garrett-Harris** Okay. So, it’s kind of enabling everyone to be on an even playing field?
+
+0:02:52.6 **Jen Luker** Yes!.
+
+0:02:54.6 **Adam Garrett-Harris** Cool.
+
+0:02:55.4 **Jen Luker** And then something that I found really interesting, if you think about it this way, many people have contacts or glasses and it’s no longer considered a disability to have vision that’s correctable by contacts or glasses because of the fact that the use of that assistive technology is so common, so accepted, and so widely available, that there’s really no way to call it a disability anymore.
+
+0:03:27.1 **Adam Garrett-Harris** Yeah, I mean I guess you would be temporarily disabled if you lost your glasses.
+
+0:03:32.3 **Jen Luker** Right.
+
+0:03:32.9 **Adam Garrett-Harris** But…
+
+0:03:34.9 **Jen Luker** But at that point, the assistive technology makes it normal. So, the interesting thing that I took from that is that accessibility has less to do with the disability, and more to do with the tools that make you disabled. So, for instance, if you’re in a wheelchair and you go into a building that does not have an elevator, but does have stairs, you are very clearly disabled in this building; but, if you go into that same building and it now has an elevator, you can get to the 3rd floor, then you are no longer disabled.
+
+0:04:16.0 **Adam Garrett-Harris** Oh, yeah. That’s interesting. So, the wheelchair’s enabling you, but then the building is disabling you.
+
+0:04:20.4 **Jen Luker** Yes.
+
+0:04:23.6 **Adam Garrett-Harris** Awesome.
+
+0:04:24.4 **Jen Luker** So, when it comes to the web, we have the same-
+
+0:04:25.7 **Adam Garrett-Harris** Yeah, that’s an interesting way to think about it.
+
+0:04:27.6 **Jen Luker** Yeah. So, when it comes to the web you have a lot of the same technologies, the same assistive technologies, more specifically. Things like screen readers, you know, JAWS is a very common one that allows people with like, visual acuity issues or mental or interactive issues to be able to work with the web, and access the web, and interact with the web in the same capacity as the rest of us.
+
+0:05:01.7 **Adam Garrett-Harris** Yeah, can you explain JAWS a little bit? I just looked it up to see what it was like.
+
+0:05:05.9 **Jen Luker** Hmm! Jaws is the Windows screen reader. It’s used a lot for the web, there are multiple screen readers that are all used and it’s kind of like browsers in that none of them are exactly the same. The technologies that are implemented are also not exactly the same. So, we are kind of dealing with like, a browser conflict, just like we’re dealing with a screen reader conflict when we’re trying to code things for the web, but they are essentially screen readers.
+
+0:05:40.6 **Adam Garrett-Harris** Okay, so this runs instead of a browser?
+
+0:05:43.6 **Jen Luker** No, it runs in addition to a browser. It reads what’s on the browser window.
+
+0:05:48.4 **Adam Garrett-Harris** Okay, have you ever used it?
+
+0:05:51.0 **Jen Luker** Yes.
+
+0:05:51.1 **Adam Garrett-Harris** So, what is that experience like?
+
+0:05:54.6 **Jen Luker** Depends on the website! (laughs).
+
+0:05:56.5 **Adam Garrett-Harris** Oh! (laughs)
+
+0:05:59.0 **Jen Luker** The fascinating thing is trying to navigate through a website where you’ve turned down the brightness all the way to zero, or you’ve turned off the monitor, and you try to use the entire operating system and the website in conjunction with each other, with a screen reader trying to find out how to navigate, how to get to information that you want, how to… You know, just how to access and interact with that website, and you’ll find that some website are abominably bad. They’re so bad. (laughs) And then you have other ones that, you know, accessibility has been taken into account but they’re not quite perfect, and you can pretty much do what you want. It can be a little awkward and it can be a little janky, but it still works. And then you’ve got other ones that have really spent the time, and invested in taking that into consideration, how you move around a website, whether you use only a keyboard, whether you use a mouse, you can still use a mouse with a screen reader just fine, but it changes how you can interact with the web, by a lot.
+
+0:07:15.4 **Adam Garrett-Harris** How does a mouse work when you’re using a screen reader?
+
+0:07:18.4 **Jen Luker** When you hover, it reads.
+
+0:07:21.1 **Adam Garrett-Harris** Okay.
+
+0:07:23.8 **Jen Luker** When you click it lets you know that it’s an active element. It’s usually easier to use a keyboard, but a mouse does work.
+
+0:07:32.5 **Adam Garrett-Harris** So, what are some other conditions to think about besides just blindness when it comes to the web?
+
+0:07:39.0 **Jen Luker** Ooh, all sorts. So, I like to say that there’s 3 different major types of conditions. You’ve got your permanent disabilities, you have your temporary disabilities, and you have your circumstantial disabilities. So, the permanent disabilities are the things like, you know, vision acuity issues. Not just blindness, but poor vision, or cataracts, or color blindness of one sense or another. There’s a lot of different types of visual issues. You also have audio issues where, you know, you’re deaf, or hard of hearing. You have limb issues, broken or missing limbs. So, if you don’t have an arm, then it makes using a mouse much more difficult, or even a keyboard much more difficult. If you are, you know, paralyzed you have the same issues. So, there’s those to take into account, and then you have temporary disabilities where you have some sort of disability, but you’ll heal from it. It’s not a long-term condition. A broken arm, for instance, or your eyes have been dilated, or you lost your glasses, you know? Something to that effect, and then you also have circumstantial disabilities, such as deafness because you’re in a loud room, or you’re holding a sleeping infant.
+
+0:09:12.9 **Adam Garrett-Harris** Hmm.
+
+0:09:14.6 **Jen Luker** Those prevent you from using both hands to use a keyboard and a mouse, and if you’re holding that baby, you’re going to move as little as possible, you don’t want to wake that baby up, but what happens if that baby’s in your mouse hand? You know? You’re going to either, figure out how to use your other hand to use your mouse, or you’re going to use only a keyboard; and that type of limited disability, regardless of whether it’s permanent, temporary, or circumstantial, is going to affect your ability to interact with the web based on how good of a job that website did on working with accessibility options.
+
+0:09:52.7 **Adam Garrett-Harris** What about if you’re on an older device or browser? Is that also considered an accessibility issue?
+
+0:09:59.0 **Jen Luker** Yeah. Access due to speed is definitely an issue.
+
+0:10:04.3 **Adam Garrett-Harris** Ah.
+
+0:10:04.5 **Jen Luker** Same thing with language barriers.
+
+0:10:05.9 **Adam Garrett-Harris** Yeah. Interesting. I’m just trying to think of more. I just think the… All of the different types of conditions that I don’t think of as accessibility issues are just really fascinating.
+
+0:10:24.0 **Jen Luker** So, if you only have one arm and you’re trying to use that keyboard, because that baby’s sleeping, that’s definitely one thing you need to consider, but another thing that you may need to consider is if you’re in a loud room and you’re watching a video, you’re not going to be able to hear that video.
+
+0:10:39.3 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:10:39.3 **Jen Luker** You’re going to have to rely on subtitles, or transcripts. And I just shared a video on Twitter of a man who is legally deaf, and blind. He uses sign language to interact, he can see you, but it’s very fuzzy, so he’s trying to watch a conference talk and everyone’s clapping and cheering, but there were no subtitles so he couldn’t read them, and then there was another one that had them, but the subtitles were very, very small and he couldn’t read those, and then they had subtitles that were the right size, but they blended into the background.
+
+0:11:22.2 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:11:23.2 **Jen Luker** So, then there was another that had the correct amount of contrast between the background and the text, and it was the right size, but it was an incorrect translation. So, the words themselves weren’t accurate, which meant that he would get confused what they were talking about at different times.
+
+0:11:45.3 **Adam Garrett-Harris** Yeah, I see that problem all the time on YouTube because YouTube does its best to automatically transcribe it, but it doesn’t do such a great job.
+
+0:11:55.1 **Jen Luker** Hmm, AI is very difficult when it comes to speech recognition. Not only that, but you know, (mumbling) if you mumble it can be really hard to figure out what they’re saying.
+
+0:12:06.2 **Adam Garrett-Harris** Right.
+
+0:12:07.4 **Jen Luker** So, speaking clearly when you’re trying to record something, such as a podcast, really helps the screen readers be able to translate. So, those are some of the problems that are going on with… Like, video and audio transcripts and subtitles there.
+
+0:12:34.6 **Adam Garrett-Harris** Yeah, and I guess another temporary condition is you’re in bed, and your partner is asleep and you don’t want to wake them up with audio.
+
+0:12:41.7 **Jen Luker** Uh-huh (affirmative), same deal.
+
+0:12:46.8 **Adam Garrett-Harris** Yeah.
+
+0:12:46.6 **Jen Luker** Another thing that you need to think about is not just audio and visual, but also mental capacity.
+
+0:12:53.3 **Adam Garrett-Harris** Oh, okay.
+
+0:12:55.2 **Jen Luker** So, if you’re dealing with a child they’re not going to be able to understand things as complex as someone who’s much older, or if you’re dealing with someone who has seizures you’re going to have to take that into account when you’re talking about things that are flashing on the screen. You know, there’s also other things like ADHD. If it’s really large blocks of text, the chances of someone hanging on that long is very, very unlikely. So, keeping things brief and to the point can be extremely helpful for everyone. Also, the more difficult words you use, the higher barrier it is to people that are learning a new language.
+
+0:13:41.4 **Adam Garrett-Harris** Yeah, and I assume even if you try to translate, it would be harder to translate.
+
+0:13:47.2 **Jen Luker** Mm-hmm (affirmative).
+
+0:13:50.3 **Adam Garrett-Harris** Hmm.
+
+0:13:51.0 **Jen Luker** Even if you are using Google Translate, which is, as we all know, not the best yet.
+
+0:13:57.3 **Adam Garrett-Harris** (laughs) No. Okay, so what’s the best thing to do to evaluate how well you’re doing? How well your website or app is accessible?
+
+0:14:11.5 **Jen Luker** Well, there are a few different tools that can help you. For instance, there is Lighthouse which is built into Chrome at this point, it’s contained within your dev tools on the audit tab; and then you also have Axe-core, or aXe, that is a Chrome and Firefox plugin that you can utilize. These test for ARIA labels and they test for like, alt tags, and various other technological ways in which you can try to encourage screen readers to be able to navigate through your site, but this is only about, approximately, an average of 30% of the problems that you can find on the web, but those are a lot of the low-hanging fruit. That will cover a lot of your use cases. After that, you actually have to audit your site and learn as much as you can. The very, very best way is to have someone with those inherent disabilities test your site.
+
+0:15:17.0 **Adam Garrett-Harris** Okay, yeah. Yeah, because I could try using a screen reader but I’m not proficient at it.
+
+0:15:24.2 **Jen Luker** Not yet.
+
+0:15:25.2 **Adam Garrett-Harris** So- Yeah, that’s true.
+
+0:15:27.5 **Jen Luker** (laughs).
+
+0:15:28.1 **Adam Garrett-Harris** I definitely do want to become proficient at it, and I’ve tried using the one built into macOS.
+
+0:15:33.8 **Jen Luker** Mm-hmm (affirmative).
+
+0:15:34.9 **Adam Garrett-Harris** It’s pretty difficult for me, as a sighted person, to even go through the tutorial. I think part of it is it’s really slow, and I know you can speed it up, but I didn’t get to that part where I could speed it up, or I can’t really listen to it that fast, yet.
+
+0:15:56.5 **Jen Luker** It takes time to adapt just like it does take time to adapt to a new language. It’s a new way of interacting, something that you’ve never needed to do or have done before; and the more you use it the easier it gets, the quicker you can move around and understand what’s happening.
+
+0:16:11.3 **Adam Garrett-Harris** So, are you pretty good at using a screen reader?
+
+0:16:15.0 **Jen Luker** On and off. I try to test it as often as possible, I don’t say that I’m an expert, but I do use it as often as possible. Something else as a sighted person is that when you’re using it with your monitor visible…
+
+0:16:30.7 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:16:31.7 **Jen Luker** It’s not a true test.
+
+0:16:33.9 **Adam Garrett-Harris** Right.
+
+0:16:35.2 **Jen Luker** So, it does help you when you’re trying to navigate and you expect something and you don't see what happens, or you don’t see that it does happen, but at some point you do have to turn off your monitor to do an actual test. The questions that you ask yourself are then, “Can I find the information that I’m looking for here? How long does it take me to get there? Is that average?” But the more you use it the easier it gets. It is a little bit difficult to get started, just turning it on and getting through that tutorial, but once you do it gets easier.
+
+0:17:10.9 **Adam Garrett-Harris** So, I just ran an accessibility audit with Chrome dev tools on orbit.fm
+
+0:17:16.7 **Jen Luker** Mm-hmm?
+
+0:17:17.1 **Adam Garrett-Harris** And it got a 68. I’m assuming that is out of 100?
+
+0:17:20.7 **Jen Luker** Yes, out of 100.
+
+0:17:22.3 **Adam Garrett-Harris** Is that, is that pretty bad?
+
+0:17:23.7 **Jen Luker** Yeah, that’s not awesome.
+
+0:17:25.2 **Adam Garrett-Harris** (laughs)
+
+0:17:26.0 **Jen Luker** It should give you a fair amount of data regarding what’s missing that would help you get to 100. The other thing that I like about the aXe plugins, or the aXe extensions, is that it gives you much more detailed information and a link to find out more.
+
+0:17:46.9 **Adam Garrett-Harris** Oh, okay.
+
+0:17:47.8 **Jen Luker** So, I like to use aXe as an accessibility educational tool and not just as-
+
+0:17:56.2 **Computerized Female Voice** Sorry, I’m not sure about that.
+
+0:17:58.5 **Jen Luker** Yeah. Not just as an audit tool.
+
+0:18:03.8 **Adam Garrett-Harris** Did you just ask Siri a question?
+
+0:18:06.7 **Jen Luker** No, but said “aXe” and then something that sounded a lot like it.
+
+0:18:12.1 **Adam Garrett-Harris** (laughing)
+
+0:18:15.9 **Jen Luker** So…
+
+0:18:16.4 **Adam Garrett-Harris** How does that trigger Siri?
+
+0:18:18.3 **Jen Luker** It’s not Siri, it was Alexa.
+
+0:18:20.4 **Adam Garrett-Harris** Oh! Alexa, okay.
+
+0:18:20.9 **Jen Luker** And now she’s on again. (laughing)
+
+0:18:23.3 **Adam Garrett-Harris** (laughing) You can’t talk… First rule about Alexa is don’t talk about Alexa.
+
+0:18:28.1 **Jen Luker** Exactly. Speaking of accessibility tools… (laughs).
+
+0:18:32.6 **Adam Garrett-Harris** Yeah, what are some issues around smart speakers and assistants?
+
+0:18:38.8 **Jen Luker** Besides the fact that people think they’re creepy? (laughs)
+
+0:18:43.0 **Adam Garrett-Harris** Yeah. Besides that.
+
+0:18:44.8 **Jen Luker** I would like to say that the Echo is actually a lot better than some of the other tools that are out there, primarily because it detects my voice, most of the time. I have a lot of problems with, when the Kinect first came out where I had to speak in a much lower voice-
+
+0:19:07.9 **Adam Garrett-Harris** Hmm.
+
+0:19:08.5 **Jen Luker** To get it to recognize that I was talking to it.
+
+0:19:10.9 **Adam Garrett-Harris** It’s like a bunch of guys tested it.
+
+0:19:12.9 **Jen Luker** It’s amazing, isn’t it? Not only that, but those lower registers travel farther.
+
+0:19:19.0 **Adam Garrett-Harris** Hmm.
+
+0:19:19.7 **Jen Luker** So, the higher the frequency, the shorter the distance that it travels, which means that women and children have to be closer in order to be detected at the same rate that a man can from farther behind, and the lower the man’s voice, the farther away he can be.
+
+0:19:38.8 **Adam Garrett-Harris** Wow, that’s fascinating.
+
+0:19:40.7 **Jen Luker** So-
+
+0:19:41.5 **Adam Garrett-Harris** So, but-
+
+0:19:42.2 **Jen Luker** There’s a certain amount of physics involved as well.
+
+0:19:45.5 **Adam Garrett-Harris** But the Amazon Echo, I guess, just put in better speakers?
+
+0:19:51.1 **Jen Luker** It seems so. It does quite a good job.
+
+0:19:55.8 **Adam Garrett-Harris** Wait, microphones is what I meant.
+
+0:19:57.9 **Jen Luker** Yes. Although the speakers are nice, too.
+
+0:20:02.0 **Adam Garrett-Harris** Yeah. I guess there’s a problem with people with accents, various kinds of accents and dialects, and vocal cord issues. Like, if you can’t speak at a very high volume.
+
+0:20:19.2 **Jen Luker** Mm-hmm (affirmative).
+
+0:20:21.3 **Adam Garrett-Harris** Yeah.
+
+0:20:21.4 **Jen Luker** With the vocal cord issues that does go back to distance, that you unfortunately have to be practically on top of it. And when you’re talking about accents and dialects, again you’re dealing with an AI that’s been trained on a particular dialect in the most unaccented form, because it’s what’s most common. So, the deeper you get into rural areas the less likely it is that the AI itself will have recorded your particular dialect.
+
+0:21:02.1 **Adam Garrett-Harris** Yeah.
+
+0:21:02.2 **Jen Luker** So, it does take a lot more training, it takes a lot more testing, a lot broader and more diverse testing in order to get the AI trained in that sense.
+
+0:21:14.5 **Adam Garrett-Harris** Hmm. So, what about mobile? How do you use, I’m really curious how you use a phone when you’re blind for instance.
+
+0:21:27.7 **Jen Luker** Phones have screen readers, too.
+
+0:21:30.0 **Adam Garrett-Harris** So, how does that work?
+
+0:21:32.7 **Jen Luker** The same way as it would with a computer. So, as you are interacting with the phone you press on the screen, for instance, and it will read you whatever it is that you’re pressing on. So, when you’re writing applications for the mobile app you need to make sure that titles read appropriately or that forms tell you that they’re forms and that you’re about to fill something out. It is a lot more interactive because of the fact that you are forced to use your fingers as opposed to a keyboard to interact with it, but it also means that everything requires almost a double-click to do anything, because you have to click once and hold to have it read, and then click as you move as you actually select it. It makes it-
+
+0:22:16.4 **Adam Garrett-Harris** Okay. So, how do you know where to tap?
+
+0:22:22.6 **Jen Luker** Mostly that is standardization. For instance, you know that back is either in the bottom left or the top left corner of your screen. You know that cancel is usually to the right of a submit. You know that titles tend to be at the top.
+
+0:22:52.1 **Adam Garrett-Harris** Okay, so are you just kind of holding your finger on the screen and moving it around as it reads the things? As…
+
+0:22:59.0 **Jen Luker** Mm-hmm (affirmative).
+
+0:22:59.6 **Adam Garrett-Harris** Okay. So you have constant contact with the phone until you know you’re on the right spot, then you can lift up and tap?
+
+0:23:08.7 **Jen Luker** Essentially, yes.
+
+0:23:09.7 **Adam Garrett-Harris** Okay, what about keyboard entry?
+
+0:23:17.4 **Jen Luker** You end up-
+
+0:23:17.6 **Adam Garrett-Harris** That’s the same thing?
+
+0:23:19.1 **Jen Luker** Well, keyboard entry you’re not just tapping and typing with your hands, you’re usually relying on your voice to do a lot more of that interaction.
+
+0:23:34.0 **Adam Garrett-Harris** Okay, yeah.
+
+0:23:36.7 **Jen Luker** So, it’ll read you the options, you say the one back that you want. Some phones allow you to actually have almost a braille response based on the feedback, the vibrating feedback.
+
+0:23:55.6 **Adam Garrett-Harris** A braille response?
+
+0:23:57.4 **Jen Luker** Mm-hmm (affirmative).
+
+0:23:57.8 **Adam Garrett-Harris** To....
+
+0:23:59.9 **Jen Luker** To where your fingers are moving.
+
+0:24:01.6 **Adam Garrett-Harris** Oh! Okay. So, some sort of code just based on where… Obviously, and that can’t actually be braille, but maybe something more similar to morse code?
+
+0:24:14.4 **Jen Luker** Hmm, not necessarily. Certain phones actually have the ability to provide multiple interactions based on a vibration. So, as you’re moving across the screen you can in fact feel those bumps where they’re supposed to be.
+
+0:24:31.0 **Adam Garrett-Harris** Oh! Interesting.
+
+0:24:35.7 **Jen Luker** Digital braille.
+
+0:24:36.7 **Adam Garrett-Harris** Yeah. Yeah, so I saw a new system, I think there’s a kickstarter for it, that’s very similar to braille, but easier to learn.
+
+0:24:49.2 **Jen Luker** That’s interesting.
+
+0:24:50.0 **Adam Garrett-Harris** Where it has like, circles and squares, and inside of the circles and squares it has different things that you can feel, and even a visual person, even someone who can see, you can recognize the letters, because braille is really hard to see by sight, you pretty much have to feel it and it’s very hard to learn.
+
+0:25:15.4 **Jen Luker** I think the “very hard to learn” part does, in fact, rely on, you know, language differences. It’s… Anything is easy with familiarity. So, I think that saying that one thing is easier to learn than another just has to do with familiarity. Like, if you were raised on braille you are going to know it much easier than you’re going to learn the new system-
+
+0:25:42.7 **Adam Garrett-Harris** Yeah.
+
+0:25:43.4 **Jen Luker** Of triangles and circles.
+
+0:25:45.6 **Adam Garrett-Harris** Yeah, you would just have to compare 2 people trying to learn it, or one person trying to learn one and then try to learn the other and then see which one they learn faster, or something like that. I do think some things are easier to learn than others.
+
+0:26:00.1 **Jen Luker** Yeah. I’m not against any new technologies that would allow us to interact on a more common level, I think that those would be very awesome. I think that it can be prohibitive to tell someone who is blind and has been using braille that their language is too difficult to learn.
+
+0:26:26.4 **Adam Garrett-Harris** Oh, yeah. No.
+
+0:26:27.0 **Jen Luker** And so in that case, we’re coming up with our own because it’s easier for us. So, I mean some of that, it’s still accessibility related. I mean at that point you’re just telling them that they’re not important enough to learn their language to be able to interact with them in a way that they know.
+
+0:26:46.7 **Adam Garrett-Harris** Right. Yeah. Yeah, I think it seems like a really cool, it’s called ELIA.
+
+0:26:54.7 **Jen Luker** I would definitely like to see it.
+
+0:26:57.0 **Adam Garrett-Harris** It seems like a good alternative, not that we have to force people who use braille to switch. (laughs)
+
+0:27:02.9 **Jen Luker** (laughs) No, but it would be, it’s still interesting, it’s still a cool idea. I’d like to see it.
+
+0:27:10.6 **Adam Garrett-Harris** Cool. So, at this point I’m kind of out of questions.
+
+0:27:15.1 **Jen Luker** (laughing)
+
+0:27:16.7 **Adam Garrett-Harris** What else would you like to talk about.
+
+0:27:18.9 **Jen Luker** I think I’m going to go on kind of a fun monologue here.
+
+0:27:25.9 **Adam Garrett-Harris** Okay.
+
+0:27:27.0 **Jen Luker** Something that I’ve been really kind of passionate about lately and has been pretty much integrated in most of my talks lately is the issues that we have with beginning our accessibility journey, and it feels that a lot of the times we’ll dabble as developers in different languages, or different tools, but unless we actually need to use them for a job, or for a major project, we don’t dive too deeply into them. So, when it comes to accessibility, that means that we are looking to convince our companies to utilize those technologies as well. Some of the complaints against using them is that, “Well, you know, it takes a lot of time” or, “We don't really know where to get started” or, “There’s just too much and we can’t deal with it right now when we have all of these other features that are client facing and financially profitable; where accessibility seems like a whole lot of tech debt that doesn’t bring in any money.” And when you’re talking to a person you can generate that empathy and you can say it’s not just for people that have permanent disabilities, it’s for you. It’s for you when you’re in that noisy bar, it’s for you when you are holding that baby, it’s for you when you have had your eyes dilated after, you know, a doctor’s exam. You know, it’s for you if you’ve broken your arm, it’s not for other people, it’s for you and it’s for your family. But when you're talking about a business and you’re talking about the financial sides it can be really difficult to generate that empathy, because a business isn’t a feeling thing. So, how do you convince the business that accessibility is actually worthwhile?
+
+0:29:19.4 **Adam Garrett-Harris** Hmm.
+
+0:29:19.3 **Jen Luker** And this is where I pull out statistics, because businesses understand numbers, and both the World Health Organization, and the United States Census says approximately 1 in 5 people, it’s about 19%, have some sort of permanent disability, and that does not take into account anything that’s temporary, or circumstantial. That’s just permanent disabilities. So, say for a moment, that you do have all of the accessibility features available, or at least, you’ve made it good enough that a lot of the accessibility conditions are covered. That means that your website is now accessible to 19-20% more people than you had before. If this is the type of website that generates revenue through their website, you’re looking at possibly up to 20% more revenue, just by incorporating accessibility features, you know? When was the last time that you set up software that added 20% to your revenue? If you have a $10 Million company, that makes it instantly a $12 Million company.
+
+0:30:45.6 **Adam Garrett-Harris** Hmm.
+
+0:30:46.5 **Jen Luker** So, that’s a lot of money. And then-
+
+0:30:49.9 **Adam Garrett-Harris** Yeah.
+
+0:30:50.9 **Jen Luker** You need to keep in mind that it’s not just the permanent disabilities, or even the temporary ones, or even the circumstantial ones. By making your website easier to use for people that require assistive technologies, you’re actually making it easier for everyone to use. So, a quote that I really loved, that I don’t have in front of me now, but it says something along the lines of “We have wheelchair ramps in front of our libraries, and these ramps are not just good for those that have wheelchairs, they’re also good for the parents with a stroller, the teenager riding with his bike, and the delivery driver with a dolly.” So, these accessibility features that you’ve added have, in fact, improved and increased access to the library by installing something that was an assistive technology. Same thing goes for the websites, by making them easier for people to use, making them clearer to navigate, being more clean and concise when you’re talking about text on the website, you’re making it easier for everyone to use at that point, under any circumstance.
+
+0:32:05.0 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:32:06.0 **Jen Luker** So, then you’re looking at adding even more revenue based on the fact that fewer people will get frustrated, more people will stay on the pipeline. So, when you’re talking about  numbers, and you’re talking about revenue, and you’re talking about a business, that is 20%, maybe 30%. That’s a lot more money than you’d make off of adding that extra little feature that you could do with the same amount of time.
+
+0:32:34.6 **Adam Garrett-Harris** Yeah, or switching to new framework.
+
+0:32:37.5 **Jen Luker** Mm-hmm (affirmative).
+
+0:32:40.4 **Adam Garrett-Harris** Yeah, I mean, sometimes I try to use a website with a keyboard just because I prefer a keyboard.
+
+0:32:48.5 **Jen Luker** Mm-hmm (affirmative).
+
+0:32:49.3 **Adam Garrett-Harris** And I’ve just pretty much given up on trying to use keyboards on websites except for a few, like I know shortcuts. There’s some shortcuts in Gmail that I like, but yeah. It’s just most… I’ve just learned most websites don’t work well with a keyboard so I can’t do that.
+
+0:33:06.8 **Jen Luker** And that is sad. That is something that we should actually be able to do, simple keyboard navigation. There’s so many more uses for keyboard navigation than just accessibility features.
+
+0:33:22.3 **Adam Garrett-Harris** Yeah, so how should normal keyboard navigation work, screen readers aside, on a website? Like how would you expect that to work?
+
+0:33:34.6 **Jen Luker** That’s a complicated question. Are you talking about…
+
+0:33:39.3 **Adam Garrett-Harris** I’m assuming like, you would hit tab-
+
+0:33:43.3 **Jen Luker** Ah.
+
+0:33:44.1 **Adam Garrett-Harris** To go around the page and like, hit enter on links or something like that.
+
+0:33:49.6 **Jen Luker** Well, you have tab which moves you forward, you have shift+tab that moves you backward. Esc usually closes things. Enter+Space usually enter them.
+
+0:33:59.0 **Adam Garrett-Harris** Okay.
+
+0:34:00.3 **Jen Luker** You have… There’s a whole host of keyboard shortcuts that allow you to do certain things. Additional features that would be nice is if you add shortcut links that take you from the beginning of the navigation straight down to the content so you can skip your entire navbar altogether.
+
+0:34:22.4 **Adam Garrett-Harris** So, that would be like a hidden item in the menu? That you could go to.
+
+0:34:26.9 **Jen Luker** Yeah, that you only can access through a keyboard or screen reader navigation.
+
+0:34:31.8 **Adam Garrett-Harris** And then, so if you get to it through the keyboard would it show up visibly at that point?
+
+0:34:36.1 **Jen Luker** Not necessarily, it depends on where it’s positioned.
+
+0:34:39.5 **Adam Garrett-Harris** Okay, so if you’re tabbing through the menu and you get to that one, you just may not know it’s selected if you’re just looking at the site, and then hit tab again and then it’ll go somewhere else?
+
+0:34:51.9 **Jen Luker** Mm-hmm (affirmative). It would go to the-
+
+0:34:53.0 **Adam Garrett-Harris** Okay.
+
+0:34:53.0 **Jen Luker** Next item on the list.
+
+0:34:55.2 **Adam Garrett-Harris** Okay. Yeah, so, okay, so Space+Enter, that would work on links and buttons and…
+
+0:35:00.7 **Jen Luker** Mm-hmm (affirmative).
+
+0:35:03.5 **Adam Garrett-Harris** Drop down menus and that kind of thing.
+
+0:35:05.3 **Jen Luker** Which are just a collection of links and buttons. ‘Cause you’re not using-
+
+0:35:08.4 **Adam Garrett-Harris** Yep.
+
+0:35:08.8 **Jen Luker** Divs for these things, unh-uh (negative).
+
+0:35:12.1 **Adam Garrett-Harris** If you’re inside of a submenu and you’re tabbing through, do you stay in that submenu or when you get to the end would you go to the next item?
+
+0:35:18.7 **Jen Luker** That depends on your particular use case, there’s an entire collection on the WAI-ARIA website of recommended ways of utilizing the website, and I’ll give you that link after this.
+
+0:35:34.6 **Adam Garrett-Harris** Okay.
+
+0:35:36.6 **Jen Luker** But, it does give you some guidelines. Now, those guidelines aren’t always exact, but they do give you a lot of options and they give you code examples that allow you to at least derive your own ideal interaction from that.
+
+0:35:56.2 **Adam Garrett-Harris** I’m guessing a lot of this is built in, right? If you’re using native components and things.
+
+0:36:03.2 **Jen Luker** Well, if you’re using native components then we’re talking basic HTML, then there’s a lot of interactivity built into the basic HTML, yes. However, it depends on how you combine that HTML, and the JavaScript, and the CSS that allows you to really determine whether that’s going to be an accessible element. So, we don’t have an inherently built navigation system within HTML alone. There is no menu element which means we’re going to have to build it ourselves.
+
+0:36:34.8 **Adam Garrett-Harris** Right.
+
+0:36:36.2 **Jen Luker** And with that, we’re also looking at incorporating CSS, we’re looking at tabindexes, and is it hidden? Is it expanded? You know, there's a lot to take into account when you’re looking and navigating through the website. For instance, if you’re going through a menu with submenus, do you want to tab through the main menu items and then open them and go into the submenu just by tabbing? Do you want to have to select it and click on it? Or hit enter or space to open it before you can tab into it?
+
+0:37:06.1 **Adam Garrett-Harris** Hmm.
+
+0:37:06.7 **Jen Luker** Do you want to tab to the next item when you hit? Or do you want to restart over? Or do you just want to do nothing and just hit the end? And so-
+
+0:37:12.5 **Adam Garrett-Harris** And how do you let the user know that it has submenus within it?
+
+0:37:17.1 **Jen Luker** Exactly. And that comes down to ARIA roles.
+
+0:37:21.4 **Adam Garrett-Harris** Okay.
+
+0:37:21.6 **Jen Luker** So, there are.... ARIA expanded is one, it’s a true or false value. So, if you get to one that says “ARIA Expanded False” the screen reader reads it in a particular way and lets you know that this is an item that can be expanded, and whether it is expanded already.
+
+0:37:39.9 **Adam Garrett-Harris** Oh, okay.
+
+0:37:42.8 **Jen Luker** You know, so-
+
+0:37:43.2 **Adam Garrett-Harris** So, go ahead.
+
+0:37:45.0 **Jen Luker** So, there’s just a lot of ARIA rules that you can use, and though the first rule of ARIA is we don’t use ARIA, we still need it when it comes time to utilize a bunch of HTML elements together that aren’t necessarily built into the native format.
+
+0:38:05.3 **Adam Garrett-Harris** So, you try not to use it unless you need to?
+
+0:38:09.6 **Jen Luker** It’s almost a smell, if you have to use ARIA, make sure that you really should be using it before you use it. So, for instance, if you need ARIA to tell your div that it’s a button, maybe you should just use a button. Why are using a div for that? Whereas-
+
+0:38:25.7 **Adam Garrett-Harris** Can you explain what ARIA means?
+
+0:38:28.7 **Jen Luker** Ooh, ARIA. Oh goodness. You’re going to ask me that, aren’t you?
+
+0:38:33.1  **Adam Garrett-Harris** Yes, I am. ‘Cause I’ve heard it all the time and I’ve never even asked, “What does that mean?”
+
+0:38:39.2 **Jen Luker** You are going to make me look it up. Goodness, ‘cause it does stand for something. Ah, there it is. So, ARIA is an Accessible Rich Internet Applications (ARIA).
+
+0:38:54.9 **Adam Garrett-Harris** Okay.
+
+0:38:54.9 **Jen Luker** It “is a set of attributes that define ways to make Web content and Web applications (especially those developed with Ajax, JavaScript and more recent web technologies like Bootstrap) more accessible to people with disabilities.” So, this is straight off of the MDN Web Docs.
+
+0:39:12.7 **Adam Garrett-Harris** And so, do all of these attributes have ARIA in the name? Or…
+
+0:39:17.4 **Jen Luker** Many of them do, but not all of them.
+
+0:39:19.3 **Adam Garrett-Harris** Okay.
+
+0:39:19.7 **Jen Luker** There’s a role, ARIA-
+
+0:39:20.2 **Adam Garrett-Harris** So, is tabindex one of them?
+
+0:39:22.8 **Jen Luker** No, tabindex is just an element that you’d add to a button or a link. That would-
+
+0:39:27.5 **Adam Garrett-Harris** Okay.
+
+0:39:28.0 **Jen Luker** Tell the keyboard where to tab in which order.
+
+0:39:31.8 **Adam Garrett-Harris** ‘Cause I’ve heard that’s kind of a code smell, too. You shouldn’t, you should rely more on the order that they’re in the document and not try to change the tabindex too much.
+
+0:39:42.5 **Jen Luker** True, however if you opened up a submenu you may need a tabindex so that it skips those submenu items when you’re not looking at them directly.
+
+0:39:54.3 **Adam Garrett-Harris** Oh, okay.
+
+0:39:55.3 **Jen Luker** So, in that case, you’ll have a tabindex of -1 on those items until they open.
+
+0:40:03.3 **Adam Garrett-Harris** And -1 just…
+
+0:40:04.4 **Jen Luker** Says skip.
+
+0:40:05.8 **Adam Garrett-Harris** Skips it, okay. Yeah, so -1 makes a lot of sense, but if you’re putting positive numbers on there then that can get…
+
+0:40:14.0 **Jen Luker** It can-
+
+0:40:15.4 **Adam Garrett-Harris** Complicated, hard to maintain.
+
+0:40:16.8 **Jen Luker** Absolutely, and in that case you really need to rely on that layout. That was something that I found recently. There was a website that when the website was in a desktop view it had the content in one order, but when you reduced it down to a mobile view the content was rearranged and it read it in a completely different order.
+
+0:40:44.0 **Adam Garrett-Harris** Hmm.
+
+0:40:44.7 **Jen Luker** And the tabindexes changed accordingly, but it made it much more difficult to navigate based on those 2 different formats. So, if you went from your phone to your computer, or vice versa from your computer to your phone, navigation was completely different.
+
+0:40:59.8 **Adam Garrett-Harris** Hmm. Or if you-
+
+0:41:00.0 **Jen Luker** Layout was different.
+
+0:41:00.4 **Adam Garrett-Harris** Resized your window, even, probably.
+
+0:41:02.7 **Jen Luker** Yeah, but you’ll often hear people argue, “Well, why would someone who’s blind resize their window?” (laughs)
+
+0:41:08.9 **Adam Garrett-Harris** (laughs) But they’re not necessarily blind, right?
+
+0:41:13.4 **Jen Luker** Correct.
+
+0:41:14.2 **Adam Garrett-Harris** They may just not see as well.
+
+0:41:16.7 **Jen Luker** Exactly, and in fact, they be making it larger so they can see better.
+
+0:41:20.9 **Adam Garrett-Harris** Oh, right! So, they’re just increasing the font and that kind of makes it, everything on the page shift around? Resize?
+
+0:41:26.9 **Jen Luker** Well, they might make the screen itself bigger, but then yes. The font itself can change as well.
+
+0:41:33.0 **Adam Garrett-Harris** Gotcha. What about websites where you can hit a question mark (?), like on YouTube or Gmail you can hit question mark (?) and then it brings up a whole list of shortcuts.
+
+0:41:48.0 **Jen Luker** Isn’t that nice?
+
+0:41:49.6 **Adam Garrett-Harris** Do you… It’s nice, I don’t know if it works well with a screen reader.
+
+0:41:54.1 **Jen Luker** That depends on where you focus. I mean, it is yet another shortcut that you have available to you, so you press the question mark and then you've got focus placed in that location so that it can read.
+
+0:42:06.2 **Adam Garrett-Harris** Okay. How do you place focus?
+
+0:42:09.8 **Jen Luker** Usually through JavaScript.
+
+0:42:13.1 **Adam Garrett-Harris** Okay. What is that? How do you do that exactly? I’m not sure what…
+
+0:42:17.0 **Jen Luker** It should be an element.focus method.
+
+0:42:20.3 **Adam Garrett-Harris** Okay, ‘cause I’m used to elements like inputs and buttons having focus, but not necessarily a div or a popup or something.
+
+0:42:30.2 **Jen Luker** Oh, you can absolutely move focus from a div to a div in a popup.
+
+0:42:35.6 **Adam Garrett-Harris** Oh, nice. So that just, that wouldn’t do anything if you’re not using a screen reader, right? Well, I guess it would if you’re navigating with your keyboard.
+
+0:42:48.0 **Jen Luker** Right.
+
+0:42:49.0 **Adam Garrett-Harris** Okay, these are things I don’t think about, this is good to know.
+
+0:42:52.3 **Jen Luker** (laughs) Lot to think about, lot to think about, and beyond that there are often times conflicting information. For instance, if you are working with an autistic person, or a person with autism, then you are wanting to make the contrast of text lower, but if you’re dealing with someone with visual disabilities you’re going to want to increase that contrast.
+
+0:43:21.9 **Adam Garrett-Harris** Whoa.
+
+0:43:21.9 **Jen Luker** So, the question then becomes how do you cater to both? And I know that some tools are starting to get built into browsers themselves. I believe Firefox is actually working on the ability to increase and decrease contrast built into the browser, like we can zoom.
+
+0:43:45.6 **Adam Garrett-Harris** Hmm.
+
+0:43:44.4 **Jen Luker** It would be interesting to observe that and see how that develops over time, to see how those tools start adapting to that contrast and accessibility requirements.
+
+0:44:01.7 **Adam Garrett-Harris** Yeah, and it would be nice if you could, and I think macOS might be working on this, but set a dark mode on your computer or on your browser and then just websites would know automatically to be in dark mode or light mode.
+
+0:44:17.0 **Jen Luker** Mm-hmm (affirmative).
+
+0:44:19.9 **Adam Garrett-Harris** Do you know if they’re working on that? Or…
+
+0:44:22.1 **Jen Luker** I don’t know. I’m…
+
+0:44:25.0 **Adam Garrett-Harris** Okay.
+
+0:44:25.1 **Jen Luker** That gets a little bit more complicated in that you’re having to pass more information into a browser.
+
+0:44:30.9 **Adam Garrett-Harris** Right.
+
+0:44:32.3 **Jen Luker** The problem in like, the reason why you can’t identify screen readers when you’re in a browser, or whether someone is using a screen reader is because it’s a privacy invasion.
+
+0:44:43.5 **Adam Garrett-Harris** Oh, yeah.
+
+0:44:43.5 **Jen Luker** And when you’re dealing with a screen reader, specifically in the U.S. you’re looking at HIPAA law violations. Often times the reason you’re using a screen reader is because of a medical condition and by sharing that definition or that information you’re actually sharing that they have a medical condition, which is against HIPAA.
+
+0:45:05.7 **Adam Garrett-Harris** Yeah. Interesting. So, I’m sure you’ve encountered some circumstantial stuff with when you’re knitting for instance.
+
+0:45:20.4 **Jen Luker** (laughs) Oh, yes. Having to let to go of my knitting so I can turn a page is always fun. (laughing)
+
+0:45:28.0 **Adam Garrett-Harris** (laughing) Do you have any personal stories about why accessibility is important to you?
+
+0:45:34.2 **Jen Luker** Ah, yes! So, one of the reasons that I care so much about it is because I was raised in a household where my mother was deaf and my sister, prior to her death, was deaf, blind, and in a wheelchair.
+
+0:45:54.7 **Adam Garrett-Harris** Hmm.
+
+0:45:55.8 **Jen Luker** So, I’ve had firsthand knowledge regarding how accessibility affects not just the person with the disability, but also the family of the person with the disability, everyone who’s with them. So, it may be simple to just step up on a curb, but then that leaves the one person in your family wandering around trying to find a ramp.
+
+0:46:17.9 **Adam Garrett-Harris** Hmm.
+
+0:46:19.0 **Jen Luker** Or, everyone laughing at a movie except one person is having difficulty hearing it and doesn’t understand what’s going on, and is constantly asking, “Well, what just happened? Why was that funny?” Interacts… You know what I mean? It’s the little things like that-
+
+0:46:32.9 **Adam Garrett-Harris** Yeah.
+
+0:46:34.8 **Jen Luker** That means that everyone has to stop, and we spend more time pausing a movie and trying to explain.
+
+0:46:39.8 **Adam Garrett-Harris** Is there anything at movie theaters to help deaf or hard of hearing people?
+
+0:46:48.8 **Jen Luker** Other than the fact that it’s very, very loud in a movie theater? I don’t think so.
+
+0:46:56.0 **Adam Garrett-Harris** Yeah, ‘cause I like to watch movies with the captions on just because then we can talk, we can ask questions.
+
+0:47:03.8 **Jen Luker** Mm-hmm (affirmative).
+
+0:47:04.6 **Adam Garrett-Harris** And I don’t miss anything, because I don’t have to hear it, I can see it.
+
+0:47:08.4 **Jen Luker** I like-
+
+0:47:09.0 **Adam Garrett-Harris** And sometimes that would be nice to have that at the theater, but it seems like it would be weird, not everyone wants that.
+
+0:47:18.0 **Jen Luker** That’s true. I like leaving it on because of the fact that movies so often go from very, very quiet to very, very loud. So, you turn it down for the loud parts and then you don’t hear it for the quiet parts, you have to go back, or vice versa.
+
+0:47:30.6 **Adam Garrett-Harris** Yeah.
+
+0:47:31.8 **Jen Luker** So, it can be nice-
+
+0:47:32.5 **Adam Garrett-Harris** Yeah, or sometimes people mumble, even in movies.
+
+0:47:35.4 **Jen Luker** Yes! So it can be nice to not have to go back and catch those things later. But it is more-
+
+0:47:41.9 **Adam Garrett-Harris** Yeah.
+
+0:47:43.9 **Jen Luker** More to think about. More beyond the web.
+
+0:47:47.8 **Adam Garrett-Harris** Where should be go to learn more?
+
+0:47:49.4 **Jen Luker** There are many places to learn more. You can absolutely check out the web accessibility on Mozilla’s developer page, you can check out the WAI-ARIA within W3, you can also go look at the deque tools that include everything from the aXe extensions to the axe-core automated testing methods. Mostly, just look. Search. Think about it. Talk to people. Ask questions, and you can always contact me on Twitter @KnitCodeMonkey and I would be more than happy to ask any questions or at least help direct you to people that can.
+
+0:48:33.2 **Adam Garrett-Harris** Cool, and we’ll have all those links in the show notes, as well as the transcript. I don’t always transcribe Web of Tomorrow, but I definitely want to transcribe this one. And you can follow BookBytes, uh, you CAN follow BookBytes!
+
+0:48:49.9 **Jen Luker** (laughing)
+
+0:48:49.9 **Adam Garrett-Harris** That’s the other podcast where you can hear both of us, and you can follow this show on Twitter @WebOfTomorrowFM So, thanks!
+
+0:48:57.3 **Jen Luker** Thank you.
+
+0:48:57.9 **Adam Garrett-Harris** And thanks for being on the show.
+
+0:49:00.1 **Jen Luker** My pleasure.
+
+(Exit music: Electric guitar)
