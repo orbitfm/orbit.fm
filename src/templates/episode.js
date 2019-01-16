@@ -200,9 +200,7 @@ export default ({ data }) => {
           {episode.hosts &&
             episode.hosts.map(host => (
               <li key={host.id}>
-                <Link to={`/people/${host.fields.slug}`}>
-                  <p>{host.name}</p>
-                </Link>
+                <Link to={`/people/${host.fields.slug}`}>{host.name}</Link>
               </li>
             ))}
         </ul>
