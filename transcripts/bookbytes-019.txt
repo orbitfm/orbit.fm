@@ -1,0 +1,511 @@
+﻿0:00:13.3 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. This week we’ve recently finished up “The Imposter’s Handbook: A CS Primer for Self-Taught Programmers” by Rob Conery, and he’s here this week and we’re going to talk to him about the book. So welcome to the show, Rob!
+
+0:00:30.0 **Rob Conery** Thank you for having me.
+
+0:00:30.0 **Adam Garrett-Harris** So tell us a little bit about yourself.
+
+0:00:34.5 **Rob Conery** Oh man, well, I have been working as a programmer and database administrator, writer, a whole bunch of stuff for the last… 25 years, I guess? I’m self-taught completely and I live here in Honolulu, Hawaii. I live with my family, my two daughters and my wife. And yeah, I try and write whenever I can. I currently work at Microsoft on the Azure team. I’m a cloud advocate. And I write on the weekends and currently I’m finishing up Volume 2 of “The Imposter’s Handbook”.
+
+0:01:07.3 **Adam Garrett-Harris** Okay, great. Is it going to be Volume 2 or Season 2?
+
+0:01:10.2 **Rob Conery** Season 2! I keep saying volume, but I’ve been convinced to call it seasons. Yeah, it’s Season 2.
+
+0:01:15.5 **Adam Garrett-Harris** Nice, yeah. I think it’s the first book I’ve heard of that is written in seasons.
+
+0:01:18.7 **Rob Conery** (laughs) That was my co-author, Scott Hanselman. That was his idea.
+
+0:01:22.8 **Adam Garrett-Harris** Okay, cool.  So how is it in Hawaii?
+
+0:01:25.7 **Rob Conery** Right now it’s loud. (laughs)
+
+0:01:27.9 **Adam Garrett-Harris** (laughs)
+
+0:01:29.0 **Jason Staten** (laughs)
+
+0:01:29.1 **Rob Conery** I’m in a-
+
+0:01:29.2 **Jen Luker** (laughs)
+
+0:01:30.5 **Rob Conery**  I’m in a warehouse that has been converted to a co-work space, it’s a little bit loud, but no, generally it’s nice. We, it’s really muggy weather today and I have to say it’s nice and warm and I love it.
+
+0:01:42.8 **Adam Garrett-Harris** Great.
+
+0:01:43.1 **Jen Luker** Yeah, no jealousy at all.
+
+0:01:45.0 **Rob Conery** (laughs) Sorry.
+
+0:01:47.1 **Jason Staten** So, Rob, in writing “The Imposter's Handbook” do you have any person experience with Imposter Syndrome?
+
+0:01:56.7 **Rob Conery** Oh my gosh, yes! And that’s why I wrote it. I mean, I… I’m really opinionated when it comes to reading a book or watching a video that someone’s put together and I hate the posturing, and that’s the best word that I can come up. That kind of, “Here’s what I learned to do.” And it’s kind of this like, “I’m going to assume the role of the expert.”
+
+0:02:19.1 And the parts that I cherish are when the author kind of drops into conversational mode where they become real. Like, “Oh my gosh this one time, and I’ll tell you a story…” You know?
+
+0:02:29.4 And I would gravitate towards that. So I found myself looking for authors that did that and I forgot who I was reading, I think it was “The Golden Braid: Gödel, Escher, Bach” [Gödel, Escher, Bach: An Eternal Golden Braid], I don’t know if you’ve ever read that. It’s an astounding book and the author’s voice is so clear throughout and I was like, “I want this, but I want this for just the basic computer science stuff that I don’t know.” Like, you know?
+
+0:02:52.9 I always come back to Big-O and people talk about Big-O or people talk about complexity theory and NP-hard problems, and I don’t know what those are! And I thought, “I wish I could find that book!”
+
+0:03:03.6 And I was talking to a friend and they said, “Well jeez, Rob. You know, you’ve been around in this industry long enough, you know how to write, why don’t you just write it?” (laughs)
+
+0:03:10.5 **Jason Staten** (laughs)
+
+0:03:10.4 **Rob Conery** I’m like, “But I don’t know it!-
+
+0:03:11.7 **Adam Garrett-Harris** Yeah!
+
+0:03:12.3 **Rob Conery** -”That’s the thing!”
+
+0:03:12.7 And they said, “All the better! You could learn it as you go!” And so I did.
+
+0:03:15.7 **Adam Garrett-Harris** Cool. So you said this book began as a series of tasks in Wunderlist? So what were those tasks and how exactly did that turn into a book?
+
+0:03:26.2 **Rob Conery** I keep a weird, not- I guess it’s not that weird, but my schedule is I start work around 7:00 in the morning. I take my kid to school and then I come back and I just jump right at it. And I stop around 11:30-12:00 and then I have about a 2 ½ hour break in the afternoon and I just, I read stuff, I go for walks, sometimes I go in the water, and then I’m back at it from 3:00 until about 7:00, or 6:00 at night depending. The reason I have that split schedule is because my brain just kind of stops working at around noon and what I do instead is I’ll go and I’ll just, I’ll watch something that-
+
+0:04:01.1 For some reason, to me, learning something and then doing something are two totally different things. So what I did is I created this Wunderlist of things that I wanted to learn in the afternoon and as I started researching these topics I realized that not that many people knew what they were talking about (laughs). You could just kind of tell, you know? You guys know this from reading these tech books, right? You just know when the author’s making stuff up.
+
+0:04:24.1 And so I was like, “This is… I don’t know.” I just started jotting down these notes and I kind of formalized it all and I thought, “Well you know, this would actually make a really good blog post series.” Because when you start writing a blog post about these things you’re held to a higher level, based on how willing you are to be wrong. There’s a lot of people out there who just write a blog post and say, “I don’t know if this is right or not. Whatever, here you go. Post!”
+
+0:04:47.0 And for me, you know, I try and take it one step higher. So for me, a post is a more formalized way to learn something and I started writing a few posts and I thought, “These topics are way too broad.” And not only that, I’m kind of just like, saying, “Well, I don’t know about this one part so… I’ll figure that out later.” That’s just not learning something fully.
+
+0:05:04.2 I forgot the exact topic that I was getting into at the time but I just thought, “You know what? I’m going to approach this as if someone has asked me to research it fully for, like, a book.” And then that’s when the light bulb just went off. ‘Cause I was talking to friends about researching all this and I was like, “You know what? If I’m going to do it to this level I can just become an investigative reporter.” And so that’s kind of what I did.
+
+0:05:24.0 **Adam Garrett-Harris** Cool.
+
+0:05:24.7 **Jason Staten** So saying that a blog post is kind of formalizing something, or you take a position of authority, I mean, I feel like with a book that’s stepping it up even one more level. And I know, specifically, you wrote about Joel Spolsky being wrong about NP-complete. After seeing that situation and writing a book about it, that just adds to the intimidation level for me. Like, I certainly feel like it would.
+
+0:05:54.0 **Rob Conery** For some reason I have a thing where I don’t mind making a fool out of myself in front of people. In fact, a lot of people have told me that that’s something that I seek out and I think there’s truth to that. And I think it’s because it’s… it is a practice in facing your fears, you know? I just, what did I watch last night? I watched… this wonderful movie called “Elsie”-
+
+0:06:16.8 No, I’m sorry! It was called “Eighth Grade” and it was a movie about- Oh Elsie was the star’s name! Anyway. She goes through this whole thing where she faces her fears and is just such a wonderful thing to watch. It’s super cringey and so, as my daughter would say, and I love that.
+
+0:06:33.4 And so it was actually Jeff Atwood that stumbled on the NP thing, but watching his reaction to it and how he’d kind of faced up to it I thought was really admirable. But then it kind of just fell off from there. Like, ‘cause all these people stood up and said, “Well actually, NP-complete has a very defined meaning.” And they were right!
+
+0:06:50.8 And so Jeff was like, kind of shrugged and, “Whatever. It’s a blog post, get over it.” And that was kind of his approach to this. And yeah, it’s intimidating but for me I was like, what is this? What caused these people to get so upset and there’s something here. And the thing that really got me was what made them so excited about this? You know? ‘Cause it obviously means something to them, but what does it mean? And so then that kind of just went from there.
+
+0:07:17.3 **Jason Staten** Hmm.
+
+0:07:17.9 **Rob Conery** Are you going to ask me what NP-complete means?
+
+0:07:19.6 **Rob Conery & Adam Garrett-Harris & Jason Staten** (laughing)
+
+0:07:21.2 **Adam Garrett-Harris** No.
+
+0:07:22.6 **Jen Luker** Nah, not this time.
+
+0:07:23.8 **Jason Staten** (laughs)
+
+0:07:23.8 **Jen Luker** But I am going to ask you what section was the hardest to research?
+
+0:07:28.4 **Rob Conery** Ah, complexity theory. I rewrote that one, I think the last count was 8 times. I’ll never forget, my brother’s a computer science professor and I would go to his house, you know, just to go see him. He lived, when I lived back in Seattle he was 5 hours away in Eugene, and I would sit with him and, oh my gosh, just repeatedly he would just say, “No. No. No!”
+
+0:07:52.0 He would say, “Okay, so we have NP-hard, we have NP-complete, we have…” I would repeat back to him and he would just like, “No! No! No!”
+
+0:07:58.3 **ALL** (laughing)
+
+0:07:58.9 **Rob Conery** So it, this happened about, you know, every other month, you know? ‘Cause I’d go down to visit my mom and see him again and I’d update him on the section and he’d read it over and he’d just throw it at me, literally, you know? Just, throw it at me. (laughs)
+
+0:08:11.3 **Adam Garrett-Harris** (laughs)
+
+0:08:11.9 **Rob Conery** And so what I was trying to do was I was trying to take this incredibly complex topic and boil it down to something that I felt people could understand, and then cat drawings, you know? And then finally locked onto something and he kind of nodded and said, “Okay, I think… I think you got it there.” So that was the hardest.
+
+0:08:30.4 **Adam Garrett-Harris** Hmm.
+
+0:08:31.0 **Jen Luker** Cat drawings are always appreciated.
+
+0:08:33.3 **Rob Conery** (laughs) That’s what I figured.
+
+0:08:34.9 **Adam Garrett-Harris** So you said you kind of want to expose your thought process and not pose as an expert, but at the same time take this incredibly complex subject and boil it down to something simple. What is the goal of the book? What do you hope people get out of it? And there may be multiple goals.
+
+0:08:52.1 **Rob Conery** I mean the goal, I suppose, is to feel the power of knowledge and how that can transform you. For instance, I’m starting my second stint at Microsoft now and I am still intimidated as heck by the people that are in the room, you know? Just the extreme knowledge that everybody has, right?
+
+0:09:09.6 The first time I was there I just would never open my mouth. I mean, just the people that were in the room… Wow. And you know, I remember sitting across from Scott Gu and he’d ask me a question and I was like, “I don’t even know how to answer this guy.” (laughs) You know? Like, he’s one of the smartest people I’ve ever met. This time around I feel like I have a lot more grounding and you know, when people talk about certain things I can keep up with the conversation.
+
+0:09:31.6 In fact, a funny little anecdote: I was at a conference recently with one of the people that I consider one of the smartest people in the room, right? And then they were talking about complexity theory and this, the backpack problem. And they made a comment about how it’s, you know, not solvable and I kind of said, “Uh, you mean solvable in polynomial time.” (laughs)
+
+0:09:51.1 **Jason Staten** (laughs)
+
+0:09:51.5 **Rob Conery** I kind of corrected them and they’re like, “Yes, that’s right.” And I, you know, of course everybody looks at me like, “Wow, check out Rob. Mr. Smarty Pants over there. But the point is, like, the feeling that you’re a part of something as opposed to being apart from it, if that makes sense, that’s what I hope the goal is. People can not feel isolated and I think that’s really destructive, that isolated feeling you get at work when you just feel like, you know, “I don’t know what I’m doing! And I don’t know, here you go. I don’t really know know what I’m doing.” And it’s a really destructive thing.
+
+0:10:25.1 **Jason Staten** I think for me one of the valuable pieces that I got out of the book was in the earlier chapters and the discussion about the history of computing because I recall going through University and learning about some of those topics really briefly but my whole focus was like trying to get some assignment done, like trying to get an XSLT transform done by the time that class started the next day. And so I really, like, glossed over those things and like, being able to go back and look at that history from like a perspective of 10 years later after school, like, you can really see like, where the influence still stands whether it be like punch cards and then now looking at, like, we still have 80 character limits in our terminals because of some of those things like that. And when you were digging at those sources of history, like, what inspired you to pick out, I guess some of the particular topics within the history of computing? Because obviously there are many things that are involved along that timeline.
+
+0:11:30.5 **Rob Conery** Oh man, that’s a great question. I actually, I had two tracks going when I was taking all my notes. So the first track was just all about machines and computation and that’s what I decided to go with because my main topics were computation and complexity theory and I wanted to lean into Big-O and algorithms and all that stuff. So there’s a natural arc there, as far as the story goes, but the other branch that I decided to wait until Volume 2, which is coming out soon, is information. Information theory and Claude Shannon who… So many people don’t know who Claude Shannon is. Do you guys know who Claude Shannon is?
+
+0:12:14.7 **Adam Garrett-Harris** No.
+
+0:12:15.8 **Jason Staten** Nope.
+
+0:12:16.6 **Rob Conery** Wow. It’s, it’s one of those things that once you read about this guy, (laughs) you just want to kick yourself. That what I, me, I did. So anyway, I can go off on that later if you want to, but…
+
+0:12:27.9 So I had this whole other track going where, you know, how do you turn information into binary? Into bits and bytes and how does it get translated by our programs? And I found that that just didn’t work into the first book but the history of it all, really, to me is so, so, so important! For so many reasons, right? ‘Cause it makes you realize that what we do today as everyone says, “standing on the shoulders of giants,” to use a massive cliche, but it’s true. And you realize like, what you’re doing is... is, I don’t know, pushing further the industry. It kind of gives you a different perspective as opposed to sitting down and slogging through like, forms over data or whatever you’re doing. In a lot of ways, you know, you’re participating in this great experiment of pushing this industry forward and I think if you know the history and where we’ve come over the last 80 years, or 100 years, it gives you that perspective.
+
+0:13:17.0 **Jason Staten** Mm-hmm (affirmative).
+
+0:13:17.6 **Jen Luker** Speaking of which I’m actually totally gonna shamelessly plug myself in that I just had a conversation with Michael Chan for the React podcast about the history of computing and how it leads back to punch cards being mimicking Jacquard Loom cards that were used in order to create patterns for clothing. And being the KnitCodeMonkey, this actually plays really heavily into my own textile history as well. So, you know, being able to go over some of that history was really fun to go over.
+
+0:13:52.3 I didn’t get the computer science degree growing up so a lot of the stuff that I knew from those chapters is stuff that I’d researched on my own because of my own sheer interest. So it was really cool seeing the things that I’d researched like, brought together into like, one major chapter to be able to tie all of those pieces together and bring them into the future.
+
+0:14:15.4 And one of the comments that, you know, we kind of came across, as far as that one podcast goes, is that, you know, the technologies that we identify and associate with something very small, if we take that step back we can take that history and we can take what we’ve learned from those and end up expanding it and applying it to a much larger swath of the… universe, essentially, and being able to do that allows us to interact with the world differently. And that’s something that's been really cool going through that book is the fact that the more I learn the more I find that I can apply that outside of not just development but also life.
+
+0:14:55.1 **Rob Conery** Well yeah, you know, get this. You’re gonna like this, I think. I hope.
+
+0:15:00.2 **Adam Garrett-Harris** (laughs)
+
+0:15:00.7 **Rob Conery** In the next season here of the book that I’m writing, as I mentioned I started researching information and I started from the, as they say, the very, very beginning. Source of logic, you know, all the ways from Aristotle, how do we get to binary and representing data in bits and bytes? But the one thing I just wanted to bring up because of what you said, is the story of George Boole, where we get Boolean. George Boole was a self-taught mathematician and incredibly, incredibly brilliant mind. And what he did was he translated Aristotle’s rules of logic into pure mathematics using representation of logic. And you th- we take for granted the idea of true/false today and what you can do with it, but he formalized the notion of AND, and OR, and XOR, and all those things. And he did this because he was, literally, an imposter. He-
+
+0:15:53.3 **Jen Luker** (laughs)
+
+0:15:53.7 **Rob Conery** No one was there to tell him, “This is the formal mathematicians’ route.” He just didn’t know, he was self-taught. But get this, his goal was that he wanted to mathematically understand the mind of God. (laughs)
+
+0:16:04.6 **Jason Staten** (laughs)
+
+0:16:04.6 **Rob Conery** So he sat down and he tried to logically propose how God’s mind and God’s work were translated into the world around him.
+
+0:16:14.9 One of his big things is trying to understand the Irish Potato Famine. He couldn’t understand why that would happen and he wanted to see if God was good or evil, or what. And so he laid out this massive logical proposition using ANDs, and ORs, and XORs, and this notation. And it’s an utterly astounding read. And it’s stayed parked in the realm of mathematics, it kind of just stayed parked for a while until Turing got ahold of it later on and a man by the name of Claude Shannon who looked at what Boole had done and said, “You know what? We can take George Boole’s work in the area of symbolic mathematics of true and false, we can actually make circuits out of this. And we can combine these circuits to actually make decisions for us.”
+
+0:17:00.6 That, to me, is one of the greatest untold stories of computer science. I mean, it’s told, I shouldn’t say that. But it’s one of the least recognized. Because everybody looks at Turing as, “Oh, the father of the digital computer.” But no one really recognizes Claude Shannon as the one direct source of the entire information age. It’s an absolutely wonderful story what that man has done. And that’s just one thing that he did! There’s so much more but I could take up hours of your podcast by telling you all about it.
+
+0:17:29.7 **Jason Staten** (laughs) You’re getting me all excited for Season 2. I gotta go jump on that preorder. I did have some questions, like, related to both, like, the process on this and, like, how it’s going to change with Season 2, as well. And, like, one thing in particular was with creating the sketches in it, are those something that you created along the way? You did, like, post-authoring? Like the text of it? Or right in-line? Like, what was your strategy on that front?
+
+0:17:59.8 **Rob Conery** I’m a huge fan of XKCD and one of the things I love is infographics and the way- Randall Munroe! That’s his name, I was grasping for it. The way he, he’ll condense these amazing ideas into these panels and make a joke out of it. And I think that’s pretty… that’s pretty gifted. Anyway, so what I tried to do is when I was coming up with these analogies I thought, “Well let’s see if we can draw, use a different part of my brain.” So I did it at the same time. If I don’t try and draw something when I’m writing about it I’ll lose whatever little bit of fire’s in there, in my head, creative fire if you will. Or “the muse will have left”, as they say. So, I would, I’ll write it, I’ll write it right in-line.
+
+0:18:45.7 **Adam Garrett-Harris** Yeah, have you read some of Randall Munroe's books? Like, “Thing Explainer”?
+
+0:18:50.2 **Rob Conery** Mm-hmm (affirmative).  My daughter loves that book.
+
+0:18:52.3 **Adam Garrett-Harris** Yeah. It’s incredible. Explaining these super complicated things with the 1,000 most common English words. And so, in a way that’s what your book is doing; although you’re not limiting your vocabulary.
+
+0:19:04.3 **Rob Conery** Yeah. Yeah, my brain- So, I actually brought up “Thing Explainer” in the Season 2 book, again because of Claude Shannon, and it has to do with entropy and word choice and information and all this stuff. And not a lot of people realize the feat that Randall Munroe pulled off with that because when you talk about the 1,000 most common words you’re also talking about the 1,000 words that have least information.
+
+0:19:30.2 **Adam Garrett-Harris** (laughs)
+
+0:19:30.9 **Rob Conery** When you think about entropy, entropy is the gauge of surprise or how much information a set of binary bytes might have, whatever message you’re sending. So Randall chose to use (laughs) these words. And the only way he could do this, and this is such a study in information theory, the only way he could do this was to use drawings. And so I just loved that he underscored his drawings with words that were approachable. And anyway, I’m going off again on Season 2.
+
+0:19:57.7 **Jason Staten** (laughs)
+
+0:19:58.0 **Rob Conery** But it’s, to me I just love that and I thought about it a lot when I was doing my drawings. I thought, you know, it’s just interesting that I was struggling to find words and I used pictures.
+
+0:20:07.6 **Adam Garrett-Harris** Hmm. Well you might as well do a tangent on Claude Shannon since you mentioned them twice.
+
+0:20:13.9 **Rob Conery** (laughs)  Well, uh, it would be… It would be, ok-
+
+0:20:16.8 **Adam Garrett-Harris** Or is that a spoiler?
+
+0:20:18.1 **Rob Conery** No, it’s not a spoiler at all.
+
+0:20:19.9 **Adam Garrett-Harris & Jen Luker ** (laughs)
+
+0:20:20.4 **Jason Staten** (laughs)
+
+0:20:20.4 **Rob Conery** There’s… I’ll tell you what. I don’t know if you guys take recommendations for your podcast but there’s a book called “A Mind at Play: How Claude Shannon Invented the Information Theory” or “... the Information Age.” Absolutely mind-blowing book. I listened to it on Audible during a drive and I just was transfixed by this man.
+
+0:20:38.6 So, basically, Claude Shannon did two things. He took the work of George Boole and he realized that you could make circuits electrically and up to that point circuits were done manually by using out, like, a switchboard. He worked at Bell Labs and he was trying to come up with a way to make a better phone switchboard so operators didn’t have to pull out plugs and plug things back in, and so he said, “You know what? We can do this with circuits and just carefully construct them. And you can do all kinds of things!” And then he was pulled in to work on mechanical computers during the war to calculate a list of trajectories and it was fascinating.
+
+0:21:15.0 These room-sized computers, that I mentioned in the first season of the book, these room-sized computers that would calculate these things over a span of days. And within 10 years they were completely obsoleted by Shannon’s digital computer. When you think about Turing and his bomb, right? And his “Christopher”, from the  movie. That only worked because of Shannon’s designs. In fact, Shannon and Turing were friends, not a lot of people know that.
+
+0:21:39.9 **Jason Staten** Hmm.
+
+0:21:41.8 **Rob Conery** It’s kind of interesting, all that whole thing. So that’s the first thing he did. The second thing he did, which is actually more transcendent, he kicked off the information age with one of his most amazing papers everywhere he talked about trying to send a message from one place to another, and described networking, and described how you could use binary to send a message from one place to another with no loss in fidelity of the message.
+
+0:22:05.9 **Adam Garrett-Harris** Hmm.
+
+0:22:06.4 **Rob Conery** He showed how to do error correction because at that time the only thing you could do was telegraph, and telegraph over wires has resistance, atmospheric interference, and all that kind of stuff. Well, Shannon said, “Well, if you send things in binary encoded in this way, you’ll actually reduce the errors to negligible and have greater fidelity.” And that just turned the entire everything upside down.
+
+0:22:26.5 So when I was kid, I remember this, when they replaced analog circuits with digital circuits and it took that long to do, but I remember all of the sudden vocal clarity was like, “Whoa!” Or maybe you’ll remember this from years ago when they did it with cell towers. Phones used to be analog and then all of the sudden they turned digital and the clarity went straight through the roof. This is all Claude Shannon. This is all from one paper. And it’s nuts how important this person is to who we are and what we do. I would say, you know, a lot of people have said he’s the Einstein of the digital revolution and they’re right! A lot of people have said he’s actually more important than Einstein.
+
+0:23:03.3 And the one reason that we don’t know about him, which is, well, the main reason a lot of people think we don't know about him, is because he just didn’t have an ego. He was a quiet man and he did not want to be bothered. (laughs)
+
+0:23:13.5 **Adam Garrett-Harris** (laughs)
+
+0:23:14.3 **Rob Conery** So he stayed to himself.
+
+0:23:15.3 **Jason Staten** (laughs)
+
+0:23:16.0 **Rob Conery** He’s like Willy Wonka.
+
+0:23:17.1 **Adam Garrett-Harris** Yeah.
+
+0:23:17.6 **Jason Staten** Talking about that binary encoding and being able to, like, losslessly transmit things. I am somewhat new at, I guess about a little over a year into have a ham radio license, and there is a big, big deal right now going on called FT8 where they are able to go and, like, you repetitively go and spew something like a digital message out and even in, like, a really noisy environment, like, that I live in I am able to have, like, a 20ft antenna and, like, reach places over in, like, Europe; in bad conditions. And I think in the past you’ve said that you had ham radio involvement, like, long ago? Or even, I don’t know what your state is today.
+
+0:24:04.5 **Rob Conery** Me? No, I’ve never done ham radio.
+
+0:24:06.5 **Jason Staten** Ah, must have been somebody else. But, it’s very much in line with that and there’s a big stir about it right now called FT8, so. If you’re looking something like, on that sort of topic definitely would recommend checking it out.
+
+0:24:18.6 **Rob Conery** Cool. Thank you.
+
+0:24:19.9 **Adam Garrett-Harris** All right well I’ve got some questions from Twitter.
+
+0:24:22.4 **Rob Conery** Mm-hmm (affirmative).
+
+0:24:23.5 **Adam Garrett-Harris** Heather Downing, @ Cora-line? Or Cora-lynn? [@quorralyne] said, “I-
+
+0:24:27.0 **Rob Conery** Yes!
+
+0:24:27.9 **Adam Garrett-Harris** “...find it” - Do you, do you know her?
+
+0:24:29.1 **Rob Conery** I know Heather, yes.
+
+0:24:30.2 **Adam Garrett-Harris** Okay! She said, “I find it excellent on so many levels. Regularly recommend it during my own ‘Imposter Syndrome’ talk at conferences. What I would ask is how do you know when you’ve learned enough to be valuable?”
+
+0:24:42.2 **Rob Conery** (laughs) That’s a good question, you know? How do you measure your own value? That’s a much deeper question, I think. If you can feel centered sitting in the chair that you’re in in a room and you feel like you can raise your voice and offer something and then back it up. Man, that’s the only measure that I have, personally.
+
+0:25:04.9 For an instance, right now I have slack window open with the people I’m working with at Microsoft and, you know, they’re talking about, you know, a bunch of stuff and I feel like I can wade right in there and do a, you know, “Out here, this is what I think.” Right? You know, and blast the channel with stuff. (laughs) And feel okay with that because I, you know, I feel like If questions were asked, I could answer them. It’s the only way I can even address this.
+
+0:25:30.2 I mean, it’s such a tough industry  and I think if you embrace- and this is, again, cliche, but if you embrace the notion of failure as a good teacher and that, you know, you surround yourself with people that catch you when you fail, and that they want you to try, that is a good place to be. And I think that’s when you can start measuring your value because as long as they’ll catch you, maybe  that’s the measure, you know? Being in place where people will catch you, that’s when you’re valuable.
+
+0:25:56.3 **Adam Garrett-Harris** Hmm. Let’s see if you know this person, also ‘cause this question may be kind of a joke, I’m not sure. It says, the name is “The Coin Must Flow” the user handle is @Dennis_A_Landi?
+
+0:26:06.9 **Rob Conery** Hmm, no.
+
+0:26:08.9 **Adam Garrett-Harris** Nope? Okay. Question is, “Who wrote it, really?”
+
+0:26:12.3 **Rob Conery** (laughs)
+
+0:26:12.6 **Adam Garrett-Harris** I don’t know… I don’t know, I don’t know what to do with that.
+
+0:26:14.7 **Rob Conery** “Who wrote it, really?” Well it was all me, you know? It’s funny because I page through it sometimes and I, and then you see all the chapters. It’s just like, “Whoa.” I mean-
+
+0:26:24.4 **Jason Staten** (laughs)
+
+0:26:25.0 **Rob Conery** [Inaudible 0:26:24.7] and separated from it enough over the last few months, you know? I used to go in there daily and tweak stuff and I don’t do that anymore. And uh, at first I’m like, “Dang, man! That is a lot, that is a lot of stuff you wrote.” (laughs) And then other times I just, then I get hauled through the memories of you know, 18 months. That’s what it took of writing and rewriting and rewriting and rewriting and rewriting, and it was all me.
+
+0:26:48.5 **Adam Garrett-Harris** Yeah, was that full time?
+
+0:26:50.2 **Rob Conery** Yes and no. I would take periods of you know, I would take breaks. I think, you know, the fact that I accidentally put it on presale really helped.
+
+0:27:00.0 **Jason Staten** (laughs)
+
+0:27:01.5 **Adam Garrett-Harris** (laughs)
+
+0:27:01.6 **Rob Conery** I met, I was on the skype call with my friend, Scott Hanselman, and I was telling him about it. I was actually asking him a question, you know, like what would you say about this? And he was looking through the PDF that I sent him and I said, “Well I put it on presale and just gonna kinda hover there to see what people think, quietly.” And unfortunately I said the word “quietly”-
+
+0:27:20.8 **Jason Staten** (laughs)
+
+0:27:21.3 **Rob Conery** Five seconds too late because he said, “Whoops, well it’s out there now!” And he’d tweeted it.
+
+0:27:26.1 **Adam Garrett-Harris** (laughs)
+
+0:27:27.2 **Jason Staten** (laughs)
+
+0:27:29.0 **Rob Conery** I’m, like, kind of catching my breath right now (laughs) because I’m remembering that moment where I almost threw up. I mean, I was like, seeing Twitter was going bonkers, my sales literally spiked and I’d never had that happen to me before, and they just kept on spiking and next thing I’m reading Marc Andreessen bought it, and Werner Vogels from Amazon bought it. I’m like, “Dude, what did you do to me?” (laughs)
+
+0:27:50.8 **Adam Garrett-Harris** (laughs)
+
+0:27:52.6 **Rob Conery** So, yeah. I mean it’s-
+
+0:27:53.9 **Adam Garrett-Harris** Ah, no pressure!
+
+0:27:55.3 **Rob Conery** Yeah! Good and bad. A lot of people were like, “This is not done.” I’m like, “Right, right, right! Right, right! It’s not done!” And a couple people were kind of… you know, a little jumpy about that, you know? And I tried to quickly say, you know, “Presale! Presale! Presale! As it says Presale!” And I probably should have worded it to be a little bit different but whatever.
+
+0:28:13.2 **Adam Garrett-Harris** Nice! Well you did it! (laughs)
+
+0:28:14.1 **Rob Conery** Mm-hmm (affirmative).  I did it. I’m still here! (laughs)
+
+0:28:18.5 **Adam Garrett-Harris** Another question from Twitter is from Robert Tables @DexterPointDexter [@DrPoindexter 0:28:22.1], “What if I’m not just a person with Imposter Syndrome and genuinely just suck at the thing I’m supposed to be good at?”
+
+0:28:33.3 **Rob Conery** (laughs)
+
+0:28:34.4 **Jason Staten** (laughs)
+
+0:28:34.5 **Rob Conery** Jeez. What if you’re just a bad programmer?
+
+0:28:37.8 **Jason Staten** (laughs)
+
+0:28:39.3 **Adam Garrett-Harris** (laughs)
+
+0:28:40.2 **Rob Conery** I don’t know. I mean, I think that’s… If that is a good self assessment and you feel good about that then sure, maybe a different line of work is good for you. I mean, I don’t know, I, I’ve talked, I have friends who constantly go around mumbling how crappy of programmer they are and it’s kind of just their MO. It’s their thing, they need that. They need to wear that like a…
+
+0:29:03.5 **Jason Staten** (laughs)
+
+0:29:03.5 **Rob Conery** Like a jacket or a badge, you know? And I don’t know, like, I’ve, now I’ll always say, I’ll put my arm around them and say, “If you’re looking for me to prop you up… (laughs) I’ve got you. But I’m not going to convince you you’re a good programmer. It’s just not what I’m going to do.”
+
+0:29:15.5 **Adam Garrett-Harris** (laughs)
+
+0:29:15.9 **Rob Conery** You know? ‘Cause Obviously you know you are, ‘cause you’re here at this conference, speaking. You know? I’m like… (laughs) So. I don’t know. There's a lot of people out there that kind of enjoy loathing, self-loathing. I’m not into that.
+
+0:29:27.8 **Adam Garrett-Harris** Yeah, that’s interesting. All right. That’s it for the Twitter questions.
+
+0:29:31.3 **Rob Conery** Cool.
+
+0:29:31.9 **Jason Staten** You’d talked about going in and making lots of tweaks all the time to the book and I know one of the things that you did was use GitHub as an errata, and how was that experience for you?
+
+0:29:45.8 **Rob Conery** It was really challenging especially in the beginning when that huge splash hit. I don’t want to step into a controversy but I’ll tell you about it just because the sake of controversy.
+
+0:29:57.5 **Jason Staten** (laughs)
+
+0:29:58.4 **Rob Conery** The Jeff Atwood quote I had to go in and tweak quickly, because Jeff’s quote- So for those who don’t know, there’s a quote in the beginning of the book that I centered the entire book around. It was a comment on Jeff Atwood’s blog about being disastrously wrong and Jeff had written a post about how do you know if a problem is NP-complete? And he used a quote to illustrate his point and his quote was from Chief Justice Somebody-or-other of the US Supreme Court. It had to do with pornography and smut and the Chief Justice said, “I can’t define it, but I know it when I see it.” Something along those lines. “I can’t define hardcore pornography but I know it when I see it.” Which is actually kind of funny but that became a legal definition for these things.
+
+0:30:41.8 So Jeff used it in the context of this. I, you know, the “don’t know what NP-complete is, but I know it when I see it.” So anyway, he had referenced hardcore pornography and then I had quite a few people flip out on me saying… When I say “quite a few” the numbers between 10 and 100, let’s put it that way. A few pinged me about that. “Do you really need to use the words ‘hardcore pornography’ in the foreword of your book?”
+
+0:31:05.4 **Jason Staten** (laughs)
+
+0:31:06.5 **Rob Conery** And I said, “That’s, that’s actually a Chief Justice of the United States that said that. And it’s a quote. It’s not even my words, it’s Jeff Atwood’s.” And one guy was just, oh, just up in arms, and swore at me! (laughs)
+
+0:31:19.4 **Jason Staten** (laughs)
+
+0:31:19.7 **Rob Conery** Little irony there. So there’s you know… You know, this is before the #MeToo movement and, but well in the middle of all of the… All the tech stuff surrounding gender roles and everything and I just thought, “You know, best to take it out. I don’t want to, you know, I just don’t want to kick a hornet’s nest.” So that was good because all of that took place on GitHub and there’s messages. They’re for everybody to see, they saw my reactions to it. So, I guess I enjoyed that. On, you know, a more positive end of things I had a lot of people, and when I say “negative” I only meant negative because a lot of people got upset. You know? I don’t mind taking that quote out. And the more positive side, wow. I had some people that just really assumed editorial roles in this. They would go through and, like, page numbers and everything. “You do this and do this. Do this, do this.” You know? That was great. I mean, I couldn’t believe how many people pitched in to help out.
+
+0:32:16.9 **Jason Staten** Do you think you would do the same for Season 2?
+
+0:32:20.7 **Rob Conery** I am. In fact the GitHub issue is up there right now. This time however, when I’m writing the book I’m not using what I’d used before. I’m using Word if you can believe it. And it just makes me laugh, I hate Word. (laughs)
+
+0:32:34.3 **Jason Staten** (laughs)
+
+0:32:34.8 **Rob Conery** And I’m using it to write a book! So, those two things go hand in hand. But I have to say it’s an incredible writing resource and I’m not saying that because I work at Microsoft (laughs).
+
+0:32:45.0 **Jason Staten** (laughs)
+
+0:32:45.3 **Rob Conery** ‘Cause this actually took place before I got the job. But the way it catches, it catches so many grammatical and spelling errors and I don’t have people assaulting my issues list with grammar and spelling which is very nice.
+
+0:32:58.1 **Adam Garrett-Harris** What did you use last time?
+
+0:32:59.8 **Rob Conery** Oh lo… (laughs) you know, I used about eight different things so I started out using Markdown and Middleman and I followed a format that I had used before in a project that the meteor, the guys that wrote MeteorJS get to know Meteor, or for, I forgot what it was called, but it was like a Meteor book and they did it all on Middleman and Markdown. I used that ‘til it just did not have what I needed it to have like figures and footnotes and whatnot.
+
+0:33:30.6 So I went from there into about 20 other things. I have a huge list. I went and I used Scribner, I used Word at one time, it was just everything I had tried to do just, just was horrid. And what I finally ended up doing was just pulling everything into Word, for the third time, letting the formatter just do what it wanted to do. ‘Cause that was a big thing for me was the visual format. And then pulling all of that text into Adobe InDesign and that was where I put the final touches on the layout. And I finally got parity, reasonable parity, between epub, PDF, and Mobi. And wow, was that hard.
+
+0:34:06.6**Adam Garrett-Harris** Hmm.
+
+0:34:07.3 **Rob Conery** And it’s ‘cause that’s the thing is InDesign is not a writer’s tool-
+
+0:34:10.1 **Adam Garrett-Harris** Right.
+
+0:34:11.1 **Rob Conery** It’s a book designer’s tool. Now Word is a writer’s tool, so, yeah.
+
+0:34:15.6 **Jason Staten** I know that having them align across a few different platforms is something that I’ve seen Zed Shaw complain about a handful of times with his books, so.
+
+0:34:25.7 **Rob Conery** And I know your readers, or your listeners, out there are going to be saying, you know, “Rob, have you tried-”
+
+Yes. Yes. I promise you, I’ve tried it.
+
+0:34:31.3 **Adam Garrett-Harris** (laughs)
+
+0:34:31.3 **Jason Staten** (laughs)
+
+0:34:31.9 **Rob Conery** I swear to you I’ve tried it. I’ve tried. You would not believe, I think it’s about 30 things, maybe? Anyway.
+
+0:34:37.2 **Adam Garrett-Harris** Yeah, yeah. I’m just always interested in what different authors use.
+
+0:34:40.7 **Rob Conery** Mm-hmm (affirmative). I tried to use Google Docs for this one. I started out, because I have an editor who I love, Dian Fay. Dian, I love you! She is, I mean she’s amazing. So I decided to write it and have her just kind of sit shotgun on the whole thing and help me out. What I realized, I mean she was so good. She would just jump in there and start tweaking things and I realized I couldn’t, I couldn’t like, lock in and go, you know? ‘Cause I was always kind of adjusting with her edits. So I was like, “Uh, I’m going to take this to Word and, like, just keep it here.” It was a much faster experience in Word. And the outlines, and everything in Word. It was just, so I went with that and I stayed there and that’s been the best choice, ever.
+
+0:35:22.1 **Adam Garrett-Harris** Nice. I think we wanted to jump into some other topics besides the book, as well. Jason, did you have some questions about “This Developer’s Life”?
+
+0:35:30.5 **Jason Staten** I definitely did. So, Rob, I’m, I am a big fan of “This Developer’s Life.” There was one that I listened to like, long ago and I just recall it being awesome. And so it’s definitely a tangent from the book but I guess firstly, like, what kicked off the idea even for you?
+
+0:35:48.3 **Rob Conery** I was sitting on my lanai having a beer after work and the rain was coming down, I will remember this perfectly. The rain was coming down and I was so happy just sitting there and listening to “This American Life” and I thought, “You know, just, I just love stories. Stories teach so well.” Right? And I mean, you’ve heard me say it before, I have such a problem with technical podcasts, and books, and videos - in general! Like, I can't stand the expert ego. I can’t stand, like, the panel of dudes, usually, sitting there and yukking and clucking about their weekends, you know, 10 minute before they get to it, and I appreciate that about “This American Life”. They jump right into a story. Ira Glass’ thing is he just doesn’t say anything except for the story, and that’s how he starts because that’s the important thing.
+
+0:36:41.5 And I just, I just sat there listening to that going, “I wish we had this.” And I jumped up, (laughs) I ran downstairs and I called Sara Chipps, a friend of mine and she lives in New York, and I said, “Sara, will you record something with me?” And she goes, “Sure!” You know, “What’ll we talk about?” And I’m like, “Tell me about when you got fired.” ‘Cause to me I just wanted, I wanted to hear, like, a confessional. Like, something real, human, grounding. I don’t want to hear posturing, I don’t want to hear the thing you hear all the time, ugh.
+
+0:37:11.5 And so as she was talking we had a good, i don’t know, we had a good few laughs and I thought, well I mean seriously I was just playing around. I’m going to add some music to this and see if I can do “This American LIfe”. And what it came up with was actually kind of fun and I sent it to a few friends and I said, “Does this sound cheesy?” (laughs)
+
+0:37:27.8 **Jason Staten** (laughs)
+
+0:37:28.3 **Rob Conery** ‘Cause that’s the thing I was really worried about, was cheese. And they said, “No, you should put it out there.” So I did. The next thing I know they said, “Do another one!” So I did.
+
+0:37:36.8 Then I got a call from Hanselman, you know? And he’s like, “Can I… Can I join you on this?”
+
+0:37:41.6 And I said, “What?” I mean, for those of you who don’t know who he is, he’s a super famous podcaster and speaker and he’s just an overall good person and so I was like, “Of course, yes. Yes, sir!” (laughs) And so it just went from there.
+
+0:37:55.8 **Jen Luker** Yeah, Scott Hanselman isn’t exactly someone that you say, “Nah, that’s okay.”
+
+0:37:59.9 **Rob Conery** Yeah.
+
+0:38:01.4 **Jen Luker** So there’s a lot going on in, you know, the technical education space between screencasts, and books, and paid newsletters, and podcasts, and all of these things. What do you think the future of your industry looks like?
+
+0:38:13.1 **Rob Conery** Wow. I don’t know. You know, it is interesting how sometimes a book will just work. Again, I’ll bring up “Gödel, Escher, Bach”, that’s another one you guys should review if you haven’t. I’m sorry if, I don’t know, but that is a tough, tough read. But when, it’s one of those books that you curl up with and, you know, you turn on a light and you have some tea and you just soak into i, you know?
+
+0:38:38.9 I can’t imagine that as a video, I can’t imagine that as an audio book, no way! I mean, the words are just beautiful. Everything about it is beautiful. But then, you know, other times, like, I just want to learn quickly. Like, “What was that thing about Docker Swarm again?” You know? (laughs) Okay, jump on YouTube, you know, you just scroll through, “Yes, yes.” You just, “Oh god, no! Okay, this link, this one works.”
+
+0:38:59.2 **Adam Garrett-Harris** (laughs)
+
+0:39:00.1 **Jason Staten** (laughs)
+
+0:39:00.5 **Rob Conery** You know? And then so video, sometimes you just need a 10-minute video. PeepCode is one of my favorite resources ever for this exact thing, condensed straight-to-the-point visuals that work together with the audio. So long way around to answering your story, or answering your question, I do not know. I imagine someone's going to finally synthesize a way to have, maybe an interactive epub that works across devices that has both audio, video, and text. So, I don’t know. Maybe that will be a new format that gets embraced.
+
+0:39:31.7 **Jason Staten** Oh there was a, just going back to Season 2, we have one more panelist who’s not able to make it today and she had a specific question and that was that you added a chapter on cryptocurrencies in Season 2 and she asked like, how are you going to approach talking about the misunderstood topic of cryptocurrency?
+
+0:39:53.2 **Rob Conery** So, so far what I did was, the only reason I added it was because it was just a natural evolution of information. I went through encryption, I went through, as I mentioned, networking and a bunch of stuff and ended up in cryptography and hashing, and uses of it. And, like, it’s a natural leap to then say, “We are now going to be transacting money with it.” And it’s fascinating.
+
+0:40:18.1 So I just talked about it from that grounding level of like, the inspiration, you know, Satoshi had when he came up with Bitcoin and the technology that went into it, which I am a huge fan of. I’m a huge fan of the technology, not a huge fan of the hype, but I basically just laid out, I laid out what the technology is, what the problems that the paper solved were, and then I said, “Here’s the practical issues with it. Here’s the societal issues with it, you know, both sides. And, you know, pros and cons.” I said, “What do we do from here? Where do we go?” I don’t know, but as a technologist, as a programmer, is that something you know, I need to worry about? Which I think is a good question. I’m not being rhetorical with that. Is it a...
+
+0:41:04.2 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:41:05.2 **Rob Conery** Is it something that I need to really consider? I mean obviously, you don’t want to propel something that’s sucking up the energy grid, but at the same time the idea of cryptocurrency and not having control over a transaction and what people are spending money on, is that a good thing? I don’t know.
+
+0:41:22.7 **Adam Garrett-Harris** So you started this company called Tekpub, right?
+
+0:41:25.8 **Rob Conery** Mm-hmm (affirmative).
+
+0:41:26.4 **Adam Garrett-Harris** And eventually sold it to Pluralsight and now you’ve got a thing called Big Machine, what is that exactly?
+
+0:41:33.0 **Rob Conery** Well, it was just basically a corporation I used to sell my book. And then I started just doing more videos and more things with it. I never really intended to go out on my own again, but I did. And-
+
+0:41:45.6 **Adam Garrett-Harris** (laughs)
+
+0:41:46.6 **Rob Conery** Yeah. And so I decided that instead of doing cutting edge stuff which I usually did with Tekpub to try and keep people up with what’s coming, I decided to do more basic stuff. You know, I also did some cutting edge stuff, but yeah. It’s basically books, and videos, and I don’t know… I just kind of tailored making stuff to whatever subject I was working on. So for example, Elixir is in there, or was in there, I had a book and a video set. Same with Firebase, but I have one I’m going solo as a contractor which I did all video ‘cause it just didn’t fit a book format. So I kind of just left it open to being whatever it was going to be.
+
+0:42:24.9 **Adam Garrett-Harris** Yeah. So is there something in you that just always wants to create these things that teach people, whether it’s videos, or books, or whatever?
+
+0:42:33.5 **Rob Conery** Yeah, I suppose. I mean I just enjoy sharing things and I supposed I get that from my dad and my mom, they were both teachers, and my dad always loved to share a story, you know? He was always into that and I love stories! And I love learning new things and you know, when you go, like, for me, it was like reading Michael Crichton books when I was a kid or in college and I remember just, like, reading these books and getting into, like, chaos theory or whatever the thing of the day was. I’d just, like, “Whoa, I learned something and I read a great story at the same time, that’s really cool!” (laughs) And so yeah, I loved that. You know, and watching PeepCode again was a great inspiration because I loved the way he wrapped these subjects up, it’s Geoffrey Grosenbach, wrapped these subjects up in a really cool story and really slick production. We had a good time watching it, you know, you spent 40-50 minutes, you know, on a Sunday afternoon and you learned something new.
+
+0:43:35.2 **Adam Garrett-Harris** Yeah, I think it really sticks with you when it’s wrapped up in a story.
+
+0:43:38.8 **Rob Conery** Mm-hmm (affirmative).  Yeah. I was talking to a friend about that specific thing and they made a quip like, “Well I wish somebody could do that with Google’s Bigtable, or, I don’t know, Qosmos DPI.” It’s one big, some big thing.
+
+0:43:54.5 And I said, “You know, we could have like a really cool story surrounding just databases in general.”
+
+0:44:00.1 And they said, “Yes! So many people I know don’t understand what it’s like, you know, working with a database. They always think like, ‘How do I write a SQL crate?’ Well it’s so much more than that!”
+
+0:44:08.8 I’m like, “Oh man, that would be a fun thing to do.” So I did!
+
+0:44:12.2 **Adam Garrett-Harris** (laughs)
+
+0:44:12.8 **Rob Conery** This is funny because this fit a book, right? I actually wrote a bit of a science-fiction book about working with databases, a first person perspective of how I learned how to work with a database which was with my pants on fire.
+
+0:44:26.6 **Jason Staten** (laughs)
+
+0:44:26.7 **Rob Conery** You know, because the developer split and we didn’t have anybody to work with the database, and it was, actually at the time, it was actually SQL server 6.5 and I had to learn how to write a story procedure. In fact, I had to learn how to write a bunch of them, and then also to get SQL server up and hosted somewhere and I had no idea what I was doing. So I remember just hitting the books and talking to friends and next thing I know I’m a DBA. (laughs) Like, okay!
+
+0:44:49.2 **Adam Garrett-Harris** (laughs)
+
+0:44:51.3 **Rob Conery** So anyway. So yeah, I wrote a book about that and that was really fun.
+
+0:44:54.4 **Adam Garrett-Harris** Is that still available?
+
+0:44:56.3 **Rob Conery** Yeah, it’s called “A Curious Moon” and so, I guess I can just do a quick blurb, but what I decided to do was, part of my schtick with Big Machine is that I have this fake aerospace company called Red:4, it’s an aerospace startup and one of our competitors is SpaceX.
+
+0:45:11.3 So I kind of used that storyline bleeding throughout my stuff, but this is about an intern named Dee who joins Red:4 for the summer but is pulled in because the database administrator left. And so they are trying to collate, and query, and load up, and so on, all the data from the Cassini mission. And so I went and grabbed all the data from the Cassini mission and I loaded it into Postgres and I went through the steps of normalizing it, cleansing it, having to figure out what’s good and what’s bad, and then basically ended the book by doing the query for finding out if there’s life under the ice of this moon of Saturn called Enceladus.
+
+0:45:50.4 **Adam Garrett-Harris** Hmm.
+
+0:45:50.9 **Rob Conery** Which is one of the massive mysteries, in fact, I don’t know if you guys know this, but Enceladus is, right now, the primary moon that they think that, you know, there might be life under there; for a lot of reasons. They go into those reasons in the book and it’s, it was a ton of fun to write. So yeah.
+
+0:46:06.3 **Jen Luker** So, following up on that story and the fact that I’m a total space nerd, can you tell the story of the cover image that you used for your book?
+
+0:46:18.1 **Rob Conery** Yeah, so the cover images I used, they’re all from JPL and they’re, they commissioned these artists to capture the imagination of the things present-day space exploration, if you will. So the one that I used, I forget the name of it, it’s in the forward of the book. But it’s basically a person skydiving into one of the massive gravity wells of this planet that I guess is supposed to be Earth-like. And when I saw that picture I was like, “Oh my gosh.”
+
+0:46:47.1 It’s just so, feels like, you know, what it’s like to not know something and to just kind of try and learn it and to try and... Like, when I worked at Microsoft. Like, sit in a room with people and share your opinion when you know that you’re outclassed. And the great thing I loved about that image was the jumper didn’t have a parachute and that’s just what it felt like. So I actually kind of doctored the image and put the cover of the book recursively on the jumper’s back because recursion plays a big part in the book itself.
+
+0:47:16.7 And for the second book, “The Curious Moon” book, I used again the JPL’s image of Enceladus and I doctored it up a little bit.
+
+0:47:24.1 **Adam Garrett-Harris** Hmm.
+
+0:47:24.8 **Rob Conery** So yeah. And those are all public domain images.
+
+0:47:27.4 **Jason Staten** Jumping from the first image on the cover of the book all the way to the last one, there was one that I looked at and just had to ask you on, was… It depicts a person standing out on a stage, looking, holding a mask in their hand, taking it off, standing there with a computer that says stuff on it, and then there’s a crowd of people watching them. What was your choice and motivation behind that specific picture?
+
+0:47:56.0 **Rob Conery** Posturing. You know? I find that when people don’t know something or they don’t feel secure in what they know, they’ll posture. It’s a human response, right? It’s… I find it particularly with the speaking crowd. And I don’t want to sound negative when I say it, but, you know, you can always spot the people who have learned the hard way and are sharing their stories versus the people that are hired to be evangelists and they need to posture as experts, right?
+
+0:48:26.0 And my goal with this book was, you know, knowledge will give you the ability to take off that mask and to let people see your true self, and your face, and what you do know, and to feel good about it. And to stand in front of a crowd and to kind of square within yourself, and you know, square your shoulders up, if you will, and look them straight in the eye and say, “I know this.” You know? “Maybe I don’t know it as well as I should but I know it well enough to stand up here and share with you, my experience.”
+
+0:48:54.5 **Adam Garrett-Harris** Nice. Well thanks so much for coming on the show. Where can people go to find out more about you and buy some of your stuff?
+
+0:49:05.1 **Rob Conery** Well my stuff for sale is at BigMachine.io spelled big as in like, machine, and dot io. My blog is Rob.Conery.io my last name is C-O-N-E-R-Y so it’s Rob.Conery like that. I’m not blogging as much as I should but I will be starting another one soon on Elixir, just a quick thing. I used to have an Elixir tutorial, once again using Red:4 and space stuff. I had to take it down because it got a little dated but I plan on updating it in the near future with some stuff I’m doing, you know, for the Azure team and Elixir. So it’s going to be kind of fun.
+
+0:49:42.7 **Adam Garrett-Harris** All right, and you’re on Twitter as well?
+
+0:49:44.6 **Rob Conery** I’m on Twitter! @RobConery
+
+0:49:46.5 **Adam Garrett-Harris** Yep. All right. Well thank you so much for your taking the time out to talk with us.
+
+0:49:50.4 **Rob Conery** Thank you.
+
+0:49:52.0 **Jason Staten** Appreciate it, Rob.
+
+0:49:53.1 **Rob Conery** Mm-hmm (affirmative).
