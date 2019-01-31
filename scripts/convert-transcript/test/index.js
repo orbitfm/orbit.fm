@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const txtToJson = require('../');
+const convertTranscript = require('../index');
 
 describe('when input has time, speaker, and text', () => {
   it('returns object with timestamp, speaker, and text', () => {
@@ -10,7 +10,7 @@ describe('when input has time, speaker, and text', () => {
     };
 
     const line = '0:24:19.9 **Adam Garrett-Harris & Jason Staten** (laughing)';
-    const actual = txtToJson.processLine(line);
+    const actual = convertTranscript.processLine(line);
 
     assert.deepEqual(actual, expected);
   });
@@ -23,7 +23,7 @@ describe('when input has text only', function() {
     };
 
     const line = 'Intro music: Electro swing ';
-    const actual = txtToJson.processLine(line);
+    const actual = convertTranscript.processLine(line);
 
     assert.deepEqual(actual, expected);
   });
@@ -37,7 +37,7 @@ describe('when input has timestamp and text', function() {
     };
 
     const line = '0:00:41.0 (Typewriter dings)';
-    const actual = txtToJson.processLine(line);
+    const actual = convertTranscript.processLine(line);
 
     assert.deepEqual(actual, expected);
   });

@@ -1,7 +1,7 @@
 const LineByLineReader = require('line-by-line');
 var fs = require('fs');
 
-const runScript = function(lineReader) {
+const convertTranscript = function(lineReader) {
   const transcript = [];
 
   lineReader.on('error', function(err) {
@@ -67,8 +67,8 @@ const time_text = line => ({
 if (process.argv.length > 2) {
   const lineReader = new LineByLineReader(process.argv[4]);
 
-  runScript(lineReader);
+  convertTranscript(lineReader);
 }
 
-exports.runScript = runScript;
+exports.convertTranscript = convertTranscript;
 exports.processLine = processLine;
