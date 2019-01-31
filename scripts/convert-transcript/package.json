@@ -1,14 +1,14 @@
 {
-  "name": "nodejson",
+  "name": "convert-transcript",
   "version": "1.0.0",
-  "description": "Testing",
-  "main": "txtToJson.js",
+  "description": "Converts the transcripts from txt to json format.",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "mocha || exit 0"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^5.2.0"

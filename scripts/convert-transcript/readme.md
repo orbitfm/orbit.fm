@@ -1,4 +1,4 @@
-# txtToJson script
+# convert-transcript
 
 Converts the transcripts from txt to json format.
 
