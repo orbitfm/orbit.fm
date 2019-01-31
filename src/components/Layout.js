@@ -54,7 +54,7 @@ const Title = ({ title }) => (
   </TitleContainer>
 );
 
-const Header = () => (
+const Header = ({ description }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
@@ -73,7 +73,7 @@ const Header = () => (
           meta={[
             {
               name: 'description',
-              content: data.site.siteMetadata.description,
+              content: description || data.site.siteMetadata.description,
             },
             { name: 'keywords', content: 'orbit.fm, podcast, audio, radio' },
           ]}
@@ -86,13 +86,13 @@ const Header = () => (
   />
 );
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, description }) => (
   <div
     style={{
       height: '100%',
     }}
   >
-    <Header />
+    <Header description={description} />
     <div>{children}</div>
     <Footer>
       <a

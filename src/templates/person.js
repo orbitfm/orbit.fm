@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { graphql } from 'gatsby';
+import stripTags from 'strip-tags';
 
 import Layout from '../components/Layout';
 import Page from '../components/Page';
@@ -37,7 +38,7 @@ const Links = styled.div`
 export default ({ data }) => {
   const person = data.contentfulPerson;
   return (
-    <Layout>
+    <Layout description={stripTags(person.fields.descriptionFormatted)}>
       <Page title={person.name} headTitle={person.name}>
         <Container>
           {person.image && (

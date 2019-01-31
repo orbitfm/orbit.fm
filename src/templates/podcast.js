@@ -23,7 +23,7 @@ export default ({ data }) => {
     : [];
 
   return (
-    <Layout>
+    <Layout description={podcast.shortDescription}>
       <PageWithSidebar
         title={podcast.name}
         headTitle={podcast.name}

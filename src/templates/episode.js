@@ -160,7 +160,7 @@ export default ({ data }) => {
       : null;
 
   return (
-    <Layout>
+    <Layout description={episode.shortDescription}>
       <PageWithSidebar
         title={
           <Link to={`/${episode.podcast.fields.slug}`}>
