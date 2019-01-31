@@ -30,7 +30,7 @@ module.exports = {
               categories
             }
           }
-          allContentfulPodcast(filter: { active: { eq: true } }) {
+          allContentfulPodcast(filter: { active: { eq: true } } sort: { fields: name }) {
             edges {
               node {
                 id
@@ -79,8 +79,8 @@ module.exports = {
           }
         }`,
         feeds: [
-          generatePodcastFeedConfig({ index: 0, name: 'talkingdudes' }),
-          generatePodcastFeedConfig({ index: 1, name: 'bookbytes' }),
+          generatePodcastFeedConfig({ index: 0, name: 'bookbytes' }),
+          generatePodcastFeedConfig({ index: 1, name: 'talkingdudes' }),
           generatePodcastFeedConfig({ index: 2, name: 'weboftomorrow' }),
           {
             output: `master.rss`,
