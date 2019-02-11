@@ -25,7 +25,7 @@ If it matches the first and last name of a known person, their picture will be s
 It can also include multiple people:
 
 ```
-0:45:49.2 **Jen Luker & Safia Abdalla & Adam Garrett-Harris** (laughing)**
+0:45:49.2 **Jen Luker & Safia Abdalla & Adam Garrett-Harris** (laughing)
 ```
 
 ### Text
