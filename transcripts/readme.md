@@ -2,7 +2,7 @@
 
 Transcripts for episodes are stored here.
 
-The original transcripts are in `.txt` files, and they are automatically converted into `.json` with a script located at `/scripts/convertTranscript`.
+The original transcripts are in `.txt` files, and they are automatically converted into `.json` with a script located at `/scripts/convert-transcripts`.
 
 ## Format
 
