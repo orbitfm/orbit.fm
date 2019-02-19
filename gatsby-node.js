@@ -34,8 +34,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         node.season && node.episodeNumber
           ? `season${node.season}/${node.episodeNumber}`
           : node.episodeNumber !== undefined
-            ? node.episodeNumber
-            : slug(node.name, { lower: true })
+          ? node.episodeNumber
+          : slug(node.name, { lower: true })
       }`,
     });
 
@@ -130,7 +130,7 @@ exports.createPages = ({ graphql, actions }) => {
             // Data passed to context is available in page queries as GraphQL variables.
             id: node.id,
             podcastName: node.podcast.name,
-            episodeNumber: node.episodeNumber,
+            episodeNumber: `${node.episodeNumber}`,
           },
         });
       });
