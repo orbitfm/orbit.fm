@@ -1,5 +1,6 @@
 const setupPodcastFeed = require('./setup-podcast-feed');
 const serializePodcastFeed = require('./serialize-podcast-feed');
+const query = require('./podcast-query');
 
 const generatePodcastFeedConfig = ({ index, name }) => ({
   serialize: ({ query }) =>
@@ -8,6 +9,7 @@ const generatePodcastFeedConfig = ({ index, name }) => ({
       siteMetadata: query.site.siteMetadata,
     }),
   output: `${name}/feed.rss`,
+  query,
   setup: ({ query }) =>
     setupPodcastFeed({
       siteMetadata: query.site.siteMetadata,

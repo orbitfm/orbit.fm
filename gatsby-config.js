@@ -2,6 +2,8 @@ require('dotenv').config();
 const generatePodcastFeedConfig = require('./scripts/gatsby-config-utils/generate-podcast-feed-config');
 const serializePodcastFeed = require('./scripts/gatsby-config-utils/serialize-podcast-feed');
 const setupPodcastFeed = require('./scripts/gatsby-config-utils/setup-podcast-feed');
+const query = require('./scripts/gatsby-config-utils/podcast-query');
+const topQuery = require('./scripts/gatsby-config-utils/podcast-top-query');
 
 module.exports = {
   siteMetadata: {
@@ -17,72 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-feed`,
       options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              title
-              description
-              coverArt
-              siteUrl
-              owner
-              ownerEmail
-              categories
-            }
-          }
-          allContentfulPodcast(filter: { active: { eq: true } } sort: { fields: name }) {
-            edges {
-              node {
-                id
-                name
-                description {
-                  description
-                }
-                image {
-                  file {
-                    url
-                  }
-                }
-                fields {
-                  slug
-                }
-                episode {
-                  id
-                  episodeNumber
-                  audioUrl
-                  name
-                  shortDescription
-                  publicationDate
-                  audioLength
-                  duration
-                  hosts {
-                    name
-                  }
-                  fields {
-                    showNotesFormatted
-                    path
-                  }
-                  podcast {
-                    name
-                    image {
-                      file {
-                        url
-                      }
-                    }
-                    fields {
-                      slug
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }`,
+        query: topQuery,
         feeds: [
           generatePodcastFeedConfig({ index: 0, name: 'bookbytes' }),
           generatePodcastFeedConfig({ index: 1, name: 'talkingdudes' }),
           generatePodcastFeedConfig({ index: 2, name: 'weboftomorrow' }),
           {
+            query,
             output: `master.rss`,
             setup: ({ query }) =>
               setupPodcastFeed({
