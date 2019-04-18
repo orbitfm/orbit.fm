@@ -1,0 +1,415 @@
+﻿(Intro music: Electro swing)
+
+0:00:13.7 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. Today we’re going over the first few chapters of “Code Girls: The Untold Story of the American Women Code Breakers of World War II” by Liza Mundy. I’m Adam Garrett-Harris.
+
+0:00:30.8 **Jen Luker** I’m Jen Luker.
+
+0:00:32.0 **Safia Abdalla** I’m Safia Abdalla.
+
+0:00:33.4 **Jason Staten** I’m Jason Staten.
+
+0:00:34.7 **Adam Garrett-Harris** All right. So we were going to go over the entire Part One and then we decided there’s so much before Part One starts that we’re just going to go over the… preface? And introduction.
+
+0:00:45.8 **Jen Luker** That was me, you’re welcome.
+
+0:00:47.3 **Jason Staten** (laughs)
+
+0:00:48.1 **Adam Garrett-Harris** That was you.
+
+(Typewriter dings)
+
+0:00:50.5 **Adam Garrett-Harris** So, what did y’all think?
+
+0:00:52.2 **Jen Luker** I dog-eared pages and I have so many comments in here that uh, yeah. I thought it would be better if we took a little bit more time on this section to, kind of, set the scene before we really delve in next week.
+
+0:01:04.4 **Adam Garrett-Harris** First, I wanted to ask what y’all thought about the… the title. Particularly you, Jen and Safia, because it’s titled “Code Girls…” instead of “Code Women…”, or something else. I don’t know. How, did you all think about that at all?
+
+0:01:21.9 **Jen Luker** I did, and it’s very indicative of the time actually, so I think that it tried to stick to the name that they actually had given them at the time.
+
+0:01:31.7 **Safia Abdalla** Yeah, I think she was mentioning how it was indicative of the times and the way that women, well into their, like, twenties and thirties were sort of infantilized.
+
+0:01:41.6 **Adam Garrett-Harris** They were sort of what?
+
+0:01:43.4 **Safia Abdalla** Infantilized? I think I’m pronouncing that word correctly, but I-
+
+0:01:47.6 **Jen Luker** You are.
+
+0:01:47.7 **Adam Garrett-Harris** I’m not familiar.
+
+0:01:48.9 **Safia Abdalla** It’s the notion of making someone or something seem more childlike in a negative way.
+
+0:01:54.8 **Adam Garrett-Harris** Oh! Yeah.
+
+0:01:55.0 **Safia Abdalla** So you make them like an infant. And I was trying to think of modern day examples of infantilizing language in the industry today.
+
+0:02:06.1 **Adam Garrett-Harris** “Girls” is another one, that’s still common.
+
+0:02:08.4 **Safia Abdalla** Yeah. Yeah, I was trying not to call anybody out but there’s definitely a few like, women’s affinity groups, or diversity groups that do use that term.
+
+0:02:18.6 **Jen Luker** And the times I think it’s really indicative is when they actually do have girls under 18 attending.
+
+0:02:27.2 **Safia Abdalla** Yeah! When it’s that case it’s okay, but there’s like one in particular one I’m thinking of where it’s very much so geared toward professional women but the name of the group has the term “girls” in it. Again, don’t want to call anybody out, but I think most people would know what I’m referring to if you’re in and around the industry.
+
+0:02:50.3 **Adam Garrett-Harris** Yeah, I mean we don’t call men “boys” very often, and I did hear someone refer to some men as boys one time and I was like, “What? What kids are they talking about?” I couldn’t think of what kids they were talking about and then I realized they were actually talking about grown men.
+
+0:03:03.6 **Safia Abdalla** (laughs)
+
+0:03:04.1 **Jason Staten** (laughs)
+
+0:03:04.7 **Adam Garrett-Harris** And so because of that it’s like, I’ve started to think about how it’s so weird that we call grown women “girls” and it’s accepted among even women sometimes and I’m not sure… Yeah. I’m not sure what to think about that because I don’t know if some women are okay with it or not okay with it but I’ve just avoided saying it.
+
+0:03:28.7 **Safia Abdalla** I, personally, am not okay with it especially when it’s used in, like, a professional setting ‘cause it is very demeaning when used in that context. That being said, I don’t think I’ve ever had a situation where I’ve, like, actively called it out when it was used in a certain context or… can recall at the moment, being in a situation where the term “girls” was used in, like, a demeaning or demoting context.
+
+0:03:59.6 Maybe it’s just because of the circles I’m in that I’ve not heard that term used often especially towards older women but I do know that it happens, whether it’s the name of a group or in anecdotes from other women in the industry.
+
+0:04:16.8 **Jen Luker** I have definitely called it out before. Most of the time it’s used out of naivety and it’s really sparked a lot of interesting conversations regarding not just gender but also racial slurs and how even childlike gender was used as a racial derogatory term for a very long time.
+
+0:04:39.2 **Jason Staten** I think, like you said, too, while there’s, today’s [inaudible…] where we still are using it as a derogatory way, sometimes unintentionally, there were a lot of other stereotypes that were definitely thought of in the process of going and recruiting the specific women involved in the code breaking process. I thought that was one of the things that definitely stood out amongst the first secret letters part as well as the introduction where a lot of assumptions were made from a man’s perspective about how women behave and what they think. And so very much like you said, “girls” is yet another portrayal of men’s view of women during the time.
+
+0:05:27.7 **Jen Luker** Not only that but, coming to think of it, there was the difference that was assigned in that sexual knowledge was essentially the defining difference between a girl and a woman so it could be because of the fact that they were asking for women that were not engaged to be married specifically is what defined them, in the time, as girls.
+
+0:05:51.6 **Adam Garrett-Harris** Yeah, so the beginning of the book talks about Pearl Harbor and how really no one saw it coming and then they started trying to actually get some code breakers because they didn’t have hardly any. We didn’t have any spies abroad and how, I guess, they started recruiting women because all the men were going off to war. And they started sending out these secret letters. And so y‘all have touched on some of the things they were looking for. I thought it was so interesting the two questions they would ask is, “Do you like crossword puzzles?” And, “Are you engaged?”
+
+0:06:27.7 **Safia Abdalla** (laughs)
+
+0:06:28.1 **Jason Staten** Huh.
+
+0:06:28.2 **Jen Luker** I mean those are interesting in that “do you like crossword puzzles?” due to lots of other things like the enigma have been defined as a people that are much more interesting in solving the puzzle of cryptography; as far as being engaged, one of the other concepts that were associated with women was that you were always obeying your husband, you told your husband everything and your secrets, if there were any, went the other direction and that husbands didn’t tell their wives things but wives had to tell their husbands everything. So, if they were engaged to be married, as soon as they were married then that essentially caused a security breach.
+
+0:07:17.7 **Adam Garrett-Harris** Hmm. Yeah, one of the qualifications they were looking for is a “woman who could keep her mouth zipped” and I didn’t really know what kind of, what they were thinking of that... I mean obviously that’s important but it doesn’t seem like that’s a major qualification when you’re looking for a man to do this kind of work.
+
+0:07:35.0 **Jason Staten** It talks about that a little bit later into the second chapter within the introduction and it says that women actually had a stereotypical strike against them in that women had a tendency to gossip and so they couldn’t keep their mouths shut and so they would always tell somebody else about that, and so that was considered to be one of the major strikes. And so, having the quality of “keeping your lips zipped” would have been something they’d consider uncommon for women.
+
+0:08:08.5 **Jen Luker** Yes, but in the very same paragraph they say, “Okay, fine! So women may gossip but as soon as a man is exposed to alcohol and women, their lips come just as unsealed!”
+
+0:08:20.4 **Adam Garrett-Harris** (laughs)
+
+0:08:21.2 **Jason Staten** Yeah, and I think the fact that they even have record of it being passed around as a notice. So it’s not just something a person mentioned in passing but the fact that, like, there is an official document that was passed through the system to say, like, “This is a concern that we have with the men.”
+
+0:08:39.1 **Safia Abdalla** One of the other things that struck me in this introduction is some of the qualifiers that they would use to filter candidate was that there was this sort of notion that they were looking for women who were more likely to be politically affiliated with the U.S., so they, kind of, like, discussed the fact that they weren’t interested in hiring women who were Jewish, or of Jewish descent because they felt that those women would have had some sort of, like, emotional investment in the war because of their heritage. They also, I think, were filtering based on whether these women were of Eastern European descent and there were sort of a couple of other racial/ethnic qualifiers that were used to filter out whether a woman was qualified for the position, or not. And that was just one of the things that kind of struck me in particular, not just as a woman, but as a person of color and an ethnic minority, that there was this, like, whole other set of potentially qualified and talented women who were prevented from participating on this pretty historical affair on the basis of their race and their religion.
+
+0:09:54.6 **Jen Luker** So in that it said, “We have here no fifth columnists-” Which I looked up by the way, and it means “...any group of people who undermine a larger group from within, usually in favor of an enemy group or nation. [The] activities … can be overt or clandestine. ... Sabotage, disinformation and espionage” all kind of are wrapped up in that.
+
+0:10:14.7 “...nor those whose true allegiance may be to Moscow,” And then, “Pacifists would be inappropriate. [Equally] so would be those from persecuted nations or races—Czechoslovakians, Poles, Jews, who might feel an inward compulsion to involve the United States in war.”
+
+0:10:31.6 So they were afraid that those that were being persecuted at the time would make up information to force the U.S. into the war.
+
+0:10:39.7 **Adam Garrett-Harris** Ah, yeah.
+
+0:10:40.7 **Safia Abdalla** Which is, like, a very cynical and messed up way to think about people and it’s kind of racist in, and of, itself. It’s sort of that, like, stereotype of the conniving and scheming individual who’s, like, always trying to mess things up. It’s, I know a racist trope specifically used against certain kinds of individuals.
+
+0:11:03.2 **Adam Garrett-Harris** And I like how the person who is asked to submit names went ahead and just submitted the names of two Jewish women.
+
+0:11:09.4 **Jen Luker** Me, too. Ada Comstock.
+
+0:11:11.1 **Jason Staten** Yeah. I think that would be infuriating as a person who had ties to a country that happened to be persecuted and to be told, “You can’t help-” not necessarily directly, but even still, not being able to assist in something that can fight and save people that they are affiliated with? Like, it is very narrow-minded by the leadership. And I can see the viewpoint on it, it’s very narrow-minded though and not... considering the alternative is that those people may actually be among the most motivated because they may have the most to gain from it.
+
+0:11:51.4 **Jen Luker** It wasn’t even just that. It was that, you know, three generations ago a grandparent came from that country and you were automatically disqualified even though you, and your parents were all, like, born and raised in the U.S., so you were disqualified because of a historical association with a country, not just the fact that you had a genuine reason to feel that oppression towards yourself, personally.
+
+0:12:21.5 **Adam Garrett-Harris** Yeah, and that’s the same thing with the Japanese internment camps.
+
+0:12:24.4 **Jason Staten** Mm-hmm (affirmative).
+
+0:12:25.4 **Adam Garrett-Harris** There were people of Japanese descent who were completely American and born in America that got put in there just because on their census record it said they were Japanese.
+
+0:12:37.2 **Jen Luker** I like that they banned an entire, not “like”, but I was sort of amused and disappointed in the fact that they banned an entire couple of colleges from being involved in the program because one of the professors started bragging about it.
+
+0:12:52.0 **Adam Garrett-Harris** (laughs)
+
+0:12:52.8 **Jason Staten** (scoffs)
+
+0:12:53.8 **Adam Garrett-Harris** Yeah, that’s, it’s… kind of hilarious. But, yeah. You’re punishing the students there because of one professor.
+
+0:13:02.6 **Jen Luker** There was also this point that when it came to the women that “The application asked the women submit passport photos. Some of which excited a bit of commentary. ‘I might point out that the passport photos will scarcely do justice to a number of the members of the course,’ enthused Harvard’s Donald Menzel, saying ‘that the women’s appearance is such that large-scale photograph would be a grace to any naval office.’ “
+
+And I found it disappointing that something that might have originally been a security measure making sure the person that walked through the door was actually the person they meant to send in the first place so you couldn’t get, you know, replaced by an agent, ended up becoming commentary on how pretty the women were.
+
+0:13:46.4 **Jason Staten** I think that even bleeds into some of the things that we have today with things such as LinkedIn or GitHub where you can also have a profile picture and how often it is those things are used in the form of reaching out and finding people to hire for a company. Like, you know that that is one of the things that is reviewed in the process of that. Have, Jen, you or Safia, considered that? Like, in the choice of picking profile photos?
+
+0:14:17.5 **Jen Luker** Well, yes.
+
+0:14:18.6 **Safia Abdalla** I mean, I just pick the picture that I, personally, think is where I look best. I have had a few situations where someone who’s clearly not, like, a hiring manager or someone in HR reach out to me and be all, like, “Your GitHub picture’s hot!” And-
+
+0:14:35.6 **Jen Luker** (laughs)
+
+0:14:37.3 **Safia Abdalla** Those are situations that arose, but I can’t recall for me, personally, having someone in a, like, hiring position call out my appearance in a recruitment notice. I do think I’ve seen a few people who have had recruiters mention the way they look in their reach outs to them.
+
+0:14:58.0 **Adam Garrett-Harris** Wow!
+
+0:14:58.6 **Safia Abdalla** So, it’s definitely something that, like, you want to present your best self on the internet but it is something that can be, like, used against you.
+
+0:15:06.0 **Jen Luker** I’ve had my gender referenced to, regarding, you know the fact that they were looking specifically for women to fulfill the job or that I might know more women.
+
+0:15:16.2 **Adam Garrett-Harris** I can’t believe a recruiter would mention that. And you were mentioning, Safia, that a recruiter’s never said anything to you about it? But it’s going to come into consideration even if it’s never said out loud?
+
+0:15:31.6 **Safia Abdalla** Yeah.
+
+0:15:32.4 **Adam Garrett-Harris** That’s really unfortunate.
+
+0:15:34.1 **Safia Abdalla** It is unfortunate but it’s just the fact that I’ve come accustomed to as a woman, particularly a young woman is that the way I look, the way I dress, my make up, my scent, everything from, like, the color and length of my nails to whether or not I decide to wear earrings is going to illicit some kind of reaction from people.
+
+0:15:59.8 I was attending an event recently and they were kind of sharing some stats about how people perceive leadership or authority and I think it was that 80% of people judge a woman’s ability to lead by the way she dresses while it’s only 60% of people who judge a man’s ability by the way that he dresses. So just people’s perceptions of who you are and what you’re capable of are tied in more heavily to the way you look and the way you present yourself when you’re a woman as opposed to when you’re a man.
+
+0:16:35.6 **Adam Garrett-Harris** Yeah.
+
+0:16:35.6 **Jen Luker** There’s always the “Be pretty, but not too pretty”, “Smile! But don’t smile too big, or wantonly”, “Be quiet and nice, but stand up for yourself, but don’t do that too much because then you’re seen as mean.”
+
+0:16:47.1 **Safia Abdalla** Yeah. So I did find an interesting research post from Pew while I was trying to find the original stat that I’d referenced and they conducted research, it was recent it was about a year ago, and they asked people what kinds of things they value the most in the men and what they value the most in women. The top result for things that are valued the most in men, 33% of the responses measured were honesty/morality, were the most valuable traits in men. For women 35% of people said that physical attractiveness was the most important trait in a woman.
+
+0:17:28.6 **Adam Garrett-Harris** Wow.
+
+0:17:29.3 **Safia Abdalla** So… That tells you something.
+
+0:17:32.0 **Jason Staten** That sounds like it would be so mentally taxing when you have a job to do to have to consider those other things in the process of it. Like, can’t just roll out of bed and go to work, like, you have to put all those considerations in before heading there.
+
+0:17:49.0 **Safia Abdalla** Yeah.
+
+0:17:49.0 **Jason Staten** Where I have, I mean, I wouldn’t call out a specific coworker, but I mean, I have certainly seen some people at work who have rolled out of bed and arrived at work.
+
+0:17:59.2 **Safia Abdalla** (laughs)
+
+0:18:00.4 **Adam Garrett-Harris** (laughs)
+
+0:18:01.7 **Jen Luker** You know, so there’s the concept of dressing for success and, you know, for men that meant dress for the part that you wanted to have versus the part that you did have. Except for women it’s like you needed to dress that part not to be seen as a higher position than you are but to be seen as the position that you are, or even less. So, you know? If I show up at work in jeans and a t-shirt people are going to ask me if I’m sick. If I show up in dress slacks and whatnot, then I’m seen as okay, fine I’m a dev. And then if I show up in, like, a formal they’ll be like, “Oh, do you have an interview today?” So, it’s like I have to dress above and beyond the standard.
+
+0:18:40.6 **Safia Abdalla** I’ve had the exact same thing said to me.
+
+0:18:43.5 **Adam Garrett-Harris** Yeah and I’ve heard that open office plans are even worse for this kind of thing because you can be seen from across the room, everywhere you go people can look at you and ogle.
+
+0:18:55.2 **Jen Luker** Yeah, and that point it’s not just the problem with butts in seats, the controversy between whether remote is a good idea or not, and becomes, you know, how are you presenting the team to the rest of the company? And everyone always looks to the women to be the ones to present, just like they look to the women to be the ones to decorate for Christmas.
+
+0:19:14.1 **Adam Garrett-Harris** Hmm.
+
+0:19:15.8 **Jason Staten** One of the other things that it’s said that they had to deal with in the process of being code breakers was the Army and Navy infighting, that we had two separate factors of our military that were not really working that well together. I mean they were both fighting for the same cause but it actually mentions a little bit later in the book that when they were breaking codes the Army would get the odd days and the Navy would get the even days, or something like that, in order to share credit between them because there was so much rivalry on that front and also a lot of male ego that was butting heads about receiving credit and prestige on that front. And that just seems like it also would be another challenge that could really get in the way of such important things to have to know that you actually couldn’t share information with somebody who was technically on your side.
+
+0:20:16.9 **Jen Luker** I love that sentence in there that said that, “There was furious infighting between the U.S. Army and the [U.S.] Navy to a degree that would have been comic if it weren’t taking place in the middle of a war.” And “...sometimes it was not clear who the real enemy was. ‘Nobody cooperated with the Army, under pain of death.’”
+
+0:20:34.8 And then right after that it essentially says that the British were appalled and said that we were “just a lot of kids playing at {the} ‘office’.”
+
+0:20:44.5 **Jason Staten** Yeah, having read that it actually makes me interested in reading on some of the Bletchley Park things ‘cause I haven’t read about it, yet. I know, Jen, you had an interest in that. Did you find a book and dive into that?
+
+0:20:56.1 **Jen Luker** I’ve dove into a few books on that and I’m... love the concept of Bletchley Park but the real major difference between the two? There’s a couple differences, actually, between the American system and the Bletchley Park system. The big one that we’re talking about now is that the code breaking resources were divided between the different branches of the military whereas the British had unified their branch under its own arm of the military. So everything was done within Bletchley Park as opposed to all over the country.
+
+0:21:32.2 And the other thing is that once you entered those gates you were essentially forbidden from leaving and that’s how they protected their secrets is nobody was ever allowed to leave.
+
+0:21:40.9 So, the U.S., however, had a lot of freedom. It’s like, they had access to entire train system so when they had their time off, you know, the women would jump on the train, they’d go to New York, they’d travel home, they’d go wherever they wanted for the three days that they had and then be back in time to get back to work.
+
+0:22:00.1 **Jason Staten** I did think that that was impressive, that it was so wide scale and yet still a secret. I mean, given… there is the great number of women that were actually civil servants for the U.S. but then just the sheer volume of people that were taking college classes for that as well, and I know it’s slipped out a little bit, like in the Brown College case, but the fact that they were able to have so many people take it and then just present it as a math course on transcripts and yet have it be classified information all the way up until now that we’re getting into this.
+
+0:22:39.4 **Jen Luker** Some of it was, again, society in that the women really took their secrecy, their oath to secrecy, very, very seriously. And they were, you know, they didn’t exactly expect to get any sort of credential for this. It was very much that it was just done to help, and so it was very, very quiet.
+
+0:23:02.7 Another part is that though Bletchley Park did have women, the amount of women that were involved in the U.S. as well as the amount that were involved in the British Code breaking systems was vastly different. It was like, half or more of the code breakers were women in the U.S. whereas a very small percentage was in Bletchley Park. And, in fact, they say that that’s why the U.S. ended up overtaking it, was because of the efforts of the women that were involved in the U.S.
+
+0:23:31.1 **Adam Garrett-Harris** Hmm.
+
+0:23:31.5 **Jason Staten** I thought it was interesting they pointed out, too, that the axis powers didn’t mobilize women in such high priority type positions in the same way that the U.S. did and so you have to know that that was a significant loss on their part of a lot of great potential. Obviously, like as you can see and understand, like, the value that women contributed to the war effort, and so, I mean it’s a good thing, but it’s also something that they definitely overlooked.
+
+0:24:05.4 **Adam Garrett-Harris** Hmm.
+
+0:24:06.4 **Jen Luker** So going to the education of these women I wanted to talk a bit about why they did so well. Part of it is that the only real benefit for a woman to go to school was to find a good husband that was even higher educated than she was.
+
+0:24:23.3 So those that actually went to school for educational purposes to learn, because they were ambitious, were extremely, extremely dedicated to what they were doing and the only jobs that were really available for women that were that highly educated were things like school teacher and librarian, and because of that those professions ended up being the exact thing that you needed as far as putting together a code breaking entity, essentially. You needed people that were organized, and people that were diversely educated, and people that were focused on the details as opposed to just having those giant strokes of brilliance.
+
+0:24:59.2 It was all of these women working together to bring about all of those changes. And yes, there were some of those strokes of genius, and many of them were by women, but most of it was also just being, you know, collective people with good memories.
+
+0:25:16.6 **Adam Garrett-Harris** Mm-hmm (affirmative). Yeah, I thought that was really interesting that a school teacher was someone that was highly educated back then, because that’s the only job available. I mean, there were other jobs but that was the most common job available for a woman who was educated.
+
+0:25:36.8 **Jason Staten** And it was only available to them until they got married, in which case, then they had to go into the home.
+
+0:25:43.0 **Adam Garrett-Harris** Right! Right, they would get fired, right?
+
+0:25:46.8 **Jason Staten** Yeah.
+
+0:25:47.0 **Jen Luker** Yeah, essentially. So there’s this paragraph that I really, really loved. Or, actually really changed how I thought about things, and it says:
+
+“As in other nascent fields, like aeronautics, women {who} were able to break in largely because the field of codebreaking barely existed. It was not yet prestigious or known. There had not yet been put in place elaborate systems of regulating and credentialing- professional associations, graduate degrees, licenses, clubs, learned societies, accreditation- the kinds of barriers long used in other fields like law and medicine, to keep women out.”
+
+0:26:19.4 That totally blew my mind. I’d never thought of degrees and certifications as a way of keeping women out. I thought of it as regulating for safety and security.
+
+0:26:32.3 **Adam Garrett-Harris** Hmm.
+
+0:26:32.9 **Jen Luker** But… It was a way of keeping people out that you didn't want in. If you didn’t allow them to graduate, or you gave them plenty of time to get pushed out before they could graduate, or there were only so many slots in a graduate degree that were allowed for women or people of color, then they could never get the accreditation needed to enter the workforce.
+
+0:26:55.4 **Adam Garrett-Harris** Yeah. Or they get married by the time?
+
+0:26:58.6 **Jen Luker** Yeah! And that just blew my mind. So then I really wanted to talk about some of the psychological effects-
+
+0:27:06.7 **Jason Staten** Yes.
+
+0:27:07.4 **Jen Luker** That they didn’t really cover. Like, back then they didn’t really know about PTSD and there were quite a few women that suffered from it. Part of the problem of being a code breaker is that oftentimes you would break codes that told of terrible fates for your loved ones, you know, your brothers, your fathers, your boyfriends that were deployed. And you knew that they were about to be attacked and sometimes you got the real horror of realizing that they couldn’t do anything about it to avoid letting them know that the code had been broken.
+
+0:27:43.2 **Adam Garrett-Harris** Yeah.
+
+0:27:43.9 **Jason Staten** And to go along with it, when they’re in that position of helping they’re also having a kind of negative response in that some of the men that they were replacing, or some of the men that had to go overseas, they would go and wind up having to die on the battlefield and so there’s the thought of, “Well, I’m sending this person there.” And yet at the same time, “I’m also helping this effort.”
+
+0:28:12.3 And so you, like, have this emotional tear on that front, too, of you’re both helping but you could put it in a perspective that you’re being harmful or putting people in harm’s way.
+
+0:28:24.1 **Jen Luker** Not just that but I think it was the resentment surrounding them. So say you’re a big boss at a business, right? And you’ve hired all three of your sons to come in and help run the business and they’ve got each different portions, right? One kid runs the mail room, another kid runs the typewriter, and the fact that the women were being brought it meant that it freed up those boys to go to war.
+
+0:28:46.7 So the fact that they were entering meant that jobs could get done and they could go to war, to die possibly. So now you’re resenting the women because of their sheer existence in the workplace because their being there let the men leave, however, their being there is also what was working towards saving those same men and helping them get back home.
+
+0:29:08.5 But it didn't change the fact that because they were available the boys were free to leave.
+
+0:29:14.3 **Adam Garrett-Harris** Yeah, that is… that is deep.
+
+0:29:16.8 **Jen Luker** So then you’re dealing with anger of Big Boss all the time knowing that his sons are out at war and you’re the one sitting in your [his] son’s seat. There was also a part about the secret letters where there was a woman who refused her secret letter and the thing about the women is that many of them were born, like, at the beginning of the 1920s or the very end of the 1910s which meang that women were seen as being more intelligent and respected and gaining some freedoms, and then the depression hit and all the women were fired in favor of giving men jobs and everything just kind of reverted back and there were a lot of horrors that happened because of the depression; anger, frustration, abuse, trauma, suicide. There were a lot of girls that had to suffer through that and pick up the slack of their family members that really couldn’t handle it.
+
+0:30:14.3 And they told the story of one woman who refused her letter because she was afraid that it was going to put her right back into those strict, disciplinarian environments that she’d escaped by going to school. She was afraid of being abused again.
+
+0:30:32.9 **Adam Garrett-Harris** Hmm.
+
+0:30:33.5 **Jen Luker** So there’s women that refused because they just, they didn't want to put up with that crap. I mean, how familiar does that sound these days? How many women have left our field just because they’re tired of putting up with that? Or they’re afraid of going back to it? Not all of us had good childhoods.
+
+0:30:50.9 **Jason Staten** And they had such a hurdle getting into it knowing our field today being predominantly men that, I mean, they have to fight so hard to get through and then once they are within the workforce, I mean, the challenge on that front continues where everything about them is picked apart and then ultimately, so many leave. I could see not wanting to put up with that crap.
+
+0:31:17.7 **Jen Luker** Yeah, there is a phrase in here that says, “Pick the pretty ones because we don’t want to deal with them after the men come back.” The pretty ones are very quickly going to get married and then they have to leave anyway.
+
+0:31:26.7 **Adam Garrett-Harris** Hmm.
+
+0:31:27.5 **Jason Staten** Yeah, that was a theme that was reiterated over and over, is that this was very much a temporary role, like, in the minds of both the people hiring and the women who were doing the work, and even though at the time about 70% of the active code breakers in the U.S. were women?
+
+0:31:48.4 **Jen Luker** It was like 70% in the Navy, 80% in the Army, and then in the Air Force it dropped way down. So it averaged out to about 60%.
+
+0:31:58.5 **Jason Staten** That still an enormous number. And then to be considering that how many of that 70% were fired or let go immediately after that?
+
+0:32:09.0 **Jen Luker** They did say that there’s some women that just couldn’t go back to their old lives, that they had seen too much, and been out too much, and got to use their brains too much, and they… they couldn’t go back. And that kind of brought up a little bit more of the evolution of the 50s and 60s and 70s and some of those fights that were happening for women’s equality.
+
+0:32:32.6 **Jason Staten** That was one of the things that was brought up further into Part One where it talks about some of the women who got accustomed to city life rather than living back in the country and so when they had family come to visit they were kind of shocked because they were like, “Yep, they look like they’re from Mississippi!” When they had been living in D.C. for a little while and definitely a life-changing thing.
+
+0:32:57.9 So the Army was one to go and recruit women from teaching colleges often in the south and the midwest, and so a lot of those women were coming from somewhere that was really quite small to be going into such a busy environment. Like, going back to that I could certainly see would be a really hard transition when you’re used to the hustle and bustle of breaking codes all day and you know, taking the train, or taking the bus, to… going to a tiny little town again.
+
+0:33:32.6 I mean, I can relate to that a little bit personally coming from a town of, like, maybe 3,000 people to living in the Salt Lake area. Like, dramatically different in terms of size and sheer volume. And my family still panics when they come out here and they’re like, “How do you even drive on these roads? Like, there’s 5 lanes across!” Like, you adjust and it grows on you and then it becomes just the norm, and so yeah. I could certainly see that that would be the norm for them and so to go back to their normal lives, I don’t see how they could, or would want to.
+
+0:34:11.5 **Adam Garrett-Harris** Well, Jen, Safia, do you have more?
+
+0:34:14.2 **Jen Luker** I wanted to point out something that they did mention plays into the perception of women as far as, like, modern day. And it said that, “Women were considered better equipped for boring work that required close attention to detail rather than leaps of genius. Women’s rightful domain, the careful, repetitive work that got things started so that men could take over when things got interesting and hard. And those same prejudices against women persist to this day. The disciplines that are the hardest for women to break into like math, and laboratory and computer science, are the ones that are believed to depend on innate genius, a trait long and wrongly associated chiefly with men because they dissociated tedious work with women.
+
+0:34:56.8 **Adam Garrett-Harris** Wow.
+
+0:34:57.8 **Jen Luker** And, I mean, to this day we think of, like, Steve Jobs, right? Or we think of, you know, various other geniuses in this industry, the ones who had one good idea and suddenly all the money’s thrown at them for the rest of their lives, but the women who are entering this field and making sure the work gets done and, you know, their credit for the work that they put in to make something happen is overlooked for the guy who had one good shower thought, once. And in the end it’s not the one shower thought that did it it’s all of the hard work that goes to building it.
+
+0:35:37.9 **Adam Garrett-Harris** Yeah, for sure.
+
+0:35:39.4 **Jen Luker** And I mean, it even does say here that, you know, women also had the same, you know, some of those genius leaps were made by the women while they were sitting there looking at all of the… due to evidence that all of their cohorts and put together and… so it’s just a disappointing thing that even to this day what’s really honored and revered in these fields is that spark of genius that often comes with, you know, the spark of insanity. But all of the hard work and all of the slow, steady steps that were put towards it to make it function are seen as just menial work and useless.
+
+0:36:19.5 **Adam Garrett-Harris** Hmm.
+
+0:36:20.7 **Jason Staten** That is definitely something that’s prominent within our culture, is ignoring the effort that goes into the big achievements whether it be the stroke of genius or the great business success that we see because startups are so hot in the tech scene to say, “Well, oh, well this company, you know, they just bursted past a billion dollar valuation!” And first, there’s a lot of effort and a lot of failures that are involved with a lot of those things and also, like you said, the glory’s often given to one person where it’s like, “Oh, well this person was the CEO of it therefore they are the one to claim the success when, in fact, I mean, while they may have originated and directed a lot of an idea, like, there’s a lot of nuance that comes to every idea, like a lot of iteration that has to be involved in that.
+
+0:37:17.5 **Jen Luker** It’s like, you shouldn’t get all the credit because you ran a company of 20,000 people that supported it, you know?
+
+0:37:22.6 **Adam Garrett-Harris** (laughs) Right?
+
+0:37:23.8 **Jen Luker** There’s a lot of people that did a lot of work to make sure that thing happened. But I did like the fact, going back to the professions, that code breaking itself was really, really… it was perfectly suited to the women’s roles. And I know we’ve mentioned this before but I wanted to say a couple of these. One of them was school teaching because of the breadth of knowledge that you needed to have. One of them was librarians because of the great ability to organize all of the information. Secretaries were also good for organizing and keeping good notes. Music majors because musical talent was seen as the ability to follow patterns. And then telephone switchboard operators because they weren’t afraid of big messy machines.
+
+0:38:13.9 **Adam Garrett-Harris** Hmm.
+
+0:38:15.0 **Jen Luker** So these roles that women had been put into were ideally suited to what they needed for code breaking.
+
+0:38:23.4 **Adam Garrett-Harris** Yeah, and then it looked like a lot of them were majoring in languages.
+
+0:38:27.6 **Jen Luker** Yeah. A lot of them were Greek and Latin, the bases for most of our languages that exist today, right? So-
+
+0:38:33.9 **Adam Garrett-Harris** Yeah.
+
+0:38:34.4 **Jen Luker** If they could figure out and understand those languages they could relatively become polyglots in the linguistic sense and understand the different languages that were required for code breaking, as well. Like German and Japanese… and Russian.
+
+0:38:52.4 **Adam Garrett-Harris** Yeah and I loved how you said switchboard operators because they’re not afraid of these big, crazy machines. I mean the machines were really crazy back then.
+
+0:39:02.3 **Jen Luker** Huge and wires and code and…
+
+0:39:04.0 **Adam Garrett-Harris** And I think the same thing with secretaries because secretaries used the typewriters and different things and the men didn’t use typewriters that much.
+
+0:39:12.5 **Jason Staten** Typewriters and organizing things in a way that you can go and find them again.
+
+0:39:17.8 **Adam Garrett-Harris** (laughs) Yeah!
+
+0:39:18.4 **Jason Staten** Because you’d say, “Oh-”
+
+0:39:19.3 **Jen Luker** Filing systems!
+
+0:39:19.8 **Jason Staten** Yeah! That’s so huge because when you have to have a collective memory, like, you first have to have a strategy that can be collective. Like, you need to know, like, ”This is how stuff is organized.”
+
+0:39:34.0 So when another person comes back to it they can say, “Oh, well this looks familiar, this looks just like this other thing we’ve been seeing today, therefore maybe that’s some repetition going on in the code and it’s showing a weakness in it.” I mean, that’s huge for it. So... very important skill. And while seen as tedious, also vital in reality.
+
+0:40:00.2 **Adam Garrett-Harris** Yeah, I don’t think that’s something that gets praised a lot, like, “Oh! You’re so… organized!” I mean, maybe it’s praised, like, it’s a good quality but it doesn’t get the spotlight.
+
+0:40:12.6 **Jen Luker** Yeah they called a group of women “crew jobs”, these units were like giant brains; the people working in them were a living, breathing, shared memory.”
+
+When I read that I thought of pair programming and swarming on tasks in the same way that, you know, once you start getting used to the concept and having a pair that when you stop working with that pair it kinda feel like losing half your brain.
+
+0:40:38.1 **Adam Garrett-Harris** (laughs) Yeah.
+
+0:40:38.9 **Jen Luker** And so with all this and these tedious tasks, lots of repetition, lots of combing through, lots of organization, I’m still amused by the fact that today and in the past women have always been seen as the erratic, irrational, emotional beings that just can’t handle it when at the same time that women were the ones buttoning down and creating organizational systems for hivemind-type knowledge the men were infighting with each other for power and glory and money-
+
+0:41:17.4 **Adam Garrett-Harris** Hmm.
+
+0:41:17.7 **Jen Luker** -and couldn’t get their selves together long enough to stop fighting with each other, long enough to fight a war!
+
+0:41:24.7 **Adam Garrett-Harris** Yeah.
+
+0:41:25.0 **Jen Luker** We’re the irrational, emotional ones?
+
+0:41:27.7 **Adam Garrett-Harris** (laughs)
+
+0:41:28.2 **Jen Luker** Yet we were the computers, the ones that handled all the calculations and the logic processes.
+
+0:41:33.4 **Adam Garrett-Harris** Yeah, in the whole thing about women gossiping, too. I think men gossip just as much.
+
+0:41:41.1 **Jen Luker** Especially to a pretty face.
+
+0:41:43.1 **Adam Garrett-Harris** (laughs) Yeah.
+
+0:41:44.6 **Safia Abdalla** I believe it’s called “talking” in that case.
+
+0:41:46.9 **Jen Luker** (laughs)
+
+0:41:47.9 **Safia Abdalla** That was sarcasm.
+
+0:41:49.8 **Jen Luker** Again, one of those things where women are gossipers but men are excellent communicators.
+
+0:41:56.1 **Adam Garrett-Harris** Right. And men are assertive and women are…
+
+0:42:00.0 **Jen Luker** Witchy!
+
+0:42:01.9 **Safia Abdalla** (laughs)
+
+0:42:02.8 **Adam Garrett-Harris** Right. (laughs)
+
+0:42:04.1 **Jen Luker** Aggressive, I think.
+
+0:42:06.8 **Adam Garrett-Harris** Cool, well I look forward to getting into the rest of this book. We’ll do Part One next time.
+
+0:42:13.5 **Jen Luker** Sounds great.
+
+0:42:14.5 **Safia Abdalla** We sure will!
+
+0:42:15.3 **Adam Garrett-Harris** Part One’s called “In the event of total war women will be needed.”
+
+0:42:20.0 **Jen Luker** Someone’s gotta do the jobs while the men go to war!
+
+0:42:21.7 **Safia Abdalla** (laughs)
+
+0:42:22.5 **Adam Garrett-Harris** Yeah.
+
+0:42:23.0 **Jason Staten** I liked-
+
+0:42:23.7 **Safia Abdalla** (laughs)
+
+0:42:24.8 **Jason Staten** Part… as a little preview it starts diving in on more personal stories rather than, like, overarching perspective on it. Like, the beginning sets the theme, sets the context for us and then we get to start diving into the individual stories where you can hear some of those things that individuals had to go through.
+
+0:42:45.5 **Jen Luker** I just thought that understanding the perceptions and the context of the day would help frame those stories in a way that allowed people to not just relate to them but recognize the cultural differences of the time.
+
+0:43:03.2 **Adam Garrett-Harris** Yeah. All right, well thanks so much for listening. If you want to support the show please rate us on iTunes and you can keep up with the show on Twitter @BookBytesFM and check out the website at orbit.fm/BookBytes
+
+0:43:19.0 I’ll see y’all next time.
+
+0:43:20.2 **Jen Luker** Good night!
+
+0:43:21.6 **Safia Abdalla** Bye, everybody!
+
+0:43:22.3 **Jason Staten** See ya.
+
+0:43:23.3 **Adam Garrett-Harris** ‘Night! See ya.
+
+(Exit music: Electro swing)
