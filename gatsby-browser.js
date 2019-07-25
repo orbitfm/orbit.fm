@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 
 import createStore from './src/state/createStore';
 import './src/utils/global-styles';
+
 const ConnectedAudioPlayer = require('./src/components/ConnectedAudioPlayer')
   .default;
 

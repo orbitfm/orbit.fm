@@ -35,12 +35,12 @@ const EpisodeCount = styled.span`
 
 const Podcast = ({ podcast }) => (
   <PodcastContainer>
-    <Link to={podcast.fields.slug}>
+    <Link to={`/${podcast.fields.slug}`}>
       <PodcastImage src={podcast.image.file.url} alt={`${podcast.name} logo`} />
     </Link>
     <PodcastDetails>
       <PodcastTitle>
-        <Link to={podcast.fields.slug}>{podcast.name}</Link>
+        <Link to={`/${podcast.fields.slug}`}>{podcast.name}</Link>
         <EpisodeCount>{podcast.episode.length} Episodes</EpisodeCount>
       </PodcastTitle>
       <p>{podcast.description.description}</p>

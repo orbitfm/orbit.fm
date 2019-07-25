@@ -176,7 +176,7 @@ export default ({ data }) => {
             podcastDescription={episode.podcast.description.description}
             podcastName={episode.podcast.name}
             podcastHosts={episode.podcast.hosts}
-            podcastPath={episode.podcast.fields.slug}
+            podcastPath={`/${episode.podcast.fields.slug}`}
           />
         }
       >

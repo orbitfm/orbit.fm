@@ -69,11 +69,11 @@ const IndexPage = ({ data }) => {
             fluidImage={episode.podcast.image.fluid}
             podcastHosts={episode.podcast.hosts.map(h => h.name)}
             podcastName={episode.podcast.name}
-            podcastPath={episode.podcast.fields.slug}
+            podcastPath={`/${episode.podcast.fields.slug}`}
             key={episode.id}
           />
         ))}
-        <Link to="shows">View all shows</Link>
+        <Link to="/shows">View all shows</Link>
       </Page>
     </Layout>
   );

@@ -40,7 +40,7 @@ const PodcastInfo = ({
     <p>{podcastDescription}</p>
     <h3>Hosts</h3>
     {podcastHosts.map(h => (
-      <Link to={`people/${h.fields.slug}`} key={h.id}>
+      <Link to={`/people/${h.fields.slug}`} key={h.id}>
         <Host>
           <HostImage>
             <Img fluid={h.image.fluid} />

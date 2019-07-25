@@ -35,7 +35,7 @@ export default ({ data }) => {
             podcastDescription={podcast.description.description}
             podcastName={podcast.name}
             podcastHosts={podcast.hosts}
-            podcastPath={podcast.fields.slug}
+            podcastPath={`/${podcast.fields.slug}`}
           />
         }
       >
@@ -51,7 +51,7 @@ export default ({ data }) => {
                 path={e.fields.path}
                 podcastHosts={e.podcast.hosts.map(h => h.name)}
                 podcastName={e.podcast.name}
-                podcastPath={e.podcast.fields.slug}
+                podcastPath={`/${e.podcast.fields.slug}`}
               />
             ))
           : null}
