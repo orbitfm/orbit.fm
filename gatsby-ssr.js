@@ -1,33 +1,23 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { renderToString } from 'react-dom/server';
-import { extractCritical } from 'emotion-server';
 
 import createStore from './src/state/createStore';
-
 import './src/utils/global-styles';
 
-export const replaceRenderer = ({
-  setHeadComponents,
-  bodyComponent,
-  replaceBodyHTMLString,
-}) => {
-  const store = createStore();
+const ConnectedAudioPlayer = require('./src/components/ConnectedAudioPlayer')
+  .default;
 
-  const ConnectedBody = () => (
-    <Provider store={store}>{bodyComponent}</Provider>
-  );
+const store = createStore();
 
-  const { html, ids, css } = extractCritical(renderToString(<ConnectedBody />));
+export const wrapRootElement = ({ element }) => {
+  const ConnectedRootElement = <Provider store={store}>{element}</Provider>;
 
-  const criticalStyle = <style dangerouslySetInnerHTML={{ __html: css }} />;
-  const criticalIds = (
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `window.__EMOTION_CRITICAL_CSS_IDS__ = ${JSON.stringify(ids)};`,
-      }}
-    />
-  );
-  setHeadComponents([criticalIds, criticalStyle]);
-  replaceBodyHTMLString(html);
+  return ConnectedRootElement;
 };
+
+export const wrapPageElement = ({ element, props }) => (
+  <div>
+    {element}
+    <ConnectedAudioPlayer />
+  </div>
+);
