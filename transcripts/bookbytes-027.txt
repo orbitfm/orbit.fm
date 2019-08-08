@@ -1,6 +1,6 @@
 ﻿(Intro music: Electro swing)
 
-0:00:09.7 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. This episode is sponsored by PluralSight, the technology skills platform.
+0:00:09.7 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. This episode is sponsored by Pluralsight, the technology skills platform.
 
 0:00:19.8 And today we’re doing something different and some of us didn’t read the book. So actually, Jason, you had mentioned that you had finished a book called Measure What Matters by John Doerr.
 
@@ -320,21 +320,21 @@ Because that’s the other kind of major part of it is actually, like, the retro
 
 (Typewriter Dings)
 
-0:31:28.0 **Adam Garrett-Harris** This episode of BookBytes is sponsored by PluralSight.
+0:31:28.0 **Adam Garrett-Harris** This episode of BookBytes is sponsored by Pluralsight.
 
-0:31:32.0 PluralSight’s the technology skills platform. You can see where your skills stand, master the latest technologies and show off your expertise. They’re currently hiring in Salt Lake City and Boston.
+0:31:32.0 Pluralsight’s the technology skills platform. You can see where your skills stand, master the latest technologies and show off your expertise. They’re currently hiring in Salt Lake City and Boston.
 
-0:31:43.9 I work at PluralSight and not only is the engineering culture amazing but the culture in general is amazing. It’s a place where people really live out the values. Our values of creating with possibility, being committed to something bigger, being accountable for excellence, seeking contact with intention and being our word drive everything we do.
+0:31:43.9 I work at Pluralsight and not only is the engineering culture amazing but the culture in general is amazing. It’s a place where people really live out the values. Our values of creating with possibility, being committed to something bigger, being accountable for excellence, seeking contact with intention and being our word drive everything we do.
 
 0:32:05.9 We work is small, cross-functional, autonomous teams. We encourage test-driven development, pair programming, and mob programming. We have a culture of continuous learning and we have book clubs and discussion groups.
 
-0:32:18.2 PluralSight was just named #9 Best Workplace and One of the Best Workplaces for Women by Great Place to Work.
+0:32:18.2 Pluralsight was just named #9 Best Workplace and One of the Best Workplaces for Women by Great Place to Work.
 
-0:32:25.1 Want to work here? Visit PluralSight.com/Careers/Engineering to learn more. That’s PluralSight.com/Careers/Engineering.
+0:32:25.1 Want to work here? Visit [pluralsight.com/careers/engineering](https://www.pluralsight.com/careers/engineering) to learn more. That’s [pluralsight.com/careers/engineering](https://www.pluralsight.com/careers/engineering).
 
-0:32:36.2 And for those listeners who would like to check it out you can DM @PluralSight on Twitter and they’ll send you a free trial code so you can login and check out PluralSight for yourself.
+0:32:36.2 And for those listeners who would like to check it out you can DM @Pluralsight on Twitter and they’ll send you a free trial code so you can login and check out Pluralsight for yourself.
 
-0:32:46.3 And thanks to PluralSight for sponsoring the show.
+0:32:46.3 And thanks to Pluralsight for sponsoring the show.
 
 (Typewriter Dings)
 
