@@ -1,0 +1,587 @@
+﻿(Intro music: Electro swing)
+
+0:00:09.7 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. This episode is sponsored by PluralSight, the technology skills platform.
+
+0:00:19.8 And today we’re doing something different and some of us didn’t read the book. So actually, Jason, you had mentioned that you had finished a book called Measure What Matters by John Doerr.
+
+0:00:31.1 **Jason Staten** Yeah!
+
+0:00:31.8 **Adam Garrett-Harris** And I thought it would be interesting to ask you about it and have a discussion about it.
+
+0:00:36.5 **Jason Staten** Sure, yeah. I’ll talk about it.
+
+0:00:38.7 **Adam Garrett-Harris** Yeah.
+
+0:00:39.1 **Jason Staten** So I was recommended by a few people at work to read the book Measure What Matters by John Doerr and John Doerr is a, I guess, now kind of an investor type of role and also a big pusher for setting goals at companies and measuring them to get great results out of those.
+
+0:01:02.8 And he, I guess, would go to a lot of places and, kind of, do it as a consulting measure to say, “Hey, you need to go in and implement this.” And he was pretty pivotal in places such as, like, Google really early on where he sat down with Larry and Sergey and was like, “Hey, you need to go and establish yourselves and, like, figure out, really, what you’re doing and how you know, like, if you’re succeeding.” Because they had the tech but they didn’t necessarily have the plan.
+
+0:01:35.0 And so after having done that numerous times, I mean, he lists off a ton of names of companies that he’s gone and put recommendations to, like, in the Silicon Valley area like Google, Apple, Amazon, and a number of them that are also specifically mentioned within the book, as well.
+
+0:01:54.7 And, kind of, my synopsis or shorthand of the book is that it’s a management book about how setting goals and measuring them can create success in companies both large and small. And the way that John promotes the ability to do that is by setting up what’s known as Objectives and Key Results and he refers to them as OKRs throughout the book.
+
+0:02:23.5 And so the O, being the Objective, is what you want to accomplish. So it’s something that is a clear description of what you want to do. So, I mean it’s the goal side of things. And then the flip of it is actually the Key Result which is the how that you plan on accomplishing that goal. And so it is something that is actually either time bound or very specific on what you want to do and it’s, you can also measure that and verify that.
+
+0:02:57.5 And a really important part of that is that when you complete all of your key results then you can firmly say that you have accomplished your objective. Now, Adam, I think you had said that you had watched the TED talk that John gave?
+
+0:03:16.6 **Adam Garrett-Harris** Yeah, I did and really quickly I just wanted to let the listeners know who’s here today. It’s me, Adam, of course, Jason, and then we’re also joined by Safia.
+
+0:03:26.9 **Safia Abdalla** Howdy, everyone!
+
+0:03:27.7 **Jason Staten** Hi.
+
+0:03:28.1 **Adam Garrett-Harris** Hi. And Jen couldn’t make it tonight. Yeah, so I watched the TED talk called… Actually, I guess it’s probably just called Measure What Matters, as well. So he’s got a website, whatmatters.com, I think?
+
+0:03:43.2 **Jason Staten** Mm-hmm (affirmative).
+
+0:03:43.9 **Adam Garrett-Harris** I thought it was really interesting how John didn’t come up with this idea, he had a boss at IBM that came up with this idea but then he really just took it and ran with it and he’s really popularized the idea and brought it to a lot of big companies.
+
+0:04:01.3 **Jason Staten** Yeah! Yeah, that was something that he was pretty adamant on mentioning in the book, is his boss’ name was Andy Grove and he, I think, became most familiar with him at Intel, I think that was where they met, there may have been something before, but Andy was a big pusher for having goals and measurable results underneath of them. John actually talks about Andy leading an initiative that they have there called, “Operation Crush” at Intel.
+
+0:04:33.6 **Adam Garrett-Harris** Oh yeah, and I actually think it was IBM.
+
+0:04:35.8 **Jason Staten** Oh. Oh… No, I think it… was it-
+
+0:04:39.9 **Adam Garrett-Harris** I don’t know.
+
+0:04:40.1 **Jason Staten** Maybe he picked it up from IBM?
+
+0:04:42.3 **Adam Garrett-Harris** Hmm, I’m not sure anymore.
+
+0:04:44.1 **Jason Staten** Pretty sure it’s Intel because Crush was specifically related to moving from producing RAM chips into microprocessors for Intel.
+
+0:04:55.4 **Adam Garrett-Harris** Oh, okay.
+
+0:04:56.1 **Jason Staten** And so it, like, asserting Intel’s dominance there. So there came, like, a point and time when Intel, that’s what they did is they made memory and RAM and they were starting to get displaced by Motorola and in order to deal with that they saw an opening in order to get into the microprocessor market because they were getting undersold by other companies or, like, they couldn’t match the price point and so rather than going and trying to get their costs down on that front, they moved towards getting companies to adopt their microprocessor.
+
+0:05:30.7 And I want to say it was, like, the 8086 but I could be off on that. I don’t have that specifically in my notes. But some of the ways that they went through approaching that was having a few OKRs established within their company. One of them was to land a certain number of design commitments and so when they would go and come up with a design they would actually need a place to go and sign on to actually want that chip, or to buy it and so, like, it was, like, a huge order. And so, like, they had to get so many of those and they had an objective for those.
+
+0:06:12.0 I can actually go and like, pull up that metric in the book. I think it helps go and clarify some things.
+
+0:06:17.7 **Adam Garrett-Harris** Yeah.
+
+0:06:18.3 **Jason Staten** So give me just one second.
+
+0:06:21.2 **Adam Garrett-Harris** Safia did you get a chance to watch the TED talk?
+
+0:06:23.7 **Safia Abdalla** I haven’t. Most of my interest in OKRs actually comes from my personal experience that I have with them. At one of the organizations that I worked at started to introduce OKRs into, like, our workflow. So kind of have some perspectives on it and questions based on those that I’d love to hear from you, Jason, if John managed to address in his book.
+
+0:06:47.1 **Adam Garrett-Harris** Okay, great. Yeah. I was hoping some people had some personal experience with it. I just recently started using them and had no idea this entire backstory about them.
+
+0:06:58.9 **Jason Staten** Yeah. I really liked actually hearing that part of it. This is actually my first book that I’ve ever read or done dominantly through audiobook. I have always been more of just, read it through. Like, I like listening to podcasts but it’s a first audiobook for me.
+
+0:07:18.6 **Adam Garrett-Harris** And how was it?
+
+0:07:20.2 **Jason Staten** The audiobook was excellent. It was actually read by John so it was read in the way that he planned on having it read to you, and then also, not only was it read by John but there are specific accounts from various companies whether it be specific people from Google to have, like, Bill Gates read it in a snippet of it. He actually even has Bono reading at the end. So, it’s really cool to actually have the real accounts read by the people who wrote those things, too. So it wasn’t even just John the whole time and so it made it a good listen because it was switching between people and you could hear the emotions that they had and felt about the stories that they were reading. So I really liked that.
+
+0:08:02.4 **Adam Garrett-Harris** Yeah, that sounds really cool.
+
+0:08:03.5 **Jason Staten** I did go and actually pull those notes for the Intel operation, Crush.
+
+0:08:10.0 **Adam Garrett-Harris** And what do you mean by Crush?
+
+0:08:11.4 **Jason Staten** So, Crush was, like, the code name of the operation, so…
+
+0:08:15.5 **Adam Garrett-Harris** Okay.
+
+0:08:15.7 **Jason Staten** It just, they wanted to go and, I guess, crush the microprocessor market, was the plan. So they had a corporate objective in their company and that was to “Establish the 8086 as the highest performance 16 bit microprocessor family as measured by…” And so their objective: getting the highest performance 16 bit microprocessor family. But they then set up a number of metrics to actually say that they did or did not accomplish that.
+
+0:08:48.3 And so one of them was to develop and publish five benchmarks showing superior 8086 family performance. So actually, like, releasing benchmarks. So that’s something measurable that you can accomplish. Like, you’ve either, like, done those things or you haven’t or you’ve done three out of five, which I think that’s what they managed to hit. And one of them is repackaging the entire 8086 family of products, and so actually going and putting a different marketing spin on them which I think in turn from that, marketing was able to go and make their own objectives based on it.
+
+0:09:24.7 **Adam Garrett-Harris** Hmm.
+
+0:09:25.6 **Jason Staten** And then, also, they had a date-based one as well that was, “Sample the arithmetic coprocessor no later than June 15th” which is more of an engineering related goal.
+
+0:09:36.2 So from each of those metrics though, like, I mean, they have a date established or, like, even some of them are still higher level, like, key results that can go and pass down to specific departments or places within the company that they have a greater impact or that can do a little bit more towards them. But the key results are established at the higher level within the company so there is some crossover on that front. It’s never just dedicated to a single department and I think, probably one of the most important parts of it, is that it was something that was applied across the whole company, and visible across the whole company.
+
+0:10:18.3 The really key thing about OKRs is making sure that those goals are transparent and very obvious things that are known across the entire company. I think John points out really early that it’s a very small set of people that actually know what their company’s current goals are and whether or not they’re truly working on those things.
+
+0:10:42.8 **Safia Abdalla** Yeah.
+
+0:10:42.9 **Adam Garrett-Harris** So, even when a company’s using OKRs, you’re saying people within the company don’t really know?
+
+0:10:49.6 **Jason Staten** So OKRs are a way of trying to combat that.
+
+0:10:54.4 **Adam Garrett-Harris** Okay.
+
+0:10:54.9 **Jason Staten** Where in a common company case, like, there can be some goals that are established but if they’re not really well defined or they have to pass through a lot of layers. Goals for a company may be designed by executives higher up.
+
+0:11:07.7 **Adam Garrett-Harris** Mm-hmm (affirmative).
+
+0:11:07.9 **Jason Staten** But, like, if they’re not transparent or, like, actually delivered by the executives to the company as a whole?
+
+0:11:14.3 **Adam Garrett-Harris** Yeah.
+
+0:11:15.3 **Jason Staten** Then it winds up passing from, you know, C-levels to VPs down to directors down to managers finally down to individual contributors and amongst that whole way the message of what’s really important could actually get lost.
+
+0:11:29.9 **Adam Garrett-Harris** Yeah! It’s like a game of telephone.
+
+0:11:32.4 **Jason Staten** Yeah.
+
+0:11:32.9 **Adam Garrett-Harris** That’s funny ‘cause it’s, like, they’re probably really not trying to keep those things a secret because you want everybody in the company to help contribute towards the company’s goals.
+
+0:11:41.2 **Jason Staten** Mm-hmm (affirmative).
+
+0:11:42.1 **Safia Abdalla** One of the things that I thought you mentioned that was interesting was you, kind of, pointed out the fact that when they were in Intel, the goals they were setting were, kind of, cross-department and one of the experiences that I had with OKRs is they were just things that were used within the engineering team. So one of the things that I struggled with is, kind of, tracking those objectives over to, like, high level, like, company strategy and vision items. So it’s, kind of, like the reverse. It’s like, “How are these tiny objectives that I have, as an engineer, relating directly to the, like, top-level goal of the company?”
+
+0:12:20.9 **Jason Staten** Mm-hmm (affirmative).
+
+0:12:21.6 **Safia Abdalla** So I feel like there’s this place where, like, people have to meet in the middle where, like, individual contributors to, like, their managers and their managers and then, like, the CVPs and ABPs and all those funny letter combinations kind of have to meet in the middle to agree on things, or, kind of… shake hands on what the goals are?
+
+0:12:41.8 But that was one of the things that I struggled with when I was working with OKRs is it felt like they were very isolated for me, personally, and they weren’t part of this, like, cohesive narrative around what the company was doing; and I think, you know, Intel seemed to combat that by making the OKRs not just something that one department was doing, but kind of, like, cross-department efforts which is kind of interesting ‘cause I usually heard about them in the context of, like, engineering teams. So that is interesting to know that the history was a little bit different.
+
+0:13:12.7 **Jason Staten** That is something that John brings up in the book is that it really does have to apply across the whole company to be the most effective thing; Otherwise, you can wind up with a gap or just, kind of, a cultural mismatch between some places. I mean, he even talks about a few specific examples where some changes had to be made.
+
+0:13:34.3 Like, closer to the end they talk about a company named Lumeris and they are kind of a healthcare transparency-type company. Like, they are trying to get,whether it be, like, costs, or what procedures are available for certain rates in certain areas available to kind of everyone, to open that up.
+
+0:13:57.4 But they also had a second part of their company that ran under a different name and one of them was really conservative and the other one was very, like, technology oriented. And of the things that they actually had to do to, like, establish OKRs to work in their company, because they had them, actually, but they really weren’t working because not everybody was on board with them, but instead there were, like, a couple of managers that would try and gather them up last minute before board meetings and so there was really no buy in there.
+
+0:14:29.8 They actually had to go and merge those two companies under one name and then they swapped out, like, a huge amount of their HR in their company. Like, over half of it had to get replaced in order for them to go and establish that and fit it into their culture because that’s what they wanted.
+
+0:14:50.7 So, I mean that sounds kind of familiar to your situation where if it’s only implemented in part of it then you do have that missing link of, “Okay, we have these things established and how do they tie in to the greater plan and goals of the company?” And I could see that as a huge gap.
+
+0:15:09.4 **Safia Abdalla** Yeah. That’s, okay, good to know that I wasn’t feeling alone in that. The other thing that I found was interesting, you kind of mentioned the fact that they had this one objective where they finished 3 / 5 of it? Or like, 60%?
+
+0:15:24.1 **Jason Staten** Yeah.
+
+0:15:25.0 **Safia Abdalla** So one of the interesting things that I had to adjust to when the organization I was in started introducing OKRs was there was, sort of, this notion that your OKR had to be something that, like, you could only achieve 80% of. So, like, the idea was that you were always supposed to be very ambitious in the objectives that you would set. Or maybe the key results? It was basically designed to where you were always, like, setting goals that were a little bit past where you thought you would land; whereas, in the traditional sense, you’re supposed to set goals you know you can meet.
+
+0:16:00.6 **Jason Staten** Mm-hmm (affirmative).
+
+0:16:01.6 **Safia Abdalla** So that was an interesting process for me for two things. One, I had to, kind of, let go of the psychology that, like, a goal was something that I had to achieve and check off. And two, it was difficult to figure out what my 80% was when I didn’t really have a baseline for what I could achieve, or a way to quantify how I had done in goals before because it was the first time we were kind of rolling out OKRs in this organization.
+
+0:16:27.7 **Adam Garrett-Harris** Yeah, I’m right there with you. So I’ve been in a company where we used OKRs and it was the same thing. Where they were supposed to be hard things to achieve and you weren’t supposed to achieve all of them, maybe, like 60%, and I don’t know how you measure that with engineering things, really. It’s like, if you… if you’re writing code you know when you’re 0%, you probably know when you’re at 100%, but how do you know when you’re 80% through?
+
+0:16:59.5 **Jason Staten** Right.
+
+0:17:00.6 **Adam Garrett-Harris** Like, as far as I’m 80% done writing this code for this feature?
+
+0:17:06.1 **Safia Abdalla** Yeah.
+
+0:17:06.7 **Jason Staten** Yeah, I think that that’s definitely a difficult level to go and measure it at because, I mean, I guess you’re 80% of the way writing the feature but if you can’t ship the feature then, in one regard, like, you’re kind of 0%. I mean, you haven’t shipped.
+
+0:17:20.8 So, like, if that itself is a metric then, like, I mean, it can be depressing in one side of it that you didn’t accomplish it but, I mean, looking at it from a business perspective, like, if you don’t ship that’s not a success but that doesn’t necessarily mean that it’s bad or that you are… that, like, you should penalized for it but rather, like, it’s, you collectively, as the company, did not estimate it well or measure it well and so it’s actually something worth reassessing for.
+
+0:17:52.2 ‘Cause that’s one of the things they talk on and specifically to the 80% thing, that’s one thing that a number of the companies varied on in their perspective of what they did with it. Like, the book itself is not prescriptive in a single way of saying what you should shoot for. It does talk about some of Google’s specific ways that they handle OKRs and they actually have two types of them within Google. At the end of the book they have a reference guide of what Google’s internal OKRs are established on. And they have the notion of committed OKRs and aspirational OKRs.
+
+0:18:34.2 **Safia Abdalla** Hmm.
+
+0:18:35.3 **Adam Garrett-Harris** Ah.
+
+0:18:35.6 **Jason Staten** And so committed, you go in with the full intent of getting a 1.0 or, like, 100% completed and you, like, you should try everything you can to get there. And then aspirational is something where it’s definitely more vague to reach and so that is more of a, they shoot for an 0.7 on those.
+
+0:19:00.0 And aspirational ones are ones that can actually bleed over over the course of multiple goal setting periods. A lot of the companies do it on a quarterly basis where they go and set a goal for it and measure it through the course of the quarter and then at the end see, like, where they landed and if they did achieve it then, you know, go and attempt to set something else. But if they didn’t, either to say, like, “Why did we not make it? Like, why did not not accomplish this? And what can we change? Do we still actually value accomplishing this or does it not really matter and we can throw it out?” Because sometimes that’s what needs to happen.
+
+0:19:39.6 **Adam Garrett-Harris** So yeah. Aspirational OKRs make a lot of sense to me, or aspirational key results, maybe?
+
+0:19:47.8 **Jason Staten** Mm-hmm (affirmative).
+
+0:19:48.5 **Adam Garrett-Harris** Because I was looking at one of the examples in the TED talk, it was talking about the CEO or the head of Google Chrome, Sundar Pichai, and he’s the CEO of Google now, but in 2008 he had an objective to build the best browser. One of the key results was 20 million users.
+
+0:20:07.3 **Jason Staten** Mm-hmm (affirmative).
+
+0:20:08.0 **Adam Garrett-Harris** And so I thought that’s a great goal but that’s completely out of your control. You know, hopefully if you do measurable things that make it good there will be more users, but really, ultimately, it’s out of your control.
+
+0:20:24.0 **Jason Staten** Yeah.
+
+0:20:24.5 **Adam Garrett-Harris** Yeah. I was, I was just wondering how often… these things needs to be measurable, but how often is it in your control versus out of your control?
+
+0:20:32.9 **Jason Staten** Yeah, there certainly are things that are outside of your control and that’s even something that you should be reflecting on, too. Like, if you are in a, say even, like, real estate type company and the housing market just flops and you aren’t hitting your goals, like, that’s something that doesn’t necessarily mean that you did it all wrong as a company but it is something where at the end of that quarter you should say, “Okay, well, we’re not hitting this goal. Or we didn’t come remotely close, like, what are we going to do about it now?”
+
+Because that’s the other kind of major part of it is actually, like, the retrospective side of things. So it’s not just, like, did I achieve it or did I not? And John Doerr is very specific to call out that OKRs are not something that is supposed to be tied directly to compensation. And while it can, obviously, have an impact on it, by not tying them directly to compensation it’s supposed to reduce things like sandbagging where people will go and establish goals that are kind of, business as usual, like not very aspirational.
+
+0:21:45.4 **Adam Garrett-Harris** Hmm.
+
+0:21:46.1 **Jason Staten** And, I mean, he brings up kind of the example of if somebody sets some huge goal and they only achieve 60% of it, but it’s an amazing goal. Like, say they set the goal of getting published in, like, five magazines or something like that, and they wind up only getting published in two, but one of them is, like, getting a cover spot on Time Magazine or something like that. Or, like the New York Times, like, getting huge coverage. And so they hit only two out of five, so that’s 40% of their goal; whereas, if somebody else made a really basic goal of, I don’t know, like, getting six, or five advertisers to close on them or something like that and they just get, like, local shops or something.
+
+0:22:39.1 Like, even though somebody accomplished their whole, like a 100% of their goal, is that better than the person who shot big and only got part of it? And so to say that it needs to be tied directly to compensation is probably not the right choice.
+
+0:22:57.7 **Adam Garrett-Harris** And the other thing is it’s not tied directly to promotions.
+
+0:23:01.0 **Jason Staten** Right.
+
+0:23:02.2 **Adam Garrett-Harris** But like you said, I think it could be a part of that if you look at it and say, “That’s actually a really awesome thing that you accomplished!”
+
+0:23:08.6**Jason Staten** Yeah. It definitely is designed for putting people on the track to get promoted or compensated based on success of it, but you shouldn’t solely rely on it as like a “Well you didn’t meet your goals, therefore you don’t get your bonus this year” because that, in turn, will make people be really conservative and I know talking about Google in here, they have the example of Gmail when it launched and I don’t remember if you had to deal with the battle of trying to get an invite to gmail early on.
+
+0:23:46.2 **Safia Abdalla** I did not have that.
+
+0:23:48.7 **Adam Garrett-Harris** I had a couple of friends in my highschool class that had invites so I got one pretty easily.
+
+0:23:53.0 **Safia Abdalla** I envy you.
+
+0:23:54.0 **ALL** (laughing)
+
+0:23:55.9 **Jason Staten** Gmail was pretty aspirational in that they really pushed the limit with what their offering was. When Gmail launched they actually launched with 1 GB of storage which was insane at that amount of time where other places were offering more like 10 MB of free email storage you could get a gigabyte with Gmail.
+
+0:24:18.7 **Adam Garrett-Harris** Yeah. And then you could sit there on the login page and see it constantly go up everyday, like every second.
+
+0:24:25.1 **Jason Staten** Yeah, yeah. Like, that was… that was so novel at the time just to see it grow bit by bit, literally, right? (laughs)
+
+0:24:32.9 **Adam Garrett-Harris** Yeah! (laughs)
+
+0:24:33.9 **Safia Abdalla** (laughs)
+
+0:24:35.0 **Jason Staten** Yeah, when they did that, though,like, that was a gamechanger for email as a whole because all of a sudden you didn’t have to go and delete your emails but instead you archived the things which was effective within google on its own for however many other places they used it. I don’t know, they scrape it for all sorts of stuff like, natural language and whatnot.
+
+0:24:56.9 But I think there was a quote in the book and I don’t have it attributed so I’ll have to go and dig that up, but it said that they shot for an order of magnitude larger because if you’re just shooting for a 10% improvement over everybody else, that means you’re doing the same thing. A 10% improvement means you’re doing the same thing as everybody else. You’re not really innovating at 10% more as you’re just, kind of, making what exists more efficient.
+
+0:25:27.6 And when Google aimed for making Gmail they decided to go with something that was really big, that probably to some places to look at offering a GB of storage seemed like an impossible feat when, I mean, they instead said, “Okay, well, let’s offer this and let’s do it in a way that we can go and measure it and make progress on it.”
+
+0:25:54.0 Because I mean, that’s probably one of the hardest parts of looking at the impossible stuff. And that is even one of the things that I think seems so impressive with a couple of the places brought up in there. Like, the Gates Foundation for example. They were established in I think it was 2000 or something like that when Bill and Melinda went and put $20 Billion into a foundation and told it to go, like, solve big problems.
+
+0:26:23.8 **Adam Garrett-Harris** Hmm.
+
+0:26:24.7 **Jason Staten** And they had to go through spending, it was a billion dollars a year was what they had to do, that was the one thing that was required out of them, but they wanted to be sure they were spending the money in the best places and so they had to know, were they even being effective in what they were going after?
+
+0:26:46.1 And so, like, one of the things that they wanted to do was increasing quality of life and they managed to find out that providing things like vaccinations was a huge thing for increasing the lifespan of people in areas. So I know that, like, Malaria is one of the things that they plan on targeting and so, like, the idea of, like, combatting mosquitoes and Malaria, like, just seems, I mean, I wouldn’t even know where to start on the thing and…
+
+0:27:17.9 **Adam Garrett-Harris** Yeah.
+
+0:27:19.5 **Jason Staten** And yet, I mean, I imagine, like, when they necessarily set they goal they weren’t like, “Oh yeah, of course. This all the things we need to do!” But you do have things that you can go and measure. Like, they talked about getting to a certain vaccination rate of, like, in 80% of areas, 90% of the people are vaccinated within them or something was the type of metric that they had seen before and so they went and took, like, the regional based approach.
+
+0:27:50.8 Kind of reflecting back on, I don’t know, Ara the Star Engineer where rather than solving, you know, counting all the stars in the sky instead working by galaxy or something like that where it’s like breaking the problem down and it’s very much in that same way where you do that then you still have, like, you build a metric based on that.
+
+0:28:10.9 So, yeah. Both Bill Gates and then also Bono talking about the one, like, it’s the One Foundation where they worked through eliminating debt from poor countries within the world and they talked about the process of helping out a lot of countries within Africa and one of the things that was a real shortcoming for them that they realized, and in part by John Doerr was, like, they were in a board meeting and John Doerr actually pushed to answer the question of, like, you know, “Who are you serving? Like, who are you trying to help?”
+
+0:28:47.8 And it was, you know, “People within Africa.”
+
+0:28:51.1  And John was like, “Well, do they have a place at this table?”
+
+0:28:54.8 And Bob was like, “Well, of course they do! We’re all here supporting them!”
+
+0:28:58.6 And he was like, “Well, there’s none of them here, though.” And so like-
+
+0:29:02.1 **Adam Garrett-Harris** (laughs)
+
+0:29:02.9 **Jason Staten** That was, like, one of those things that they worked through, actually established OKRs for it. It was like, within a certain period of time they wanted to go and get x number of representatives from the regions that they were actually trying to help so they could really be influential there and like, so, I don’t know if there are so many things in there that I liked.
+
+0:29:27.5 **Adam Garrett-Harris** That is amazing.
+
+0:29:28.2 **Jason Staten** Even from, like, those big initiatives like that down to even a place that I really hope could come to Salt Lake City sometime, it’s a company called Zoom Pizza.
+
+0:29:40.2 **Safia Abdalla** That sounds so intriguing.
+
+0:29:42.0 **Adam Garrett-Harris** Sounds delicious! I just had some pizza tonight and I could eat some more.
+
+0:29:46.1 **Jason Staten** Yeah. Like, I mean, the idea of, like, using automation to go and have trucks with robots in them that are baking pizzas, like, I mean they have ovens on the trucks that are going and delivering to you-
+
+0:29:59.5 **Adam Garrett-Harris** Yes!
+
+0:30:00.7 **Jason Staten** I mean, that sounds so awesome to have delivery that is fresh out of the oven rather than, I mean-
+
+0:30:07.0 **Adam Garrett-Harris** Mmm.
+
+0:30:07.4 **Jason Staten** 30 minutes? Like, a pizza after 30 minutes is not the pizza that is mouthwatering. I don't care how good your bag is, like, fresh out of the oven is just…
+
+0:30:17.6 **Adam Garrett-Harris** Yeah. That’s why I like those place that’s a take and bake place so I can take it home and make it in my own oven then it’s fresh.
+
+0:30:25.2 **Jason Staten** Yeah!
+
+0:30:25.8 **Adam Garrett-Harris** But if I didn’t even have to do the oven part…
+
+0:30:28.8 **Jason Staten** Exactly! Like, if you are, like, in a studio apartment that’s 175 square feet and you don’t have a full kitchen in it.
+
+0:30:37.3 **Adam Garrett-Harris** Yeah. Or if it’s the middle of summer and you don’t want to use your oven.
+
+0:30:40.1 **Jason Staten and Safia Abdalla** (laughing)
+
+0:30:41.1 **Safia Abdalla** Relatable!
+
+0:30:41.8 **ALL** (laughing)
+
+0:30:45.7 **Jason Staten** Yeah, you could still have a hot pizza.
+
+0:30:48.2 **Adam Garrett-Harris** Safia, how big is the apartment you’re moving to?
+
+0:30:51.5 **Safia Abdalla** Oh, well it’s not for sure that I’m moving into it. It was one of the ones that I was looking into. It was 175 square feet.
+
+0:30:57.6 **Adam Garrett-Harris** Okay, does it have an oven?
+
+0:30:59.4 **Safia Abdalla** Luxurious! No, but it has a microwave. (laughs)
+
+0:31:02.1 **Adam Garrett-Harris** Okay.
+
+0:31:05.1 **Safia Abdalla** It’s a major bachelorette pad.
+
+0:31:07.5 **Jason Staten** (laughs) Well maybe you can get robot-made pizza sent to you there.
+
+0:31:12.5 **Safia Abdalla** Yeah! It’s the future. We’ll all live in really tiny houses and get food delivered to us that’s cooked on the go.
+
+0:31:18.5 **Jason Staten** (laughs) Yes!
+
+0:31:20.6 **Safia Abdalla** (laughs)
+
+0:31:21.5 **Jason Staten** The future will be great.
+
+0:31:23.3 **Safia Abdalla** Yep, all with OKRs!
+
+0:31:25.0 **Jason Staten** All with OKRs, yeah.
+
+(Typewriter Dings)
+
+0:31:28.0 **Adam Garrett-Harris** This episode of BookBytes is sponsored by PluralSight.
+
+0:31:32.0 PluralSight’s the technology skills platform. You can see where your skills stand, master the latest technologies and show off your expertise. They’re currently hiring in Salt Lake City and Boston.
+
+0:31:43.9 I work at PluralSight and not only is the engineering culture amazing but the culture in general is amazing. It’s a place where people really live out the values. Our values of creating with possibility, being committed to something bigger, being accountable for excellence, seeking contact with intention and being our word drive everything we do.
+
+0:32:05.9 We work is small, cross-functional, autonomous teams. We encourage test-driven development, pair programming, and mob programming. We have a culture of continuous learning and we have book clubs and discussion groups.
+
+0:32:18.2 PluralSight was just named #9 Best Workplace and One of the Best Workplaces for Women by Great Place to Work.
+
+0:32:25.1 Want to work here? Visit PluralSight.com/Careers/Engineering to learn more. That’s PluralSight.com/Careers/Engineering.
+
+0:32:36.2 And for those listeners who would like to check it out you can DM @PluralSight on Twitter and they’ll send you a free trial code so you can login and check out PluralSight for yourself.
+
+0:32:46.3 And thanks to PluralSight for sponsoring the show.
+
+(Typewriter Dings)
+
+0:32:50.3 **Adam Garrett-Harris** So one of my skepticisms with this is how is it different from just setting goals? Because everyone knows about setting goals and it kind of sounds like OKRs is just another word for that? So I wonder if we could kind of differentiate it; and we may have said some of them but if we can, like, specifically list them out?
+
+0:33:12.0 **Jason Staten** Sure.
+
+0:33:13.1 **Safia Abdalla** A big one, I think, is setting ambitious goals so you’re intentionally not allowed to play it safe with your goals and not trying to set goals that you know you can reach.
+
+0:33:23.0 **Adam Garrett-Harris** Yeah.
+
+0:33:24.1 **Jason Staten** Yeah, that aspirational side is definitely a, it’s an uncomfortable part, like, they, I mean, even that, it’s been something I’ve been trying to think for myself is finding things, like, it’s hard to say like, what can I not achieve? But more, like, if I was freed up to do whatever or if, I don’t know, like, if nothing was standing in my way, like, what is that I wish to achieve? That kind of thing. That’s, I don’t know, that’s a hard thing to go and reflect on. And maybe that’s the whole point of the exercise.
+
+0:33:55.6 **Adam Garrett-Harris** And then, I guess, another thing is that within a company it’s transparent.
+
+0:34:00.6 **Jason Staten** Yeah.
+
+0:34:01.9**Adam Garrett-Harris** And it’s for the entire company. And then I guess, also you have the OKRs at the company level and then you probably also have them at the department level? And then maybe even under that, like, have OKRs for a specific team?
+
+0:34:15.5 **Jason Staten** Yeah, that’s one of the things that is also called out is that OKRs should be 50% top down and 50% bottom up. So there definitely needs to be direction from the leadership of the company so that way places are on the same page but there also should be some time for people who are on the front lines and actually doing the work to say, like, “These are actually the things that we can do and can measure.” And yeah, like you said as well, having the transparency level. Like it-
+
+0:34:49.7 **Adam Garrett-Harris** Okay.
+
+0:34:50.8 **Jason Staten** It doesn’t have to be going through a department. Like, a department can go and establish an OKR but also, like, I should be able to have visibility into what executives care about.
+
+0:35:01.8 **Adam Garrett-Harris** Yeah. Yeah, that’s definitely the experience I’ve had and the ones at the company level were a bit more vague and generic. They didn’t specifically mandate how to do it, what tools to use. Then more at the lower level you had more specific things that supported the OKRs above you.
+
+0:35:25.0 **Jason Staten** Yeah. I guess that’s the nice thing in that you can make decisions about what you’re still working on so it’s not just like everything is handed down to you but it does give you some backing to say, “I am working towards this OKR and I’m going to move this measurement or work towards moving this measurement that the company, as a whole, is intent on.”
+
+0:35:48.0 **Adam Garrett-Harris** Yeah, I think it’s really motivating and it helps you know that you’re contributing to the right thing.
+
+0:35:55.3 **Jason Staten** Yeah, definitely. And also, like, whether it’s at the top level or even being able to see peers, as well. So, if the two of you were also working either with me on the same team or with me within engineering, or even if we were in different departments that is also a place where there’s transparency to see if there’s overlap between us for any reason at all, it’s also something that-
+
+0:36:20.3 **Adam Garrett-Harris** Yeah!
+
+0:36:20.9 **Jason Staten** That we can align on.
+
+0:36:21.8 **Adam Garrett-Harris** I think it really helps with cooperation between different departments and different teams. You know you’re all working towards the same overall goals.
+
+0:36:30.5 **Jason Staten** I mean, yeah. You could see it because it’s out there and also there’s a level of accountability. Like, when it’s said that, like, if you write down a goal then you have, like, a, I don’t know, 40% greater chance of actually accomplishing the thing, just by writing the thing down.
+
+0:36:48.2 And then by exposing that goal to other people you raise that percentage even more just by having other people aware of it. So if you’re going and listing objectives and knowing that everybody else can see it, like, that can be a driving thing, or hold yourself accountable.
+
+0:37:08.0 **Adam Garrett-Harris** Yeah. So, and then I think another thing that differentiates it from goals is the fact that there are objectives and then beneath each objective are key results. ‘Cause in the TED talk it was saying the objectives are kind of like the “what”, they answer the question “why?” and then the key results are the “how”.
+
+0:37:28.1 **Jason Staten** Mm-hmm (affirmative).  Yeah, that’s… That’s to define, like, separation but they, the key results also do state that like, if you complete all of these key results then you have completed the objective.
+
+0:37:42.7**Adam Garrett-Harris** Oh, okay.
+
+0:37:44.0 **Jason Staten** It’s so, at least in terms of your definition, like, if your set of key results under one objective don’t accomplish that then it means that you were kind of off in creating those, which isn’t necessarily bad. It just means that you need to go and reassess.
+
+0:38:03.3 **Adam Garrett-Harris** Maybe you were missing some key results?
+
+0:38:05.2 **Jason Staten** Right.
+
+0:38:06.6 **Adam Garrett-Harris** Or you pick the wrong ones.
+
+0:38:08.4 **Jason Staten** Yeah, that’s the retrospective side of things.
+
+0:38:10.6 **Adam Garrett-Harris** And then another thing in the TED talk that was really good, it said, it listed some characteristics of good objectives. They’re significant, concrete, action-oriented, and inspirational.
+
+0:38:24.5 **Jason Staten** That’s a lot of marks to hit.
+
+0:38:26.0 **Safia Abdalla** (laughs)
+
+0:38:26.0 **Adam Garrett-Harris** Yeah! And then it also said that they’re a vaccine against fuzzy thinking? And I have definitely fallen in this trap of fuzzy thinking where I think, “You know, I have aspirations. I haven’t defined what they are necessarily, but I have aspirations and I’ll probably hit them.”
+
+0:38:45.3 **Jason Staten** So you could say you aspire to have aspirations?
+
+0:38:48.3 **ALL** (laughs)
+
+0:38:49.2 **Adam Garrett-Harris** Yeah. But objectives, when you’re specific and you make sure they are significant, concrete, action-oriented, and inspirational; you have key results beneath those that are exactly how you’re going to achieve that, that’s definitely a vaccine against fuzzy thinking.
+
+0:39:06.3 **Jason Staten** They also work as a way of giving meaning to what you’re measuring, as well. John discusses the comparison between key result and a KPI, a key performance indicator. He refers to them as numbers without soul or context.
+
+0:39:22.2 **Adam Garrett-Harris** (laughs)
+
+0:39:22.1 **Safia Abdalla** Oh wow.
+
+0:39:23.6 **Jason Staten** Yeah. He’s pretty rough on them and I think it does make sense though, because how many times have you been in a place where you’ve measured something that doesn’t really have a lot of impact. Like, they can be kind of cool but, like, what are you getting at? Like, sometimes things like GitHub’s commit rate where, you know, you fill the little green boxes? Where sometimes you can assign or attribute more meaning to those things than is necessary.
+
+0:39:54.7 **Adam Garrett-Harris** Yeah. Absolutely. It’s kind of like, “What’s an easy thing to measure? Oh! I know, this thing has a number already.” Number of followers or…
+
+0:40:05.3 **Jason Staten** Right.
+
+0:40:06.2 **Adam Garrett-Harris** Or you have commits on certain days. Lines of code written.
+
+0:40:10.5 **Jason Staten** Yeah. Yeah. On its own it’s not that valuable. I mean, if your objective though is, say, I think you interviewed him a while back, Jake Lingwall. He worked at Domo for a while and he is -
+
+0:40:25.9 **Adam Garrett-Harris** Yeah.
+
+0:40:26.7 **Jason Staten** A published author that is kind of local to here and in November, I think it is, he gets into a self commitment to everyday in November to write, like, is it 2,000 words a day? Is it… I don’t know, It’s something like that.
+
+0:40:45.3 **Adam Garrett-Harris** Yeah, it’s called “NaNoWriMo”.
+
+0:40:47.3 **Jason Staten** Yeah.
+
+0:40:48.3 **Adam Garrett-Harris** Do you do that, Safia?
+
+0:40:49.1 **Safia Abdalla** Yeah.
+
+0:40:49.2 **Adam Garrett-Harris** Yeah. So you do it?
+
+0:40:51.5 **Safia Abdalla** I attempt to. (laughs) It is quite difficult, it’s a lot of words. It’s about 50,000 words in a month is I think the rate you’re supposed to go for.
+
+0:41:01.6 **Jason Staten** Yeah, and so with that, that is actually a case where measuring wordcount is, like, that is your key result because you intend on something. Like, becoming a better writer or instilling a habit.
+
+0:41:17.2 **Adam Garrett-Harris** Yeah, that’s valuable because you get an entire first draft of a book instead of rewriting the first chapter over and over.
+
+0:41:24.4 **Jason Staten** Yeah. That is something, but you’re defining the what before you’re doing that. Like, you’re not just measuring your words then trying to go backwards and assign meaning to it, but in the flip of you’re saying, like, “This is what or why I want to do this thing.” And then you keep track of it in order to hold yourself accountable and to know, like, you did it or you didn’t.
+
+0:41:46.6 **Adam Garrett-Harris** Oh, and I just found for, in my notes, characteristics of good key results. They’re specific and time-bound; aggressive, yet realistic; and they’re measurable and verifiable.
+
+0:42:01.7 **Jason Staten** Mm-hmm (affirmative).
+
+0:42:02.6 **Adam Garrett-Harris** So. That “aggressive, yet realistic”, that’s kind of a hard balance.
+
+0:42:07.4 **Safia Abdalla** Yeah, it requires, like, a lot of introspection and I guess experience with OKRs in particular which I think is, one of my experiences with them is there’s this kind of, like, the ramp on to an OKR, set up is really hard but I feel like, maybe, once you’ve kind of used them for a while you’ve developed the intuition to work with them effectively.
+
+0:42:27.5 I guess as is the case with most things.
+
+0:42:30.7 **Adam Garrett-Harris** Yeah. So, Jason, do you know if any people use this for their personal goals and not just within a company?
+
+0:42:40.0 **Jason Staten** I would imagine that you could do at a personal level and potentially you could go and make them more or less transparent. There is a… actually, speaking on it, a person that I can think of that I don’t know him specifically. I think his name is Drew DeVault and he runs the website SourceHut, or SR.HT,  which is a set of developer tools. And one of the things that he does with that site is he tries to have quarterly financial transparency with the visibility of, like, how much money he’s bringing in through donations because SourceHut is built entirely open source, and he works on a couple of other open source projects as well, and his goal was to become financially independent based on open source. Or like, to not need outside appointment other than doing open source work and instead being able to live on donations.
+
+0:43:45.4 And he made that clear of where he was at and you could see how close he was getting to being able to do it and actually, I am on his mailing list for SourceHut and he brought up that he was able, at one point, to be able to move 50% of his time, so be able to stop working half time and instead focus on open source work and I think now he’s actually managed to make it to being able to work full time on open source work and I think it’s been, I mean, probably motivating for him to go and see it but also, I think by him actually showing those numbers, sometimes that can actually motivate people to go and donate. Where it’s like, “Oh! It’s so close!” Or, it’s amazing to see people surviving on this, like, doing a service and actually making a way on open source.
+
+0:44:39.3 **Adam Garrett-Harris** Yeah. Yeah so I haven’t specifically been doing OKRs personally but this quarter I kind of set some quarterly goals. It was kind of an overarching theme with some specific stuff under it so it’s kind of like OKRs, but one of the things that has been really helpful for me that’s different than I’ve ever done in the past is I read them everyday.
+
+0:45:04.4 **Jason Staten** Hmm.
+
+0:45:05.2 **Adam Garrett-Harris** So I think it’s really easy-
+
+0:45:06.4 **Safia Abdalla** That’s a really good idea.
+
+0:45:06.4 **Adam Garrett-Harris** Really easy to forget what they are and let them just drop to the back of your mind.
+
+0:45:11.6 **Safia Abdalla** I love that idea.
+
+0:45:13.3 **Adam Garrett-Harris** Yeah, so I just have a recurring task everyday that links to the note.
+
+0:45:17.9 **Jason Staten** That is a great idea.
+
+0:45:19.2 **Safia Abdalla** Yeah, I’m going to steal it for sure. (laughs)
+
+0:45:22.1 **Jason Staten** Oh, yeah.
+
+0:45:22.2 **Adam Garrett-Harris** And it’s not my idea. I heard it on the You Need A Budget podcast and he heard it from someone else, he doesn’t even remember who.
+
+0:45:30.3 **Safia Abdalla** Well thank you to the originator of that idea.
+
+0:45:33.7 **ALL** (laughing)
+
+0:45:34.0 **Safia Abdalla** ‘Cause it’s really awesome. I feel like it’s good to remind yourself especially in goals that are very ambitious to kind of bring it back to what you’re doing on a day to day basis otherwise they just become this, like, daydream that you’re not really pursuing. Or you’re not really tied to anymore if you get what I mean.
+
+0:45:54.4 **Adam Garrett-Harris** Yeah, I’ve found that just having them at the front of my mind just kind of makes them happen more often because I’m thinking about them, reading them everyday, and you know, when I’m, kind of, looking at my to-do list I’m like, “Okay, what… what am I doing to accomplish one of these things that I’ve been reading everyday?’
+
+0:46:16.1 **Jason Staten** That actually relates to another, there was actually a second part in the book and I don’t think we have to get way too far into it because of timeframe but there’s part two of the book called “The New Work” and they talk about, kind of, continuous performance management, or they refer to it as conversations, feedback, and recognition. So, CFRs. And basically, it’s kind of boils down to having one-on-ones and so rather than having annual performance reviews where you’re like, “Did you accomplish your goals? Well, do you remember what your goals are?” (laughs)
+
+0:46:57.3 **Adam Garrett-Harris** (laughs)
+
+0:46:57.3 **Jason Staten** And, like, “Oh, well it looks like you did them or it looks like you didn’t.”
+
+To a more of a model where you are having regular meetings with your managers on, like, what your goals are in a number of cases whether it’s setting your goals, progress updates on things you’re doing, it talks about having two-way coaching so both you receiving feedback from your manager on, like, you’re doing this well and you’re moving the needle and likewise pushing back up to your manager, just saying, like, “I’m not getting clear signal from you.” Or, “I need this from you.”
+
+0:47:33.2 And talking about overall career goals and then, also, finally, performance reviews but doing that on a small scale on, like, “I think you’re doing well right now.” Or, like, “You just accomplished this thing, so great job!” Versus, like, extending that out to a full year’s worth of time.
+
+0:47:51.2 **Adam Garrett-Harris** In a year you can really get surprised and kind of blindsided by how your manager’s actually thinking you’re doing.
+
+0:47:58.2 **Jason Staten** There's a definite bias, too. Where if it’s just toward the end of the year and you know that you have performance reviews coming up in the next couple of months you’re probably going to step it up a little bit more.
+
+0:48:11.1 **Adam Garrett-Harris** Yeah.
+
+0:48:12.3 **Jason Staten** So, by having it be continual, like, you can give signaling to say, “Hey, I”m not content with where I’m at and I need change.” And your boss can be, like, likewise going back to you and saying, “You need to work on this.” Or, “You’re doing really well with this.” And also being like, “These are your goals, how are those going?”
+
+0:48:33.2 And so, like you said with yours, kind of keeping those things top of mind rather than something that you wrote down once and then revisit a year later to be like, “Oh yeah, I had set that resolution!”
+
+0:48:44.7 **Adam Garrett-Harris** Yeah.
+
+0:48:45.4 **Jason Staten** And I yet did nothing towards it. So, yeah. That’s an awesome approach to doing that. I did have one other thing that I wanted to bring up that might be worth talking about.
+
+0:48:58.0 **Adam Garrett-Harris** What is it?
+
+0:48:58.9 **Jason Staten** And maybe we have to figure out later. It is OKRs for the BookBytes Podcast. It’s, uh, yeah.
+
+0:49:03.4 **Adam Garrett-Harris** Oh! Yeah.
+
+0:49:06.3 **Safia Abdalla** Oh!
+
+0:49:06.8 **Jason Staten** Like, I mean, that is something that maybe we can come up with here, maybe we have to wait a little bit and reconvene on it because, I mean, John Doerr does say, like, an OKR that you came up with in five minutes is probably not a great one.
+
+0:49:20.4 **Adam Garrett-Harris** Hmm.
+
+0:49:21.4 **Jason Staten** It should take a little bit of churning.
+
+0:49:22.5 **Adam Garrett-Harris** Yeah, and I’m a big fan of each person individually going and coming up with ideas rather than brainstorming as a group-
+
+0:49:31.2 **Jason Staten** Yeah.
+
+0:49:32.1 **Adam Garrett-Harris** Because you can really, like, dig in-
+
+0:49:34.0 **Safia Abdalla** Yeah.
+
+0:49:34.0 **Adam Garrett-Harris** To it on your own.
+
+0:49:35.5 **Jason Staten** Yeah.
+
+0:49:36.1 **Adam Garrett-Harris** And then come together and you’ve, you can have a really good discussion because you’ve thought about it yourself.
+
+0:49:41.2 **Jason Staten** Yeah. So, I don’t know, maybe we should break with the objective of setting goals for BookBytes and a key result is each person comes back with one OKR that they can recommend to the group.
+
+0:49:57.2 **Adam Garrett-Harris** I like it.
+
+0:49:57.6 **Safia Abdalla** I’m down with that.
+
+0:49:59.0 **Jason Staten** It’s a meta goal. (laughs)
+
+0:49:59.9 **Adam Garrett-Harris** (laughs) It’s like a placeholder OKR.
+
+0:50:03.9 **Jason Staten** That’s actually something that even John talks about in the book is when he initially met with Google, like, he did objectives on that first day and it was to convince Google Leadership to agree to accept OKRs or to onboard it and one of them was to finish his presentation on time, be exactly 90 minutes and get leadership to approve a 3-month test of the program. And so, like,  it was very much a meta-type goal where he, and he told them! He was like, “This is my goal today. Like, this is my OKR for the day.”
+
+0:50:36.6 And so, like, he was very specific and so he used it as an example to actually progress bringing those things on.
+
+0:50:42.4 **Adam Garrett-Harris** Nice! And I like how Larry and Sergey agreed to it because they really didn’t have any other system in mind.
+
+0:50:49.4 **Jason Staten** Yep. (laughs)
+
+0:50:51.5 **Adam Garrett-Harris** (laughs) All right. Well that sounds like a plan and maybe we’ll do a follow up on a, well, maybe not “maybe”, maybe one of the key results is that we do a follow up on a future episode.
+
+0:51:03.3 **Safia Abdalla** Yeah.
+
+0:51:04.6 **Jason Staten** Yes.
+
+0:51:05.1 **Adam Garrett-Harris** Okay.
+
+0:51:06.1 **Safia Abdalla** Yes.
+
+0:51:07.6 **Adam Garrett-Harris** Okay, cool. Thanks for listening. I hope you liked this episode. Let us know that you thought of this new format of just one of us reading the book and talking about it. You can tell us on Twitter @BookBytesFM and I’m @AGarrHarr, Safia is @CaptainSafia, and Jason is @StatenJason. And also, we’re now on spotify if that’s a place where you like to listen to podcasts you can check out there.
+
+0:51:36.8 **Safia Abdalla** Whoo!
+
+0:51:37.4 **Jason Staten** Nice!
+
+0:51:37.9 **Adam Garrett-Harris** Yeah! And, as always, transcripts will be at orbit.fm/bookbytes. See you next time.
+
+0:51:44.3 **Jason Staten** Bye.
+
+0:51:45.3 **Safia Abdalla** Bye, everyone!
+
+(Exit music: Electro swing)
