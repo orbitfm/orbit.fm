@@ -34,7 +34,7 @@
 
 0:01:06.7 **Adam Garrett-Harris** And what are you doing?
 
-0:01:07.6 **Safia Abdalla** I’m working there as a software engineer on the Azure Notebooks team which is Microsoft’s Jupiter Notebooks offering.
+0:01:07.6 **Safia Abdalla** I’m working there as a software engineer on the Azure Notebooks team which is Microsoft’s Jupyter Notebooks offering.
 
 0:01:15.7 **Adam Garrett-Harris** Very cool.
 
