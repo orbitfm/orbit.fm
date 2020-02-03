@@ -49,7 +49,7 @@ const Title = ({ title }) => (
     <ul>
       <ListLink to="/about/">About</ListLink>
       <ListLink to="/shows/">Shows</ListLink>
-      <ListLink to="/sponsors/">Sponsors</ListLink>
+      <ListLink to="/sponsor/">Sponsor</ListLink>
     </ul>
   </TitleContainer>
 );
