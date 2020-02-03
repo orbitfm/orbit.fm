@@ -1,0 +1,561 @@
+﻿(Intro music: Electro swing)
+
+0:00:12.5 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. We’re reading “Radical Candor” by Kim Scott and today we’re going over Part One which is titled “A New Management Philosophy.” I’m Adam Garrett-Harris.
+
+0:00:24.9 **Jen Luker** I’m Jen Luker.
+
+0:00:26.6 **Jason Staten** And I’m Jason Staten.
+
+0:00:28.7 **Adam Garrett-Harris** So this book is in two parts and, Jen, you suggested splitting it up. The second part is all about tools and techniques for managers. The first part is, I think, more about what the title was all about, radical candor. So first, I wanted to talk about who has read it and what you think about it.
+
+0:00:49.8 So I read it recently and I definitely really liked Part One. Part Two didn’t feel quite as applicable because I’m not a manager but there’s definitely a lot of stuff to get out of it from both parts whether you’re a manager or not.
+
+0:01:11.4 **Jen Luker** So I have completed Chapter One because life, and two speaking events happening soon, and one that just passed, and other things, life. Anyway, so, point being I’ve read Chapter One so most of mine is going to be sharing my favorite stories and listening to the stories that you share and asking lots and lots of questions; and I want to slightly, partially disagree with you that it’s not applicable to you even as a non-manager because oftentimes the managers learn how to be managers from the people they manage. So what you learn in this book doesn’t just teach you how to be a manager, it teaches you how to be a good member of a team.
+
+0:02:00.1 **Adam Garrett-Harris** Yeah, I’m glad you said that because I really struggled with that, trying to make it applicable to myself. What about you, Jason?
+
+0:02:07.6 **Jason Staten** So I have gone and read the whole thing, I think one and a half times-ish over the course of the past couple of months and so my notes actually wind up scattering across part one and two, so I apologize on that front if I give out spoilers.
+
+0:02:28.0 **Adam Garrett-Harris** (laughs)
+
+0:02:29.0 **Jason Staten** And also, I am pretty sure, Jen, that even though you only read Chapter One that you probably have well more notes than I do because it sounds like you’ve marked up the thing like wild and-
+
+0:02:41.9 **Jen Luker** Oh, yes.
+
+0:02:42.9 **Jason Staten** You sound pretty excited to go through some of this stuff and I would agree with you. It is definitely an excellent read regardless of whether you are a manager or not, or in a, kind of weird, in-between role, like I’m at right now. So I really liked it even from that standpoint to see how it could apply to me.
+
+0:03:06.8 **Adam Garrett-Harris** Yeah, I definitely think one of the things that’s good for anybody to read is the radical candor framework, which we’ll get into, and then the part about giving and receiving feedback because one of the roles of the managers is to encourage feedback amongst their team members. So everyone should be giving or receiving feedback all of the time.
+
+0:03:34.0 **Jen Luker** Awesome. So with having only read the introduction I’m going to start, well the introduction and the first chapter, I kind of want to start there. Have any of you ever had the very, very first line of this book, the boss that she had, the, “I once had a terrible boss, a person who thought that humiliating people was a good way to motivate them”?
+
+0:03:55.9 **Adam Garrett-Harris** Yes, I have.
+
+0:03:58.2 **Jen Luker** Those bosses suck.
+
+0:04:01.8 **Jason Staten & Adam Garrett-Harris** (laughs)
+
+0:04:03.2 **Adam Garrett-Harris** Yeah, I mean, in… She, I think she describes herself as a terrible boss in the introduction, is that right?
+
+0:04:10.5 **Jen Luker** Yes, she does-
+
+0:04:12.3 **Adam Garrett-Harris** Um, so I think there’s-
+
+0:04:12.9 **Jen Luker** For a whole bunch of good reasons.
+
+0:04:14.4 **Adam Garrett-Harris** So I think there’s varying reasons why someone might be a terrible boss. For her, in the story, she didn’t give feedback soon enough and ended up having to fire somebody.
+
+0:04:26.7 I’ve had a boss that was, anybody could look at and immediately say, “terrible boss.” I worked at this place for two years and felt like there was nowhere else for me to go ‘cause I was straight out of college, there weren’t a lot of development jobs in this town, and he would just yell at us. And my supervisor had been there for years before me and he told me about stories where he cried. I felt like crying, I ended up breaking down one day after two years and calling my wife and just begging and asking her if I could quit, ‘cause I didn’t have anything else lined up and she was just a teacher.
+
+0:05:10.0 **Jason Staten** Was it yelling in a way that was trying to, maybe in the boss’ perception, trying to motivate you? Or, I mean, I guess, looking at the four quadrants, like, what do you think it would actually put the boss within? I mean, the four, I guess, going over them being the Radical Candor, and the Ruinous Empathy, Manipulative Insincerity, or Obnoxious Aggression?
+
+0:05:40.9 **Adam Garrett-Harris** Uh, this was definitely Obnoxious Aggression. He would just tell you what he thinks and… I don’t know, he just, he had a lot of pet peeves and he was micromanaging and never trusted me and he wanted his questions answered in a certain way. So I could never answer a question as, “I don’t know.” That was always really bad. You would have to say, “I’ll look it up.” I mean, if you said, “I don’t know.” You’d have to immediately follow it up with, “but I will.” I mean, he would… it was scary.
+
+0:06:24.6 **Jason Staten** It almost sounds borderline manipulative insincerity in that like, the care factor doesn’t really seem like it’s there. I mean, I guess, it’s very dependent on the person’s perception but, I mean, when you are actively scared and they’re just doing it because they are trying to meet their own, like, whatever requirements are necessary for answering that question, then they’re not really caring about you and they’re more self concerned with, like, this is the way that my team needs to operate rather than focusing on getting you to improve as a person or a developer.
+
+0:07:08.0 **Adam Garrett-Harris** Right, yeah. And when I left, he asked what I was going to do and I said I was going to freelance and he said, “Good, ‘cause that’s all you’ll ever be able to do.”
+
+0:07:17.0 **Jen Luker** Ouch!
+
+0:07:19.0 **Adam Garrett-Harris** Yeah.
+
+0:07:22.2 **Jen Luker** You’re like, you know they make so much more money than those that don’t, right? (laughs)
+
+0:07:26.6 **Adam Garrett-Harris** Yeah, they can.
+
+0:07:28.3 **Jen Luker** So, you know, just throwing that out there.
+
+0:07:34.8 **Adam Garrett-Harris** So…
+
+0:07:36.1 **Jen Luker** Oh, brutal. Yeah, no. I have long, and many fun stories that I will not share all of here, but I have some, real fun ones. I had a boss once tell me that I wasn’t allowed to go home and feed my kids because as a single mother of three kids under 10, because that was the agreement my family made when I decided to leave the kitchen and go to work.
+
+0:08:09.7 **Adam Garrett-Harris** Hmm.
+
+0:08:11.6 **Jen Luker** When everyone, he’s like, “Just call your wives and tell them you won’t be home tonight.”
+
+0:08:14.8 **Adam Garrett-Harris & Jason Staten** (laughs)
+
+0:08:18.3 **Jen Luker** Like, “I have to go home, I have three kids.”
+
+0:08:20.9 He’s like, “No, you don’t. That was the agreement that they all made when you decided to leave the kitchen and go to work.”
+
+0:08:27.4 **Adam Garrett-Harris** Wow.
+
+0:08:28.4 **Jen Luker** So, that’s one I’m going to share for this conversation.
+
+0:08:36.2 **Adam Garrett-Harris** Yeah.
+
+0:08:36.7 **Jen Luker** So-
+
+0:08:37.9 **Jason Staten** But don’t-
+
+0:08:38.2 **Jen Luker** It can be… (sighs) you know, not... not good bosses. That’s definitely a thing. The way that she described herself as not being a good boss, like you said, was not giving feedback, but it was to the point of ruinous manipulation in this sense in that she cared so much about his feelings that she didn’t give feedback and she didn’t ask for feedback and when she did finally sit down after 10 months and fire him because other people were having to pick up the slack nobody else told him what was going on, those were his two big questions: Why didn’t you tell me? Why didn’t anyone else tell me? I thought you all cared about me.
+
+0:09:15.0 You know, and at that point, what do you say to that, you know? It’s like, you had 10 months to try to start correcting situations. You had 10 months to try to set proper expectations and you cared so much about someone’s feelings, or how they may take something, that they’re now sitting here having wasted 10 months of their life. And she said that the company that she’d founded failed like right after this because it wasn’t just too late for him it was too late for the entire company.
+
+0:09:49.3 **Adam Garrett-Harris** Hmm.
+
+0:09:49.9 **Jen Luker** You know? So it’s not just, you know, when she talks about radical candor it’s not just caring about people’s feelings, it's about caring about people’s feelings enough that you’re willing to be the bad guy.
+
+0:10:02.9 **Jason Staten** She says that that’s actually a really strong tear between what we should be doing versus what we were taught as kids where if you don’t have anything nice to say, don’t say it at all, which can sometimes give us a great deal of hesitation because what you say in the moment might ruffle somebody’s feathers. It might make somebody not have a response that’s a smile and a thank you, but it very well may be the thing that that person needs to hear.
+
+0:10:35.6 **Jen Luker** You know, and I tend to be that type of person where I will get angry and upset and inside and go quiet because I’m just, I’m dealing with the feeling of that feedback, you know? But at the same time, after I sit with it for a minute, I know you’re right and I know I needed to hear it, and I know I needed that, I needed that level of correction. But it can still hurt, even as someone who’s receiving that and I think that the fear of being the person to cause that pain can really lead to managers handling things differently and not necessarily better.
+
+0:11:16.9 **Adam Garrett-Harris** Yeah, I think it’s all too common to not give feedback because it’s so hard to do it. There’s a quote in the book that says it’s brutally hard to tell people when they are screwing up.
+
+0:11:30.2 **Jen Luker** I find walks are good for that.
+
+0:11:31.6 **Jason Staten** That is one of then things in the second part of the book, Jen. Are you sure you haven’t read this? Where it says, “Walk, don’t sit” is one of the sections in there and I love it.
+
+0:11:44.5 **Jen Luker** I actually, though I had never read the book myself, I worked for a company where they advocated for it and a lot of the managers had read it and it was part of our discussions and communications which meant that it was, like, my favorite place to work and it’s still highly ranked up there as one of my very, very favorite places to work and some of the very best bosses I’ve ever had and some of the most difficult experiences I’ve had because it’s also the first time that I got to be a boss and I was the one had to start having those conversations and having those moments of radical candor, essentially, where I had to tell someone, “We’ve been lenient, but enough is enough. You need to step up.” And that’s not usually something that I’m prone to do. I tend to be very, very conflict avoidant.
+
+0:12:40.6 **Adam Garrett-Harris** Yeah, I am, too.
+
+0:12:42.6 **Jen Luker** It took my boss doing something very specific to, kind of, change that. One of the things he said is he declared a safe space and it sounds silly when you say it that way, but it’s genuinely what he did. He just kind of, sat us in the office and said, “Look, this is a safe space. I’m going to say things, you’re going to say things, some of these things may hurt, but they don’t have to hurt. This is the place where we are going to set ourselves aside and look at situations objectively and see what we can do to handle them better next time. We’re going to look at them and pick them apart and figure out how we were supposed to experience them.” 0:13:18.9 And that changed… a lot about how I looked at difficult conversations, and crucial conversations, as I mention that book a lot, and… In this sense, you know, radical candor, being able to sit down with someone and tell them the hard truth, but be able to do it in a way that says, “This is a safe space. We need to step back from ourselves and look at something that happened.”
+
+0:13:45.8 **Jason Staten** Mm-hmm (affirmative).
+
+0:13:45.8 **Jen Luker** And that ended up resulting in a lot less conflict by being able to get those things out than it did by avoiding the conversations or stepping about the issue which always lead to confusion which always leads to conflict because people didn’t understand where they stand or what was supposed to happen.
+
+0:14:06.3 So that was kind of a life-changing moment for me. That, and realizing that when I go for a walk during a difficult conversation I don’t have to look my boss in the face, and vice versa, they didn’t have to look me in the face and we could have these conversations without what can sometimes be very scary eye-to-eye contact.
+
+0:14:28.3 **Adam Garrett-Harris** Yeah, and one thing I’ve learned from some foster care training as well, is that one of the best places to have talks with your kids is in the car when you’re driving and you don’t have to look at each other.
+
+0:14:39.4 **Jen Luker** That’s where I have all the good conversations. (laughs) I’m like, “You’re trapped in this car with me, there’s nowhere you can go, and we’re going 80 miles an hour down the freeway.”
+
+0:14:47.6 **Adam Garrett-Harris** (laughs)
+
+0:14:48.5 **Jen Luker** Ahem, excuse me, 70 miles an hour.
+
+0:14:49.4 **Jason Staten** (laughs)
+
+0:14:51.0 **Adam Garrett-Harris** (laughs) “Excuse me…” Yeah. So, I really like the story about Bob who we’ve kind of danced around where he turned in some mediocre work and she didn’t tell him. She, in fact, kind of, told him that it was good because she told him that it was a good start and she thought it would be easier just to fix it herself. It’d be faster, it’d be easier than sitting him down, teaching him how to rewrite it.
+
+0:15:18.3 And then, like, he knew it was bad work. Everyone knew it was bad work.
+
+0:15:23.9 **Jen Luker** That’s the thing that gets me, right there. Is that he, even turning it in, he knew. He had that look in his eye, the sorry smile, he knew it was bad work and she said it was good enough, you know, for a start even. And though that doesn’t say, “Yes! It was great work, that was good work.” It’s like, “Eh, it was a good start.” You know, at least, it made it acceptable.
+
+0:15:43.6 **Adam Garrett-Harris** Yeah, and I think it depends on who you’re talking to how much, if you give them a little good feedback they might just really latch onto that good feedback and think it was great work.
+
+0:15:56.4 **Jen Luker** I mean, not just that but if that’s the only feedback you ever gave?
+
+0:15:59.5 **Adam Garrett-Harris** Right.
+
+0:16:00.6 **Jen Luker** Then that’s the only thing that you’re going to have to latch onto or to recognize yourself with, or anyone else with is that, that was the only feedback that he ever got.
+
+0:16:10.9 **Adam Garrett-Harris** But then he started realizing that he could get away with bad work and that just became what he did. And then what starts to happen is you start to feel resentment towards this person and eventually you no longer, one of the quotes from the book says, “You no longer think the work is bad, you think the person is bad.”
+
+0:16:32.8 **Jen Luker** And not only that, but because of the fact that his work wasn’t up to par, not only was she stepping in to take care of it, but so were her team members. They started kind of covering for him and staying up late, sometimes all nighters doing the work, and they were already overloaded with their own work. So work that they used to do well started to get sloppy, too. So not only did his work negatively affect the one thing he did, it negatively affected the work of the entire team.
+
+0:17:05.6 **Adam Garrett-Harris** Mm-hmm (affirmative).  And this person was probably capable of really excellent work but because of the expectations put on him, or the miscommunication of expectations, he just didn’t do good work. They could have turned it around.
+
+0:17:25.9 **Jen Luker** So the line here says, “By failing to confront the problem I’d removed the incentive for him to try harder and lulled him into thinking he’d be fine.”
+
+0:17:34.2 **Adam Garrett-Harris** Yeah.
+
+0:17:34.9 **Jason Staten** On top of it, the compliments that she seemed to give were ones that were very vague and it wasn’t… Even that was not direct praise and, she touches on it as well in the part of the book where she mentions that with your praise you also need to be very clear and explain and justify why you’re giving somebody praise.
+
+0:18:05.6 Like, rather than saying to somebody, “You’re a genius!” And instead going and taking the approach of, like, “In this presentation, you talked about our decision to move towards having greater diversity. It was persuasive because you showed everyone you heard one, like, you had heard the other point of view.” Like, it was very specific as to what the praise was for, therefore that person could, like, continue to do that thing or improve on that one thing that they’re excelling at. And to say, “Yeah, you’re doing well.” Or, “That’s a good start.” Like, that tells them nothing or gives zero direction and so, I mean, there’s nothing that Bob could particularly do because there was zero direction given to him from the get go.
+
+0:18:57.5 **Jen Luker** And I hate to, okay, nevermind, I’m totally going to do this, alright?
+
+0:19:00.4 **Adam Garrett-Harris** Do it.
+
+0:19:00.6 **Jen Luker** When you’re training dogs you have to, again, be very specific about when you give those treats. If you give a treat because you kind of feel sorry for the fact that they haven’t done the thing that you kept asking them to do, then you’re just confusing them. They realize that, you know, they don’t know. They don’t know when they’re going to get a treat. They just know that they’re going to get one eventually. And so they don’t ever adopt behavior that you want for them to adopt, essentially. So, if you want them to sit, you want them to be calm, don’t give them a treat until they do that.
+
+0:19:34.2 I mean, sometimes they may finally do that just because they haven’t gotten a treat before and they’re finally bored and they finally sit down and, good enough! “Here’s your treat. You finally sat down.” But the point is, it’s, like you said, it’s extremely specific. You only give it to them in these certain instances and it’s because you’re training one specific behaviour.
+
+0:19:51.2 And I’m not saying that people are just dogs and need to be trained, but I am saying that the way that we’ve learned to communicate with animals, and the way that we’ve learned to communicate with children, and the way that we’ve learned to communicate with each other, is very specifically based on human instinct and it’s all kind of based on that reward system.
+
+0:20:14.8 So, even though you may have to tell them their work is terrible, you know, you wouldn’t praise a child for throwing a knife.
+
+0:20:24.2 **Adam Garrett-Harris** (laughs)
+
+0:20:27.6 **Jen Luker** You know? You would tell them never to do that again and punish them in some form or fashion.
+
+0:20:32.4 **Adam Garrett-Harris** Yeah, you would be okay with scaring them.
+
+0:20:33.8 **Jen Luker** There’s-
+
+0:20:34.3 **Adam Garrett-Harris** You’d be okay with making them cry.
+
+0:20:37.1 **Jen Luker** Yeah! Like, sometimes it’s so serious you definitely need to, like, make an impression. And I’m not saying you belittle them and tortue them and hit them and whatnot, that’s not the way to do it either. Like, that falls very much into, you know, fear tactics and not, you know, prevention, I guess. Learning a lesson, having that discussion. So, you know, but you do want to reward something.
+
+0:21:08.5 **Adam Garrett-Harris** And there’s a whole section in Part Two about crying.
+
+0:21:12.3 **Jen Luker** Oh! Well I got that part covered! (laughs)
+
+0:21:15.7 **Adam Garrett-Harris** (laughs)
+
+0:21:16.9 **Jason Staten** (laughs) Uh-
+
+0:21:18.8 **Jen Luker** Oh, there’s nothing worse than, like, just breaking down, absolutely sobbing, and we’re not talking, like, little tears. We’re like, ugly-face crying with snot, like, in a glass room.
+
+0:21:31.5 **Adam Garrett-Harris** Ooh!
+
+0:21:32.3 **Jen Luker** In the middle of the floor with four departments all looking at you. (laughs) We got crying covered.
+
+0:21:41.8 **Adam Garrett-Harris** Yeah.
+
+0:21:42.5 **Jason Staten** (laughs)
+
+0:21:43.1 **Jen Luker** But, you know, so I just, that’s kind of my point there is the fact that you don’t let the bad behavior go, and we don’t do that with our pets, we don’t do that with our children, we don’t do that with our friends, most of the time, either. Why would we do that with our employees, or our bosses, or our coworkers?
+
+0:22:02.8 **Jason Staten** She gives a really good example of when she was working at Google with Sheryl Sandberg as her boss and there is a scenario where she gave a presentation to Larry and Sergey in a meeting and had some numbers that actually piqued their interest. And so, overall, the presentation she would consider to have been pretty successful because her message seemed to get across pretty well to them.
+
+0:22:29.3 And after the meeting she steps out and Sheryl Sandberg mentions to her, “Could you walk to me-” Or, “Could you walk to my office with me?” Or, “Can I walk you to your office?” I don’t remember which way was which. Either way, they’re walking during it. And Sheryl says, like, at that point, Kim knew that Sheryl had some feedback to share that was maybe not stellar. And Sheryl pointed out that between every other word Kim would say “Um” between things and she, Kim, thought to herself, “Oh. Well, it’s not that big of a deal. The presentation got across. I’m a good presenter. I’ve done this a lot in the past. So if that’s the only feedback she has for me, I did excellent.”
+
+0:23:18.7 And ultimately it got to Sheryl telling her, “Saying ‘um’ between every third word makes you sound stupid.”
+
+0:23:27.7 **Adam Garrett-Harris** (laughs)
+
+0:23:28.8 **Jason Staten** And it was a very flat statement at her but Sheryl knew that that was the thing that was necessary to get her attention; and it wasn’t in a manner to try and insult her, but rather to say, “Pay attention to what I’m telling you because I want you to-, I know that you can improve and we can get you a speaking coach to help you break that bad habit.”
+
+0:23:52.8 So she was doing it in a manner that was very, I mean, very direct and also caring in knowing that Kim could improve. And so, like, that’s kind of the flip of it of actually giving criticism but doing it in a way that did improve Kim’s career and speaking ability overall.
+
+0:24:16.7 **Jen Luker** And, I mean, I want to point out that that story actually went in, like, the exact opposite direction where she said, “So I noticed you said ‘um’ a lot.”
+
+0:24:26.0And she said, “Well, who cares? Because I got it, right?”
+
+0:24:31.0 And she said, “Well, was it because you were nervous? Because we can get you a speaking coach, Google will pay for it.”
+
+0:24:35.9 And she kind of brushed it off and said, “No, I’m not really nervous.” Even though she was really nervous before she stepped up there, and that’s when Sheryl basically pulled her up by her shoestrings, you know?
+
+0:24:48.3 She’s like, “You’re one of the smartest people I know, but saying ‘um’ makes you sound stupid.”
+
+0:24:53.1 So she, like, tried to make these steps, like, “We can help you with that!” And when that failed, she told her flat out, “Look, you’re not getting it.” And so I found it interesting that there were still, like, ramping up steps. It started with, “Hey! You know, I noticed this thing, we can help.” And went to, “Okay, fine. You’re totally gonna miss this opportunity so I’m just going to finally tell you straight.”
+
+0:25:19.7 And it wasn’t that she wasn’t, that she was avoiding it, as much as… you know, there’s different ways that you can be honest with someone and truthful with someone, but at the same time you don’t always have all the facts, right? So, honesty and truth is still based on perception. So you can say something and then have someone else correct you to say, “No, no. That wasn’t the case.” So she tried to ask the questions first before giving solutions.
+
+0:25:52.2 **Adam Garrett-Harris** Yeah.
+
+0:25:53.2 **Jason Staten** She points out that Sheryl does a very good job of separating out between the person and the quality of-
+
+0:26:04.4**Adam Garrett-Harris** Of the behavior?
+
+0:26:05.0 **Jason Staten** The work that was produced. Yeah. So, she said, “It makes you sound stupid.” Not, “You are stupid.” It is a small line, like, it’s a small difference in terms of words but great in terms of meaning because, like, you had mentioned early on, I think Adam had mentioned the resentment factor?
+
+0:26:30.4 **Adam Garrett-Harris** Yeah.
+
+0:26:31.1 **Jason Staten** That Kim had towards Bob? And it’s because she was putting that on the person rather than on the actions or behaviors that he was taking.
+
+0:26:44.6 **Adam Garrett-Harris** Yeah. There’s a really good quote in the book from Steve Jobs on that kind of fine line where he said, “You need to do that in a way that does not call into question your confidence in their abilities but leaves not too much room for interpretation . . . and that’s a hard thing to do.”
+
+0:27:03.8 **Jason Staten** Which is why he was commonly known to say, “Your work is shit.”
+
+0:27:07.5 **Adam Garrett-Harris** Yeah! But he didn’t say, “You are…”, your work is.
+
+0:27:10.6 **Jason Staten** No.
+
+0:27:11.9 **Jen Luker** And not only that, but he’d already developed that rapport with the people he was saying that to in order to get that by. It’s not necessarily someone you walk up to and say that to randomly. (laughs)
+
+0:27:22.0 **Adam Garrett-Harris** Right. (laughs)
+
+0:27:23.3 **Jason Staten** Yeah. He said, even from the get go, the expectation that he wanted high quality people to be working for him. In the interview process it talks about him saying, like, “If I knew the answer to that, like, why would I be hiring you?” was one of the questions that somebody’d asked him. Or somebody’d asked him a question and that was his response was, “I’m hiring you to answer this thing for me.” And so that was always his thing, was he wanted to push people as far as they could go in terms of making top notch things. And so...
+
+0:28:03.6 Like you said, building up that rapport and ramping up to it, not necessarily some person you don’t know. And that’s the whole premise of the book, too. It’s when doing, like, when you’re building out these relationships and moving towards radical candor, it is something that develops over time with your relationships. You’re not immediately jumping into it. You have to progressively bring it into each relationship you have.
+
+0:28:32.1 **Adam Garrett-Harris** Mm-hmm (affirmative).  Are you all ready to get into the radical candor framework?
+
+0:28:37.5 **Jason Staten** Let’s do it.
+
+0:28:39.0 **Adam Garrett-Harris** Okay. Before we do that let’s do a sponsor break.
+
+0:28:41.9 (Typewriter Dings)
+
+0:28:43.1 **Adam Garrett-Harris** This episode of BookBytes is sponsored by Pluralsight.
+
+0:28:45.6 Pluralsight is a technology skills platform. You can see where your skills stand, master the latest technologies, and show off your expertise. They are currently hiring in Salt Lake City and Boston.
+
+0:28:56.7 So, I work at Pluralsight and the culture here is amazing. We work in small, cross-functional, autonomous teams made up of four to six software engineers, a product manager, a ux designer and a dev ops engineer. Engineers are involved at every step of the process of building new features and setting OKRs. We talk to customers and find out what their needs are, and we run small experiments to see what works, and then we iterate quickly on what we learn. We have a culture of continuous learning and we have book clubs and guilds where we talk about interesting things we’re passionate about.
+
+0:29:27.5 **Adam Garrett-Harris** Want to work here? Visit Pluralsight.com/Careers/Engineering to learn more.
+
+0:29:33.2 And for those of you who are interested in applying you can direct message @Pluralsight on Twitter and they will send you a free trial code so you can experience the product for yourself.
+
+0:29:41.6 And thanks to Pluralsight for sponsoring the show.
+
+(Typewriter Dings)
+
+0:29:45.6 **Adam Garrett-Harris** All right. Let’s talk about the framework, yeah?
+
+0:29:49.0 **Jen Luker** So before we jump into that, I actually had a comment that I wanted to bring out. So in Chapter One again, she’s talking about relationships, not power, drive you forward and one of the things that she said is “Your relationships and your responsibilities reinforce each other positively or negatively.” You know, they could be strengthening or learning the best ways to get, to help people in order to get what you need as well as encouraging guidance and, you know, but you could also do things poorly like you can fail to give people guidance or you can, um… fail to put people in the roles that they best suit, things like that.
+
+0:30:33.0 **Jen Luker** So there’s like, these two ways of doing things that are very, very deeply dichotomous with each other and I just love the fact that it said that the dynamic is what drives you forward as a manager or leaves you dead in the water. And this whole entire, like, paragraph essentially, led me to think of the two wolves. The Cherokee legend of there are two wolves and they are always fighting. One is darkness and despair and the other, light and hope. Which one wins? The one you feed.
+
+0:31:03.4 And it’s just so deeply profound that, you know, when you think of them as wolves, when you think of these behaviors as something that you fuel and feed, or something that you starve, that obviously the one that will win is the one that’s strong and healthy over the one that isn’t. So which wolf are you going to feed today?
+
+0:31:26.5 **Adam Garrett-Harris** What were the two things again?
+
+0:31:29.4 **Jen Luker** Uh, it says there’s… two halves of the relationship. You strengthen your relationships by learning the best ways to get, give, and encourage guidance; by putting the right people in the roles on your team; and by achieving results collectively that you couldn’t dream of individually. And the alternate side is you can… there can be a vicious cycle between responsibilities in your relationships, too, which are when you fail to give people they guidance they need to succeed in their work; or put people into roles they don’t want, or aren’t well suited for; or push people to achieve results they feel are unrealistic-
+
+0:32:02.2 **Adam Garrett-Harris** Oh! Okay.
+
+0:32:03.3 **Jen Luker** You erode trust.
+
+0:32:05.5 **Adam Garrett-Harris** Yeah, and it said bosses have three areas of responsibility. One is guidance, two is teambuilding, and three is results. But I think results really depends on the first two, giving them good guidance and teambuilding is putting the right people in the right roles and keeping them motivated.
+
+0:32:23.4 **Jen Luker** Getting the right people in the bus and then putting them in the right positions, getting them in the right seats.
+
+0:32:29.1 **Jason Staten** So on putting people in the right seats on the right bus, I know I’m hopping over the quadrants thing, but we will get there. Is the distinguishing between two types of people, or two types of, not necessarily people, but two types of states that people can be in, whether they can be a rock star or a super star.
+
+0:32:53.6 And she denotes rock stars to be not your classic developer title that they’re trying to hire for, but rather more like the Rock of Gibraltar where it is a very fixed thing, or a person who is very fixed and strong in a specific role that they’re in and they’re not necessarily on a rapid growth trajectory. Like, they are okay being in the role they are in because they are, they are just blowing it away with what they’re doing but don’t necessarily want to move elsewhere.
+
+0:33:29.5 And the alternative to that is a super star, which is a person who is excelling but they have the need and expectation to grow and move up through goals and heightened responsibility and both of those things are things that you need, or both of those types of individuals, or individuals in those states are things that you need on your team. You can’t have just one or the other or shouldn’t expect to only have one or the other and have your team succeed.
+
+0:34:06.8 And she brings up the particular example of being… Most of her career, early on, being a super star where she wanted to progress through the ranks and then that actually changed for her and her mode changed to being a rock star in that she was starting a family and didn’t want to keep going and switch roles to being a CEO at Twitter, but rather stay in the current role she was in so she could go and have children and get that established for a while.
+
+0:34:48.4 And recognizing that, as a manager, like, what state of life or state of career that your people are in, is critical to putting them in the right positions because if they’re in the wrong ones then what side are you feeding, exactly?
+
+0:35:06.8 **Adam Garrett-Harris** Yeah, I like this, it kind of had a quadrant for this one, as well, where it’s steep versus gradual growth trajectory, and both are good on the right side, and then the other axis your performance, whether it’s low performance, excellent performance, or maybe somewhere in the middle; and obviously you want to be on the excellent performance side whether you’re on a steep or gradual trajectory, that’s fine.
+
+0:35:36.2 So, I guess I had a question for both of you. Are you more of a rock star or super star and have you moved from one category to another?
+
+0:35:45.6 **Jen Luker** Yes. (laughs)
+
+0:35:47.1 **Jason Staten** Yes.
+
+0:35:47.9 **Adam Garrett-Harris** (laughs) “Yes.” “Yes.”
+
+0:35:49.5 **Jason Staten** (laughs)
+
+0:35:50.8 **Jen Luker** So, I have gone back and forth a few times. I was a rock star for most of my career where I’ve had a slower trajectory but I’ve really built the foundations and the technologies that I’ve been working in to be able to be that stable rock of endurance, you know? Like, not just endurance, but the person who’s there and knows all the answers, not…. You know, not… If you have a question about the codebase, you know who to ask. Everyone has that person, right? That’s the Rock of Gibraltar and that was me for quite a while.
+
+0:36:29.2 And then I switched into being more of a super star and was looking towards growing my career more, looking into team leadership and team management, which is a whole new ball game, and I’ve gone back and forth between those two things and I’m not saying you can’t be a manager and be a rock, it’s just that the skills required are a little different than the skills required to be a rock star and an IC, an individual contributor.
+
+0:37:03.7 **Adam Garrett-Harris** What about you, Jason?
+
+0:37:05.5 **Jason Staten** So, for me, I would definitely say my career started off in more of the super star realm, wanting to and, I feel like, succeeding pretty well due to having strong managers very early on in my career, being able to move up from being more of a junior level developer into more of a team lead in not a great, like, not a huge amount of time.
+
+0:37:36.7 And jumping from that in two years into a role at a startup where, I mean, it was me and one other dev and he eventually bailed out and, like, building out that dev team under me, like, that was definitely a, like, high-risk, like, big departure from stability that I took and gave me a lot of experience in doing everything from, like, managing servers to pushing CSS, to, like, getting in meetings with executives at major healthcare companies because I was the chief architect, kind of acting CTO at a company.
+
+0:38:27.3 And that definitely changed after, kind of, growing my family. It’s put me in a role where I value being at home far, far more. Like, and being there for watching that happen and being able to contribute here, versus being on the high-risk and growth career track that I had previously been on.
+
+0:38:59.9 And so I would say that, certainly, was on super star, transitioned to more rock star, and I’m definitely kind of hovering more on that end of the spectrum, even still, right now. I’m moving up on a gradual pace because, I mean, rock star doesn’t necessarily mean stuck in one position forever, but not going and getting a bunch of people under me.
+
+0:39:31.6 In fact, I mean, that was one of the things with my current role that I’m in, is I’m still, technically, Individual Contributor but I’m Principle Engineer. So I don’t have a team under me and I’m more of, like, an advocate that plays with everybody else or works with a whole bunch of other teams. And so, even this book, just in general, has been, kind of insightful in that, like, a lot of it comes from a manager’s perspective and I’m not necessarily a manager in that I can’t hire and fire, but I do have, like, the leadership that has grown, I guess, both through promotion but also organically and a lot of it is still applicable even though I don’t have, necessarily direct reports.
+
+0:40:22.0 **Adam Garrett-Harris** Yeah. How weird does it feel to call yourself a rock star and super star? (laughs)
+
+0:40:26.6 **Jen Luker** It feels really uncomfortable. Like, I’ve specifically shunned the rock star/super star/ninja/unicorn whole entire thing. I’m like, I’m a human, I have a job, I have a family, I am not any of these other things. Like, I’m a knitter but I don’t think you necessarily need a knitter. Although, I learned you do! Although, a lot of people-
+
+0:40:48.6 **Adam Garrett-Harris** Okay.
+
+0:40:49.4 **Jen Luker** Call it “glue.” People that put together the glue, trying to seal things together, trying to put into place the infrastructure that helps teams work better. That tends to be the glue that people refer to, and I tend to be the knitter!
+
+0:41:05.2 **Adam Garrett-Harris** Okay, nice!
+
+0:41:06.6 **Jen Luker** The one that knits these things.
+
+0:41:08.0 **Adam Garrett-Harris** Yeah, Jason, I… It sounds like everyone’s story is a little different and the book mentions that there are all sorts of different types of bosses/managers/leaders from the person who hires a babysitter and doesn’t know how to tell them that they’re giving their kid too much sugar, or a contractor with a crew of people, or if you hire someone to come work on your house.
+
+0:41:32.6 **Jen Luker** Radical Candor works all around your life.
+
+0:41:35.4 **Adam Garrett-Harris** Yeah, and you may not, specifically, have the title of Boss.
+
+0:41:39.5 **Jason Staten** And it’s particularly interesting in that role because I, because I’m not in that position of authority some of the awkwardness that can come with it of “Am I being evaluated by this person?” Like, people don’t necessarily see me as evaluating them all the time and so they, sometimes, people speak a little bit more freely with me than they would potentially with their boss and so… It’s kind of nice from that standpoint to have that. And then to not necessarily, like, go back to their boss and name names, but be able to take that feedback and find ways that it can be implemented, like, on the manger level to say, like, “This is general feedback that I’m getting here and, like, you need to do something about it before it does get out of hand.”
+
+0:42:39.6 And so I actually kind of like the role from that standpoint of not being in authority, but-
+
+0:42:45.7 **Adam Garrett-Harris** Yeah. It’s definitely a nice way to try it out.
+
+0:42:46.3 **Jason Staten** Being respected.
+
+0:42:48.5 **Jen Luker** You know, having been a manager for the last few years and then going back to an IC position, it’s been really interesting trying to gauge when I should say something and to whom and when I shouldn’t and I think that that’s… that experience is going to make me a better manager next time it happens.
+
+0:43:11.6 **Adam Garrett-Harris** Yeah.
+
+0:43:12.9 **Jen Luker** Which is fascinating because if, as someone who’s trying to practice being radically candid, which she says in the book should be practiced up, down and sideways; how is it that being radically candid with a peer is different than being radically candid with a boss or with someone whom you are managing and why does it need to be different?
+
+0:43:46.4 So I’m just learning that if I’m questioning and being concerned about whether I should say something, is it really important enough that I do? And if I were the boss, would I have said it anyway? And should I have said it anyway based on the fact that I’m questioning now.
+
+0:44:09.7 **Adam Garrett-Harris** Hmm.
+
+0:44:12.1 **Jason Staten** I mean, I do think that you… you have to be aware that, I mean, there is, like, formal, like, establishments that exist there. Like, I mean, talking to your boss versus talking to your peer? Like, there is something that. Like, I mean, both you as a, you as someone working under a boss, need to be aware of that, especially if your boss is not on board with the radical candor framework, like, going all out on them may not be the right choice.
+
+0:44:54.8 And likewise, being, when you are a boss over somebody, you, like, when you’re talking to one of your reports, making sure that you do find ways of breaking that boundary or making people feel comfortable, kind of like how you had talked about with taking a walk, or she mentions having, like, bottles of water, things to go and break up the conversation so people who are more uncomfortable in those types of situations are all right. Like, they can handle it a little bit better.
+
+0:45:33.9 **Jen Luker** They can essentially have a bit of their security blanket, or put up that barrier to protect themselves before they have that conversation.
+
+0:45:41.9 **Jason Staten** Exactly.
+
+0:45:43.0 **Jen Luker** Declaring a safe space.
+
+0:45:45.3 **Adam Garrett-Harris** Well, I feel like we should finally get to the radical candor framework.
+
+0:45:48.8 **Jen Luker** Yes!
+
+0:45:51.3 **Adam Garrett-Harris** So this is in Chapter Two. There’s two axes, one is Care Personally and the other is Challenge Directly and you want to do both of those things to be radically candid. The other four quadrants are: Ruinous Empathy, Manipulative Insincerity, and Obnoxious Aggression, which I think all have really cool names.
+
+0:46:12.9 **Jen Luker** So I kind of felt like, as a math person and this being a podcast, I really want to describe this as a graph, like, you know, you’ve got your (0,0) coordinates in the center, right? And you’ve got your +y, and your -y, and your +x, and your -x, you know, for your (+y,+x) area-
+
+0:46:29.8 **Adam Garrett-Harris** Yeah.
+
+0:46:30.5 **Jen Luker** You know, your first 45 degrees you’re talking about Radical Candor and then your second 45 degrees, so the (+y,-x) is Ruinous Empathy. And then you’ve got the next 45… Or I guess these are all 90 degrees. (laughs) Sorry!
+
+0:46:46.7 **Adam Garrett-Harris** You’re going counter clockwise.
+
+0:46:48.8 **Jen Luker** So…
+
+0:46:49.4 **Adam Garrett-Harris** Okay.
+
+0:46:51.0 **Jen Luker** I am going counterclockwise because that’s usually how one does it is in math!
+
+0:46:56.4 **Adam Garrett-Harris** That’s how math do.
+
+0:46:57.2 **Jen Luker** At least, in my head. Because it goes from 0-90, 90-180 degrees, 180-270, 270-360 (which is also zero).
+
+0:47:07.5 So yeah, so the 270-360 sections. Then after 180 you’ve got Manipulative Insincerity, Then after 270-360 you’ve got Obnoxious Aggression. So it kind of has that whole cycle, but they do have those different (x,y)... positives and negatives, the things that you’re lacking are the things that you’re, have, that’s missing as part of what you’re giving, what you’re taking, how you’re caring, how you’re challenging.
+
+0:47:38.5 **Jason Staten** I do like the example, I mean, just kind of working through them. I mean, talking about Ruinous Empathy, that is very much the case that happened in the initial story about Bob where she didn’t want to hurt Bob’s feelings.
+
+0:47:55.8 **Adam Garrett-Harris** So, you care.
+
+0:47:57.9 **Jason Staten** So, yeah. She cared about Bob enough but didn’t want, like, that she didn’t want to give him the bad news. And she relates it to, like, I think she says, like, a Russian proverb where there once was a dog owner that they had to remove the dog’s tail but the owner loved the dog so much that they cut off one inch of the tail each day. Like, (laughs) you know, rather than going for it all at once.
+
+0:48:24.2 **Jen Luker** And honestly, having had that happen to me before, that is brutal. You don’t gain back that trust.
+
+0:48:30.7 **Adam Garrett-Harris** So not literally with the dog tail?
+
+0:48:34.0 **Jen Luker** It was my tail.
+
+0:48:35.5 **Adam Garrett-Harris** Hmm.
+
+0:48:36.0 **Jen Luker** But no, I’m not a dog, last I checked.
+
+0:48:37.6 **Jason Staten** That, I feel like, is the one that is one of the easier ones to fall into. I mean, we talked about it earlier on that it’s, like, we’re trying to avoid conflict and kind of keep people from being upset. Like, we’re concerned about somebody’s feelings and so we don’t want to spread the bad news, or hard news to tell.
+
+0:49:07.3 **Adam Garrett-Harris** And then Obnoxious Aggression is where you do challenge them directly, but you just don’t care about them. I guess that would be-
+
+0:49:15.1 **Jason Staten** Yeah.
+
+0:49:15.8 **Adam Garrett-Harris** Where-
+
+0:49:16.3 **Jason Staten** And-
+
+0:49:17.2 **Adam Garrett-Harris** You’re really focused on results, or… something else, and you forget about the people that you’re working with. You forget to put yourself in their shoes and what they’re thinking and feeling.
+
+0:49:29.1 **Jason Staten** Right. And I think that she, I don’t know if she explicitly states it in the book, but I kind of get the vibe that that is actually a better quadrant because then people at least people get feedback that they can operate off of.
+
+0:49:44.3 **Adam Garrett-Harris** Yeah.
+
+0:49:45.1 **Jason Staten** I mean, not that you should be totally heartless and, like, it’s not the ideal place to be but things can change based on that, whereas…
+
+0:49:56.6 **Adam Garrett-Harris** And sometimes it’s a step in the right direction. If you’re in one of the other two categories you might go through Obnoxious Aggression on your way into discovering how to be Radically Candid.
+
+0:50:11.8 **Jen Luker** Giving people feedback without context. Sometimes if you don’t recognize what’s going on you may be too harsh on them when they’re really dealing with something. So if you don’t understand or know that they’re dealing with something big, at home, for instance, you may give them this feedback, you may even give it harshly, and it’s just over the top or something they can’t handle.
+
+0:50:38.4 You don’t have the context that you need in order to properly give feedback when it needs to be given. Or how it needs to be given. And some of that might come down to cultural differences, as well.
+
+0:50:51.7 I loved the story that she gave back in Chapter One about the differences between some of the different cultures that she got to work with and how the Israeli culture is extremely aggressive and direct but the Japanese culture, she essentially modified Radical Candor to Politely Persistent.
+
+0:51:10.3 And then she also said that for as polite as the Brits are you’re going to get more radical candor from them than you’re-
+
+0:51:16.7 **Adam Garrett-Harris** I mean-
+
+0:51:16.7 **Jen Luker**  “...ever going to get from New Yorkers.” (laughs)
+
+0:51:18.1 **Jason Staten** (laughs)
+
+0:51:19.8 **Jen Luker** So it was just, so sometimes that context can include cultural shifts.
+
+0:51:24.7 **Jason Staten** Yeah and, like you said, it’s very much understanding the person beyond just their work but whatever their state of life is, what their culture is. The relationship, like, I don’t know, the relationship and, like, background side of things that is really critical for moving out of that Obnoxious Aggression into the Radical Candor realm.
+
+0:51:54.3 **Adam Garrett-Harris** And then you have Manipulative Insincerity where you don’t care personally and you don’t challenge directly. So, that one is a little hard for me to understand. Do y’all have more context into that? Or an example of that? Or how someone might fall into that category?
+
+0:52:10.2 **Jason Staten** So I know that it was either in the book or I actually listened to a podcast that Kim was on pretty recently called the Jordan Harbinger show, I’ll send a link to it, and she actually brings up that in the case of firing Bob she actually borders between Ruinous Empathy and Manipulative Insincerity given that there was part of her that was concerned about telling Bob the bad news, but there was also the other side where she was very self absorbed in thinking about her perception amongst everybody else because, I mean, how does she look if she is the person who is going and firing Bob, the guy who everybody else in the company likes.
+
+0:52:59.2 **Adam Garrett-Harris** Okay, so… not that you don’t care about them but you care more about yourself.
+
+0:53:05.7 **Jen Luker** Or, i mean the other side of it could just be that you’re not getting the results that you want, like you said, but you don’t necessarily feel passionate about the project in the first place. So you don’t really care if it fails?
+
+0:53:22.6 **Adam Garrett-Harris** Yeah.
+
+0:53:23.9 **Jen Luker** And you maybe don’t necessarily think of it so much as that you’re not giving feedback to your team as much as you just, “This project is going to fail, so I’m not going to invest much in it anyway.” But what happens there is you’re not just failing to invest in a project, you’re putting your team in a position that they’re the ones that feel like they failed when the project goes under,and maybe it would have succeeded! If, you know, you’d given it, and them specifically, the attention that they needed in order to make good decisions because even though you may not care about it or you may not be interested in seeing it succeed, the team still has to work on it and the team still shoulders the success or failure and though it’s usually the boss’ job to take the brunt of that hit, the team knows.
+
+0:54:28.5 So it may not even be done cruelly and it may not be done cruelly for a person, toward a person, it may be a project but it is still people that feel the effects.
+
+0:54:41.6 **Adam Garrett-Harris** Yeah. And there’s a section in Part Two that talks about how to, maybe it’s at the end of Part One, about how to sell your team on an idea that you don’t really believe in, but it’s kind of been handed down from leadership, how to talk about that and how to get them to buy into it and how to get yourself to buy into it.
+
+0:55:10.5 Because you do have to care about the people and what you’re working on.
+
+0:55:14.6 **Jen Luker** And I think sometimes focusing more on the people can help you care about what you’re working on part. Like, if you can use the project that you’re working on, whether you like it or not, to help your people grow and develop and evolve in ways that they’re interested in growing and developing and evolving, then you can see them progress as individuals through this project that, maybe, you previously didn’t care about; but it becomes important-
+
+0:55:41.0 **Adam Garrett-Harris** Yeah.
+
+0:55:41.1 **Jen Luker** To the team because of their growth.
+
+0:55:43.4 **Adam Garrett-Harris** So on page 40 shows an example of all four quadrants in the example of someone’s fly is down, or their zipper is down on their pants. So the Ruinous Empathy is, that person is silent. You don’t tell them anything because you’re worried about their feelings. Like, “I don’t want to embarrass them.” But in reality, you don’t really care about them because they're going to walk around for a while and lots of people are going to see them with their fly down and they’re going to know that you didn’t tell them.
+
+0:56:15.9 **Jen Luker** Or even if they didn’t know, they’re going to realize they’ve been doing it for a while and they’re going to be embarrassed anyway. It’s just that they’re-
+
+0:56:22.7 **Jason Staten** Mm-hmm (affirmative).
+
+0:56:23.0 **Jen Luker** Going to be-
+
+0:56:23.4 **Adam Garrett-Harris** Yeah.
+
+0:56:24.3 **Jen Luker** More widely embarrassed.
+
+0:56:25.6 **Adam Garrett-Harris** Obnoxious Aggression, they just shout, “Hey, look! His fly is down!” Or, “Hey, your fly is down!” I mean, at least you can fix it.
+
+0:56:35.4 **Jen Luker** Yeah, but now everyone’s looked.
+
+0:56:37.4 **Jason Staten** Yeah, like, you didn’t go and do it in a manner that, I don’t know, respected the person. I mean…
+
+0:56:47.9 **Adam Garrett-Harris** And Manipulative Insincerity is also silent but because you would be too embarrassed to go tell them. You’re more worried about your feelings.
+
+0:56:57.4 **Jen Luker** You don’t want to be the one to cause them embarrassment.
+
+0:57:00.5 **Adam Garrett-Harris** Right.
+
+0:57:00.9 **Jen Luker** Because they’ll associate that with you.
+
+0:57:02.6 **Adam Garrett-Harris** Yeah. When in reality, it’s going to, it might be a little painful to them, it might be a little embarrassing, but they’re going to thank you for it. They’re going to be grateful that you took on a little bit of embarrassment to save them more embarrassment.
+
+0:57:17.3 And then Radical Candor is you discreetly go and tell them. You go and whisper to them, take them aside, whatever it is where you can tell them as soon as possible, as discreetly as possible.
+
+0:57:29.3 **Jason Staten** That is, kind of like, an innate, personal rule that I have for myself, is, not specifically with fly down but something like food in teeth or spinach in teeth, I will always tell somebody that I see with spinach in their teeth that they have it in there, if only to know that maybe somebody, someday would tell me if I have the same situation going on.
+
+0:57:53.7 **Adam Garrett-Harris** Yeah, and I’m not as embarrassed about my fly being down or food on my teeth. What I’m really embarrassed about is if there’s something in my nose and it’s really hard for me to tell somebody if there’s something in their nose. In fact, I’m saying “something” right now instead of just saying “booger”. (laughs)
+
+0:58:09.8 **Jen Luker** “Let me find you a tissue.”
+
+0:58:12.4 **Jason Staten** I guess it kind of depends on your approach of it. I mean, just swinging by and being like, “Booger.”
+
+0:58:20.5 **Adam Garrett-Harris** (laughs)
+
+0:58:20.5 **Jason Staten** There you go. Right? (laughs)
+
+0:58:23.2 **Jen Luker** Maybe if you just swing by and hand them a tissue?
+
+0:58:26.2 **Adam Garrett-Harris** Yeah.
+
+0:58:27.1 **Jason Staten** Yeah. Yeah, I mean, ‘cause you’re… you even, yeah.
+
+0:58:35.6 **Jen Luker** And even then you can say, “You’ve got something in your nose, here’s a tissue.”
+
+0:58:41.0 **Adam Garrett-Harris** All right. Do you all have anything else from this section you wanted to talk about? I mean, Chapter Four we didn’t really get to. It’s about how to get results collaboratively and it has this diagram that is continuous circle called the “Get Stuff Done” wheel, GSD - not to be confused with GTD - where you listen, clarify, debate, decide, persuade, execute, and learn; and repeat the whole thing over again.
+
+0:59:09.1 **Jason Staten** I think that plays well into the Part Two, so, let’s save it!
+
+0:59:15.1 **Adam Garrett-Harris** Okay.
+
+0:59:16.1 **Jen Luker** Sweet. Thanks for taking things slowly for me, I was really excited about this and didn’t want to miss out on Chapter, or section, Two.
+
+0:59:24.0 **Adam Garrett-Harris** Does someone want to read a review from iTunes?
+
+0:59:27.9 **Jen Luker** Oh! I don’t think I’ve read one, yet.
+
+0:59:31.1 So we have a review from A.J. and he says, or she says, “I learned about this podcast when Safia mentioned it in the Women in Tech show. What a great idea and helpful addition to my podcast roster. I’m listening to the episodes about Rob Conery’s Imposter’s Handbook now and it’s been close to two years since I read that book, myself. The podcast is serving as a refresher while also proving different perspectives and offering new rabbit holes to fall into. I’m loving this, thank you.”
+
+0:59:59.1 So, thanks, A.J., for that review. And if you haven’t left a review on iTunes yet we would really appreciate if you did that for us, and it’ll help others find the show and it will give us more people to talk about.
+
+1:00:12.2 **Adam Garrett-Harris** Yeah. So, thanks so much for listening. Next time we’ll be talking about Part Two: Tools and Techniques. You can follow us on Twitter. I’m @AGarrHarr, Jason’s @StatenJason, Jen is @KnitCodeMonkey, and you can follow the show @BookBytesFM, and you can find the show notes and transcript for the episode, as always, at orbit.fm/BookBytes/30.
+
+1:00:38.4 Thanks. See ya.
+
+1:00:41.2 **Jen Luker** Thanks, everyone.
+
+1:00:42.5 **Jason Staten** Bye.
+
+(Exit music: Electro swing)
