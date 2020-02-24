@@ -1,0 +1,383 @@
+(Intro music: Electro swing)
+
+0:00:11.2 **Jason Staten** Hello and welcome to BookBytes, a book club podcast for developers. This episode is sponsored by Pluralsight, the technology skills platform. We are reading “Radical Candor” by Kim Scott and today we are going over Part II which is titled “Tools and Techniques.”
+
+0:00:25.6 I’m Jason Staten.
+
+0:00:26.5 **Jen Luker** And I’m Jen Luker.
+
+0:00:28.0 **Jason Staten** And Adam can’t be here. I don’t know what he has going on, but something that is keeping him busy. So it’s just us two tonight.
+
+0:00:36.4 **Jen Luker** Fun!
+
+0:00:38.0 **Jason Staten** Yeah. And I’ve been going over section two, I think one of the things that we didn’t get into that much last time was actually talking a bit about the difference between Google and Apple. I thought Kim was actually pretty unique in that she got an experience in both companies and got to compare the ways that they both have a level of radical candor in them, but how, I guess, Google is very much in the mindset of being growth minded around how they run all their operations; and it makes sense in that a lot of their work there is number driven. Like, if you can measure it then you can go and improve it.
+
+0:01:31.0 I mean, we talked about it quite a while ago in the objectives and key results story, or book, “Measure What Matters” where they tried to accomplish getting one billion hours of viewing time in YouTube and, I mean, highly measurable sort of thing and, I mean, it took them awhile to get there but they ultimately did because they were measuring it and fighting for it. And also the same thing can exist with people and performances, they may have a skew there or a bias towards people who are often elevating their numbers.
+
+0:02:17.5 And the flip of it that I kind of got with Apple, is that when people are hired there, they are brought in because they are supposed to be the best at what they do and so… whereas Google has a strong stance for superstars, those people who are on a growth trajectory and always wanting to grow their responsibility and, just, their influence, Apple, also, seems to have a culture that embraces the rock star type of person more. I say “type of person” but that’s not quite right, it’s more modal. I’d heard an interview from Kim Scott previously that she tried to clarify that; that rock stars and superstars, they are modal things. Like, we shift between those.
+
+0:03:19.5 But then Apple, because they’re okay with people being in a rock star position that they’re just really good at, like, one specific thing. Like, whether it is making it so the login screen on iOS just works and it doesn’t screw up all the time. I mean, like, little bits of that. Like, people who really hone in on that and, I mean, that is a practice that was done, kind of, from top down.
+
+0:03:52.3 Like, they talkd a little bit about even Steve Jobs, like, his approach to hiring was hiring the people who knew the answers. So if people came to him with a question of, like, I mean, “What should we do here?”
+
+0:04:06.1 I mean, oftentimes his answer would be, “Well that’s what I hired you to answer for me and so, like, you should be figuring it out.” Not that he didn’t have his opinions on stuff, but he leaned heavily on the people within his company to get those things right and, I don’t know, I just thought it was an interesting comparison that Kim Scott offered.
+
+0:04:29.5 **Jen Luker** Yeah, it’s definitely interesting looking at those two conundrums, or contrasting companies, how one of them tended to be much more… I mean, they were both very empowering to the individual but in two very different ways. And the way that they handled communication was also very different. One of them tended to be direct but, kind of, gave you the opportunity to learn something, or make that choice before they were extremely direct.
+
+0:04:57.9 And the other one, like, they didn’t have a problem getting into what might, on the outside, sound like heated, angry arguments but were actually just debates between people that were comfortable with each other.
+
+0:05:11.7 **Jason Staten** Yeah, that was something that Kim calls out, that if you are an outsider to that, that may seem very off-putting that the people are so blunt with each other; but it’s also, it is a level that you can certainly strive to get to in your work environment so you don't have to have big barriers up all the time, like, being inefficiencies there. I mean, it’s something you definitely have to grow to, but I have been in situations where, like, I mean…
+
+0:05:55.3 It was a pretty small start up at the time, but there was, a coworker and I, we worked on some stuff together and we actually did a lot of pairing, it was like the only time that I’ve really loved pairing for a good block of time and we did it for long, long hours and it just got to the point where, I mean, I don’t know, we’d cut out stuff, like, we’d cut out formalities and just be like, “That was stupid, just do it this way.” And it wasn’t necessarily to be completely insulting to each other but it was to, like, I don’t know, we were totally on the same page with each other and so it made stuff get done without beating around the bush.
+
+0:06:41.9 **Jen Luker** I actually had an experience with pair programming. I was pregnant with my last child and I was very sick. It turns out I had medical issues that essentially made sure that  I was sick the entire pregnancy.
+
+0:06:56.3 **Jason Staten** Hmm.
+
+0:06:57.1 **Jen Luker** And it meant that I had a little bit of a difficult time, like, sitting down, and focusing, and coding when I was ill on a regular basis. (laughs) So I ended up pair programming with a coworker for the entire pregnancy. It was a 9 month pair programming session and it was incredible, and we very much did the same thing. We got really good at just being able to read each other and we did clear out a lot of those common courtesies, I guess, that you have in standard conversation and even work relationships.
+
+0:07:31.1 So it wasn’t… it was just very, very direct. It was very short, it was very to the point. And not only that, but when I came back and started coding after the project was done, it felt like I had lost half of my brain. It was so hard to get back into the swing of things. And it’s not that I didn’t code for 9 months it was just that he spent more time at the keyboard than I did. So I had a very much big picture role, he had the highly focused role, but it was a really productive development format, and it does take a certain pair of people in order to make that work.
+
+0:08:11.4 So, again, pair programming is not for everyone or for every set, but it was really good. We ended up developing some really great products, I think much better than they would have been otherwise. And yeah, it took me several weeks to figure out how to function without the other half of my brain after that.
+
+0:08:30.3 **Jason Staten** I could see that. It almost sounds like hyperspecializing. Like you’re going one level deeper than maybe your job description requires because you know that you have a counterpart that you can rely on.
+
+0:08:48.3 **Jen Luker** Mm-hmm (affirmative).  And because of the fact that we usually had a particular position in that, it meant that I could keep, like, the entire project in my head and how all the pieces were intertwined while he worked on the very specific details of what it was going to entail to write the small piece. And then as he was coding, I could make sure that what he was writing on the screen, essentially, was going to coincide and work with the pieces that were coming next and the pieces that already existed. So, it worked out really well.
+
+0:09:19.3 **Jason Staten** I actually wrote a recommendation for this person that I worked along with that was kind of in a similar situation and, did you ever see the movie Pacific Rim?
+
+0:09:33.1 **Jen Luker** Yes, I did! And I knew exactly what they were dealing with.
+
+0:09:37.2 **Jason Staten** Yes!
+
+0:09:38.4 **Jen Luker** It actually is... it reminded me very much of an anime… hang on… Evangelion, actually.
+
+0:09:46.9 **Jason Staten** Yeah, I’m not familiar with the anime, but that movie definitely makes me think of the level of pairing or working alongside each other that we got to where it was like, you have to have two people to make this megabot go and wreck these Godzilla-like things. Just, I don’t know, do pure awesomeness.
+
+0:10:14.3 **Jen Luker** (laughs)
+
+0:10:14.3 **Jason Staten** And like, trying to, like, I mean, there’s the guy in it that winds up controlling the whole bot by himself and it is just, like, so mentally and physically taxing because that’s not the way that it’s supposed to be run.
+
+0:10:31.4 **Jen Luker** Mm-hmm (affirmative).
+
+0:10:31.4 **Jason Staten** And yet that’s something that, I mean, too often we can try and fill ourselves because we don’t give that level of, kind of, mental synchronization because of barriers that we put up.
+
+0:10:47.3 **Jen Luker** You know, that’s true. I also feel that, perhaps, the development culture of hands on keyboard 8 hours a day, is very in line with that thought, that you’re supposed to be running the whole thing all of the time; and the truth of the matter is, if you’re not stopping and thinking about what it is you’re doing next, if you’re not taking those breaks and getting your hands off the keyboard then, you know, it’s… you know, you could just be coding for the sake of looking busy.
+
+0:11:21.0 And I know that most of us devs don’t do that, most of us take a lot more breaks but it’s, I feel like it’s, kind of, a misnomer that those all 8 hours are spent coding when a lot of that is still spent coding in our heads or formatting how things are going to function or picking apart pieces and putting them back together and making sure that they’re still going to work, you know? There’s a lot of thought that goes into development. It’s not all hands on keyboard.
+
+0:11:46.1 **Jason Staten** Yeah, definitely. If you’re not doing that then, I mean…
+
+0:11:50.6 **Jen Luker** What are you doing?
+
+0:11:51.7 **Jason Staten** I know we like to shoot for being agile, whatever that means, but if you just go on the notion of we’re not going to go and plan out a bunch of stuff, that is definitely ripe for disaster if you’re not intentional about going and taking those breaks to do assessment. And also, taking those breaks to do, kind of, what Kim Scott talks about in Part II on criticism.
+
+0:12:26.7 She, kind of bringing it back in, she talks about introducing criticism as a part of radical candor by actually going and requesting it for yourself, first. So rather than starting off radical candor in a front where you are telling somebody else things that they’re able to improve on, if you go and open up that venue, then, I mean, that makes yourself able to improve.
+
+0:13:04.3 And so, I mean, if you are a dev and, like, in the position of feeling like you need to crank for 8 hours a day on a keyboard, I mean, without stopping? I mean, imagine if you stopped for, I don’t know, some odd period of time every day to try and get feedback from some other peer, be like, “How could I improve this?” I mean, I think that is a great thing that pull requests and stuff, encourage but to go and get that feedback and get that criticism that you can work off of, like, how much more productive would you be in seven hours rather than eight if you were using one hour to actually find your flaws and improve?
+
+0:13:51.3 **Jen Luker** I think, on top of that, trying to go to others and asking for that level of radical candor does set up the safe space required to give it as well as receive it because at least when you’re going to them and asking for it, you’ve already, kind of, put yourself in a place to receive it without getting hurt and insulted.
+
+0:14:13.9 And then by developing that level of communication, understanding that this is how you act when radical candor is received, they get that… safety net, knowing that this is how it’s going to be when they can give you honest feedback; and then they start to adopt that for themselves so that when you start going to them and saying, “Okay, I need to give you feedback.” They’re like, “Yes, let’s go.”
+
+0:14:38.8 So it kind of gives, it develops that level of safe space and that level of familiarity and understanding and expected outcomes that if they give you feedback and you either seriously consider it and return with information or you seriously consider it and make the change, that at least they know that that feedback loop is completed.
+
+0:14:58.6 **Jason Staten** Definitely. I, yeah, I think you’re right. It, kind of, lays the groundwork and the expectations of what can be interpreted by criticism. Like, much like if you say, or if you receive criticism and then, a really important part of it that Kim mentions is actually going and acting on that in whatever way is necessary. I mean, you may not necessarily take specific advice from the criticism, but hearing the criticism and then making it clear, like, this is your response to it, then it does make it clear that it is a forum and you’re wanting that so you can improve, not just so you can soak it in and then ignore others.
+
+0:15:54.0 **Jen Luker** I just like the whole lead by example thing.
+
+0:15:57.6 **Jason Staten** Mm-hmm (affirmative).
+
+0:15:57.6 **Jen Luker** On top of all this. It’s like, yes, absolutely. I just also like the fact that once they’ve seen that, they know that’s expected of them when you give them feedback, as well.
+
+0:16:07.4 **Jason Staten** She also has a specific section that mentions, as a boss, or as a leader, or I would even say,  just as a peer in general, that you are the exception to the criticize in public rule.
+
+0:16:22.6 So if you really want to establish the environment for making criticism all right, if you have a specific person on your team or a direct report that is really good at criticizing you, asking that person to make remarks in a more public setting can be a good way of also establishing that environment; because not everybody is as able to go and let their mind be known. And so, if you do that publicly, you, first, you can be more efficient in that you may not hear the same piece of feedback from five different people in various one-on-ones, but instead, I mean, you can get one person to say something and then four other head nods or something, to say, “Oh yeah, this does ring true with several others.”
+
+0:17:22.3 And secondly, it just helps make people a little bit more comfortable with that, too. I liked that call out.
+
+0:17:33.2 **Jen Luker** That is a fantastic idea and the first thing that I think of with this is when I first started being an engineering manager. When I started asking for feedback and nobody would tell me anything. It was always like, “Yeah. Yeah. Everything’s great. You’re great. We’re all cool. Move on.” And it took months of me asking for it and giving it before they started giving it back.
+
+0:17:56.3 And I feel like if you did that, if you made someone, or elevated, empowered someone to give you that feedback in public, it not only gives you that feedback but it trains the others on how to give feedback and what kind of feedback to give. So it becomes an unconscious training exercise (laughs). Teaching others how to do that. And maybe with that in mind, the level of feedback that you get starts being more honest and also more forthcoming. Your mind mind wouldn’t go blank so quickly, or their mind wouldn’t go blank so quickly, when it was time for feedback.
+
+0:18:33.3 **Jason Staten** Yeah, and they would let it happen in the moment, as well. Like, if you-
+
+0:18:39.8  **Jen Luker** Right?
+
+0:18:40.6 **Jason Staten** If you allow something like that in a public setting, then you’re not saving it up for the one-on-one and instead something you get handled immediately. And, like, as somebody who is receiving the criticism, I mean, it definitely does put the ball in your court as soon as you receive it.
+
+0:19:01.3 I mean, your first role that Kim mentions is that you should be listening to understand, and not necessarily to respond to the criticism immediately. But make sure, like, if you’re receiving something, ask questions about it to go and make sure it’s clear on what somebody is saying to you and like, if they’re not specific about something, or if you want to know on what something they would recommend is, but then even taking that and saying, “Okay, I will take that and I will get back to you shortly on it.” And then actually getting back to them shortly, or doing something in response to it shortly, but then it’s not like minimizing what their feedback is and it gives you a chance to make an appropriate response rather than a knee jerk reaction.
+
+0:20:07.1 **Jen Luker** So I’ve been working with my sister a fair amount on reading through an ADHD book and it’s been really enlightening trying to break apart what ADHD really is, and I bring this up specifically because I’m very, very ADHD which means that for me, timelines are very, very difficult. I’m good at seeing a bunch of pieces all spread out on the table and being able to make those connections, but I am terrible at putting all of those things in a linear, chronological type of situation.
+
+0:20:42.7 So, you know, I can’t necessarily tell you if something happened yesterday, or last week, or last month with any clear determination but I can tell you that these things are connected; and because of that, being able to take that level of feedback and adapting it to how my brain functions is,you know, it can be something as simple as not just, “I’ll take that into consideration and get back to you,” it has to be, “Let me write that down, and like, stick it on the place where I know that I have a to-do that I have to think about this, or put it in the calendar.” So that I-
+
+0:21:20.5 **Jason Staten** Put it in your bullet journal!
+
+0:21:21.9 **Jen Luker** Well, for me, yes, but for others, as well, you know? For me, I definitely-
+
+0:21:24.6 **Jason Staten** Yep.
+
+0:21:24.6 **Jen Luker** Have it in my bullet journal, but I also need to block out time because it’s not just a matter of, “Yeah, I’ll just let this mull in the back of my head until something comes forward.” It’s, I need to sit down and actually block out the time to say, “Okay, I need the space to do this because if I don’t do this now then I’m not going to be able to get back to you, I will forget. So I’m not going to get back to you in a certain amount of time.”
+
+0:21:45.9 So being able to adapt that to different ways of thinking, different ways brains function, there’s ways of doing that.
+
+0:21:52.7 **Jason Staten** Yeah. Then, and also, I mean, if it’s something that does take a little bit more time to get back to, like, from the point that you received the feedback to the point that you’re able to act on it because not all things can be changed, necessarily, immediately. Like, it can’t be made visible immediately. I mean, you talked about connecting the dots. Even that is something that you can do as a recipient of criticism is to say, “I’m doing this, thank you to the criticism or the remarks that I received from such and such.” Like, if you do need to even draw it back, like, you should definitely make it known that it is well received.
+
+0:22:44.4 **Jen Luker** Mm-hmm (affirmative).  Absolutely, even if it’s, “Let me write this down and let’s talk about it again in a couple days.” And… or, you know, “I’m thinking on this.” Or, “We have this big thing coming up so let’s deal with it after that.” But I mean, just like a quick little status update of, “I haven’t forgotten, I’m still working on it. I will get back to you later.”
+
+0:23:03.3 **Jason Staten** And then going beyond the receiving of criticism, you step into, in some ways, I feel like can a more challenging realm and that is giving criticism because it is easier in that to fall into some of the not-so-radical candor realms, like, whether it’s the ruinous empathy in that you don’t want to hurt somebody’s feelings and… or if you don’t recognize, like, if you’re inconsiderate of somebody and their situation then you can also wind up in the like, obnoxious aggression.
+
+0:23:45.8 Or even, like, if you don’t want other people to look down on you, like, you can wind up in the manipulative insincerity because you’re just thinking about yourself and that’s why you don’t want to go and criticize somebody. But criticism, like giving it, is also something that you need to do, as well.
+
+0:24:04.4 **Jen Luker** Giving criticism is hard for so many reasons. You know, not only the ones that you mentioned, but yeah, mostly the ones that you mentioned. Just trying to gauge that level of honesty, how blunt do you want to be? How much are going to… Because, I mean, there’s a difference even between radical candor and being tactful, and being blunt and harsh.
+
+0:24:26.5 **Jason Staten** Mm-hmm (affirmative).
+
+0:24:27.2 So it can be… and it can be difficult to gauge that line sometimes and not only that, but if you start, like, looking at someone’s face and you’re giving them feedback and they start giving you, like, those big wide scared eyes?(laughs) Don’t do what I do which is to just keep talking…
+
+0:24:45.6 **Jason Staten** (laughs)
+
+0:24:46.2 **Jen Luker** Trying to make it better just progressively making it worse. So, you know, trying to gauge how to do that, too? (laughs) And learning how to do that well? It’s something that takes skill and practice.
+
+0:25:00.1 **Jason Staten** Yeah. You definitely have to watch things, like, your words are a key thing. She calls out: with criticism, don’t personalize. While you, as part of radical candor, are supposed to care personally, if during your criticism you are ever going to start saying, “You are...” you need to stop yourself right there and realize that you are personalizing and you are, essentially, like, labeling the person, or making them… putting them into a more unchangeable state.
+
+0:25:41.4 And instead, she directs towards having a situation, a calling out a specific situation that happened, the behavior that you saw and then the impact that that caused. And by doing that, I mean, it gives somebody something very specific that they can work on. So then, when you’re criticizing, you are giving them a lot more that they can go off of, as well as putting it on their work or some behavior rather than them, as a human.
+
+0:26:21.9 **Jen Luker** Right? I mean, when you give a label, when you define a label, your brains are so happy to receive a label. So, so happy! They love categorization, and organization, and planning things, and seeing what they are; and as soon as you give something, or someone, a label, our brain just adopts it like it’s magic.
+
+0:26:41.6 So putting a label on someone not only makes them feel that they fit that label, but it also tells your brain that they fit that label and then that’s all you’re going to see. So trying to stay away from those personal labels and saying the behavior fits this label, this action fits this label, this piece of work fits this label; then our brains accept that as opposed to the person being something because people are adaptable. People change, but in action, once it’s performed it’s part of the past and therefore a solid thing and all you can do at that point is move forward.
+
+0:27:21.4 And everything  that happens in the future is fluid, and can change, and is fixable, adjustable, modifiable. So just defining and being careful about that plays again into psychology and how our brains perceive things.
+
+0:27:37.8 **Jason Staten** One other important part of criticism as well, is trying to get it as close to the point of some, whatever behavior you saw happened, as you can. That may be, like, that may be in more of the situation where you take somebody aside privately and talk to them, but as soon as you can do that, do it. Because you can, first, you can give the clearest recollection of it because you just saw it happen; whereas, if you see something and then you think to yourself, “Oh, well I’ve got a one-on-one in a week. I’ll talk to them about it then.” Then in a week’s time your view of it may be different because, as humans, our brains, they are very lossy mediums and we have a tendency to lose a lot of details over time to be efficient in what is there. And so having a full discussion of it may be more challenging, like, a week in the future.
+
+0:28:51.3 **Jen Luker** And the thought that comes to mind here is the example of being a witness to a car crash and when you go to give your statement a week later you can’t remember the color of the car, but you swear you do. You know the color of the car but you go in and say it’s blue, but it’s actually, like red. And all of the details that you remember and they end up just being skewed. And they’re just skewed by time, they’re skewed by previous experience, they’re skewed by life that comes in a changes things.
+
+0:29:21.3 So there’s also a situation where, or there was a study where they took people that had, like, separated lobes in their brains. So, like, they had the left and right halves were not actually attached. So they would put a piece of paper between their two eyes and they’d show one side a drink, like a Coke, and then they’d ask them, “How are you doing?”
+
+0:29:47.3 And they’re like, “You know, I’m kind of thirsty.”
+
+0:29:48.4 They’re like, “Oh, well what would you like to drink?”
+
+0:29:50.4 And they’re like, “You know, I think I’d really like a Coke.”
+
+0:29:52.5 And they’re like, “Well, why do you want a Coke?”
+
+0:29:53.8 Like, “Yeah, it’s just, like, one of my favorite drinks.”
+
+0:29:56.3 And they would make up any reason possible, our brains are very good at telling ourselves stories of why we want to do something, not knowing that they were actually looking at a picture of a Coke because of that separation.
+
+0:30:11.8 So that’s another thing is the fact that over time we have more time for our brains to make up stories to fill in details that we don’t necessarily know. So the closer you can get to it… and that plays really well into what you said before about having public, immediate feedback being given, that if it’s right there, right then, as quickly as possible, it can be immediately addressed or adjusted or put on the calendar, but at least you get more of the details right then than you would otherwise.
+
+0:30:47.5 **Jason Staten** She also mentions that if you’re in a remote situation that you should not necessarily wait until you’re in person, but she does recommend, pretty much, use the highest fidelity medium that you can. If you can do a video chat then do that because then you’ve got body language; and if you can’t do that, then do a phone call; and if you can’t do that, then send an email; and then, I don’t know, I mean, maybe a text?
+
+0:31:20.8 **Jen Luker** Slack.
+
+0:31:21.8 **Jason Staten** (laughs) Yeah. Yeah.
+
+0:31:24.7 **Jen Luker** Not a tweet. Text.
+
+0:31:26.0 **Jason Staten** (laughs) No, not a tweet. Don’t do that. Unless you are mad at Comcast because your cable’s out, then tweet. Or wait on the phone for an hour.
+
+0:31:40.3 **Jen Luker** All right, so there’s exceptions but again, that’s about behavior, not people.
+
+0:31:44.4 **Jason Staten** Right, and that’s a company, too. So you can criticize a company, right?
+
+0:31:54.0 **Jen Luker** No!
+
+0:31:54.7 **Jason Staten** It’s not personalizing. (laughs)
+
+0:31:56.0 **Jen Luker** You’re just upset about what the company’s behavior is which is no internet.
+
+0:32:01.4 **Jason Staten** Exactly.
+
+0:32:03.0 **Jen Luker** Failure to give you what you paid for.
+
+0:32:05.1 **Jason Staten** Yeah. All right. So, I think that we have pretty good coverage of criticism and before we keep going on, it seems like a good time to go and do an ad.
+
+(Typewriter dings)
+
+0:32:19.7 **Jason Staten** This episode of BookBytes is sponsored by Pluralsight. Pluralsight is the technology skills platform. You can see where your skills stand, master the latest technologies and show off your expertise. They’re currently hiring in Salt Lake City and Boston.
+
+0:32:33.3 The culture of their engineering organization is shaped by developers for developers. They work in small, cross-functional, autonomous teams focused on carrying experiences from concept to delivery. Each team is autonomous so they own the discovery, design, development, delivery, and production support of their part of the overall system. They encourage test driven development, pair programming, continuous delivery as well as refactoring and clean code. Engineers are involved in every step of the process of building new features and they talk to customers to find out what their needs are.
+
+0:33:08.3 They have a culture of continuous learning and have book clubs and discussion groups. Pluralsight was just named the #9 Best Workplace and one of the Best Workplaces for Women by Great Places to Work.
+
+0:33:21.3 You want to work there and work with Adam? Visit Pluralsight.com/Careers/Engineering to learn more. That’s Pluralsight.com/Careers/Engineering.
+
+0:33:32.7 And for those of you who would be interested in checking out the product, you can DM @Pluralsight on Twitter and they’ll send you a free trial code so that you can experience the platform for yourself.
+
+0:33:42.9 And thanks to Pluralsight for sponsoring the show.
+
+(Typewriter Dings)
+
+0:33:46.4 **Jason Staten** All right. So now that we’ve done a bit of criticism, let’s talk a little bit about praise.
+
+0:33:50.7 **Jen Luker** Yay, praise!
+
+0:33:51.9 **Jason Staten** Praise, yeah. Praise is another one of those things that you have to do tactfully and it’s not as easy as just, “Good job! I knew you could do it.”
+
+0:34:05.5 **Jen Luker** Do what? And when did I do this? And what specifically did you like about it? And this is too big. I don’t know what to do!
+
+0:34:14.2 **Jason Staten** Right, yeah. That is… kind of, meaningless praise. They cannot take that and go anywhere with it and much like criticism where you should be giving people direction on how they can improve or, like, what you noticed, praise as well should be similar in that you should have a situation of behavior and an impact. Like, instead of saying, “You’re a genius!” because the response to that could potentially be, like, “Who are you to question my intelligence or to be the judge of it?” You know?
+
+0:34:52.7 Versus if you were to give somebody the feedback of, “In the presentation, you talked about our decision to include diversity in the company. It was persuasive because you showed everyone that you heard the other point of view.” That kind of covers the situation of in the presentation, the fact that you talked about the decision for diversity was the behavior that you made, and as well as the impact because to say that it was persuasive and, I guess, kind of, going back to behavior that you showed that you heard the other point of view.
+
+0:35:31.6 Like, that is very actionable and it is a behavior that somebody can reproduce. Like, when you’re praising somebody you’re encouraging them to do more of that thing and if you don’t tell them what that thing is, or where that happened, or why it’s a good thing, then yeah, they don’t have any guidance.
+
+0:35:53.6 **Jen Luker** And the exact same thing goes for criticism. You need to have a when, what you did, why. Why was it good, why was it bad? And the other thing is, “You’re a genius” applies to a label and people feel the need to stand up to that label.
+
+0:36:07.9 So you, as someone saying, “You’re a genius”, is going to expect more genius things and them, feeling like they were just a genius, have to step up to that and that can be really overwhelming to not quite know what it is you did, but know that you have to stand up for it now and you have to always be that.
+
+0:36:28.5 So, again, applying that away from a person and towards a behavior encourages that behavior to keep happening; and it allows people to make mistakes without horribly punishing themselves for not standing up to your expectation of them.
+
+0:36:43.7 **Jason Staten** You’re right. That is another label categorization situation. In the earlier part of the book, she also talks about giving praise at the correct time, as well. And that is very much a personal based thing because giving praise in public can sometimes be good for certain people and certain situations, but not necessarily all situations.
+
+0:37:12.0 Like when, I think she talks about giving a word to a woman or praise to another woman and not too long after, the recipient of it, she was kind of upset because she felt like it was dismissive of all the work that other people on her team had put in as well, and so, like, giving praise publicly, it’s almost like she put… you put the person that receives the praise at odds with everybody else on the team.
+
+0:37:46.6 **Jen Luker** I’ve seen this done so often and so easily, and it could be something as simple as, you know, “Thank you, Leader, for making this happen!” When the thing that happened was actually part of the committee that was under the leader.
+
+0:38:04.5 **Jason Staten** Mm-hmm (affirmative).
+
+0:38:05.6 **Jen Luker** The leader may have actually had very little to do with the work but they were the ones that took all the work the committee did and presented it. So it can be insulting to everyone who did the work if the praise doesn’t fall down that same level.
+
+0:38:23.3 **Jason Staten** Hmm.
+
+0:38:23.3 **Jen Luker** That they just get to take credit for everything that you do.
+
+0:38:27.5 **Jason Staten** Their face is on the epic of Jira ticket. So, therefore, it was them that did all that lifting.
+
+0:38:36.3 **Jen Luker** Right? All 144 points.
+
+0:38:39.9 **Jason Staten** (laughs) And, yeah, kind of like you said, it’s not always an intentional thing, just, somebody has to be assigned to it.
+
+0:38:48.3 **Jen Luker** Sadly, but truly.
+
+0:38:52.6 **Jason Staten** (laughs) Yeah, and-
+
+0:38:53.9 **Jen Luker** I mean, but it’s just a matter of, you know, there’s the things that are like, we lose together as a team, but we win as individuals. It’s just, be careful which individual you assign it to. And make sure that if you’re going to praise publicly that everyone involved gets that praise and not just the one person that spearheads it, or is at the top, or however way that works just because whatever it is, is likely a lot of hard work and a lot of people had fingers in it.
+
+0:39:26.1 **Jason Staten** And-
+
+0:39:26.1 **Jen Luker** So, and then there’s some people that just really, really hate public criticism or public compliments just as much, right? It’s just horribly embarrassing to have that level of focus on someone. So you need to make sure that you understand how they’re going to handle it as well, how they prefer to handle it.
+
+0:39:47.1 **Jason Staten** Mm-hmm (affirmative).  I agree. I mean, some of it comes down to even if they are a rock star or a superstar, like, if somebody does really well on something and they are in a more rock star type mode in their life right then, giving them a promotion for doing a great job is probably the worst thing that you can do. (laughs)
+
+0:40:16.3 **Jen Luker** (laughs) Oh, well that isn’t just the praise that you’re giving, that’s like, how you’re giving them praise, not just…
+
+0:40:25.8 **Jason Staten** Mm-hmm (affirmative).
+
+0:40:26.4 **Jen Luker** Yeah, that’s difficult. That’s not just, like, a compliment, that’s a career-changing kind of, either exciting thing or trauma. (laughs)
+
+0:40:38.1 **Jason Staten** Yeah! I mean, I guess I could see it may, like, maybe less likely in development because it’s not specific to one particular accomplishment, but I could see something more like it in the sales realm, for example.
+
+0:40:56.3 Like, say somebody closes the first, I don’t know, $10 Million deal for your company or something, like, just something phenomenal; and then all of the sudden they are moved from being, like, senior sales to sales manager and that is an entirely different role because you are no longer the person who is, like, working with people. You’re doing less of the individual contact but, like, instead you’re raising everybody else on the sales floor.
+
+0:41:27.2 **Jen Luker** Yeah, but if you’re not the person that likes managing people or if it’s just not your role, it’s not what you want out of your career, that can be, I mean, that’s a whole career change. If you go from whatever it is your job is to managing people, that is an entire career change.
+
+0:41:46.1 So trying to do that to people without being aware that that’s coming is… it’s kind of cruel to be honest. (laughs) It’s cruel to put someone in a completely different position than they may have wanted without necessarily asking them or preparing them for that role.
+
+0:42:04.5 So if that’s the situation, like, definitely talk to someone before you go promoting them like that. And I’m not saying that it isn’t wanted, I’m saying make sure you’ve talked to them first.
+
+0:42:17.9 **Jason Staten** Yes, definitely. And don’t do it in a public forum, of the worst possible way to do it.
+
+0:42:25.8 **Jen Luker** Yeah, especially if they look horrified and really would prefer to reject this promotion.
+
+0:42:31.0 **Jason Staten** Right. (laughs) Yeah.
+
+0:42:33.0 **Jen Luker** All the failed marriage proposals in public are now running through my head. (laughs)
+
+0:42:35.6 **Jason Staten** That is, that’s exactly what was going in my mind.
+
+0:42:40.7 **Jen Luker** “I’m going to propose at Thanksgiving dinner in front of her great-great grandparents and everyone down!”
+
+0:42:46.3 **Jason Staten** Right? There’s the classic YouTube videos of being on a basketball court and-
+
+0:42:53.0 **Jen Luker** (gasps) And getting rejected in front of millions of people!
+
+0:42:55.4 **Jason Staten** And like, rejected, yeah, right in the middle and then someone just walks away. (laughs) That, yeah. That moment.
+
+0:43:04.4 **Jen Luker** Anyway! Moving on before that sinks in any further than it already has.
+
+0:43:09.7 **Jason Staten** Okay, similar to that note is the section on gender politics.
+
+0:43:15.7 **Jen Luker** Hey!
+
+0:43:17.5 **Jason Staten** That, I think, is an excellent topic that Kim covered in the book that’s really, really important. It’s that Radical Candor is different for women and that you need to recognize that; both as a male and female in the workplace and she does a lot of specific call outs.
+
+0:43:45.4 **Jen Luker** And depending on your perception, radical candor is actually different for men.
+
+0:43:50.6 **Jason Staten** Yeah.
+
+0:43:51.4 **Jen Luker** So, I mean, when it comes to that, it’s much, it can cross those gender boundaries pretty heavily in that our perceptions are still quite skewed. They’re definitely biased, unfortunately.
+
+0:44:10.9 **Jason Staten** Yeah, she says early on in that section that men, from a young age, can be trained to be gentler with women and that it is very likely for men to go and pull their punches and not go and give things like criticism that women need to improve.
+
+0:44:38.7 **Jen Luker** I love the little example that she gave there about, like, a woman getting her first bit of criticism as, like, a young adult and just getting really angry about it because they’d never received it before, they didn’t know necessarily how to handle it either. So that can go both ways but I don’t think that that necessarily means that you shouldn’t give criticism. I think sometimes it’s a matter of defining when you are crossing that gender boundary that you are a little bit more explicit about, “I’m going to give you criticism now.” And give a few seconds to transition modes.
+
+0:45:11.5 **Jason Staten** Yeah, and also as we kind of explained earlier on in the criticism section, I mean, opening yourself up to criticism first, kind of, sets that tone that we are in an environment where we give each other feedback so that we can improve and realize that that’s what criticism is for. I mean, she explicitly says that criticism is a gift. Like, if we don’t tell people how they can improve then they won’t. Like, we all have blind spots and that’s what we can definitely rely on each other to help call out so that way we can improve and improve those things and just generally get better. They can be more productive in a workplace, like, happier as people. Like, it could be things that even we put off as minor but can be pretty important.
+
+0:46:13.2 I mean, she mentions early on with the example of getting called for using “ums” a lot in her presentation and while she, herself, didn’t see that as a big deal, it was one of those things that has been critical to her success. Kim Scott, in her career, is public speaking because that’s something she does a lot now and had she not had that feedback really early on then how limiiting would that be to her now?
+
+0:46:43.4 **Jen Luker** I had a thought and I can’t remember what it was.
+
+0:46:45.7 **Jason Staten** On the note of being limiting to women as well, that is one of the other pieces that’s covered within that section. It’s that while we, like, if we don’t give criticism in equal manner, like if women just don’t have that and it detracts from their progression in their careers that whereas say, Bob gets promoted because he’s receiving the criticism he needs and he’s improving; and Alice isn’t getting the feedback she needs to know how to improve, then how much faster of a career trajectory can he be on versus Alice if she’s not getting that same level?
+
+0:47:35.4 And how much it stacks, especially over time, because I mean, you can certainly see it with people who are developers, like, how because, like, how wildly different things like our pay scales can be because of decisions or situations or whatever happened really early on in our careers. Like, that can influence a whole lot. Like, whether it’s if you get a job that you are making peanuts and then stick around there for a long time because of whatever reason, and then don’t ever get the feedback you need to, like, progress to a higher role, like, if you stay at a job and they keep you as a Junior Engineer for three years or something like that, whereas other people happen to move from junior to some other, like, mid-level or something like that, quicker, like, that makes a huge impact where you are 10 years down the line. And so, I mean, yet again, why it’s so important to give feedback and criticism equally.
+
+0:48:53.7 **Jen Luker** I hadn’t quite necessarily thought about it that way which is so cool, but going beyond that, it’s also important the type of criticism you give. That that criticism be equal, as well. You know, there’s books that have made fun of it, I’ve seen them in women’s bathrooms among other places, that say things like, “Okay, she’s bossy, but he’s assertive. And she’s annoying, but he’s insistent.”
+
+0:49:23.5 So it can… the way that we use our language to provide that criticism, matters.
+
+0:49:31.4 **Jason Staten** Yeah, she calls out the term “abrasive” for women.
+
+0:49:37.2 **Jen Luker** Or “shrill.”
+
+0:49:38.5 **Jason Staten** Have you ever been called abrasive, Jen?
+
+0:49:40.6 **Jen Luker** Once or a dozen times.
+
+0:49:42.9 **Jason Staten** Hmm. And that is, like, it is such a gendered term. You think of it, like, I cannot recall a situation where it has been applied to a man. I mean, like, I’m sure it’s happened but likely disproportionate.
+
+0:50:02.1 **Jen Luker** Yep, it's just one of those things that we have to be extremely aware of. And something that she says in the book is to switch genders before you give that feedback. Would you give this feedback if it were George, your coworker, versus Sally?
+
+0:50:16.1 **Jason Staten** Yep.
+
+0:50:16.1 **Jen Luker** And if it’s something where you’d say, “Oh, yeah. Totally.” (laughs) Then just double check before you give it, just to make sure. But, you know, it’s important that women get feedback. It’s important that men get feedback. It’s just important that the feedback that we give is helpful and not, “Be nicer. Smile more. Bake cookies.”
+
+0:50:35.7 **Jason Staten** Yeah, definitely. It all goes back to both the praise and criticism about being very specific about things. Like, that doesn’t have to be applied to one gender or the other. Just, say, “This is the impact that you had here.”
+
+0:50:56.2 And I also think that, yeah, just like, it’s not productive to go and label somebody as “X”. Once again that, I mean, to say, “Jen, you are abrasive.” That is labeling you rather than a specific behavior or a situation.
+
+0:51:18.2 **Jen Luker** Yep, a specific incident.
+
+0:51:20.3 **Jason Staten** Yeah, but I’m definitely glad that Kim called out the topic because it is an important thing and it is something that we need to be aware of whether it be gender, whether it be cultural as she, kind of, talked about in other parts of the book because not all parts of the world give praise or receive criticism in the same way and, I mean, that’s an inherent part of radical candor. It’s just having that relationship with your peers, with your boss, with your reports, and having it at a level where you can understand the way that is best to communicate with them.
+
+0:52:07.6 **Jen Luker** I think that says it all, for the most part.
+
+0:52:12.3 **Jason Staten** Yeah, yeah. I thought it was an excellent read and we’ll certainly be recommending it to others, as well.
+
+0:52:22.4 **Jen Luker** Definitely.
+
+0:52:22.4 **Jason Staten** I mean, I’ve already brought it up to a few coworkers at work and I’m like, “You should read this!” And I haven’t had anybody take me up on it, but I will… this is yet another reminder after recording this to go and bring it up, yet another time, at work. So, yeah. Thanks for taking the time to record, Jen. So even though Adam couldn’t make it, I’m definitely glad that we could talk it over.
+
+0:52:47.6 **Jen Luker** I think it went well. We had fun.
+
+0:52:50.8 **Jason Staten** Yeah. And to anyone listening, thanks for taking the time to listen, as well. Hope you enjoyed the episode. You can find the show notes and transcript on orbit.fm/BookBytes and you can follow the podcast on Twitter @BookBytesFM and Jen, where can people find you?
+
+0:53:10.7 **Jen Luker** You can find me on JenLuker.com or on Twitter @KnitCodeMonkey. What about you?
+
+0:53:15.6 **Jason Staten** I’m on Twitter @StatenJason, occasionally.
+
+0:53:20.5 And next time Adam will be back and we’ll be starting out a new book. I’m looking forward to it.
+
+0:53:28.8 **Jen Luker** Surprise, surprise!
+
+0:53:29.5 **Jason Staten** Yeah. (laughs)
+
+0:53:30.9 **Jen Luker** (laughs) See you next time.
+
+0:53:32.8 **Jason Staten** See ya.
+
+(Exit music: Electro swing)
