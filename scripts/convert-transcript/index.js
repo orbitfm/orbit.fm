@@ -50,6 +50,11 @@ const processLine = line => {
 
 const time_speaker_text = line => {
   const result = line.split('**');
+  if (result.length < 3) {
+    throw new Error(
+      `The line appears to be in the format time **speakers** text, but is invalid: ${line}`
+    );
+  }
   return {
     timestamp: result[0].trim(),
     speaker: result[1],
