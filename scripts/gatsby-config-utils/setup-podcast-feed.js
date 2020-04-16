@@ -1,6 +1,6 @@
 const { DateTime } = require('luxon');
 
-const setupPodcastFeed = ({ podcast, siteMetadata }) => ({
+const setupPodcastFeed = ({ podcast, categories, siteMetadata }) => ({
   title: podcast.name,
   description: podcast.description.description,
   feed_url: `${siteMetadata.siteUrl}/${podcast.fields.slug}/feed.rss`,
@@ -13,7 +13,7 @@ const setupPodcastFeed = ({ podcast, siteMetadata }) => ({
   webMaster: `${siteMetadata.ownerEmail} (${siteMetadata.owner})`,
   copyright: `${new Date().getFullYear()} ${siteMetadata.owner}`,
   language: 'en',
-  categories: siteMetadata.categories,
+  categories,
   pubDate: DateTime.fromISO(new Date()).toHTTP(),
   ttl: '60',
   custom_namespaces: {
@@ -39,7 +39,7 @@ const setupPodcastFeed = ({ podcast, siteMetadata }) => ({
         },
       },
     },
-    ...siteMetadata.categories.map(c => ({
+    ...categories.map(c => ({
       'itunes:category': {
         _attr: {
           text: c,

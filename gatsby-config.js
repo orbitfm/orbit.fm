@@ -21,15 +21,16 @@ module.exports = {
       options: {
         query: topQuery,
         feeds: [
-          generatePodcastFeedConfig({ index: 0, name: 'bookbytes' }),
-          generatePodcastFeedConfig({ index: 1, name: 'imprint' }),
-          generatePodcastFeedConfig({ index: 2, name: 'talkingdudes' }),
-          generatePodcastFeedConfig({ index: 3, name: 'weboftomorrow' }),
+          generatePodcastFeedConfig({ index: 0, name: 'bookbytes', categories: ['Technology', 'Education', 'Books'] }),
+          generatePodcastFeedConfig({ index: 1, name: 'imprint', categories: ['Christianity', 'Books'] }),
+          generatePodcastFeedConfig({ index: 2, name: 'talkingdudes', categories: ['Society & Culture', 'Education'] }),
+          generatePodcastFeedConfig({ index: 3, name: 'weboftomorrow', categories: ['Technology', 'Education'] }),
           {
             query,
             output: `master.rss`,
             setup: ({ query }) =>
               setupPodcastFeed({
+                categories: ['Technology', 'Education', 'Christianity', 'Books'],
                 siteMetadata: query.site.siteMetadata,
                 podcast: {
                   name: `${query.site.siteMetadata.title} master feed`,
