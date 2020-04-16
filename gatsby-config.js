@@ -22,8 +22,9 @@ module.exports = {
         query: topQuery,
         feeds: [
           generatePodcastFeedConfig({ index: 0, name: 'bookbytes' }),
-          generatePodcastFeedConfig({ index: 1, name: 'talkingdudes' }),
-          generatePodcastFeedConfig({ index: 2, name: 'weboftomorrow' }),
+          generatePodcastFeedConfig({ index: 1, name: 'imprint' }),
+          generatePodcastFeedConfig({ index: 2, name: 'talkingdudes' }),
+          generatePodcastFeedConfig({ index: 3, name: 'weboftomorrow' }),
           {
             query,
             output: `master.rss`,
