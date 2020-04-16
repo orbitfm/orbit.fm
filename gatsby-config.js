@@ -13,7 +13,7 @@ module.exports = {
     siteUrl: `https://www.orbit.fm`,
     owner: `Orbit FM`,
     ownerEmail: `hello@orbit.fm`,
-    categories: ['Technology', 'Education'],
+    categories: { Technology: [], Education: [] },
   },
   plugins: [
     {
@@ -24,29 +24,34 @@ module.exports = {
           generatePodcastFeedConfig({
             index: 0,
             name: 'bookbytes',
-            categories: ['Technology', 'Education', 'Arts'],
+            categories: { Technology: [], Education: [], Arts: ['Books'] },
           }),
           generatePodcastFeedConfig({
             index: 1,
             name: 'imprint',
-            categories: ['Religion', 'Arts'],
+            categories: { Religion: [], Arts: ['Books'] },
           }),
           generatePodcastFeedConfig({
             index: 2,
             name: 'talkingdudes',
-            categories: ['Society & Culture', 'Education'],
+            categories: { 'Society & Culture': [], Education: [] },
           }),
           generatePodcastFeedConfig({
             index: 3,
             name: 'weboftomorrow',
-            categories: ['Technology', 'Education'],
+            categories: { Technology: [], Education: [] },
           }),
           {
             query,
             output: `master.rss`,
             setup: ({ query }) =>
               setupPodcastFeed({
-                categories: ['Technology', 'Education', 'Religion', 'Arts'],
+                categories: {
+                  Technology: [],
+                  Education: [],
+                  Religion: [],
+                  Arts: ['Books'],
+                },
                 siteMetadata: query.site.siteMetadata,
                 podcast: {
                   name: `${query.site.siteMetadata.title} master feed`,

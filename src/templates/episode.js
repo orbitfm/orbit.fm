@@ -134,12 +134,9 @@ const Timestamp = ({ url, podcast, title, timestamp, onClick }) => (
   </TimestampSpan>
 );
 
-const ConnectedTimestamp = connect(
-  null,
-  {
-    onClick: playSongAtTime,
-  }
-)(Timestamp);
+const ConnectedTimestamp = connect(null, {
+  onClick: playSongAtTime,
+})(Timestamp);
 
 export default ({ data }) => {
   const episode = data.contentfulEpisode;

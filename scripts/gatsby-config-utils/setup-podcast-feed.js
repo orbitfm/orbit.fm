@@ -39,11 +39,19 @@ const setupPodcastFeed = ({ podcast, categories, siteMetadata }) => ({
         },
       },
     },
-    ...categories.map(c => ({
+    ...Object.keys(categories).map(category => ({
       'itunes:category': {
         _attr: {
-          text: c,
+          text: category,
         },
+
+        ...categories[category].map(subcategory => ({
+          'itunes:category': {
+            _attr: {
+              text: subcategory,
+            },
+          },
+        })),
       },
     })),
   ],
