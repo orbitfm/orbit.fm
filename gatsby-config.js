@@ -13,7 +13,10 @@ module.exports = {
     siteUrl: `https://www.orbit.fm`,
     owner: `Orbit FM`,
     ownerEmail: `hello@orbit.fm`,
-    categories: `{ Technology: [], Education: [] }`,
+    categories: [
+      { name: `Technology`, sub: [] },
+      { name: `Education`, sub: [] },
+    ],
   },
   plugins: [
     {
@@ -24,34 +27,47 @@ module.exports = {
           generatePodcastFeedConfig({
             index: 0,
             name: 'bookbytes',
-            categories: `{ Technology: [], Education: [], Arts: ['Books'] }`,
+            categories: [
+              { name: `Technology`, sub: [] },
+              { name: `Education`, sub: [] },
+              { name: `Arts`, sub: ['Books'] },
+            ],
           }),
           generatePodcastFeedConfig({
             index: 1,
             name: 'imprint',
-            categories: `{ Religion: [], Arts: ['Books'] }`,
+            categories: [
+              { name: `Religion`, sub: [] },
+              { name: `Arts`, sub: ['Books'] },
+            ],
           }),
           generatePodcastFeedConfig({
             index: 2,
             name: 'talkingdudes',
-            categories: `{ 'Society & Culture': [], Education: [] }`,
+            categories: [
+              { name: `Society & Culture`, sub: [] },
+              { name: `Education`, sub: [] },
+            ],
           }),
           generatePodcastFeedConfig({
             index: 3,
             name: 'weboftomorrow',
-            categories: `{ Technology: [], Education: [] }`,
+            categories: [
+              { name: `Technology`, sub: [] },
+              { name: `Education`, sub: [] },
+            ],
           }),
           {
             query,
             output: `master.rss`,
             setup: ({ query }) =>
               setupPodcastFeed({
-                categories: `{
-                  Technology: [],
-                  Education: [],
-                  Religion: [],
-                  Arts: ['Books'],
-                }`,
+                categories: [
+                  { name: `Technology`, sub: [] },
+                  { name: `Education`, sub: [] },
+                  { name: `Religion`, sub: [] },
+                  { name: `Arts`, sub: ['Books'] },
+                ],
                 siteMetadata: query.site.siteMetadata,
                 podcast: {
                   name: `${query.site.siteMetadata.title} master feed`,

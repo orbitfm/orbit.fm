@@ -8,7 +8,9 @@ const podcastQuery = `
         siteUrl
         owner
         ownerEmail
-        categories
+        categories {
+          name
+        }
       }
     }
   }`;

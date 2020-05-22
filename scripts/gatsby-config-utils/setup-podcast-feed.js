@@ -13,7 +13,6 @@ const setupPodcastFeed = ({ podcast, categories, siteMetadata }) => ({
   webMaster: `${siteMetadata.ownerEmail} (${siteMetadata.owner})`,
   copyright: `${new Date().getFullYear()} ${siteMetadata.owner}`,
   language: 'en',
-  categories,
   pubDate: DateTime.fromISO(new Date()).toHTTP(),
   ttl: '60',
   custom_namespaces: {
@@ -39,20 +38,21 @@ const setupPodcastFeed = ({ podcast, categories, siteMetadata }) => ({
         },
       },
     },
-    ...Object.keys(JSON.parse(categories)).map(category => ({
-      'itunes:category': {
-        _attr: {
-          text: category,
+    ...categories.map(category => ({
+      'itunes:category': [
+        {
+          _attr: {
+            text: category.name,
+          },
         },
-
-        ...JSON.parse(categories)[category].map(subcategory => ({
+        ...category.sub.map(subcategory => ({
           'itunes:category': {
             _attr: {
               text: subcategory,
             },
           },
         })),
-      },
+      ],
     })),
   ],
 });

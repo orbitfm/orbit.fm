@@ -34,8 +34,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         node.season && node.episodeNumber
           ? `season${node.season}/${node.episodeNumber}`
           : node.episodeNumber !== undefined
-            ? node.episodeNumber
-            : slug(node.name, { lower: true })
+          ? node.episodeNumber
+          : slug(node.name, { lower: true })
       }`,
     });
 
