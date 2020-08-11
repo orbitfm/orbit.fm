@@ -90,7 +90,7 @@
     },
     {
       "timestamp": "0:02:37.6",
-      "text": "But then, also, no on the other hand. It’s not flawless. It’s way overhyped. It can’t do everything we think it can for lots of different reasons. "
+      "text": "But then, also, no on the other hand. It’s not flawless. It’s way overhyped. It can’t do everything we think it can for lots of different reasons."
     },
     {
       "timestamp": "0:02:46.7",
@@ -144,7 +144,7 @@
     },
     {
       "timestamp": "0:03:45.8",
-      "text": "And she’s like, “I just left house and started going downhill.” "
+      "text": "And she’s like, “I just left house and started going downhill.”"
     },
     {
       "timestamp": "0:03:48.4",
@@ -348,7 +348,7 @@
     },
     {
       "timestamp": "0:08:48.5",
-      "text": "But things that aren’t AI are stuff from science fiction, rules-based programming, humans in robot costumes. "
+      "text": "But things that aren’t AI are stuff from science fiction, rules-based programming, humans in robot costumes."
     },
     {
       "timestamp": "0:08:56.7",
@@ -547,7 +547,7 @@
     },
     {
       "timestamp": "0:13:55.5",
-      "text": "Like that could also be a way for the AI to succeed but with having guardrails in place in order to stop that. It’s probably something you need to remember, too. "
+      "text": "Like that could also be a way for the AI to succeed but with having guardrails in place in order to stop that. It’s probably something you need to remember, too."
     },
     {
       "timestamp": "0:14:05.4",
@@ -756,7 +756,7 @@
     },
     {
       "timestamp": "0:17:42.7",
-      "text": "So the problem with that is that the sandwiches are very, very random. So ingredients could include jam, ice cubes, old socks, literally anything could be on the sandwich. So we would have to sit and sort through all of the bad sandwiches to find any good sandwiches which is really tedious work, so she’s talking about hypothetically training an AI to do that work for us. "
+      "text": "So the problem with that is that the sandwiches are very, very random. So ingredients could include jam, ice cubes, old socks, literally anything could be on the sandwich. So we would have to sit and sort through all of the bad sandwiches to find any good sandwiches which is really tedious work, so she’s talking about hypothetically training an AI to do that work for us."
     },
     {
       "timestamp": "0:18:09.5",
@@ -831,9 +831,6 @@
       "timestamp": "0:19:11.0",
       "speaker": "Adam Garrett-Harris",
       "text": "Yeah, I think she talks about, like, one problem could be that  so many bad sandwiches compared to some that are actually good that it just takes a shortcut and just always assumes it's bad."
-    },
-    {
-      "text": ""
     },
     {
       "timestamp": "0:19:22.7",
@@ -1097,7 +1094,7 @@
     },
     {
       "timestamp": "0:27:35.3",
-      "text": "And so that kind of made me think that it sounds like a pure function. Like, given this exact image of white noise, or random noise, it will produce the same image every time. Did you get the same feeling? "
+      "text": "And so that kind of made me think that it sounds like a pure function. Like, given this exact image of white noise, or random noise, it will produce the same image every time. Did you get the same feeling?"
     },
     {
       "timestamp": "0:27:50.2",
@@ -1131,11 +1128,11 @@
     },
     {
       "timestamp": "0:28:28.9",
-      "text": "(laughs) So the generator is terrible at generating pictures of horses, the discriminator is terrible at telling whether or not it’s a horse. It can’t tell the difference between a real horse and a bunch of garbage. "
+      "text": "(laughs) So the generator is terrible at generating pictures of horses, the discriminator is terrible at telling whether or not it’s a horse. It can’t tell the difference between a real horse and a bunch of garbage."
     },
     {
       "timestamp": "0:28:38.9",
-      "text": "And that’s good because a human would just be like, “No. No. No. No. No. No. No.” But this discriminator is really bad. So yeah, it’s going to say “yes” sometimes and then the generator can kind of work that and it can get better and better. "
+      "text": "And that’s good because a human would just be like, “No. No. No. No. No. No. No.” But this discriminator is really bad. So yeah, it’s going to say “yes” sometimes and then the generator can kind of work that and it can get better and better."
     },
     {
       "timestamp": "0:28:53.4",
@@ -1259,11 +1256,11 @@
     },
     {
       "timestamp": "0:32:38.3",
-      "text": "And then there’s a common thing in AI where AIs will often see giraffes everywhere, and I love this because people are more likely to photograph a giraffe than a plain landscape. So there’s way more images of giraffes exist than is representative of the real world. "
+      "text": "And then there’s a common thing in AI where AIs will often see giraffes everywhere, and I love this because people are more likely to photograph a giraffe than a plain landscape. So there’s way more images of giraffes exist than is representative of the real world."
     },
     {
       "timestamp": "0:32:56.8",
-      "text": "And then other examples of female scientists being under-represented on Wikipedia. It gives an example of Donna Strickland didn’t get a Wikipedia entry until she won the Nobel Prize in Physics. (laughs) "
+      "text": "And then other examples of female scientists being under-represented on Wikipedia. It gives an example of Donna Strickland didn’t get a Wikipedia entry until she won the Nobel Prize in Physics. (laughs)"
     },
     {
       "timestamp": "0:33:09.6",
@@ -1272,7 +1269,7 @@
     },
     {
       "timestamp": "0:33:25.5",
-      "text": "Even if we, as humans, attempt to circumvent that bias by saying, “Well we’re not putting gender or race into the system.” But there are ways that the algorithm, I mean, finds patterns that are, like, “Oh, well this person lives in this specific area or has this specific name” or something like that as a proxy way of determining that same thing. "
+      "text": "Even if we, as humans, attempt to circumvent that bias by saying, “Well we’re not putting gender or race into the system.” But there are ways that the algorithm, I mean, finds patterns that are, like, “Oh, well this person lives in this specific area or has this specific name” or something like that as a proxy way of determining that same thing."
     },
     {
       "timestamp": "0:33:55.4",
@@ -1311,11 +1308,11 @@
     },
     {
       "timestamp": "0:35:11.4",
-      "text": "So an example that’s not actually AI, but with training animals -and she said that here’s a lot of similarities between training AIs and training animals- the Soviets tried training dogs to run, to carry bombs and run underneath German tanks to blow up their tanks but there were several problems with that. "
+      "text": "So an example that’s not actually AI, but with training animals -and she said that here’s a lot of similarities between training AIs and training animals- the Soviets tried training dogs to run, to carry bombs and run underneath German tanks to blow up their tanks but there were several problems with that."
     },
     {
       "timestamp": "0:35:30.3",
-      "text": "The Soviets, their tanks were not moving during the training ‘cause they wanted to save money on fuel and so then, the dogs would get scared around moving tanks.  aAd also the German tanks smelled different, they ran on gasoline instead of diesel. So, often the dogs would end up running back underneath, or towards, or underneath the Soviet tanks which is really bad. (laughs) And also really sad that they tried to use dogs for that. "
+      "text": "The Soviets, their tanks were not moving during the training ‘cause they wanted to save money on fuel and so then, the dogs would get scared around moving tanks.  aAd also the German tanks smelled different, they ran on gasoline instead of diesel. So, often the dogs would end up running back underneath, or towards, or underneath the Soviet tanks which is really bad. (laughs) And also really sad that they tried to use dogs for that."
     },
     {
       "timestamp": "0:35:57.0",
@@ -1343,7 +1340,7 @@
     },
     {
       "timestamp": "0:37:11.3",
-      "text": "Secondly, they may be mean to humans when they don’t mean to be because they think they’re talking to a bot, and then thirdly, they may reveal sensitive information because they think they’re just talking to a computer. "
+      "text": "Secondly, they may be mean to humans when they don’t mean to be because they think they’re talking to a bot, and then thirdly, they may reveal sensitive information because they think they’re just talking to a computer."
     },
     {
       "timestamp": "0:37:21.4",
@@ -1367,7 +1364,7 @@
     },
     {
       "timestamp": "0:38:20.8",
-      "text": "And then with booking the restaurant, the person had a thick accent and had a hard time understanding what the person was asking. "
+      "text": "And then with booking the restaurant, the person had a thick accent and had a hard time understanding what the person was asking."
     },
     {
       "timestamp": "0:38:29.5",
@@ -1501,7 +1498,7 @@
     },
     {
       "timestamp": "0:41:35.4",
-      "text": "So, like, the sound itself exists on your machine, locally, but it is all generated from your machine. So it’s not like it’s streamed from somewhere or prerecorded but instead, just on the fly, just keeps playing. As long as you choose to listen, it will keep generating more and more music. "
+      "text": "So, like, the sound itself exists on your machine, locally, but it is all generated from your machine. So it’s not like it’s streamed from somewhere or prerecorded but instead, just on the fly, just keeps playing. As long as you choose to listen, it will keep generating more and more music."
     },
     {
       "timestamp": "0:41:53.8",
@@ -1530,7 +1527,7 @@
     },
     {
       "timestamp": "0:42:23.8",
-      "text": "So one example was an AI to play Doom and there’s actually three different AIs so one is the vision, so it’s like, “I have detected various things!” "
+      "text": "So one example was an AI to play Doom and there’s actually three different AIs so one is the vision, so it’s like, “I have detected various things!”"
     },
     {
       "timestamp": "0:42:34.0",
@@ -1544,7 +1541,7 @@
     },
     {
       "timestamp": "0:42:40.4",
-      "text": "And then one is actually the controller and it’s like, “Aah! Dodge left!” "
+      "text": "And then one is actually the controller and it’s like, “Aah! Dodge left!”"
     },
     {
       "timestamp": "0:42:43.8",
@@ -1594,7 +1591,7 @@
     {
       "timestamp": "0:43:23.6",
       "speaker": "Adam Garrett-Harris",
-      "text": "And then it’s just kind of gibberish and it’s doing some new lines and some question marks here and there and then eventually it’s like, “Walk. Walk, walk, walk. Walk, walk, walk.”"
+      "text": "And then it’s just kind of gibberish and it’s doing some new lines and some question marks here and there and then eventually it’s like, “Whock. Whock, Whock, Whock. Whock. Whock. Whock.”"
     },
     {
       "timestamp": "0:43:31.9",
@@ -1604,7 +1601,7 @@
     {
       "timestamp": "0:43:33.2",
       "speaker": "Adam Garrett-Harris",
-      "text": "And then eventually it’s like, “Knock-knock. Who’s there? I an. Ad are who? Ain who? And who? And a coo. I a poo. I rot a who.”"
+      "text": "And then eventually it’s like, “Knock-knock. Who’s there? Iane. Aartar who? Aaane who? Aan who? Anac who? Iobe who? Irata who?”"
     },
     {
       "timestamp": "0:43:42.3",
@@ -1614,7 +1611,7 @@
     {
       "timestamp": "0:43:43.5",
       "speaker": "Adam Garrett-Harris",
-      "text": "And then finally it kind of starts figuring out the formula. And I like, “Knock-knock. Who’s there? A cow with no lips. A cow with no lips who? A cow with no lips says, ‘oo, oo, oo’.”"
+      "text": "And then finally it kind of starts figuring out the formula. And I like, “Knock-knock. Who’s there? A cow with no lips. A cow with no lips who? A cow with no lips says, ‘ooo ooo ooooooo’.”"
     },
     {
       "timestamp": "0:43:52.4",
@@ -1743,7 +1740,7 @@
     },
     {
       "timestamp": "0:46:42.5",
-      "text": "And it can be just a quick, fun read and it gives you, it can kind of calm your fears about AI, help you understand AI, where to expect it, and if you want to dig into it more, then I think this is a great jumping off place. "
+      "text": "And it can be just a quick, fun read and it gives you, it can kind of calm your fears about AI, help you understand AI, where to expect it, and if you want to dig into it more, then I think this is a great jumping off place."
     },
     {
       "timestamp": "0:46:56.5",
@@ -1752,7 +1749,7 @@
     },
     {
       "timestamp": "0:47:12.2",
-      "text": "And I think it’s funny, Adam, that you mentioned, like, it will help calm your fears because, this is kind of silly, but at a really young age I watched some movie about a robot that went, like, turned evil or something and it scared me so much that I have this weird irrational fear of robots taking over the world which, (laughs) you’re supposed to laugh at that. That’s not, like… (laughs) "
+      "text": "And I think it’s funny, Adam, that you mentioned, like, it will help calm your fears because, this is kind of silly, but at a really young age I watched some movie about a robot that went, like, turned evil or something and it scared me so much that I have this weird irrational fear of robots taking over the world which, (laughs) you’re supposed to laugh at that. That’s not, like… (laughs)"
     },
     {
       "timestamp": "0:47:33.8",

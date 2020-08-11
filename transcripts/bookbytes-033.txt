@@ -1,110 +1,110 @@
-﻿0:00:00.1 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. Today we’re talking about “You Look Like a Thing and I Love You: How Artificial Intelligence Works and Why It's Making the World a Weirder Place” by Janelle Shane. I’m Adam Garrett-Harris. 
+﻿0:00:00.1 **Adam Garrett-Harris** Hello and welcome to BookBytes, a book club podcast for developers. Today we’re talking about “You Look Like a Thing and I Love You: How Artificial Intelligence Works and Why It's Making the World a Weirder Place” by Janelle Shane. I’m Adam Garrett-Harris.
 
-0:00:13.6 **Jason Staten** I’m Jason Staten. 
+0:00:13.6 **Jason Staten** I’m Jason Staten.
 
-0:00:15.0 **Megan Duclos** And I’m Megan Duclos. 
+0:00:15.0 **Megan Duclos** And I’m Megan Duclos.
 
-0:00:16.2 **Adam Garrett-Harris** Megan is new to the podcast and will hopefully be a regular co-host. We work together and can you tell us a little bit about yourself? 
+0:00:16.2 **Adam Garrett-Harris** Megan is new to the podcast and will hopefully be a regular co-host. We work together and can you tell us a little bit about yourself?
 
 0:00:24.7 **Megan Duclos** Oh, sure. Where to start? I’m a software engineer at Pluralsight, just like Adam. We actually work on the same team. I’ve been coding for a couple of years now, I’m still pretty new to it, but I really like books, a lot. So this is-
 
-0:00:41.4 **Adam Garrett-Harris** Yeah. 
+0:00:41.4 **Adam Garrett-Harris** Yeah.
 
-0:00:42.9 **Megan Duclos** Right up my alley. 
+0:00:42.9 **Megan Duclos** Right up my alley.
 
-0:00:43.4 **Adam Garrett-Harris** That’s why I wanted you on the show. 
+0:00:43.4 **Adam Garrett-Harris** That’s why I wanted you on the show.
 
-0:00:44.9 **Megan Duclos** Yeah. 
+0:00:44.9 **Megan Duclos** Yeah.
 
-0:00:45.6 **Jason Staten** Welcome. 
+0:00:45.6 **Jason Staten** Welcome.
 
-0:00:46.3 **Megan Duclos** Cool. 
+0:00:46.3 **Megan Duclos** Cool.
 
-0:00:46.9 **Adam Garrett-Harris** And I’m super excited to have you, yeah. 
+0:00:46.9 **Adam Garrett-Harris** And I’m super excited to have you, yeah.
 
-0:00:48.3 **Megan Duclos** Thanks for having me! 
+0:00:48.3 **Megan Duclos** Thanks for having me!
 
-0:00:49.0 **Adam Garrett-Harris** So, the author, Janelle Shane, she writes about artificial intelligence on her blog called AI Weirdness and how AI sometimes gets really weird and hilarious or sometimes really unsettling how it can get things wrong. And she’s been featured in the New York Times, in the Atlantic, and all sorts of places; and wrote this book now, kind of based off of that blog. So let’s get into the book. What did y’all think overall? 
+0:00:49.0 **Adam Garrett-Harris** So, the author, Janelle Shane, she writes about artificial intelligence on her blog called AI Weirdness and how AI sometimes gets really weird and hilarious or sometimes really unsettling how it can get things wrong. And she’s been featured in the New York Times, in the Atlantic, and all sorts of places; and wrote this book now, kind of based off of that blog. So let’s get into the book. What did y’all think overall?
 
-0:01:17.3 **Megan Duclos** Overall I really liked it, I found it really interesting. Something I thought of tonight as I was finishing the book is it surprised me how AI is everywhere but then also on the other side, it surprised me how limited it is; because I really didn’t know much about AI before reading the book, but a lot of things like that surprised me and I found it really interesting. 
+0:01:17.3 **Megan Duclos** Overall I really liked it, I found it really interesting. Something I thought of tonight as I was finishing the book is it surprised me how AI is everywhere but then also on the other side, it surprised me how limited it is; because I really didn’t know much about AI before reading the book, but a lot of things like that surprised me and I found it really interesting.
 
-0:01:40.7 **Jason Staten** Yeah, I definitely think she takes some of the mysterious parts of AI and, kind of, pulls off the covers a bit to see what’s actually going on. And it’s not done in a way that is dismissive or diminishing of it, but rather in a way of, yeah, like, this promise was made that AI can accomplish this thing, but in fact, that has some human assistance in it or it only works in this super narrow case. 
+0:01:40.7 **Jason Staten** Yeah, I definitely think she takes some of the mysterious parts of AI and, kind of, pulls off the covers a bit to see what’s actually going on. And it’s not done in a way that is dismissive or diminishing of it, but rather in a way of, yeah, like, this promise was made that AI can accomplish this thing, but in fact, that has some human assistance in it or it only works in this super narrow case.
 
-0:02:10.3 **Adam Garrett-Harris** Yeah, that’s kind of what the introduction talks about is, like, “Hey, is AI soon going to be everywhere?” Well, on one hand, it already is. It’s online, determining ads, suggesting videos, there’s detecting social media bots, being social media bots, it’s like approving candidates for resumes, and approving loans, and it’s a little bit in self-driving cars, and even in some, like, not so self-driving cars, and it’s in smartphones. 
+0:02:10.3 **Adam Garrett-Harris** Yeah, that’s kind of what the introduction talks about is, like, “Hey, is AI soon going to be everywhere?” Well, on one hand, it already is. It’s online, determining ads, suggesting videos, there’s detecting social media bots, being social media bots, it’s like approving candidates for resumes, and approving loans, and it’s a little bit in self-driving cars, and even in some, like, not so self-driving cars, and it’s in smartphones.
 
-0:02:37.6 But then, also, no on the other hand. It’s not flawless. It’s way overhyped. It can’t do everything we think it can for lots of different reasons. 
+0:02:37.6 But then, also, no on the other hand. It’s not flawless. It’s way overhyped. It can’t do everything we think it can for lots of different reasons.
 
 0:02:46.7 **Megan Duclos** Yeah, and it’s also, like, not very good at some of the things that you just said it does. Like-
 
-0:02:50.9 **Adam Garrett-Harris** (laughs) Right. 
+0:02:50.9 **Adam Garrett-Harris** (laughs) Right.
 
 0:02:52.4 **Megan Duclos** (laughs) Like, the-
 
-0:02:53.0 **Adam Garrett-Harris** It probably shouldn’t be used for some of those things. 
+0:02:53.0 **Adam Garrett-Harris** It probably shouldn’t be used for some of those things.
 
-0:02:55.4 **Megan Duclos** Yeah, yeah. 
+0:02:55.4 **Megan Duclos** Yeah, yeah.
 
-0:02:56.4 **Adam Garrett-Harris** So I like, at the beginning, she has 5 principles of AI weirdness. Like, the danger of AI is not that it’s too smart but that it’s not smart enough. The second one is that AI has the approximate brainpower of a worm. So… (laughs) Yeah. And AI doesn’t really understand the problem you want it to solve but AI will do exactly what you tell it to do, or at least try its very best. And it will always take the path of least resistance. 
+0:02:56.4 **Adam Garrett-Harris** So I like, at the beginning, she has 5 principles of AI weirdness. Like, the danger of AI is not that it’s too smart but that it’s not smart enough. The second one is that AI has the approximate brainpower of a worm. So… (laughs) Yeah. And AI doesn’t really understand the problem you want it to solve but AI will do exactly what you tell it to do, or at least try its very best. And it will always take the path of least resistance.
 
 0:03:24.4 **Jason Staten** Yeah, it made me think of water or where water always takes the simplest path that it can, like the most downward approach that it can until it eventually-
 
-0:03:34.6 **Adam Garrett-Harris** Right. 
+0:03:34.6 **Adam Garrett-Harris** Right.
 
-0:03:35.0 **Jason Staten** Runs into something that it has to go around. 
+0:03:35.0 **Jason Staten** Runs into something that it has to go around.
 
 0:03:37.2 **Adam Garrett-Harris** Yeah, there’s an episode of The Simpsons where Homer goes off and runs away, he leaves home, and Marge finds him and he’s like, “How’d you find me?”
 
-0:03:45.8 And she’s like, “I just left house and started going downhill.” 
+0:03:45.8 And she’s like, “I just left house and started going downhill.”
 
 0:03:48.4 **Jason Staten & Megan Duclos** (laughing)
 
-0:03:52.2 **Jason Staten** Sounds very AI-like. 
+0:03:52.2 **Jason Staten** Sounds very AI-like.
 
-0:03:54.7 **Adam Garrett-Harris** Yeah. 
+0:03:54.7 **Adam Garrett-Harris** Yeah.
 
-0:03:54.9 **Megan Duclos** Yeah. 
+0:03:54.9 **Megan Duclos** Yeah.
 
-0:03:55.3 **Jen Luker** If the criteria is to, like, make as much distance as possible, like, I mean, certainly downhill is what you’re going to take. 
+0:03:55.3 **Jen Luker** If the criteria is to, like, make as much distance as possible, like, I mean, certainly downhill is what you’re going to take.
 
-0:04:04.9 **Adam Garrett-Harris** Yeah, I like the examples of it trying to teach robots to walk so the goal was “Make it to this point.” You start at Point A and end up at Point B and what it would usually do is grow really tall and then just fall over. 
+0:04:04.9 **Adam Garrett-Harris** Yeah, I like the examples of it trying to teach robots to walk so the goal was “Make it to this point.” You start at Point A and end up at Point B and what it would usually do is grow really tall and then just fall over.
 
-0:04:18.6 **Jason Staten** (laughs) 
+0:04:18.6 **Jason Staten** (laughs)
 
-0:04:18.9 **Megan Duclos** Yeah, that was pretty funny. Like, “I got there, I did it!” (laughs) 
+0:04:18.9 **Megan Duclos** Yeah, that was pretty funny. Like, “I got there, I did it!” (laughs)
 
-0:04:23.4 **Adam Garrett-Harris** Yep. 
+0:04:23.4 **Adam Garrett-Harris** Yep.
 
-0:04:24.1 **Jason Staten** Yeah. So what did you think about the definition where she kind of defines both rules-based programming compared to machine learning? 
+0:04:24.1 **Jason Staten** Yeah. So what did you think about the definition where she kind of defines both rules-based programming compared to machine learning?
 
-0:04:36.1 **Adam Garrett-Harris** Yeah, I mean, rules-based learning involves listing out every single step whereas machine learning, kind of, just figures out the rules for itself by trial and error. 
+0:04:36.1 **Adam Garrett-Harris** Yeah, I mean, rules-based learning involves listing out every single step whereas machine learning, kind of, just figures out the rules for itself by trial and error.
 
-0:04:46.1 **Megan Duclos** i thought it was helpful that she compared it to rules-based programming because that is what I’m most familiar with and so seeing how they were different from each other helped to understand better what it is. 
+0:04:46.1 **Megan Duclos** i thought it was helpful that she compared it to rules-based programming because that is what I’m most familiar with and so seeing how they were different from each other helped to understand better what it is.
 
-0:05:00.4 **Jason Staten** I think for me, as a developer that is very much rules-oriented, like, I mean, imperative type programming, it’s almost a little bit uncomfortable knowing that, like, you’re creating this thing that’s not exactly right but instead, like, it’s getting to some probability of being correct. 
+0:05:00.4 **Jason Staten** I think for me, as a developer that is very much rules-oriented, like, I mean, imperative type programming, it’s almost a little bit uncomfortable knowing that, like, you’re creating this thing that’s not exactly right but instead, like, it’s getting to some probability of being correct.
 
-0:05:23.5 **Adam Garrett-Harris** Right. Well, I mean, in some of the problems you give AI there is no one right answer. 
+0:05:23.5 **Adam Garrett-Harris** Right. Well, I mean, in some of the problems you give AI there is no one right answer.
 
-0:05:29.8 **Jason Staten** Mm-hmm (affirmative).  
+0:05:29.8 **Jason Staten** Mm-hmm (affirmative).
 
 0:05:30.4 **Adam Garrett-Harris** Like, how can you make an algorithm to generate cat names and how would you write unit tests for that? What is the correct possible answer?
 
-0:05:41.1 **Megan Duclos** (laughs) 
+0:05:41.1 **Megan Duclos** (laughs)
 
-0:05:41.8 **Adam Garrett-Harris**  Like, the definitive list of possible correct answers. There isn’t such a thing. 
+0:05:41.8 **Adam Garrett-Harris**  Like, the definitive list of possible correct answers. There isn’t such a thing.
 
-0:05:46.2 **Megan Duclos** Yeah, and that’s kind of the whole point of getting an AI to do that for you, is that you don’t have to think of that list. 
+0:05:46.2 **Megan Duclos** Yeah, and that’s kind of the whole point of getting an AI to do that for you, is that you don’t have to think of that list.
 
-0:05:52.3 **Adam Garrett-Harris** Yeah. It said it’s more like teaching a child than it is programming a computer. You just let the AI figure it out and it comes up with its own rules and sometimes its rules are bad. It talks about, like, different ways to detect a bad rule. Not that you can really… not that you can really see what the rules are. It’s really hard to look into an AI and see what it’s thinking. 
+0:05:52.3 **Adam Garrett-Harris** Yeah. It said it’s more like teaching a child than it is programming a computer. You just let the AI figure it out and it comes up with its own rules and sometimes its rules are bad. It talks about, like, different ways to detect a bad rule. Not that you can really… not that you can really see what the rules are. It’s really hard to look into an AI and see what it’s thinking.
 
-0:06:14.4 **Jason Staten** Yeah, that was one of the things that I did like that she called out. Where Google had its dream project where it, kind of, made really funky artwork and part of that was going and picking at the nodes within the neural network that it then created and amplifying how important they were to see, like, what does this thing actually represent in order to say, “Oh, well actually we need to not have this, or decrease its importance in the realm.” 
+0:06:14.4 **Jason Staten** Yeah, that was one of the things that I did like that she called out. Where Google had its dream project where it, kind of, made really funky artwork and part of that was going and picking at the nodes within the neural network that it then created and amplifying how important they were to see, like, what does this thing actually represent in order to say, “Oh, well actually we need to not have this, or decrease its importance in the realm.”
 
-0:06:50.2 **Adam Garrett-Harris** Hmm. 
+0:06:50.2 **Adam Garrett-Harris** Hmm.
 
 0:06:50.8 **Megan Duclos** Do we want to talk about the title of the book and where it came from? (laughs)
 
-0:06:54.8 **Adam Garrett-Harris** Oh, yes! Yes, so I originally thought the title was the idea that, the AI, it looks at things and it’s like, “I like it!” Or, “I don’t like it.” But you want to explain? 
+0:06:54.8 **Adam Garrett-Harris** Oh, yes! Yes, so I originally thought the title was the idea that, the AI, it looks at things and it’s like, “I like it!” Or, “I don’t like it.” But you want to explain?
 
-0:07:08.3 **Megan Duclos** Yeah, yeah. So she’s talking about how, let me see here, yeah, she’s talking about teaching it like it’s an impressionable child. She’s kind of knowing that the AI is going to start with a blank slate and she starts training the AI to produce pick up lines. 
+0:07:08.3 **Megan Duclos** Yeah, yeah. So she’s talking about how, let me see here, yeah, she’s talking about teaching it like it’s an impressionable child. She’s kind of knowing that the AI is going to start with a blank slate and she starts training the AI to produce pick up lines.
 
 0:07:28.6 **Adam Garrett-Harris** (laughs)
 
@@ -112,49 +112,49 @@
 
 0:07:42.7 **Adam Garrett-Harris** A triangle?
 
-0:07:44.2 **Megan Duclos** No! I tringle, there’s no “a” in that word.  
+0:07:44.2 **Megan Duclos** No! I tringle, there’s no “a” in that word.
 
-0:07:47.4 **Adam Garrett-Harris** Oh, okay. 
+0:07:47.4 **Adam Garrett-Harris** Oh, okay.
 
-0:07:48.3 **Jason Staten** (laughs) 
+0:07:48.3 **Jason Staten** (laughs)
 
 0:07:48.4 **Megan Duclos** (laughs) Which makes it even funnier? I don’t know.
 
-0:07:52.3 **Jason Staten** You’re so human, Adam. Overlooking that. (laughs) 
+0:07:52.3 **Jason Staten** You’re so human, Adam. Overlooking that. (laughs)
 
-0:07:56.2 **Megan Duclos** (laughs) 
+0:07:56.2 **Megan Duclos** (laughs)
 
-0:07:57.0 **Adam Garrett-Harris** Yeah, and these were, like, the best ones that she’d curated. 
+0:07:57.0 **Adam Garrett-Harris** Yeah, and these were, like, the best ones that she’d curated.
 
-0:08:00.1 **Megan Duclos** Yeah. 
+0:08:00.1 **Megan Duclos** Yeah.
 
-0:08:00.6 **Adam Garrett-Harris** And the funniest. 
+0:08:00.6 **Adam Garrett-Harris** And the funniest.
 
-0:08:00.6 **Megan Duclos** There were others that were a lot worse. 
+0:08:00.6 **Megan Duclos** There were others that were a lot worse.
 
-0:08:02.1 **Jason Staten** That was a common theme within the book, I felt, as well. It was  that human intervention, or like, working alongside the AI is definitely a critical component of being able to pick out, like, what are some of the top ones from this generated output that it came to? 
+0:08:02.1 **Jason Staten** That was a common theme within the book, I felt, as well. It was  that human intervention, or like, working alongside the AI is definitely a critical component of being able to pick out, like, what are some of the top ones from this generated output that it came to?
 
-0:08:21.2 **Adam Garrett-Harris** Yeah. Yeah and she also talks about things in this book that she is calling AI and things she’s not calling AI. One thing she is calling AI is machine learning algorithms and that’s typically what she’s talking about in this book, I think. And then there’s deep learning, neural networks, recurrent neural networks - whatever that is - Markov chains, random forests, genetic algorithms, lots of other stuff, predictive text. 
+0:08:21.2 **Adam Garrett-Harris** Yeah. Yeah and she also talks about things in this book that she is calling AI and things she’s not calling AI. One thing she is calling AI is machine learning algorithms and that’s typically what she’s talking about in this book, I think. And then there’s deep learning, neural networks, recurrent neural networks - whatever that is - Markov chains, random forests, genetic algorithms, lots of other stuff, predictive text.
 
-0:08:48.5 But things that aren’t AI are stuff from science fiction, rules-based programming, humans in robot costumes. 
+0:08:48.5 But things that aren’t AI are stuff from science fiction, rules-based programming, humans in robot costumes.
 
-0:08:56.7 **Megan Duclos** (laughs) 
+0:08:56.7 **Megan Duclos** (laughs)
 
-0:08:57.7 **Adam Garrett-Harris** Or, you know, humans hired to pretend to be AIs, which actually happens a lot. 
+0:08:57.7 **Adam Garrett-Harris** Or, you know, humans hired to pretend to be AIs, which actually happens a lot.
 
-0:09:03.5 **Jason Staten** i believe that one of those is the history of where the name of Amazon’s Mechanical Turk came from, was that historically there was a person who claimed to have invented a machine that could play chess better than any human can and in fact it was just a box that had a human in it that played chess really well. 
+0:09:03.5 **Jason Staten** i believe that one of those is the history of where the name of Amazon’s Mechanical Turk came from, was that historically there was a person who claimed to have invented a machine that could play chess better than any human can and in fact it was just a box that had a human in it that played chess really well.
 
-0:09:27.7 **Adam Garrett-Harris** (laughs) 
+0:09:27.7 **Adam Garrett-Harris** (laughs)
 
-0:09:28.9 **Megan Duclos** (laughs) 
+0:09:28.9 **Megan Duclos** (laughs)
 
-0:09:30.0 **Jason Staten** I’m going to go and find the wikipedia for that one. 
+0:09:30.0 **Jason Staten** I’m going to go and find the wikipedia for that one.
 
-0:09:32.9 **Adam Garrett-Harris** Okay, and that’s where Amazon Turk came from? 
+0:09:32.9 **Adam Garrett-Harris** Okay, and that’s where Amazon Turk came from?
 
-0:09:36.0 **Jason Staten** Mechanical Turk. 
+0:09:36.0 **Jason Staten** Mechanical Turk.
 
-0:09:37.4 **Adam Garrett-Harris** Which is… Mechanical Turk… she mentions it in this book, actually. It’s humans that do really, a bunch of really simple tasks that you can hire out to… it’s almost like a humans as a service and she uses it to, maybe gather data, or I don’t know, things like that, things where you’d want humans. But then one of the problems with it is that the humans sometimes, ‘cause they’re not paid very well and you want to do it as fast as possible to get paid, they’ll use bots to do the task, which kind of defeats the purpose. 
+0:09:37.4 **Adam Garrett-Harris** Which is… Mechanical Turk… she mentions it in this book, actually. It’s humans that do really, a bunch of really simple tasks that you can hire out to… it’s almost like a humans as a service and she uses it to, maybe gather data, or I don’t know, things like that, things where you’d want humans. But then one of the problems with it is that the humans sometimes, ‘cause they’re not paid very well and you want to do it as fast as possible to get paid, they’ll use bots to do the task, which kind of defeats the purpose.
 
 0:10:10.4 **Jason Staten** So you have to do the Turing Test against them. The Turing Test being-
 
@@ -162,598 +162,598 @@
 
 0:10:16.0 **Jason Staten** That theory by Alan Turing that if something can fool one third of humans into thinking that it, itself, is a human, then it passes that test. But Janelle actually-
 
-0:10:33.5 **Megan Duclos** That's a pretty low bar to pass. (laughs) 
+0:10:33.5 **Megan Duclos** That's a pretty low bar to pass. (laughs)
 
-0:10:36.4 **Adam Garrett-Harris** One third of humans? 
+0:10:36.4 **Adam Garrett-Harris** One third of humans?
 
-0:10:37.6 **Megan Duclos** Yeah, it’s like the oh, I can’t remember the name for it, the test in movies, I’ll remember it. You can delete this part. I can’t… it’s called… I’ll look it up. 
+0:10:37.6 **Megan Duclos** Yeah, it’s like the oh, I can’t remember the name for it, the test in movies, I’ll remember it. You can delete this part. I can’t… it’s called… I’ll look it up.
 
-0:10:47.4 **Adam Garrett-Harris** I think she mentions the Turing Test being in movies. Like, I can’t even think of it now. Ex Machina? But yeah, anyway. 
+0:10:47.4 **Adam Garrett-Harris** I think she mentions the Turing Test being in movies. Like, I can’t even think of it now. Ex Machina? But yeah, anyway.
 
-0:10:54.9 **Megan Duclos** Uh, that’s not what I’m thinking of. 
+0:10:54.9 **Megan Duclos** Uh, that’s not what I’m thinking of.
 
-0:10:56.7 **Adam Garrett-Harris** Hmm. 
+0:10:56.7 **Adam Garrett-Harris** Hmm.
 
-0:10:57.5 **Megan Duclos** Oh, the Bechdel test! That’s what I’m thinking of. It’s like a low bar to pass. The Bechdel-Wallace test is like a measure of representation of women in fiction. So, like movies and books and stuff. 
+0:10:57.5 **Megan Duclos** Oh, the Bechdel test! That’s what I’m thinking of. It’s like a low bar to pass. The Bechdel-Wallace test is like a measure of representation of women in fiction. So, like movies and books and stuff.
 
-0:11:08.8 **Adam Garrett-Harris** Oh. 
+0:11:08.8 **Adam Garrett-Harris** Oh.
 
-0:11:08.8 **Megan Duclos** Where basically the requirements for that are that it has to have at least two women who talk to each other about something other than a man and those two women must be named characters. 
+0:11:08.8 **Megan Duclos** Where basically the requirements for that are that it has to have at least two women who talk to each other about something other than a man and those two women must be named characters.
 
-0:11:22.6 **Adam Garrett-Harris** (laughs) 
+0:11:22.6 **Adam Garrett-Harris** (laughs)
 
-0:11:23.4 **Megan Duclos** Which you would be surprised how many movies don’t pass that, but I digress. Way off topic. 
+0:11:23.4 **Megan Duclos** Which you would be surprised how many movies don’t pass that, but I digress. Way off topic.
 
-0:11:27.2 **Adam Garrett-Harris** Wow. I was trying to think if even Pride and Prejudice passes that test because they talk about men a lot even though there’s a lot of women characters. 
+0:11:27.2 **Adam Garrett-Harris** Wow. I was trying to think if even Pride and Prejudice passes that test because they talk about men a lot even though there’s a lot of women characters.
 
-0:11:34.5 **Megan Duclos** (laughs) Yeah. 
+0:11:34.5 **Megan Duclos** (laughs) Yeah.
 
-0:11:36.3 **Adam Garrett-Harris** Yeah, with Mechanical Turk they have to, in order to ensure humans are doing it, give them some other random tasks just to make sure they’re paying attention. 
+0:11:36.3 **Adam Garrett-Harris** Yeah, with Mechanical Turk they have to, in order to ensure humans are doing it, give them some other random tasks just to make sure they’re paying attention.
 
-0:11:44.3 **Jason Staten** Yeah, I’ve actually done some Mechanical Turking, I guess, as they call it, in the past. 
+0:11:44.3 **Jason Staten** Yeah, I’ve actually done some Mechanical Turking, I guess, as they call it, in the past.
 
 0:11:51.1 **Adam Garrett-Harris** Okay!
 
 0:11:52.1 **Jason Staten** Just to try it out. And you are offered up, like, an activity that you do and maybe it is looking at an image and clicking on all of the cows in it. Or I saw one-
 
-0:12:07.3 **Adam Garrett-Harris** (laughs) 
+0:12:07.3 **Adam Garrett-Harris** (laughs)
 
-0:12:07.3 **Jason Staten** That I thought was actually a pretty awesome idea. It was for races when there’s, like, a big race that has hundreds of people in it... going and picking out which pictures belong to which racer is a challenging job and while machine learning can definitely do a lot, there’s also a need for, like, human training on some of that, as well. Or like, training those models in order to do it  So, a lot of times, that can actually wind up going through a set of Mechanical Turk workers to say, “Oh, yes, this is this bib number and this is this bib number.” 
+0:12:07.3 **Jason Staten** That I thought was actually a pretty awesome idea. It was for races when there’s, like, a big race that has hundreds of people in it... going and picking out which pictures belong to which racer is a challenging job and while machine learning can definitely do a lot, there’s also a need for, like, human training on some of that, as well. Or like, training those models in order to do it  So, a lot of times, that can actually wind up going through a set of Mechanical Turk workers to say, “Oh, yes, this is this bib number and this is this bib number.”
 
-0:12:48.9 **Adam Garrett-Harris** Hmm. Okay, so chapter two talks about AI is everywhere, but where is it exactly? And one of the weirdest examples was that it runs a cockroach farm. I don’t remember exactly why they had a cockroach farm. 
+0:12:48.9 **Adam Garrett-Harris** Hmm. Okay, so chapter two talks about AI is everywhere, but where is it exactly? And one of the weirdest examples was that it runs a cockroach farm. I don’t remember exactly why they had a cockroach farm.
 
 0:13:02.3 **Jason Staten** I don’t… yeah, I don’t remember the reason for it, but-
 
 0:13:06.1 **Adam Garrett-Harris** That’s, like, a recurring theme throughout this book is that she uses that as an example. (laughs)
 
-0:13:10.4 **Jason Staten** Yeah, is an algorithm to go and optimally raise a set of cockroaches. 
+0:13:10.4 **Jason Staten** Yeah, is an algorithm to go and optimally raise a set of cockroaches.
 
-0:13:17.9 **Adam Garrett-Harris** Okay, so they would actually grind up the cockroaches for some Chinese medicine. 
+0:13:17.9 **Adam Garrett-Harris** Okay, so they would actually grind up the cockroaches for some Chinese medicine.
 
-0:13:22.6 **Jason Staten** Oh, okay. 
+0:13:22.6 **Jason Staten** Oh, okay.
 
-0:13:23.3 **Adam Garrett-Harris** But it said, actually, it’s a good job for an AI because it can, it has, for one thing, it has a really quick feedback loop because cockroaches don’t live for very long before they reproduce again. What else? 
+0:13:23.3 **Adam Garrett-Harris** But it said, actually, it’s a good job for an AI because it can, it has, for one thing, it has a really quick feedback loop because cockroaches don’t live for very long before they reproduce again. What else?
 
-0:13:35.3 **Jason Staten** And given you give it only, like, a narrow set of controls, too. Like, I mean, that’s the important thing. She mentions that, I mean, if it were able to go and, like, crank the heat up in one room so much that it would up killing the whole room in order to, I don’t know, give success to another room or something. 
+0:13:35.3 **Jason Staten** And given you give it only, like, a narrow set of controls, too. Like, I mean, that’s the important thing. She mentions that, I mean, if it were able to go and, like, crank the heat up in one room so much that it would up killing the whole room in order to, I don’t know, give success to another room or something.
 
-0:13:55.5 Like that could also be a way for the AI to succeed but with having guardrails in place in order to stop that. It’s probably something you need to remember, too. 
+0:13:55.5 Like that could also be a way for the AI to succeed but with having guardrails in place in order to stop that. It’s probably something you need to remember, too.
 
-0:14:05.4 **Adam Garrett-Harris** Yeah. 
+0:14:05.4 **Adam Garrett-Harris** Yeah.
 
-0:14:06.1 **Jason Staten** And it moves on, as well, to get into self-driving cars because that is one of the, kind of, big, hyped AI cases that exist in today’s modern world, as well. 
+0:14:06.1 **Jason Staten** And it moves on, as well, to get into self-driving cars because that is one of the, kind of, big, hyped AI cases that exist in today’s modern world, as well.
 
-0:14:18.8 **Adam Garrett-Harris** Right, and I thought we were really, really close to getting AI without having to have a human sit in the seat. 
+0:14:18.8 **Adam Garrett-Harris** Right, and I thought we were really, really close to getting AI without having to have a human sit in the seat.
 
-0:14:28.9 **Megan Duclos** But we’re really not that close. (laughs) 
+0:14:28.9 **Megan Duclos** But we’re really not that close. (laughs)
 
-0:14:30.5 **Adam Garrett-Harris** After this, I’m not hopeful to see that in my lifetime. 
+0:14:30.5 **Adam Garrett-Harris** After this, I’m not hopeful to see that in my lifetime.
 
-0:14:33.8 **Megan Duclos** Yeah, that’s kind of disappointing, but oh well. (laughs) 
+0:14:33.8 **Megan Duclos** Yeah, that’s kind of disappointing, but oh well. (laughs)
 
-0:14:37.5 **Adam Garrett-Harris** But I do expect to see a high level of automation. I mean, we’re already seeing lane assist and smart cruise control and it can go for long stretches on boring highway roads without needing any assistance. If there’s anything unusual, you can take over but it did say one problem is that humans are not good at taking over quickly when they have not been… when they’re used to not paying attention and I can imagine that being really boring, just sitting there waiting. 
+0:14:37.5 **Adam Garrett-Harris** But I do expect to see a high level of automation. I mean, we’re already seeing lane assist and smart cruise control and it can go for long stretches on boring highway roads without needing any assistance. If there’s anything unusual, you can take over but it did say one problem is that humans are not good at taking over quickly when they have not been… when they’re used to not paying attention and I can imagine that being really boring, just sitting there waiting.
 
-0:15:06.4 **Jason Staten** Yeah, it can be, it can be bad enough taking a long road trip with just cruise control on sometimes. 
+0:15:06.4 **Jason Staten** Yeah, it can be, it can be bad enough taking a long road trip with just cruise control on sometimes.
 
-0:15:11.2 **Adam Garrett-Harris** Yeah 
+0:15:11.2 **Adam Garrett-Harris** Yeah
 
-0:15:12.1 **Jason Staten** Where you think, “Where did that last half hour go?” 
+0:15:12.1 **Jason Staten** Where you think, “Where did that last half hour go?”
 
-0:15:13.8 **Adam Garrett-Harris** (laughs) Yeah! 
+0:15:13.8 **Adam Garrett-Harris** (laughs) Yeah!
 
-0:15:14.8 **Megan Duclos** Yep. 
+0:15:14.8 **Megan Duclos** Yep.
 
-0:15:15.6 **Jason Staten** And she does also mention that, I mean, some of the options to get us more automation wind up looking like existing public transit options where you have, say like, a caravan approach where, like, one car happened to be actually driving with a human in it and then the rest of them are, like, tailing it, like, in, kind of in lock step. 
+0:15:15.6 **Jason Staten** And she does also mention that, I mean, some of the options to get us more automation wind up looking like existing public transit options where you have, say like, a caravan approach where, like, one car happened to be actually driving with a human in it and then the rest of them are, like, tailing it, like, in, kind of in lock step.
 
-0:15:39.6 **Adam Garrett-Harris** Hmm. 
+0:15:39.6 **Adam Garrett-Harris** Hmm.
 
 0:15:40.4 **Jason Staten** Or having, like, specific paths that are designed for AI-type driving. Kind of like, a-
 
-0:15:49.0 **Adam Garrett-Harris** Yeah. Or maybe  tunnels. 
+0:15:49.0 **Adam Garrett-Harris** Yeah. Or maybe  tunnels.
 
-0:15:51.4 **Jason Staten** Yeah. Or like a tunnel but at that point, we also have means of transit that go through tunnels called subways. 
+0:15:51.4 **Jason Staten** Yeah. Or like a tunnel but at that point, we also have means of transit that go through tunnels called subways.
 
-0:16:00.0 **Adam Garrett-Harris** Yeah. 
+0:16:00.0 **Adam Garrett-Harris** Yeah.
 
 0:16:01.1 **Jason Staten** Or designated paths that are rails that things like trains can’t steer off of. So...
 
-0:16:07.7 **Adam Garrett-Harris** Right. Yeah, I mean, it talked about there’s a lot of ways that you could trick a self-driving car. You could just put up a stop sign or, like, paint a tunnel on a wall. 
+0:16:07.7 **Adam Garrett-Harris** Right. Yeah, I mean, it talked about there’s a lot of ways that you could trick a self-driving car. You could just put up a stop sign or, like, paint a tunnel on a wall.
 
-0:16:20.0 **Megan Duclos** (laughs) 
+0:16:20.0 **Megan Duclos** (laughs)
 
-0:16:20.6 **Adam Garrett-Harris** And then, like, how is it going to know to recognize emus. 
+0:16:20.6 **Adam Garrett-Harris** And then, like, how is it going to know to recognize emus.
 
-0:16:25.6 **Jason Staten** When it’s never seen an emu in its training set. 
+0:16:25.6 **Jason Staten** When it’s never seen an emu in its training set.
 
-0:16:28.3 **Adam Garrett-Harris** Yeah. 
+0:16:28.3 **Adam Garrett-Harris** Yeah.
 
-0:16:29.1 **Megan Duclos** Yeah. 
+0:16:29.1 **Megan Duclos** Yeah.
 
-0:16:29.3 **Adam Garrett-Harris** Or what if the zombie apocalypse happens and it doesn’t know that it’s okay to run over the zombies, they’re not actually pedestrians. 
+0:16:29.3 **Adam Garrett-Harris** Or what if the zombie apocalypse happens and it doesn’t know that it’s okay to run over the zombies, they’re not actually pedestrians.
 
-0:16:35.6 **Jason Staten & Megan Duclos** (laughing) 
+0:16:35.6 **Jason Staten & Megan Duclos** (laughing)
 
 0:16:38.3 **Adam Garrett-Harris** There’s just no way to train them on that. Like, the world does change and a more serious example is someone was like, “Hey, let’s make an AI that recognizes cars. Oh wait, there already is one. Oh, wait, no. It’s trained on data from, like, the 1980s so it doesn’t recognize any modern cars.” I thought it-
 
-0:16:56.8 **Megan Duclos** Yeah. 
+0:16:56.8 **Megan Duclos** Yeah.
 
 0:16:57.1 **Adam Garrett-Harris** Was going to say, “It was trained on normal cars and then the cyber truck came out and it can’t recognize that.”
 
-0:17:02.6 **Megan Duclos** Well… (laughs) That… that wouldn’t really, I don’t know, that wouldn’t be as common of an issue. 
+0:17:02.6 **Megan Duclos** Well… (laughs) That… that wouldn’t really, I don’t know, that wouldn’t be as common of an issue.
 
-0:17:08.6 **Adam Garrett-Harris** Yeah. 
+0:17:08.6 **Adam Garrett-Harris** Yeah.
 
-0:17:09.2 **Megan Duclos** Anyway, yeah. 
+0:17:09.2 **Megan Duclos** Anyway, yeah.
 
-0:17:09.6 **Adam Garrett-Harris** But, I mean, I barely recognize it as a car. 
+0:17:09.6 **Adam Garrett-Harris** But, I mean, I barely recognize it as a car.
 
 0:17:11.7 **Megan Duclos** (laughs) I… I think you’re right.
 
-0:17:13.9 **Adam Garrett-Harris** So let’s move on to how they learn. 
+0:17:13.9 **Adam Garrett-Harris** So let’s move on to how they learn.
 
-0:17:16.4 **Jason Staten** I liked this chapter. 
+0:17:16.4 **Jason Staten** I liked this chapter.
 
 0:17:17.9 **Adam Garrett-Harris** Chapter three had a lot of-
 
-0:17:19.4 **Megan Duclos** And the magic sandwich hole! 
+0:17:19.4 **Megan Duclos** And the magic sandwich hole!
 
-0:17:20.6 **Jason Staten** (laughs) You want to describe that? 
+0:17:20.6 **Jason Staten** (laughs) You want to describe that?
 
-0:17:22.4 **Megan Duclos** Sure! So she’s trying to illustrate how machine learning works and she says, “Hypothetically, let’s say we have this… we’ve discovered a magic hole in the ground that produces random sandwiches every few seconds.” Which, that’s very hypothetical, but… 
+0:17:22.4 **Megan Duclos** Sure! So she’s trying to illustrate how machine learning works and she says, “Hypothetically, let’s say we have this… we’ve discovered a magic hole in the ground that produces random sandwiches every few seconds.” Which, that’s very hypothetical, but…
 
-0:17:42.7 So the problem with that is that the sandwiches are very, very random. So ingredients could include jam, ice cubes, old socks, literally anything could be on the sandwich. So we would have to sit and sort through all of the bad sandwiches to find any good sandwiches which is really tedious work, so she’s talking about hypothetically training an AI to do that work for us. 
+0:17:42.7 So the problem with that is that the sandwiches are very, very random. So ingredients could include jam, ice cubes, old socks, literally anything could be on the sandwich. So we would have to sit and sort through all of the bad sandwiches to find any good sandwiches which is really tedious work, so she’s talking about hypothetically training an AI to do that work for us.
 
 0:18:09.5 And I thought it was a really great way to illustrate how it works and what an AI would do with that information. Tell it a cheese and chicken sandwich is good but, like, if you add mud to that sandwich it’s definitely a no. But then she goes through-
 
-0:18:28.4 **Adam Garrett-Harris** Yeah, but it’s like, how does it know? How does it know if it’s the mud that’s bad or if it’s the chicken that’s bad? 
+0:18:28.4 **Adam Garrett-Harris** Yeah, but it’s like, how does it know? How does it know if it’s the mud that’s bad or if it’s the chicken that’s bad?
 
-0:18:34.2 **Megan Duclos** Yeah. Yeah! Or if it’s just specifically the combination of mud and chicken. Like, maybe mud is good with something else. 
+0:18:34.2 **Megan Duclos** Yeah. Yeah! Or if it’s just specifically the combination of mud and chicken. Like, maybe mud is good with something else.
 
-0:18:40.5 **Adam Garrett-Harris** Yeah. 
+0:18:40.5 **Adam Garrett-Harris** Yeah.
 
 0:18:41.0 **Megan Duclos** Um…
 
-0:18:41.8 **Adam Garrett-Harris** Mud and peanut butter. 
+0:18:41.8 **Adam Garrett-Harris** Mud and peanut butter.
 
-0:18:42.7 **Jason Staten** (laughs) 
+0:18:42.7 **Jason Staten** (laughs)
 
-0:18:43.3 **Megan Duclos** (laughs) Mud and peanut butter. But she goes through, like, all these different ways that an AI could get really confused and think that, like, egg shells and peanut butter is a good sandwich but, like, peanut butter and marshmallow was bad. She gave the fluffernutter example. 
+0:18:43.3 **Megan Duclos** (laughs) Mud and peanut butter. But she goes through, like, all these different ways that an AI could get really confused and think that, like, egg shells and peanut butter is a good sandwich but, like, peanut butter and marshmallow was bad. She gave the fluffernutter example.
 
-0:18:59.8 **Adam Garrett-Harris** I’m going to have to try fluffernutter. Eh, I don’t know, it might be too much marshmallow. 
+0:18:59.8 **Adam Garrett-Harris** I’m going to have to try fluffernutter. Eh, I don’t know, it might be too much marshmallow.
 
-0:19:01.7 **Megan Duclos** The fluffernutter? I don’t really like marshmallows so I can pass on that one. 
+0:19:01.7 **Megan Duclos** The fluffernutter? I don’t really like marshmallows so I can pass on that one.
 
-0:19:06.6 **Jason Staten** You could always swap for banans. 
+0:19:06.6 **Jason Staten** You could always swap for banans.
 
 0:19:08.1 **Megan Duclos** But I-
 
-0:19:08.7 **Adam Garrett-Harris** Oh, yeah. 
+0:19:08.7 **Adam Garrett-Harris** Oh, yeah.
 
-0:19:09.8 **Megan Duclos** I do banana all the time. 
+0:19:09.8 **Megan Duclos** I do banana all the time.
 
-0:19:11.0 **Adam Garrett-Harris** Yeah, I think she talks about, like, one problem could be that  so many bad sandwiches compared to some that are actually good that it just takes a shortcut and just always assumes it's bad. 
- 
-0:19:22.7 **Megan Duclos** Yeah! (laughs) Yeah, I was just about to say that. It’s like, “Okay, you don’t like any sandwiches. We just won’t approve of any of the sandwiches.” Which is just illustrating how an AI will take the path of least resistance where it’s just like, “I’m just not even going to try anymore because 99% of the sandwiches I think are good, you say are bad. So I give up, basically.” (laughs) 
+0:19:11.0 **Adam Garrett-Harris** Yeah, I think she talks about, like, one problem could be that  so many bad sandwiches compared to some that are actually good that it just takes a shortcut and just always assumes it's bad.
 
-0:19:44.0 **Adam Garrett-Harris** Yeah. 
+0:19:22.7 **Megan Duclos** Yeah! (laughs) Yeah, I was just about to say that. It’s like, “Okay, you don’t like any sandwiches. We just won’t approve of any of the sandwiches.” Which is just illustrating how an AI will take the path of least resistance where it’s just like, “I’m just not even going to try anymore because 99% of the sandwiches I think are good, you say are bad. So I give up, basically.” (laughs)
 
-0:19:44.4 **Megan Duclos** “I’ll still be 99% accurate if I say all the sandwiches are bad!” 
+0:19:44.0 **Adam Garrett-Harris** Yeah.
 
-0:19:47.6 **Adam Garrett-Harris** I think this section does a good job of showing, kind of, the diagram that an AI produces where it has all of these inputs and it does calculate, it’s just a bunch of numbers and it does some sort of calculation on them and there may be, like, several layers of that happening before it comes to the final output. 
+0:19:44.4 **Megan Duclos** “I’ll still be 99% accurate if I say all the sandwiches are bad!”
 
-0:20:07.2 **Jason Staten** Yeah, and that those layers are necessary to deal with combinations. I mean, like, if you have a single layer of the nodes to handle input, then you get simple attribution of peanut butter: good, mud: bad. And that’s kind of the extent of calculation you have; whereas the second layer can go and handle the things, like the combinations. Or that mud is a dealbreaker and it always makes everything fail. Like, if you have mud on any sandwich, like, do not pass. 
+0:19:47.6 **Adam Garrett-Harris** I think this section does a good job of showing, kind of, the diagram that an AI produces where it has all of these inputs and it does calculate, it’s just a bunch of numbers and it does some sort of calculation on them and there may be, like, several layers of that happening before it comes to the final output.
 
-0:20:45.6 **Adam Garrett-Harris** Hmm. 
+0:20:07.2 **Jason Staten** Yeah, and that those layers are necessary to deal with combinations. I mean, like, if you have a single layer of the nodes to handle input, then you get simple attribution of peanut butter: good, mud: bad. And that’s kind of the extent of calculation you have; whereas the second layer can go and handle the things, like the combinations. Or that mud is a dealbreaker and it always makes everything fail. Like, if you have mud on any sandwich, like, do not pass.
 
-0:20:46.3 **Jason Staten** And, yeah, I don’t remember what they… it’s like the hidden layer, I believe, that it’s called? 
+0:20:45.6 **Adam Garrett-Harris** Hmm.
 
-0:20:51.3 **Adam Garrett-Harris** I don’t know. 
+0:20:46.3 **Jason Staten** And, yeah, I don’t remember what they… it’s like the hidden layer, I believe, that it’s called?
+
+0:20:51.3 **Adam Garrett-Harris** I don’t know.
 
 0:20:52.4 **Jason Staten** I do like, as well, that it goes on to describe some of the other algorithms, as well. Like, talking about what they are and, like, what role that they can wind up playing. So, like, Markov chains, Megan, you had mentioned predictive texts on a phone, like, Markov chains are a good candidate for that in that they are really lightweight to go and create and don’t need a lot of processing power or storage and so for typing on your phone, just being able to say, like, “Here’s a good possibility of the next three words.” But overall that, like, they… what they generate is not super, high quality, or that they can get stuck in things in a loop, like, “...under the sea, under the sea, under the sea…”
 
-0:21:41.3 **Adam Garrett-Harris** Yeah. 
+0:21:41.3 **Adam Garrett-Harris** Yeah.
 
-0:21:41.5 **Megan Duclos** Yeah. And because they have really short memories, like, they’ll usually only have a couple of words in memory of the last three words that they suggested or the last three words that were typed in, so only having that much context doesn’t give them the full story. 
+0:21:41.5 **Megan Duclos** Yeah. And because they have really short memories, like, they’ll usually only have a couple of words in memory of the last three words that they suggested or the last three words that were typed in, so only having that much context doesn’t give them the full story.
 
-0:21:58.5 **Adam Garrett-Harris** Yeah, as opposed to recurrent neural networks that look back hundreds of words or longer. So they would be able to get out of the “...under the sea, under the sea…” loop that Jason was talking about. So I think she had a Markov chain here that was trained on Disney song data? 
+0:21:58.5 **Adam Garrett-Harris** Yeah, as opposed to recurrent neural networks that look back hundreds of words or longer. So they would be able to get out of the “...under the sea, under the sea…” loop that Jason was talking about. So I think she had a Markov chain here that was trained on Disney song data?
 
 0:22:12.9 **Jason Staten** Mm-hmm (affirmative).
 
-0:22:15.0 **Adam Garrett-Harris** Yeah, so a good example of this is just on your phone and you start typing in a text message and then just hit the center word suggestion and I’ve seen people do this where you just tap the center word and see what comes out. And that can be kind of funny. And it learns based on what you’ve typed into your phone in the past, so everyone’s will be different even if you start with the same words. 
+0:22:15.0 **Adam Garrett-Harris** Yeah, so a good example of this is just on your phone and you start typing in a text message and then just hit the center word suggestion and I’ve seen people do this where you just tap the center word and see what comes out. And that can be kind of funny. And it learns based on what you’ve typed into your phone in the past, so everyone’s will be different even if you start with the same words.
 
-0:22:33.0 **Jason Staten** Which is why you can get haunted by a typo. 
+0:22:33.0 **Jason Staten** Which is why you can get haunted by a typo.
 
-0:22:34.7 **Megan Duclos** It’s kind of fun. 
+0:22:34.7 **Megan Duclos** It’s kind of fun.
 
-0:22:35.3 **Jason Staten** Or sometimes keyboards will store a number that you put in one time and always offer you that number. 
+0:22:35.3 **Jason Staten** Or sometimes keyboards will store a number that you put in one time and always offer you that number.
 
-0:22:40.5 **Adam Garrett-Harris** A number? (laughs) 
+0:22:40.5 **Adam Garrett-Harris** A number? (laughs)
 
-0:22:41.5 **Jason Staten** Yeah. 
+0:22:41.5 **Jason Staten** Yeah.
 
-0:22:42.6 **Adam Garrett-Harris** Another example is a random forest algorithm which, to me, kind of, just looks like a flow chart of, like, a decision tree. 
+0:22:42.6 **Adam Garrett-Harris** Another example is a random forest algorithm which, to me, kind of, just looks like a flow chart of, like, a decision tree.
 
-0:22:50.7 **Jason Staten** I mean, that’s actually what she refers to it as, is a decision tree, that it’s a bunch of, it’s kind of shallowed decision trees, kind of, all put together to kind of come to a conclusion. 
+0:22:50.7 **Jason Staten** I mean, that’s actually what she refers to it as, is a decision tree, that it’s a bunch of, it’s kind of shallowed decision trees, kind of, all put together to kind of come to a conclusion.
 
-0:23:01.6 **Adam Garrett-Harris** Yeah. 
+0:23:01.6 **Adam Garrett-Harris** Yeah.
 
-0:23:03.3 **Jason Staten** And evolutionary algorithms, those are one that I feel like I’ve seen examples of online where they have a, like, a generated course where it’s… So they have, like, a car that’s trying to go across a course that was created that has maybe hills and valleys in it and sometimes it has to jump a gap or something, and the algorithm is able to go and try, like, different wheel sizes for the car or different weight distributions for it in order to find an ideal one and the ideal one is the one that makes it that furthest on the map. 
+0:23:03.3 **Jason Staten** And evolutionary algorithms, those are one that I feel like I’ve seen examples of online where they have a, like, a generated course where it’s… So they have, like, a car that’s trying to go across a course that was created that has maybe hills and valleys in it and sometimes it has to jump a gap or something, and the algorithm is able to go and try, like, different wheel sizes for the car or different weight distributions for it in order to find an ideal one and the ideal one is the one that makes it that furthest on the map.
 
-0:23:43.3 **Jason Staten** I’m going to have to go and search for that because it’s kind of a cool way of seeing, like, the progression of the algorithm where it starts off pretty terrible because it’s just randomly guessing at what would be a car to use and based on how it succeeds, the algorithm says, “Okay, this should move onto the next generation and some attributes from this thing should be taken.” Or, “This one failed completely and it should die and not contribute its genes to the next pool.” 
+0:23:43.3 **Jason Staten** I’m going to have to go and search for that because it’s kind of a cool way of seeing, like, the progression of the algorithm where it starts off pretty terrible because it’s just randomly guessing at what would be a car to use and based on how it succeeds, the algorithm says, “Okay, this should move onto the next generation and some attributes from this thing should be taken.” Or, “This one failed completely and it should die and not contribute its genes to the next pool.”
 
-0:24:17.3 **Adam Garrett-Harris** Right, yeah. An example in the book was that you’ve got a hallway that splits into two different hallways and the algorithm has to design a robot that will make people go down the right hallway, not the left hallway. 
+0:24:17.3 **Adam Garrett-Harris** Right, yeah. An example in the book was that you’ve got a hallway that splits into two different hallways and the algorithm has to design a robot that will make people go down the right hallway, not the left hallway.
 
-0:24:29.2 **Megan Duclos** I loved this one. 
+0:24:29.2 **Megan Duclos** I loved this one.
 
 0:24:31.2 **Adam Garrett-Harris** and they can change the arm size and the foot size and originally, like, they might just fall over because they made one leg too long and then at some point, one falls over and it slightly blocks the left side and so-
 
-0:24:43.9 **Megan Duclos** And then at another point it starts killing humans. 
+0:24:43.9 **Megan Duclos** And then at another point it starts killing humans.
 
 0:24:46.7 **Jason Staten & Adam Garrett-Harris** (laughing)
 
-0:24:48.3 **Adam Garrett-Harris** No, I think at one point before it starts killing them it just starts, like, yelling annoying things and so the humans just walk around it to the other side. 
+0:24:48.3 **Adam Garrett-Harris** No, I think at one point before it starts killing them it just starts, like, yelling annoying things and so the humans just walk around it to the other side.
 
-0:24:54.7 **Megan Duclos** (laughs) Yeah. 
+0:24:54.7 **Megan Duclos** (laughs) Yeah.
 
-0:24:56.6 **Adam Garrett-Harris** And then eventually, let’s see, if it starts killing humans, it wins, right? No humans went down the left hallway. 
+0:24:56.6 **Adam Garrett-Harris** And then eventually, let’s see, if it starts killing humans, it wins, right? No humans went down the left hallway.
 
 0:25:00.6 **Megan Duclos** Uh, no ‘cause then… Yeah, so-
 
-0:25:03.1 **Adam Garrett-Harris** So you have to change the goal. 
+0:25:03.1 **Adam Garrett-Harris** So you have to change the goal.
 
-0:25:03.8 **Megan Duclos** It does win, yeah. So it does win and then they go in and say, “Okay, you can’t kill humans, now.” (laughs) 
+0:25:03.8 **Megan Duclos** It does win, yeah. So it does win and then they go in and say, “Okay, you can’t kill humans, now.” (laughs)
 
-0:25:09.2 **Adam Garrett-Harris** It changed the goal where “Humans go down the right side” instead of the goal being “No humans go down the left side.” 
+0:25:09.2 **Adam Garrett-Harris** It changed the goal where “Humans go down the right side” instead of the goal being “No humans go down the left side.”
 
-0:25:16.5 **Megan Duclos** Yeah. 
+0:25:16.5 **Megan Duclos** Yeah.
 
-0:25:17.1 **Adam Garrett-Harris** And then eventually, it just makes a robot so big that it’s, like, basically a wall. 
+0:25:17.1 **Adam Garrett-Harris** And then eventually, it just makes a robot so big that it’s, like, basically a wall.
 
-0:25:20.9 **Jason Staten** And the picture for it is… awesome. It says, “Yes! We have evolved! A door.” 
+0:25:20.9 **Jason Staten** And the picture for it is… awesome. It says, “Yes! We have evolved! A door.”
 
 0:25:27.2 **Adam Garrett-Harris & Megan Duclos** (laughing)
 
-0:25:28.2 **Jason Staten** And it finally covers generative adversarial networks which I thought this one was pretty awesome to learn about. I feel like I’ve seen the GAN abbreviation a handful of times and didn’t know what it was. 
+0:25:28.2 **Jason Staten** And it finally covers generative adversarial networks which I thought this one was pretty awesome to learn about. I feel like I’ve seen the GAN abbreviation a handful of times and didn’t know what it was.
 
-0:25:44.2 **Adam Garrett-Harris** Yeah. 
+0:25:44.2 **Adam Garrett-Harris** Yeah.
 
-0:25:45.9 **Jason Staten** Or like, what it stood for? And so to kind of hear the description of it helped me out a lot. So basically, you have two machine learning algorithms working, I mean, against each other; or like, you have two machine algorithms working to go, well, one doing generation and the other one is attempting to depict, like, was it generated, or not? 
+0:25:45.9 **Jason Staten** Or like, what it stood for? And so to kind of hear the description of it helped me out a lot. So basically, you have two machine learning algorithms working, I mean, against each other; or like, you have two machine algorithms working to go, well, one doing generation and the other one is attempting to depict, like, was it generated, or not?
 
-0:26:13.4 **Adam Garrett-Harris** So it’s a generator and a discriminator. 
+0:26:13.4 **Adam Garrett-Harris** So it’s a generator and a discriminator.
 
 0:26:14.8 **Jason Staten** Yes, and it is commonly used for, like, generation of images. So there is the website of, like, ThisPersonDoesNotExist.com or something like that where they-
 
-0:26:31.2 **Adam Garrett-Harris** Hmm, yeah. 
+0:26:31.2 **Adam Garrett-Harris** Hmm, yeah.
 
-0:26:31.5 **Jason Staten** You can go there and see all sorts of faces that are generated that are not real people and they are quite convincing as long as you look at the faces. If you look at the edges though, I mean, they can get a little bit scary. Or a lot of times people are missing ears and stuff, or they’re mismatched. 
+0:26:31.5 **Jason Staten** You can go there and see all sorts of faces that are generated that are not real people and they are quite convincing as long as you look at the faces. If you look at the edges though, I mean, they can get a little bit scary. Or a lot of times people are missing ears and stuff, or they’re mismatched.
 
-0:26:50.6 **Adam Garrett-Harris** I’m looking right now, they are creepy good. I mean, not creepy, they’re just good. 
+0:26:50.6 **Adam Garrett-Harris** I’m looking right now, they are creepy good. I mean, not creepy, they’re just good.
 
 0:26:54.6 **Jason Staten** Yeah, like, you could certainly use one in a smaller place, too and be fooling, like, think like a Twitter avatar or something like that. You have, like-
 
-0:27:05.6 **Adam Garrett-Harris** Oh, yeah. 
+0:27:05.6 **Adam Garrett-Harris** Oh, yeah.
 
-0:27:06.1 **Jason Staten** An unlimited pool to generate fake avatars for Twitter. 
+0:27:06.1 **Jason Staten** An unlimited pool to generate fake avatars for Twitter.
 
-0:27:09.4 **Adam Garrett-Harris** Yeah, and this was only just introduced in 2014 as a technique. And what I thought was really interesting about this is that the generator is… you have to give it a, like a, some sort of image to turn into the thing that it’s trying to create. So you can’t just say, “Make a picture of a horse.” You give it a picture of random noise and then it turns that picture into a horse. 
+0:27:09.4 **Adam Garrett-Harris** Yeah, and this was only just introduced in 2014 as a technique. And what I thought was really interesting about this is that the generator is… you have to give it a, like a, some sort of image to turn into the thing that it’s trying to create. So you can’t just say, “Make a picture of a horse.” You give it a picture of random noise and then it turns that picture into a horse.
 
-0:27:35.3 And so that kind of made me think that it sounds like a pure function. Like, given this exact image of white noise, or random noise, it will produce the same image every time. Did you get the same feeling? 
+0:27:35.3 And so that kind of made me think that it sounds like a pure function. Like, given this exact image of white noise, or random noise, it will produce the same image every time. Did you get the same feeling?
 
-0:27:50.2 **Jason Staten** Um, I guess, I don’t know, I didn’t think too hard specifically on that front. But, yeah. 
+0:27:50.2 **Jason Staten** Um, I guess, I don’t know, I didn’t think too hard specifically on that front. But, yeah.
 
-0:27:57.8 **Adam Garrett-Harris** Hmm. 
+0:27:57.8 **Adam Garrett-Harris** Hmm.
 
-0:27:57.8 **Jason Staten** I’ll have to reread that specific part. 
+0:27:57.8 **Jason Staten** I’ll have to reread that specific part.
 
-0:28:00.2 **Adam Garrett-Harris** Yeah, it's got an image on the bottom of 103 where it has a picture of, like, just some dots and then it turns it into, it kind of moves those dots around into a horse. 
+0:28:00.2 **Adam Garrett-Harris** Yeah, it's got an image on the bottom of 103 where it has a picture of, like, just some dots and then it turns it into, it kind of moves those dots around into a horse.
 
-0:28:09.8 **Jason Staten** Okay, yeah. I see that depiction that you’re talking about. 
+0:28:09.8 **Jason Staten** Okay, yeah. I see that depiction that you’re talking about.
 
-0:28:14.1 **Adam Garrett-Harris** And so what’s really interesting about this is that you… it’s much better to have a discriminator AI than it is to have a human because at the beginning, the generator and the discriminator are both equally bad at their jobs. 
+0:28:14.1 **Adam Garrett-Harris** And so what’s really interesting about this is that you… it’s much better to have a discriminator AI than it is to have a human because at the beginning, the generator and the discriminator are both equally bad at their jobs.
 
-0:28:28.9 (laughs) So the generator is terrible at generating pictures of horses, the discriminator is terrible at telling whether or not it’s a horse. It can’t tell the difference between a real horse and a bunch of garbage. 
+0:28:28.9 (laughs) So the generator is terrible at generating pictures of horses, the discriminator is terrible at telling whether or not it’s a horse. It can’t tell the difference between a real horse and a bunch of garbage.
 
-0:28:38.9 And that’s good because a human would just be like, “No. No. No. No. No. No. No.” But this discriminator is really bad. So yeah, it’s going to say “yes” sometimes and then the generator can kind of work that and it can get better and better. 
+0:28:38.9 And that’s good because a human would just be like, “No. No. No. No. No. No. No.” But this discriminator is really bad. So yeah, it’s going to say “yes” sometimes and then the generator can kind of work that and it can get better and better.
 
-0:28:53.4 **Megan Duclos** Yeah, and she says that it, in a way, is using the generator and discriminator to perform a Turing Test in which both, it’s both the judge and contestant so then, like, over time, by the time the training is over, it’s generating horses that would fool a human judge, as well. So, like, they both get to get better together. 
+0:28:53.4 **Megan Duclos** Yeah, and she says that it, in a way, is using the generator and discriminator to perform a Turing Test in which both, it’s both the judge and contestant so then, like, over time, by the time the training is over, it’s generating horses that would fool a human judge, as well. So, like, they both get to get better together.
 
-0:29:14.4 **Adam Garrett-Harris** Yeah. 
+0:29:14.4 **Adam Garrett-Harris** Yeah.
 
-0:29:15.0 **Jason Staten** And while it is impressive in what it does, there are also many ways that the AI can go terribly wrong, as well; and Janelle gets into that in the, kind of, next few chapters. 
+0:29:15.0 **Jason Staten** And while it is impressive in what it does, there are also many ways that the AI can go terribly wrong, as well; and Janelle gets into that in the, kind of, next few chapters.
 
-0:29:29.4 **Adam Garrett-Harris** Yeah, yeah. I like in chapter four it gives a lot of reasons why the AI may not be good or may not be good at that certain problem. Like, if the problem is too broad. AI is really good at very narrow tasks which is another reason why self-driving cars is maybe not be a good problem, it’s very broad. 
+0:29:29.4 **Adam Garrett-Harris** Yeah, yeah. I like in chapter four it gives a lot of reasons why the AI may not be good or may not be good at that certain problem. Like, if the problem is too broad. AI is really good at very narrow tasks which is another reason why self-driving cars is maybe not be a good problem, it’s very broad.
 
-0:29:49.6 **Megan Duclos** Yeah, and it’s, like, constantly changing. 
+0:29:49.6 **Megan Duclos** Yeah, and it’s, like, constantly changing.
 
-0:29:51.8 **Adam Garrett-Harris** Yeah, also if you don't have enough data. It needs a lot of data to train on. 
+0:29:51.8 **Adam Garrett-Harris** Yeah, also if you don't have enough data. It needs a lot of data to train on.
 
 0:29:57.9 **Jason Staten** And also bad data. So even if you can get lots of data, if you give it data that is of a poor quality, and I mean, sometimes that can be hard to distinguish, even as a human, then that can be a case for failure, as well. She gave the example of determining skin conditions and teaching an AI that where-
 
-0:30:24.5 **Adam Garrett-Harris** (laughs) 
+0:30:24.5 **Adam Garrett-Harris** (laughs)
 
-0:30:25.5 **Jason Staten** It turned out that all of their training data that showed a picture of a tumor, also had a ruler in it. Therefore, the AI learned that if it sees a ruler, then it’s a tumor. So it was a ruler detector. 
+0:30:25.5 **Jason Staten** It turned out that all of their training data that showed a picture of a tumor, also had a ruler in it. Therefore, the AI learned that if it sees a ruler, then it’s a tumor. So it was a ruler detector.
 
-0:30:38.0 **Adam Garrett-Harris** It’s so much easier to detect the ruler. 
+0:30:38.0 **Adam Garrett-Harris** It’s so much easier to detect the ruler.
 
-0:30:40.5  **Jason Staten** Yeah. 
+0:30:40.5  **Jason Staten** Yeah.
 
-0:30:41.5 **Adam Garrett-Harris** Yeah, it's a ruler detector. 
+0:30:41.5 **Adam Garrett-Harris** Yeah, it's a ruler detector.
 
-0:30:42.4 **Megan Duclos** (laughs) Which kind of reminds me, I don’t know, if either of you have watched Silicon Valley? 
+0:30:42.4 **Megan Duclos** (laughs) Which kind of reminds me, I don’t know, if either of you have watched Silicon Valley?
 
-0:30:46.9 **Adam Garrett-Harris** No. 
+0:30:46.9 **Adam Garrett-Harris** No.
 
 0:30:47.7 **Megan Duclos** No? But there is an episode where some of them create, one of them creates some kind of machine-learning thing…
 
-0:30:57.6 **Jason Staten** Hot dog, not hot dog? 
+0:30:57.6 **Jason Staten** Hot dog, not hot dog?
 
-0:30:59.1 **Megan Duclos** To tell if there’s a picture of a hot dog, yeah, hot dog or not a hot dog. (laughs) And like there’s a miscommunication where, like, a bunch of these other engineers thought that he had created an algorithm that could just, like, recognize anything in a picture; but it was literally just determining whether the picture had a hot dog or not. And yeah, then there were the other story lines that I won’t get into right now, but yeah, that’s what that reminds me of. 
+0:30:59.1 **Megan Duclos** To tell if there’s a picture of a hot dog, yeah, hot dog or not a hot dog. (laughs) And like there’s a miscommunication where, like, a bunch of these other engineers thought that he had created an algorithm that could just, like, recognize anything in a picture; but it was literally just determining whether the picture had a hot dog or not. And yeah, then there were the other story lines that I won’t get into right now, but yeah, that’s what that reminds me of.
 
-0:31:26.2 **Adam Garrett-Harris** Ah, yeah, and there’s also time-wasting data. So I love the example of some researchers who made an AI that generates images of cats and then they noticed, like, these blocky, text-like markings on the images. 
+0:31:26.2 **Adam Garrett-Harris** Ah, yeah, and there’s also time-wasting data. So I love the example of some researchers who made an AI that generates images of cats and then they noticed, like, these blocky, text-like markings on the images.
 
-0:31:42.1 **Megan Duclos** (laughs) 
+0:31:42.1 **Megan Duclos** (laughs)
 
-0:31:42.8 **Adam Garrett-Harris** And it turns out they, a lot of the cat images they’d gotten from the internet had meme text on them at the top and the bottom. So it was trying to not only generate the cats, but also how to put text on it. And it shows some examples. It’s… it looks like words but it’s illegible. 
+0:31:42.8 **Adam Garrett-Harris** And it turns out they, a lot of the cat images they’d gotten from the internet had meme text on them at the top and the bottom. So it was trying to not only generate the cats, but also how to put text on it. And it shows some examples. It’s… it looks like words but it’s illegible.
 
 0:32:01.4 **Jason Staten** That is one thing I’ve heard from some data scientists that I’ve talked to is that, like, grooming the data is such a critical data and like, such a, like, such a major portion of that position before actually putting it through the algorithm because, I mean, it is-
 
-0:32:20.7 **Adam Garrett-Harris** Hmm. 
+0:32:20.7 **Adam Garrett-Harris** Hmm.
 
-0:32:20.6 **Jason Staten** Still, like the classic “garbage in, garbage out” that you can wind up with. 
+0:32:20.6 **Jason Staten** Still, like the classic “garbage in, garbage out” that you can wind up with.
 
-0:32:25.0 **Adam Garrett-Harris** Mm-hmm (affirmative).  And then there’s over and under represented data, kind of like what we mentioned with the sandwiches. If there’s too many bad sandwiches and not enough examples of good sandwiches, it would just take a shortcut and say, “All sandwiches are bad.” 
+0:32:25.0 **Adam Garrett-Harris** Mm-hmm (affirmative).  And then there’s over and under represented data, kind of like what we mentioned with the sandwiches. If there’s too many bad sandwiches and not enough examples of good sandwiches, it would just take a shortcut and say, “All sandwiches are bad.”
 
-0:32:38.3 And then there’s a common thing in AI where AIs will often see giraffes everywhere, and I love this because people are more likely to photograph a giraffe than a plain landscape. So there’s way more images of giraffes exist than is representative of the real world. 
+0:32:38.3 And then there’s a common thing in AI where AIs will often see giraffes everywhere, and I love this because people are more likely to photograph a giraffe than a plain landscape. So there’s way more images of giraffes exist than is representative of the real world.
 
-0:32:56.8 And then other examples of female scientists being under-represented on Wikipedia. It gives an example of Donna Strickland didn’t get a Wikipedia entry until she won the Nobel Prize in Physics. (laughs) 
+0:32:56.8 And then other examples of female scientists being under-represented on Wikipedia. It gives an example of Donna Strickland didn’t get a Wikipedia entry until she won the Nobel Prize in Physics. (laughs)
 
-0:33:09.6 **Jason Staten** That is one of the things, too. It’s just a general bias that winds up coming through in the algorithms simply because, or I guess not in the algorithm but, like,  in the calculated result, simply from the data that’s fed to it. 
+0:33:09.6 **Jason Staten** That is one of the things, too. It’s just a general bias that winds up coming through in the algorithms simply because, or I guess not in the algorithm but, like,  in the calculated result, simply from the data that’s fed to it.
 
-0:33:25.5 Even if we, as humans, attempt to circumvent that bias by saying, “Well we’re not putting gender or race into the system.” But there are ways that the algorithm, I mean, finds patterns that are, like, “Oh, well this person lives in this specific area or has this specific name” or something like that as a proxy way of determining that same thing. 
+0:33:25.5 Even if we, as humans, attempt to circumvent that bias by saying, “Well we’re not putting gender or race into the system.” But there are ways that the algorithm, I mean, finds patterns that are, like, “Oh, well this person lives in this specific area or has this specific name” or something like that as a proxy way of determining that same thing.
 
-0:33:55.4 **Adam Garrett-Harris** Hmm. 
+0:33:55.4 **Adam Garrett-Harris** Hmm.
 
-0:33:55.6 **Megan Duclos** Another thing in this chapter that I found really interesting was talking about a problem with AI called unintentional memorization where she basically gives an example from 2017. Researchers from Google Brain showed that a standard machine learning language translation algorithm could memorize short sequences of numbers like credit card numbers or social security numbers even if they just appear, like, four times in a data set of 100,000 data sets. 
+0:33:55.6 **Megan Duclos** Another thing in this chapter that I found really interesting was talking about a problem with AI called unintentional memorization where she basically gives an example from 2017. Researchers from Google Brain showed that a standard machine learning language translation algorithm could memorize short sequences of numbers like credit card numbers or social security numbers even if they just appear, like, four times in a data set of 100,000 data sets.
 
-0:34:29.4 **Adam Garrett-Harris** Hmm. 
+0:34:29.4 **Adam Garrett-Harris** Hmm.
 
-0:34:30.8 **Megan Duclos** So they would, like, somehow the AI would just memorize it and just spit out a social security number or a bank number or something like that. 
+0:34:30.8 **Megan Duclos** So they would, like, somehow the AI would just memorize it and just spit out a social security number or a bank number or something like that.
 
-0:34:41.4 **Adam Garrett-Harris** Yeah, and then if you can trick that AI into spitting that back out then it’s leaked information, sensitive. It’s really bad. 
+0:34:41.4 **Adam Garrett-Harris** Yeah, and then if you can trick that AI into spitting that back out then it’s leaked information, sensitive. It’s really bad.
 
-0:34:49.5 **Megan Duclos** Yeah, it can be a huge security vulnerability that can cause a lot of problems. 
+0:34:49.5 **Megan Duclos** Yeah, it can be a huge security vulnerability that can cause a lot of problems.
 
-0:34:54.7 **Adam Garrett-Harris** In chapter five it talks about overfitting, and overfitting is when an AI is trained for a very particular set of circumstances but not for the variety of situations that it might actually encounter that you want it to work. 
+0:34:54.7 **Adam Garrett-Harris** In chapter five it talks about overfitting, and overfitting is when an AI is trained for a very particular set of circumstances but not for the variety of situations that it might actually encounter that you want it to work.
 
-0:35:11.4 So an example that’s not actually AI, but with training animals -and she said that here’s a lot of similarities between training AIs and training animals- the Soviets tried training dogs to run, to carry bombs and run underneath German tanks to blow up their tanks but there were several problems with that. 
+0:35:11.4 So an example that’s not actually AI, but with training animals -and she said that here’s a lot of similarities between training AIs and training animals- the Soviets tried training dogs to run, to carry bombs and run underneath German tanks to blow up their tanks but there were several problems with that.
 
-0:35:30.3 The Soviets, their tanks were not moving during the training ‘cause they wanted to save money on fuel and so then, the dogs would get scared around moving tanks.  aAd also the German tanks smelled different, they ran on gasoline instead of diesel. So, often the dogs would end up running back underneath, or towards, or underneath the Soviet tanks which is really bad. (laughs) And also really sad that they tried to use dogs for that. 
+0:35:30.3 The Soviets, their tanks were not moving during the training ‘cause they wanted to save money on fuel and so then, the dogs would get scared around moving tanks.  aAd also the German tanks smelled different, they ran on gasoline instead of diesel. So, often the dogs would end up running back underneath, or towards, or underneath the Soviet tanks which is really bad. (laughs) And also really sad that they tried to use dogs for that.
 
 0:35:57.0 **Jason Staten** Yeah. And I would say that because AI does have its shortcomings, and these things, like that’s where the human intervention is necessary, and a lot of times why AI products that exist are ones that fall back to a human when they can’t recognize a scenario, or can’t handle a scenario.
 
 0:36:22.0 So like, in a self-driving car, I mean, like, if you’re driving a Tesla, like, it always expects a human to be there to take control and it will start chiming at you and yelling at you if it’s starting to have a problem and making sure that your hand is also on the steering wheel, as well, every so often to make that, I mean, you’re doing your human role. Or like, a chatbot-
 
-0:36:45.9 **Adam Garrett-Harris** Yeah. 
+0:36:45.9 **Adam Garrett-Harris** Yeah.
 
-0:36:47.0 **Jason Staten** It will go back to a human if you start asking it things that are kind of nonsensical and the AI can’t distinguish what you’re trying to say there. 
+0:36:47.0 **Jason Staten** It will go back to a human if you start asking it things that are kind of nonsensical and the AI can’t distinguish what you’re trying to say there.
 
-0:36:56.6 **Adam Garrett-Harris** Yeah, with chatbots it said, later on it said one problem with that is that it inflates people’s expectations of what AI can do. If they don’t know whether or not they’re talking to a human or an AI, they may think AIs are really good. 
+0:36:56.6 **Adam Garrett-Harris** Yeah, with chatbots it said, later on it said one problem with that is that it inflates people’s expectations of what AI can do. If they don’t know whether or not they’re talking to a human or an AI, they may think AIs are really good.
 
-0:37:11.3 Secondly, they may be mean to humans when they don’t mean to be because they think they’re talking to a bot, and then thirdly, they may reveal sensitive information because they think they’re just talking to a computer. 
+0:37:11.3 Secondly, they may be mean to humans when they don’t mean to be because they think they’re talking to a bot, and then thirdly, they may reveal sensitive information because they think they’re just talking to a computer.
 
 0:37:21.4 **Jason Staten** It’s one of those things that made me think of, I think it was a presentation Google made last year where they showed off using an AI to go and book a haircut, I believe it was, where-
 
-0:37:36.9 **Adam Garrett-Harris** I think it was making or booking a reservation at a restaurant. Oh, and a haircut! Yeah. 
+0:37:36.9 **Adam Garrett-Harris** I think it was making or booking a reservation at a restaurant. Oh, and a haircut! Yeah.
 
-0:37:42.5 **Jason Staten** And while, like, I feel like that could work in a narrow situation, I could also feel it, or like, see it falling short with a, I don’t know, kind of a basic question that maybe it's not trained for. Of, like, I don’t know, “Do you have a gluten allergy?” Or something... 
+0:37:42.5 **Jason Staten** And while, like, I feel like that could work in a narrow situation, I could also feel it, or like, see it falling short with a, I don’t know, kind of a basic question that maybe it's not trained for. Of, like, I don’t know, “Do you have a gluten allergy?” Or something...
 
-0:38:01.0 **Adam Garrett-Harris** Yeah. I was surprised with that example, not only how lifelike those AIs voices sounded, but they gave examples where they had unexpected questions and unexpected answers, because with the haircut, they asked like, “What kind of haircut?” Or something and it actually responded to that. 
+0:38:01.0 **Adam Garrett-Harris** Yeah. I was surprised with that example, not only how lifelike those AIs voices sounded, but they gave examples where they had unexpected questions and unexpected answers, because with the haircut, they asked like, “What kind of haircut?” Or something and it actually responded to that.
 
-0:38:20.8 And then with booking the restaurant, the person had a thick accent and had a hard time understanding what the person was asking. 
+0:38:20.8 And then with booking the restaurant, the person had a thick accent and had a hard time understanding what the person was asking.
 
-0:38:29.5 **Jason Staten** Mm-hmm (affirmative).  
+0:38:29.5 **Jason Staten** Mm-hmm (affirmative).
 
-0:38:30.8 **Adam Garrett-Harris** Not the person, but what the AI was asking and then it had to repeat itself and it turns out they don’t take reservations so it was able to handle that, as well. 
+0:38:30.8 **Adam Garrett-Harris** Not the person, but what the AI was asking and then it had to repeat itself and it turns out they don’t take reservations so it was able to handle that, as well.
 
-0:38:38.8 **Jason Staten** Yeah. I mean, it definitely is an impressive thing. Like, I mean, and it would be awesome for some particular cases. 
+0:38:38.8 **Jason Staten** Yeah. I mean, it definitely is an impressive thing. Like, I mean, and it would be awesome for some particular cases.
 
-0:38:48.1 **Adam Garrett-Harris** I think a major problem with this is going to be that small businesses might get inundated with calls from AIs which could be super annoying. They might get more phone calls than normal. Basically they would be penalized if they don’t have online ordering or some sort of automated way to do it without AI. 
+0:38:48.1 **Adam Garrett-Harris** I think a major problem with this is going to be that small businesses might get inundated with calls from AIs which could be super annoying. They might get more phone calls than normal. Basically they would be penalized if they don’t have online ordering or some sort of automated way to do it without AI.
 
-0:39:09.1 **Jason Staten** So, what you just need to do is these small businesses also need to get AI on their end, answering the phone first. 
+0:39:09.1 **Jason Staten** So, what you just need to do is these small businesses also need to get AI on their end, answering the phone first.
 
-0:39:17.8 **Adam Garrett-Harris** Yeah. 
+0:39:17.8 **Adam Garrett-Harris** Yeah.
 
 0:39:18.5 **Jason Staten** And then as soon as that happens-
 
-0:39:20.1 **Adam Garrett-Harris** Right. 
+0:39:20.1 **Adam Garrett-Harris** Right.
 
-0:39:20.3 **Jason Staten** Like, there’s, like, a high-frequency sound that denotes, “Oh, this is actually an AI that this AI is talking to.” And then it just sounds like a modem. 
+0:39:20.3 **Jason Staten** Like, there’s, like, a high-frequency sound that denotes, “Oh, this is actually an AI that this AI is talking to.” And then it just sounds like a modem.
 
-0:39:28.5 **Megan Duclos** (laughs) 
+0:39:28.5 **Megan Duclos** (laughs)
 
-0:39:28.9 **Adam Garrett-Harris** Yeah. 
+0:39:28.9 **Adam Garrett-Harris** Yeah.
 
-0:39:29.7 **Megan Duclos** That sounds great. Then no one will ever have to work customer service again. 
+0:39:29.7 **Megan Duclos** That sounds great. Then no one will ever have to work customer service again.
 
-0:39:34.2 **Adam Garrett-Harris** Wait, wasn’t there some sort of example in this book about AI? Oh, with voice recognition AIs, you could trick it with some sort of white noise that humans would just think is white noise, but then the AI thinks the person is saying something completely different? 
+0:39:34.2 **Adam Garrett-Harris** Wait, wasn’t there some sort of example in this book about AI? Oh, with voice recognition AIs, you could trick it with some sort of white noise that humans would just think is white noise, but then the AI thinks the person is saying something completely different?
 
-0:39:49.9 **Megan Duclos** Yes! Yeah, I remember that. 
+0:39:49.9 **Megan Duclos** Yes! Yeah, I remember that.
 
-0:39:52.0 **Adam Garrett-Harris** It’s basically the same idea as putting, like, a little square of white noise on a photograph and then the AI thinks the photograph photo is something else. 
+0:39:52.0 **Adam Garrett-Harris** It’s basically the same idea as putting, like, a little square of white noise on a photograph and then the AI thinks the photograph photo is something else.
 
 0:40:04.6 **Megan Duclos** That was-
 
-0:40:05.0 **Adam Garrett-Harris** Oh, that was in chapter eight. 
+0:40:05.0 **Adam Garrett-Harris** Oh, that was in chapter eight.
 
-0:40:07.4 **Megan Duclos** Yeah. 
+0:40:07.4 **Megan Duclos** Yeah.
 
-0:40:07.8 **Adam Garrett-Harris** It’s an adversarial attack. So that’s known as a rainbow of static. And another way of tricking an image recognition software is you take one image and then you start slowly overlaying that image with one pixel at a time from another image and eventually the AI thinks that it’s seeing something else that a human wouldn’t see. You just don’t know which pixels the AI is going to think is important. 
+0:40:07.8 **Adam Garrett-Harris** It’s an adversarial attack. So that’s known as a rainbow of static. And another way of tricking an image recognition software is you take one image and then you start slowly overlaying that image with one pixel at a time from another image and eventually the AI thinks that it’s seeing something else that a human wouldn’t see. You just don’t know which pixels the AI is going to think is important.
 
-0:40:33.6 **Megan Duclos** Yeah. 
+0:40:33.6 **Megan Duclos** Yeah.
 
-0:40:34.1 **Jason Staten** Mm-hmm (affirmative).  
+0:40:34.1 **Jason Staten** Mm-hmm (affirmative).
 
-0:40:35.0 **Adam Garrett-Harris** Although thankfully it said now there are ways of an AI pointing out which pixels it used to determine. So it can kind of highlight those and it’s not always what you would expect. I think, like, with pictures of fish, a certain kind of fish, most of the pictures were of a human holding the fish. So the way it was recognizing it was human fingers on a green background. 
+0:40:35.0 **Adam Garrett-Harris** Although thankfully it said now there are ways of an AI pointing out which pixels it used to determine. So it can kind of highlight those and it’s not always what you would expect. I think, like, with pictures of fish, a certain kind of fish, most of the pictures were of a human holding the fish. So the way it was recognizing it was human fingers on a green background.
 
-0:40:58.1 **Jason Staten** (laughs) 
+0:40:58.1 **Jason Staten** (laughs)
 
-0:40:58.8 **Megan Duclos** (laughs) 
+0:40:58.8 **Megan Duclos** (laughs)
 
-0:40:59.0 **Adam Garrett-Harris** (laughs) 
+0:40:59.0 **Adam Garrett-Harris** (laughs)
 
-0:41:00.3 **Jason Staten** I guess on one other note of humans and AI coming together, too, is creativity. Like, creating art and that is something that I was impressed with by a service that is called Generative.fm and that is a website that you can use similar to Spotify, or like other music websites, where you can pick the type of music that you want and then it will play that music and it will do it locally. 
+0:41:00.3 **Jason Staten** I guess on one other note of humans and AI coming together, too, is creativity. Like, creating art and that is something that I was impressed with by a service that is called Generative.fm and that is a website that you can use similar to Spotify, or like other music websites, where you can pick the type of music that you want and then it will play that music and it will do it locally.
 
-0:41:35.4 So, like, the sound itself exists on your machine, locally, but it is all generated from your machine. So it’s not like it’s streamed from somewhere or prerecorded but instead, just on the fly, just keeps playing. As long as you choose to listen, it will keep generating more and more music. 
+0:41:35.4 So, like, the sound itself exists on your machine, locally, but it is all generated from your machine. So it’s not like it’s streamed from somewhere or prerecorded but instead, just on the fly, just keeps playing. As long as you choose to listen, it will keep generating more and more music.
 
-0:41:53.8 **Adam Garrett-Harris** Hmm. That’s cool. 
+0:41:53.8 **Adam Garrett-Harris** Hmm. That’s cool.
 
-0:41:54.8 **Jason Staten** They have a lot of ambient type stuff. So if you just need something in the background to listen to while coding, it’s a good choice there. 
+0:41:54.8 **Jason Staten** They have a lot of ambient type stuff. So if you just need something in the background to listen to while coding, it’s a good choice there.
 
-0:42:03.4 **Adam Garrett-Harris** Yeah, I see some... a lot of electronic, there’s some- 
+0:42:03.4 **Adam Garrett-Harris** Yeah, I see some... a lot of electronic, there’s some-
 
-0:42:06.1 **Jason Staten** Mm-hmm (affirmative).  
+0:42:06.1 **Jason Staten** Mm-hmm (affirmative).
 
-0:42:06.5 **Adam Garrett-Harris** Piano, saxophone, guitar… that’s cool. Another thing I thought was interesting that we haven’t talked about yet was the idea of using multiple AIs to do one test because AIs are best when they focus on one task and if you try to teach them something else they’ll forget the first thing. 
+0:42:06.5 **Adam Garrett-Harris** Piano, saxophone, guitar… that’s cool. Another thing I thought was interesting that we haven’t talked about yet was the idea of using multiple AIs to do one test because AIs are best when they focus on one task and if you try to teach them something else they’ll forget the first thing.
 
-0:42:23.8 So one example was an AI to play Doom and there’s actually three different AIs so one is the vision, so it’s like, “I have detected various things!” 
+0:42:23.8 So one example was an AI to play Doom and there’s actually three different AIs so one is the vision, so it’s like, “I have detected various things!”
 
-0:42:34.0 **Megan Duclos** Oh, yeah! 
+0:42:34.0 **Megan Duclos** Oh, yeah!
 
-0:42:34.9 **Adam Garrett-Harris** And then one of them is the memory and it says, “I predict the fireball will continue to get bigger.” 
+0:42:34.9 **Adam Garrett-Harris** And then one of them is the memory and it says, “I predict the fireball will continue to get bigger.”
 
-0:42:40.4 And then one is actually the controller and it’s like, “Aah! Dodge left!” 
+0:42:40.4 And then one is actually the controller and it’s like, “Aah! Dodge left!”
 
-0:42:43.8 **Megan Duclos** Yeah, it was pretty cool. 
+0:42:43.8 **Megan Duclos** Yeah, it was pretty cool.
 
-0:42:45.0 **Adam Garrett-Harris** So the future of AI might be more like that. Like a swarm of many different AIs working together, each one focusing on a very small sub task. 
+0:42:45.0 **Adam Garrett-Harris** So the future of AI might be more like that. Like a swarm of many different AIs working together, each one focusing on a very small sub task.
 
-0:42:57.3 **Megan Duclos** Did either of you have a favorite chapter? 
+0:42:57.3 **Megan Duclos** Did either of you have a favorite chapter?
 
-0:43:02.4 **Adam Garrett-Harris** I have a favorite funny part. 
+0:43:02.4 **Adam Garrett-Harris** I have a favorite funny part.
 
-0:43:04.0 **Megan Duclos** Okay. 
+0:43:04.0 **Megan Duclos** Okay.
 
-0:43:04.6 **Adam Garrett-Harris** I like in chapter one she’s having it make knock-knock jokes. 
+0:43:04.6 **Adam Garrett-Harris** I like in chapter one she’s having it make knock-knock jokes.
 
-0:43:09.1 **Megan Duclos** Yeah. (laughs) Those were my favorite. 
+0:43:09.1 **Megan Duclos** Yeah. (laughs) Those were my favorite.
 
-0:43:10.0 **Adam Garrett-Harris** And it kind of just goes from the beginning of how bad it is at first. Like, at first it’s like. “K space K space K space space space k k k k k” because, probably, knock-knock jokes have a lot of “k”s in them. 
+0:43:10.0 **Adam Garrett-Harris** And it kind of just goes from the beginning of how bad it is at first. Like, at first it’s like. “K space K space K space space space k k k k k” because, probably, knock-knock jokes have a lot of “k”s in them.
 
-0:43:22.8 **Megan Duclos** (laughs) 
+0:43:22.8 **Megan Duclos** (laughs)
 
-0:43:23.6 **Adam Garrett-Harris** And then it’s just kind of gibberish and it’s doing some new lines and some question marks here and there and then eventually it’s like, “Walk. Walk, walk, walk. Walk, walk, walk.” 
+0:43:23.6 **Adam Garrett-Harris** And then it’s just kind of gibberish and it’s doing some new lines and some question marks here and there and then eventually it’s like, “Whock. Whock, Whock, Whock. Whock. Whock. Whock.”
 
-0:43:31.9 **Megan Duclos** (laughs) 
+0:43:31.9 **Megan Duclos** (laughs)
 
-0:43:33.2 **Adam Garrett-Harris** And then eventually it’s like, “Knock-knock. Who’s there? I an. Ad are who? Ain who? And who? And a coo. I a poo. I rot a who.” 
+0:43:33.2 **Adam Garrett-Harris** And then eventually it’s like, “Knock-knock. Who’s there? Iane. Aartar who? Aaane who? Aan who? Anac who? Iobe who? Irata who?”
 
-0:43:42.3 **Megan Duclos** (laughs) 
+0:43:42.3 **Megan Duclos** (laughs)
 
-0:43:43.5 **Adam Garrett-Harris** And then finally it kind of starts figuring out the formula. And I like, “Knock-knock. Who’s there? A cow with no lips. A cow with no lips who? A cow with no lips says, ‘oo, oo, oo’.” 
+0:43:43.5 **Adam Garrett-Harris** And then finally it kind of starts figuring out the formula. And I like, “Knock-knock. Who’s there? A cow with no lips. A cow with no lips who? A cow with no lips says, ‘ooo ooo ooooooo’.”
 
-0:43:52.4 **Megan Duclos** (laughs) 
+0:43:52.4 **Megan Duclos** (laughs)
 
-0:43:54.0 **Jason Staten**  Yeah. 
+0:43:54.0 **Jason Staten**  Yeah.
 
-0:43:55.0 **Megan Duclos** And then it thinks that’s like, the best knock-knock joke ever. 
+0:43:55.0 **Megan Duclos** And then it thinks that’s like, the best knock-knock joke ever.
 
-0:43:54.9 **Adam Garrett-Harris** And then it thinks, it thinks the cow with no lips is, like, the best joke ever. 
+0:43:54.9 **Adam Garrett-Harris** And then it thinks, it thinks the cow with no lips is, like, the best joke ever.
 
-0:43:59.7 **Megan Duclos** (laughs) 
+0:43:59.7 **Megan Duclos** (laughs)
 
-0:44:00.0 **Adam Garrett-Harris** So it keeps doing that one. 
+0:44:00.0 **Adam Garrett-Harris** So it keeps doing that one.
 
-0:44:01.8 **Jason Staten** That was actually my note. That was my favorite part. I listened to the audio book on my initial reading of it and XZSands does it in, like, a robotic voice to do all of the AI pieces in it. 
+0:44:01.8 **Jason Staten** That was actually my note. That was my favorite part. I listened to the audio book on my initial reading of it and XZSands does it in, like, a robotic voice to do all of the AI pieces in it.
 
-0:44:18.4 **Adam Garrett-Harris** (laughs) 
+0:44:18.4 **Adam Garrett-Harris** (laughs)
 
-0:44:19.2 **Jason Staten** And it is… it is really good. Like, I enjoyed listening to that part of it, ‘cause just, “K. Kk. K. K-O. K.” It just, yeah. 
+0:44:19.2 **Jason Staten** And it is… it is really good. Like, I enjoyed listening to that part of it, ‘cause just, “K. Kk. K. K-O. K.” It just, yeah.
 
-0:44:29.9 **Adam Garrett-Harris** Wow. Does the audiobook read all of the dialog in the pictures? 
+0:44:29.9 **Adam Garrett-Harris** Wow. Does the audiobook read all of the dialog in the pictures?
 
 0:44:35.3 **Jason Staten** So there are a few places where it says, “Check out the PDF to go and see this thing.” So it doesn’t necessarily get all of them. So you do miss out on that, you miss out on some-
 
-0:44:46.2 **Adam Garrett-Harris** Okay. 
+0:44:46.2 **Adam Garrett-Harris** Okay.
 
-0:44:46.2 **Jason Staten** Really nice illustrations. So the book itself is also worth going through but I do think the audiobook did a nice depiction of the AI and giving it a voice. 
+0:44:46.2 **Jason Staten** Really nice illustrations. So the book itself is also worth going through but I do think the audiobook did a nice depiction of the AI and giving it a voice.
 
-0:45:00.8 **Adam Garrett-Harris** Yeah, cool. Yeah, I didn’t think this would make a very good audiobook, but overall it was okay? It was good? 
+0:45:00.8 **Adam Garrett-Harris** Yeah, cool. Yeah, I didn’t think this would make a very good audiobook, but overall it was okay? It was good?
 
-0:45:06.2 **Jason Staten** Yeah. 
+0:45:06.2 **Jason Staten** Yeah.
 
-0:45:08.4 **Megan Duclos** Now I’m wishing i had listened to it ‘cause I find it so hard to find the time to sit down and read a book, physically, that it was hard for me to, like, finish it in time but I would have finished it weeks ago if I had just listened to it. (laughs) 
+0:45:08.4 **Megan Duclos** Now I’m wishing i had listened to it ‘cause I find it so hard to find the time to sit down and read a book, physically, that it was hard for me to, like, finish it in time but I would have finished it weeks ago if I had just listened to it. (laughs)
 
-0:45:23.7 **Adam Garrett-Harris** Yeah, I don’t know how you'd take notes though, when you’re doing an audiobook. 
+0:45:23.7 **Adam Garrett-Harris** Yeah, I don’t know how you'd take notes though, when you’re doing an audiobook.
 
-0:45:27.1 **Megan Duclos** Oh, I don’t. 
+0:45:27.1 **Megan Duclos** Oh, I don’t.
 
-0:45:28.1 **Adam Garrett-Harris** Right. 
+0:45:28.1 **Adam Garrett-Harris** Right.
 
-0:45:29.2 **Jason Staten** Sometimes I’ll stop and pause and open up my notes app and throw something into there. Like, if something really stands out to me. 
+0:45:29.2 **Jason Staten** Sometimes I’ll stop and pause and open up my notes app and throw something into there. Like, if something really stands out to me.
 
-0:45:35.9**Adam Garrett-Harris** Mm. 
+0:45:35.9**Adam Garrett-Harris** Mm.
 
-0:45:36.5 **Megan Duclos** I mostly just hope I remember. 
+0:45:36.5 **Megan Duclos** I mostly just hope I remember.
 
-0:45:38.3 **Adam Garrett-Harris** All right. Any final thoughts? 
+0:45:38.3 **Adam Garrett-Harris** All right. Any final thoughts?
 
-0:45:41.4 **Jason Staten** So I thought it was a great spread of, like, what the AI world looks like right now and kind of is... it takes away the smoke and mirrors and shows more of what’s going on with AI but it does it at a level that, I feel like, I would be definitely apt to recommend to somebody who is less technical, that’s not a programmer perhaps, and that they could still get a ton of value out of this. So I really enjoyed it on that aspect. 
+0:45:41.4 **Jason Staten** So I thought it was a great spread of, like, what the AI world looks like right now and kind of is... it takes away the smoke and mirrors and shows more of what’s going on with AI but it does it at a level that, I feel like, I would be definitely apt to recommend to somebody who is less technical, that’s not a programmer perhaps, and that they could still get a ton of value out of this. So I really enjoyed it on that aspect.
 
 0:46:16.5 **Adam Garrett-Harris** Yeah I really enjoyed it. It’s a very fun read and it has a lot of technical things in there if you want to dig into it, but it doesn’t get too technical. For instance, I like how it has, kind of like vocabulary words in bold, but it doesn’t give a technical definition, it just, kind of, gives you a feel for what the word means with a lot of examples. So I really like that.
 
-0:46:42.5 And it can be just a quick, fun read and it gives you, it can kind of calm your fears about AI, help you understand AI, where to expect it, and if you want to dig into it more, then I think this is a great jumping off place. 
+0:46:42.5 And it can be just a quick, fun read and it gives you, it can kind of calm your fears about AI, help you understand AI, where to expect it, and if you want to dig into it more, then I think this is a great jumping off place.
 
-0:46:56.5 **Megan Duclos** Yeah, I agree, too. I think it’s a really good, like, intro to AI and machine learning. I didn’t really know much about it before reading it and I learned a lot, but it wasn’t too, like overwhelmingly technical. It was really funny. 
+0:46:56.5 **Megan Duclos** Yeah, I agree, too. I think it’s a really good, like, intro to AI and machine learning. I didn’t really know much about it before reading it and I learned a lot, but it wasn’t too, like overwhelmingly technical. It was really funny.
 
-0:47:12.2 And I think it’s funny, Adam, that you mentioned, like, it will help calm your fears because, this is kind of silly, but at a really young age I watched some movie about a robot that went, like, turned evil or something and it scared me so much that I have this weird irrational fear of robots taking over the world which, (laughs) you’re supposed to laugh at that. That’s not, like… (laughs) 
+0:47:12.2 And I think it’s funny, Adam, that you mentioned, like, it will help calm your fears because, this is kind of silly, but at a really young age I watched some movie about a robot that went, like, turned evil or something and it scared me so much that I have this weird irrational fear of robots taking over the world which, (laughs) you’re supposed to laugh at that. That’s not, like… (laughs)
 
-0:47:33.8 **Adam Garrett-Harris** This book does talk about unfortunate murder bots. 
+0:47:33.8 **Adam Garrett-Harris** This book does talk about unfortunate murder bots.
 
-0:47:36.7 **Megan Duclos** Yes! So it’s, like, within the realm of possibility! 
+0:47:36.7 **Megan Duclos** Yes! So it’s, like, within the realm of possibility!
 
-0:47:40.1 **Adam Garrett-Harris** Yeah. 
+0:47:40.1 **Adam Garrett-Harris** Yeah.
 
-0:47:40.6 **Megan Duclos** (laughs) But, like, this, kind of, helped me realize that, like, AI as it is right now is just not smart enough for that, yet. 
+0:47:40.6 **Megan Duclos** (laughs) But, like, this, kind of, helped me realize that, like, AI as it is right now is just not smart enough for that, yet.
 
-0:47:51.3 **Adam Garrett-Harris** Yeah. 
+0:47:51.3 **Adam Garrett-Harris** Yeah.
 
-0:47:52.0 **Megan Duclos** Although a lot of them just, kind of, end up resorting to like that one in the hallway. So I don’t know, maybe my fear is not irrational and it’s fine. 
+0:47:52.0 **Megan Duclos** Although a lot of them just, kind of, end up resorting to like that one in the hallway. So I don’t know, maybe my fear is not irrational and it’s fine.
 
 0:47:58.4 **Adam Garrett-Harris** Yeah. Well, I mean, it says, and I think this is a key idea, “For the foreseeable future, the danger will not be that the AI is too smart but that it’s not smart enough.”
 
-0:48:07.4 **Megan Duclos** Yeah. 
+0:48:07.4 **Megan Duclos** Yeah.
 
-0:48:07.9 **Adam Garrett-Harris** And another really great, great quote from the end is, “There’s every reason to be optimistic about AI and every reason to be cautious. It all depends on how we use it.” 
+0:48:07.9 **Adam Garrett-Harris** And another really great, great quote from the end is, “There’s every reason to be optimistic about AI and every reason to be cautious. It all depends on how we use it.”
 
-0:48:17.0 **Megan Duclos** That’s great. 
+0:48:17.0 **Megan Duclos** That’s great.
 
-0:48:17.0 **Adam Garrett-Harris** Also, I cannot stop looking at ThisPersonDoesNotExist.com. 
+0:48:17.0 **Adam Garrett-Harris** Also, I cannot stop looking at ThisPersonDoesNotExist.com.
 
-0:48:19.7 **Jason Staten** (laughs) 
+0:48:19.7 **Jason Staten** (laughs)
 
-0:48:20.1 **Megan Duclos** (laughs) 
+0:48:20.1 **Megan Duclos** (laughs)
 
-0:48:21.1 **Jason Staten** If you do get tired of it, going to Janelle’s blog, AIWeirdness.com is also… it’s some good reads. 
+0:48:21.1 **Jason Staten** If you do get tired of it, going to Janelle’s blog, AIWeirdness.com is also… it’s some good reads.
 
-0:48:29.9 **Megan Duclos** It’s a good laugh. 
+0:48:29.9 **Megan Duclos** It’s a good laugh.
 
-0:48:32.1 **Jason Staten** The valentine hearts? And yeah. 
+0:48:32.1 **Jason Staten** The valentine hearts? And yeah.
 
-0:48:32.9 **Adam Garrett-Harris** Yeah, and I love how she… yes. She takes the things that the AI generates and actually puts them on, she’s generating the valentines hearts and putting them actually on pictures of the valentine heart candy. Or taking the recipes and putting them on recipe cards. 
+0:48:32.9 **Adam Garrett-Harris** Yeah, and I love how she… yes. She takes the things that the AI generates and actually puts them on, she’s generating the valentines hearts and putting them actually on pictures of the valentine heart candy. Or taking the recipes and putting them on recipe cards.
 
 0:48:47.8 **Megan Duclos** Yeah, it just makes it even funnier.
 
-0:48:49.7 **Adam Garrett-Harris** Yes. All right. Well, thank you so much for listening. You can find me on Twitter @AGarrHarr, Jason, where can people find you online? 
+0:48:49.7 **Adam Garrett-Harris** Yes. All right. Well, thank you so much for listening. You can find me on Twitter @AGarrHarr, Jason, where can people find you online?
 
-0:49:00.8 **Jason Staten** Sometimes I’m on Twitter @StatenJason. 
+0:49:00.8 **Jason Staten** Sometimes I’m on Twitter @StatenJason.
 
-0:49:04.0 **Adam Garrett-Harris** And Megan, what about you? 
+0:49:04.0 **Adam Garrett-Harris** And Megan, what about you?
 
 0:49:05.2 **Megan Duclos** Uh, I don’t really tweet that much but I am on Instagram.
 
-0:49:09.5 **Adam Garrett-Harris** And you can follow the show on Twitter @BookBytesFM and you can find the show notes and transcript for the episode as always at Orbit.fm. 
+0:49:09.5 **Adam Garrett-Harris** And you can follow the show on Twitter @BookBytesFM and you can find the show notes and transcript for the episode as always at Orbit.fm.
 
-0:49:18.2 **Jason Staten** See ya. 
+0:49:18.2 **Jason Staten** See ya.
 
-0:49:18.9 **Adam Garrett-Harris** Bye. 
+0:49:18.9 **Adam Garrett-Harris** Bye.
 
 0:49:19.6 **Megan Duclos** Bye.
