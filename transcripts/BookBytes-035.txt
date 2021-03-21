@@ -1,0 +1,1096 @@
+﻿(Intro music: Electro swing)
+
+
+0:00:12.9 **Adam Garrett-Harris** Hello and welcome to BookBytes. This week, it is just Jason and I. We are going over “Seven Languages in Seven Weeks”. This week, we’re going to talk about Ruby and maybe a little introduction to the book, as well. 
+
+
+0:00:27.3 **Jason Staten** Yeah.
+
+
+0:00:28.1 **Adam Garrett-Harris** So, this is one that I’ve wanted to do since we started the podcast. I think you might have mentioned it, or maybe I did, I don’t know, but this book has always intrigued me. 
+
+
+0:00:38.0 **Jason Staten** I think I’ve mentioned it in Discord, probably every time that we’ve had a gap, of, “Let’s do this!” because we have a topic every week that is timebound and well defined as to what to look at. So, glad we’re finally starting it. 
+
+
+0:00:53.9 **Adam Garrett-Harris** Okay. Do you have anything to add from the introduction that you’d like to talk about? 
+
+
+0:01:01.1 **Jason Staten** Um, I guess, I did like some of the things called out in the introduction, like how the language choice was done because there are so many languages. 
+
+
+0:01:13.6 I specifically liked that Io was called out because it is a prototype type of language. We’ll get into it more next time after I do some studying of it, but it was brought up that that was chosen over JavaScript, even though JavaScript is also a prototype type of language, but they chose it just because it was something that was different and not familiar to everyone, just so you do have to take a change in perspective. 
+
+
+0:01:49.9 That’s kind of my reason for even wanting to look at the book, it’s putting me in a place where I’m working with languages that I have less familiarity with. 
+
+
+0:02:01.0 **Adam Garrett-Harris** Yeah, yeah. I thought it was really interesting that he wanted to pick out different languages that explore all sorts of different programming models. So he wanted languages with different typing models, different programming models, how you interact with it, is it compiled or interpreted? Does it have an interactive shell? Different design construction, core data structures… And then just languages that have unique features. 
+
+
+0:02:25.6 But it’s not going to be able to teach you all seven languages in one book; it’s going to skip over some of the basics and it’s going to dive deep into certain areas and then not into certain areas, and I think that’s really interesting. 
+
+
+0:02:38.8 **Jason Staten** Yeah, I think so, too. Something to at least spur your interest in taking a look at a language and have you in a mindset of the way that you do things is not necessarily always going to be the way that we do things as an industry. 
+
+
+0:02:56.6 He brings up the paradigm shift in the industry of things like the big movement towards object oriented programming and I was definitely not around when that transition happened, but you can even see it today where there’s such a big push on the functional front of things and how, I don’t know, just things that we know and we kind of rely on, could get flipped on us pretty quick in the industry. And so-
+
+
+0:03:33.7 **Adam Garrett-Harris** Yeah. 
+
+
+0:03:33.7 **Jason Staten** Having an awareness of what’s out there is a good thing to have. 
+
+
+0:03:38.0 **Adam Garrett-Harris** And I always think learning a new language is uncomfortable. It can be fun, the beginning stages are fun, and I think in this book we are going to see a lot of the beginning stages that are fun, but once you get past that initial step of starting to learn a language and you really try to become fluent in it, it’s uncomfortable. 
+
+
+0:03:57.4 And I want to be continually learning new languages and not just be good at a certain language, but be good at learning languages. 
+
+
+0:04:06.4 **Jason Staten** And with that, too, you definitely have to be willing to set down the things that you know and are comfortable with in the language that you use most regularly, to say, “No, this is a different paradigm and not everything has to work like what I know.” 
+
+
+0:04:23.3 **Adam Garrett-Harris** Right, yeah. I’m sure there’s so many examples of JavaScript written like a Ruby developer, or C# written like a JavaScript developer, like, whatever it is, Python written like a Ruby developer, I don’t know. You take your way of writing code and you want to bring it to the new language and the language is not necessarily supposed to be that way. Python code is supposed to be Python-y, Ruby code is supposed to be Ruby-y, JavaScript-y for JavaScript. 
+
+
+0:04:53.2 But one of the things it does mention in the intro is that, “Hey, maybe there’s something that you learned in a certain language and you can take some of those ideas to a different language.” 
+
+
+0:05:03.0 **Jason Staten** Definitely, I would agree with that. Having been exposed to different languages in the past, they all have one level of influence or another in the way that I write today. So there’s definitely influence and there can be some crossover, but it is also sometimes obvious when a language comes- or when a developer comes from a specific background and moves to another language, sometimes.
+
+
+0:05:30.3 Like, I know at work we have people who came from doing backend Java development. When they get into the JavaScript world, they are strongly inclined to write lots of classes because that is the model that they’re very familiar with; whereas, other people won’t write a class unless they absolutely have to for something.  
+
+
+0:05:54.9 **Adam Garrett-Harris** Right. Right. Okay. Well let’s move onto Ruby then. Oh wait, sorry. I should mention the languages that are in this book. 
+
+
+0:06:03.3 **Jason Staten** Yeah. 
+
+
+0:06:04.0 **Adam Garrett-Harris** So there’s Ruby, Io, Prolog, Scala, Erlang, Clojure, and Haskell. And so looking at this list, I was like, “I’m not familiar with anything except for Ruby, that’s pretty popular. I’ve also heard Scala is pretty cool, and I’ve heard of Clojure and Haskell.”
+Clo-jure? I don’t even know how to pronounce it!
+
+
+0:06:22.9 **Jason Staten** (laughs) 
+
+
+0:06:22.9 **Adam Garrett-Harris** And Haskell. But the two that really stuck out for me were Io, I’d never heard of, and Prolog? Maybe I’ve heard of that? 
+
+
+0:06:31.6 **Jason Staten** For me, I have actual production experience in Ruby which is the one that I’m most familiar with. I had never heard of Io. Prolog always seemed very out there and I’ve never spent any time with it. Scala I’ve tinkered with, Clojure I’ve tinkered with, and Haskell I’ve tinkered with. 
+
+
+0:06:57.6 **Adam Garrett-Harris** Okay. 
+
+
+0:06:58.3 **Jason Staten** And I think that’s all of them? Maybe I missed one, but yeah, Ruby definitely is the most familiar one for me. Ruby is a very dynamically typed language. I guess in order to describe dynamically typed, I’m probably going to botch it and get it opposite of what it is, but the types of things are… 
+
+
+0:07:28.6 So the types of things aren’t checked until runtime. I mean, it is strong in that it won’t do coercion for you. Like, if you try and add something like a string and a number, the computer will yell at you, “Cannot compute.” Unless you teach it which, I mean, inevitably somebody has made somebody more capable of handling weird cases like that because the flip side of Ruby is that it is very open and extensible. 
+
+
+0:07:59.9 So if you want to make big changes to the language and the way that it works, because its objects all the way down and classes are open, you can extend anywhere; and I like that within the book it refers to that as a sharp scalpel. 
+
+
+0:08:19.6 Adam Garrett-Harris** Yeah. It gives you the rope to hang yourself with. 
+
+
+0:08:24.1 **Jason Staten** (laughs) Yeah. So, from my experience with it, I actually wrote Ruby for about four years, about four years ago. 
+
+
+0:08:33.8 **Adam Garrett-Harris** Heh. 
+
+
+0:08:34.0 **Jason Staten** So it’s been a little while since I actually have written any Ruby, but I was doing primarily web dev, but I was not doing Rails. I was a, I don’t know, a Rails holdout. It never quite worked the way that I wanted it to, or I never got comfortable with that. 
+
+
+0:08:52.3 **Adam Garrett-Harris** Hmm. Okay. 
+
+
+0:08:53.6 **Jason Staten** So I actually used Sinatra and SQL rather than Rails and Active Record for doing things. 
+
+
+0:09:01.3 **Adam Garrett-Harris** Okay. 
+
+
+0:09:04.3 **Jason Staten** But, yeah. I did that and I definitely think that it held up well for doing the product we were doing. Like, we didn’t have major performance considerations with what we were working on and instead, kind of like the book talks about, that timed market was a big, big factor in that. In just getting something put together because it was a small, scrappy startup. It worked excellently for that; for building something out and then iterating on it quickly. 
+
+
+0:09:38.2 **Adam Garrett-Harris** Yeah.
+
+
+0:09:39.7 **Jason Staten** What about you, Adam?
+
+
+0:09:40.6 **Adam Garrett-Harris** I have a little bit of production experience with Ruby. About a year ago, I was a contractor at a place that used Ruby on Rails and I was supposed to be doing JavaScript but I ended up doing a little bit of Ruby on Rails for a few weeks. 
+
+
+0:09:53.7 And then the only other one I have some experience with is Scala. About seven years ago I went through a little bit of a course on Scala. I think it was on Coursera and it was taught by the creator of Scala. Then it was just-
+
+
+0:10:09.9 **Jason Staten** Oh yeah, Martin Ordersky, of course. 
+
+
+0:10:11.3 **Adam Garrett-Harris** It was very difficult for me at the time and I thought it was very interesting, I was just not ready for the functional programming paradigm. So yeah, I mean, I have a little production experience with Ruby but I never really sat down and learned the syntax. 
+
+
+0:10:26.6 **Jason Staten** That’s interesting having just...  had you jump kind of straight into it, I guess that could be the contract world, right? 
+
+
+0:10:35.3 **Adam Garrett-Harris** Yeah, and I was doing some pair programming, trying to just jump into the deep end and keep my head above water, but it was difficult. 
+
+
+0:10:45.8 **Jason Staten** What would you say was the most difficult thing when approaching it? 
+
+
+0:10:50.8 **Adam Garrett-Harris** Well, the code base itself was pretty big and so I wouldn’t know where to go for certain things. There were views… there were views that were written in all sorts of different types of languages. So I think there were some views written in YAML, but then I think there was another one that was similar to YAML, but not quite? So it wasn’t exactly HTML, and then there were just like-
+
+
+0:11:20.1 **Jason Staten** Oh, yeah. 
+
+
+0:11:20.8 **Adam Garrett-Harris** Files… different files connected and you kind of had to follow the path but there was no, like, no explicit imports. So, I think Ruby does some sort of file resolution thing where it’s going to look in the current folder and if it doesn’t find it there then it looks in the parent, and then if it doesn’t find it there… 
+
+
+0:11:42.4 And then I think Rails adds some stuff on top of that where it looks in certain common places for certain types of files, for routes and views and things, and I just didn’t know where anything was because I didn’t know any of the conventions. 
+
+
+0:11:53.2 **Jason Staten** Yeah, I know that that was a real key part of the Rails learning process that I didn’t spend a ton of time or get super familiar with. I know that it was really big on organizing things like your models, your views, and your controllers; because Rails was huge on the MVC realm. 
+
+
+0:12:11.0 **Adam Garrett-Harris** Yep. 
+
+
+0:12:12.9 **Jason Staten** And I also believe that one of the things that Rails had, was that it used Bundler, which was the Ruby package manager. I guess Ruby Gems is the underlying thing, but Bundler is what everybody uses in order to do it because Gems was just like a global install type of thing and Bundler actually let you create a file that listed out your dependencies. 
+
+
+0:12:39.3 **Adam Garrett-Harris** Okay. 
+
+
+0:12:39.3 **Jason Staten** And one feature that Bundler had was the ability to go and require all of your gems in, right at the start of the application which was nice, or convenient, for not having to go and require everything. So all of your dependencies would just be loaded and available because Ruby just works with a global namespace where, like, at the base of it all there is the kernel object that has everything on it like when you go and, like, you can go and define stuff on there and hope that your things don’t conflict with each other. 
+
+
+0:13:31.6 But it is true, like, not having explicit imports? That was probably the thing that challenged me the most sometimes with Ruby when it came to debugging, it was figuring out where the specific behavior had come from. 
+
+
+0:13:43.9 **Adam Garrett-Harris** Yeah, and I think we’ll get into more later, but you can do meta programming with Ruby and so you may literally not be able to find the place where the code is being run by searching around in your code.
+
+
+0:14:01.2**Jason Staten** Because it may not exist as a naming method or something, yeah. 
+
+
+0:14:04.3 **Adam Garrett-Harris** Right, it may not be a named method, it’s like generated. 
+
+
+0:14:06.4 **Jason Staten** Mm-hmm (affirmative).  
+
+
+0:14:07.4 **Adam Garrett-Harris** Yeah. 
+
+
+0:14:09.7 **Jason Staten** So, I mean, Day One, it talked a lot about just going and getting set up. 
+
+
+0:14:13.3 **Adam Garrett-Harris** Oh yeah! So, I thought I was way behind going through this first week because I had, like, three days left and I was like, “I haven’t started!” And then it turns out there’s only three days. 
+
+
+0:14:24.6 **Jason Staten** Yeah, I think that’s great. While, I mean, there’s definitely take home work, or do it yourself work, the commitment on that front, like, three days, I think is not enough to learn the language, but to get exposure, for sure. 
+
+
+0:14:43.1 **Adam Garrett-Harris** Yep, and I mean, it’s 34 pages. So you’re doing, like, 10 pages a day, it’s pretty nice; and then the exercises. So, total-
+
+
+0:14:51.8 **Jason Staten** Yeah. 
+
+
+0:14:52.8 **Adam Garrett-Harris** So total, I spent 2 hours and 45 minutes reading, and 2 hours and 45 minutes doing the exercises. So it’s not bad. I thought it was going to be a huge commitment to go through an entire week of a language and then an entire week of another language, but yeah. So Day One you kind of get set up and learn some basics, like, “Hey, arithmetic works as you would expect.” But then there’s other things like, “You can do dot methods... on anything! And find out what methods you can call on it, that’s awesome!” 
+
+
+0:15:21.5 **Jason Staten** Yeah. It is definitely a useful thing when going and debugging something or inspecting it to see, like, what can you do, or what can you do with it? 
+
+
+0:15:31.7 **Adam Garrett-Harris** Yeah. I also thought it was really cool that single quotes versus double quotes were different. The double quoted string gets evaluated so you can have string interpolation; but then I noticed, like I noticed with examples throughout the book, sometimes they’ll just use single- they’ll just use double quoted even though they don’t need it to be evaluated. So I’m not sure what the convention is. 
+
+
+0:15:50.8 **Jason Staten** I don’t know for sure. I think back in the day it used to be harder on it of being consistent on use single quotes if I'm not interpolating and then use double if I am, but I think they did some measuring on it. I remember looking at-
+
+
+0:16:08.9 **Adam Garrett-Harris** Yeah, okay. 
+
+
+0:16:09.3 **Jason Staten** Old, old blog posts that said it really didn’t matter, and so there’s not necessarily performance overhead that you’re going to bump into. So maybe you could just go with double unless you need them? I don’t know on the hard set of rules and it doesn’t seem like they stuck to it either. Maybe that’s just the Ruby-ism of-
+
+
+0:16:34.3 **Adam Garrett-Harris** Yeah. 
+
+
+0:16:35.8 **Jason Staten** Like, just express how you feel (laughs) and Ruby will do the rest. Like, you aren’t worried about top-notch performance, but instead, having a good developer experience. 
+
+
+0:16:50.2 **Adam Garrett-Harris** Yeah, so that’s the other thing it talks about is how Ruby, it compares it to Mary Poppins. It says, first off, Mary Poppins is a great nanny, but secondly, she’s fun! And Ruby is supposed to be able to get things done but be really fun and put the focus on developer happiness and productivity. 
+
+
+0:17:07.8 And I learned about this concept that Ruby and Ruby on Rails is supposed to be fun several years ago. Let’s see, five-six years ago? And I thought I would end up being a Ruby on Rails developer because that sounded really cool! And it didn’t turn out that way, but if I had gone to the backend I definitely would have wanted to use Ruby. 
+
+
+0:17:30.0 **Jason Staten** That was something that actually brought me into Ruby. Before I started a job with it, I had started going to Ruby Meet-Ups for quite a while and just seeing how passionate and excited people were about writing Ruby code. Like, I don’t know if I’ve been part of groups that are quite that thrilled. I mean, don’t get me wrong, there are definitely groups that are making amazing things, but there was so much, like, Ruby-love related stuff. Like, it was all hearts, and kittens, and “We’re so glad to be writing Ruby!”-stuff that it was just really a feel-good community to be a part of. So I think that the language and the community definitely came together on that front. 
+
+
+0:18:22.4 **Adam Garrett-Harris** Yeah, yeah. So you were talking about dynamic typing, it also mentions that it uses duck typing which is it...
+
+
+0:18:28.9 **Jason Staten** Yeah. So there’s no hard interfaces that exist. So when you go and define a method, you don’t say what it is that’s getting passed in. It’s just based on usage of whether or not the thing works. So if you have a method that’s, uh, I don’t know, is called…
+
+
+0:18:53.8 **Adam Garrett-Harris** 2S? Like, 2 strings? 
+
+
+0:18:56.3 **Jason Staten** Yeah, 2S, sure. If it’s got 2S on it, it will just call it on whatever it is and not really care what the underlying type is. 
+
+
+0:19:08.3 **Adam Garrett-Harris** So you could have an array of lots of different types within that array and then map over it and call 2S on everything in it, and as long as each of those objects has their own 2S method it will work. 
+
+
+0:19:21.6 So, yeah. If it walks like a duck…
+
+
+0:19:23.0 **Jason Staten** Yeah. 
+
+
+0:19:23.4 **Adam Garrett-Harris** ...and quacks like a duck, it’s a duck! 
+
+
+0:19:25.0 **Jason Staten** I definitely like some of the things within it, too, that they give for convenience of, like, say you wanted to go and perform something ten times-
+
+
+0:19:40.0 **Adam Garrett-Harris** Yeah. 
+
+
+0:19:40.0 **Jason Staten** Being able to literally write 10.times and then pass it a block of what you want it to do, that is really nice versus a-
+
+
+0:19:48.4 **Adam Garrett-Harris** Yes. 
+
+
+0:19:48.9 **Jason Staten** For loop, or, I mean, like, to go and do, say, like the equivalent in JavaScript is not nearly as nice. (laughs) I mean, you can kind of hack it by creating a new array of size 10 and then filling it and then mapping over it, but that’s way worse than 10.times. So…
+
+
+0:20:11.7 **Adam Garrett-Harris** Yeah, and then after 10.times you can just have a block. So, a block is not really a thing I was familiar with that is just a piece of code. It’s not a function, it’s just a piece of code and you can pass it around or you can use it in different ways. So if you do 10.times and you have a block of code you’re just saying do this block of code this many times. 
+
+
+0:20:34.9 **Jason Staten** Right. Yeah, there are... let’s see... there are blocks and procs and lambdas, I haven’t spent enough time looking at it in a while. 
+
+
+0:20:49.9 **Adam Garrett-Harris** Blocks, and procs, and lambdas? 
+
+
+0:20:51.7 **Jason Staten** Yeah. 
+
+
+0:20:52.6 **Adam Garrett-Harris** Oh, my. (laughs) 
+
+
+0:20:53.1 **Jason Staten** (laughs) Oh, my. Yes. And I think what a major difference is, is that a lambda is very much like a function that can get passed around and you kind of write it the same. I mean, you write it the same way, you can even write the word, “lambda”. It’s a keyword within Ruby. 
+
+
+0:21:13.8 But a block is special in that it can, like, force the outside to return. Like, if that makes sense? So if you’re doing 10.times and you’re iterating over that, if you were to go and do a return there-
+
+
+0:21:33.5 **Adam Garrett-Harris** Oh!
+
+
+0:21:34.3 **Jason Staten** Then you can go and make the outer function return, if that makes sense? 
+
+
+0:21:41.0 **Adam Garrett-Harris** So then times would actually return something. 
+
+
+0:21:43.5 **Jason Staten** So not the times itself, but the- So, if you had a function that was called “do something ten times” and you did 10.times and inside the block you returned on the fifth iteration, for some reason, then you could return from that block and it causes the outer function to return. 
+
+
+0:22:07.3 **Adam Garrett-Harris** Wow. So it would actually break out of anything after that point in the function? Okay. 
+
+
+0:22:12.5 **Jason Staten** Right. Yeah. So that’s kind of the distinguishing part if I remember right, and maybe we’ll have to go and add some errata later where I was wrong on this, but I’m pretty sure that that’s part of it because otherwise, if you needed to do, like, early return then you would have to go back to a more traditional for loop or something. 
+
+
+0:22:38.1 **Adam Garrett-Harris** Yeah, and blocks are just surrounded with quotes, or curly braces, unless you want maybe multiple lines, you could start off with “do” and “end”. And I must still have some vim plugin installed from my days of working at Ruby because it auto completes the word “end” for me, and it actually feels really nice to type “do” and then hit enter and then “end” is just there. Or if you’re doing a function, so day 2 gets into functions, and you do def and the name of the function, hit enter, and it puts the word “end” on the end. And I really didn’t think I would like that; using words instead of curly braces, but it’s not bad at all. It’s kind of fun.
+
+
+0:23:20.0 **Jason Staten** Mm-hmm (affirmative).  Yeah, you definitely adjust to it. It also spares you, sometimes, the ambiguous syntax that you can wind up with when using the curly braces. 
+
+
+0:23:31.2 **Adam Garrett-Harris** Yeah, ‘cause curly braces can be used for so many things. 
+
+
+0:23:34.2 **Jason Staten** Mm-hmm (affirmative).  Yeah, they can be used for blocks, but then, and this is something that I think I bumped into, was passing a hash in, the hash being just like a key value lookup, passing that in but the literal syntax is using the squiggly brackets, or curly braces, and-
+
+
+0:24:01.3 **Adam Garrett-Harris** Oh! 
+
+
+0:24:01.8 **Jason Staten** It was taking that as a block. 
+
+
+0:24:04.0 **Adam Garrett-Harris** Interesting, I didn’t have that problem with that challenge. 
+
+
+0:24:05.5 **Jason Staten** Yeah. And so, yeah. If you try and pass it in, unless you use parentheses around it. 
+
+
+0:24:14.3 **Adam Garrett-Harris** Oh, yeah! So that’s the other thing, so in Ruby the parentheses are optional a lot of times. 
+
+
+0:24:19.9 **Jason Staten** Right. 
+
+
+0:24:20.8 **Adam Garrett-Harris** If you’re invoking a function, you just have the name, space, and what you’re passing in. But what you’re saying is that since the hash that you were trying to pass in was surrounded in curly braces, you had these parentheses? 
+
+
+0:24:34.2 **Jason Staten** Mm-hmm (affirmative).  
+
+
+0:24:35.0 **Adam Garrett-Harris** Okay, okay.
+
+
+0:24:35.3 **Jason Staten** Yes. 
+
+
+0:24:35.5 **Adam Garrett-Harris** Yeah, I didn’t have that problem ‘cause I just... I wasn’t thinking like a Ruby developer and leaving off parentheses. 
+
+
+0:24:42.7 **Jason Staten** Yeah, it’s kind of nice in that it cuts down on some of the syntax. 
+
+
+0:24:48.7 **Adam Garrett-Harris** Yeah. 
+
+
+0:24:49.3 **Jason Staten** And I remember that being a nice part of being able to write tests, that you could avoid a lot of curly braces in cases, and so, I don’t know, you can write more, like, just human readable stuff. 
+
+
+0:25:06.5 **Adam Garrett-Harris** Yeah. 
+
+
+0:25:07.0 **Jason Staten** Even just things like “puts”, putting that in front of stuff. 
+
+
+0:25:12.1 **Adam Garrett-Harris** Yeah. 
+
+
+0:25:12.4 **Jason Staten** Like, if you want to do it to see it and not having to go and unwrap things. So there’s some nice convenience there but occasionally you can bump into the syntax. 
+
+
+0:25:22.1 **Adam Garrett-Harris** Yeah, so I noticed that “puts” will print out stuff to the screen with a new line-
+
+
+0:25:28.7 **Jason Staten** Yeah.
+
+
+0:25:29.1 **Adam Garrett-Harris** And if you don’t want the new line, then you can use “print.” 
+
+0:25:31.1  **Adam Garrett-Harris** So in Day Two, it also says arrays are Ruby’s workhorse ordered collection, so you can do lots of different interesting things with them. You can do a negative index to count from the end and then it has methods like push and pop. 
+
+
+0:25:48.7 **Jason Staten** Yeah. So you can use their arrays like a number of different data sources. So, you can… yeah, if you’re using push and pop then you get stack-like behavior and you can… And then there’s also the shovel operator, as well. 
+
+
+0:26:09.7 **Adam Garrett-Harris** Shovel? 
+
+
+0:26:10.2 **Jason Staten** Yes. So, (laughs) that is less than less than. 
+
+
+0:26:14.4 **Adam Garrett-Harris** Oh! Okay, I saw this in one of the examples, I think, and I wasn’t sure what that was. 
+
+
+0:26:19.1 **Jason Staten** Yes, so that is to go and put something into it that-
+
+
+0:26:25.8 **Adam Garrett-Harris** Oh, okay. Nice. I thought it was some sort of assignment operator. 
+
+
+0:26:30.0 **Jason Staten** So, I mean, yeah. I guess it doesn’t assign… it jjust modifies it. 
+
+
+0:26:35.2 **Adam Garrett-Harris** Okay, yeah. 
+
+
+0:26:36.4 **Jason Staten** And it’s also, it’s something you can do to arrays, it’s also something that you can do to strings, as well, because strings in Ruby-
+
+
+0:26:45.7 **Adam Garrett-Harris** Oh, does it do an incatination?
+
+
+0:26:47.3 **Jason Staten** Well, it actually modifies the string. So a string in Ruby is actually mutable. So-
+
+
+0:26:53.2  **Adam Garrett-Harris** Oh! Okay. 
+
+
+0:26:54.4 **Jason Staten** Yeah. You can tell it to freeze, like, I think it’s just string.freeze in order to go and freeze one. 
+
+
+0:27:03.2 **Adam Garrett-Harris** Hmm. 
+
+
+0:27:03.7 **Jason Staten** But, yeah. Strings in Ruby are mutable. So rather than having to bust out some sort of string builder or pushing a whole bunch of things into an array and calling join or something like that, in Ruby’s case, yeah, a string is a mutable thing. 
+
+
+0:27:20.6 **Adam Garrett-Harris** Yeah. What else I thought was cool was ranges. So you can do square brackets and some number, dot, dot, another number and you can actually access an array using a range. So you can do animals, and then say zero, dot, dot, one and you’ll get a new array with the first and second item. First through second item, I should say. 
+
+
+0:27:48.6 **Jason Staten** Right, and if you want it to be exclusive and not include that upper bound, you can use three dots. 
+
+
+0:27:57.3 **Adam Garrett-Harris** Oh, right. Yeah. 
+
+
+0:27:58.7 **Jason Staten** That was something that I had to pull out of memory, as well. So two dots, inclusive. Three dots, exclusive. ‘Cause they had one-
+
+
+0:28:07.8 **Adam Garrett-Harris** That’s incredibly concise! 
+
+
+0:28:10.5 **Jason Staten** (laughs) Yeah. 
+
+
+0:28:11.0 **Adam Garrett-Harris** And I can imagine it tripping me up. 
+
+
+0:28:13.6 **Jason Staten** Yeah. 
+
+
+0:28:15.3 **Adam Garrett-Harris** Because it’s just an extra dot. 
+
+
+0:28:16.8 **Jason Staten** Right? 
+
+
+0:28:17.6 **Adam Garrett-Harris** And then you have an off by one error, and that’d be tough. 
+
+
+0:28:19.0 **Jason Staten** That’s a-
+
+
+0:28:19.8 **Adam Garrett-Harris** (laughs) Like, why do an extra dot when you can just make the second number one less? But I could see why, if the second number’s a variable, you don’t want to subtract one from the variable and just add an extra dot. I could see it. 
+
+
+0:28:33.2 **Jason Staten** Yeah. Yeah, I don’t know why I opted for it. There was the one exercise where it said it handles the contents of 16 numbers. I think that was it. So it wanted you to slice an array of 16 numbers into four slices of four numbers and with that, I wound up making a range of 0-16 and then sliced that in chunks of four, or did each slice of four chunks. So the 0-16, I don’t know, it just made since versus making 0-15. Like…
+
+
+0:29:15.9 **Adam Garrett-Harris** Yeah, I probably took too much code to do that one. I did array.each and then inside of there, I did a modulus on four. 
+
+
+0:29:27.1**Jason Staten** Interesting. 
+
+
+0:29:28.6 **Adam Garrett-Harris** And so, if I modulus four is zero, then I would use a “puts”; and else, I would use a “print” because it just wanted you to print, you know, print out four on the same line and then print out the next four on the next line. Yeah, so it would basically just, “Keep printing it, when you get to the fourth one, do a “puts” so you have a new line.” (laughs) 
+
+
+0:29:50.4 **Jason Staten** Interesting. That’s something I actually want to see afterwards, Adam, is what your code looks like and compare it to my exercises, just to see. 
+
+
+0:30:01.1 **Adam Garrett-Harris** Yeah, and some of them for Day One, I did it one way, and then after reading more, I rewrote it a different way. I would say, “In Day Two, I learned you could actually do it this way which is a lot better.” 
+
+
+0:30:14.1 **Jason Staten** Do you have a specific example? 
+
+
+0:30:15.4 **Adam Garrett-Harris** Yeah, just the first one. Well, the third one on Day One says print your name ten times, and so the first time I just did a while loop.
+
+
+0:30:26.8 **Jason Staten** Yeah. 
+
+
+0:30:27.0 **Adam Garrett-Harris** And then after I went through Day Two I did three dot times. 
+
+
+0:30:31.3 **Jason Staten** Oh, yeah. 
+
+
+0:30:32.1 **Adam Garrett-Harris** In the block, it just says puts Adam. So, that’s just a simple example. 
+
+
+0:30:36.3 **Jason Staten** Yeah, nice. 
+
+
+0:30:37.8 **Adam Garrett-Harris** But there’s another one where you needed to print the string “This is sentence number one” and then change it where it is “...sentence number two”, “...number three”, all the way to ten. 
+
+
+0:30:47.7 **Jason Staten** Mm-hmm (affirmative).  
+
+
+0:30:48.0 **Adam Garrett-Harris** The first time I used a while loop, and then the second time I did a range from from one to ten dot step one. And then-
+
+
+0:30:57.8 **Jason Staten** Mm-hmm (affirmative).  
+
+
+0:30:58.6 **Adam Garrett-Harris** I’m using string interpolation to just change the number on the end. 
+
+
+0:31:01.8 **Jason Staten** Nice, yeah. 
+
+
+0:31:03.3 **Adam Garrett-Harris** So learning about ranges and steps helped. Step is really interesting though because you tell it what you want to count by. 
+
+
+0:31:12.3 **Jason Staten** I guess I hadn’t even thought about using a step, but…
+
+
+0:31:16.6 **Adam Garrett-Harris** What did you do on that one? On... what did you do on this is sentence number one through ten? 
+
+
+0:31:23.1 **Jason Staten** So for the… just doing the range? I did a 1-10, like a range of 1-10 and I called .each on it. 
+
+
+0:31:32.2 **Adam Garrett-Harris** Oh, .each. 
+
+
+0:31:33.2 **Jason Staten** And then-
+
+
+0:31:33.6 **Adam Garrett-Harris** That’s probably better ‘cause I’m going by one. I’m going by one, so you don’t really need step one. But yeah, I think that’s part of Ruby. There's so many ways to do it. Like, whatever makes sense to you, you should be able to do it that way. Even down to when you go into the Ruby REPL which is like an interactive way to work with it. REPL is, like, read, evaluate, print, and loop. So you can type in some code, see what it evaluates to. Type some more code and see it. 
+
+
+0:32:03.8 But when you’re in there, you can get out of it either with quit or exit. And they could have just picked one and then when you tried to use the other one, just, “Hey, unknown error.” Or it might have said, “Hey, did you mean exit?” But instead they’re like, “It’s fine! Whatever you want to use, we know what you mean. So we’re going to give you multiple options.” 
+
+
+0:32:25.8 **Jason Staten** That makes me think of Ruby gem that used to exist - or probably still exists - it’s basically like, “did you mean…?” And it goes it abuses, or method missing-
+
+
+0:32:44.2 **Adam Garrett-Harris** Oh, right. 
+
+
+0:32:45.1 **Jason Staten** To the extreme, to where every object is extended to if you call a method on it and it happens to be close, then… if it happens to be close text-wise then, or like within a certain hamming distance, then it’ll say, “You probably meant this.” And it will just call it. 
+
+
+0:33:06.5 **Adam Garrett-Harris** (laughs) It will just call it? Silently? 
+
+
+0:33:09.2 **Jason Staten** Yeah. Yeah. So it was definitely, like, a joke gem, but if you think about socket.receive or something. 
+
+
+0:33:14.7 **Adam Garrett-Harris** Ooh. I mean, if it, like, threw an error that gave you some helpful information I would probably use that, but… 
+
+
+0:33:25.7 **Jason Staten** (laughs) Yeah. But, to just flat out go and call it? It's definitely a joke package, but you do think about it though. Like, socket.receive, I can’t tell you the number of times I’ve written the word receive for some method or function and botched spelling “receive”. 
+
+
+0:33:45.6 **Adam Garrett-Harris** The e and the i? Yeah. 
+
+
+0:33:47.4 **Jason Staten** Yeah. And I mean, it is powerful enough that it could just work because it’s close enough. 
+
+
+0:33:55.4 **Adam Garrett-Harris** Yeah! 
+
+
+0:33:55.9 **Jason Staten** (laughs) 
+
+
+0:33:56.5 **Adam Garrett-Harris** I don’t like it, though, you know? 
+
+
+0:33:58.1 **Jason Staten** (laughs) I know. 
+
+
+0:33:58.4 **Adam Garrett-Harris** You’re searching through your code base for receive and you’re not going to find it because it’s misspelled, but it still works. 
+
+
+0:34:04.8 **Jason Staten** It’s true. (laughs) 
+
+
+0:34:06.3 **Adam Garrett-Harris** (laughs) Yeah, so then it talks about hashes which is pretty interesting. 
+
+
+0:34:10.6 **Jason Staten** Mm-hmm (affirmative).  
+
+
+0:34:12.9 **Adam Garrett-Harris** Kind of like an array but you can give it a key value pair. It also talks about using symbols which are kind of like strings, but you just do, instead of surrounding it with quotes, you do a colon and some characters. That was really cool because then it talks about how, like, when you use a symbol, it’s always the same symbol. When you use a string with the same characters, it’s not the same stream and it, in fact, has an ID that you can see. So you can do .objectID and you can see that it has a different ID for different strings. But if you do the same thing on a symbol you’ll get the exact same ID. 
+
+
+0:34:54.7 **Jason Staten** Yeah. 
+
+
+0:34:55.3 **Adam Garrett-Harris** And that was just interesting to me, that it exposes an ID for objects. And I was curious if that gets used in production code or if it’s…
+
+
+0:35:05.5 **Jason Staten** Checking the object ID? 
+
+
+0:35:07.1 **Adam Garrett-Harris** Yeah. 
+
+
+0:35:08.5 **Jason Staten** I… I don’t know a specific case off hand, but like, if you want to assert that two things are exactly the same thing, and-
+
+
+0:35:21.4 **Adam Garrett-Harris** Yeah. 
+
+
+0:35:22.0 **Jason Staten** That they’re not just equal, but the actual same reference, object ID would get you that. 
+
+
+0:35:30.7 **Adam Garrett-Harris** Yeah, so I guess it might be used under the hood for some assertion libraries. 
+
+
+0:35:35.3 **Jason Staten** Yeah. And I mean, I guess knowing that strings are mutable also makes more sense of why symbols exist; because symbols are not mutable. 
+
+
+0:35:47.0 **Adam Garrett-Harris** Yeah. And then it talks about how Ruby does not have named parameters but then you can use symbols as a way of emulating named parameters by just, like, “pass in an object hash” and then inside the function you can access the object and then the key that you try to access is some symbol. 
+
+
+0:36:08.6 **Jason Staten** So, that is actually something that has changed in Ruby since the book was written. 
+
+
+0:36:15.0 **Adam Garrett-Harris** Oh, really? 
+
+
+0:36:15.9 **Jason Staten** Yes. So there are keyword arguments. 
+
+
+0:36:18.5 **Adam Garrett-Harris** Oh, okay!
+
+
+0:36:19.1 **Jason Staten** So, uh, y- (laughs) 
+
+
+0:36:20.3 **Adam Garrett-Harris** Yeah, I noticed it’s using, like, 1.9 or something? And I was on 2.something. 
+
+
+0:36:25.3 **Jason Staten** Yeah. I know that for a long time Ruby 1.87 was the long-lived version because Ruby 1.9 made some big changes, but also came with some big performance improvements. Then in later versions of Ruby, they added things like keyword arguments. They also added, I think in Ruby, they added a new syntax for Lambda that was like an arrow with parentheses. Like, it was-
+
+
+0:37:01.0 **Adam Garrett-Harris** Okay. 
+
+
+0:37:01.7 **Jason Staten** Like, rather than writing out the word “lambda” you got to be way more symbol heavy and yeah. So, they do have that now. 
+
+
+0:37:09.7 **Adam Garrett-Harris** Was it like a dash and a greater than? Or like an equals and a greater than? 
+
+
+0:37:14.8 **Jason Staten** Uh, yes. So like a dash and then greater than and then parentheses for your arguments and then curly braces for your block. 
+
+
+0:37:23.9 **Adam Garrett-Harris** Okay. 
+
+
+0:37:24.8 **Jason Staten** Yeah. Super terse over writing out lambda. 
+
+
+0:37:28.1 **Adam Garrett-Harris** Cool. 
+
+
+0:37:28.8 **Jason Staten** Did you take on the trie exercise? 
+
+
+0:37:30.7 **Adam Garrett-Harris** Yeah! I did. That was the, what was that, day 2? 
+
+
+0:37:34.4 **Jason Staten** Oh, I guess there were 2 Day Two thing. So… But one of them was making a trie that took a hash and converted it to a trie. 
+
+
+0:37:43.4 **Adam Garrett-Harris** Yeah. Yeah, I did that. So it gave us some code that was a trie, but the way that you had to construct the trie was to pass in the name and the children. So if you wanted a trie that was more than just one thing with some children, your second argument had to be an array of more tries that you were creating; and so it was super verbose, and the challenge was: We should just be able to pass it in with a clean interface where you just type out a hash of the whole trie. It was a little bit challenging but actually easier than I thought. What about you? 
+
+
+0:38:27.1 **Jason Staten** Yeah. Yeah, I took it on and, like, any time that you have the word trie brought up, it’s time to bring out recursion, right? 
+
+
+0:38:38.0 **Adam Garrett-Harris** Right. Yep. 
+
+
+0:38:39.1 **Jason Staten** So…
+
+
+0:38:39.5 **Adam Garrett-Harris** And actually, I don’t know… I don’t know if you did this, but in my implementation, I allow you to use either syntax. So you can pass in the name and an array of tries you create yourself, or you can pass in a hash. 
+
+
+0:38:56.3 **Jason Staten** Nice! I made a separate function on the trie class. Like, a static function that was called “build”, so you could do trie.build and give it a hash. 
+
+
+0:39:07.4 **Adam Garrett-Harris** Oh, okay. Yeah.
+
+
+0:39:07.0 **Jason Staten** So instead of overloading the constructor. 
+
+
+0:39:10.6 **Adam Garrett-Harris** Yep. Yeah, I just overloaded the constructor. Which, is the constructor always called “initialize” in Ruby? 
+
+
+0:39:16.1 **Jason Staten** Yes. 
+
+
+0:39:16.6 **Adam Garrett-Harris** Okay. Yeah, so when you pass in name to initialize, I check if name.instanceof, and I actually really love this in Ruby, if the method is returning a boolean, the convention is the name ends in a question mark. So instance of hash. So I find out if it’s hash, then I pass it to a different function to create it. 
+
+
+0:39:42.2 **Jason Staten** Mm-hmm (affirmative). That definitely seems like a more Ruby-ism. Just thinking about it now, or you describing that because it’s more of a “give me what you want and I’ll figure out what to do with it. Like, if you give me something reasonable, I’ll work with it.” So…
+
+
+0:39:59.9 **Adam Garrett-Harris** Hmm. 
+
+
+0:40:00.5 **Jason Staten** Nice. And it also asked about doing a grep. So I also took on that ‘cause… yep. At the end of Day Two, it says-
+
+
+0:40:11.4 **Adam Garrett-Harris** That one was a lot shorter than a trie.
+
+
+0:40:11.5 **Jason Staten** Go and write a grep that will read in a file and go and find lines that match the pattern. Yeah. That was really short. I think it was about 10 lines. Like I said, I have a few line spacing things and like… well, it was 10 lines because I have error handling. If you don’t give a pattern to the command line-
+
+
+0:40:33.1 **Adam Garrett-Harris** Ah. 
+
+
+0:40:33.9 **Jason Staten** Do you see that? 
+
+
+0:40:34.7 **Adam Garrett-Harris** I actually forgot to (laughs) let you choose your own pattern. I’ve got a pattern hard coded in my code. 
+
+
+0:40:42.6 **Jason Staten** Yeah, that’s the starting point. (laughs) 
+
+
+0:40:45.0 **Adam Garrett-Harris** ‘Cause I intended to pass it in from the command line and I didn’t yet figure out how to get a command line argument. 
+
+
+0:40:55.5 **Jason Staten** Ah, so in order to do that, there is a constant that’s available-
+
+
+0:41:01.3  **Adam Garrett-Harris** ARGV?
+
+
+0:41:02.6 **Jason Staten** ARGV, and then that is an array of all of your arguments and so…
+
+
+0:41:08.7 **Adam Garrett-Harris** Okay, yeah. So, I thought I did this, but I guess not. 
+
+
+0:41:13.2 **Jason Staten** Yeah, so doing ARGV sub zero was what I took and I used that pattern. 
+
+
+0:41:18.9 **Adam Garrett-Harris** And then can you just surround ARGV zero with slashes to make it a regex? 
+
+
+0:41:25.1 **Jason Staten** Uh, I actually just did line.match.pattern so you can pass it to the regex constructor. 
+
+
+0:41:39.2 **Adam Garrett-Harris** Oh, okay. 
+
+
+0:41:39.9 **Jason Staten** I think you can do interpolation in a regex. I’ll have to see that. 
+
+
+0:41:43.1 **Adam Garrett-Harris** Hmm. 
+
+
+0:41:44.4 **Jason Staten** That’s right, I didn’t actually make it a regex so even my implementation fell short. But, um...
+
+
+0:41:49.8 **Adam Garrett-Harris** (laughs) Okay. 
+
+
+0:41:50.3 **Jason Staten** I believe… Yeah, so you cannot actually do interpolation inside a regex. So if you did slashes and then the interpolation syntax then yes, you could do that. Yeah. 
+
+
+0:42:01.5 **Adam Garrett-Harris** Cool. Yeah in Day Two it also talks about mixins which is a pattern I’m not familiar with. I’ve heard about them in Sass, I think? Which is a CSS preprocessor. 
+
+
+0:42:15.3 **Jason Staten** Mm-hmm (affirmative). 
+
+
+0:42:16.0 **Adam Garrett-Harris** But yeah, it was interesting. Instead of inheriting behaviors you can just include - Oh I’m going to do a terrible job of explaining this - you can just include a mixin, which is a module, and then that mixin may actually call functions from your class. So in order to use a mixin you may have to implement certain functions. So it, kind of, reminds me of an interface.
+
+
+0:42:44.2 Like, I want to use this interface. 
+
+
+0:42:44.9 Okay. In order to use this interface you have to make certain methods. 
+
+
+0:42:49.1 But I think with Ruby, it’s not necessarily going to warn you or give you an error if you don’t do that. 
+
+
+0:42:55.3 **Jason Staten** Not, like, I wouldn’t think so. I would expect it to fail if you tried later. So like, if you go and… a really common one is the enumerable module. Like, going and including that. 
+
+
+0:43:12.3 **Adam Garrett-Harris** Hmm. 
+
+
+0:43:14.0 **Jason Staten** So if you go and implement “each”, then you get all of those things that that array has, or at least a lot of them, where you can go and call map, and filter, and all the other things that enumerable provides. 
+
+
+0:43:30.1 **Adam Garrett-Harris** Oh! That’s another one! They have “map”, but they also have “collect”, which is the same thing with a different name. 
+
+
+0:43:36.3 **Jason Staten** Mm-hmm (affirmative). Yeah, they had all of the “-ect” methods for-
+
+
+0:43:43.5 **Adam Garrett-Harris** What’s “-ect”? 
+
+
+0:43:44.9 **Jason Staten** consistency. So, like, they had “collect” and they had “select” if you wanted to filter out to a list of things. 
+
+
+0:43:53.8 **Adam Garrett-Harris** Oh! Words that end in -ect! 
+
+
+0:43:56.6 **Jason Staten** And they had “reject”. 
+
+
+0:43:58.4 **Adam Garrett-Harris** “Reject.” 
+
+
+0:43:59.5 **Jason Staten** And, yeah, I don’t know if there were more of them, but yeah. I knew that they had two of them. 
+
+
+0:44:06.5 **Adam Garrett-Harris** Hmm. Cool. 
+
+
+0:44:07.6 **Jason Staten** Or, like, two forms of a number of them. So, depending on where you're coming from.
+
+
+0:44:11.5 **Adam Garrett-Harris** Hmm. 
+
+
+0:44:12.2 **Jason Staten** I know one that would always catch me is there was “find” if you wanted to find a single item in a list, and then there was also “first” that was allowed, or that existed; and “first” is to get the first thing out of a list or out of an enumerable, right?
+
+
+0:44:30.2 **Adam Garrett-Harris**Mm-hmm (affirmative). 
+
+
+0:44:30.7 **Jason Staten**  But something that is easy to screw up is you can call, say you have an array and you said “array.first” and then you gave it a block of some conditional, the block can get past any method even if the method doesn’t ask for it.
+
+
+0:44:45.9 **Adam Garrett-Harris** Hmm. 
+
+
+0:44:46.4 **Jason Staten** And then it would just get flat out ignored. So it would go and call, like, “array.first” and say I want to match whatever item has the name of alice and it would always just give back the first item and ignore the block entirely because the correct thing was “find”. 
+
+
+0:45:06.6 **Adam Garrett-Harris** Okay. 
+
+
+0:45:07.2 **Jason Staten** But you could always pass a block to whatever because Ruby doesn’t care. 
+
+
+0:45:11.3 **Adam Garrett-Harris** (laughs) Yeah. Okay, so did you do the serious challenge on day three? 
+
+
+0:45:16.2 **Jason Staten** The serious challenge on day three? Yeah. Yeah, I did go and take it on. 
+
+
+0:45:21.7 **Adam Garrett-Harris** So it involves doing meta programming. When I first heard about meta programming, I totally misunderstood it because it says meta programming means writing programs that write programs.
+
+
+0:45:34.0 **Jason Staten** Mm-hmm (affirmative). 
+
+
+0:45:34.8 **Adam Garrett-Harris** And that sounds like something completely different. It sounds like the program is going to create a text file and write out some code, but that’s not what it's doing. It’s just, while the code is running, there are classes or methods available, let’s just say methods. There are methods available that are not written in your code but you can call them and they’ll work. And I love the example of Roman Numerals. 
+
+
+0:46:04.8 **Jason Staten** Yeah. I like that one. 
+
+
+0:46:06.4 **Adam Garrett-Harris** I’ve done Roman Numeral stuff before, converting from numbers to Roman Numerals and so forth, and all they do is make a class called Roman that defines method missing, and so then you can just call Roman.iv and iv is not a method on Roman, but hey, it has a method missing and it can take the name of the method that you tried to use and figure out what to do with it and return a number. So, that was pretty cool. 
+
+
+0:46:38.1 **Jason Staten** Yeah. It definitely is cool. It’s something you obviously have to be careful with but it can make for some really nice looking domain-specific languages or DSLs. 
+
+
+0:46:52.4 **Adam Garrett-Harris** Yeah. So the challenge was to take this axis CSV module and, let’s see, and then create a new method on it called “each” that returns a row-
+
+
+0:47:07.0 **Jason Staten** Mm-hmm (affirmative). 
+
+
+0:47:07.5 **Adam Garrett-Harris** And that row will let you call the name of the field that you want to get. So even though in your code you don't know what fields are going to be in the csv file. You Can do then do, like if you if you’ve got a csv full of cities you can do, like, row.name and it will grab the name of that city on that row. 
+
+
+0:47:29.3 **Jason Staten** Yeah, or row.state or row.zipcode
+
+
+0:47:32.8 **Adam Garrett-Harris** Yeah. 
+
+
+0:47:33.0 **Jason Staten** I mean, I know rows can have more than one, but yeah, you can write it in really handy syntax like that. 
+
+
+0:47:40.0 **Adam Garrett-Harris** Yeah. So I’ve got a line here at the bottom of my challenge that says “something.each” and it’s got a block and then just puts hey row.city is in row.country with a population of row.population. 
+
+
+0:47:54.4 **Jason Staten** Yeah, I did that same thing, as well. I mean, I guess I stuck with the kind of one and two examples of lions and tigers and I’ve got bears and sheep. 
+
+
+0:48:07.0 **Adam Garrett-Harris** Okay, I thought the example was a little weird because the headers in the csv file were just one and two which doesn’t explain what kind of data is supposed to be in the file. 
+
+
+0:48:16.7 **Jason Staten** That’s csvs for you. (laughs)
+
+
+0:48:18.4 **Adam Garrett-Harris** (laughs) And obviously, when it comes to csv’s there’s a lot more edge cases that this example code doesn’t cover. If you have a quote... if you have a comma inside of your data you need to surround it with quotes. 
+
+
+0:48:30.0 **Jason Staten** Mm-hmm (affirmative). Yeah, yeah. 
+
+
+0:48:30.6 **Adam Garrett-Harris** But that’s fine. 
+
+
+0:48:31.2 **Jason Staten** It’s a really loose csv [inaudible].
+
+
+0:48:33.2 **Adam Garrett-Harris** It’s very loose. And also, like, it’s looking for a comma and a space, but you don’t have to have a space after the comma. 
+
+
+0:48:39.9 **Jason Staten** That gave me issues initially. 
+
+
+0:48:41.8 **Adam Garrett-Harris** Yeah. 
+
+
+0:48:42.3 **Jason Staten** Because I, my data set didn’t have those and-
+
+
+0:48:45.6 **Adam Garrett-Harris** Same! Same! 
+
+
+0:48:46.5 **Jason Staten** (laughs) Yeah, so I feel for you on that front. But yeah, I thought it was an interesting pattern that they opted to bring up because it’s definitely something common in Ruby to have a module that defines self.included which is a hook to say, like, if this module gets included into another module or another class, then go and invoke this code. 
+
+
+0:49:17.1 **Adam Garrett-Harris** Wow. 
+
+
+0:49:17.5 **Jason Staten** And so, yeah, it’s just a method on it. (laughs) On the module. 
+
+
+0:49:25.1 **Adam Garrett-Harris** Hmm. 
+
+
+0:49:25.6 **Jason Staten** And in their particular case, they actually called “.extend” which- extend is a method on a class that’s called, and so they use base which is what the module’s getting included on. So yeah, base.extend and then they apply class methods to the thing, which then includes another module, called instance methods. 
+
+
+0:49:53.9 **Adam Garrett-Harris** Yeah! 
+
+
+0:49:54.5 **Jason Staten** If the function acts as csv is called. Which, it seems like a whole lot to do what they’re doing right here, and I know that they’re just trying to give a small example because you don’t necessarily… they don’t want to go give a full blown application, but where this does actually play out in, is something like Rails. It’s pretty common to have… they have a base class that a lot of stuff inherits from. Like all your models inherit from… it’s like a Rails Model, I don’t know, it’s all an Active Model under the hood but there’s this one base class that all of your models inside of rails extend. They actually do extend it and then inside of your specific modules, you can go and say, like, “person has many cars” or something, and you can, inside your class, just put “has many cars” and because you go and put that there, the meta programming goes and... meta programming being methods get defined, named, like, .cars, that you can call on an instance, so that if you have a person model that you’ve pulled out of your database, you can call person.cars and that will go and do a SQL query and give you back a list of cars, and all of that exists because you put that one “has many cars” as part of your class. 
+
+
+0:51:39.0 **Adam Garrett-Harris** Yeah. Is that what it called Active Record? 
+
+
+0:51:43.1 **Jason Staten** So, yeah. I mean, Active Record uses Active Model under the hood, which, Active Model is like a generic model thing that you can tie it to anything, like, if you want to put it attached to another database; but active record is specific to working with SQL databases which is what Rails used. 
+
+
+0:52:04.9 **Adam Garrett-Harris** Yeah. Yeah, I mean, I feel like this is the kind of thing, this meta programming stuff is what people would call magic. 
+
+
+0:52:11.8 **Jason Staten** Yes! 
+
+
+0:52:11.9 **Adam Garrett-Harris** And they wouldn’t like it because you don’t know what’s happening. If you take the time to understand Ruby and take the time to understand Rails or whatever it is that you’re using, it can be really... fun? And you don’t… I guess you don’t necessarily have to know all of the stuff that’s happening under the hood, although it’s probably good if you can understand what’s going on under the hood, but I remember pair programming with people on Ruby on Rails and there were some weird things happening in test files. There was some weird syntax and I would ask them, “What is this syntax? How does this work?” And they couldn’t explain it to me. They said, “That’s kind of how this testing firmware works, this is just how you write it.” 
+
+
+0:52:53.0 **Jason Staten** Mm-hmm (affirmative). 
+
+
+0:52:53.5 **Adam Garrett-Harris** But I wanted to know, what is the syntax? What is happening? 
+
+
+0:52:56.5 **Jason Staten** Mm-hmm (affirmative). Yeah, you definitely have to move toward a convention. Like, trusting in the convention in some regard, it’s not that you’d throw away, like, all of your understanding of programming because that’s not the case because sometimes you have to roll up your sleeves and see what’s going on. 
+
+
+0:53:14.8 **Adam Garrett-Harris** Yeah. 
+
+
+0:53:15.0 **Jason Staten** But embrace the fact that there may be a lot going on under the hood. I mean, that was definitely something that Active Record did and still does, is things like it will, at the start of your Rails application, go and query your database to find a table that matched the name of that class that was potentially pluralized.
+
+
+0:53:42.5 **Adam Garrett-Harris** Hmm. 
+
+
+0:53:42.6 **Jason Staten** So if your class was named “person”, it would actually go and pluralize it to “people”. 
+
+
+0:53:49.3 **Adam Garrett-Harris** Oh, wow! 
+
+
+0:53:50.4 **Jason Staten** Yeah. 
+
+
+0:53:51.0 **Adam Garrett-Harris** Then you really have to trust that it knows how to pluralize. 
+
+
+0:53:53.6 **Jason Staten** Right? And I mean, there are ways of breaking out of it, but all that would happen and then the nice thing though, is that you’re not writing all of that boilerplate inside of your code. Like, you’re focusing on, like, I have a “person” model that happens to exist against a “people” table in the database and I know that it will do that conventionally because it can pluralize. 
+
+
+0:54:20.6 **Adam Garrett-Harris** Yeah. 
+
+
+0:54:21.9 **Jason Staten** And then I focus on writing things like this person has cars and it knows that that means that it has a car ID, or, sorry, the car has a car ID, or person ID column in there and-
+
+
+0:54:39.0 **Adam Garrett-Harris** Yeah. 
+
+
+0:54:39.4 **Jason Staten** It can query against that. Like, there’s a lot of convention-
+
+
+0:54:42.5 **Adam Garrett-Harris** Yeah, sounds like you can really focus on the business logic that way instead of…
+
+
+0:54:46.7 **Jason Staten** Yeah, instead of doing all of the set up that-
+
+
+0:54:50.7 **Adam Garrett-Harris** Set up and hooking things up. 
+
+
+0:54:52.4 **Jason Staten** Right, and I mean, it’s for better or worse, but that’s part of it though. Yeah, that you shouldn’t have to concern yourself with all of that stuff, and, I mean, that’s kind of what it talks about even at the end of the chapter. It’s talking about time to market, it’s about being able to get stuff out there and not worrying about all of the set up related things. 
+
+
+0:55:17.2 I mean, I know that that is definitely something that is beneficial in a number of cases, allowing the developer to just get started making something rather than spending the time doing set up. In the JavaScript realm, I know that people will struggle with, like, setting up a webpack build and it sounds like this monstrous burden which, I mean, it can be daunting, especially if you haven’t done it before. 
+
+
+0:55:47.6 So, like, having the kind of things, like in JavaScript, it’s like Create React App. In Ruby, I mean, Rails new was huge because, I mean, you would do that and then you would have a working application that could talk to a database and you could go and with Rails, too, it also was big on generating stuff out. So you could say, “Rails, go generate or scaffold me a view, a controller, and a model that can write to a table in the database.” And while it was crude and didn’t necessarily cover, like, all your validation cases and stuff, you could really churn stuff out quickly and as long as you adhere to those conventions, like, your code was far more focused on your application’s business logic than going and wiring stuff together. 
+
+
+0:56:44.5 **Adam Garrett-Harris** Nice! Yeah, it’s really cool. I’ve really enjoyed this peek into Ruby and I’ve enjoyed it a lot more than my time trying to write production code without understanding Ruby at all. 
+
+
+0:56:56.9 **Jason Staten** Yeah, and I’ve enjoyed going and taking a look back at it, because it is definitely refreshing to write after having stepped away from it for a while, and I will probably tinker with it just a little bit more because I have stuff in mind that I want to do. 
+
+
+0:57:15.7 **Adam Garrett-Harris** Hmm. 
+
+
+0:57:16.3 **Jason Staten** But beyond that, I am looking forward to diving into io next time. 
+
+
+0:57:23.1 **Adam Garrett-Harris** Yeah. 
+
+
+0:57:23.8 **Jason Staten** Because that is something that I haven’t touched at all. 
+
+
+0:57:26.0 **Adam Garrett-Harris** Yeah, and apparently io is like Ferris Bueller. So that sounds pretty fun. 
+
+
+0:57:30.9 **Jason Staten** Yeah, yeah. That can make for an exciting language to play with. So...
+
+
+0:57:35.6 **Adam Garrett-Harris** All right.  You can follow me on Twitter @AGarrHarr, and what are you on Twitter? 
+
+
+0:57:40.6 **Jason Staten** @StatenJason.
+
+
+0:57:41.6 **Adam Garrett-Harris** And you can follow the show @BookBytesFM and get in touch with us if you want to give us any feedback. You can leave a review on iTunes, you can reach out to us on Twitter and we’d love to talk to you! All right, we’ll see you next time. 
+
+
+0:57:54.0 **Jason Staten** See ya. 
+
+
+(Exit music: Electro swing)
