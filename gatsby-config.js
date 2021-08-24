@@ -37,8 +37,8 @@ module.exports = {
             index: 1,
             name: 'imprint',
             categories: [
-              { name: `Religion`, sub: [] },
-              { name: `Arts`, sub: ['Books'] },
+              { name: `Religion & Spirituality`, sub: [`Christianity`] },
+              { name: `Arts`, sub: [`Books`] },
             ],
           }),
           generatePodcastFeedConfig({
