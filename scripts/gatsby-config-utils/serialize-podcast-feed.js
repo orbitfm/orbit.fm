@@ -27,9 +27,11 @@ const serializePodcastFeed = ({ podcast, siteMetadata }) =>
           enclosure: {
             url: `${
               process.env.PODCAST_REDIRECT_URL
-                ? process.env.PODCAST_REDIRECT_URL
-                : ''
-            }${removeScheme(episode.audioUrl)}`,
+                ? `${process.env.PODCAST_REDIRECT_URL}${removeScheme(
+                    episode.audioUrl
+                  )}`
+                : episode.audioUrl
+            }`,
             length: `${episode.audioLength}`,
             type: 'audio/mp3',
           },
