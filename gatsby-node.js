@@ -27,6 +27,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     });
   }
   if (node.internal.type === types.EPISODE) {
+    console.log(node.podcast___NODE);
+    console.log('--------------------');
+    console.log(getNode(node.podcast___NODE));
+    console.log('--------------------');
+    console.log(getNode(node.podcast___NODE).name);
     createNodeField({
       node,
       name: `path`,

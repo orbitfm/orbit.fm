@@ -1,6 +1,8 @@
 const { DateTime } = require('luxon');
 const humanizeList = require('humanize-list');
 
+const removeScheme = url => url.replace(/^https?:\/\//, '');
+
 const serializePodcastFeed = ({ podcast, siteMetadata }) =>
   podcast.episode
     ? podcast.episode
@@ -25,7 +27,7 @@ const serializePodcastFeed = ({ podcast, siteMetadata }) =>
           enclosure: {
             url: `${
               process.env.PODCAST_REDIRECT_URL
-                ? process.env.PODCAST_REDIRECT_URL
+                ? removeScheme(process.env.PODCAST_REDIRECT_URL)
                 : ''
             }${episode.audioUrl}`,
             length: `${episode.audioLength}`,

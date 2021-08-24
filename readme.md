@@ -11,7 +11,7 @@ Create a `.env` file with the following variables (replace with the real values)
 CONTENTFUL_SPACE_ID=k9ajfiadv9aj
 CONTENTFUL_ACCESS_TOKEN=39kd99313kdkkad8fwe0xvmqv90213mv91238jk91298ijkqw073856kajsdv097
 GOOGLE_ANALYTICS_TRACKING_ID=UA-12345678-1
-PODCAST_REDIRECT_URL=https://www.podtrac.com/pts/redirect.mp3/
+PODCAST_REDIRECT_URL=dts.podtrac.com/redirect.mp3/
 ```
 
 Then run:
