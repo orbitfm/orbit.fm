@@ -1,1 +1,2 @@
-/bookbytes/giveway     /bookbytes/giveaway
+# Redirect default Netlify subdomain to primary domain
+https://orbitfm.netlify.app/* https://www.orbit.fm/:splat 301!
